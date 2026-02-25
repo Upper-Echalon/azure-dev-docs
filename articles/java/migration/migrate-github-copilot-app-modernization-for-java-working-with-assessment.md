@@ -32,9 +32,10 @@ Recommended assessment provides a streamlined way to start an assessment without
 
 To run a recommended assessment, use the following steps:
 
-1. Select **Recommended Assessment** in the GitHub Copilot app modernization **Assessment** pane.
+1. Select **Start Assessment** or **Open Assessment Dashboard** in the **QUICKSTART** section of the GitHub Copilot app modernization pane.
+1. Select **Recommended Assessment**.
 1. Select the domains you want to assess from the list of recommended options. Each domain represents a common migration scenario with preconfigured settings.
-1. Select **Run** to start the assessment.
+1. Select **OK** to start the assessment.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
 
@@ -44,84 +45,104 @@ After the assessment completes, a new report is generated and added to the repor
 
 Custom assessment enables you to tailor the assessment analysis to your specific migration needs. Use this approach when you need fine-grained control over the assessment configuration.
 
-To configure and run a custom assessment, select **Custom Assessment** in the GitHub Copilot app modernization **Assessment** pane, then select **Configure Assessment** to customize the configuration properties.
+To configure and run a custom assessment, use the following steps:
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization Assessment pane with the Configure Assessment button highlighted.":::
+1. Select **Start Assessment** or **Open Assessment Dashboard** in the **QUICKSTART** section of the GitHub Copilot app modernization pane.
+1. Select **Custom Assessment**.
+1. Configure the assessment properties as described in the following section.
+1. Select **Run** to start the assessment.
+
+:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment button highlighted.":::
+
+:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment properties.":::
 
 ### Configuration properties
 
-Currently, you can configure the `target`, `capability`, `os`, and `mode` properties for the assessment.
+The custom assessment configuration form consists of general settings and domain-specific settings. The domain-specific settings are displayed based on the assessment domains you select.
 
-By default, the assessment runs with Azure Kubernetes Service (AKS), Azure App Service, and Azure Container Apps (ACA) as the service targets.
+#### General: Assessment Domains
 
-- `target`: the Azure compute service to run the apps on. Choose multiple targets if you haven't decided which one to use. You can then compare the targets on the assessment report.
+Select one or more domains to include in the assessment. Assessment time depends on domain selection and app size.
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `azure-aks`            | Best practices for deploying an app to Azure Kubernetes Service.       |
-  | `azure-appservice`     | Best practices for deploying an app to Azure App Service.              |
-  | `azure-container-apps` | Best practices for deploying an app to Azure Container Apps.           |
+| Domain               | Description                                                                          |
+|----------------------|--------------------------------------------------------------------------------------|
+| **Java Upgrade**     | Identify outdated app stacks and get upgrade recommendations.                        |
+| **Cloud Readiness**  | Assess your app's readiness for Azure, with actionable migration guidance.           |
+| **Security**         | Scan your code for security issues using ISO 5055 guidelines, with recommended fixes.|
 
-- `capability`: the target technology to modernize the apps towards.
+#### General: Analysis Coverage
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `containerization`     | Best practices for containerizing applications.                        |
-  | `openjdk11`            | Best practices for migrating to OpenJDK 11.                            |
-  | `openjdk17`            | Best practices for migrating to OpenJDK 17.                            |
-  | `openjdk21`            | Best practices for migrating to OpenJDK 21.                            |
+Select what the assessment should analyze.
 
-- `os`: the target operating system to run the apps on.
+| Value                                  | Description                                                                             |
+|----------------------------------------|-----------------------------------------------------------------------------------------|
+| **Issue only**                         | Analyze source code to detect issues.                                                   |
+| **Issues & Technologies**              | Analyze source code to detect issues and identify used technologies.                    |
+| **Issues, Technologies & Dependencies**| Analyze source code to detect issues, identify used technologies, and map dependencies. |
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `linux`                | Best practices for migrating applications to the Linux platform.       |
-  | `windows`              | Best practices for migrating applications to the Windows platform.     |
+#### Java Upgrade: Target Runtime
 
-- `mode`: the analysis mode.
+This setting is displayed when you select the **Java Upgrade** domain. Select a target JDK to analyze dependencies and outdated app stack.
 
-  | Value         | Description                                                                             |
-  |---------------|-----------------------------------------------------------------------------------------|
-  | `issue-only`  | Analyze source code to only detect issues.                                              |
-  | `source-only` | Analyze source code to detect both issues and used technologies.                        |
-  | `full`        | Analyze source code to detect both issues and used technologies, and list dependencies. |
+| Value              | Description                                       |
+|--------------------|---------------------------------------------------|
+| **OpenJDK 21**     | Best practices for migrating to OpenJDK 21. (Recommended) |
+| **OpenJDK 17**     | Best practices for migrating to OpenJDK 17.       |
+| **OpenJDK 11**     | Best practices for migrating to OpenJDK 11.       |
+
+#### Cloud Readiness: Target Compute Services
+
+This setting is displayed when you select the **Cloud Readiness** domain. Select target Azure compute services to migrate your application. Choose multiple targets if you haven't decided which one to use. You can then compare the targets on the assessment report.
+
+| Value                              | Description                                                            |
+|------------------------------------|------------------------------------------------------------------------|
+| **Azure App Service**              | Best practices for deploying an app to Azure App Service.              |
+| **Azure Kubernetes Service (AKS)** | Best practices for deploying an app to Azure Kubernetes Service.       |
+| **Azure Container Apps (ACA)**     | Best practices for deploying an app to Azure Container Apps.           |
+
+#### Cloud Readiness: Target Operating System
+
+This setting is displayed when you select the **Cloud Readiness** domain. Select target operating systems to run the apps on.
+
+| Value       | Description                                                            |
+|-------------|------------------------------------------------------------------------|
+| **Linux**   | Best practices for migrating applications to the Linux platform.       |
+| **Windows** | Best practices for migrating applications to the Windows platform.     |
+
+#### Cloud Readiness: Containerization
+
+This setting is displayed when you select the **Cloud Readiness** domain. Enable to analyze issues that need to be fixed to containerize your app.
+
+| Value                        | Description                                    |
+|------------------------------|------------------------------------------------|
+| **Enable Containerization**  | Best practices for containerizing applications.|
 
 ### Examples
 
-The following examples describe some configurations:
+The following examples describe some common configuration scenarios:
 
-- Example one: you'd like to migrate your apps to AKS as linux containers and want to understand what are the issues to be fixed. Use the following configuration:
+- Example one: you'd like to migrate your apps to AKS as Linux containers and want to understand what are the issues to be fixed. Use the following configuration:
 
-  ```yaml
-  appcat:
-  - target:
-      - azure-aks
-    os:
-      - linux
-    mode: issue-only
-  ```
+  - **Assessment Domains**: Select **Cloud Readiness**
+  - **Analysis Coverage**: Select **Issue only**
+  - **Target Compute Services**: Select **Azure Kubernetes Service (AKS)**
+  - **Target Operating System**: Select **Linux**
+  - **Containerization**: Select **Enable Containerization**
 
 - Example two: you'd like to migrate your apps to App Service Linux and want to understand what are the issues to be fixed. Use the following configuration:
 
-  ```yaml
-  appcat:
-  - target:
-      - azure-appservice
-    os:
-      - linux
-    mode: issue-only
-  ```
+  - **Assessment Domains**: Select **Cloud Readiness**
+  - **Analysis Coverage**: Select **Issue only**
+  - **Target Compute Services**: Select **Azure App Service**
+  - **Target Operating System**: Select **Linux**
 
-- Example three: you'd like to modernize your apps to JDK21 and want to understand what are the issues to be fixed. Use the following configuration:
+- Example three: you'd like to modernize your apps to JDK 21 and want to understand what are the issues to be fixed. Use the following configuration:
 
-  ```yaml
-  appcat:
-  - capability:
-      - openjdk21
-    mode: issue-only
-  ```
+  - **Assessment Domains**: Select **Java Upgrade**
+  - **Analysis Coverage**: Select **Issue only**
+  - **Target Runtime**: Select **OpenJDK 21**
 
-After you configure the assessment, select **Run** to start the assessment. When the tool completes the assessment, a new report is generated and added to the report list. The interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
+After the tool completes the assessment, a new report is generated and added to the report list. The interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment dashboard with Azure service target selection options.":::
 
@@ -133,7 +154,7 @@ The assessment report provide comprehensive analysis results to help you underst
 
 The assessment report consists of several key sections:
 
-- **Application Information**: Basic information about your application including Java version, frameworks, build tools, project structure, and target Azure service.
+- **Application Information**: Basic information about your application including Java version, frameworks, build tools, project structure.
 - **Issue Summary**: Overview of migration issues categorized by domain with criticality percentages.
 - **Detailed Analysis**: The detail report is organized into the following four subsections.
   - **Issues**: Provides a concise summary of all issues that require attention.
@@ -145,12 +166,13 @@ The assessment report consists of several key sections:
 
 #### Issues
 
-Access this part by selecting the **Issues** tab. This tab provides a categorized issues list of various aspects of Cloud Readiness and Java Upgrade that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
+Access this part by selecting the **Issues** tab. This tab provides a categorized issues list of various aspects of Cloud Readiness， Java Upgrade and Security that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
 
-| Domain              | Description                                                                             |
-|---------------------|-----------------------------------------------------------------------------------------|
-| **Cloud Readiness** | Evaluates app dependencies to suggest Azure services and ensure cloud-native readiness. |
-| **Java Upgrade**    | Identifies JDK and framework issues for version upgrade.                                |
+| Domain               | Description                                                                          |
+|----------------------|--------------------------------------------------------------------------------------|
+| **Java Upgrade**     | Identify outdated app stacks and get upgrade recommendations.                        |
+| **Cloud Readiness**  | Assess your app's readiness for Azure, with actionable migration guidance.           |
+| **Security**         | Scan your code for security issues using ISO 5055 guidelines, with recommended fixes.|
 
 | Criticality         | Description                                                   |
 |---------------------|---------------------------------------------------------------|
@@ -193,15 +215,15 @@ Effective report management enables collaboration, maintains assessment history,
 
 Besides running the assessment directly in GitHub Copilot modernization, you can also import assessment reports. The reports can come from [AppCAT](https://aka.ms/appcat-java) CLI results - such as **report.json**, a GitHub Copilot modernization exported report, or an app context file from Dr. Migrate.
 
-To import an assessment report to GitHub Copilot modernization, select **Import** in the assessment section or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **import assessment report**.
+To import an assessment report to GitHub Copilot app modernization, select **Import** in the assessment reports page, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **import assessment report**.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment report import interface.":::
 
 ### Export assessment report
 
-In the assessment dashboard, you can view the issues detected by AppCAT and choose the migration solution to determine the decision. You can export the report and share it with others. If so, other people don't need to run assessment by themselves and can import the report and view the assessment and migration decision directly.
+In the assessment dashboard, you can view the issues detected by assessment and choose the migration solution to determine the decision. You can export the report and share it with others. If so, other people don't need to run assessment by themselves and can import the report and view the assessment and migration decision directly.
 
-To export an assessment report from GitHub Copilot app modernization, right-click the target report in the report list and then select **Export**, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **export assessment report**.
+To export an assessment report from GitHub Copilot app modernization, select the **...** (more actions) button on the target report in the report list and then select **Export**.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment report export options and interface.":::
 
@@ -209,7 +231,7 @@ To export an assessment report from GitHub Copilot app modernization, right-clic
 
 If you no longer need a report, you can delete it from the report list.
 
-To remove an assessment report, right-click the target report in the report list and then select **Delete**.
+To remove an assessment report, select the **...** (more actions) button on the target report in the report list and then select **Delete**.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization delete an assessment report.":::
 

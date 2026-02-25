@@ -4,9 +4,9 @@ titleSuffix: Azure
 description: Learn how to effectively work with application assessments in GitHub Copilot modernization, including configuration, interpretation, and report management.
 author: KarlErickson
 ms.author: karler
-ms.reviewer: fenzho
+ms.reviewer: haozhan
 ms.topic: reference
-ms.date: 01/13/2026
+ms.date: 02/25/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -19,9 +19,32 @@ This comprehensive guide covers advanced assessment capabilities in GitHub Copil
 
 Application assessment is a critical first step in your modernization journey. This article covers the complete assessment workflow to help you effectively work with assessment reports, configure assessments for different scenarios, and manage assessment data throughout your modernization process.
 
-## Configure before running assessment
+Key capabilities include:
 
-Before running assessment, configure the assessment by selecting **Configure Assessment** in the GitHub Copilot modernization **Assessment** pane.
+- **Multiple reports per run**: Each assessment run generates an independent report. Previous reports are preserved and accessible from the report list, enabling you to track assessment history and compare results over time.
+- **Two assessment entries for different purposes**: GitHub Copilot app modernization provides two ways to start an assessment:
+  - **Recommended assessment**: Quickly start an assessment by selecting from recommended domains without manual configuration.
+  - **Custom assessment**: Configure specific assessment properties to tailor the analysis to your exact needs.
+
+## Recommended assessment
+
+Recommended assessment provides a streamlined way to start an assessment without manual configuration. This approach is ideal when you want to quickly evaluate your application's readiness for common migration scenarios.
+
+To run a recommended assessment, use the following steps:
+
+1. Select **Recommended Assessment** in the GitHub Copilot app modernization **Assessment** pane.
+1. Select the domains you want to assess from the list of recommended options. Each domain represents a common migration scenario with preconfigured settings.
+1. Select **Run** to start the assessment.
+
+:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
+
+After the assessment completes, a new report is generated and added to the report list. You can view the report by selecting it from the list.
+
+## Custom assessment
+
+Custom assessment enables you to tailor the assessment analysis to your specific migration needs. Use this approach when you need fine-grained control over the assessment configuration.
+
+To configure and run a custom assessment, select **Custom Assessment** in the GitHub Copilot app modernization **Assessment** pane, then select **Configure Assessment** to customize the configuration properties.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization Assessment pane with the Configure Assessment button highlighted.":::
 
@@ -98,7 +121,7 @@ The following examples describe some configurations:
     mode: issue-only
   ```
 
-After the tool runs an assessment, the interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
+After you configure the assessment, select **Run** to start the assessment. When the tool completes the assessment, a new report is generated and added to the report list. The interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment dashboard with Azure service target selection options.":::
 
@@ -162,9 +185,9 @@ Access this part by selecting the **Insights** tab. Displays file details and in
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment report insight list.":::
 
-## Operate assessment report
+## Operate assessment reports
 
-Effective report management enables collaboration, maintains assessment history, and integrates with existing workflows.
+Effective report management enables collaboration, maintains assessment history, and integrates with existing workflows. Each assessment run generates an independent report in the report list, and you can import, export, or delete individual reports as needed.
 
 ### Import assessment report
 
@@ -178,15 +201,15 @@ To import an assessment report to GitHub Copilot modernization, select **Import*
 
 In the assessment dashboard, you can view the issues detected by AppCAT and choose the migration solution to determine the decision. You can export the report and share it with others. If so, other people don't need to run assessment by themselves and can import the report and view the assessment and migration decision directly.
 
-To export an assessment report from GitHub Copilot modernization, right-click **Assessment Report** and then select **Export** in the assessment section or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **export assessment report**.
+To export an assessment report from GitHub Copilot app modernization, right-click the target report in the report list and then select **Export**, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **export assessment report**.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization assessment report export options and interface.":::
 
 ### Delete assessment report
 
-If you don't want the report anymore, you can choose to delete it.
+If you no longer need a report, you can delete it from the report list.
 
-To remove an assessment report, right-click **Assessment Report** and then select **Delete**.
+To remove an assessment report, right-click the target report in the report list and then select **Delete**.
 
 :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization delete an assessment report.":::
 

@@ -4,9 +4,9 @@ titleSuffix: Azure
 description: Shows you how to use GitHub Copilot modernization to assess and migrate a Java project.
 author: KarlErickson
 ms.author: karler
-ms.reviewer: xiading
+ms.reviewer: haozhan
 ms.topic: quickstart
-ms.date: 01/13/2026
+ms.date: 02/25/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -48,15 +48,11 @@ Use the following steps to start your migration process with solution assessment
 
 1. In Visual Studio Code, open the **mi-sql-public-demo** project folder in the samples repository.
 
-1. On the sidebar, select the **GitHub Copilot modernization** pane, where you can select **Migrate to Azure** or **Run Assessment** in the **ASSESSMENT** section.
+1. On the sidebar, select the **GitHub Copilot app modernization** pane, and then select **Start Assessment** or **Open Assessment Dashboard** in the **QUICKSTART** section.
 
-   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization pane with the Migrate to Azure and Run Assessment buttons highlighted.":::
+   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization pane with the Open Assessment Dashboard and Migrate to Azure buttons highlighted.":::
 
-1. The GitHub Copilot chat window with agent mode opens to call the modernization assessor to execute the GitHub Copilot modernization assessment. Select **Continue** to confirm.
-
-1. The modernization assessor now opens **appcat.log**. This file shows the logs for running AppCAT, which performs the app assessment. Select **Continue** to confirm again.
-
-1. The modernization assessor verifies your local environment first. If the AppCAT and its dependencies aren't installed, the agent helps you install them. After installation, the agent calls AppCAT to assess the current project. This step could take several minutes to complete.
+1. Select **Recommended Assessment**, then select the **Cloud Readiness** domain and select **OK** to start the assessment.
 
 1. Upon completion of the analysis, the modernization assessor produces a categorized view of cloud readiness issues in an opened **Assessment Report**.
 

@@ -9,7 +9,7 @@ description: Learn how to effectively work with application assessments in GitHu
 
 Before running assessment, configure the assessment by selecting **Configure Assessment** in the GitHub Copilot app modernization **Assessment** pane.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report-old.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Configure Assessment button highlighted.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Configure Assessment button highlighted.":::
 
 ### Configuration properties
 

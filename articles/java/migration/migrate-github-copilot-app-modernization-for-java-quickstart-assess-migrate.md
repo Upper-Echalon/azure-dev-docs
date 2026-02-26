@@ -11,6 +11,8 @@ ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
 ms.update-cycle: 180-days
+zone_pivot_group_filename: developer/java/java-zone-pivot-groups.json
+zone_pivot_groups: ide-set-one
 ---
 
 # Quickstart: assess and migrate a Java project by using GitHub Copilot modernization
@@ -28,39 +30,13 @@ The following video demonstrates how GitHub Copilot modernization uses [AppCAT](
 - An Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 [!INCLUDE [prerequisites](includes/migrate-github-copilot-app-modernization-for-java-quickstart-prerequisites.md)]
 
-## Upgrade JDK and dependency versions
+::: zone pivot="vscode"
+[!INCLUDE [quickstart-assess-migrate-vscode.md](./includes/quickstart-assess-migrate-vscode.md)]
+::: zone-end
 
-There are two ways to upgrade your JDK version. Both ways use the **GitHub Copilot modernization** pane in Visual Studio Code, which you can access from the sidebar.
-
-One way to upgrade your JDK version is to select **Upgrade Runtime & Frameworks** in the **QUICKSTART** section. Another way is to run the **Upgraded Java Runtime** task in the **TASKS - Upgrade Tasks** section. For more information, see [Quickstart: upgrade a Java project with GitHub Copilot modernization](/java/upgrade/quickstart-upgrade).
-
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization pane with the Upgrade options highlighted.":::
-
-To upgrade the Spring framework or a third-party dependency, run the **Upgrade Java Framework** task in the **TASKS - Upgrade Tasks** section. For more information, see [Upgrade a Java framework or third-party dependency by using GitHub Copilot modernization](/java/upgrade/framework-upgrade).
-
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot modernization pane with the Upgrade Java Framework task highlighted.":::
-
-## Assess cloud readiness
-
-Use the following steps to start your migration process with solution assessment. This assessment helps you understand what your cloud readiness challenges are and how impactful they are. It also provides recommended solutions. A solution recommendation includes references to set up Azure resources, add configurations, and make code changes.
-
-1. Clone the [Java migration copilot samples](https://github.com/Azure-Samples/java-migration-copilot-samples) repository and then check out to the **source** branch.
-
-1. In Visual Studio Code, open the **mi-sql-public-demo** project folder in the samples repository.
-
-1. On the sidebar, select the **GitHub Copilot app modernization** pane, and then select **Start Assessment** or **Open Assessment Dashboard** in the **QUICKSTART** section.
-
-   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization pane with the Start Assessment or Open Assessment Dashboard button highlighted.":::
-
-1. Select **Recommended Assessment**, then select the **Cloud Readiness** domain and select **OK** to start the assessment.
-
-1. Upon completion of the analysis, the modernization assessor produces a categorized view of cloud readiness issues in an opened **Assessment Report**.
-
-   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report.png" alt-text="Screenshot of the Visual Studio Code pane that shows the assessment report.":::
-
-1. When reviewing the summary report, you can select **Migrate to Azure SQL Database (Spring)** from the solution list under the issue **Database Migration (Microsoft SQL)**. Then, select **Run Task** to move to the code remediation stage.
-
-   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution.png" alt-text="Screenshot of the Visual Studio Code Issues pane that shows the Migrate to Azure SQL Database option with the Run Task button highlighted.":::
+::: zone pivot="intellij"
+[!INCLUDE [quickstart-assess-migrate-intellij.md](./includes/quickstart-assess-migrate-intellij.md)]
+::: zone-end
 
 ## Apply a predefined task
 

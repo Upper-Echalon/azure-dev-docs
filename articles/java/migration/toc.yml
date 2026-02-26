@@ -17,10 +17,14 @@ items:
           href: migrate-github-copilot-app-modernization-for-java-predefined-tasks.md
         - name: Working with assessment
           href: migrate-github-copilot-app-modernization-for-java-working-with-assessment.md
+        - name: "Understand assessment rules"
+          href: migrate-github-copilot-app-modernization-for-java-assess-rules.md
         - name: Optimize chat results with the AppModernization agent
           href: migrate-github-copilot-app-modernization-for-java-quickstart-chat-window.md
         - name: "Quickstart: Assess and migrate a Java project"
           href: migrate-github-copilot-app-modernization-for-java-quickstart-assess-migrate.md
+        - name: "Quickstart: Assess a Java project on Security"
+          href: migrate-github-copilot-app-modernization-for-java-quickstart-security-assess.md
         - name: "Quickstart: Create and apply your own task"
           href: migrate-github-copilot-app-modernization-for-java-quickstart-create-and-apply-your-own-task.md
         - name: "Quickstart: Deploy your project"

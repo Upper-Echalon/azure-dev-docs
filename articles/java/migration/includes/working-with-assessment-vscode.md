@@ -23,7 +23,7 @@ To run a recommended assessment, use the following steps:
 1. Select the domains you want to assess from the list of recommended options. Each domain represents a common migration scenario with preconfigured settings.
 1. Select **OK** to start the assessment.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
 
 After the assessment completes, a new report is generated and added to the report list. You can view the report by selecting it from the list.
 
@@ -38,9 +38,9 @@ To configure and run a custom assessment, use the following steps:
 1. Configure the assessment properties as described in the following section.
 1. Select **Run** to start the assessment.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment button highlighted.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment button highlighted.":::
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment properties.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment properties.":::
 
 ### Configuration properties
 
@@ -130,7 +130,7 @@ The following examples describe some common configuration scenarios:
 
 After the tool completes the assessment, a new report is generated and added to the report list. The interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment dashboard with Azure service target selection options.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment dashboard with Azure service target selection options.":::
 
 ## Interpret the assessment report
 
@@ -148,7 +148,7 @@ The assessment report consists of several key sections:
   - **Technologies**: Displays all embedded libraries grouped by functionality, enabling you to quickly view the technologies used in the application.
   - **Insights**: Displays file details and information to help you understand the detected technologies.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dashboard.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dashboard.":::
 
 #### Issues
 
@@ -166,32 +166,32 @@ Access this part by selecting the **Issues** tab. This tab provides a categorize
 | **Potential**       | Issues that might impact migration and need review.           |
 | **Optional**        | Low-impact issues. Fixing them is recommended but optional.   |
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report issue list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report issue list.":::
 
 For more information, you can expand each reported issue by selecting the title. The report provides the following information:
 
 - A list of files where the incidents occurred, along with the number of code lines impacted. If the file is a Java source file, then selecting the file line number directs you to the corresponding source report.
 - A detailed description of the issue. This description outlines the problem, provides any known solutions, and references supporting documentation regarding either the issue or resolution.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report issue detail.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report issue detail.":::
 
 #### Dependencies
 
 Access this part by selecting the **Dependencies** tab. This tab displays all Java-packaged dependencies found within the application.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dependency list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dependency list.":::
 
 #### Technologies
 
 Access this part by selecting the **Technologies** tab. This tab lists the occurrences of technologies, grouped by function, in the analyzed application. This report is an overview of the technologies found in the application, and is designed to assist you in quickly understanding each application's purpose.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report technology list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report technology list.":::
 
 #### Insights
 
 Access this part by selecting the **Insights** tab. Displays file details and information to help you understand the detected technologies.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report insight list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report insight list.":::
 
 ## Operate assessment reports
 
@@ -203,7 +203,7 @@ Besides running the assessment directly in GitHub Copilot app modernization, you
 
 To import an assessment report to GitHub Copilot app modernization, select **Import** in the assessment reports page, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **import assessment report**.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report import interface.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/import-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report import interface.":::
 
 ### Export assessment report
 
@@ -211,7 +211,7 @@ In the assessment dashboard, you can view the issues detected by assessment and 
 
 To export an assessment report from GitHub Copilot app modernization, select the **...** (more actions) button on the target report in the report list and then select **Export**.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report export options and interface.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/export-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report export options and interface.":::
 
 ### Delete assessment report
 
@@ -219,4 +219,4 @@ If you no longer need a report, you can delete it from the report list.
 
 To remove an assessment report, select the **...** (more actions) button on the target report in the report list and then select **Delete**.
 
-:::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization delete an assessment report.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization delete an assessment report.":::

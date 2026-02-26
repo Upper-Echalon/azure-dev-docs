@@ -23,7 +23,7 @@ To run a recommended assessment, use the following steps:
 1. Select the domains you want to assess from the list of recommended options. Each domain represents a common migration scenario with preconfigured settings.
 1. Select **OK** to start the assessment.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment-vscode.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment-vscode.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/recommended-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Recommended Assessment interface with domain selection options.":::
 
 After the assessment completes, a new report is generated and added to the report list. You can view the report by selecting it from the list.
 
@@ -38,9 +38,9 @@ To configure and run a custom assessment, use the following steps:
 1. Configure the assessment properties as described in the following section.
 1. Select **Run** to start the assessment.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-vscode.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-vscode.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment button highlighted.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment button highlighted.":::
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties-vscode.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties-vscode.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment properties.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/custom-assessment-properties.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization Assessment pane with the Custom Assessment properties.":::
 
 ### Configuration properties
 

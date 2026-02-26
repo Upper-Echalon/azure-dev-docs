@@ -50,7 +50,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. On the sidebar, select the **GitHub Copilot app modernization** pane, and then select **Start Assessment** or **Open Assessment Dashboard** in the **QUICKSTART** section.
 
-   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization pane with the Open Assessment Dashboard and Migrate to Azure buttons highlighted.":::
+   :::image type="content" source="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" lightbox="./media/migrate-github-copilot-app-modernization-for-java/run-assessment.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization pane with the Start Assessment or Open Assessment Dashboard button highlighted.":::
 
 1. Select **Recommended Assessment**, then select the **Cloud Readiness** domain and select **OK** to start the assessment.
 

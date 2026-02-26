@@ -26,7 +26,7 @@ Application assessment is a critical first step in your modernization journey. T
 ::: zone-end
 
 ::: zone pivot="intellij"
-[!INCLUDE [working-with-assessment-intellij.md](./includes/working-with-assessment-intellij.md)]
+[!INCLUDE [working-with-assessment-idea.md](./includes/working-with-assessment-idea.md)]
 ::: zone-end
 
 ## Next step

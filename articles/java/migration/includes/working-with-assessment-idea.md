@@ -104,7 +104,7 @@ The assessment report consists of several key sections:
   - **Technologies**: Displays all embedded libraries grouped by functionality, enabling you to quickly view the technologies used in the application.
   - **Insights**: Displays file details and information to help you understand the detected technologies.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dashboard.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-m1.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-m1.png" alt-text="Screenshot of Visual Studio Code that shows the GitHub Copilot app modernization assessment report dashboard.":::
 
 #### Issues
 

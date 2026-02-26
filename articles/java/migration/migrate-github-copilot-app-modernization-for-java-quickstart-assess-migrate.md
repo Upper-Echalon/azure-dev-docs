@@ -35,7 +35,7 @@ The following video demonstrates how GitHub Copilot modernization uses [AppCAT](
 ::: zone-end
 
 ::: zone pivot="intellij"
-[!INCLUDE [quickstart-assess-migrate-intellij.md](./includes/quickstart-assess-migrate-intellij.md)]
+[!INCLUDE [quickstart-assess-migrate-idea.md](./includes/quickstart-assess-migrate-idea.md)]
 ::: zone-end
 
 ## Apply a predefined task

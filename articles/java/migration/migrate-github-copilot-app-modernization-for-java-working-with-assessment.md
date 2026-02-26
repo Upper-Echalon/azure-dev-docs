@@ -11,7 +11,8 @@ ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
 ms.update-cycle: 180-days
-java_zone_pivot_groups: ide-set-one
+zone_pivot_group_filename: developer/java/java-zone-pivot-groups.json
+zone_pivot_groups: ide-set-one
 ---
 
 # Working with assessment: Comprehensive guide to Java application assessment with GitHub Copilot modernization

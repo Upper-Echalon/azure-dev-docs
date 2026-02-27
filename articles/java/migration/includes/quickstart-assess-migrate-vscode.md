@@ -5,6 +5,19 @@ title: "Quickstart: Assess and Migrate a Java Project Using GitHub Copilot app m
 description: Shows you how to use GitHub Copilot app modernization to assess and migrate a Java project in Visual Studio Code.
 ---
 
+## Prerequisites
+
+- An Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- A GitHub account with an active [GitHub Copilot](https://github.com/features/copilot) subscription under any plan.
+- The latest version of [Visual Studio Code](https://code.visualstudio.com/). Must be version 1.106 or later.
+  - [GitHub Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). For setup instructions, see [Set up GitHub Copilot in Visual Studio Code](https://code.visualstudio.com/docs/copilot/setup). Be sure to sign in to your GitHub account within Visual Studio Code.
+  - [GitHub Copilot app modernization](https://marketplace.visualstudio.com/items?itemName=vscjava.migrate-java-to-azure). Restart Visual Studio Code after installation.
+- [Java 21](/java/openjdk/download) or later.
+- [Maven](https://maven.apache.org/download.cgi) or [Gradle](https://gradle.org/install/) to build Java projects.
+
+> [!NOTE]
+> If you're using Gradle, only the Gradle wrapper version 5+ is supported. The Kotlin Domain Specific Language (DSL) isn't supported.
+
 ## Upgrade JDK and dependency versions
 
 There are two ways to upgrade your JDK version. Both ways use the **GitHub Copilot app modernization** pane in Visual Studio Code, which you can access from the sidebar.

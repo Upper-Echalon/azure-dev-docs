@@ -25,11 +25,6 @@ The following video demonstrates how GitHub Copilot modernization uses [AppCAT](
 
 > [!VIDEO https://www.youtube.com/embed/eX8rSMd4Dls]
 
-## Prerequisites
-
-- An Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-[!INCLUDE [prerequisites](includes/migrate-github-copilot-app-modernization-for-java-quickstart-prerequisites.md)]
-
 ::: zone pivot="vscode"
 [!INCLUDE [quickstart-assess-migrate-vscode.md](./includes/quickstart-assess-migrate-vscode.md)]
 ::: zone-end

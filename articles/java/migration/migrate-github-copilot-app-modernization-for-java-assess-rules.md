@@ -10,7 +10,7 @@ ms.date: 01/13/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
-ms.update-cycle: 180-days
+ms.update-cycle: 18
 ---
 
 # Quickstart: assess and migrate a Java project using GitHub Copilot app modernization

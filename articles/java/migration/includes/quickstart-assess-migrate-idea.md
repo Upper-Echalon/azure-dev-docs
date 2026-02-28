@@ -38,7 +38,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. Clone the [Java migration copilot samples](https://github.com/Azure-Samples/java-migration-copilot-samples) repository and then check out to the **source** branch.
 
-1. In Visual Studio Code, open the **mi-sql-public-demo** project folder in the samples repository.
+1. In IntelliJ IDEA, open the **mi-sql-public-demo** project folder in the samples repository.
 
 1. On the sidebar, select the **GitHub Copilot app modernization** pane, where you can select **Migrate to Azure** or **Run Assessment** in the **ASSESSMENT** section.
 

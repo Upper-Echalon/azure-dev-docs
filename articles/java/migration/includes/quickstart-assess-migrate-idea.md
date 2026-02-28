@@ -22,7 +22,7 @@ description: Shows you how to use GitHub Copilot app modernization to assess and
 
 ## Upgrade JDK and dependency versions
 
-There are two ways to upgrade your JDK version. Both ways use the **GitHub Copilot app modernization** pane in Visual Studio Code, which you can access from the sidebar.
+There are two ways to upgrade your JDK version. Both ways use the **GitHub Copilot app modernization** pane in IntelliJ IDEA, which you can access from the sidebar.
 
 One way to upgrade your JDK version is to select **Upgrade Runtime & Frameworks** in the **QUICKSTART** section. Another way is to run the **Upgraded Java Runtime** task in the **TASKS - Upgrade Tasks** section. For more information, see [Quickstart: upgrade a Java project with GitHub Copilot app modernization](/java/upgrade/quickstart-upgrade).
 

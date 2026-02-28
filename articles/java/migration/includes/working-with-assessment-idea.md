@@ -98,7 +98,7 @@ The assessment report consists of several key sections:
 
 - **Application Information**: Basic information about your application including Java version, frameworks, build tools, project structure, and target Azure service.
 - **Issue Summary**: Overview of migration issues categorized by domain with criticality percentages.
-- **Detailed Analysis**: The detail report is organized into the following four subsections.
+- **Detailed Analysis**: The detailed report is organized into the following four subsections.
   - **Issues**: Provides a concise summary of all issues that require attention.
   - **Dependencies**: Displays all Java-packaged dependencies found within the application.
   - **Technologies**: Displays all embedded libraries grouped by functionality, enabling you to quickly view the technologies used in the application.

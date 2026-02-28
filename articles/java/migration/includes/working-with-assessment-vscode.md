@@ -152,7 +152,7 @@ The assessment report consists of several key sections:
 
 #### Issues
 
-Access this part by selecting the **Issues** tab. This tab provides a categorized issues list of various aspects of Cloud Readiness， Java Upgrade and Security that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
+Access this part by selecting the **Issues** tab. This tab provides a categorized issues list of various aspects of Cloud Readiness, Java Upgrade and Security that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
 
 | Domain               | Description                                                                          |
 |----------------------|--------------------------------------------------------------------------------------|

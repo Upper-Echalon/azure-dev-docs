@@ -90,7 +90,7 @@ After the tool runs an assessment, the interactive dashboard opens automatically
 
 ## Interpret the assessment report
 
-The assessment report provide comprehensive analysis results to help you understand your application's readiness for Azure migration and modernization. This section guides you through the report structure and helps you interpret the findings to make informed migration decisions.
+The assessment report provides comprehensive analysis results to help you understand your application's readiness for Azure migration and modernization. This section guides you through the report structure and helps you interpret the findings to make informed migration decisions.
 
 ### Report structure overview
 

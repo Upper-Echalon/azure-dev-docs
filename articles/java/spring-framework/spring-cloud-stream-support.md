@@ -86,7 +86,7 @@ This section contains the configuration options used for connecting to Azure Eve
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Connection configurable properties of spring-cloud-azure-stream-binder-eventhubs:
+Connection configurable properties of `spring-cloud-azure-stream-binder-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                 | Type    | Description                                                                                                                |
@@ -107,9 +107,9 @@ The binder also supports [Spring Could Azure Resource Manager](resource-manager.
 This section contains the configuration options for the Storage Blobs service, which is used for persisting partition ownership and checkpoint information.
 
 > [!NOTE]
-> From version 4.0.0, when the property of **spring.cloud.azure.eventhubs.processor.checkpoint-store.create-container-if-not-exists** isn't enabled manually, no Storage container will be created automatically with the name from **spring.cloud.stream.bindings.binding-name.destination**.
+> From version 4.0.0, when the property of `spring.cloud.azure.eventhubs.processor.checkpoint-store.create-container-if-not-exists` isn't enabled manually, no Storage container will be created automatically with the name from `spring.cloud.stream.bindings.binding-name.destination`.
 
-Checkpointing configurable properties of spring-cloud-azure-stream-binder-eventhubs:
+Checkpointing configurable properties of `spring-cloud-azure-stream-binder-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                   | Type    | Description                                         |
@@ -133,7 +133,7 @@ These properties are exposed via `EventHubsConsumerProperties`.
 > [!NOTE]
 > To avoid repetition, since version 4.17.0 and 5.11.0, Spring Cloud Azure Stream Binder Event Hubs supports setting values for all channels, in the format of `spring.cloud.stream.eventhubs.default.consumer.<property>=<value>`.
 
-Consumer configurable properties of spring-cloud-azure-stream-binder-eventhubs:
+Consumer configurable properties of `spring-cloud-azure-stream-binder-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                                                    | Type                                                                          | Description                                                                                                                                                                      |
@@ -183,7 +183,7 @@ These properties are exposed via `EventHubsProducerProperties`.
 > [!NOTE]
 > To avoid repetition, since version 4.17.0 and 5.11.0, Spring Cloud Azure Stream Binder Event Hubs supports setting values for all channels, in the format of `spring.cloud.stream.eventhubs.default.producer.<property>=<value>`.
 
-Producer configurable properties of spring-cloud-azure-stream-binder-eventhubs:
+Producer configurable properties of `spring-cloud-azure-stream-binder-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                          | Type    | Description                                                                                                              |
@@ -813,7 +813,7 @@ This section contains the configuration options used for connecting to Azure Ser
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Connection configurable properties of spring-cloud-azure-stream-binder-servicebus:
+Connection configurable properties of `spring-cloud-azure-stream-binder-servicebus`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                            | Type    | Description                                                                                                                 |
@@ -841,7 +841,7 @@ These properties are exposed via `ServiceBusConsumerProperties`.
 > [!NOTE]
 > To avoid repetition, since version 4.17.0 and 5.11.0, Spring Cloud Azure Stream Binder Service Bus supports setting values for all channels, in the format of `spring.cloud.stream.servicebus.default.consumer.<property>=<value>`.
 
-Consumer configurable properties of spring-cloud-azure-stream-binder-servicebus:
+Consumer configurable properties of `spring-cloud-azure-stream-binder-servicebus`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                       | Type                  | Default                                                                                           | Description                                                                                                                                                   |
@@ -873,7 +873,7 @@ These properties are exposed via `ServiceBusProducerProperties`.
 > [!NOTE]
 > To avoid repetition, since version 4.17.0 and 5.11.0, Spring Cloud Azure Stream Binder Service Bus supports setting values for all channels, in the format of `spring.cloud.stream.servicebus.default.producer.<property>=<value>`.
 
-Producer configurable properties of spring-cloud-azure-stream-binder-servicebus:
+Producer configurable properties of `spring-cloud-azure-stream-binder-servicebus`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                       | Type                 | Default                                                                                           | Description                                                                                                  |

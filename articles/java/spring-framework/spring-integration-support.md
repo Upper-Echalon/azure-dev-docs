@@ -77,7 +77,7 @@ This section contains the configuration options used for connecting to Azure Eve
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Connection configurable properties of spring-cloud-azure-starter-integration-eventhubs:
+Connection configurable properties of `spring-cloud-azure-starter-integration-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                 | Type    | Description                                                                                                                |
@@ -94,9 +94,9 @@ Connection configurable properties of spring-cloud-azure-starter-integration-eve
 This section contains the configuration options for the Storage Blobs service, which is used for persisting partition ownership and checkpoint information.
 
 > [!NOTE]
-> From version 4.0.0, when the property of **spring.cloud.azure.eventhubs.processor.checkpoint-store.create-container-if-not-exists** isn't enabled manually, no Storage container will be created automatically.
+> From version 4.0.0, when the property of `spring.cloud.azure.eventhubs.processor.checkpoint-store.create-container-if-not-exists` isn't enabled manually, no Storage container will be created automatically.
 
-Checkpointing configurable properties of spring-cloud-azure-starter-integration-eventhubs:
+Checkpointing configurable properties of `spring-cloud-azure-starter-integration-eventhubs`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                   | Type    | Description                                         |
@@ -399,7 +399,7 @@ This section contains the configuration options used for connecting to Azure Ser
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Connection configurable properties of spring-cloud-azure-starter-integration-servicebus:
+Connection configurable properties of `spring-cloud-azure-starter-integration-servicebus`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                            | Type    | Description                                                                                                                 |
@@ -718,7 +718,7 @@ This section contains the configuration options used for connecting to Azure Sto
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Connection configurable properties of spring-cloud-azure-starter-integration-storage-queue:
+Connection configurable properties of `spring-cloud-azure-starter-integration-storage-queue`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                               | Type                | Description                                                |

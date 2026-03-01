@@ -1043,7 +1043,7 @@ public class AadWebApplicationAndResourceServerConfig {
 
 ### Configuration
 
-Configurable properties of spring-cloud-azure-starter-active-directory:
+Configurable properties of `spring-cloud-azure-starter-active-directory`:
 
 > [!div class="mx-tdBreakAll"]
 > | Name                                                                                  | Description                                                                                                                                                                                                           |
@@ -1103,7 +1103,7 @@ Azure Active Directory (Azure AD) B2C is an identity management service that ena
 
 ### Configuration
 
-Configurable properties of spring-cloud-azure-starter-active-directory-b2c:
+Configurable properties of `spring-cloud-azure-starter-active-directory-b2c`:
 
 > [!div class="mx-tdBreakAll"]
 > | Name                                                                           | Description                                                                                  |
@@ -1740,4 +1740,4 @@ Build and test your app. Let `WebApiA` and `WebApiB` run on port `8081` and `808
 
 ### Samples
 
-For more information, see the [spring-cloud-azure-starter-active-directory-b2c samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory-b2c).
+For more information, see the [`spring-cloud-azure-starter-active-directory-b2c` samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory-b2c).

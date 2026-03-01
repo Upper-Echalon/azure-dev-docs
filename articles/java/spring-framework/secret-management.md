@@ -159,4 +159,4 @@ public static void main(String[] args) {
 
 ## Samples
 
-See the [spring-cloud-azure-starter-keyvault-secrets samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/spring-cloud-azure-starter-keyvault-secrets/property-source) on GitHub.
+See the [`spring-cloud-azure-starter-keyvault-secrets` samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/spring-cloud-azure-starter-keyvault-secrets/property-source) on GitHub.

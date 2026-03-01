@@ -54,7 +54,7 @@ spring:
         max-connections: ${your-expected-max-connection-value}
 ```
 
-### Usage of spring.jms.servicebus.idle-timeout
+### Usage of `spring.jms.servicebus.idle-timeout`
 
 The idle-timeout properties configure the [idle timeout](http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-transport-v1.0-os.html#doc-doc-idle-time-out) of an AMQP connection. The AMQP spec provides the following description:
 

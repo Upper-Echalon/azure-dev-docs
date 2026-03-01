@@ -20,10 +20,10 @@ The Spring project provides a [Spring Resources](https://docs.spring.io/spring-f
 
 The following table lists Azure Storage related libraries:
 
-| Starter                                       | Service                  | Description                                                                                                                             |
-|-----------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| spring-cloud-azure-starter-storage-blob       | Azure Storage Blob       | Allows unstructured data to be stored and accessed at a massive scale in block blobs.                                                   |
-| spring-cloud-azure-starter-storage-file-share | Azure Storage File Share | Offers fully managed cloud file shares that you can access from anywhere via the industry standard Server Message Block (SMB) protocol. |
+| Starter                                         | Service                  | Description                                                                                                                             |
+|-------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `spring-cloud-azure-starter-storage-blob`       | Azure Storage Blob       | Allows unstructured data to be stored and accessed at a massive scale in block blobs.                                                   |
+| `spring-cloud-azure-starter-storage-file-share` | Azure Storage File Share | Offers fully managed cloud file shares that you can access from anywhere via the industry standard Server Message Block (SMB) protocol. |
 
 ## Dependency setup
 

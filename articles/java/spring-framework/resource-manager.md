@@ -32,7 +32,7 @@ Azure Resource Manager (ARM) is the deployment and management service for Azure.
 > [!NOTE]
 > If you choose to use a security principal to authenticate and authorize with Microsoft Entra ID for accessing an Azure resource, see [Authorize access with Microsoft Entra ID](authentication.md#authorize-access-with-microsoft-entra-id) to make sure the security principal has been granted the sufficient permission to access the Azure resource.
 
-Configurable properties of spring-cloud-azure-resourcemanager:
+Configurable properties of `spring-cloud-azure-resourcemanager`:
 
 > [!div class="mx-tdBreakAll"]
 > | Property                                                             | Description                                                                                        |

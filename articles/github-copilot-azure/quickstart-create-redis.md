@@ -32,7 +32,7 @@ The approach is:
 
 - Creating a user-level `.env` file to store Azure deployment information as environment variables
 - Writing a prompt to create an instance of Azure Cache for Redis in your subscription, which includes a local-level `.env` file to store Azure Cache for Redis connection information as environment variables
-- Validating that the resource and the .env file are created correctly
+- Validating that the resource and the `.env` file are created correctly
 - Writing a prompt to create a Python app to retrieve, write, and read from the cache by using environment variables
 - Validating the app works
 - Cleaning up the resources in Azure
@@ -182,7 +182,7 @@ After editing the files:
 
 1. In Visual Studio Code's Explorer view, make sure the files you requested in the prompt exist. Visually inspect the files to see if they have values that seem reasonable.
 
-1. Inspect the `main.py` file to ensure that it retrieves values from the .env file, imports the `redis` package, and connects to Azure Cache for Redis. Check that it writes and reads the cache. You might see code that resembles the following:
+1. Inspect the `main.py` file to ensure that it retrieves values from the `.env` file, imports the `redis` package, and connects to Azure Cache for Redis. Check that it writes and reads the cache. You might see code that resembles the following:
 
    ```python
    

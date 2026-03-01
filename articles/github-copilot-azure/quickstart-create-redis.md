@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create and deploy an app using Azure Cache for Redis using GitHub Copilot for Azure"
-description: "Create a prompt in GitHub Copilot for Azure that creates and deploys an instance of Azure Cache for Redis, and a Python app that writes and reads fro mit."
+description: "Create a prompt in GitHub Copilot for Azure that creates and deploys an instance of Azure Cache for Redis, and a Python app that writes and reads from it."
 author: bobtabor-msft
 ms.author: rotabor
 ms.service: github-copilot-for-azure

@@ -53,8 +53,56 @@ In next paragraphs, you can understand each domain's issue coverage in detail.
 | **java-upgrade** | **deprecated-apis** | Catalogs hundreds of removed or deprecated APIs, including `sun.misc.BASE64`, `Thread.stop`, `SecurityManager` methods, and proprietary hooks from JBoss, Seam 2, WebLogic, and WebSphere. | **Stability & Portability:** Using removed APIs causes runtime crashes on modern JVMs. Proprietary vendor hooks (like WebLogic/JBoss internals) prevent the application from being portable across standard runtimes. |
 | **java-upgrade** | **build-tool** | Identifies legacy build systems like Ant (`build.xml`) or Eclipse-specific project configurations (WTP/JEM natures). | **Automation:** Legacy tools lack the standard conventions and dependency management needed for efficient integration into modern CI/CD pipelines. |
 
-## Security Issues
-ISO5055 introduction, and below are the CWE issue list scoped as security category in ISO5055. 
+## Domain: Security (ISO 5055 guided)
+[ISO/IEC 5055](https://www.it-cisq.org/standards/code-quality-standards/) is an ISO standard for measuring the internal structure of a software product on four business-critical factors: Security, Reliability, Performance Efficiency, and Maintainability. These are the factors that determine how trustworthy, dependable, and resilient a software system will be. In essence, ISO 5055 is meant to **“find and prevent the 8% of flaws that cause 90% of production issues”**. ISO5055 identifies the most critical and impactful CWEs under each quality characteristic: Reliability, Performance Efficiency, Security, and Maintainability. For GitHub Copilot Modernization, we detect against the curated CWEs on security defined in ISO5055 as below table reveals.
+
+| CWE_ID | Title | Description |
+| :--- | :--- | :--- |
+| **CWE-22** | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | The product uses external input to construct a pathname intended to identify a file or directory underneath a restricted parent directory, but it does not properly neutralize special elements that can cause the pathname to resolve outside the restricted directory. |
+| **CWE-23** | Relative Path Traversal | The product uses external input to construct a pathname within a restricted directory but fails to neutralize sequences like ".." that can resolve outside that directory. |
+| **CWE-36** | Absolute Path Traversal | The product uses external input to construct a pathname within a restricted directory but fails to neutralize absolute path sequences like "/abs/path" that can resolve outside that directory. |
+| **CWE-77** | Improper Neutralization of Special Elements used in a Command ('Command Injection') | The product constructs a command using externally-influenced input but does not neutralize special elements that could modify the intended command sent to a downstream component. |
+| **CWE-78** | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') | The product constructs an OS command using externally-influenced input but fails to neutralize special elements that could modify the intended OS command sent to a downstream component. |
+| **CWE-88** | Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') | The product constructs a command string for a separate component but does not properly delimit arguments, options, or switches within that string. |
+| **CWE-79** | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') | The product fails to neutralize user-controllable input before placing it in output used as a web page served to other users. |
+| **CWE-89** | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') | The product constructs an SQL command using externally-influenced input but fails to neutralize elements that could modify the command, allowing inputs to be interpreted as SQL syntax instead of ordinary data. |
+| **CWE-564** | SQL Injection: Hibernate | Using Hibernate to execute dynamic SQL statements built with user-controlled input can allow an attacker to modify the statement's meaning or execute arbitrary SQL commands. |
+| **CWE-90** | Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection') | The product constructs an LDAP query using externally-influenced input but fails to neutralize elements that could modify the intended query sent to a downstream component. |
+| **CWE-91** | XML Injection (aka Blind XPath Injection) | The product does not properly neutralize special elements used in XML, allowing attackers to modify the syntax, content, or commands before processing. |
+| **CWE-99** | Improper Control of Resource Identifiers ('Resource Injection') | The product receives input but does not correctly restrict it before using it as an identifier for a resource outside the intended sphere of control. |
+| **CWE-130** | Improper Handling of Length Parameter Inconsistency | The product parses a formatted message or structure but incorrectly handles a length field that is inconsistent with the actual length of the associated data. |
+| **CWE-259** | Use of Hard-coded Password | The product contains a hard-coded password used for its own inbound authentication or outbound communication to external components. |
+| **CWE-321** | Use of Hard-coded Cryptographic Key | The product uses a hard-coded, unchangeable cryptographic key. |
+| **CWE-434** | Unrestricted Upload of File with Dangerous Type | The product allows the upload of dangerous file types that are automatically processed within its environment. |
+| **CWE-456** | Missing Initialization of a Variable | The product does not initialize critical variables, causing the execution environment to use unexpected values. |
+| **CWE-457** | Use of Uninitialized Variable | The code uses a variable that has not been initialized, leading to unpredictable or unintended results. |
+| **CWE-477** | Use of Obsolete Function | The code uses deprecated or obsolete functions, suggesting it has not been actively reviewed or maintained. |
+| **CWE-502** | Deserialization of Untrusted Data | The product deserializes untrusted data without sufficiently ensuring the resulting data will be valid. |
+| **CWE-543** | Use of Singleton Pattern Without Synchronization in a Multithreaded Context | The product uses the singleton pattern when creating a resource within a multithreaded environment without proper synchronization. |
+| **CWE-567** | Unsynchronized Access to Shared Data in a Multithreaded Context | The product fails to properly synchronize shared data, such as static variables, across threads, leading to undefined behavior. |
+| **CWE-570** | Expression is Always False | The product contains an expression that will always evaluate to false. |
+| **CWE-571** | Expression is Always True | The product contains an expression that will always evaluate to true. |
+| **CWE-606** | Unchecked Input for Loop Condition | The product does not properly check inputs used for loop conditions, potentially leading to denial of service from excessive looping. |
+| **CWE-643** | Improper Neutralization of Data within XPath Expressions ('XPath Injection') | The product uses external input to dynamically construct an XPath expression for an XML database but fails to neutralize that input. |
+| **CWE-652** | Improper Neutralization of Data within XQuery Expressions ('XQuery Injection') | The product uses external input to dynamically construct an XQuery expression but fails to correctly neutralize that input. |
+| **CWE-662** | Improper Synchronization | The product allows multiple threads or systems access to a shared resource without proper synchronization, potentially causing simultaneous access issues. |
+| **CWE-665** | Improper Initialization | The product does not initialize or incorrectly initializes a resource, potentially leaving it in an unexpected state when accessed. |
+| **CWE-667** | Improper Locking | The product does not properly acquire or release a lock on a resource, leading to unexpected state changes. |
+| **CWE-672** | Operation on a Resource after Expiration or Release | The product accesses or operates on a resource after it has expired, been released, or been revoked. |
+| **CWE-681** | Incorrect Conversion between Numeric Types | Data can be omitted or translated into unexpected values during type conversion, which can be dangerous if used in sensitive contexts. |
+| **CWE-682** | Incorrect Calculation | The product performs a calculation that generates incorrect results later used in security-critical decisions or resource management. |
+| **CWE-732** | Incorrect Permission Assignment for Critical Resource | Permissions for a security-critical resource are specified in a way that allows unintended actors to read or modify it. |
+| **CWE-772** | Missing Release of Resource after Effective Lifetime | The product does not release a resource after its effective lifetime has ended and it is no longer needed. |
+| **CWE-775** | Missing Release of File Descriptor or Handle after Effective Lifetime | The product fails to release a file descriptor or handle after it is no longer needed. |
+| **CWE-778** | Insufficient Logging | The product fails to record a security-critical event or omits important details when logging it. |
+| **CWE-783** | Operator Precedence Logic Error | An expression uses incorrect logic caused by operator precedence. |
+| **CWE-789** | Memory Allocation with Excessive Size Value | The product allocates memory based on an untrusted, large size value without ensuring it is within expected limits. |
+| **CWE-798** | Use of Hard-coded Credentials | The product contains hard-coded credentials, such as a password or cryptographic key. |
+| **CWE-820** | Missing Synchronization | The product utilizes a shared resource concurrently without attempting to synchronize access. |
+| **CWE-821** | Incorrect Synchronization | The product utilizes a shared resource concurrently but does not correctly synchronize access. |
+| **CWE-835** | Loop with Unreachable Exit Condition ('Infinite Loop') | The product contains an iteration or loop with an exit condition that cannot be reached. |
+| **CWE-611** | Improper Restriction of XML External Entity Reference | The product processes XML documents containing entities with URIs that resolve outside the intended sphere of control. |
+| **CWE-1057** | Data Access Operations Outside of Expected Data Manager Component | The product performs data-access operations that bypass a dedicated, central data manager component required by design. |
 
 ## Next steps
 - [Working with assessment](migrate-github-copilot-app-modernization-for-java-working-with-assessment.md)

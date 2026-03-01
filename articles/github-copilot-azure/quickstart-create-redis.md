@@ -108,7 +108,7 @@ These values are used by Copilot for Azure to provision resources. If you're uns
    REDIS_SSL=true
    ```
 
-1. Copy and submit the following prompt.
+1. Validate that the Azure Cache for Redis instance is running by using the following prompt.
 
    ```prompt
    Use the values in the `.env` file in this workspace to validate that an instance of Azure Cache for Redis is running and ready to be used.

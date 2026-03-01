@@ -37,20 +37,20 @@ Configurable properties of spring-cloud-azure-resourcemanager:
 > [!div class="mx-tdBreakAll"]
 > | Property                                                             | Description                                                                                        |
 > |----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure.resource-manager**.enabled                      | Whether the Resource Manager is enabled. Default is true.                                          |
-> | **spring.cloud.azure.credential**.client-id                          | Client ID to use when performing service principal authentication with Azure.                      |
-> | **spring.cloud.azure.credential**.client-secret                      | Client secret to use when performing service principal authentication with Azure.                  |
-> | **spring.cloud.azure.credential**.client-certificate-path            | Path of a PEM certificate file to use when performing service principal authentication with Azure. |
-> | **spring.cloud.azure.credential**.client-certificate-password        | Password of the certificate file.                                                                  |
-> | **spring.cloud.azure.credential**.username                           | Username to use when performing username/password authentication with Azure.                       |
-> | **spring.cloud.azure.credential**.password                           | Password to use when performing username/password authentication.                                  |
-> | **spring.cloud.azure.credential**.managed-identity-enabled           | Whether to enable managed identity.                                                                |
-> | **spring.cloud.azure.profile**.cloud-type                            | Name of the Azure cloud to connect to.                                                             |
-> | **spring.cloud.azure.profile**.environment.active-directory-endpoint | The Microsoft Entra endpoint to connect to for authentication.                              |
-> | **spring.cloud.azure.profile**.subscription-id                       | Subscription ID to use when connecting to Azure resources.                                         |
-> | **spring.cloud.azure.profile**.tenant-id                             | Tenant ID for Azure resources. The values allowed for `tenant-id` are: `common`, `organizations`, `consumers`, or the tenant ID.                                         |
-> | **spring.cloud.azure.azure-service**.namespace                   | The namespace of the Azure service to provision resources with.                                    |
-> | **spring.cloud.azure.azure-service**.resource.resource-group     | The resource group holding an Azure service resource.                                              |
+> | `spring.cloud.azure.resource-manager.enabled`                      | Whether the Resource Manager is enabled. Default is true.                                          |
+> | `spring.cloud.azure.credential.client-id`                          | Client ID to use when performing service principal authentication with Azure.                      |
+> | `spring.cloud.azure.credential.client-secret`                      | Client secret to use when performing service principal authentication with Azure.                  |
+> | `spring.cloud.azure.credential.client-certificate-path`            | Path of a PEM certificate file to use when performing service principal authentication with Azure. |
+> | `spring.cloud.azure.credential.client-certificate-password`        | Password of the certificate file.                                                                  |
+> | `spring.cloud.azure.credential.username`                           | Username to use when performing username/password authentication with Azure.                       |
+> | `spring.cloud.azure.credential.password`                           | Password to use when performing username/password authentication.                                  |
+> | `spring.cloud.azure.credential.managed-identity-enabled`           | Whether to enable managed identity.                                                                |
+> | `spring.cloud.azure.profile.cloud-type`                            | Name of the Azure cloud to connect to.                                                             |
+> | `spring.cloud.azure.profile.environment.active-directory-endpoint` | The Microsoft Entra endpoint to connect to for authentication.                              |
+> | `spring.cloud.azure.profile.subscription-id`                       | Subscription ID to use when connecting to Azure resources.                                         |
+> | `spring.cloud.azure.profile.tenant-id`                             | Tenant ID for Azure resources. The values allowed for `tenant-id` are: `common`, `organizations`, `consumers`, or the tenant ID.                                         |
+> | `spring.cloud.azure.azure-service.namespace`                   | The namespace of the Azure service to provision resources with.                                    |
+> | `spring.cloud.azure.azure-service.resource.resource-group`     | The resource group holding an Azure service resource.                                              |
 
 ## Basic usage
 

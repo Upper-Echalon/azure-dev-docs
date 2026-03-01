@@ -82,12 +82,12 @@ Connection configurable properties of spring-cloud-azure-starter-integration-eve
 > [!div class="mx-tdBreakAll"]
 > | Property                                                 | Type    | Description                                                                                                                |
 > |----------------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure.eventhubs**.enabled                 | boolean | Whether an Azure Event Hubs is enabled.                                                                                    |
-> | **spring.cloud.azure.eventhubs**.connection-string       | String  | Event Hubs Namespace connection string value.                                                                              |
-> | **spring.cloud.azure.eventhubs**.namespace               | String  | Event Hubs Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
-> | **spring.cloud.azure.eventhubs**.domain-name             | String  | Domain name of an Azure Event Hubs Namespace value.                                                                        |
-> | **spring.cloud.azure.eventhubs**.custom-endpoint-address | String  | Custom Endpoint address.                                                                                                   |
-> | **spring.cloud.azure.eventhubs**.shared-connection       | Boolean | Whether the underlying EventProcessorClient and EventHubProducerAsyncClient use the same connection. By default, a new connection is constructed and used created for each Event Hub client created. |
+> | `spring.cloud.azure.eventhubs.enabled`                 | boolean | Whether an Azure Event Hubs is enabled.                                                                                    |
+> | `spring.cloud.azure.eventhubs.connection-string`       | String  | Event Hubs Namespace connection string value.                                                                              |
+> | `spring.cloud.azure.eventhubs.namespace`               | String  | Event Hubs Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
+> | `spring.cloud.azure.eventhubs.domain-name`             | String  | Domain name of an Azure Event Hubs Namespace value.                                                                        |
+> | `spring.cloud.azure.eventhubs.custom-endpoint-address` | String  | Custom Endpoint address.                                                                                                   |
+> | `spring.cloud.azure.eventhubs.shared-connection`       | Boolean | Whether the underlying EventProcessorClient and EventHubProducerAsyncClient use the same connection. By default, a new connection is constructed and used created for each Event Hub client created. |
 
 #### Checkpoint Configuration Properties
 
@@ -101,10 +101,10 @@ Checkpointing configurable properties of spring-cloud-azure-starter-integration-
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                                   | Type    | Description                                         |
 > |--------------------------------------------------------------------------------------------|---------|-----------------------------------------------------|
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.create-container-if-not-exists | Boolean | Whether to allow creating containers if not exists. |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.account-name                   | String  | Name for the storage account.                       |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.account-key                    | String  | Storage account access key.                         |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.container-name                 | String  | Storage container name.                             |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.create-container-if-not-exists` | Boolean | Whether to allow creating containers if not exists. |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.account-name`                   | String  | Name for the storage account.                       |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.account-key`                    | String  | Storage account access key.                         |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.container-name`                 | String  | Storage container name.                             |
 
 Common Azure Service SDK configuration options are configurable for Storage Blob checkpoint store as well. The supported configuration options are introduced in [Spring Cloud Azure configuration](configuration.md), and could be configured with either the unified prefix `spring.cloud.azure.` or the prefix of `spring.cloud.azure.eventhubs.processor.checkpoint-store`.
 
@@ -404,11 +404,11 @@ Connection configurable properties of spring-cloud-azure-starter-integration-ser
 > [!div class="mx-tdBreakAll"]
 > | Property                                            | Type    | Description                                                                                                                 |
 > |-----------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure.servicebus**.enabled           | boolean | Whether an Azure Service Bus is enabled.                                                                                    |
-> | **spring.cloud.azure.servicebus**.connection-string | String  | Service Bus Namespace connection string value.                                                                              |
-> | **spring.cloud.azure.servicebus**.custom-endpoint-address | String  | The custom endpoint address to use when connecting to Service Bus.                                                                              |
-> | **spring.cloud.azure.servicebus**.namespace         | String  | Service Bus Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
-> | **spring.cloud.azure.servicebus**.domain-name       | String  | Domain name of an Azure Service Bus Namespace value.                                                                        |
+> | `spring.cloud.azure.servicebus.enabled`           | boolean | Whether an Azure Service Bus is enabled.                                                                                    |
+> | `spring.cloud.azure.servicebus.connection-string` | String  | Service Bus Namespace connection string value.                                                                              |
+> | `spring.cloud.azure.servicebus.custom-endpoint-address` | String  | The custom endpoint address to use when connecting to Service Bus.                                                                              |
+> | `spring.cloud.azure.servicebus.namespace`         | String  | Service Bus Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
+> | `spring.cloud.azure.servicebus.domain-name`       | String  | Domain name of an Azure Service Bus Namespace value.                                                                        |
 
 #### Service Bus processor configuration properties
 
@@ -723,14 +723,14 @@ Connection configurable properties of spring-cloud-azure-starter-integration-sto
 > [!div class="mx-tdBreakAll"]
 > | Property                                               | Type                | Description                                                |
 > |--------------------------------------------------------|---------------------|------------------------------------------------------------|
-> | **spring.cloud.azure.storage.queue**.enabled           | boolean             | Whether an Azure Storage Queue is enabled.                 |
-> | **spring.cloud.azure.storage.queue**.connection-string | String              | Storage Queue Namespace connection string value.           |
-> | **spring.cloud.azure.storage.queue**.accountName       | String              | Storage Queue account name.                                |
-> | **spring.cloud.azure.storage.queue**.accountKey        | String              | Storage Queue account key.                                 |
-> | **spring.cloud.azure.storage.queue**.endpoint          | String              | Storage Queue service endpoint.                            |
-> | **spring.cloud.azure.storage.queue**.sasToken          | String              | Sas token credential                                       |
-> | **spring.cloud.azure.storage.queue**.serviceVersion    | QueueServiceVersion | QueueServiceVersion that is used when making API requests. |
-> | **spring.cloud.azure.storage.queue**.messageEncoding   | String              | Queue message encoding.                                    |
+> | `spring.cloud.azure.storage.queue.enabled`           | boolean             | Whether an Azure Storage Queue is enabled.                 |
+> | `spring.cloud.azure.storage.queue.connection-string` | String              | Storage Queue Namespace connection string value.           |
+> | `spring.cloud.azure.storage.queue.accountName`       | String              | Storage Queue account name.                                |
+> | `spring.cloud.azure.storage.queue.accountKey`        | String              | Storage Queue account key.                                 |
+> | `spring.cloud.azure.storage.queue.endpoint`          | String              | Storage Queue service endpoint.                            |
+> | `spring.cloud.azure.storage.queue.sasToken`          | String              | Sas token credential                                       |
+> | `spring.cloud.azure.storage.queue.serviceVersion`    | QueueServiceVersion | QueueServiceVersion that is used when making API requests. |
+> | `spring.cloud.azure.storage.queue.messageEncoding`   | String              | Queue message encoding.                                    |
 
 ### Basic usage
 

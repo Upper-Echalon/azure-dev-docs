@@ -48,13 +48,13 @@ The library provides the following configuration options for `EventHubsTemplate`
 > [!div class="mx-tdBreakAll"]
 > | Property                                                                   | Type    | Description                                                                                                        |
 > |----------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure**.message-converter.isolated-object-mapper            | boolean | Whether an isolated ObjectMapper bean is used for Event Hubs message converter. Enabled by default.                |
-> | **spring.cloud.azure.eventhubs**.enabled                                   | boolean | Whether an Azure Event Hubs is enabled.                                                                            |
-> | **spring.cloud.azure.eventhubs**.connection-string                         | String  | Event Hubs Namespace connection string value.                                                                      |
-> | **spring.cloud.azure.eventhubs**.namespace                                 | String  | Event Hubs Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.account-name   | String  | Name for the storage account.                                                                                      |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.account-key    | String  | Storage account access key.                                                                                        |
-> | **spring.cloud.azure.eventhubs.processor.checkpoint-store**.container-name | String  | Storage container name.                                                                                            |
+> | `spring.cloud.azure.message-converter.isolated-object-mapper`            | boolean | Whether an isolated ObjectMapper bean is used for Event Hubs message converter. Enabled by default.                |
+> | `spring.cloud.azure.eventhubs.enabled`                                   | boolean | Whether an Azure Event Hubs is enabled.                                                                            |
+> | `spring.cloud.azure.eventhubs.connection-string`                         | String  | Event Hubs Namespace connection string value.                                                                      |
+> | `spring.cloud.azure.eventhubs.namespace`                                 | String  | Event Hubs Namespace value, which is the prefix of the FQDN. A FQDN should be composed of NamespaceName.DomainName |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.account-name`   | String  | Name for the storage account.                                                                                      |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.account-key`    | String  | Storage account access key.                                                                                        |
+> | `spring.cloud.azure.eventhubs.processor.checkpoint-store.container-name` | String  | Storage container name.                                                                                            |
 
 ### Basic usage
 

@@ -153,11 +153,11 @@ The following table shows the Spring Boot Event Hubs for Kafka common configurat
 > [!div class="mx-tdBreakAll"]
 > | Property                                                 | Description                                                                                                                                               |
 > |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure.eventhubs**.kafka.enabled           | Whether to enable the Azure Event Hubs Kafka support. The default value is `true`.                                                                        |
-> | **spring.cloud.azure.eventhubs**.connection-string       | Azure Event Hubs connection string. Provide this value when you want to provide the connection string directly.                                           |
-> | **spring.cloud.azure.eventhubs**.namespace               | Azure Event Hubs namespace. Provide this value when you want to retrieve the connection information through Azure Resource Manager.                       |
-> | **spring.cloud.azure.eventhubs**.resource.resource-group | The resource group of Azure Event Hubs namespace. Provide this value when you want to retrieve the connection information through Azure Resource Manager. |
-> | **spring.cloud.azure**.profile.subscription-id           | The subscription ID. Provide this value when you want to retrieve the connection information through Azure Resource Manager.                              |
+> | `spring.cloud.azure.eventhubs.kafka.enabled`           | Whether to enable the Azure Event Hubs Kafka support. The default value is `true`.                                                                        |
+> | `spring.cloud.azure.eventhubs.connection-string`       | Azure Event Hubs connection string. Provide this value when you want to provide the connection string directly.                                           |
+> | `spring.cloud.azure.eventhubs.namespace`               | Azure Event Hubs namespace. Provide this value when you want to retrieve the connection information through Azure Resource Manager.                       |
+> | `spring.cloud.azure.eventhubs.resource.resource-group` | The resource group of Azure Event Hubs namespace. Provide this value when you want to retrieve the connection information through Azure Resource Manager. |
+> | `spring.cloud.azure.profile.subscription-id`           | The subscription ID. Provide this value when you want to retrieve the connection information through Azure Resource Manager.                              |
 
 ## Dependency setup
 

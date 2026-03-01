@@ -44,11 +44,11 @@ The library provides the following configuration options for `StorageQueueTempla
 > [!div class="mx-tdBreakAll"]
 > | Property                                                         | Type      | Description                                                                                             |
 > |------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------|
-> | **spring.cloud.azure**.message-converter.isolated-object-mapper  | boolean   | Whether an isolated ObjectMapper bean is used for Storage Queue message converter. Enabled by default.  |
-> | **spring.cloud.azure.storage.queue**.enabled                     | boolean   | Whether an Azure Storage Queue is enabled.                                                              |
-> | **spring.cloud.azure.storage.queue**.connection-string           | String    | Storage Queue Namespace connection string value.                                                        |
-> | **spring.cloud.azure.storage.queue**.accountName                 | String    | Storage Queue account name.                                                                             |
-> | **spring.cloud.azure.storage.queue**.accountKey                  | String    | Storage Queue account key.                                                                              |
+> | `spring.cloud.azure.message-converter.isolated-object-mapper`  | boolean   | Whether an isolated ObjectMapper bean is used for Storage Queue message converter. Enabled by default.  |
+> | `spring.cloud.azure.storage.queue.enabled`                     | boolean   | Whether an Azure Storage Queue is enabled.                                                              |
+> | `spring.cloud.azure.storage.queue.connection-string`           | String    | Storage Queue Namespace connection string value.                                                        |
+> | `spring.cloud.azure.storage.queue.accountName`                 | String    | Storage Queue account name.                                                                             |
+> | `spring.cloud.azure.storage.queue.accountKey`                  | String    | Storage Queue account key.                                                                              |
 
 ### Basic usage
 

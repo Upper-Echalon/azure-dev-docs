@@ -765,7 +765,7 @@ spring:
 
 ### Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-cloud-azure-stream-binder-eventhubs) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-cloud-azure-stream-binder-eventhubs) repository on GitHub.
 
 ## Spring Cloud Stream Binder for Azure Service Bus
 
@@ -860,7 +860,7 @@ Consumer configurable properties of `spring-cloud-azure-stream-binder-servicebus
 > | `spring.cloud.stream.servicebus.bindings.binding-name.consumer.default-message-time-to-live` | Duration              | P10675199DT2H48M5.4775807S. (10675199 days, 2 hours, 48 minutes, 5 seconds, and 477 milliseconds) | The duration after which the message expires, starting from when the message is sent to Service Bus.                                                          |
 
 > [!IMPORTANT]
-> When you use the [Azure Resource Manager](resource-manager.md) (ARM), you must configure the `spring.cloud.stream.servicebus.bindings.<binding-name>.consume.entity-type` property. For more information, see the [servicebus-queue-binder-arm](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-cloud-azure-stream-binder-servicebus/servicebus-queue-binder-arm) sample on GitHub.
+> When you use the [Azure Resource Manager](resource-manager.md) (ARM), you must configure the `spring.cloud.stream.servicebus.bindings.<binding-name>.consume.entity-type` property. For more information, see the [`servicebus-queue-binder-arm`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-cloud-azure-stream-binder-servicebus/servicebus-queue-binder-arm) sample on GitHub.
 
 ##### Advanced consumer configuration
 
@@ -1417,4 +1417,4 @@ public AzureServiceClientBuilderCustomizer<ServiceBusClientBuilder.ServiceBusSes
 
 ### Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-cloud-azure-stream-binder-servicebus) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-cloud-azure-stream-binder-servicebus) repository on GitHub.

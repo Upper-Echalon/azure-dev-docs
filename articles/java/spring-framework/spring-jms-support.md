@@ -175,4 +175,4 @@ When all the three classes exist in the classpath, which one is used? The follow
 
 ## Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.

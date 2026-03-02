@@ -270,7 +270,7 @@ spring.cloud.stream.kafka.binder.brokers=<NAMESPACENAME>.servicebus.windows.net:
 
 ##### Samples
 
-See the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-cloud-azure-starter/spring-cloud-azure-sample-eventhubs-kafka) repository on GitHub.
+See the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-cloud-azure-starter/spring-cloud-azure-sample-eventhubs-kafka) repository on GitHub.
 
 <a name="basic-usage-connection-string"></a>
 ### Use connection string authentication
@@ -346,4 +346,4 @@ spring:
 
 ## Samples
 
-See the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.
+See the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.

@@ -311,4 +311,4 @@ Use the following steps to connect to Azure Cache for Redis:
 
 ### Samples
 
-See the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples) repository on GitHub.
+See the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples) repository on GitHub.

@@ -187,4 +187,4 @@ The following sections show the classic Spring Boot application usage scenarios.
 
 ### Samples
 
-See the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.
+See the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main) repository on GitHub.

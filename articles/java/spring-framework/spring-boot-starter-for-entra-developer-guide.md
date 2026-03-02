@@ -249,7 +249,7 @@ public String graph(
 
 Here, `graph` is the client ID configured in the previous step. `OAuth2AuthorizedClient` contains the access token, which is used to access the resource server.
 
-For a complete sample demonstrating this scenario, see [`spring-cloud-azure-starter-active-directory` sample: aad-web-application](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
+For a complete sample demonstrating this scenario, see [`spring-cloud-azure-starter-active-directory` sample: `aad-web-application`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
 
 ### Protect a resource server/API
 
@@ -378,7 +378,7 @@ public class AadOAuth2ResourceServerSecurityConfig extends AadResourceServerWebS
 
 ---
 
-For a complete sample demonstrating this scenario, see [`spring-cloud-azure-starter-active-directory` sample: aad-resource-server](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server).
+For a complete sample demonstrating this scenario, see [`spring-cloud-azure-starter-active-directory` sample: `aad-resource-server`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server).
 
 ### Access other resource servers from a resource server
 
@@ -604,11 +604,11 @@ public class AadWebApplicationAndResourceServerConfig {
 
 The `spring.cloud.azure.active-directory.application-type` property is optional because its value can be inferred by dependencies. You must manually set the property only when you use the `web_application_and_resource_server` value.
 
-| Has dependency: spring-security-oauth2-client | Has dependency: spring-security-oauth2-resource-server |                  Valid values of application type                                                         | Default value               |
-|-----------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------|
-|                      Yes                      |                          No                            |                       `web_application`                                                                   |       `web_application`     |
-|                      No                       |                          Yes                           |                       `resource_server`                                                                   |       `resource_server`     |
-|                      Yes                      |                          Yes                           | `web_application`,`resource_server`,<br>`resource_server_with_obo`, `web_application_and_resource_server` | `resource_server_with_obo`  |
+| Has dependency: `spring-security-oauth2-client` | Has dependency: `spring-security-oauth2-resource-server` |                  Valid values of application type                                                         | Default value               |
+|-------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------|
+|                      Yes                        |                          No                              |                       `web_application`                                                                   |       `web_application`     |
+|                      No                         |                          Yes                             |                       `resource_server`                                                                   |       `resource_server`     |
+|                      Yes                        |                          Yes                             | `web_application`,`resource_server`,<br>`resource_server_with_obo`, `web_application_and_resource_server` | `resource_server_with_obo`  |
 
 ## Configurable properties
 

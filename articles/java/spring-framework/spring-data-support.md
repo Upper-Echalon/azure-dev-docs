@@ -82,7 +82,7 @@ The following list shows the key concepts of the Spring Data support:
 
 * Supports [Spring Data custom query](https://docs.spring.io/spring-data/commons/docs/current/reference/html/#repositories.query-methods.details) find operation.
 
-* Supports [spring-boot-starter-data-rest](https://spring.io/projects/spring-data-rest).
+* Supports [`spring-boot-starter-data-rest`](https://spring.io/projects/spring-data-rest).
 
 * Supports List and nested types in domain classes.
 
@@ -248,6 +248,6 @@ This example includes an autowired `UserRepository` interface to support save, d
 
 ### Samples
 
-See the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/cosmos) on GitHub.
+See the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/cosmos) on GitHub.
 
 Apart from using the `spring-cloud-azure-starter-data-cosmos` library, you can directly use `azure-spring-data-cosmos` library for more complex scenarios. For more information, see [Spring Data for Azure Cosmos DB client library](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/spring/azure-spring-data-cosmos).

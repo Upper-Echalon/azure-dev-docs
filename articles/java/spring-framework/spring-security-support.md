@@ -379,7 +379,7 @@ class DemoConfiguration {
 
 #### Samples
 
-Sample project: [aad-web-application](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
+Sample project: [`aad-web-application`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
 
 ### Web application accessing resource servers
 
@@ -523,7 +523,7 @@ public class Demo {
 
 #### Samples
 
-Sample project: [aad-web-application](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
+Sample project: [`aad-web-application`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-web-application).
 
 ### Accessing a resource server
 
@@ -813,7 +813,7 @@ To connect Microsoft Entra ID via proxy, provide a `RestTemplateCustomizer` bean
 
 #### Samples
 
-Sample project: [aad-resource-server](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server).
+Sample project: [`aad-resource-server`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server).
 
 ### Resource server visiting other resource servers
 
@@ -881,7 +881,7 @@ public class SampleController {
 
 #### Samples
 
-Sample project: [aad-resource-server-obo](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server-obo).
+Sample project: [`aad-resource-server-obo`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/aad/spring-cloud-azure-starter-active-directory/web-client-access-resource-server/aad-resource-server-obo).
 
 ### Web application and resource server in one application
 

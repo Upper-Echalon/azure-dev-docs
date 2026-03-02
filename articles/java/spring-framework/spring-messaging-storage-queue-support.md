@@ -168,4 +168,4 @@ Use the following steps to send and receive messages:
 
 ### Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/storage/spring-messaging-azure-storage-queue/storage-queue-spring-messaging) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/storage/spring-messaging-azure-storage-queue/storage-queue-spring-messaging) repository on GitHub.

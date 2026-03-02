@@ -210,4 +210,4 @@ public AzureServiceClientBuilderCustomizer<ServiceBusClientBuilder.ServiceBusSes
 
 ### Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-messaging-azure-servicebus/servicebus-spring-messaging) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/servicebus/spring-messaging-azure-servicebus/servicebus-spring-messaging) repository on GitHub.

@@ -26,8 +26,8 @@ If you have any questions about this documentation, create a GitHub issue in one
 
 | GitHub repositories                                                                                   | Description                                |
 |-------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| [Azure/azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring)          | This repository holds the source code.     |
-| [Azure-Samples/azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples) | This repository holds the related samples. |
+| [`Azure/azure-sdk-for-java`](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring)          | This repository holds the source code.     |
+| [`Azure-Samples/azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples) | This repository holds the related samples. |
 | [MicrosoftDocs/azure-dev-docs](https://github.com/MicrosoftDocs/azure-dev-docs)                       | This repository holds the documentation.   |
 
 ## Getting started

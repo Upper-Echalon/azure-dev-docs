@@ -212,4 +212,4 @@ Use the following steps to receive messages:
 
 ### Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-messaging-azure-eventhubs/eventhubs-spring-messaging) repository on GitHub.
+For more information, see the [`azure-spring-boot-samples`](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/eventhubs/spring-messaging-azure-eventhubs/eventhubs-spring-messaging) repository on GitHub.

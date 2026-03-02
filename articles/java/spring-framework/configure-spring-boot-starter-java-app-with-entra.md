@@ -163,7 +163,7 @@ If you're the administrator of an existing instance, you can skip this process.
 
    | Parameter | Description |
    |---|---|
-   | `spring.cloud.azure.active-directory.enabled` | Enable the features provided by spring-cloud-azure-starter-active-directory |
+   | `spring.cloud.azure.active-directory.enabled` | Enable the features provided by `spring-cloud-azure-starter-active-directory` |
    | `spring.cloud.azure.active-directory.profile.tenant-id` | Contains your Microsoft Entra ID tenant's **Tenant ID** from earlier. |
    | `spring.cloud.azure.active-directory.credential.client-id` | Contains the **Application ID** from your app registration that you completed earlier. |
    | `spring.cloud.azure.active-directory.credential.client-secret` | Contains the **Value** from your app registration key that you completed earlier. |

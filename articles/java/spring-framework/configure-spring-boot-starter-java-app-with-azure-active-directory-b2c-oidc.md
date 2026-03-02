@@ -49,7 +49,7 @@ In this tutorial, you learn how to:
    * In the **Dependencies** pane, select **Add Dependencies**. Use the UI to add dependencies on **Spring Web** and **Spring Security**.
 
    > [!NOTE]
-   > Spring Security 5.5.1, 5.4.7, 5.3.10 and 5.2.11 have been released to address the following CVE report [CVE-2021-22119: Denial-of-Service attack with spring-security-oauth2-client](https://tanzu.vmware.com/security/cve-2021-22119). If you're using the older version, please upgrade it.
+   > Spring Security 5.5.1, 5.4.7, 5.3.10 and 5.2.11 have been released to address the following CVE report [CVE-2021-22119: Denial-of-Service attack with `spring-security-oauth2-client`](https://tanzu.vmware.com/security/cve-2021-22119). If you're using the older version, please upgrade it.
 
 1. Select **Generate Project**, then download the project to a path on your local computer. Move the downloaded file to a directory named after your project and unzip the file. The file layout should look something like the following, with the value you entered for **Group** in place of `yourProject`.
 

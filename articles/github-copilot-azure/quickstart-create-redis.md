@@ -10,7 +10,7 @@ zone_pivot_group_filename: developer/github-copilot-azure/github-copilot-azure-z
 zone_pivot_groups: ide-options
 ---
   
-# Quickstart: Create and deploy an app using Azure Cache for Redis using GitHub Copilot for Azure
+# Quickstart: Create and deploy an app using Azure Cache for Redis by using GitHub Copilot for Azure
 
 This quickstart shows you how to create a simple Python app that:
 
@@ -39,24 +39,24 @@ For complete setup instructions, see the [Get started](get-started.md) article. 
 
 ## Building the app
 
-The approach is:
+Follow these steps described in this article:
 
-- Creating a user-level `.env` file to store Azure deployment information as environment variables
-- Writing a prompt to create an instance of Azure Cache for Redis in your subscription, which includes a local-level `.env` file to store Azure Cache for Redis connection information as environment variables
-- Validating that the resource and the `.env` file are created correctly
-- Writing a prompt to create a Python app to retrieve, write, and read from the cache by using environment variables
-- Validating the app works
-- Cleaning up the resources in Azure
+1. Create a user-level `.env` file to store Azure deployment information as environment variables.
+1. Write a prompt to create an instance of Azure Cache for Redis in your subscription. Include a local-level `.env` file to store Azure Cache for Redis connection information as environment variables.
+1. Validate that the resource and the `.env` file are created correctly.
+1. Write a prompt to create a Python app to retrieve, write, and read from the cache by using environment variables.
+1. Validate the app works.
+1. Clean up the resources in Azure.
 
 ### Create local environment variables
 
 A common development practice is to store important keys and other settings as environment variables. Several methods exist to do this, but many developers choose to put these variables in `.env` files.
 
-For environment variables that apply to many projects, you store them in user-level `.env` files to ensure all projects can access the environment variables during development. For environment variables that apply to a single project, you store them in project-level `.env` files so that only the project in the current work space can access them.
+For environment variables that apply to many projects, store them in user-level `.env` files so all projects can access the environment variables during development. For environment variables that apply to a single project, store them in project-level `.env` files so only the project in the current workspace can access them.
 
 A common location for user-level `.env` files is `%USERPROFILE%/.env` or in some sub-folder of `%USERPROFILE%/`. On Windows systems, that location is typically `c:\users\<user name>\.env`. On Linux and macOS systems, that location is typically `~/.env` or some sub-folder location of the `~/` directory. This is usually a personal or organizational choice.
 
-In this step, create a project-level  `.env` file in your project's workspace copy the following values, replacing them with your specific values:
+In this step, create a project-level `.env` file in your project's workspace and copy the following values, replacing them with your specific values:
 
 ```dotenv
 AZURE_SUBSCRIPTION_ID=<your-azure-subscription-id>
@@ -112,7 +112,7 @@ These values are used by Copilot for Azure to provision resources. If you're uns
 
 ### Validate that the .env file has the Redis settings
 
-1. Open the `.env` file in your project folder and validate that it has values:
+1. Open the `.env` file in your project folder and validate that it has values.
 
    ```dotenv
    REDIS_HOST=<your-cache-name>.redis.cache.windows.net
@@ -195,7 +195,7 @@ After editing the files:
 
 1. Make sure the files you requested in the prompt exist. Visually inspect the files to see if they have values that seem reasonable.
 
-1. Inspect the `main.py` file to ensure that it retrieves values from the `.env` file, imports the `redis` package, and connects to Azure Cache for Redis. Check that it writes and reads the cache. You might see code that resembles the following:
+1. Inspect the `main.py` file to ensure that it retrieves values from the `.env` file, imports the `redis` package, and connects to Azure Cache for Redis. Check that it writes and reads the cache. You might see code that resembles the following code:
 
    ```python
    
@@ -240,7 +240,7 @@ After editing the files:
    ```
 
    >[!IMPORTANT]
-   >Ai-assisted software development is non-deterministic, meaning, you will not get the same code generated twice. However, in a simple application like this one, the basic approach, syntax and end result should be close though not exactly the same.
+   >AI-assisted software development is non-deterministic, meaning you don't get the same code generated twice. However, in a simple application like this one, the basic approach, syntax, and end result should be close though not exactly the same.
 
 ### Run the app
 

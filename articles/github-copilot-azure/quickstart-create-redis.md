@@ -54,7 +54,7 @@ A common development practice is to store important keys and other settings as e
 
 For environment variables that apply to many projects, you store them in user-level `.env` files to ensure all projects can access the environment variables during development. For environment variables that apply to a single project, you store them in project-level `.env` files so that only the project in the current work space can access them.
 
-A common location for user-level `.env` files is `%USERPROFILE%.env` or in some sub-folder of `%USERPROFILE%`. On Windows systems, that location is typically `c:\users\<user name>`. On Linux and macOS systems, that location is typically `~/.env` or some sub-folder location of the `~/` directory. This is usually a personal or organizational choice.
+A common location for user-level `.env` files is `%USERPROFILE%/.env` or in some sub-folder of `%USERPROFILE%/`. On Windows systems, that location is typically `c:\users\<user name>`. On Linux and macOS systems, that location is typically `~/.env` or some sub-folder location of the `~/` directory. This is usually a personal or organizational choice.
 
 In this step, create a project-level  `.env` file in your project's workspace copy the following values, replacing them with your specific values:
 

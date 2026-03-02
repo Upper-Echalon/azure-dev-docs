@@ -6,7 +6,8 @@ ms.author: rotabor
 ms.service: github-copilot-for-azure
 ms.topic: quickstart  #Don't change
 ms.date: 2/28/2026
-
+zone_pivot_group_filename: developer/github-copilot-azure/github-copilot-azure-zone-pivot-groups.json
+zone_pivot_groups: ide-options
 ---
   
 # Quickstart: Create and deploy an app using Azure Cache for Redis using GitHub Copilot for Azure
@@ -18,13 +19,23 @@ This quickstart shows you how to create a simple Python app that:
 - Reads the value back
 - Prints the result to the console
 
-You use **Visual Studio Code**'s **GitHub Copilot** chat to generate most of the code and provisioning steps.
+You use **GitHub Copilot** to generate most of the code and provisioning steps.
 
 ## Prerequisites
 
 For complete setup instructions, see the [Get started](get-started.md) article. Make sure that you have the following items:
 
-[!INCLUDE [ghcpa-prerequisites](includes/prerequisites.md)]
+::: zone pivot="visual-studio-code"
+[!INCLUDE [prerequisites](./includes/prerequisites.md)]
+::: zone-end  
+
+::: zone pivot="visual-studio-2022"  
+[!INCLUDE [prerequisites-vs2022](./includes/prerequisites-2022.md)]
+::: zone-end
+
+::: zone pivot="visual-studio-2026"  
+[!INCLUDE [prerequisites-vs2026](./includes/prerequisites-2026.md)]
+::: zone-end
 
 ## Building the app
 
@@ -231,6 +242,8 @@ After editing the files:
 1. In the terminal, run the app:
 
    ```bash
+   python -m venv .venv && source .venv/bin/activate
+   pip install -r requirements.txt
    python main.py
    ```
   
@@ -242,10 +255,19 @@ After editing the files:
    READ : 2026-03-01T10:22:11.452331
    ```
 
-## Clean up resources
+### Clean up resources
 
 Use the following prompt:
 
 ```prompt
 I am finished with this instance. Please remove the Azure Cache for Redis that you created earlier by using the values in the `.env` file. ONLY remove this resource and nothing else.
 ```
+
+## Related content
+
+- [Understand what GitHub Copilot for Azure is and how it works](introduction.md).
+- Follow the [quickstart](quickstart-deploy-app-agent-mode.md) to understand how to include GitHub Copilot for Azure in your software development workflow. The quickstart describes how to deploy services to Azure, monitor their status, and troubleshoot problems.
+- See example prompts for [learning more about Azure and understanding your Azure account, subscription, and resources](learn-examples.md).
+- See example prompts for [designing and developing applications for Azure](design-develop-examples.md).
+- See example prompts for [deploying your application to Azure](deploy-examples.md).
+- See example prompts for [troubleshooting your Azure resources](troubleshoot-examples.md).

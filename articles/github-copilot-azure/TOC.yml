@@ -12,7 +12,7 @@ items:
       items:
         - name: Deploy an existing app with agent mode
           href: quickstart-deploy-app-agent-mode.md
-        - name: Create and deploy an app using Azure Cache for Redis
+        - name: Deploy and access Azure Cache for Redis
           href: quickstart-create-redis.md
     - name: Learn about Azure and your app
       href: learn-examples.md

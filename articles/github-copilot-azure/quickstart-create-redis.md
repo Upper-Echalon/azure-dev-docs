@@ -78,7 +78,7 @@ These values are used by Copilot for Azure to provision resources. If you're uns
 
 ### Create Azure Cache for Redis
 
-1. Open GitHub Copilot Chat in Visual Studio Code and paste the following prompt:
+1. Open GitHub Copilot Chat and paste the following prompt:
 
    ```prompt
    You have access to Azure MCP tools.
@@ -193,7 +193,7 @@ After editing the files:
 
 ### Validate the Python app
 
-1. In Visual Studio Code's Explorer view, make sure the files you requested in the prompt exist. Visually inspect the files to see if they have values that seem reasonable.
+1. Make sure the files you requested in the prompt exist. Visually inspect the files to see if they have values that seem reasonable.
 
 1. Inspect the `main.py` file to ensure that it retrieves values from the `.env` file, imports the `redis` package, and connects to Azure Cache for Redis. Check that it writes and reads the cache. You might see code that resembles the following:
 

@@ -73,7 +73,6 @@ You must have both Azure MCP Server installed and GitHub Copilot for Azure insta
 
 ::: zone-end
 
-
 ### Create local environment variables
 
 A common development practice is to store important keys and other settings as environment variables in a `.env` file in your workspace folder. This keeps all configuration self-contained within the project.

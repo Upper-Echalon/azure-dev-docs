@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Create and deploy an app using Azure Cache for Redis using GitHub Copilot for Azure"
+title: "Quickstart: Create and deploy an app using Azure Cache for Redis using GitHub Copilot for Azure and Azure MCP Server"
 description: "Create a prompt in GitHub Copilot for Azure that creates and deploys an instance of Azure Cache for Redis, and a Python app that writes and reads from it."
 author: bobtabor-msft
 ms.author: rotabor
@@ -10,7 +10,7 @@ zone_pivot_group_filename: developer/github-copilot-azure/github-copilot-azure-z
 zone_pivot_groups: ide-options
 ---
   
-# Quickstart: Create and deploy an app using Azure Cache for Redis by using GitHub Copilot for Azure
+# Quickstart: Create and deploy an app using Azure Cache for Redis by using GitHub Copilot for Azure and Azure MCP Server
 
 This quickstart shows you how to create a simple Python app that:
 
@@ -41,22 +41,63 @@ For complete setup instructions, see the [Get started](get-started.md) article. 
 
 Follow these steps described in this article:
 
-1. Create a user-level `.env` file to store Azure deployment information as environment variables.
-1. Write a prompt to create an instance of Azure Cache for Redis in your subscription. Include a local-level `.env` file to store Azure Cache for Redis connection information as environment variables.
+1. Create a `.env` file in your workspace to store Azure deployment information as environment variables.
+1. Write a prompt to create an instance of Azure Cache for Redis in your subscription. The Redis connection information is also stored in the `.env` file.
 1. Validate that the resource and the `.env` file are created correctly.
 1. Write a prompt to create a Python app to retrieve, write, and read from the cache by using environment variables.
 1. Validate the app works.
 1. Clean up the resources in Azure.
 
+### Ensure you have the right tools selected
+
+You must have both Azure MCP Server installed and GitHub Copilot for Azure installed.
+
+::: zone pivot="visual-studio-code"
+
+1. Select the **Configure tools...** icon in the chat pane.
+1. **Configure tools** is displayed in the Command Palette. Make sure the top nodes for "Azure MCP" and "GitHub Copilot for Azure" are both selected.
+
+::: zone-end
+
+::: zone pivot="visual-studio-2022"  
+
+1. Select the **Select tools...** icon in the chat pane.
+1. **Select tools** menu is displayed. Make sure the "Azure MCP Server" top node is selected.
+
+::: zone-end
+
+::: zone pivot="visual-studio-2026"  
+
+1. Select the **Select tools** icon in the chat pane.
+1. The **Select tools** menu is displayed. Make sure the top nodes for "Azure" and "Azure MCP" are both selected.
+
+::: zone-end
+
+
 ### Create local environment variables
 
-A common development practice is to store important keys and other settings as environment variables. Several methods exist to do this, but many developers choose to put these variables in `.env` files.
+A common development practice is to store important keys and other settings as environment variables in a `.env` file in your workspace folder. This keeps all configuration self-contained within the project.
 
-For environment variables that apply to many projects, store them in user-level `.env` files so all projects can access the environment variables during development. For environment variables that apply to a single project, store them in project-level `.env` files so only the project in the current workspace can access them.
+> [!IMPORTANT]
+> Make sure your `.gitignore` file includes `.env` so you don't accidentally commit secrets to source control.
 
-A common location for user-level `.env` files is `%USERPROFILE%/.env` or in some sub-folder of `%USERPROFILE%/`. On Windows systems, that location is typically `c:\users\<user name>\.env`. On Linux and macOS systems, that location is typically `~/.env` or some sub-folder location of the `~/` directory. This is usually a personal or organizational choice.
+In this step, create a `.env` file in your workspace by using a prompt like the following:
 
-In this step, create a project-level `.env` file in your project's workspace and copy the following values, replacing them with your specific values:
+```prompt
+Create a .env file in this workspace with the following environment variables filled in:
+
+AZURE_SUBSCRIPTION_ID
+AZURE_TENANT_ID
+AZURE_LOCATION
+AZURE_RESOURCE_GROUP
+AZURE_RESOURCE_PREFIX
+
+Use my <your-subscription-name> subscription and I want to put everything in eastus.
+```
+
+Replace `<your-subscription-name>` with the name of your Azure subscription. Copilot looks up the subscription and tenant IDs for you, generates a resource group name and prefix, and creates the `.env` file.
+
+After the file is created, open it and verify the values look correct:
 
 ```dotenv
 AZURE_SUBSCRIPTION_ID=<your-azure-subscription-id>
@@ -66,16 +107,6 @@ AZURE_RESOURCE_GROUP=<resource-group>
 AZURE_RESOURCE_PREFIX=<resource-prefix>
 ```
 
-These values are used by Copilot for Azure to provision resources. If you're unsure what to replace the `<placeholder>` values with, refer to the following table.
-
-| Variable | What to put |
-| --- | --- |
-| `AZURE_SUBSCRIPTION_ID` | Your subscription ID (find via `az account show`) |
-| `AZURE_TENANT_ID` | Your Azure AD tenant ID |
-| `AZURE_LOCATION` | Preferred region, such as `eastus` or `westus2` |
-| `AZURE_RESOURCE_GROUP` | Default resource group name |
-| `AZURE_RESOURCE_PREFIX` | Short prefix to namespace resources |
-
 ### Create Azure Cache for Redis
 
 1. Open GitHub Copilot Chat and paste the following prompt:
@@ -83,12 +114,7 @@ These values are used by Copilot for Azure to provision resources. If you're uns
    ```prompt
    You have access to Azure MCP tools.
   
-   Create an Azure Cache for Redis instance using these variables from %USERPROFILE%/.env:
-  
-   AZURE_SUBSCRIPTION_ID
-   AZURE_LOCATION
-   AZURE_RESOURCE_GROUP
-   AZURE_RESOURCE_PREFIX
+   Use the variables in the `.env` file in this workspace to create an Azure Cache for Redis instance.
    
    Tasks:
    1. Ensure the resource group exists.
@@ -96,16 +122,14 @@ These values are used by Copilot for Azure to provision resources. If you're uns
        - Name: {AZURE_RESOURCE_PREFIX}-redis
        - SKU: Basic C0
        - TLS enabled (port 6380)
-   3. Write the following values into the project's `.env`:
+   3. Write the following values into the `.env` file:
        REDIS_HOST
        REDIS_PORT=6380
        REDIS_PASSWORD (primary key)
        REDIS_SSL=true
   
    Important:
-   - Use Azure MCP to create resources and fetch keys where possible.
-   - Show the Azure CLI commands as well, but prefer MCP actions.
-   - Output the final values (host/key) clearly so I can paste them into a .env file.
+   - Use Azure MCP to create resources and fetch keys.
    ```
 
    Copilot creates the Redis resource, and then creates a `.env` file containing the hostname, primary key, and the other environment variables.

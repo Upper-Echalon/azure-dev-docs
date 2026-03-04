@@ -15,13 +15,16 @@ ms.update-cycle: 18
 
 # Understand assessment coverage by GitHub Copilot Modernization
 
-This document intends to introduce what app assessment of GitHub Copilot Modernization can detect. In general, it can assist on two aspects:
-- detect issues in below three domains/aspects that your app modernization journey needs to take care:
-  - cloud readiness
-  - java upgrade
-  - security
-- understand your applications especially for legacy ones. we reveal dependencies, technologies used in your applications to help you quickly understand the apps.
-In next paragraphs, you can understand each domain's issue coverage in detail. 
+This document describes what the app assessment feature of GitHub Copilot Modernization can detect. The assessment covers two key capabilities:
+
+- **Issue detection** across three domains critical to your modernization journey:
+  - **Cloud readiness** — identifies 16 categories of concerns including file system usage, credential management, messaging services, database connections, containerization gaps, session handling, remote communication patterns, and more.
+  - **Java upgrade** — flags outdated Java versions, end-of-OSS-support frameworks (Spring Boot, Spring Cloud, Jakarta EE), hundreds of removed or deprecated APIs, and legacy build tools such as Ant.
+  - **Security** — detects 42 security weaknesses drawn from the ISO/IEC 5055 standard, covering injection vulnerabilities (SQL, LDAP, XPath, OS command), hard-coded credentials and cryptographic keys, synchronization issues, resource-lifecycle problems, and other high-impact CWEs.
+
+- **Application understanding** — for legacy codebases, the assessment surfaces dependencies and technologies in use, giving you a clear picture of what your application relies on before you begin migrating.
+
+The following sections describe the issue coverage for each domain in detail.
 
 ## Domain: cloud-readiness
 

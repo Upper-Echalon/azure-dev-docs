@@ -44,9 +44,9 @@ Azure OpenAI in Microsoft Foundry Models provides REST API access to the powerfu
 |[Invoke .NET functions using an AI model](/dotnet/ai/quickstarts/use-function-calling?pivots=openai)|Create a .NET console AI chat app that connects to an AI model with local function calling enabled.|
 |[Generate images using OpenAI.Images.ImageClient](/dotnet/ai/quickstarts/generate-images?pivots=openai)|Use the OpenAI DALL-E AI model. to generate an image.|
 
-## Resources for other Foundry Tools
+## Resources for other Foundry tools
 
-In addition to Azure OpenAI Service, there are many other Foundry Tools that help developers and organizations rapidly create intelligent, market-ready, and responsible applications with out-of-the-box and prebuilt customizable APIs and models. Example applications include natural language processing for conversations, search, monitoring, translation, speech, vision, and decision-making.
+In addition to Azure OpenAI Service, there are many other Foundry tools that help developers and organizations rapidly create intelligent, market-ready, and responsible applications with out-of-the-box and prebuilt customizable APIs and models. Example applications include natural language processing for conversations, search, monitoring, translation, speech, vision, and decision-making.
 
 ### Samples
 

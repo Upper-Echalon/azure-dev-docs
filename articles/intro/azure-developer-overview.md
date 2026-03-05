@@ -60,7 +60,7 @@ Azure provides tools designed for every stage of the development lifecycle. Thes
 | [Azure Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) | An extension pack for Visual Studio Code that lets you create, manage, and deploy Azure resources directly from your editor. Includes extensions for App Service, Functions, Storage, Databases, and more. |
 | [Azure development with Visual Studio](/visualstudio/azure/overview-azure-integration) | Visual Studio includes built-in Azure workloads for creating, debugging, and deploying cloud applications. Connected Services simplify adding Azure dependencies to your projects. |
 
-For a hands-on walkthrough of these tools, see [Get started with Azure as a developer](get-started-developer-path.md). To learn how these tools fit into the broader set of options for creating and managing Azure resources, see [Part 5: How do I create and manage resources in Azure?](azure-developer-create-resources.md).
+For a hands-on walkthrough of these tools, see [Quickstart: Azure developer tools](quickstart-developer-tools.md). To learn how these tools fit into the broader set of options for creating and managing Azure resources, see [Part 5: How do I create and manage resources in Azure?](azure-developer-create-resources.md).
 
 > [!div class="nextstepaction"]
 > [Continue to part 2: Key Azure services for developers](azure-developer-key-services.md)

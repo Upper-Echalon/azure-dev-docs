@@ -22,7 +22,9 @@ If you're new to developing applications for the cloud, start with this seven-ar
 
 Azure is a cloud platform designed to simplify the process of building modern applications. Whether you choose to host your applications entirely in Azure or extend your on-premises applications with Azure services, Azure helps you create applications that are scalable, reliable, and maintainable.
 
-Azure supports the most popular programming languages in use today, including Python, JavaScript, Java, .NET, and Go. With a comprehensive SDK library and extensive support in tools you already use like VS Code, Visual Studio, IntelliJ, and Eclipse. Azure builds on the skills you already have and helps you be productive right away.
+Azure supports the most popular programming languages in use today, including Python, JavaScript, Java, .NET, and Go. With a comprehensive SDK library and extensive support in tools you already use like VS Code, Visual Studio, IntelliJ, and Eclipse, Azure builds on the skills you already have and helps you be productive right away.
+
+Azure also provides a suite of [developer tools](#azure-developer-tools) that streamline how you build, deploy, and manage cloud applications.
 
 ## Application development scenarios on Azure
 
@@ -46,6 +48,19 @@ Common software development and deployment scenarios on Azure:
 
 
 How do you implement those scenarios? The next article, "Key Azure services for developers", gives several Azure service options to implement each scenario.
+
+## Azure developer tools
+
+Azure provides tools designed for every stage of the development lifecycle. These tools work alongside the Azure services described in the rest of this series.
+
+| Tool | Description |
+|------|-------------|
+| [Azure Developer CLI (`azd`)](../azure-developer-cli/overview.md) | A developer-focused command-line tool that reduces the time it takes to get your app from a local development environment to Azure. Use starter templates to provision infrastructure and deploy code with a single command. |
+| [GitHub Copilot for Azure](../github-copilot-azure/introduction.md) | An AI-powered extension for GitHub Copilot that helps you learn about Azure services, design solutions, troubleshoot issues, and deploy resources using natural language. |
+| [Azure Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) | An extension pack for Visual Studio Code that lets you create, manage, and deploy Azure resources directly from your editor. Includes extensions for App Service, Functions, Storage, Databases, and more. |
+| [Azure development with Visual Studio](/visualstudio/azure/overview-azure-integration) | Visual Studio includes built-in Azure workloads for creating, debugging, and deploying cloud applications. Connected Services simplify adding Azure dependencies to your projects. |
+
+For a hands-on walkthrough of these tools, see [Get started with Azure as a developer](get-started-developer-path.md). To learn how these tools fit into the broader set of options for creating and managing Azure resources, see [Part 5: How do I create and manage resources in Azure?](azure-developer-create-resources.md).
 
 > [!div class="nextstepaction"]
 > [Continue to part 2: Key Azure services for developers](azure-developer-key-services.md)

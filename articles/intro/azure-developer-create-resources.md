@@ -30,6 +30,10 @@ Different tools support various use cases, and most Azure developers use a combi
 
 * **Use a GUI tool like the Azure portal or the Azure Tools extension for VS Code** when prototyping Azure resources for a new application. GUI tools guide you through the process of creating new services and let you review and select the options for a service using drop-down menus and other graphical elements.
 
+* **Use the Azure Developer CLI (`azd`) to provision and deploy full-stack applications** from starter templates. With a single `azd up` command, you can create all necessary Azure resources and deploy your code without manually configuring each service.
+
+* **Use GitHub Copilot for Azure to get AI-assisted guidance** when you're unsure which resources to create or how to configure them. GitHub Copilot for Azure can help you learn about services, generate deployment scripts, and troubleshoot issues using natural language.
+
 * **Write a script using the Azure CLI or Azure PowerShell** to automate a common task. For example, you might create a script that creates a basic dev environment for a new web application consisting of an Azure App Service, a database, and blob storage. Writing a script ensures consistent resource creation and is faster than using a UI.
 
 * **Use Infrastructure as code (IaC) tools to declaratively deploy and manage Azure resources**. Tools like Terraform, Ansible, and Bicep let you codify Azure resources in declarative syntax, ensuring consistent deployment across environments and preventing environmental drift.
@@ -59,6 +63,57 @@ For the full list of features, see the extension's download page.
 > [Download Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 
 :::image type="content" source="./media/visual-studio-code-azure-tools-extension.png" alt-text="A screenshot showing Visual Studio Code with the Azure Tools extension pack installed.":::
+
+## Visual Studio Azure development
+
+Developers using [Visual Studio](https://visualstudio.microsoft.com/) access Azure tools through the Azure development workload. Visual Studio's Azure integration includes:
+
+* Create and deploy to Azure App Service, Azure Functions, and Azure Container Apps
+* Add Azure service dependencies through Connected Services
+* Browse and manage Azure resources with Cloud Explorer
+* Debug cloud services locally and remotely
+
+> [!div class="nextstepaction"]
+> [Learn more about Azure development with Visual Studio](/visualstudio/azure/overview-azure-integration)
+
+## Azure Developer CLI
+
+The [Azure Developer CLI (`azd`)](../azure-developer-cli/overview.md) is a developer-focused command-line tool for creating Azure applications. The Azure Developer CLI:
+
+* Provisions and deploys full-stack applications from [starter templates](../azure-developer-cli/azd-templates.md)
+* Reduces the time from code to cloud with a single `azd up` command
+* Supports CI/CD pipeline configuration with `azd pipeline config`
+* Works with infrastructure definitions in Bicep or Terraform
+
+```bash
+# Initialize from a template
+azd init --template todo-python-mongo
+
+# Provision infrastructure and deploy code
+azd up
+
+# Clean up all resources
+azd down
+```
+
+To get started, see the [Azure Developer CLI quickstart](../azure-developer-cli/get-started.md).
+
+> [!div class="nextstepaction"]
+> [Install the Azure Developer CLI](../azure-developer-cli/install-azd.md)
+
+## GitHub Copilot for Azure
+
+[GitHub Copilot for Azure](../github-copilot-azure/introduction.md) is an AI-powered chat extension that helps you work with Azure using natural language. Use it to:
+
+* Learn about Azure services and best practices
+* Deploy Azure resources through conversation
+* Troubleshoot application and resource issues
+* Get guidance on designing cloud-native applications
+
+GitHub Copilot for Azure works in VS Code alongside the Azure Tools extension pack, providing AI-assisted guidance as you build and manage your applications.
+
+> [!div class="nextstepaction"]
+> [Get started with GitHub Copilot for Azure](../github-copilot-azure/get-started.md)
 
 ## Command line tools
 

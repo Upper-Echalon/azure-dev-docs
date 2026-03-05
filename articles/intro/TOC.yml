@@ -32,12 +32,12 @@ items:
         href: azure-developer-billing.md
   - name: 🟢 Tools
     items:
-      - name: 🟢 VS Code tools for Azure
-        href: azure-developer-overview.md
+      - name: 🟢 Get started with Azure development tools
+        href: quickstart-developer-tools.md
       - name: 🟢 Azure Developer CLI (azd)
-        href: azure-developer-overview.md
+        href: ../azure-developer-cli/overview.md
       - name: 🟢 GitHub Copilot for Azure
-        href: azure-developer-overview.md
+        href: ../github-copilot-azure/introduction.md
   - name: Develop apps that use Foundry Tools
     href: ../ai/index.yml
   - name: Azure developer centers

@@ -38,6 +38,8 @@ Different tools support various use cases, and most Azure developers use a combi
 
 * **Use Infrastructure as code (IaC) tools to declaratively deploy and manage Azure resources**. Tools like Terraform, Ansible, and Bicep let you codify Azure resources in declarative syntax, ensuring consistent deployment across environments and preventing environmental drift.
 
+* **Use AI app templates to bootstrap AI projects quickly.** Azure provides [AI app templates](../ai/intelligent-app-templates.md) that include infrastructure definitions, application code, and deployment configuration for common AI scenarios like chat-with-your-data and document processing.
+
 ## Azure portal
 
 The [Azure portal](https://portal.azure.com) is a web-based interface designed for managing Azure resources. The Azure portal features:

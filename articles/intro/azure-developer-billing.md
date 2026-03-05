@@ -54,6 +54,7 @@ There are several factors that can influence the cost of a given service in Azur
 - **Per use** - Some services bill based on the number of times the service is used, the number of requests handled, or the number of entities (such as Microsoft Entra user accounts) configured.
 - **Per service** - Some services simply charge a straight monthly fee.
 - **Region** - Services sometimes have different prices depending on the region (data center) where they're hosted.
+- **Token usage** - AI services like Azure OpenAI bill based on the number of tokens processed. A token is roughly four characters of text. Both input (prompt) tokens and output (completion) tokens count toward your bill, often at different rates.
 
 ## Azure pricing calculator
 

@@ -54,6 +54,8 @@ You might wonder, "Why are there so many different ways to host an application?"
 | :::image type="icon" source="media/search.png"::: | [Azure AI Search](/azure/search) | Information retrieval at scale for traditional and conversational search applications, with security and options for AI enrichment and vectorization. |
 | :::image type="icon" source="media/document-intelligence.png"::: | [Azure Document Intelligence in Foundry Tools](/azure/ai-services/document-intelligence) | Document extraction service that understands your forms, allowing you to quickly extract text and structure from documents. |
 
+To get started building AI apps, see the [overview of AI app development](../ai/azure-ai-for-developers.md). For ready-to-deploy reference samples, browse the [AI app templates](../ai/intelligent-app-templates.md). If you're interested in building intelligent agents, see [Build agents using Model Context Protocol on Azure](../ai/intro-agents-mcp.md).
+
 ## Data
 
 Azure offers a wide array of relational and NoSQL storage options, including managed versions of many popular open-source database products.

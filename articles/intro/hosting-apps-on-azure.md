@@ -66,6 +66,16 @@ Controlled hosting solutions give you full control over the underlying infrastru
 * [Azure Virtual Machines][azure-virtual-machines]: Full control of the virtual machine.
 * [Azure Kubernetes Service][azure-kubernetes]: Full control of the Kubernetes cluster. 
 
+## Hosting AI workloads
+
+If your application includes AI models or agents, the same hosting services apply. The following services are popular for hosting AI workloads on Azure:
+
+- Azure Container Apps and Azure Kubernetes Service are popular choices for hosting AI inference endpoints and agent orchestrators
+- Azure Functions works well for event-driven AI pipelines that respond to new data.
+- For GPU-accelerated workloads, Azure Virtual Machines offer access to NVIDIA GPU instances.
+
+To learn more about building AI apps on Azure, see [Overview of AI app development](../ai/azure-ai-for-developers.md).
+
 ## Source code hosting
 
 For developers new to Azure who want to start **new development**, use the following chart to find the suggested hosting solution.

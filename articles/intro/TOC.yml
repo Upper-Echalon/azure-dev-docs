@@ -14,10 +14,10 @@ items:
         items:
           - name: 🟢 Set up agentic assisted development
             href: azure-developer-overview.md
-          - name: 🟢 Azure AI services
-            href: azure-developer-overview.md
-          - name: 🟢 Building AI apps on Azure
-            href: azure-developer-overview.md
+          - name: 🟢 Build AI apps on Azure
+            href: ../ai/azure-ai-for-developers.md
+          - name: 🟢 Azure AI developer resources
+            href: ../ai/resources-overview.md
       - name: Key Azure services for developers
         href: azure-developer-key-services.md
       - name: Host applications on Azure

@@ -7,14 +7,14 @@ content_well_notification:
   - AI-contribution
 ai-usage: ai-assisted
 ms.topic: concept-article
-ms.date: 02/27/2026
+ms.date: 03/05/2026
 author: diberry
 ms.author: diberry
 ---
 
 # Azure App Service tools for Azure MCP Server overview
 
-The Azure MCP Server lets you manage Azure resources, including Azure App Service instances, using natural language prompts. This feature enables you to quickly manage your web applications without needing to remember complex syntax.
+Use Azure MCP Server to manage Azure resources, including Azure App Service instances, with natural language prompts. This feature lets you quickly manage your web applications without needing to remember complex syntax.
 
 [Azure App Service](/azure/app-service/) is a managed platform for building, deploying, and scaling web apps. It offers built-in support for popular programming languages and frameworks, as well as features like autoscaling, custom domains, and SSL certificates. With Azure App Service, you can focus on application development rather than infrastructure management.
 
@@ -30,16 +30,16 @@ settings for the specified App Service, allowing it to connect to a database ser
 
 Example prompts include:
 
-- "Add database connection `connection_string` to app service `app` for database `database` in resource group `resource-group`."
-- "Configure SQL Server database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`."
-- "Add MySQL database `database` to app service `app` using connection `connection_string` in resource group `resource-group`."
-- "Add PostgreSQL database `database` to app service `app` using connection `connection_string` in resource group `resource-group`."
-- "Connect CosmosDB database `database` using connection string `connection_string` to app service `app` in resource group `resource-group`."
-- "Add database connection `connection_string` for database `database` on server `database_server` to app service `app` in resource group `resource-group`."
-- "Add database connection string for `database` to app service `app` using connection string `connection_string` in resource group `resource-group`."
-- "Connect database `database` to app service `app` using connection string `connection_string` in resource group `resource-group`."
-- "Set up database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`."
-- "Configure database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`."
+- Add database connection `connection_string` to app service `app` for database `database` in resource group `resource-group`.
+- Configure SQL Server database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`.
+- Add MySQL database `database` to app service `app` using connection `connection_string` in resource group `resource-group`.
+- Add PostgreSQL database `database` to app service `app` using connection `connection_string` in resource group `resource-group`.
+- Connect Azure Cosmos DB database `database` using connection string `connection_string` to app service `app` in resource group `resource-group`.
+- Add database connection `connection_string` for database `database` on server `database_server` to app service `app` in resource group `resource-group`.
+- Add database connection string for `database` to app service `app` using connection string `connection_string` in resource group `resource-group`.
+- Connect database `database` to app service `app` using connection string `connection_string` in resource group `resource-group`.
+- Set up database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`.
+- Configure database `database` for app service `app` with connection string `connection_string` in resource group `resource-group`.
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -63,8 +63,8 @@ Retrieves detailed information about Azure App Service web app deployments, incl
 
 Example prompts include:
 
-- "List all deployments for web app `my-webapp` in `my-resource-group`"
-- "Get details for deployment `deployment-id` in web app `my-webapp` from resource group `my-resource-group`"
+- List all deployments for web app `my-webapp` in `my-resource-group`.
+- Get details for deployment `deployment-id` in web app `my-webapp` from resource group `my-resource-group`.
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -85,9 +85,9 @@ Retrieves detailed information about Azure App Service web apps, including app n
 
 Example prompts include:
 
-- "List all web apps in my subscription"
-- "Show me web apps in resource group `my-resource-group`"
-- "Get details for web app `my-webapp` in resource group `my-resource-group`"
+- List all web apps in my subscription.
+- Show me web apps in resource group `my-resource-group`.
+- Get details for web app `my-webapp` in resource group `my-resource-group`.
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -102,12 +102,12 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli appservice webapp settings get-appsettings -->
 
-Retrieve the application settings for an App Service web app, returning key-value pairs that represent each setting. Be aware that application settings may contain sensitive information.
+Retrieve the application settings for an App Service web app, returning key-value pairs that represent each setting. Be aware that application settings might contain sensitive information.
 
 Example prompts include:
 
-- "List the application settings for web app `my-webapp` in `my-resource-group`."
-- "Get the application settings for web app `my-webapp` in `my-resource-group`."
+- List the application settings for web app `my-webapp` in `my-resource-group`.
+- Get the application settings for web app `my-webapp` in `my-resource-group`.
 
 | Parameter         | Required or optional | Description                                                                 |
 |-------------------|----------------------|-----------------------------------------------------------------------------|
@@ -126,16 +126,17 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 Updates the application setting for an Azure App Service web app. You can choose from three types of updates:
 
-- **Add**: Adds a new application setting with the specified name and value. If the application setting already exists, the operation fails and returns an error message.
-- **Set**: Sets the value of an application setting. If the application setting does not exist, this operation behaves the same as `add`. If the application setting already exists, the value is overwritten.
-- **Delete**: Deletes an application setting with the specified name. If the application setting does not exist, nothing happens.
+- **Add**. Adds a new application setting with the specified name and value. If the application setting already exists, the operation fails and returns an error message.
+- **Set**. Sets the value of an application setting. If the application setting does not exist, this operation behaves the same as `add`. If the application setting already exists, the value is overwritten.
+- **Delete**. Deletes an application setting with the specified name. If the application setting does not exist, nothing happens.
 
 For both `add` and `set` update types, both the application setting name and value are required. For the `delete` update type, only the application setting name is required.
 
 Example prompts include:
-- "Add application setting `setting-name` with `setting-value` to web app `app` in `resource-group`"
-- "Set application setting `setting-name` with `setting-value` to web app `app` in `resource-group`"
-- "Delete application setting `setting-name` from web app `app` in `resource-group`"
+
+- Add application setting `setting-name` with `setting-value` to web app `app` in `resource-group`.
+- Set application setting `setting-name` with `setting-value` to web app `app` in `resource-group`.
+- Delete application setting `setting-name` from web app `app` in `resource-group`.
 
 | Parameter                  | Required or optional | Description                                                                           |
 |----------------------------|----------------------|---------------------------------------------------------------------------------------|

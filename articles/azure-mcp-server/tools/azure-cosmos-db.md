@@ -4,14 +4,14 @@ description: Learn how to use the Azure MCP Server with Azure Cosmos DB to manag
 keywords: azure mcp server, azmcp, cosmos db
 author: diberry
 ms.author: diberry
-ms.date: 12/05/2025
+ms.date: 07/03/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-assisted
-ms.topic: concept-article
+ms.topic: reference
 ms.custom: build-2025
 --- 
-# Azure Cosmos DB tools for the Azure MCP Server overview
+# Azure Cosmos DB tools for the Azure MCP Server
 
 The Azure MCP Server allows you to manage Azure resources, including Cosmos DB accounts, databases, and containers with natural language prompts. Query and manage your NoSQL databases using simple conversational commands.
 
@@ -19,96 +19,59 @@ The Azure MCP Server allows you to manage Azure resources, including Cosmos DB a
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Account: List
+> [!NOTE]
+> In Azure MCP Server v2.0.0-beta.23, the separate `cosmos_account_list`, `cosmos_database_list`, and `cosmos_database_container_list` commands were consolidated into a single `cosmos list` command. Use `cosmos list` with appropriate parameters to list accounts, databases, or containers.
 
-<!-- cosmos account list -->
+## Get Cosmos DB resources list
 
-The Azure MCP Server can list all Cosmos DB accounts in a subscription. This provides a quick overview of your Cosmos DB resources.
+<!-- @mcpcli cosmos list -->
 
-Example prompts include:
+List Azure Cosmos DB accounts, databases, or containers. By default, this command returns all accounts in your subscription. Specify `--account` to list databases in that account, or combine `--account` and `--database` to list containers in a specific database.
 
-- **List accounts**: "List all my Cosmos DB accounts in my subscription."
-- **Show accounts**: "What Cosmos DB accounts do I have?"
-- **Find accounts**: "I need to see my Cosmos DB resources"
-- **Query accounts**: "Show me all my Cosmos DB accounts"
-- **Check accounts**: "Cosmos DB accounts in subscription abc123"
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-[!INCLUDE [cosmos account list](../includes/tools/annotations/azure-cosmos-db-account-list-annotations.md)]
-
-## Database: List
-
-<!-- cosmos database list -->
-
-The Azure MCP Server can list all databases in a Cosmos DB account. This helps you view your database resources in a specific account.
+<!-- @mcpcli cosmos list -->
+<!-- Required parameters: 0 -  -->
 
 Example prompts include:
+- "List all Azure Cosmos DB accounts in my subscription"
+- "Show me my Azure Cosmos DB accounts"
+- "Show me the Azure Cosmos DB accounts in my subscription"
+- "List all the databases in the Azure Cosmos DB account `<account>`"
+- "Show me the databases in the Azure Cosmos DB account `<account>`"
+- "List all the containers in the database `<database>` for the Azure Cosmos DB account `<account>`"
+- "Show me the containers in the database `<database>` for the Azure Cosmos DB account `<account>`"
 
-- **List databases**: "Show me all databases in my 'mycosmosaccount' Cosmos DB account."
-- **View databases**: "What databases do I have in Cosmos DB account 'cosmosdb-prod'?"
-- **Find databases**: "List databases in my Cosmos account 'data-store-cosmos'"
-- **Query databases**: "Show all databases in Cosmos DB account 'mycosmosaccount'"
-- **Check databases**: "What databases are available in my 'analytics-cosmos' account?"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Account name** | Required | The name of the Cosmos DB account. |
+| Parameter |  Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Account** |  Optional | The name of the Azure Cosmos DB account. When not specified, this command lists all accounts in the subscription. Specify this parameter to list databases, or combine with **Database** to list containers. |
+| **Database** |  Optional | The name of the database. Requires **Account** to be specified. When provided, this command lists containers within the specified database. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-[!INCLUDE [cosmos database list](../includes/tools/annotations/azure-cosmos-db-database-list-annotations.md)]
+## Get container item query
 
-## Database: List containers
+<!-- @mcpcli cosmos database container item query -->
 
-<!-- cosmos database container list -->
+List items from a Cosmos DB container by specifying the account name, database name, and container name. Optionally, you can provide a custom SQL query to filter results.
 
-The Azure MCP Server can list all containers in a Cosmos DB database. This helps you manage your data organization within a database.
+<!-- @mcpcli cosmos database container item query -->
+<!-- Required parameters: 3 - '--account', '--database', '--container' -->
 
 Example prompts include:
+- "Show me the items in the container `my-container` from database `my-database` for the Cosmos DB account `my-cosmos-account`."
 
-- **List containers**: "Show me all containers in database 'products' in my 'mycosmosaccount' Cosmos DB account."
-- **View containers**: "What containers do I have in the 'users' database in Cosmos DB account 'mycosmosaccount'?"
-- **Find containers**: "List all containers in database 'events' in my 'analytics-cosmos' account"
-- **Query containers**: "Show containers in database 'inventory' in Cosmos DB account 'mycosmosaccount'"
-- **Check containers**: "What containers are available in the 'orders' database in Cosmos DB account 'mycosmosaccount'?"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Account name** | Required | The name of the Cosmos DB account. |
-| **Database name** | Required | The name of the database. |
+| Parameter  | Required or optional | Description |
+|------------|----------------------|-------------|
+| **Account** | Required | The name of the Cosmos DB account to query. |
+| **Container** | Required | The name of the container to query. |
+| **Database** | Required | The name of the database to query. |
+| **Query** | Optional | SQL query to execute against the container, using Cosmos DB SQL syntax. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-[!INCLUDE [cosmos database container list](../includes/tools/annotations/azure-cosmos-db-database-container-list-annotations.md)]
-
-## Database: Query container items
-
-<!-- cosmos database container item query -->
-
-The Azure MCP Server can execute SQL queries against items in a Cosmos DB container. This powerful feature allows you to retrieve specific data based on query conditions.
-
-Example prompts include:
-
-- **Simple query**: "Query all orders placed after January 1, 2025 from the 'orders' container in database 'sales' in Cosmos DB account 'mycosmosaccount'"
-- **Filter query**: "Find all products with price less than $50 in the 'products' container in database 'inventory' in Cosmos DB account 'mycosmosaccount'"
-- **Complex query**: "Query items where category is 'electronics' and stock is greater than 10 in container 'products' in database 'inventory' in Cosmos DB account 'mycosmosaccount'"
-- **Join query**: "Show me orders with their related customer information in container 'orders' in database 'sales' in Cosmos DB account 'mycosmosaccount'"
-- **Aggregation query**: "Count how many orders we have by status in the 'orders' container in database 'sales' in Cosmos DB account 'mycosmosaccount'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Account name** | Required | The name of the Cosmos DB account. |
-| **Database name** | Required | The name of the database. |
-| **Container name** | Required | The name of the container. |
-| **Query** | Optional | SQL query to execute against the container. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-[!INCLUDE [cosmos database container item query](../includes/tools/annotations/azure-cosmos-db-database-container-item-query-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 
 - [What are the Azure MCP Server tools?](index.md)
 - [Get started using Azure MCP Server](../get-started.md)
-- [Azure Cosmos DB](/azure/cosmos-db/introduction)
+- [Azure Cosmos DB documentation](/azure/cosmos-db/)

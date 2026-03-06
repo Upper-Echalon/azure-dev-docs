@@ -4,7 +4,7 @@ description: "Use the Azure MCP Server with Azure Monitor to query Log Analytics
 keywords: azure mcp server, azmcp, azure monitor, log analytics
 author: diberry
 ms.author: diberry
-ms.date: 02/17/2026
+ms.date: 03/06/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-assisted
@@ -12,6 +12,7 @@ ms.topic: concept-article
 ms.custom: build-2025
 tool_count for monitor: 11
 tool_count for workbooks: 5
+mcp-cli.version: 2.0.0-beta.25+02aa516434538ce124a06a01d89bcaa190b7e1ad
 ms.reviewer: jong
 --- 
 # Azure Monitor tools for the Azure MCP Server overview
@@ -293,113 +294,136 @@ Example prompts include:
 
 [!INCLUDE [monitor metrics definitions](../includes/tools/annotations/azure-monitor-metrics-definitions-annotations.md)]
 
-## Workbooks: List workbooks
+## Create workbook
 
-<!-- workbooks list -->
+<!-- @mcpcli workbooks create -->
 
-The Azure MCP Server lists Azure Monitor workbooks in a resource group. This helps you discover and manage your monitoring dashboards and interactive reports.
+Create a new workbook in the specified resource group and subscription. You can set the display name and the serialized JSON content for the workbook. The command returns the created workbook information upon successful completion.
 
-Example prompts include:
-
-- **List workbooks**: "Show workbooks in resource group 'my-resource-group'"
-- **List by category**: "List workbooks in Insights category in resource group 'my-resource-group'"
-- **List shared workbooks**: "Show shared workbooks in resource group 'my-resource-group'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Resource group** | Required | The name of the Azure resource group. |
-| **Category** | Optional | The category to filter workbooks by. |
-| **Kind** | Optional | The kind of workbook (such as `shared`, `user`). |
-| **Source ID** | Optional | The source resource ID to filter workbooks by. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-[!INCLUDE [workbooks list](../includes/tools/annotations/azure-workbooks-list-annotations.md)]
-
-## Workbooks: Show workbook details
-
-<!-- workbooks show -->
-
-The Azure MCP Server shows details of a specific Azure Monitor workbook by its resource ID. This provides comprehensive information about the workbook's configuration and content.
+<!-- @mcpcli workbooks create -->
+<!-- Required parameters: 3 - '--resource-group', '--display-name', '--serialized-content' -->
 
 Example prompts include:
+- "Create a new workbook in resource group `my-resource-group` with display name `My Workbook` and content `{"key": "value"}`"
 
-- **Show workbook**: "Show workbook details for '/subscriptions/abc123/resourceGroups/monitoring/providers/Microsoft.Insights/workbooks/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1'"
-- **Get workbook info**: "Get info about workbook '/subscriptions/xyz789/resourceGroups/prod-rg/providers/Microsoft.Insights/workbooks/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2'"
-- **View workbook**: "Display workbook details for '/subscriptions/def456/resourceGroups/analytics-rg/providers/Microsoft.Insights/workbooks/c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Workbook ID** | Required | The full Azure resource ID of the workbook to retrieve. |
+| Parameter          | Required or optional | Description                                                |
+|--------------------|----------------------|------------------------------------------------------------|
+| **Display name**        | Required              | The display name of the workbook.                                     |
+| **Resource group**      | Required              | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Serialized content**   | Required              | The serialized JSON content of the workbook.                        |
+| **Source ID**           | Optional              | The linked resource ID for the workbook. By default, this is `azure monitor`.            |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-[!INCLUDE [workbooks show](../includes/tools/annotations/azure-workbooks-show-annotations.md)]
+## Delete workbook
 
-## Workbooks: Create workbook
+<!-- @mcpcli workbooks delete -->
 
-<!-- workbooks create -->
+Delete one or more workbooks by their Azure resource IDs. This command performs a soft delete, retaining the workbooks for 90 days. If necessary, you can restore them from the Recycle Bin through the Azure Portal.
 
-The Azure MCP Server can create a new Azure Monitor workbook. This allows you to programmatically create monitoring dashboards and interactive reports.
+**BATCH**: Accepts multiple `--workbook-ids` values. Partial failures are reported per workbook. Individual failures do not cause the entire batch operation to fail.
+
+To learn more, visit: [Manage Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-manage)
+
+<!-- @mcpcli workbooks delete -->
+<!-- Required parameters: 1 - '--workbook-ids' -->
 
 Example prompts include:
+- "Delete the workbooks with resource IDs `workbook_resource_id_1` and `workbook_resource_id_2`"
 
-- **Create workbook**: "Create workbook with display name 'Performance Dashboard' and serialized content '{\"version\":\"Notebook/1.0\",\"items\":[]}' in resource group 'monitoring-rg'"
-- **Create with source**: "Create workbook with display name 'App Insights Analysis' and serialized content '{\"version\":\"Notebook/1.0\",\"items\":[]}' linked to source '/subscriptions/abc123/resourceGroups/prod/providers/Microsoft.Insights/components/myappinsights'"
-- **Create monitoring workbook**: "Create new workbook with display name 'Infrastructure Overview' and serialized content '{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":{\"json\":\"## Infrastructure Metrics\"}}]}'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Display** | Required | The display name for the new workbook. |
-| **Serialized content** | Required | The JSON content defining the workbook structure and queries. |
-| **Source ID** | Optional | The source resource ID to associate with the workbook. |
+| Parameter         | Required or optional | Description                                                                                           |
+|-------------------|----------------------|-------------------------------------------------------------------------------------------------------|
+| **Workbook IDs**  | Required             | The Azure Resource IDs of the workbooks to operate on (supports multiple values for batch operations).|
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-[!INCLUDE [workbooks create](../includes/tools/annotations/azure-workbooks-create-annotations.md)]
+## Get workbooks list
 
-## Workbooks: Update workbook
+<!-- @mcpcli workbooks list -->
 
+Search Azure Workbooks using Resource Graph for a fast metadata query.
 
-<!-- workbooks update -->
+**Use for**: Discovering, filtering, and counting workbooks across scopes.  
+**Returns**: Workbook metadata, including `id`, `name`, `location`, `category`, and timestamps.  
+**Does not return**: Full workbook content (`serializedData`) by default. Use `show` for that or set `--output-format=full`.  
 
-The Azure MCP Server updates an existing Azure Monitor workbook. This allows you to modify workbook properties and content programmatically.
+**Scope**: By default, this command searches for workbooks in your current Azure context (tenant/subscription). Use `--subscription` and `--resource-group` to explicitly control the scope.  
+**Total Count**: Returns the server-side total count by default (not just the returned items).  
+**Max Results**: The default is 50, with a maximum of 1000. Use `--max-results` to adjust.  
+**Output Format**: Use `--output-format=summary` for a minimal response, or `--output-format=full` for `serializedData`.  
+
+**Filters**: Use the following options for semantic filtering: `--name-contains`, `--category`, `--kind`, `--source-id`, and `--modified-after`.  
+
+<!-- @mcpcli workbooks list -->
+<!-- Required parameters: 0 -  -->
 
 Example prompts include:
+- "Show me all workbooks in resource group `my-rg`."
+- "What workbooks are available in resource group `my-rg`?"
 
-- **Update name**: "Update workbook '/subscriptions/abc123/resourceGroups/monitoring-rg/providers/Microsoft.Insights/workbooks/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1' with display name 'Updated Dashboard'"
-- **Update content**: "Update workbook '/subscriptions/xyz789/resourceGroups/prod-rg/providers/Microsoft.Insights/workbooks/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2' with serialized content '{\"version\":\"Notebook/1.0\",\"items\":[]}'"
-- **Modify workbook**: "Change display name to 'Analytics Dashboard' and serialized content '{\"version\":\"Notebook/1.0\",\"items\":[]}' for workbook '/subscriptions/def456/resourceGroups/analytics-rg/providers/Microsoft.Insights/workbooks/c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Workbook ID** | Required | The full Azure resource ID of the workbook to update. |
-| **Display** | Optional | The new display name for the workbook. |
-| **Serialized content** | Optional | The updated JSON content for the workbook. |
+| Parameter               | Required or optional | Description                                                                                   |
+|-------------------------|----------------------|-----------------------------------------------------------------------------------------------|
+| **Category**            | Optional             | Filter workbooks by category (for example, `workbook`, `sentinel`, `TSG`). If not specified, all categories are returned. |
+| **Include total count** | Optional             | Include the total count of all matching workbooks in the response (default: true).          |
+| **Kind**                | Optional             | Filter workbooks by kind (for example, `shared`, `user`). If not specified, all kinds are returned. |
+| **Max results**         | Optional             | Maximum number of results to return (default: 50, max: 1000).                              |
+| **Modified after**      | Optional             | Filter workbooks modified after this date (ISO 8601 format, for example, `2024-01-15`).     |
+| **Name contains**       | Optional             | Filter workbooks where the display name contains this text (case-insensitive).               |
+| **Output format**       | Optional             | Output format: `summary` (ID and name only, minimal tokens), `standard` (metadata without content, default), `full` (includes `serializedData`). |
+| **Source ID**           | Optional             | Filter workbooks by source resource ID (for example, Application Insights resource, Log Analytics workspace). If not specified, all workbooks are returned. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-[!INCLUDE [workbooks update](../includes/tools/annotations/azure-workbooks-update-annotations.md)]
+## Get workbook details
 
-## Workbooks: Delete workbooks
+<!-- @mcpcli workbooks show -->
 
-<!-- workbooks delete -->
+Retrieve full workbook details via the Azure Resource Manager (ARM) API, including `serializedData` content.
 
-The Azure MCP Server deletes an Azure Monitor workbook. This permanently removes the workbook and all its associated content.
+**USE FOR:** Obtaining the complete workbook definition, including visualization JSON.  
+**RETURNS:** Full workbook properties, `serializedData`, tags, and etag.
+
+**BATCH:** Accepts multiple **workbook-ids** values. Partial failures are reported per workbook.  
+**PERFORMANCE:** Use `list` first for discovery, then `show` for specific workbooks.
+
+<!-- @mcpcli workbooks show -->
+<!-- Required parameters: 1 - '--workbook-ids' -->
 
 Example prompts include:
+- "Retrieve details for the workbook with resource ID `<workbook_resource_id>`"
+- "Display the workbook defined by resource ID `<workbook_resource_id>`"
 
-- **Delete workbook**: "Delete workbook '/subscriptions/abc123/resourceGroups/monitoring/providers/Microsoft.Insights/workbooks/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1'"
-- **Remove workbook**: "Remove workbook '/subscriptions/xyz789/resourceGroups/prod-rg/providers/Microsoft.Insights/workbooks/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2'"
-- **Clean up**: "Remove workbook '/subscriptions/def456/resourceGroups/analytics-rg/providers/Microsoft.Insights/workbooks/c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3'"
+| Parameter      | Required or optional | Description                                                                                      |
+|----------------|----------------------|--------------------------------------------------------------------------------------------------|
+| **Workbook IDs** | Required             | The Azure Resource IDs of the workbooks to operate on (supports multiple values for batch operations). |
 
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Workbook ID** | Required | The full Azure resource ID of the workbook to delete. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-[!INCLUDE [workbooks delete](../includes/tools/annotations/azure-workbooks-delete-annotations.md)]
+## Update workbook
+
+<!-- @mcpcli workbooks update -->
+
+Updates properties of an existing Azure Workbook by adding new steps, modifying content, or changing the display name. This command returns the updated workbook details. It requires the workbook resource ID and either new serialized content or a new display name.
+
+<!-- @mcpcli workbooks update -->
+<!-- Required parameters: 1 - '--workbook-id' -->
+
+Example prompts include:
+- Update the workbook `<workbook-id>` with a new display name `Annual Report`
+
+| Parameter | Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Workbook ID** | Required | The Azure Resource ID of the workbook to retrieve. |
+| **Display name** | Optional | The display name of the workbook. |
+| **Serialized content** | Optional | The JSON serialized content/data of the workbook. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

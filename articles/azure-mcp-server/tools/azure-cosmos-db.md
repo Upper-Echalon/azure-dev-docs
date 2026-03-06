@@ -4,7 +4,7 @@ description: Learn how to use the Azure MCP Server with Azure Cosmos DB to manag
 keywords: azure mcp server, azmcp, cosmos db
 author: diberry
 ms.author: diberry
-ms.date: 07/03/2026
+ms.date: 03/06/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-assisted

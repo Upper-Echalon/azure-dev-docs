@@ -34,7 +34,7 @@ Incorporate Azure into your application in different ways depending on your need
 > [!VIDEO e882f09e-efff-465d-a72e-1b430631e6bf]
 
 
-Common software development and deployment scenarios on Azure:
+Common software development and deployment scenarios on Azure include the following options:
 
 - **Application hosting on Azure -** Host your entire application stack: web applications, APIs, databases, and storage services. Azure supports various hosting models from fully managed services to containers to virtual machines. When you use fully managed Azure services, your applications take advantage of the scalability, high availability, and security built into Azure.
 
@@ -44,7 +44,7 @@ Common software development and deployment scenarios on Azure:
 
 - **AI driven applications -** Build AI-powered applications on your terms, in your preferred programming language, in the cloud, on-premises, or at the edge. Azure provides access to powerful foundation models through Azure OpenAI, prebuilt AI services for speech, vision, and language, and tools for building intelligent agents using the Model Context Protocol (MCP). Get started with [AI app development on Azure](../ai/azure-ai-for-developers.md) or explore [AI resources by programming language](../ai/resources-overview.md).
 
-- **Modern serverless architectures -** Use Azure Functions to simplify building event-driven solutions, whether responding to HTTP requests, handling file uploads in Blob storage, or processing queue events. You write only the code necessary to handle your event without worrying about servers or framework code. Use over 250 connectors to Azure and other services to tackle integration problems.
+- **Modern serverless architectures -** Use Azure Functions to simplify building event-driven solutions, whether responding to HTTP requests, handling file uploads in Blob storage, or processing queue events. You write only the code necessary to handle your event without worrying about servers or framework code. Use more than 250 connectors to Azure and other services to tackle integration problems.
 
 - **Developer tools -** Azure provides tools for every stage of the development lifecycle, including the [Azure Developer CLI (`azd`)](../azure-developer-cli/overview.md), [GitHub Copilot for Azure](../github-copilot-azure/introduction.md), [Azure Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack), and [Azure development with Visual Studio](/visualstudio/azure/overview-azure-integration). For a hands-on walkthrough, see [Quickstart: Azure developer tools](quickstart-developer-tools.md).
 

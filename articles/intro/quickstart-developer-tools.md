@@ -54,14 +54,14 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. Open a terminal (**Ctrl + `**). Create and change into a new directory for your project then initialize a project from a starter template:
+1. Open a terminal (**Ctrl + `**). Create and change into a new directory for your project, and then initialize a project from a starter template:
 
     ```bash
     mkdir my-todo-app && cd my-todo-app
     azd init --template todo-nodejs-mongo
     ```
 
-1. When prompted, enter an environment name like `my-todo-dev`. This name is used as a prefix for the Azure resources.
+1. When prompted, enter an environment name like `my-todo-dev`. Use this name as a prefix for the Azure resources.
 
 1. Sign in to Azure:
 
@@ -123,9 +123,9 @@ For more information, see [Azure Tools extension pack](https://marketplace.visua
 
 Use GitHub Copilot for Azure to learn about the resources you deployed and get guidance on next steps.
 
-1. In VS Code, open the Copilot Chat view by selecting the chat icon in the Activity Bar or pressing **Ctrl+Shift+I**.
+1. In VS Code, open the Copilot Chat view by selecting the chat icon in the activity bar or pressing **Ctrl+Shift+I**.
 
-1. Ask about your deployed resources. Type:
+1. Ask about your deployed resources:
 
     ```text
     @azure What resources are in my resource group that contains "todo"?
@@ -141,13 +141,13 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
 
     Copilot provides step-by-step guidance tailored to your deployed application.
 
-1. Troubleshoot issues. If your app isn't working as expected, try:
+1. If your app isn't working as expected, troubleshoot problems:
 
     ```text
     @azure Are there any errors in my App Service logs?
     ```
 
-1. Learn about cost. Ask about the cost implications of your deployment:
+1. To learn about cost, ask about the cost implications of your deployment:
 
     ```text
     @azure What is the estimated monthly cost of the resources in my resource group?

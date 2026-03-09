@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Azure developer tools"
-description: Get hands-on with the Azure Developer CLI, Azure Tools for VS Code, Visual Studio Azure tools, and GitHub Copilot for Azure.
+description: Get hands-on with the Azure Developer CLI, Azure Tools for VS Code, and GitHub Copilot for Azure.
 ms.service: azure
 ms.topic: quickstart
 ms.date: 03/04/2026
@@ -12,7 +12,7 @@ ai-usage: ai-generated
 
 In this quickstart, you use the core Azure developer tools to deploy a sample application to Azure. By the end, you have hands-on experience with:
 
-- Azure Developer CLI (`azd`) to scaffold and deploy a full-stack app
+- Azure Developer CLI (azd) to scaffold and deploy a full-stack app
 - Azure Tools for VS Code extension pack to browse and manage your deployed resources
 - GitHub Copilot for Azure to get AI-assisted answers about your Azure resources
 
@@ -22,32 +22,31 @@ In this quickstart, you use the core Azure developer tools to deploy a sample ap
 - A [GitHub Copilot](https://github.com/features/copilot) subscription - required by GitHub Copilot for Azure
 - Use either the local installation of the tools or the browser-based VS Code for the Web experience. For the local installation, ensure you have:
     - [Visual Studio Code](https://code.visualstudio.com/)
-    - [Git](https://git-scm.com/downloads) - required by `azd init --template` to clone the template repository
+    - [Git](https://git-scm.com/downloads) - required by Azure Developer CLI to clone the template repository
 
 ## Set up the tools
 
-You can choose to use the tools directly in the browser with VS Code for the Web or install them locally. The browser-based experience is the fastest way to get started, while the local installation provides a more integrated development environment.
+You can choose to use the tools directly in the browser with VS Code for the Web or install them locally. The browser-based experience is the fastest way to get started, while the local installation provides a local development environment.
 
 # [VS Code for the Web](#tab/vscode-web)
 
-The fastest way to get started is with [VS Code for the Web (vscode.dev/azure)](https://vscode.dev/azure), which gives you a browser-based VS Code environment with CLIs and several extensions preinstalled. No local installation is required.
+[VS Code for the Web (vscode.dev/azure)](https://vscode.dev/azure) gives you a browser-based VS Code environment with CLIs and several extensions preinstalled. No local installation is required.
 
-1. Open <https://vscode.dev/azure> in your browser.
+1. Open [vscode.dev/azure](https://vscode.dev/azure) in your browser.
 1. Sign in by using your Azure account when prompted.
-1. Some Azure extensions are preinstalled. For all tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
+1. Some Azure extensions are preinstalled. For all Azure tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
 
 You now have access to the Azure Tools extensions and GitHub Copilot for Azure directly in the browser.
 
 # [Install tools locally](#tab/local-install)
 
-Install the Azure Developer CLI, the Azure Tools extension pack for VS Code, and the GitHub Copilot for Azure extension.
+Install the following tools locally to get a full development experience on your machine.
 
-1. The Azure Developer CLI (`azd`) is a command-line tool that simplifies provisioning and deploying applications to Azure. Follow the steps in [Install the Azure Developer CLI](../azure-developer-cli/install-azd.md) for your operating system.
+1. The Azure Developer CLI (azd) is a command-line tool that simplifies provisioning and deploying applications to Azure. Follow the steps in [Install the Azure Developer CLI](../azure-developer-cli/install-azd.md) for your operating system.
 1. The [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) includes extensions for Azure App Service, Azure Functions, Azure Storage, Azure Databases, and more.
 1. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) provides AI-powered code completions, chat, and suggestions directly in VS Code.
 1. [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot) extends Copilot with Azure-specific knowledge so you can ask questions about your Azure resources, get deployment guidance, and troubleshoot problems.
-
-After installation, sign in to your GitHub account when prompted.
+1. After installation, sign in to your GitHub account when prompted.
 
 ---
 
@@ -55,7 +54,7 @@ After installation, sign in to your GitHub account when prompted.
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. Open a terminal (Ctrl+`) and initialize a project from a starter template:
+1. Open a terminal (**Ctrl + `**). Create and change into a new directory for your project then initialize a project from a starter template:
 
     ```bash
     mkdir my-todo-app && cd my-todo-app
@@ -83,7 +82,7 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
     - Provisions the required Azure services, such as App Service and Azure Cosmos DB.
     - Deploys the application code.
 
-    This process takes a few minutes. When it finishes, `azd` displays the URL of your deployed application.
+    This process takes a few minutes. When it finishes, Azure Developer CLI displays the URL of your deployed application.
 
 1. Open the URL in your browser to verify the application is running. You see a to-do application where you can add and complete tasks.
 
@@ -91,7 +90,7 @@ For more information, see [What is the Azure Developer CLI](../azure-developer-c
 
 ## Browse resources with Azure Tools for VS Code
 
-Now use the Azure Tools extension to explore the resources that `azd` created.
+Now use the Azure Tools extension to explore the resources that Azure Developer CLI created.
 
 1. Verify that you're signed in to Azure by running the following command in the terminal:
 
@@ -100,13 +99,13 @@ Now use the Azure Tools extension to explore the resources that `azd` created.
     ```
 
     If the command returns your account details, you're already signed in. If not, sign in through VS Code:
-    - Open the Command Palette (**Ctrl+Shift+P**).
+    - Open the Command Palette (**Ctrl + Shift + P**).
     - Type **Azure: Sign In** and select it.
     - Complete the sign-in flow in your browser.
 
 1. Open the Azure view by selecting the Azure icon in the Activity Bar (left sidebar).
 
-1. Expand **Resources** to see your Azure subscriptions. Make sure the resource list is grouped by **Resource Group** (select the **Group By** icon at the top of the Resources view and choose **Resource Group** if needed). Expand your subscription and find the resource group created by `azd` (it starts with the environment name you chose).
+1. Expand **Resources** to see your Azure subscriptions. Make sure the resource list is grouped by **Resource Group** by selecting the **Group By** icon at the top of the Resources view and choosing **Resource Group**. Expand your subscription and find the resource group created by Azure Developer CLI. The resource group name starts with the environment name you chose when running `azd init`.
 
 1. Explore the deployed resources:
     - Expand the resource group to see the App Service, Cosmos DB account, and other resources.
@@ -155,29 +154,6 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
     ```
 
 For more information, see [GitHub Copilot for Azure](../github-copilot-azure/introduction.md).
-
-## Visual Studio Azure development (optional)
-
-If you use Visual Studio, you can manage Azure services through its built-in tooling.
-
-1. Open Visual Studio and install the **Azure development** workload if you haven't already:
-    - Go to **Tools** > **Get Tools and Features**.
-    - Select the **Azure development** workload and install it.
-
-1. Sign in to Azure:
-    - Go to **Tools** > **Options** > **Azure Service Authentication**.
-    - Select your Azure account.
-
-1. View your Azure resources:
-    - Open **View** > **Cloud Explorer**.
-    - Expand your subscription to browse the same resources you created by using `azd`.
-
-1. Add Azure service dependencies to a project:
-    - Right-click the project in Solution Explorer.
-    - Select **Add** > **Connected Service**.
-    - Connected Services lets you add Azure Storage, Azure Key Vault, Azure SQL, and other services with guided configuration.
-
-For more information, see [Azure development with Visual Studio](/visualstudio/azure).
 
 ## Clean up resources
 

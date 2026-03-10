@@ -38,15 +38,17 @@ You can choose to use the tools directly in the browser with VS Code for the Web
 
 You now have access to the Azure Tools extensions and GitHub Copilot for Azure directly in the browser.
 
+[Screenshot of VS Code for the Web with extensions installed]
+
+For more information about using VS Code for the Web for Azure development, see [VS Code for the Web documentation](https://code.visualstudio.com/docs/azure/vscodeforweb).
+
 # [Install tools locally](#tab/local-install)
 
 Install the following tools locally to get a full development experience on your machine.
 
 1. The Azure Developer CLI (azd) is a command-line tool that simplifies provisioning and deploying applications to Azure. Follow the steps in [Install the Azure Developer CLI](../azure-developer-cli/install-azd.md) for your operating system.
 1. The [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) includes extensions for Azure App Service, Azure Functions, Azure Storage, Azure Databases, and more.
-1. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) provides AI-powered code completions, chat, and suggestions directly in VS Code.
 1. [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot) extends Copilot with Azure-specific knowledge so you can ask questions about your Azure resources, get deployment guidance, and troubleshoot problems.
-1. After installation, sign in to your GitHub account when prompted.
 
 ---
 
@@ -54,14 +56,17 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. In a terminal, create and change into a new directory for your project, and then initialize a project from a starter template:
+1. In a terminal, create and change into a new directory for your project.
 
     ```azdeveloper
     mkdir my-todo-app && cd my-todo-app
+    ```
+1. Initialize a project from a starter template. The `todo-nodejs-mongo` template is a full-stack application built with Node.js, Express, and MongoDB. The template includes an Azure Resource Manager (ARM) template that defines the required Azure resources, such as an App Service for hosting the application and an Azure Cosmos DB account for the database.
+
+    ```azdeveloper
     azd init --template todo-nodejs-mongo
     ```
-
-1. When prompted, enter an environment name like `my-todo-dev`. Use this name as a prefix for the Azure resources.
+     When prompted, enter an environment name like `my-todo-dev`. Use this name as a prefix for the Azure resources.
 
 1. Sign in to Azure:
 
@@ -78,7 +83,9 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
     azd up
     ```
 
-    When prompted, select a subscription and region. The `azd up` command:
+    When prompted, select a subscription and region.
+    
+    The `azd up` command:
     - Creates a resource group with the infrastructure defined in the template.
     - Provisions the required Azure services, such as App Service and Azure Cosmos DB.
     - Deploys the application code.
@@ -104,9 +111,9 @@ Now use the Azure Tools extension to explore the resources that Azure Developer 
     - Type **Azure: Sign In** and select it.
     - Complete the sign-in flow in your browser.
 
-1. Open the Azure view by selecting the Azure icon in the Activity Bar (left sidebar).
+1. Open the Azure view by selecting the Azure icon in the Activity Bar (left sidebar). Expand **Resources** to see your Azure subscriptions. Make sure the resource list is grouped by **Resource Group** by selecting the **Group By** icon at the top of the Resources view and choosing **Resource Group**. Expand your subscription and find the resource group created by Azure Developer CLI. The resource group name starts with the environment name you chose when running `azd init`.
 
-1. Expand **Resources** to see your Azure subscriptions. Make sure the resource list is grouped by **Resource Group** by selecting the **Group By** icon at the top of the Resources view and choosing **Resource Group**. Expand your subscription and find the resource group created by Azure Developer CLI. The resource group name starts with the environment name you chose when running `azd init`.
+    [Screenshot of Azure Tools view in VS Code showing the resource group and resources created by azd]
 
 1. Explore the deployed resources:
     - Expand the resource group to see the App Service, Cosmos DB account, and other resources.
@@ -125,6 +132,8 @@ For more information, see [Azure Tools extension pack](https://marketplace.visua
 Use GitHub Copilot for Azure to learn about the resources you deployed and get guidance on next steps.
 
 1. In VS Code, open the Copilot Chat view by selecting the chat icon in the activity bar or pressing **Ctrl+Shift+I**.
+
+    [Screenshot of VS Code with Copilot Chat view open]
 
 1. Ask about your deployed resources:
 

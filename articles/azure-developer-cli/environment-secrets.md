@@ -12,7 +12,7 @@ ai-usage: ai-generated
 
 # Use environment secrets with the Azure Developer CLI
 
-The Azure Developer CLI (`azd`) supports referencing Azure Key Vault secrets within your project environment (the `.env` file). This provides a secure option for working with sensitive data in your `azd` projects. These secrets integrate with various `azd` features, such as hooks and CI/Cd pipeline configurations.
+The Azure Developer CLI (`azd`) supports referencing Azure Key Vault secrets within your project environment (the `.env` file). This provides a secure option for working with sensitive data in your `azd` projects. These secrets integrate with various `azd` features, such as hooks and CI/CD pipeline configurations.
 
 ## Prerequisites
 

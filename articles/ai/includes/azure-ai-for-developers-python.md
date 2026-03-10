@@ -40,9 +40,9 @@ Azure OpenAI in Microsoft Foundry Models provides REST API access to the powerfu
 |[Quickstart: Use images in your AI chats](/azure/ai-services/openai/gpt-v-quickstart?tabs=image%2Ccommand-line&pivots=programming-language-python)|A quickstart that shows how to programmatically ask a model to describe the contents of an image.|
 |[Quickstart: Generate images with Azure OpenAI Service](/azure/ai-services/openai/dall-e-quickstart?tabs=dalle3%2Ccommand-line&pivots=programming-language-python)|A quickstart that demonstrates how to programmatically generate images by using Dall-E based on a prompt.|
 
-## Resources for other Foundry tools
+## Resources for other Foundry Tools
 
-In addition to Azure OpenAI Service, there are many other Foundry tools. Developers and organizations can rapidly create intelligent, market-ready, and responsible applications with out-of-the-box and prebuilt customizable APIs and models. Example applications include natural language processing for conversations, search, monitoring, translation, speech, vision, and decision-making.
+In addition to Azure OpenAI Service, there are many other Foundry Tools. Developers and organizations can rapidly create intelligent, market-ready, and responsible applications with out-of-the-box and prebuilt customizable APIs and models. Example applications include natural language processing for conversations, search, monitoring, translation, speech, vision, and decision-making.
 
 ### Samples
 

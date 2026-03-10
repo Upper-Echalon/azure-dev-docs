@@ -57,8 +57,6 @@ items:
         href: ../cpp/index.yml
       - name: Rust on Azure
         href: ../rust/index.yml
-  - name: Passwordless connections for Azure services
-    href: passwordless-overview.md
   - name: Versioning policy for Azure services, SDKs, and CLI tools
     href: azure-service-sdk-tool-versioning.md
 

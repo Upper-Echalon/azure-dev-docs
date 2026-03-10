@@ -54,7 +54,7 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. Open a terminal (**Ctrl + `**). Create and change into a new directory for your project, and then initialize a project from a starter template:
+1. In a terminal, create and change into a new directory for your project, and then initialize a project from a starter template:
 
     ```bash
     mkdir my-todo-app && cd my-todo-app

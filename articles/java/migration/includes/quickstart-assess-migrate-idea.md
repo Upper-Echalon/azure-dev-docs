@@ -40,7 +40,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. In IntelliJ IDEA, open the **mi-sql-public-demo** project folder in the samples repository.
 
-1. On the sidebar, select the **GitHub Copilot app modernization** pane, where you can select **Migrate to Azure** or **Run Assessment** in the **ASSESSMENT** section.
+1. On the sidebar, select the **GitHub Copilot app modernization** pane, where you can select **Start Assessment** or **Run Assessment** in the **ASSESSMENT** section.
 
    :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Migrate to Azure and Run Assessment buttons highlighted.":::
 

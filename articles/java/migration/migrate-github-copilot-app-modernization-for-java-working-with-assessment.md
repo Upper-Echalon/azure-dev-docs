@@ -1,12 +1,12 @@
 ---
-title: "Working with Assessment: Comprehensive Guide to Java Application Assessment with GitHub Copilot Modernization"
+title: "Working with Assessment: Comprehensive guide to application assessment with GitHub Copilot Modernization for Java"
 titleSuffix: Azure
 description: Learn how to effectively work with application assessments in GitHub Copilot modernization, including configuration, interpretation, and report management.
 author: KarlErickson
 ms.author: karler
 ms.reviewer: haozhan
 ms.topic: reference
-ms.date: 02/25/2026
+ms.date: 03/20/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -15,7 +15,7 @@ zone_pivot_group_filename: developer/java/java-zone-pivot-groups.json
 zone_pivot_groups: ide-set-one
 ---
 
-# Working with assessment: Comprehensive guide to Java application assessment with GitHub Copilot modernization
+# Working with assessment: Comprehensive guide to application assessment with GitHub Copilot Modernization for Java
 
 This comprehensive guide covers advanced assessment capabilities in GitHub Copilot modernization to help you maximize the value of your application modernization assessment process.
 

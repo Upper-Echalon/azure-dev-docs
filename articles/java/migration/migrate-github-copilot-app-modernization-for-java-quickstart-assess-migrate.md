@@ -1,12 +1,12 @@
 ---
-title: "Quickstart: Assess and Migrate a Java Project by Using GitHub Copilot Modernization"
+title: "Quickstart: Assess and Migrate a Java Project Using GitHub Copilot modernization"
 titleSuffix: Azure
 description: Shows you how to use GitHub Copilot modernization to assess and migrate a Java project.
 author: KarlErickson
 ms.author: karler
 ms.reviewer: haozhan
 ms.topic: quickstart
-ms.date: 02/25/2026
+ms.date: 03/20/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -15,7 +15,7 @@ zone_pivot_group_filename: developer/java/java-zone-pivot-groups.json
 zone_pivot_groups: ide-set-one
 ---
 
-# Quickstart: assess and migrate a Java project by using GitHub Copilot modernization
+# Quickstart: assess and migrate a Java project using GitHub Copilot modernization
 
 This quickstart shows you how to use GitHub Copilot modernization to assess and migrate a Java project. In this quickstart, you install and configure the extension, then assess and migrate a sample project. For example, you use a predefined task to update an Azure SQL database connection to use Azure Managed Identity instead of a username and password.
 
@@ -41,7 +41,7 @@ To apply a predefined task, use the following steps:
 
 1. In the **Assessment Report**, select **Run Task**. The Copilot chat window opens with Agent Mode selected.
 
-1. The Copilot agent uses various tools for modernization and each tool might require confirmation to proceed. **plan.md** and **progress.md** are generated first, and you can review **plan.md** and make changes there, if necessary.
+1. The Copilot agent uses various tools for GitHub Copilot modernization and each tool might require confirmation to proceed. **plan.md** and **progress.md** are generated first, and you can review **plan.md** and make changes there, if necessary.
 
 1. Manually input **continue** to confirm and start the migration process.
 

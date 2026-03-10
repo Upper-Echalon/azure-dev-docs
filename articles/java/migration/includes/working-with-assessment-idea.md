@@ -1,6 +1,6 @@
 ---
 ms.topic: include
-ms.date: 02/26/2026
+ms.date: 03/20/2026
 title: "Working with Assessment in IntelliJ IDEA: Comprehensive guide to application assessment with GitHub Copilot App Modernization for Java"
 description: Learn how to effectively work with application assessments in GitHub Copilot app modernization in IntelliJ IDEA, including configuration, interpretation, and report management.
 ---

@@ -69,9 +69,6 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
     azd auth login
     ```
 
-    > [!TIP]
-    > Use the `--use-device-code` flag displays a URL and a one-time code in the terminal. Open the URL in any browser, enter the code, and sign in by using your Azure account. This method works even if your terminal doesn't support interactive authentication.
-
 1. Provision Azure resources and deploy the application:
 
     ```azdeveloper

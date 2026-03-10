@@ -84,9 +84,7 @@ The following examples describe some configurations:
     mode: issue-only
   ```
 
-After the tool runs an assessment, the interactive dashboard opens automatically, providing comprehensive analysis results. After you configure multiple Azure service targets, you can easily switch between them to compare migration approaches and view service-specific recommendations.
-
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/list-azure-service-target-for-assessment-report-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment dashboard with Azure service target selection options.":::
+After the tool runs an assessment, the interactive dashboard opens automatically, providing comprehensive analysis results.
 
 ## Interpret the assessment report
 
@@ -148,27 +146,7 @@ Access this part by selecting the **Insights** tab. Displays file details and in
 
 :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report insight list.":::
 
-## Operate assessment report
-
-Effective report management enables collaboration, maintains assessment history, and integrates with existing workflows.
-
-### Import assessment report
-
-Besides running the assessment directly in GitHub Copilot app modernization, you can also import assessment reports. The reports can come from [AppCAT](https://aka.ms/appcat-java) CLI results - such as **report.json**, a GitHub Copilot app modernization exported report, or an app context file from Dr. Migrate.
-
-To import an assessment report to GitHub Copilot app modernization, select **Import** in the assessment section or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **import assessment report**.
-
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/import-assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/import-assessment-report-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report import interface.":::
-
-### Export assessment report
-
-In the assessment dashboard, you can view the issues detected by AppCAT and choose the migration solution to determine the decision. You can export the report and share it with others. If so, other people don't need to run assessment by themselves and can import the report and view the assessment and migration decision directly.
-
-To export an assessment report from GitHub Copilot app modernization, right-click **Assessment Report** and then select **Export** in the assessment section or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and then search for **export assessment report**.
-
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/export-assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/export-assessment-report-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report export options and interface.":::
-
-### Delete assessment report
+## Delete assessment report
 
 If you don't want the report anymore, you can choose to delete it.
 

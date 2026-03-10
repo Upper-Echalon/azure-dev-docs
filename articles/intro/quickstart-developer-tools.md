@@ -56,7 +56,7 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
 
 1. In a terminal, create and change into a new directory for your project, and then initialize a project from a starter template:
 
-    ```bash
+    ```azdeveloper
     mkdir my-todo-app && cd my-todo-app
     azd init --template todo-nodejs-mongo
     ```
@@ -66,7 +66,7 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
 1. Sign in to Azure:
 
     ```bash
-    azd auth login --use-device-code
+    azd auth login
     ```
 
     The `--use-device-code` flag displays a URL and a one-time code in the terminal. Open the URL in any browser, enter the code, and sign in by using your Azure account. This method works even if your terminal doesn't support interactive authentication.
@@ -95,7 +95,7 @@ Now use the Azure Tools extension to explore the resources that Azure Developer 
 1. Verify that you're signed in to Azure by running the following command in the terminal:
 
     ```bash
-    az account show
+    azd auth status
     ```
 
     If the command returns your account details, you're already signed in. If not, sign in through VS Code:

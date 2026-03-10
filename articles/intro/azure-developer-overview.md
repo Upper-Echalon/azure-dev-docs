@@ -22,7 +22,7 @@ If you're new to developing applications for the cloud, start with this seven-ar
 
 Azure is a cloud platform designed to simplify the process of building modern applications. Whether you choose to host your applications entirely in Azure or extend your on-premises applications with Azure services, Azure helps you create applications that are scalable, reliable, and maintainable.
 
-Azure supports the most popular programming languages in use today, including Python, JavaScript, Java, .NET, and Go. With a comprehensive SDK library and extensive support in tools you already use like VS Code, Visual Studio, IntelliJ, and Eclipse, Azure builds on the skills you already have and helps you be productive right away.
+Azure supports the most popular programming languages in use today, including .NET, C++, Go, Java, JavaScript, Python, and Rust. With a comprehensive SDK and extensive support in tools you already use like VS Code, Visual Studio, IntelliJ, and Eclipse, Azure builds on the skills you already have and helps you be productive right away.
 
 Azure also provides a suite of developer tools that streamline how you build, deploy, and manage cloud applications.
 

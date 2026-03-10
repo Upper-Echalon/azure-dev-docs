@@ -32,7 +32,7 @@ Azure services offer the benefit that they're fully managed by Azure.
 
 Use the Azure SDK, the Azure REST API, or the Azure AI Foundry SDK to access Azure services from your application code.
 
-- **Azure SDK** - Available for .NET, Java, JavaScript, Python, and Go.
+- **Azure SDK** - Available for .NET, C++, Go, Java, JavaScript, Python, and Rust.
 - **Azure REST API** - Available for all languages.
 - **Azure AI Foundry SDK** - Available for Python, .NET, Java, and JavaScript for AI-specific workloads.
 

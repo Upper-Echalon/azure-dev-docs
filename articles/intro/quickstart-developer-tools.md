@@ -65,15 +65,16 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
 
 1. Sign in to Azure:
 
-    ```bash
+    ```azdeveloper
     azd auth login
     ```
 
-    The `--use-device-code` flag displays a URL and a one-time code in the terminal. Open the URL in any browser, enter the code, and sign in by using your Azure account. This method works even if your terminal doesn't support interactive authentication.
+    > [!TIP]
+    > Use the `--use-device-code` flag displays a URL and a one-time code in the terminal. Open the URL in any browser, enter the code, and sign in by using your Azure account. This method works even if your terminal doesn't support interactive authentication.
 
 1. Provision Azure resources and deploy the application:
 
-    ```bash
+    ```azdeveloper
     azd up
     ```
 
@@ -94,7 +95,7 @@ Now use the Azure Tools extension to explore the resources that Azure Developer 
 
 1. Verify that you're signed in to Azure by running the following command in the terminal:
 
-    ```bash
+    ```azdeveloper
     azd auth status
     ```
 
@@ -159,7 +160,7 @@ For more information, see [GitHub Copilot for Azure](../github-copilot-azure/int
 
 When you're done exploring, delete the Azure resources to avoid incurring charges:
 
-```bash
+```azdeveloper
 azd down
 ```
 

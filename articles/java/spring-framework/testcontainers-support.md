@@ -75,11 +75,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -120,11 +115,6 @@ The following configuration sets up the required dependencies:
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -172,11 +162,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -220,11 +205,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -237,6 +217,7 @@ The following configuration sets up the required dependencies:
     <dependency>
       <groupId>com.azure.spring</groupId>
       <artifactId>spring-cloud-azure-starter-eventhubs</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 ```
@@ -267,11 +248,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -284,6 +260,7 @@ The following configuration sets up the required dependencies:
     <dependency>
       <groupId>com.azure.spring</groupId>
       <artifactId>spring-cloud-azure-stream-binder-eventhubs</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 ```
@@ -314,11 +291,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -330,7 +302,13 @@ The following configuration sets up the required dependencies:
     </dependency>
     <dependency>
       <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-starter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
       <artifactId>spring-messaging-azure-servicebus</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.microsoft.sqlserver</groupId>
@@ -366,11 +344,6 @@ The following configuration sets up the required dependencies:
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-testcontainers</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-junit-jupiter</artifactId>
       <scope>test</scope>
@@ -383,6 +356,7 @@ The following configuration sets up the required dependencies:
     <dependency>
       <groupId>com.azure.spring</groupId>
       <artifactId>spring-cloud-azure-stream-binder-servicebus</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.microsoft.sqlserver</groupId>
@@ -453,7 +427,7 @@ To use `CosmosDBEmulatorContainer`, we need to prepare a `KeyStore` for TLS/SSL.
 ```java
 @SpringJUnitConfig
 @Testcontainers
-class AzureBlobResourceTestContainerTest {
+class StorageBlobTestcontainersTest {
     @Container
     @ServiceConnection
     private static final GenericContainer<?> AZURITE_CONTAINER = new GenericContainer<>(

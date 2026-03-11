@@ -10,7 +10,7 @@ ms.custom: devx-track-java, devx-track-extended-java
 appliesto:
 - ✅ Version 5.25.0
 - ✅ Version 6.1.0
-- ✅ Version 7.0.0
+- ✅ Version 7.1.0
 ---
 
 # Spring Cloud Azure support for Testcontainers
@@ -24,6 +24,8 @@ The `spring-cloud-azure-testcontainers` library now supports integration testing
 - [Azure Cosmos DB](https://azure.microsoft.com/products/cosmos-db/)
 - [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/)
 - [Azure Queue Storage](https://azure.microsoft.com/products/storage/queues/)
+- [Azure Event Hubs](https://azure.microsoft.com/products/event-hubs/)
+- [Azure Service Bus](https://azure.microsoft.com/products/service-bus/)
 
 ## Service connections
 
@@ -40,6 +42,8 @@ The following table provides information about the connection details factory cl
 | `CosmosContainerConnectionDetailsFactory`       | `AzureCosmosConnectionDetails`       |
 | `StorageBlobContainerConnectionDetailsFactory`  | `AzureStorageBlobConnectionDetails`  |
 | `StorageQueueContainerConnectionDetailsFactory` | `AzureStorageQueueConnectionDetails` |
+| `EventHubsContainerConnectionDetailsFactory`    | `AzureEventHubsConnectionDetails`    |
+| `ServiceBusContainerConnectionDetailsFactory`   | `AzureServiceBusConnectionDetails`   |
 
 ## Set up dependencies
 
@@ -85,6 +89,32 @@ The following configuration sets up the required dependencies:
 <dependency>
   <groupId>com.azure.spring</groupId>
   <artifactId>spring-cloud-azure-starter-storage-queue</artifactId>
+</dependency>
+```
+
+### [Event Hubs](#tab/test-for-event-hubs)
+
+```xml
+<dependency>
+  <groupId>com.azure.spring</groupId>
+  <artifactId>spring-cloud-azure-testcontainers</artifactId>
+</dependency>
+<dependency>
+  <groupId>com.azure.spring</groupId>
+  <artifactId>spring-cloud-azure-starter-eventhubs</artifactId>
+</dependency>
+```
+
+### [Service Bus](#tab/test-for-service-bus)
+
+```xml
+<dependency>
+  <groupId>com.azure.spring</groupId>
+  <artifactId>spring-cloud-azure-testcontainers</artifactId>
+</dependency>
+<dependency>
+  <groupId>com.azure.spring</groupId>
+  <artifactId>spring-cloud-azure-starter-servicebus</artifactId>
 </dependency>
 ```
 
@@ -201,8 +231,166 @@ public class StorageQueueTestcontainersTest {
 
 With `@ServiceConnection`, this configuration enables queue-related beans in the app to communicate with Queue Storage running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureStorageQueueConnectionDetails` bean, which is then used by the Queue Storage autoconfiguration, overriding any connection-related configuration properties.
 
+### [Event Hubs](#tab/test-for-event-hubs)
+
+```java
+@SpringJUnitConfig
+@TestPropertySource(properties = {
+    "spring.cloud.azure.eventhubs.event-hub-name=eh1"
+})
+@Testcontainers
+class EventHubsContainerConnectionDetailsFactoryTests {
+
+    private static final Network NETWORK = Network.newNetwork();
+
+    @Container
+    private static final AzuriteContainer AZURITE = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:latest")
+        .withNetwork(NETWORK)
+        .withNetworkAliases("azurite");
+
+    @Container
+    @ServiceConnection
+    private static final EventHubsEmulatorContainer EVENT_HUBS = new EventHubsEmulatorContainer(
+        "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
+        .acceptLicense()
+        .withCopyFileToContainer(MountableFile.forClasspathResource("eventhubs/Config.json"),
+            "/Eventhubs_Emulator/ConfigFiles/Config.json")
+        .withNetwork(NETWORK)
+        .withAzuriteContainer(AZURITE);
+
+    @Autowired
+    private AzureEventHubsConnectionDetails connectionDetails;
+
+    @Autowired
+    private EventHubProducerClient producerClient;
+
+    @Test
+    void connectionDetailsShouldBeProvidedByFactory() {
+        assertThat(connectionDetails).isNotNull();
+        assertThat(connectionDetails.getConnectionString())
+            .isNotBlank()
+            .startsWith("Endpoint=sb://");
+    }
+
+    @Test
+    void producerClientCanSendMessage() {
+        // Wait for Event Hubs emulator to be fully ready and event hub entity to be available
+        waitAtMost(Duration.ofSeconds(120)).pollInterval(Duration.ofSeconds(2)).untilAsserted(() -> {
+            EventData event = new EventData("Hello World!");
+            this.producerClient.send(Collections.singletonList(event));
+        });
+    }
+
+    @Configuration(proxyBeanMethods = false)
+    @ImportAutoConfiguration(classes = {AzureGlobalPropertiesAutoConfiguration.class,
+        AzureEventHubsAutoConfiguration.class})
+    static class Config {
+    }
+}
+```
+
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+
+### [Service Bus](#tab/test-for-service-bus)
+
+```java
+@SpringJUnitConfig
+@TestPropertySource(properties = { "spring.cloud.azure.servicebus.entity-name=queue.1",
+    "spring.cloud.azure.servicebus.entity-type=queue" })
+@Testcontainers
+@SuppressWarnings("deprecation")
+class ServiceBusContainerConnectionDetailsFactoryTests {
+
+    private static final Network NETWORK = Network.newNetwork();
+
+    private static final MSSQLServerContainer<?> SQLSERVER = new MSSQLServerContainer<>(
+        "mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
+        .acceptLicense()
+        .withNetwork(NETWORK)
+        .withNetworkAliases("sqlserver");
+
+    @Container
+    @ServiceConnection
+    private static final ServiceBusEmulatorContainer SERVICE_BUS = new ServiceBusEmulatorContainer(
+        "mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
+        .acceptLicense()
+        .withCopyFileToContainer(MountableFile.forClasspathResource("servicebus/Config.json"),
+            "/ServiceBus_Emulator/ConfigFiles/Config.json")
+        .withNetwork(NETWORK)
+        .withMsSqlServerContainer(SQLSERVER);
+
+    @Autowired
+    private AzureServiceBusConnectionDetails connectionDetails;
+
+    @Autowired
+    private ServiceBusSenderClient senderClient;
+
+    @Autowired
+    private ServiceBusTemplate serviceBusTemplate;
+
+    @Test
+    void connectionDetailsShouldBeProvidedByFactory() {
+        assertThat(connectionDetails).isNotNull();
+        assertThat(connectionDetails.getConnectionString())
+            .isNotBlank()
+            .startsWith("Endpoint=sb://");
+    }
+
+    @Test
+    void senderClientCanSendMessage() {
+        // Wait for Service Bus emulator to be fully ready and queue entity to be available
+        waitAtMost(Duration.ofSeconds(120)).pollInterval(Duration.ofSeconds(2)).untilAsserted(() -> {
+            this.senderClient.sendMessage(new ServiceBusMessage("Hello World!"));
+        });
+
+        waitAtMost(Duration.ofSeconds(30)).untilAsserted(() -> {
+            assertThat(Config.MESSAGES).contains("Hello World!");
+        });
+    }
+
+    @Test
+    void serviceBusTemplateCanSendMessage() {
+        // Wait for Service Bus emulator to be fully ready and queue entity to be available
+        waitAtMost(Duration.ofSeconds(120)).pollInterval(Duration.ofSeconds(2)).untilAsserted(() -> {
+            this.serviceBusTemplate.sendAsync("queue.1", MessageBuilder.withPayload("Hello from ServiceBusTemplate!").build()).block();
+        });
+
+        waitAtMost(Duration.ofSeconds(30)).untilAsserted(() -> {
+            assertThat(Config.MESSAGES).contains("Hello from ServiceBusTemplate!");
+        });
+    }
+
+
+    @Configuration(proxyBeanMethods = false)
+    @ImportAutoConfiguration(classes = {AzureGlobalPropertiesAutoConfiguration.class,
+        AzureServiceBusAutoConfiguration.class,
+        AzureServiceBusMessagingAutoConfiguration.class})
+    static class Config {
+
+        private static final Set<String> MESSAGES = ConcurrentHashMap.newKeySet();
+
+        @Bean
+        ServiceBusRecordMessageListener processMessage() {
+            return context -> {
+                MESSAGES.add(context.getMessage().getBody().toString());
+            };
+        }
+
+        @Bean
+        ServiceBusErrorHandler errorHandler() {
+            // No-op error handler for tests: acknowledge errors without affecting test execution.
+            return (context) -> {
+            };
+        }
+
+    }
+}
+```
+
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+
 ---
 
 ## Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/testcontainers) repository on GitHub.
+For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/spring-cloud-azure-testcontainers) repository on GitHub.

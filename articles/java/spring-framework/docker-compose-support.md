@@ -16,7 +16,7 @@ appliesto:
 
 This article describes how to integrate Spring Cloud Azure with [Docker Compose](https://docs.docker.com/compose/) to write effective integration tests for your applications.
 
-*Docker Compose* is a tool for defining and running multi-container applications. It is the key to unlocking a streamlined and efficient development and deployment experience.
+*Docker Compose* is a tool for defining and running multi-container applications. It's the key to unlocking a streamlined and efficient development and deployment experience.
 
 The `spring-cloud-azure-docker-compose` library now supports integration testing for the following Azure services:
 

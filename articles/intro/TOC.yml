@@ -8,15 +8,15 @@ items:
     items:
       - name: Overview
         href: azure-developer-overview.md
-      - name: 🟢 Deploy your first app to Azure
+      - name: 👉 Deploy your first app to Azure
         href: azure-developer-overview.md
-      - name: 🟢 AI development on Azure
+      - name: 👉 AI development on Azure
         items:
-          - name: 🟢 Set up agent-assisted development
+          - name: 👉 Set up agent-assisted development
             href: azure-developer-overview.md
-          - name: 🟢 Build AI apps on Azure
+          - name: 👉 Build AI apps on Azure
             href: ../ai/azure-ai-for-developers.md
-          - name: 🟢 Azure AI developer resources
+          - name: 👉 Azure AI developer resources
             href: ../ai/resources-overview.md
       - name: Key Azure services for developers
         href: azure-developer-key-services.md
@@ -30,13 +30,13 @@ items:
         href: azure-developer-key-concepts.md
       - name: Overview of Azure billing
         href: azure-developer-billing.md
-  - name: 🟢 Tools
+  - name: 👉 Tools
     items:
-      - name: 🟢 Get started with Azure development tools
+      - name: 👉 Get started with Azure development tools
         href: quickstart-developer-tools.md
-      - name: 🟢 Azure Developer CLI (azd)
+      - name: 👉 Azure Developer CLI (azd)
         href: ../azure-developer-cli/overview.md
-      - name: 🟢 GitHub Copilot for Azure
+      - name: 👉 GitHub Copilot for Azure
         href: ../github-copilot-azure/introduction.md
   - name: Develop apps that use Foundry Tools
     href: ../ai/index.yml

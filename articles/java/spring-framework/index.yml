@@ -121,3 +121,7 @@ landingContent:
         links:
           - text: Testcontainers
             url: ./testcontainers-support.md
+      - linkListType: get-started
+        links:
+          - text: Docker Compose
+            url: ./docker-compose-support.md

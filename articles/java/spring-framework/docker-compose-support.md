@@ -2,7 +2,7 @@
 title: Spring Cloud Azure support for Docker Compose
 description: Describes how to integrate Spring Cloud Azure with Docker Compose to write effective integration tests for your applications.
 ms.date: 03/11/2026
-author: Rujun Chen
+author: rujche
 ms.author: rujche
 ms.reviewer: karler
 ms.topic: reference
@@ -31,7 +31,7 @@ A service connection is a connection to any remote service. Spring Boot's autoco
 
 When you use Docker Compose, you can automatically create connection details for a service running in a container by adding the `@SpringBootTest` annotation with the `spring.docker.compose.file` property in the test class.
 
-The docker compose is processed by `xxxDockerComposeConnectionDetailsFactory` classes registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a `DockerComposeConnectionDetails`.
+T`xxxDockerComposeConnectionDetailsFactory` classes are registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a `DockerComposeConnectionDetails`.
 
 The following table provides information about the connection details factory classes supported in the `spring-cloud-azure-docker-compose` JAR:
 
@@ -280,6 +280,8 @@ The following configuration sets up the required dependencies:
     </dependency>
   </dependencies>
 ```
+
+---
 
 ## Create test resource files
 
@@ -1115,4 +1117,4 @@ With `spring.docker.compose.file`, this configuration enables related beans in t
 
 ## Samples
 
-For more information, see the [azure-spring-boot-samples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/spring-cloud-azure-docker-compose) repository on GitHub.
+For more information, see the [spring-cloud-azure-docker-compose examples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/spring-cloud-azure-docker-compose).

@@ -12,7 +12,7 @@ items:
         href: azure-developer-overview.md
       - name: 🟢 AI development on Azure
         items:
-          - name: 🟢 Set up agentic assisted development
+          - name: 🟢 Set up agent-assisted development
             href: azure-developer-overview.md
           - name: 🟢 Build AI apps on Azure
             href: ../ai/azure-ai-for-developers.md

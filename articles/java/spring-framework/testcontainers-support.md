@@ -52,70 +52,344 @@ The following configuration sets up the required dependencies:
 ### [Cosmos](#tab/test-for-cosmos)
 
 ```xml
-<dependency>
-  <groupId>org.testcontainers</groupId>
-  <artifactId>azure</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-testcontainers</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-starter-cosmos</artifactId>
-</dependency>
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-starter-cosmos</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 ```
 
 ### [Blob Storage](#tab/test-for-storage-blob)
 
 ```xml
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-testcontainers</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-starter-storage-blob</artifactId>
-</dependency>
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-starter-storage-blob</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
 ```
 
 ### [Queue Storage](#tab/test-for-storage-queue)
 
 ```xml
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-testcontainers</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-starter-storage-queue</artifactId>
-</dependency>
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-starter-storage-queue</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 ```
 
 ### [Event Hubs](#tab/test-for-event-hubs)
 
 ```xml
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-testcontainers</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-starter-eventhubs</artifactId>
-</dependency>
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-starter-eventhubs</artifactId>
+    </dependency>
+  </dependencies>
+```
+
+### [Event Hubs Binder](#tab/test-for-event-hubs-binder)
+
+```xml
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-stream-binder-eventhubs</artifactId>
+    </dependency>
+  </dependencies>
 ```
 
 ### [Service Bus](#tab/test-for-service-bus)
 
 ```xml
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-testcontainers</artifactId>
-</dependency>
-<dependency>
-  <groupId>com.azure.spring</groupId>
-  <artifactId>spring-cloud-azure-starter-servicebus</artifactId>
-</dependency>
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-messaging-azure-servicebus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+```
+
+### [Service Bus Binder](#tab/test-for-service-bus-binder)
+
+```xml
+  <properties>
+    <version.spring.cloud.azure>7.1.0</version.spring.cloud.azure>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>spring-cloud-azure-dependencies</artifactId>
+        <version>${version.spring.cloud.azure}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>spring-cloud-azure-stream-binder-servicebus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 ```
 
 ---
@@ -127,8 +401,9 @@ The following code example demonstrates the basic usage of Testcontainers:
 ### [Cosmos](#tab/test-for-cosmos)
 
 ```java
-@SpringBootTest
+@SpringBootTest(classes = CosmosTestcontainersTest.class)
 @Testcontainers
+@ExtendWith(SpringExtension.class)
 @ImportAutoConfiguration(classes = { AzureGlobalPropertiesAutoConfiguration.class, AzureCosmosAutoConfiguration.class})
 public class CosmosTestcontainersTest {
 
@@ -141,28 +416,33 @@ public class CosmosTestcontainersTest {
     @Container
     @ServiceConnection
     static CosmosDBEmulatorContainer cosmos = new CosmosDBEmulatorContainer(
-    DockerImageName.parse("mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest"));
+        DockerImageName.parse("mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest"))
+                .waitingFor(Wait.forHttps("/_explorer/emulator.pem").forStatusCode(200).allowInsecure())
+                .withStartupTimeout(Duration.ofMinutes(3));
 
     @BeforeAll
-    static void setup() {
-        cosmos.start();
+    public static void setup() throws IOException, CertificateException, KeyStoreException, NoSuchAlgorithmException {
         Path keyStoreFile = new File(tempFolder, "azure-cosmos-emulator.keystore").toPath();
         KeyStore keyStore = cosmos.buildNewKeyStore();
-        try {
-            keyStore.store(Files.newOutputStream(keyStoreFile.toFile().toPath()), cosmos.getEmulatorKey().toCharArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        try (var out = Files.newOutputStream(keyStoreFile.toFile().toPath())) {
+            keyStore.store(out, cosmos.getEmulatorKey().toCharArray());
         }
-    
+
         System.setProperty("javax.net.ssl.trustStore", keyStoreFile.toString());
         System.setProperty("javax.net.ssl.trustStorePassword", cosmos.getEmulatorKey());
         System.setProperty("javax.net.ssl.trustStoreType", "PKCS12");
     }
 
     @Test
-    void test() {
-        // ...
+    public void test() {
+        CosmosDatabaseResponse databaseResponse = client.createDatabaseIfNotExists("Azure");
+        assertThat(databaseResponse.getStatusCode()).isEqualTo(201);
+        CosmosContainerResponse containerResponse = client
+            .getDatabase("Azure")
+            .createContainerIfNotExists("ServiceContainer", "/name");
+        assertThat(containerResponse.getStatusCode()).isEqualTo(201);
     }
+
 }
 ```
 
@@ -171,28 +451,32 @@ To use `CosmosDBEmulatorContainer`, we need to prepare a `KeyStore` for TLS/SSL.
 ### [Blob Storage](#tab/test-for-storage-blob)
 
 ```java
-@SpringBootTest
+@SpringJUnitConfig
 @Testcontainers
-@ImportAutoConfiguration(classes = { AzureGlobalPropertiesAutoConfiguration.class, AzureStorageBlobAutoConfiguration.class, AzureStorageBlobResourceAutoConfiguration.class})
-public class StorageBlobTestcontainersTest {
-
+class AzureBlobResourceTestContainerTest {
     @Container
     @ServiceConnection
     private static final GenericContainer<?> AZURITE_CONTAINER = new GenericContainer<>(
-        "mcr.microsoft.com/azure-storage/azurite:latest")
-        .withExposedPorts(10000);
+            "mcr.microsoft.com/azure-storage/azurite:latest")
+            .withExposedPorts(10000)
+            .withCommand("azurite --skipApiVersionCheck && azurite -l /data --blobHost 0.0.0.0 --queueHost 0.0.0.0 --tableHost 0.0.0.0");
 
     @Value("azure-blob://testcontainers/message.txt")
     private Resource blobFile;
 
-    @BeforeAll
-    static void setup() {
-        AZURITE_CONTAINER.start();
+    @Test
+    void test() throws IOException {
+        String originalContent = "Hello World!";
+        try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
+            os.write(originalContent.getBytes());
+        }
+        String resultContent = StreamUtils.copyToString(this.blobFile.getInputStream(), Charset.defaultCharset());
+        assertThat(resultContent).isEqualTo(originalContent);
     }
 
-    @Test
-    void test() {
-        // ...
+    @Configuration(proxyBeanMethods = false)
+    @ImportAutoConfiguration(classes = {AzureGlobalPropertiesAutoConfiguration.class, AzureStorageBlobAutoConfiguration.class, AzureStorageBlobResourceAutoConfiguration.class})
+    static class Config {
     }
 }
 ```
@@ -202,9 +486,10 @@ With `@ServiceConnection`, this configuration enables blob-related beans in the 
 ### [Queue Storage](#tab/test-for-storage-queue)
 
 ```java
-@SpringBootTest
+@SpringBootTest(classes = StorageQueueTestcontainersTest.class)
 @Testcontainers
 @TestPropertySource(properties = "spring.cloud.azure.storage.queue.queue-name=devstoreaccount1/tc-queue")
+@ExtendWith(SpringExtension.class)
 @ImportAutoConfiguration(classes = { AzureGlobalPropertiesAutoConfiguration.class, AzureStorageQueueAutoConfiguration.class})
 public class StorageQueueTestcontainersTest {
 
@@ -212,20 +497,25 @@ public class StorageQueueTestcontainersTest {
     @ServiceConnection
     private static final GenericContainer<?> AZURITE_CONTAINER = new GenericContainer<>(
         "mcr.microsoft.com/azure-storage/azurite:latest")
-        .withExposedPorts(10001);
+        .withExposedPorts(10001)
+        .withCommand("azurite-queue", "--queueHost", "0.0.0.0", "--skipApiVersionCheck");
 
     @Autowired
     private QueueClient queueClient;
 
     @BeforeAll
-    static void setup() {
+    public static void setup() {
         AZURITE_CONTAINER.start();
     }
 
     @Test
-    void test() {
-        // ...
+    public void test() {
+        String message = "Hello World!";
+        this.queueClient.create();
+        this.queueClient.sendMessage(message);
+        assertThat(this.queueClient.receiveMessage().getBody().toString()).isEqualTo(message);
     }
+
 }
 ```
 
@@ -235,28 +525,27 @@ With `@ServiceConnection`, this configuration enables queue-related beans in the
 
 ```java
 @SpringJUnitConfig
-@TestPropertySource(properties = {
-    "spring.cloud.azure.eventhubs.event-hub-name=eh1"
-})
+@TestPropertySource(properties = { "spring.cloud.azure.eventhubs.event-hub-name=eh1",
+        "spring.cloud.azure.eventhubs.producer.event-hub-name=eh1" })
 @Testcontainers
-class EventHubsContainerConnectionDetailsFactoryTests {
+class EventHubsTestContainerTest {
 
     private static final Network NETWORK = Network.newNetwork();
 
-    @Container
-    private static final AzuriteContainer AZURITE = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:latest")
-        .withNetwork(NETWORK)
-        .withNetworkAliases("azurite");
+    private static final AzuriteContainer AZURITE = new AzuriteContainer(
+            "mcr.microsoft.com/azure-storage/azurite:latest")
+            .withNetwork(NETWORK)
+            .withNetworkAliases("azurite");
 
     @Container
     @ServiceConnection
     private static final EventHubsEmulatorContainer EVENT_HUBS = new EventHubsEmulatorContainer(
-        "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
-        .acceptLicense()
-        .withCopyFileToContainer(MountableFile.forClasspathResource("eventhubs/Config.json"),
-            "/Eventhubs_Emulator/ConfigFiles/Config.json")
-        .withNetwork(NETWORK)
-        .withAzuriteContainer(AZURITE);
+            "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
+            .acceptLicense()
+            .withCopyFileToContainer(MountableFile.forClasspathResource("Config.json"),
+                    "/Eventhubs_Emulator/ConfigFiles/Config.json")
+            .withNetwork(NETWORK)
+            .withAzuriteContainer(AZURITE);
 
     @Autowired
     private AzureEventHubsConnectionDetails connectionDetails;
@@ -268,8 +557,8 @@ class EventHubsContainerConnectionDetailsFactoryTests {
     void connectionDetailsShouldBeProvidedByFactory() {
         assertThat(connectionDetails).isNotNull();
         assertThat(connectionDetails.getConnectionString())
-            .isNotBlank()
-            .startsWith("Endpoint=sb://");
+                .isNotBlank()
+                .startsWith("Endpoint=sb://");
     }
 
     @Test
@@ -283,8 +572,115 @@ class EventHubsContainerConnectionDetailsFactoryTests {
 
     @Configuration(proxyBeanMethods = false)
     @ImportAutoConfiguration(classes = {AzureGlobalPropertiesAutoConfiguration.class,
-        AzureEventHubsAutoConfiguration.class})
+            AzureEventHubsAutoConfiguration.class})
     static class Config {
+
+    }
+}
+```
+
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+
+### [Event Hubs Binder](#tab/test-for-event-hubs-binder)
+
+```java
+
+@SpringJUnitConfig
+@TestPropertySource(properties = {
+        "spring.cloud.function.definition=consume;supply",
+        "spring.cloud.stream.bindings.consume-in-0.destination=eh1",
+        "spring.cloud.stream.bindings.consume-in-0.group=$Default",
+        "spring.cloud.stream.bindings.supply-out-0.destination=eh1",
+        "spring.cloud.stream.eventhubs.bindings.consume-in-0.consumer.checkpoint.mode=MANUAL",
+        "spring.cloud.stream.poller.fixed-delay=1000",
+        "spring.cloud.stream.poller.initial-delay=0"})
+@Testcontainers
+class EventHubsTestContainerTest {
+
+    private static final Network NETWORK = Network.newNetwork();
+
+    private static final AzuriteContainer AZURITE = new AzuriteContainer(
+            "mcr.microsoft.com/azure-storage/azurite:latest")
+            .withCommand("azurite", "--blobHost", "0.0.0.0", "--queueHost", "0.0.0.0", "--tableHost", "0.0.0.0",
+                    "--skipApiVersionCheck")
+            .withNetwork(NETWORK)
+            .withNetworkAliases("azurite");
+
+    @Container
+    @ServiceConnection
+    private static final EventHubsEmulatorContainer EVENT_HUBS = new EventHubsEmulatorContainer(
+            "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest")
+            .acceptLicense()
+            .withCopyFileToContainer(MountableFile.forClasspathResource("Config.json"),
+                    "/Eventhubs_Emulator/ConfigFiles/Config.json")
+            .withNetwork(NETWORK)
+            .withAzuriteContainer(AZURITE);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EventHubsTestContainerTest.class);
+    private static final Set<String> RECEIVED_MESSAGES = ConcurrentHashMap.newKeySet();
+    private static final AtomicInteger MESSAGE_SEQUENCE = new AtomicInteger(0);
+
+    @Test
+    void supplierAndConsumerShouldWorkThroughEventHubs() {
+        waitAtMost(Duration.ofSeconds(120))
+                .pollDelay(Duration.ofSeconds(2))
+                .pollInterval(Duration.ofSeconds(2))
+                .untilAsserted(() -> {
+                    assertThat(RECEIVED_MESSAGES).isNotEmpty();
+                    LOGGER.info("✓ Test passed - Consumer received {} message(s)", RECEIVED_MESSAGES.size());
+                });
+    }
+
+    @Configuration(proxyBeanMethods = false)
+    @EnableAutoConfiguration
+    @ImportAutoConfiguration(classes = {
+            AzureGlobalPropertiesAutoConfiguration.class,
+            AzureEventHubsAutoConfiguration.class,
+            AzureEventHubsMessagingAutoConfiguration.class})
+    static class Config {
+
+        private static final String CHECKPOINT_CONTAINER_NAME = "eventhubs-checkpoint";
+
+        @Bean
+        public BlobCheckpointStore blobCheckpointStore() {
+            BlobServiceAsyncClient blobServiceAsyncClient = new BlobServiceClientBuilder()
+                    .connectionString(AZURITE.getConnectionString())
+                    .serviceVersion(BlobServiceVersion.V2025_01_05)
+                    .buildAsyncClient();
+            BlobContainerAsyncClient containerAsyncClient = blobServiceAsyncClient
+                    .getBlobContainerAsyncClient(CHECKPOINT_CONTAINER_NAME);
+            if (Boolean.FALSE.equals(containerAsyncClient.exists().block(Duration.ofSeconds(3)))) {
+                containerAsyncClient.create().block(Duration.ofSeconds(3));
+            }
+            return new BlobCheckpointStore(containerAsyncClient);
+        }
+
+        @Bean
+        public Supplier<Message<String>> supply() {
+            return () -> {
+                int sequence = MESSAGE_SEQUENCE.getAndIncrement();
+                String payload = "Hello world, " + sequence;
+                LOGGER.info("[Supplier] Invoked - message sequence: {}", sequence);
+                return MessageBuilder.withPayload(payload).build();
+            };
+        }
+
+        @Bean
+        public Consumer<Message<String>> consume() {
+            return message -> {
+                String payload = message.getPayload();
+                RECEIVED_MESSAGES.add(payload);
+                LOGGER.info("[Consumer] Received message: {}", payload);
+
+                Checkpointer checkpointer = (Checkpointer) message.getHeaders().get(CHECKPOINTER);
+                if (checkpointer != null) {
+                    checkpointer.success()
+                            .doOnSuccess(s -> LOGGER.info("[Consumer] Message checkpointed"))
+                            .doOnError(e -> LOGGER.error("[Consumer] Checkpoint failed", e))
+                            .block();
+                }
+            };
+        }
     }
 }
 ```
@@ -296,28 +692,27 @@ With `@ServiceConnection`, this configuration enables related beans in the app t
 ```java
 @SpringJUnitConfig
 @TestPropertySource(properties = { "spring.cloud.azure.servicebus.entity-name=queue.1",
-    "spring.cloud.azure.servicebus.entity-type=queue" })
+        "spring.cloud.azure.servicebus.entity-type=queue" })
 @Testcontainers
-@SuppressWarnings("deprecation")
-class ServiceBusContainerConnectionDetailsFactoryTests {
+class ServiceBusTestContainerTest {
 
     private static final Network NETWORK = Network.newNetwork();
 
     private static final MSSQLServerContainer<?> SQLSERVER = new MSSQLServerContainer<>(
-        "mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
-        .acceptLicense()
-        .withNetwork(NETWORK)
-        .withNetworkAliases("sqlserver");
+            "mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
+            .acceptLicense()
+            .withNetwork(NETWORK)
+            .withNetworkAliases("sqlserver");
 
     @Container
     @ServiceConnection
     private static final ServiceBusEmulatorContainer SERVICE_BUS = new ServiceBusEmulatorContainer(
-        "mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
-        .acceptLicense()
-        .withCopyFileToContainer(MountableFile.forClasspathResource("servicebus/Config.json"),
-            "/ServiceBus_Emulator/ConfigFiles/Config.json")
-        .withNetwork(NETWORK)
-        .withMsSqlServerContainer(SQLSERVER);
+            "mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
+            .acceptLicense()
+            .withCopyFileToContainer(MountableFile.forClasspathResource("Config.json"),
+                    "/ServiceBus_Emulator/ConfigFiles/Config.json")
+            .withNetwork(NETWORK)
+            .withMsSqlServerContainer(SQLSERVER);
 
     @Autowired
     private AzureServiceBusConnectionDetails connectionDetails;
@@ -332,8 +727,8 @@ class ServiceBusContainerConnectionDetailsFactoryTests {
     void connectionDetailsShouldBeProvidedByFactory() {
         assertThat(connectionDetails).isNotNull();
         assertThat(connectionDetails.getConnectionString())
-            .isNotBlank()
-            .startsWith("Endpoint=sb://");
+                .isNotBlank()
+                .startsWith("Endpoint=sb://");
     }
 
     @Test
@@ -352,7 +747,8 @@ class ServiceBusContainerConnectionDetailsFactoryTests {
     void serviceBusTemplateCanSendMessage() {
         // Wait for Service Bus emulator to be fully ready and queue entity to be available
         waitAtMost(Duration.ofSeconds(120)).pollInterval(Duration.ofSeconds(2)).untilAsserted(() -> {
-            this.serviceBusTemplate.sendAsync("queue.1", MessageBuilder.withPayload("Hello from ServiceBusTemplate!").build()).block();
+            this.serviceBusTemplate.sendAsync("queue.1",
+                    MessageBuilder.withPayload("Hello from ServiceBusTemplate!").build()).block(Duration.ofSeconds(10));
         });
 
         waitAtMost(Duration.ofSeconds(30)).untilAsserted(() -> {
@@ -363,8 +759,8 @@ class ServiceBusContainerConnectionDetailsFactoryTests {
 
     @Configuration(proxyBeanMethods = false)
     @ImportAutoConfiguration(classes = {AzureGlobalPropertiesAutoConfiguration.class,
-        AzureServiceBusAutoConfiguration.class,
-        AzureServiceBusMessagingAutoConfiguration.class})
+            AzureServiceBusAutoConfiguration.class,
+            AzureServiceBusMessagingAutoConfiguration.class})
     static class Config {
 
         private static final Set<String> MESSAGES = ConcurrentHashMap.newKeySet();
@@ -383,6 +779,94 @@ class ServiceBusContainerConnectionDetailsFactoryTests {
             };
         }
 
+    }
+}
+```
+
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+
+### [Service Bus Binder](#tab/test-for-service-bus-binder)
+
+```java
+
+@SpringJUnitConfig
+@TestPropertySource(properties = {
+        "spring.cloud.function.definition=consume;supply",
+        "spring.cloud.stream.bindings.consume-in-0.destination=queue.1",
+        "spring.cloud.stream.bindings.supply-out-0.destination=queue.1",
+        "spring.cloud.stream.servicebus.bindings.consume-in-0.consumer.auto-complete=false",
+        "spring.cloud.stream.servicebus.bindings.supply-out-0.producer.entity-type=queue",
+        "spring.cloud.stream.poller.fixed-delay=1000",
+        "spring.cloud.stream.poller.initial-delay=0"})
+@Testcontainers
+class ServiceBusTestContainerTest {
+
+    private static final Network NETWORK = Network.newNetwork();
+
+    private static final MSSQLServerContainer<?> SQLSERVER = new MSSQLServerContainer<>(
+            "mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04")
+            .acceptLicense()
+            .withNetwork(NETWORK)
+            .withNetworkAliases("sqlserver");
+
+    @Container
+    @ServiceConnection
+    private static final ServiceBusEmulatorContainer SERVICE_BUS = new ServiceBusEmulatorContainer(
+            "mcr.microsoft.com/azure-messaging/servicebus-emulator:latest")
+            .acceptLicense()
+            .withCopyFileToContainer(MountableFile.forClasspathResource("Config.json"),
+                    "/ServiceBus_Emulator/ConfigFiles/Config.json")
+            .withNetwork(NETWORK)
+            .withMsSqlServerContainer(SQLSERVER);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceBusTestContainerTest.class);
+    private static final Set<String> RECEIVED_MESSAGES = ConcurrentHashMap.newKeySet();
+    private static final AtomicInteger MESSAGE_SEQUENCE = new AtomicInteger(0);
+
+    @Test
+    void supplierAndConsumerShouldWorkThroughServiceBusQueue() {
+        waitAtMost(Duration.ofSeconds(60))
+                .pollDelay(Duration.ofSeconds(2))
+                .untilAsserted(() -> {
+                    assertThat(RECEIVED_MESSAGES).isNotEmpty();
+                    LOGGER.info("✓ Test passed - Consumer received {} message(s)", RECEIVED_MESSAGES.size());
+                });
+    }
+
+    @Configuration(proxyBeanMethods = false)
+    @EnableAutoConfiguration
+    @ImportAutoConfiguration(classes = {
+            AzureGlobalPropertiesAutoConfiguration.class,
+            AzureServiceBusAutoConfiguration.class,
+            AzureServiceBusMessagingAutoConfiguration.class})
+    static class Config {
+
+        @Bean
+        public Supplier<Message<String>> supply() {
+            return () -> {
+                int sequence = MESSAGE_SEQUENCE.getAndIncrement();
+                String payload = "Hello world, " + sequence;
+                LOGGER.info("[Supplier] Invoked - message sequence: {}", sequence);
+                return MessageBuilder.withPayload(payload).build();
+            };
+        }
+
+        @Bean
+        public Consumer<Message<String>> consume() {
+            return message -> {
+                String payload = message.getPayload();
+                RECEIVED_MESSAGES.add(payload);
+                LOGGER.info("[Consumer] Received message: {}", payload);
+
+                Checkpointer checkpointer = (Checkpointer) message.getHeaders().get(CHECKPOINTER);
+                if (checkpointer != null) {
+                    checkpointer.success()
+                            .doOnSuccess(s -> LOGGER.info("[Consumer] Message checkpointed"))
+                            .doOnError(e -> LOGGER.error("[Consumer] Checkpoint failed", e))
+                            .block();
+                }
+            };
+        }
     }
 }
 ```

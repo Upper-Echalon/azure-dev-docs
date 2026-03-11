@@ -32,7 +32,7 @@ A service connection is a connection to any remote service. Spring Boot's autoco
 
 When you use Testcontainers, you can automatically create connection details for a service running in a container by annotating the container field in the test class.
 
-The `@ServiceConnection` annotation is processed by `xxxContainerConnectionDetailsFactory` classes registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a specific `Container` subclass or the Docker image name.
+`xxxContainerConnectionDetailsFactory` classes are registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a specific `Container` subclass or the Docker image name.
 
 The following table provides information about the connection details factory classes supported in the `spring-cloud-azure-testcontainers` JAR:
 

@@ -744,7 +744,7 @@ Config.json
 
 ## Create Java codes
 
-The following code example demonstrates the basic usage of Testcontainers:
+The following code example demonstrates the basic usage of docker compose:
 
 ### [Blob Storage](#tab/test-for-storage-blob)
 

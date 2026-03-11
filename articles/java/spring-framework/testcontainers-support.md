@@ -420,7 +420,7 @@ public class CosmosTestcontainersTest {
 }
 ```
 
-To use `CosmosDBEmulatorContainer`, we need to prepare a `KeyStore` for TLS/SSL. For more information, see [Cosmos DB Azure Module](https://java.testcontainers.org/modules/azure/#cosmosdb) in the Testcontainers documentation. With `@ServiceConnection`, this configuration enables Cosmos DB-related beans in the app to communicate with Cosmos DB running inside the Testcontainers-managed Docker container. This action is done by automatically defining a `AzureCosmosConnectionDetails` bean, which is then used by the Cosmos DB autoconfiguration, overriding any connection-related configuration properties.
+To use `CosmosDBEmulatorContainer`, you need to prepare a `KeyStore` for TLS/SSL. For more information, see [Cosmos DB Azure Module](https://java.testcontainers.org/modules/azure/#cosmosdb) in the Testcontainers documentation. With `@ServiceConnection`, this configuration enables Cosmos DB-related beans in the app to communicate with Cosmos DB running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureCosmosConnectionDetails` bean, which the Cosmos DB autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Blob Storage](#tab/test-for-storage-blob)
 
@@ -455,7 +455,7 @@ class StorageBlobTestcontainersTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables blob-related beans in the app to communicate with Blob Storage running inside the Testcontainers-managed Docker container. This action is done by automatically defining a `AzureStorageBlobConnectionDetails` bean, which is then used by the Blob Storage autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables blob-related beans in the app to communicate with Blob Storage running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureStorageBlobConnectionDetails` bean, which the Blob Storage autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Queue Storage](#tab/test-for-storage-queue)
 
@@ -493,7 +493,7 @@ public class StorageQueueTestcontainersTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables queue-related beans in the app to communicate with Queue Storage running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureStorageQueueConnectionDetails` bean, which is then used by the Queue Storage autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables queue-related beans in the app to communicate with Queue Storage running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureStorageQueueConnectionDetails` bean, which the Queue Storage autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Event Hubs](#tab/test-for-event-hubs)
 
@@ -553,7 +553,7 @@ class EventHubsTestContainerTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureEventHubsConnectionDetails` bean, which the Event Hubs autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Event Hubs Binder](#tab/test-for-event-hubs-binder)
 
@@ -659,7 +659,7 @@ class EventHubsTestContainerTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureEventHubsConnectionDetails` bean, which the Event Hubs autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Service Bus](#tab/test-for-service-bus)
 
@@ -757,7 +757,7 @@ class ServiceBusTestContainerTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureServiceBusConnectionDetails` bean, which the Service Bus autoconfiguration then uses to override any connection-related configuration properties.
 
 ### [Service Bus Binder](#tab/test-for-service-bus-binder)
 
@@ -845,7 +845,7 @@ class ServiceBusTestContainerTest {
 }
 ```
 
-With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+With `@ServiceConnection`, this configuration enables related beans in the app to communicate with Service Bus running inside the Testcontainers-managed Docker container. This setup automatically defines an `AzureServiceBusConnectionDetails` bean, which the Service Bus autoconfiguration then uses to override any connection-related configuration properties.
 
 ---
 

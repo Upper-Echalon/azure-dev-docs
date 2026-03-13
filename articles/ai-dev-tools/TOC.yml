@@ -2,12 +2,6 @@ items:
 - name: AI dev tools for Azure
   href: index.yml
   items:
-    - name: Azure MCP Server
-      href: ../azure-mcp-server/TOC.yml
-    - name: GitHub Copilot MCP Server
-      items:
-        - name: Overview
-          href: github-copilot-mcp-server/overview.md
     - name: Azure Skills
       items:
         - name: Overview

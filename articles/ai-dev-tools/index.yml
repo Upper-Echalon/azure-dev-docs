@@ -10,28 +10,6 @@ metadata:
   ms.date: 07/11/2025
 
 landingContent:
-  - title: Azure MCP Server
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is Azure MCP Server?
-            url: ../azure-mcp-server/overview.md
-      - linkListType: get-started
-        links:
-          - text: Get started with Azure MCP Server
-            url: ../azure-mcp-server/get-started.md
-      - linkListType: reference
-        links:
-          - text: Tool reference
-            url: ../azure-mcp-server/tools/index.md
-
-  - title: GitHub Copilot MCP Server
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Overview (coming soon)
-            url: github-copilot-mcp-server/overview.md
-
   - title: Azure Skills
     linkLists:
       - linkListType: overview

@@ -1,0 +1,40 @@
+### YamlMime:Landing
+
+title: AI dev tools for Azure documentation
+summary: Explore AI-powered developer tools for Azure including the Azure MCP Server, GitHub Copilot MCP servers, and Azure Skills. Build intelligent workflows that connect AI agents to Azure services.
+
+metadata:
+  title: AI dev tools for Azure documentation
+  description: Learn about AI-powered developer tools for Azure, including MCP servers, GitHub Copilot integrations, and Azure Skills for building agentic workflows.
+  ms.topic: landing-page
+  ms.date: 07/11/2025
+
+landingContent:
+  - title: Azure MCP Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure MCP Server?
+            url: ../azure-mcp-server/overview.md
+      - linkListType: get-started
+        links:
+          - text: Get started with Azure MCP Server
+            url: ../azure-mcp-server/get-started.md
+      - linkListType: reference
+        links:
+          - text: Tool reference
+            url: ../azure-mcp-server/tools/index.md
+
+  - title: GitHub Copilot MCP Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview (coming soon)
+            url: github-copilot-mcp-server/overview.md
+
+  - title: Azure Skills
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview (coming soon)
+            url: azure-skills/overview.md

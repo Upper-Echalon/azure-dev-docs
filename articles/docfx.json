@@ -128,9 +128,11 @@
         "python/ai/**/*.md": "ms-johnalex",
         "python/ai/**/*.yml": "ms-johnalex",
         "azure-mcp-server/**/*.md": "diberry",
-        "azure-mcp-server/**/*.yml": "diberry"
+        "azure-mcp-server/**/*.yml": "diberry",
+        "ai-dev-tools/**/*.md": "diberry",
+        "ai-dev-tools/**/*.yml": "diberry"
       },
-      "manager": {
+      "manager":{
         "**/*.md": "mcleans",
         "**/*.yml": "mcleans",
         "terraform/**/*.md": "jasongroce",
@@ -176,9 +178,11 @@
         "python/ai/**/*.md": "johalexander",
         "python/ai/**/*.yml": "johalexander",
         "azure-mcp-server/**/*.md": "diberry",
-        "azure-mcp-server/**/*.yml": "diberry"
+        "azure-mcp-server/**/*.yml": "diberry",
+        "ai-dev-tools/**/*.md": "diberry",
+        "ai-dev-tools/**/*.yml": "diberry"
       },
-      "ms.devlang": {
+      "ms.devlang":{
         "cpp/**/*.md": "cpp",
         "cpp/**/*.yml": "cpp",
         "java/**/*.md": "java",
@@ -227,7 +231,9 @@
         "typespec/**/*.md": "typespec",
         "typespec/**/*.yml": "typespec",
         "rust/**/*.md": "azure-rust",
-        "rust/**/*.yml": "azure-rust"
+        "rust/**/*.yml": "azure-rust",
+        "ai-dev-tools/**/*.md": "azure-ai-dev-tools",
+        "ai-dev-tools/**/*.yml": "azure-ai-dev-tools"
       },
       "ms.subservice": {
         "ai/**/*.md": "intelligent-apps",
@@ -287,7 +293,9 @@
         "rust/**/*.yml": "Rust on Azure",
         "rust/**/*.yml": "Rust on Azure",
         "azure-mcp-server/**/*.md": "Azure MCP Server",
-        "azure-mcp-server/**/*.yml": "Azure MCP Server"
+        "azure-mcp-server/**/*.yml": "Azure MCP Server",
+        "ai-dev-tools/**/*.md": "AI Dev Tools",
+        "ai-dev-tools/**/*.yml": "AI Dev Tools"
       },
       "featureFlags": {
         "javascript/**/*-feedback.yml": [
@@ -312,7 +320,9 @@
         "**/javascript/ai/**/*.md": "ce-skilling-ai-copilot",
         "**/javascript/ai/**/*.yml": "ce-skilling-ai-copilot",
         "**/github-copilot-app-modernization/**/*.md": "ce-skilling-ai-copilot",
-        "**/github-copilot-app-modernization/**/*.yml": "ce-skilling-ai-copilot"
+        "**/github-copilot-app-modernization/**/*.yml": "ce-skilling-ai-copilot",
+        "**/ai-dev-tools/**/*.md": "ce-skilling-ai-copilot",
+        "**/ai-dev-tools/**/*.yml": "ce-skilling-ai-copilot"
       },
       "ms.update-cycle": {
         "**/ai/**/*.md": "180-days",
@@ -330,7 +340,9 @@
         "**/javascript/ai/**/*.md": "180-days",
         "**/javascript/ai/**/*.yml": "180-days",
         "**/github-copilot-app-modernization/**/*.md": "180-days",
-        "**/github-copilot-app-modernization/**/*.yml": "180-days"
+        "**/github-copilot-app-modernization/**/*.yml": "180-days",
+        "**/ai-dev-tools/**/*.md": "180-days",
+        "**/ai-dev-tools/**/*.yml": "180-days"
       },
       "ROBOTS": {
         "ux-beta/**/*.md": "NOINDEX"

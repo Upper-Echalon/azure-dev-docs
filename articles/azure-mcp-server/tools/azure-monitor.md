@@ -21,7 +21,7 @@ The Azure MCP Server allows you to manage Azure Monitor resources using natural 
 
 [Azure Monitor](/azure/azure-monitor/overview) helps you maximize the availability and performance of your applications and services. It provides a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. 
 
-Workbooks provide a flexible canvas for data analysis and the creation of rich visual reports within the Azure portal. They allow you to tap into multiple data sources from across Azure and combine them into unified interactive experiences. Workbooks let you combine multiple kinds of visualizations and analyses, making them great for freeform exploration. For more information, see [Azure Monitor workbooks documentation](/azure/azure-monitor/visualize/workbooks-overview).
+Azure Monitor workbooks provide a flexible canvas for data analysis and the creation of rich visual reports within the Azure portal. They allow you to tap into multiple data sources from across Azure and combine them into unified interactive experiences. Workbooks let you combine multiple kinds of visualizations and analyses, making them great for freeform exploration. For more information, see [Azure Monitor workbooks documentation](/azure/azure-monitor/visualize/workbooks-overview).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
@@ -343,7 +343,7 @@ Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli workbooks list -->
 
-Search Azure Workbooks using Resource Graph for a fast metadata query.
+Search Azure Monitor workbooks using Resource Graph for a fast metadata query.
 
 **Use for**: Discovering, filtering, and counting workbooks across scopes.  
 **Returns**: Workbook metadata, including `id`, `name`, `location`, `category`, and timestamps.  
@@ -384,7 +384,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 Retrieve full workbook details via the Azure Resource Manager (ARM) API, including `serializedData` content.
 
 **USE FOR:** Obtaining the complete workbook definition, including visualization JSON.  
-**RETURNS:** Full workbook properties, `serializedData`, tags, and etag.
+**RETURNS:** Full workbook properties, `serializedData`, tags, and ETag.
 
 **BATCH:** Accepts multiple **workbook-ids** values. Partial failures are reported per workbook.  
 **PERFORMANCE:** Use `list` first for discovery, then `show` for specific workbooks.

@@ -1,7 +1,7 @@
 ---
 title: Overview of the Azure SDK for Go management libraries 
 description: In this article, you learn the basic tasks of working with the Azure SDK for Go management libraries.
-ms.date: 09/08/2025
+ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
 ms.devlang: golang
@@ -9,161 +9,92 @@ ms.devlang: golang
 
 # Overview of the Azure SDK for Go management libraries
 
-As explained in the article [What is the Azure SDK for Go?](overview.md), the Azure SDK for Go has a set of management and client libraries.
-The management libraries share features like Azure Identity support, HTTP pipeline, and error handling.
-For the full list of management libraries, see [Azure SDK for Go module](https://azure.github.io/azure-sdk/releases/latest/mgmt/go.html).
+As explained in [What is the Azure SDK for Go?](overview.md), the Azure SDK for Go includes both management libraries and data plane client libraries. This article stays at the overview level so you can understand what the management libraries are, how they fit into Azure workflows, and where to go next for Go-specific patterns.
 
-In this article, you learn the basic steps to use the management libraries to interact with Azure resources.
+Management libraries are the packages you use to provision, configure, and govern Azure resources. In Azure documentation, these operations are also called **control plane** operations. For the full list of management libraries, see the [Azure SDK for Go management modules](https://azure.github.io/azure-sdk/releases/latest/mgmt/go.html).
 
-## Installing Go packages
+## What management libraries are used for
 
-In most projects, you install the Go packages for versioning and dependency management.
+Use the management libraries when your Go code needs to work with Azure resources themselves rather than the data stored inside them. Typical tasks include:
 
-To install a Go package, run the `go get` command.
+- Creating or updating resource groups, virtual networks, or virtual machines.
+- Configuring security settings, identities, access policies, and diagnostics.
+- Listing, tagging, and deleting Azure resources across a subscription.
+- Automating deployment, cleanup, compliance, and platform operations.
 
-For example, to install the `armcompute` package, run the following command:
+Most Go management packages live under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. They share common SDK building blocks such as Azure Identity credentials, the Azure Core HTTP pipeline, structured errors, and `Begin*` methods for long-running operations.
+
+## Control plane and data plane
+
+Azure SDK documentation often uses two related terms:
+
+- **Control plane** operations manage Azure resources and service configuration. For example, creating a storage account, updating a Key Vault access policy, or deleting a resource group.
+- **Data plane** operations work with the data or runtime surface inside an already provisioned service. For example, uploading blobs, sending Service Bus messages, or reading Key Vault secrets.
+
+A single Go solution often uses both planes. You might use a management library once during setup to create a storage account, and then use a data plane client in the application path to upload and download blobs.
+
+If you want the Go-specific patterns and examples for each plane, continue with these articles:
+
+- [Use the Azure SDK for Go for control plane operations](control-plane.md)
+- [Use the Azure SDK for Go for data plane operations](data-plane.md)
+
+## Installing packages
+
+In most Go projects, you install only the packages you need for the services your application manages. Management packages are versioned Go modules, so you add them with `go get`.
+
+For example, to install a management package plus the common identity dependency:
 
 ```azurecli
+go get github.com/Azure/azure-sdk-for-go/sdk/azidentity
 go get github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute
 ```
 
-In most Go apps, you install the following packages for authentication:
+Many samples also use `github.com/Azure/azure-sdk-for-go/sdk/azcore/to` to populate optional pointer fields in request models.
 
-- github.com/Azure/azure-sdk-for-go/sdk/azcore/to
-- github.com/Azure/azure-sdk-for-go/sdk/azidentity
+## General usage pattern
 
-## Importing packages into your Go code
+Most management libraries follow the same high-level flow:
 
-Once downloaded, the packages are imported into your app via the `import` statement:
+1. Create a credential by using the `azidentity` package.
+1. Create a typed client for the Azure resource you want to manage.
+1. Call create, read, update, delete, or list operations on that client.
+1. Use pollers for operations that begin asynchronously.
 
-```go
-import (
-    "github.com/Azure/azure-sdk-for-go/sdk/azcore/to"
-    "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
-    "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute"
-)
-```
-
-## Authenticating to Azure
-
-To run code against an Azure subscription, you need to authenticate to Azure. The [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package supports multiple options to authenticate to Azure. These options include client/secret, certificate, and managed identity.
-
-The default authentication option is **DefaultAzureCredential**, which uses the environment variables set earlier in this article. In your Go code, you create an `azidentity` object as follows:
+For example:
 
 ```go
 cred, err := azidentity.NewDefaultAzureCredential(nil)
 if err != nil {
-  // handle error
+	return err
 }
-```
 
-## Creating a Resource Management client
-
-After you get a credential from Azure Identity, create a client to connect to the target Azure service.
-
-For example, let's say you want to connect to the [Azure Compute](https://azure.microsoft.com/product-categories/compute/) service. The [Compute package](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute) consist of one or more clients. A client groups a set of related APIs, providing access to its functionality within the specified subscription. You create one or more clients to access the APIs you require.
-
-The following code uses the [armcompute.NewVirtualMachinesClient type](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute#VirtualMachinesClient) to create a client to manage virtual machines:
-
-```go
 client, err := armcompute.NewVirtualMachinesClient("<subscription ID>", cred, nil)
 if err != nil {
-  // handle error
+	return err
 }
 ```
 
-The same pattern is used to connect with other Azure services. For example, install the [armnetwork](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork) package and create a [virtual network](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork#VirtualNetworksClient) client to manage virtual network (VNET) resources.
+This overview intentionally doesn't re-teach the detailed authentication, client construction, long-running operation, and service walkthrough patterns. For those topics, use the plane-specific articles:
 
-```go
-client, err := armnetwork.NewVirtualNetworksClient("<subscription ID>", cred, nil)
-if err != nil {
-  // handle error
-}
-```
+- [Use the Azure SDK for Go for control plane operations](control-plane.md) for management-oriented Go workflows.
+- [Use the Azure SDK for Go for data plane operations](data-plane.md) for runtime data access patterns that often follow provisioning.
 
-**Code sample**:
+## Finding the right package
 
-```go
-package main
+When you know the Azure service you want to automate, start with the management module list and then open the corresponding `arm*` package on pkg.go.dev. Package documentation is the best place to inspect the exact client names, request models, and operation signatures for a specific resource provider.
 
-import (
-    "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
-    "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute"
-)
+For example:
 
-func main() {
-    cred, err := azidentity.NewDefaultAzureCredential(nil)
-    if err != nil {
-        // handle error
-    }
-    client, err := armcompute.NewVirtualMachinesClient("<subscription ID>", cred, nil)
-    if err != nil {
-        // handle error
-    }
-}
-```
+- `armresources` for resource groups and generic resource operations
+- `armcompute` for virtual machines and related compute resources
+- `armnetwork` for virtual networks, subnets, and network security resources
+- `armkeyvault` for vault provisioning and configuration
 
-## Using the Azure SDK for Go reference documentation
-
-After you instantiate a client, use it to make API calls to your Azure resources. For resource management scenarios, most use cases are CRUD (create, read, update, delete) operations.
-
-To find operations for a specific type, follow these steps:
-
-1. Go to the [Azure SDK for Go reference documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go).
-1. Search for the package. (Pressing **&lt;Ctrl+F>** automatically expands all nodes on the page for searching.)
-1. Select the package.
-1. Search for the type on the package's page.
-1. Read the type's description and usage information for your Go code.
-
-You can also manually build the URL by appending the name of the package to `github.com/Azure/azure-sdk-for-go/sdk/`.
-
-For example, if you want the `compute/armcompute` reference documentation, the URL is `github.com/Azure/azure-sdk-for-go/sdk/compute/armcompute`.
-
-This example shows how to find the reference documentation for Azure resource group operations:
-
-1. Go to the main [Azure SDK for Go reference documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go) on pkg.go.dev.
-1. Select **&lt;Ctrl+F>** and enter `resourcemanager/resources/armresources`. As you type the search term, you see a close match with the [resources/armresources](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources) package.
-1. Select the appropriate package for your application.
-1. Read the "Getting Started" section or search for a specific operation. For example, searching for "resourcegroupsclient.create" (to create a resource group) leads you to the [CreateOrUpdate function](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources#ResourceGroupsClient.CreateOrUpdate).
-1. Read how to make the API call to create an Azure resource group.
-
-## Long-running operations
-
-Some operations can take a long time to finish, so the management libraries have functions that support long-running operations (LRO) through asynchronous calls. These function names start with `Begin`, like `BeginCreate` and `BeginDelete`.
-
-Because these functions are asynchronous, your code doesn't block while the function finishes its task. Instead, the function returns a *poller* object immediately. Your code then calls a synchronous poller function that returns when the original asynchronous function completes.
-
-The following code snippet shows an example of this pattern.
-
-```go
-ctx := context.Background()
-// Call an asynchronous function to create a client. The return value is a poller object.
-poller, err := client.BeginCreate(ctx, "resource_identifier", "additional_parameter")
-
-if err != nil {
-    // handle error...
-}
-
-// Call the poller object's PollUntilDone function that will block until the poller object
-// has been updated to indicate the task has completed.
-resp, err = poller.PollUntilDone(ctx, nil)
-if err != nil {
-    // handle error...
-}
-
-// Print the fact that the LRO completed.
-fmt.Printf("LRO done")
-
-// Work with the response ("resp") object.
-```
-
-**Key points:**
-
-- The `PollUntilDone` function requires a polling interval that specifies how often it should try to get the status.
-- The interval is typically short. See the documentation for the specific Azure resource for recommended intervals.
-- The [LRO section of the Go Azure SDK Design Guidelines page](https://azure.github.io/azure-sdk/golang_introduction.html#methods-invoking-long-running-operations) has a move advanced example and general guidelines for LRO.
+For deeper Go guidance on how to use those packages effectively, see [Use the Azure SDK for Go for control plane operations](control-plane.md).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Manage Azure resource groups](manage-resource-groups.md)
+- [Use the Azure SDK for Go for control plane operations](control-plane.md)
+- [Use the Azure SDK for Go for data plane operations](data-plane.md)
+- [Azure SDK for Go authentication](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication)
+- [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)

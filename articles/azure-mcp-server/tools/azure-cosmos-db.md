@@ -13,60 +13,38 @@ ms.custom: build-2025
 tool_count: 2
 mcp-cli.version: 2.0.0-beta.24+ef8d0acfa3d468e4a4a3ffe957063f7bfb7fe366
 --- 
-# Azure Cosmos DB tools for the Azure MCP Server overview
+# Azure MCP Server tools for Azure Cosmos DB overview
 
-The Azure MCP Server allows you to manage Azure resources, including Azure Cosmos DB accounts, databases, and containers with natural language prompts. Query and manage your NoSQL databases using simple conversational commands.
+The Azure MCP Server lets you manage Azure Cosmos DB, including database creation, resource scaling, and data querying, with natural language prompts.
 
-[Azure Cosmos DB](/azure/cosmos-db/introduction) is a fully managed NoSQL database service for modern app development. Azure Cosmos DB offers single-digit millisecond response times, automatic and instant scalability, along with guaranteed speed at any scale.
+Azure Cosmos DB is a globally distributed, multi-model database service for any scale. For more information, see [Azure Cosmos DB documentation](/azure/cosmos-db/).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Get Azure Cosmos DB resources list
+## Get Cosmos database list
 
 <!-- @mcpcli cosmos list -->
 
-List Azure Cosmos DB accounts, databases, or containers. By default, this command returns all accounts in your subscription. 
+List Azure Cosmos DB accounts, databases, or containers. By default, this command returns all accounts in the subscription. You can specify the **Account** parameter to list databases within a specific account, or use both **Account** and **Database** to list containers in a specific database.
+
+<!-- @mcpcli cosmos list -->
+<!-- Required parameters: 0 -  -->
 
 Example prompts include:
-
-- "List all Azure Cosmos DB accounts in my subscription"
-- "Show me my Azure Cosmos DB accounts"
-- "Show me the Azure Cosmos DB accounts in my subscription"
-- "List all the databases in the Azure Cosmos DB account `<account>`"
-- "Show me the databases in the Azure Cosmos DB account `<account>`"
-- "List all the containers in the database `<database>` for the Azure Cosmos DB account `<account>`"
-- "Show me the containers in the database `<database>` for the Azure Cosmos DB account `<account>`"
+- "List all Cosmos DB accounts in my subscription"
+- "Show me my Cosmos DB accounts"
+- "Show me the Cosmos DB accounts in my subscription"
+- "List all the databases in the Cosmos DB account `<account>`"
+- "Get the databases in the Cosmos DB account `<account>`"
+- "List all the containers in the database `<database>` for the Cosmos DB account `<account>`"
+- "Show me the containers in the database `<database>` for the Cosmos DB account `<account>`"
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Account** |  Optional | The name of the Azure Cosmos DB account. When not specified, this command lists all accounts in the subscription. Specify this parameter to list databases, or combine with **Database** to list containers. |
+| **Account** |  Optional | The name of the Cosmos DB account. When not specified, this command lists all accounts in the subscription. Specify this to list databases or combine with **Database** to list containers. |
 | **Database** |  Optional | The name of the database. Requires **Account** to be specified. When provided, this command lists containers within the specified database. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
-
-## Query Azure Cosmos DB container items
-
-<!-- @mcpcli cosmos database container item query -->
-
-List items from an Azure Cosmos DB container by specifying the account name, database name, and container name. Optionally, you can provide a custom SQL query to filter results.
-
-Example prompts include:
-
-- "Show me the items in the container `my-container` from database `my-database` for the Cosmos DB account `my-cosmos-account`."
-- "Show me orders with their related customer information in container 'my-container' in database 'my-database' in Cosmos DB account `my-cosmos-account` where the order total is greater than 100."
-- "Count how many orders we have by status in the 'my-container' container in database 'my-database' in Cosmos DB account `my-cosmos-account`"
-
-| Parameter  | Required or optional | Description |
-|------------|----------------------|-------------|
-| **Account** | Required | The name of the Azure Cosmos DB account to query. |
-| **Container** | Required | The name of the container to query. |
-| **Database** | Required | The name of the database to query. |
-| **Query** | Optional | SQL query to execute against the container, using Azure Cosmos DB SQL syntax. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content

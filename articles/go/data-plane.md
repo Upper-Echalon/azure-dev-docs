@@ -1,6 +1,6 @@
 ---
-title: Use the Azure SDK for Go for control plane operations
-description: Learn how to provision, configure, and manage Azure resources programmatically by using the Azure SDK for Go management libraries. This article focuses on the Go control-plane patterns you reuse across services, and links to data plane guidance when the runtime path moves from resource management to working with service data.
+title: Use the Azure SDK for Go for data plane operations
+description: Learn how to interact with data stored in Azure services programmatically by using the Azure SDK for Go client libraries. This article focuses on the Go data-plane patterns you use after a resource already exists.
 ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
@@ -73,7 +73,7 @@ client, err := azservicebus.NewClientFromConnectionString(connectionString, nil)
 
 For production workloads running in Azure, prefer managed identity. For local development, `DefaultAzureCredential` automatically discovers credentials from `az login`, environment variables, or other sources.
 
-For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity#section-readme).
+For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
 ## Pagination
 
@@ -253,7 +253,7 @@ go get github.com/microsoft/ApplicationInsights-Go
 
 For a detailed walkthrough, see [Monitor Azure resources with Application Insights from Go](data-azure-app-insights-go.md).
 
-For the service documentation, see the [Application Insights overview](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview).
+For the service documentation, see the [Application Insights overview](/azure/azure-monitor/app/app-insights-overview).
 
 ## Related reading
 
@@ -265,6 +265,5 @@ For control plane operations (provisioning and managing Azure resources before y
 
 - [Overview of the Azure SDK for Go management libraries](management-libraries.md)
 - [Use the Azure SDK for Go for control plane operations](control-plane.md)
-- [Azure SDK for Go overview](https://learn.microsoft.com/azure/developer/go/overview)
-- [Azure SDK for Go authentication](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication)
+- [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md)
 - [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)

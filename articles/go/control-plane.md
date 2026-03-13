@@ -76,7 +76,7 @@ vmClient := clientFactory.NewVirtualMachinesClient()
 
 This package-and-client-factory pattern is consistent across the `resourcemanager` modules and is a useful shortcut when you're scanning pkg.go.dev or asking an agent to find the right client for a task.
 
-For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity#section-readme).
+For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
 ## Long-running operations
 
@@ -287,6 +287,5 @@ For data plane operations (reading and writing data in Azure services after a re
 
 - [Overview of the Azure SDK for Go management libraries](management-libraries.md)
 - [Use the Azure SDK for Go for data plane operations](data-plane.md)
-- [Azure SDK for Go overview](https://learn.microsoft.com/azure/developer/go/overview)
-- [Azure SDK for Go authentication](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication)
+- [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md)
 - [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)

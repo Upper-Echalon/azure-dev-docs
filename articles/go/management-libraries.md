@@ -96,5 +96,5 @@ For deeper Go guidance on how to use those packages effectively, see [Use the Az
 
 - [Use the Azure SDK for Go for control plane operations](control-plane.md)
 - [Use the Azure SDK for Go for data plane operations](data-plane.md)
-- [Azure SDK for Go authentication](https://learn.microsoft.com/azure/developer/go/azure-sdk-authentication)
+- [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md)
 - [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)

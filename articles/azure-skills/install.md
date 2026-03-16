@@ -16,7 +16,7 @@ This article walks you through installing Azure Skills into your AI assistant an
 
 Make sure you have:
 
-- **Node.js 18 or later** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
+- **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
 - **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/overview.md), Claude Code, or another platform that supports Azure Skills plugins
 - **Azure CLI** (optional but recommended) — Recommended for easier authentication during development
@@ -28,7 +28,7 @@ Make sure you have:
 
 Azure Skills needs credentials to access your Azure resources. Choose the authentication method that fits your use case.
 
-### Option A: Azure CLI (recommended for development)
+### [Azure CLI (recommended)](#tab/azure-cli)
 
 This is the easiest method for local development and testing.
 
@@ -48,7 +48,7 @@ This is the easiest method for local development and testing.
    ```
    You see your subscription details printed to the terminal. Azure Skills automatically detects this authentication.
 
-### Option B: Environment Variables (for CI/CD and automation)
+### [Environment variables](#tab/environment-variables)
 
 Use environment variables when you need to authenticate in scripts, CI/CD pipelines, or environments where the Azure CLI isn't available. You'll need a [service principal](https://learn.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
 
@@ -75,15 +75,17 @@ set AZURE_CLIENT_SECRET=your-client-secret
 
 Azure Skills picks up these environment variables automatically.
 
-### Option C: Managed Identity (for Azure-hosted resources)
+### [Managed identity](#tab/managed-identity)
 
 If you're running Azure Skills on an Azure resource (VM, Container Apps, Azure Functions), managed identity handles authentication automatically. No manual setup needed.
 
 For more details, see [Azure managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
 
+---
+
 ## Install the plugin
 
-In your AI assistant, install Azure Skills from the plugin marketplace:
+These commands are for **GitHub Copilot CLI**. In your Copilot CLI, install Azure Skills from the plugin marketplace:
 
 ```bash
 /plugin marketplace add microsoft/github-copilot-for-azure
@@ -93,6 +95,9 @@ In your AI assistant, install Azure Skills from the plugin marketplace:
 These commands:
 - Register the Azure plugin marketplace with your AI assistant
 - Download and install the Azure Skills plugin (latest version from the marketplace)
+
+> [!NOTE]
+> For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](https://learn.microsoft.com/azure/developer/azure-mcp-server/). Refer to your platform's documentation for installing MCP servers.
 
 ## Verify installation
 
@@ -112,30 +117,30 @@ After installation, confirm Azure Skills is ready to use.
 
 ## Try it out: Your first Azure Skills interaction
 
-Now that Azure Skills is installed and verified, try a real interaction. This shows you how to ask questions and explore your cloud resources.
+Now that Azure Skills is installed and verified, try substantive interactions that demonstrate the power of Azure Skills automation.
 
 Open your AI assistant's chat window and try these prompts:
 
-**Explore your subscriptions:**
+**Prepare a deployment plan for your project:**
 ```prompt
-What Azure subscriptions do I have access to?
+Analyze my project structure and prepare a deployment plan for deploying to Azure. What infrastructure do I need and how should I set it up?
 ```
 
-Expected response: The assistant lists your subscriptions with names, IDs, resource group counts, and current status.
+Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase, generate infrastructure-as-code templates, and create a detailed deployment plan at `.azure/plan.md`. It considers your project type, dependencies, and best practices, then asks for your approval before proceeding.
 
-**Discover available skills:**
+**Diagnose an Azure resource health issue:**
 ```prompt
-What Azure Skills are available to me?
+I'm getting errors from my Azure App Service. What's wrong and how do I fix it?
 ```
 
-Expected response: The assistant displays all available skills organized by category: deployment (azure-prepare, azure-validate, azure-deploy), AI & ML (azure-ai), data access (azure-storage, azure-kusto), security (azure-rbac), and more.
+Expected response: The assistant invokes `azure-diagnostics` to inspect your app service, check logs, review recent deployments, and identify potential configuration or runtime issues. It provides specific remediation steps based on the diagnostics.
 
-**Try a skill in action:**
+**Set up monitoring and observability:**
 ```prompt
-Prepare a deployment plan for deploying an Azure App Service with a SQL Database
+Configure monitoring and alerting for my deployed application. What Application Insights should I instrument and what metrics should I track?
 ```
 
-Expected response: The assistant uses the `azure-prepare` skill to generate a deployment plan showing resources, dependencies, and prerequisites.
+Expected response: The assistant uses `azure-observability` and `appinsights-instrumentation` to propose a monitoring strategy, generate instrumentation code for your application, and configure Azure Alerts for critical metrics. It walks through the setup and provides code samples tailored to your app stack.
 
 ## Supported AI assistants
 
@@ -178,7 +183,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 - Run `/plugin marketplace add microsoft/github-copilot-for-azure` to register the marketplace
 - Run `/plugin install azure@github-copilot-for-azure` to install the plugin
 - Restart your AI assistant
-- Verify Node.js 18+ is installed
+- Verify Node.js LTS is installed
 
 ### "Insufficient permissions" error
 
@@ -206,7 +211,8 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ## Related content
 
-- [Azure Skills concepts](concepts.md) — Learn about skills, the prepare-validate-deploy workflow, and how Azure Skills integrates with Azure MCP Server
 - [Overview of Azure Skills](overview.md) — Understand the business value and capabilities of Azure Skills
+- [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
+- [Azure Skills reference](skills-reference.md) — Learn what each skill does
 - [GitHub Copilot for Azure](/azure/copilot/overview) — Learn about GitHub Copilot's Azure integration features
 - [Azure MCP Server get started guide](../../developer/azure-mcp-server/get-started.md) — Connect Azure MCP Server to your development tools

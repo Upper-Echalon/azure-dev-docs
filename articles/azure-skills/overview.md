@@ -40,41 +40,8 @@ All without you leaving your editor.
 
 This structured approach keeps deployments safe and auditable. You always review the plan before anything happens in Azure.
 
-## Available skills
-
-Azure Skills include 18 specialized capabilities, organized by function.
-
-### Development lifecycle
-- **azure-prepare** — Plan application deployment (entry point)
-- **azure-validate** — Validate before deployment
-- **azure-deploy** — Execute deployment
-
-### AI and Machine Learning
-- **azure-ai** — Azure AI Search, Speech, OpenAI, Document Intelligence
-- **azure-aigateway** — AI Gateway service management
-- **microsoft-foundry** — Microsoft Foundry models, deployments, RAG, agents
-
-### Data and analytics
-- **azure-postgres** — Azure Database for PostgreSQL
-- **azure-kusto** — Azure Data Explorer (KQL queries)
-- **azure-storage** — Azure Storage services (Blob, Files, Tables)
-
-### Security and identity
-- **azure-rbac** — Role-based access control
-- **azure-compliance** — Compliance and governance checks
-- **entra-app-registration** — Microsoft Entra app registration
-
-### Infrastructure and monitoring
-- **azure-resource-lookup** — Find and inspect Azure resources
-- **azure-resource-visualizer** — Visualize Azure resource topology
-- **azure-diagnostics** — Debug and troubleshoot issues
-- **azure-observability** — Monitoring, logging, and alerts
-- **appinsights-instrumentation** — Application Insights setup
-- **azure-cost-optimization** — Cost optimization recommendations
-
 ## Related content
 
-- [Key concepts in Azure Skills](concepts.md) — Understand how skills work and how they integrate with your development workflow.
 - [Install and configure Azure Skills](install.md) — Detailed setup instructions and authentication options.
 - [Get started with Azure Skills](quickstart.md) — Hands-on walkthrough for your first deployment.
 - [Azure Skills reference](skills-reference.md) — Full documentation of all 18 skills and their capabilities.

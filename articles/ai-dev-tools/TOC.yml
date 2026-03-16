@@ -5,4 +5,16 @@ items:
     - name: Azure Skills
       items:
         - name: Overview
-          href: azure-skills/overview.md
+          href: ../azure-skills/overview.md
+        - name: Key concepts
+          href: ../azure-skills/concepts.md
+        - name: Install and configure
+          href: ../azure-skills/install.md
+        - name: Quickstart
+          href: ../azure-skills/quickstart.md
+        - name: Skills reference
+          href: ../azure-skills/skills-reference.md
+    - name: Azure MCP Server
+      href: ../azure-mcp-server/TOC.yml
+    - name: GitHub Copilot for Azure
+      href: ../github-copilot-azure/TOC.yml

@@ -15,6 +15,6 @@ items:
         - name: Skills reference
           href: ../azure-skills/skills-reference.md
     - name: Azure MCP Server
-      href: ../azure-mcp-server/TOC.yml
+      href: ../azure-mcp-server/overview.md
     - name: GitHub Copilot for Azure
-      href: ../github-copilot-azure/TOC.yml
+      href: ../github-copilot-azure/introduction.md

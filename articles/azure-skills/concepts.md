@@ -81,7 +81,7 @@ The `.azure/plan.md` file is the contract between you and the Azure Skills.
 
 **Plan structure:**
 
-```markdown
+```yaml
 # Project Information
 - Application name
 - Deployment mode (NEW, MODIFY, or MODERNIZE)

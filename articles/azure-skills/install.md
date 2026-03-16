@@ -96,7 +96,7 @@ For setup details, see [Azure managed identities](https://learn.microsoft.com/az
 
 In your AI assistant, run these commands:
 
-```
+```bash
 /plugin marketplace add microsoft/github-copilot-for-azure
 /plugin install azure@github-copilot-for-azure
 ```
@@ -110,13 +110,13 @@ In your AI assistant, run these commands:
 
 Ask your AI assistant to list available skills:
 
-```
+```bash
 /plugin list
 ```
 
 Azure Skills should appear in the plugin list. Example:
 
-```
+```output
 Available plugins:
 - azure (github-copilot-for-azure)
   Skills: azure-prepare, azure-validate, azure-deploy, azure-ai, ...
@@ -124,7 +124,7 @@ Available plugins:
 
 Test with a simple command:
 
-```
+```bash
 List my Azure subscriptions
 ```
 

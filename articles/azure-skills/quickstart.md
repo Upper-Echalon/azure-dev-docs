@@ -30,7 +30,7 @@ You have a simple Node.js application. You want to deploy it to Azure with:
 
 In your AI assistant, navigate to your project directory and ask:
 
-```
+```bash
 Prepare my application for Azure deployment
 ```
 
@@ -53,7 +53,7 @@ Open `.azure/plan.md` and review:
 
 Example plan content:
 
-```markdown
+```yaml
 # Azure Deployment Plan
 
 ## Project Information
@@ -85,7 +85,7 @@ Example plan content:
 
 If the plan looks correct, tell your AI assistant:
 
-```
+```bash
 Approve this plan and proceed to validation
 ```
 
@@ -111,7 +111,7 @@ Check `.azure/plan.md` for the **Validation Proof** section, which shows:
 
 Example:
 
-```markdown
+```yaml
 ## Validation Proof
 - Command: azd provision --preview
 - Timestamp: 2026-03-16T14:22:00Z
@@ -120,7 +120,7 @@ Example:
 
 If validation fails, review errors and ask your AI assistant to fix issues:
 
-```
+```bash
 Fix the validation errors and try again
 ```
 
@@ -128,7 +128,7 @@ Fix the validation errors and try again
 
 When your plan is validated, tell your AI assistant:
 
-```
+```bash
 Deploy my application to Azure
 ```
 
@@ -150,7 +150,7 @@ After successful deployment, your AI assistant provides:
 
 Example:
 
-```
+```output
 Deployment complete! 
 
 Your app is live at: https://my-app-abcd1234.azurewebsites.net
@@ -175,7 +175,7 @@ Test your application:
 
 Ask your AI assistant for monitoring status:
 
-```
+```bash
 Show me the application logs and performance metrics
 ```
 
@@ -187,7 +187,7 @@ If you make code changes, redeploy easily:
 
 1. **Update your code** in your editor
 2. **Ask your AI assistant:**
-   ```
+   ```bash
    Update the deployment with my latest changes
    ```
 3. The skill runs azure-prepare to check for changes, then azure-deploy to update
@@ -198,7 +198,7 @@ Updated resources reuse existing infrastructure. Only changed components redeplo
 
 When you no longer need your application, delete Azure resources to avoid charges:
 
-```
+```bash
 Delete all Azure resources for this application
 ```
 
@@ -209,7 +209,7 @@ Your AI assistant:
 
 Example:
 
-```
+```output
 Resources to delete:
 - Resource Group: my-app-rg
 - All contained resources
@@ -232,7 +232,7 @@ Type "yes" to confirm deletion.
 **Problem:** Azure Skills reports validation errors.
 
 **Solution:** Ask your AI assistant to review and fix issues:
-```
+```bash
 Why did validation fail? Fix the errors.
 ```
 
@@ -244,7 +244,7 @@ Why did validation fail? Fix the errors.
 1. Verify the URL is correct
 2. Wait 1-2 minutes for DNS propagation
 3. Check Application Insights logs for errors:
-   ```
+   ```bash
    Show me recent errors in Application Insights
    ```
 

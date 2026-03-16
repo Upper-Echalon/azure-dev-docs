@@ -25,7 +25,7 @@ A different app registration should be created for each environment the app is h
 
 [!INCLUDE [authentication-assign-service-principal-roles](../../../includes/authentication/assign-service-principal-roles.md)]
 
-[!INCLUDE [authentication-set-environment-variables](../../../includes/set-environment-variables-javascript.md)]
+[!INCLUDE [authentication-set-environment-variables](includes/set-environment-variables-javascript.md)]
 
 
 ## Authenticate to Azure services from your app

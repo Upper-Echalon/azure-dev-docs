@@ -1,6 +1,6 @@
 ---
-title: Overview of the Azure SDK for Go management libraries 
-description: In this article, you learn the basic tasks of working with the Azure SDK for Go management libraries.
+title: Overview of the Azure SDK for Go management and client libraries
+description: In this article, you learn the basic tasks of working with the Azure SDK for Go management and client libraries.
 ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
@@ -74,14 +74,14 @@ if err != nil {
 }
 ```
 
-This overview intentionally doesn't re-teach the detailed authentication, client construction, long-running operation, and service walkthrough patterns. For those topics, use the plane-specific articles:
+For more information about authentication, client construction, long-running operation, and service walkthrough patterns, see the plane-specific articles:
 
 - [Use the Azure SDK for Go for control plane operations](control-plane.md) for management-oriented Go workflows.
 - [Use the Azure SDK for Go for data plane operations](data-plane.md) for runtime data access patterns that often follow provisioning.
 
 ## Finding the right package
 
-When you know the Azure service you want to automate, start with the management module list and then open the corresponding `arm*` package on pkg.go.dev. Package documentation is the best place to inspect the exact client names, request models, and operation signatures for a specific resource provider.
+When you know the Azure service you want to automate, start with the management module list and then open the corresponding `arm*` package on [pkg.go.dev](https://pkg.go.dev/). Package documentation is the best place to inspect the exact client names, request models, and operation signatures for a specific resource provider.
 
 For example:
 
@@ -89,8 +89,6 @@ For example:
 - `armcompute` for virtual machines and related compute resources
 - `armnetwork` for virtual networks, subnets, and network security resources
 - `armkeyvault` for vault provisioning and configuration
-
-For deeper Go guidance on how to use those packages effectively, see [Use the Azure SDK for Go for control plane operations](control-plane.md).
 
 ## Next steps
 

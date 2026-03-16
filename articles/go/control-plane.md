@@ -1,6 +1,6 @@
 ---
 title: Use the Azure SDK for Go for control plane operations
-description: Learn how to provision, configure, and manage Azure resources programmatically by using the Azure SDK for Go management libraries. This article focuses on the Go control-plane patterns you reuse across services, and links to data plane guidance when the runtime path moves from resource management to working with service data.
+description: Learn how to provision, configure, and manage Azure resources programmatically by using the Azure SDK for Go. This article focuses on control plane patterns such as creating resource groups and managing infrastructure through the SDK's management libraries.
 ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
@@ -122,9 +122,9 @@ Most `CreateOrUpdate` operations are idempotent. Calling them on an existing res
 - **Ignoring poller errors** - errors from `Begin*` and `PollUntilDone` are distinct; one can fail while the other succeeds.
 - **Assuming `CreateOrUpdate` requires idempotency shim** - the SDK's `CreateOrUpdate` already handles retries; wrapping it in custom logic causes double-updates.
 
-## End-to-end example: Provision a resource group
+## Provision a resource example
 
-This example shows a production-ready pattern: authenticate, create a resource group with tags and timeout, and check the result. Use this as a template for all management operations because the credential, context, and subscription ID pattern applies to all `arm*` clients.
+This example shows the common control plane pattern: authenticate, create a resource with tags and timeout, and check the result. Use this as a template for all management operations because the credential, context, and subscription ID pattern applies to all `arm*` clients.
 
 ```go
 package main
@@ -183,7 +183,7 @@ func main() {
 }
 ```
 
-## Resource Groups
+## Resource groups
 
 The [armresources](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources) package manages resource groups - the fundamental organizational containers in Azure. Every Azure resource exists within a resource group, making this the starting point for any provisioning workflow.
 
@@ -267,7 +267,7 @@ Use it to create virtual networks and subnets, configure network security groups
 
 For a getting started guide, see the [armnetwork package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork#section-readme).
 
-## Container Registry
+## Container registry
 
 The [armcontainerregistry](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/containerregistry/armcontainerregistry) package manages Azure Container Registry instances.
 
@@ -276,6 +276,16 @@ Use it to provision registries with the appropriate SKU and geo-replication, con
 [Container Registry management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/containerregistry).
 
 For a getting started guide, see the [armcontainerregistry package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/containerregistry/armcontainerregistry#section-readme).
+
+## Storage accounts
+
+The [armstorage](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/storage/armstorage) package manages Azure Storage accounts. 
+
+Use it to create storage accounts with the right performance tier and redundancy, manage access keys and shared access signatures, configure blob lifecycle policies, and set up diagnostic logging. Storage accounts are a common dependency for many applications, so automating their provisioning and configuration is a common control-plane scenario.
+
+[Storage account management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/storage).
+
+For a getting started guide, see the [armstorage package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/storage/armstorage#section-readme).
 
 ## Related reading
 

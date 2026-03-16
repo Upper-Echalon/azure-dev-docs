@@ -1,6 +1,6 @@
 ---
 title: Use the Azure SDK for Go for data plane operations
-description: Learn how to interact with data stored in Azure services programmatically by using the Azure SDK for Go client libraries. This article focuses on the Go data-plane patterns you use after a resource already exists.
+description: Learn how to work with application data in Azure services by using the Azure SDK for Go client libraries. This article covers runtime operations such as reading, writing, querying, and streaming data—performed against existing Azure resources after they've been provisioned.
 ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go

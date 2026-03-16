@@ -125,6 +125,7 @@
 | TimeZones | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure-rest/maps-timezone/v/1.0.0-beta.1) |  | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure-rest/maps-timezone_1.0.0-beta.1/sdk/maps/maps-timezone-rest/) |
 | Token Cache Persistence Plugin | npm [1.2.0](https://www.npmjs.com/package/@azure/identity-cache-persistence/v/1.2.0) | [docs](/javascript/api/overview/azure/identity-cache-persistence-readme) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity-cache-persistence_1.2.0/sdk/identity/identity-cache-persistence/) |
 | TypeSpec HTTP Runtime | npm [0.3.4](https://www.npmjs.com/package/@typespec/ts-http-runtime/v/0.3.4) |  | GitHub [0.3.4](https://github.com/Azure/azure-sdk-for-js/tree/@typespec/ts-http-runtime_0.3.4/sdk/core/ts-http-runtime) |
+| unknown | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/ai-speech-transcription/v/1.0.0-beta.1) |  | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-speech-transcription_1.0.0-beta.1/sdk/transcription/ai-speech-transcription/) |
 | Voice Live | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/ai-voicelive/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/ai-voicelive-readme) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-voicelive_1.0.0-beta.3/sdk/ai/ai-voicelive/) |
 | VS Code Authentication Plugin | npm [2.1.0](https://www.npmjs.com/package/@azure/identity-vscode/v/2.1.0) | [docs](/javascript/api/overview/azure/identity-vscode-readme) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity-vscode_2.1.0/sdk/identity/identity-vscode/) |
 | Web PubSub | npm [1.2.0](https://www.npmjs.com/package/@azure/web-pubsub/v/1.2.0) | [docs](/javascript/api/overview/azure/web-pubsub-readme) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/web-pubsub_1.2.0/sdk/web-pubsub/web-pubsub/) |
@@ -314,7 +315,6 @@
 | Resource Management - Monitor | npm [7.0.0](https://www.npmjs.com/package/@azure/arm-monitor/v/7.0.0)<br>npm [8.0.0-beta.5](https://www.npmjs.com/package/@azure/arm-monitor/v/8.0.0-beta.5) | [docs](/javascript/api/overview/azure/arm-monitor-readme) | GitHub [7.0.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/monitor/arm-monitor) |
 | Resource Management - MySQL | npm [5.1.0](https://www.npmjs.com/package/@azure/arm-mysql/v/5.1.0) | [docs](/javascript/api/overview/azure/arm-mysql-readme) | GitHub [5.1.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/mysql/arm-mysql) |
 | Resource Management - MySQL Flexible | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-mysql-flexible/v/3.1.0)<br>npm [4.0.0-beta.4](https://www.npmjs.com/package/@azure/arm-mysql-flexible/v/4.0.0-beta.4) | [docs](/javascript/api/overview/azure/arm-mysql-flexible-readme) | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-mysql-flexible_3.1.0/sdk/mysql/arm-mysql-flexible/)<br>GitHub [4.0.0-beta.4](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-mysql-flexible_4.0.0-beta.4/sdk/mysql/arm-mysql-flexible/) |
-| Resource Management - Neon Postgres | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-neonpostgres/v/1.0.0) | [docs](/javascript/api/overview/azure/arm-neonpostgres-readme) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-neonpostgres_1.0.0/sdk/neonpostgres/arm-neonpostgres/) |
 | Resource Management - NetApp Files | npm [23.0.0](https://www.npmjs.com/package/@azure/arm-netapp/v/23.0.0) | [docs](/javascript/api/overview/azure/arm-netapp-readme) | GitHub [23.0.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/netapp/arm-netapp) |
 | Resource Management - Network | npm [1.0.0-beta.2](https://www.npmjs.com/package/@azure-rest/arm-network/v/1.0.0-beta.2) |  | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/network/arm-network-rest) |
 | Resource Management - Network | npm [36.0.0](https://www.npmjs.com/package/@azure/arm-network/v/36.0.0) | [docs](/javascript/api/overview/azure/arm-network-readme) | GitHub [36.0.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/network/arm-network) |
@@ -449,13 +449,13 @@
 | Functions Extensions Base | npm [0.2.0](https://www.npmjs.com/package/@azure/functions-extensions-base/v/0.2.0) |  |  |
 | Functions Extensions Service Bus | npm [0.4.0](https://www.npmjs.com/package/@azure/functions-extensions-servicebus/v/0.4.0) |  |  |
 | MCP Server TypeSpec | npm [0.0.0-104](https://www.npmjs.com/package/mcp-server-typespec/v/0.0.0-104) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-darwin-arm64/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-darwin-x64/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-linux-arm64/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-linux-x64/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-win32-arm64/v/0.0.12-alpha.5932986) |  |  |
-| MCP Template | npm [0.0.12-alpha.5932986](https://www.npmjs.com/package/@azure/mcp-template-win32-x64/v/0.0.12-alpha.5932986) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-darwin-arm64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-darwin-x64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-linux-arm64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-linux-x64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-win32-arm64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-win32-x64/v/0.0.12-alpha.6013209) |  |  |
 | OpenAPI Validator Core | npm [1.0.7](https://www.npmjs.com/package/@microsoft.azure/openapi-validator-core/v/1.0.7) |  |  |
 | tmlanguage-generator | npm [0.6.8](https://www.npmjs.com/package/tmlanguage-generator/v/0.6.8) |  |  |
 | TypeSpec Asset Emitter | npm [0.79.1](https://www.npmjs.com/package/@typespec/asset-emitter/v/0.79.1) |  |  |
@@ -604,5 +604,5 @@
 | OpenAPI Markdown | npm [0.9.4](https://www.npmjs.com/package/@azure/openapi-markdown/v/0.9.4) |  | GitHub [0.9.4](https://github.com/Azure/openapi-markdown) |
 | Publish Pipeline Result | npm [0.1.2](https://www.npmjs.com/package/@azure/publish-pipeline-result/v/0.1.2) |  |  |
 | RestAPI Specs Scripts | npm [0.14.0](https://www.npmjs.com/package/@azure/rest-api-specs-scripts/v/0.14.0) |  | GitHub [0.14.0](https://github.com/Azure/rest-api-specs-scripts) |
-| Stream Analytics CI/CD | npm [3.1.5](https://www.npmjs.com/package/azure-streamanalytics-cicd/v/3.1.5) |  |  |
+| Stream Analytics CI/CD | npm [3.1.6](https://www.npmjs.com/package/azure-streamanalytics-cicd/v/3.1.6) |  |  |
 | Swagger Validation Common | npm [0.1.2](https://www.npmjs.com/package/@azure/swagger-validation-common/v/0.1.2) |  |  |

@@ -193,7 +193,7 @@ Use it to perform CRUD operations on documents, run SQL queries against containe
 go get github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos
 ```
 
-For a detailed walkthrough, see [Query and analyze data with Azure Cosmos DB from Go](data-azure-cosmos-db-go.md).
+To get started, see [Quickstart: Use Azure Cosmos DB for NoSQL with Azure SDK for Go](/azure/cosmos-db/quickstart-go).
 
 For the package documentation, see the [azcosmos package reference](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos#section-readme).
 
@@ -207,7 +207,7 @@ Use it to send events with batching for efficient throughput, receive and proces
 go get github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs
 ```
 
-For a detailed walkthrough, see [Send and receive events with Event Hubs and Go](data-azure-event-hubs-go.md).
+To get started, see [Quickstart: Send events to or receive events from Event Hubs using Go](/azure/event-hubs/event-hubs-go-get-started-send).
 
 For the package documentation, see the [azeventhubs package reference](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs#section-readme).
 
@@ -223,7 +223,7 @@ go get github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azkeys
 go get github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azcertificates
 ```
 
-For a detailed walkthrough, see [Use Key Vault secrets, keys, and certificates from Go apps](data-azure-key-vault-go.md).
+To get started with Key Vault, see [Quickstart: Azure Key Vault certificate client library for Go](/azure/key-vault/certificates/quick-create-go).
 
 For the package documentation, see the [azsecrets](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets#section-readme), [azkeys](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azkeys#section-readme), and [azcertificates](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azcertificates#section-readme) package references.
 
@@ -237,7 +237,7 @@ Use it to send and receive messages on queues for point-to-point communication, 
 go get github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus
 ```
 
-For a detailed walkthrough, see [Send and receive messages with Service Bus and Go](data-azure-service-bus-go.md).
+To get started with Azure Service Bus, see [Quickstart: Send messages to and receive messages from Azure Service Bus queues (Go)](/azure/service-bus-messaging/service-bus-go-how-to-use-queues).
 
 For the package documentation, see the [azservicebus package reference](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus#section-readme).
 
@@ -251,15 +251,12 @@ Use it to track custom events and metrics, monitor API response times and failur
 go get github.com/microsoft/ApplicationInsights-Go
 ```
 
-For a detailed walkthrough, see [Monitor Azure resources with Application Insights from Go](data-azure-app-insights-go.md).
-
 For the service documentation, see the [Application Insights overview](/azure/azure-monitor/app/app-insights-overview).
 
 ## Related reading
 
-For the conceptual overview of how management libraries fit with client libraries, see [Overview of the Azure SDK for Go management libraries](management-libraries.md).
-
-For control plane operations (provisioning and managing Azure resources before your application starts using them), see [Use the Azure SDK for Go for control plane operations](control-plane.md).
+- For the conceptual overview of how management libraries fit with client libraries, see [Overview of the Azure SDK for Go management libraries](management-libraries.md).
+- For control plane operations (provisioning and managing Azure resources before your application starts using them), see [Use the Azure SDK for Go for control plane operations](control-plane.md).
 
 ## Next steps
 

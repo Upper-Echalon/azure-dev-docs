@@ -10,60 +10,49 @@ ms.service: azure-ai-dev-tools
 
 # Install and configure Azure Skills
 
-Set up Azure Skills to start using Azure from your AI assistant.
+This article walks you through installing Azure Skills into your AI assistant and verifying it works. After setup, you'll be able to ask questions about your Azure resources, prepare deployment plans, and manage cloud operations—all from your chat interface.
 
 ## Prerequisites
 
-Before you begin, verify you have:
+Make sure you have:
 
-- **Node.js 18 or later** — Required for Azure Skills runtime
+- **Node.js 18 or later** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
-- **Azure CLI** (optional but recommended) — For authentication
-- **GitHub Copilot CLI** or **Claude Code** — The AI assistant you'll use
+- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/overview.md), Claude Code, or another platform that supports Azure Skills plugins
+- **Azure CLI** (optional but recommended) — Recommended for easier authentication during development
 
-### Verify Node.js installation
+> [!NOTE]
+> Azure Skills uses the same authentication patterns as [Azure MCP Server](../../developer/azure-mcp-server/overview.md). If you're already authenticated for Azure MCP Server, Azure Skills can use those same credentials.
 
-Check your Node.js version:
+## Authenticate to Azure
 
-```bash
-node --version
-```
+Azure Skills needs credentials to access your Azure resources. Choose the authentication method that fits your use case.
 
-If you need to install or upgrade Node.js, visit [nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
+### Option A: Azure CLI (recommended for development)
 
-## Step 1: Authenticate to Azure
-
-Choose one of three authentication methods:
-
-### Option A: Azure CLI (Recommended)
-
-Use Azure CLI for development and testing.
+This is the easiest method for local development and testing.
 
 1. **Install Azure CLI:**
-   - Visit [Azure CLI installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli)
-   - Or use a package manager (brew, apt, etc.)
+   - Visit the [Azure CLI installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli)
+   - Or use a package manager: `brew install azure-cli` (macOS), `apt-get install azure-cli` (Linux)
 
-2. **Authenticate:**
+2. **Sign in to Azure:**
    ```bash
    az login
    ```
-   Your browser opens. Sign in with your Azure account.
+   A browser window opens. Sign in with your Azure account credentials.
 
-3. **Verify:**
+3. **Verify authentication:**
    ```bash
    az account show
    ```
-   Your subscription details display.
+   You see your subscription details printed to the terminal. Azure Skills automatically detects this authentication.
 
-Azure Skills automatically detect your CLI authentication.
+### Option B: Environment Variables (for CI/CD and automation)
 
-### Option B: Environment Variables
+Use environment variables when you need to authenticate in scripts, CI/CD pipelines, or environments where the Azure CLI isn't available. You'll need a [service principal](https://learn.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
 
-Use environment variables for CI/CD pipelines or when Azure CLI isn't available.
-
-Set these variables with your service principal credentials:
-
-**Bash/Zsh:**
+**Bash or Zsh:**
 ```bash
 export AZURE_TENANT_ID="your-tenant-id"
 export AZURE_CLIENT_ID="your-client-id"
@@ -84,51 +73,79 @@ set AZURE_CLIENT_ID=your-client-id
 set AZURE_CLIENT_SECRET=your-client-secret
 ```
 
-To create a service principal, see [Create an Azure service principal](https://learn.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
+Azure Skills picks up these environment variables automatically.
 
-### Option C: Managed Identity
+### Option C: Managed Identity (for Azure-hosted resources)
 
-When running Azure Skills on Azure resources (VMs, Container Apps, Functions), managed identity handles authentication automatically. No configuration needed.
+If you're running Azure Skills on an Azure resource (VM, Container Apps, Azure Functions), managed identity handles authentication automatically. No manual setup needed.
 
-For setup details, see [Azure managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
+For more details, see [Azure managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
 
-## Step 2: Install the plugin
+## Install the plugin
 
-In your AI assistant, run these commands:
+In your AI assistant, install Azure Skills from the plugin marketplace:
 
 ```bash
 /plugin marketplace add microsoft/github-copilot-for-azure
 /plugin install azure@github-copilot-for-azure
 ```
 
-### What these commands do:
-
-- **`/plugin marketplace add`** — Registers the Azure plugin marketplace
-- **`/plugin install`** — Installs the Azure plugin (version: latest from marketplace)
+These commands:
+- Register the Azure plugin marketplace with your AI assistant
+- Download and install the Azure Skills plugin (latest version from the marketplace)
 
 ## Verify installation
 
-Ask your AI assistant to list available skills:
+After installation, confirm Azure Skills is ready to use.
 
-```bash
-/plugin list
+1. List installed plugins:
+   ```bash
+   /plugin list
+   ```
+   You should see `azure (github-copilot-for-azure)` in the output, with a list of available skills.
+
+2. Test with a quick command:
+   ```bash
+   /ask List my Azure subscriptions
+   ```
+   Your AI assistant queries your Azure account and displays your subscriptions. The response shows subscription names, IDs, and status.
+
+## Try it out: Your first Azure Skills interaction
+
+Now that Azure Skills is installed and verified, try a real interaction. This shows you how to ask questions and explore your cloud resources.
+
+Open your AI assistant's chat window and try these prompts:
+
+**Explore your subscriptions:**
+```prompt
+What Azure subscriptions do I have access to?
 ```
 
-Azure Skills should appear in the plugin list. Example:
+Expected response: The assistant lists your subscriptions with names, IDs, resource group counts, and current status.
 
-```output
-Available plugins:
-- azure (github-copilot-for-azure)
-  Skills: azure-prepare, azure-validate, azure-deploy, azure-ai, ...
+**Discover available skills:**
+```prompt
+What Azure Skills are available to me?
 ```
 
-Test with a simple command:
+Expected response: The assistant displays all available skills organized by category: deployment (azure-prepare, azure-validate, azure-deploy), AI & ML (azure-ai), data access (azure-storage, azure-kusto), security (azure-rbac), and more.
 
-```bash
-List my Azure subscriptions
+**Try a skill in action:**
+```prompt
+Prepare a deployment plan for deploying an Azure App Service with a SQL Database
 ```
 
-Your AI assistant should query your Azure account and list subscriptions.
+Expected response: The assistant uses the `azure-prepare` skill to generate a deployment plan showing resources, dependencies, and prerequisites.
+
+## Supported AI assistants
+
+Azure Skills is available across these platforms:
+
+- **[GitHub Copilot CLI](../github-copilot-azure/overview.md)** — Full integration with GitHub Copilot tools
+- **Claude Code** — Through the MCP protocol  
+- **Other MCP-compatible AI assistants** — Any tool that supports the Model Context Protocol
+
+For a complete list of tools that support Azure integration, see [Azure MCP Server supported tools](../../developer/azure-mcp-server/get-started.md#connect-to-azure-mcp-server).
 
 ## Configuration options
 
@@ -186,3 +203,10 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 - [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
 - [Azure Skills reference](skills-reference.md) — Learn what each skill does
 - [Azure MCP Server documentation](https://learn.microsoft.com/azure/developer/azure-mcp-server/) — Understand the underlying Azure integration
+
+## Related content
+
+- [Azure Skills concepts](concepts.md) — Learn about skills, the prepare-validate-deploy workflow, and how Azure Skills integrates with Azure MCP Server
+- [Overview of Azure Skills](overview.md) — Understand the business value and capabilities of Azure Skills
+- [GitHub Copilot for Azure](/azure/copilot/overview) — Learn about GitHub Copilot's Azure integration features
+- [Azure MCP Server get started guide](../../developer/azure-mcp-server/get-started.md) — Connect Azure MCP Server to your development tools

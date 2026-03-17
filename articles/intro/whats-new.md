@@ -43,6 +43,7 @@ Updated articles:
 - [Azure Managed Lustre tools for Azure MCP Server overview](../azure-mcp-server/tools/azure-managed-lustre.md) - Update Managed Lustre for file system blob operations
 - [Azure Monitor tools for the Azure MCP Server overview](../azure-mcp-server/tools/azure-monitor.md) - updated MCP tools for Azure Monitor for tool consolidation
 - [What is the Azure MCP Server?](../azure-mcp-server/overview.md) - Update MCP Overview & Landing
+- [Get started using the Azure MCP Server with Visual Studio Code](../azure-mcp-server/get-started/tools/visual-studio-code.md) - Add note about install version
 
 ## What's new for January 2026
 

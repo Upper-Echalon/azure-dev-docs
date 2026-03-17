@@ -125,7 +125,7 @@
 | TimeZones | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure-rest/maps-timezone/v/1.0.0-beta.1) |  | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure-rest/maps-timezone_1.0.0-beta.1/sdk/maps/maps-timezone-rest/) |
 | Token Cache Persistence Plugin | npm [1.2.0](https://www.npmjs.com/package/@azure/identity-cache-persistence/v/1.2.0) | [docs](/javascript/api/overview/azure/identity-cache-persistence-readme) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity-cache-persistence_1.2.0/sdk/identity/identity-cache-persistence/) |
 | TypeSpec HTTP Runtime | npm [0.3.4](https://www.npmjs.com/package/@typespec/ts-http-runtime/v/0.3.4) |  | GitHub [0.3.4](https://github.com/Azure/azure-sdk-for-js/tree/@typespec/ts-http-runtime_0.3.4/sdk/core/ts-http-runtime) |
-| unknown | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/ai-speech-transcription/v/1.0.0-beta.1) |  | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-speech-transcription_1.0.0-beta.1/sdk/transcription/ai-speech-transcription/) |
+| unknown | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/ai-speech-transcription/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/ai-speech-transcription-readme) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-speech-transcription_1.0.0-beta.1/sdk/transcription/ai-speech-transcription/) |
 | Voice Live | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/ai-voicelive/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/ai-voicelive-readme) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-voicelive_1.0.0-beta.3/sdk/ai/ai-voicelive/) |
 | VS Code Authentication Plugin | npm [2.1.0](https://www.npmjs.com/package/@azure/identity-vscode/v/2.1.0) | [docs](/javascript/api/overview/azure/identity-vscode-readme) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity-vscode_2.1.0/sdk/identity/identity-vscode/) |
 | Web PubSub | npm [1.2.0](https://www.npmjs.com/package/@azure/web-pubsub/v/1.2.0) | [docs](/javascript/api/overview/azure/web-pubsub-readme) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/web-pubsub_1.2.0/sdk/web-pubsub/web-pubsub/) |
@@ -447,15 +447,15 @@
 | Bicep Deploy Common | npm [0.0.4-dev](https://www.npmjs.com/package/@azure/bicep-deploy-common/v/0.0.4-dev) |  |  |
 | Face UI | npm [1.4.7](https://www.npmjs.com/package/@azure/ai-vision-face-ui/v/1.4.7) |  |  |
 | Functions Extensions Base | npm [0.2.0](https://www.npmjs.com/package/@azure/functions-extensions-base/v/0.2.0) |  |  |
-| Functions Extensions Service Bus | npm [0.4.0](https://www.npmjs.com/package/@azure/functions-extensions-servicebus/v/0.4.0) |  |  |
+| Functions Extensions Service Bus | npm [0.4.1](https://www.npmjs.com/package/@azure/functions-extensions-servicebus/v/0.4.1) |  |  |
 | MCP Server TypeSpec | npm [0.0.0-104](https://www.npmjs.com/package/mcp-server-typespec/v/0.0.0-104) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-darwin-arm64/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-darwin-x64/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-linux-arm64/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-linux-x64/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-win32-arm64/v/0.0.12-alpha.6013209) |  |  |
-| MCP Template | npm [0.0.12-alpha.6013209](https://www.npmjs.com/package/@azure/mcp-template-win32-x64/v/0.0.12-alpha.6013209) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-darwin-arm64/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-darwin-x64/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-linux-arm64/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-linux-x64/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-win32-arm64/v/0.0.12-alpha.6016386) |  |  |
+| MCP Template | npm [0.0.12-alpha.6016386](https://www.npmjs.com/package/@azure/mcp-template-win32-x64/v/0.0.12-alpha.6016386) |  |  |
 | OpenAPI Validator Core | npm [1.0.7](https://www.npmjs.com/package/@microsoft.azure/openapi-validator-core/v/1.0.7) |  |  |
 | tmlanguage-generator | npm [0.6.8](https://www.npmjs.com/package/tmlanguage-generator/v/0.6.8) |  |  |
 | TypeSpec Asset Emitter | npm [0.79.1](https://www.npmjs.com/package/@typespec/asset-emitter/v/0.79.1) |  |  |

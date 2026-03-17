@@ -561,7 +561,7 @@
 | @autorest/system-requirements | npm [1.1.1](https://www.npmjs.com/package/@autorest/system-requirements/v/1.1.1) |  |  |
 | @autorest/test-utils | npm [0.6.1](https://www.npmjs.com/package/@autorest/test-utils/v/0.6.1) |  |  |
 | @autorest/testmodeler | npm [2.6.2](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.2)<br>npm [2.6.4-ci.254802bfc.0](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.4-ci.254802bfc.0) |  |  |
-| @autorest/typescript | npm [6.0.63](https://www.npmjs.com/package/@autorest/typescript/v/6.0.63) |  |  |
+| @autorest/typescript | npm [6.0.64](https://www.npmjs.com/package/@autorest/typescript/v/6.0.64) |  |  |
 | @azure/static-web-apps-cli | npm [2.0.8](https://www.npmjs.com/package/@azure/static-web-apps-cli/v/2.0.8) |  |  |
 | @cadl-lang/compiler | npm [0.40.0](https://www.npmjs.com/package/@cadl-lang/compiler/v/0.40.0) |  |  |
 | @cadl-lang/eslint-config-cadl | npm [0.5.0](https://www.npmjs.com/package/@cadl-lang/eslint-config-cadl/v/0.5.0) |  |  |
@@ -600,7 +600,7 @@
 | cadl-vscode | npm [0.40.0](https://www.npmjs.com/package/cadl-vscode/v/0.40.0) |  |  |
 | Git Rest Api SDK | npm [0.3.3](https://www.npmjs.com/package/git-rest-api-sdk/v/0.3.3) |  | GitHub [0.3.3](https://github.com/azure/git-rest-api) |
 | Ng Deploy | npm [0.2.3](https://www.npmjs.com/package/@azure/ng-deploy/v/0.2.3) |  | GitHub [0.2.3](https://github.com/Azure/ng-deploy-azure) |
-| Oad | npm [0.12.3](https://www.npmjs.com/package/@azure/oad/v/0.12.3) |  | GitHub [0.12.3](https://github.com/Azure/openapi-diff) |
+| Oad | npm [0.12.4](https://www.npmjs.com/package/@azure/oad/v/0.12.4) |  | GitHub [0.12.4](https://github.com/Azure/openapi-diff) |
 | OpenAPI Markdown | npm [0.9.4](https://www.npmjs.com/package/@azure/openapi-markdown/v/0.9.4) |  | GitHub [0.9.4](https://github.com/Azure/openapi-markdown) |
 | Publish Pipeline Result | npm [0.1.2](https://www.npmjs.com/package/@azure/publish-pipeline-result/v/0.1.2) |  |  |
 | RestAPI Specs Scripts | npm [0.14.0](https://www.npmjs.com/package/@azure/rest-api-specs-scripts/v/0.14.0) |  | GitHub [0.14.0](https://github.com/Azure/rest-api-specs-scripts) |

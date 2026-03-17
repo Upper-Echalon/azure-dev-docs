@@ -69,6 +69,7 @@ Updated articles:
 
 - [Authenticate JavaScript apps to Azure services using the Azure Identity library](../javascript/sdk/authentication/overview.md) - Align JavaScript SDK authentication overview and service principal article with .NET structure
 - [Authenticate to Azure resources from JavaScript apps hosted on-premises](../javascript/sdk/authentication/on-premises-apps.md) - Update JavaScript on-premises authentication article using ClientSecretCredential
+- [How to authenticate JavaScript apps with Azure services](../javascript/sdk/authentication/overview.md) - Update SDK Auth to use shared includes
 
 ### Azure for Python
 
@@ -96,6 +97,8 @@ Updated articles:
 
 - [Azure Key Vault tools for the Azure MCP Server overview](../azure-mcp-server/tools/azure-key-vault.md) - MCP - kv - fix required params
 - [Azure Managed Lustre tools for Azure MCP Server overview](../azure-mcp-server/tools/azure-managed-lustre.md) - Azure MCP server: new auto-import and auto-export tools for Managed Lustre
+- [Azure Load Testing Tools - Azure MCP Server](../azure-mcp-server/tools/azure-load-testing.md) - Update Load Testing for tool consolidation
+- [Azure Storage Tools](../azure-mcp-server/tools/azure-storage.md) - Update Storage with new table tool
 
 ## What's new for December 2025
 

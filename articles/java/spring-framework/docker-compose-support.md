@@ -1,12 +1,12 @@
 ---
 title: Spring Cloud Azure support for Docker Compose
 description: Describes how to integrate Spring Cloud Azure with Docker Compose to write effective integration tests for your applications.
-ms.date: 03/11/2026
-author: rujche
-ms.author: rujche
-ms.reviewer: karler
+ms.date: 03/18/2026
+author: KarlErickson
+ms.author: karler
+ms.reviewer: rujche
 ms.topic: reference
-ms.custom: devx-track-java, devx-track-extended-java
+ms.custom: devx-track-java
 appliesto:
 - ✅ Version 5.25.0
 - ✅ Version 7.1.0
@@ -29,9 +29,9 @@ The `spring-cloud-azure-docker-compose` library now supports integration testing
 
 A service connection is a connection to any remote service. Spring Boot's autoconfiguration can consume the details of a service connection and use them to establish a connection to a remote service. When doing so, the connection details take precedence over any connection-related configuration properties.
 
-When you use docker compose, you can automatically create connection details for a service running in a container by adding the `@SpringBootTest` annotation with the `spring.docker.compose.file` property in the test class.
+When you use Docker compose, you can automatically create connection details for a service running in a container by adding the `@SpringBootTest` annotation with the `spring.docker.compose.file` property in the test class.
 
-T`xxxDockerComposeConnectionDetailsFactory` classes are registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a `DockerComposeConnectionDetails`.
+The `xxxDockerComposeConnectionDetailsFactory` classes are registered with `spring.factories`. These factories create a `ConnectionDetails` bean based on a `DockerComposeConnectionDetails`.
 
 The following table provides information about the connection details factory classes supported in the `spring-cloud-azure-docker-compose` JAR:
 
@@ -285,11 +285,12 @@ The following configuration sets up the required dependencies:
 
 ## Create test resource files
 
-Create these files in `src/test/resources` folder:
+Create these files in the `src/test/resources` folder:
 
 ### [Blob Storage](#tab/test-for-storage-blob)
 
-storage-compose.yaml
+`storage-compose.yaml`:
+
 ```yaml
 services:
   storage:
@@ -303,7 +304,8 @@ services:
 
 ### [Queue Storage](#tab/test-for-storage-queue)
 
-storage-compose.yaml
+`storage-compose.yaml`:
+
 ```yaml
 services:
   storage:
@@ -317,7 +319,8 @@ services:
 
 ### [Event Hubs](#tab/test-for-event-hubs)
 
-eventhubs-compose.yaml
+`eventhubs-compose.yaml`:
+
 ```yaml
 services:
   eventhubs:
@@ -355,7 +358,8 @@ networks:
   eh-emulator:
 ```
 
-Config.json
+`Config.json`:
+
 ```json
 {
   "UserConfig": {
@@ -381,7 +385,8 @@ Config.json
 
 ### [Event Hubs Binder](#tab/test-for-event-hubs-binder)
 
-eventhubs-compose.yaml
+`eventhubs-compose.yaml`:
+
 ```yaml
 services:
   eventhubs:
@@ -420,7 +425,8 @@ networks:
   eh-emulator:
 ```
 
-Config.json
+`Config.json`:
+
 ```json
 {
   "UserConfig": {
@@ -446,7 +452,8 @@ Config.json
 
 ### [Service Bus](#tab/test-for-service-bus)
 
-servicebus-compose.yaml
+`servicebus-compose.yaml`:
+
 ```yaml
 services:
   servicebus:
@@ -480,7 +487,8 @@ networks:
   sb-emulator:
 ```
 
-Config.json
+`Config.json`:
+
 ```json
 {
   "UserConfig": {
@@ -594,7 +602,8 @@ Config.json
 
 ### [Service Bus Binder](#tab/test-for-service-bus-binder)
 
-servicebus-compose.yaml
+`servicebus-compose.yaml`:
+
 ```yaml
 services:
   servicebus:
@@ -628,7 +637,8 @@ networks:
   sb-emulator:
 ```
 
-Config.json
+`Config.json`:
+
 ```json
 {
   "UserConfig": {
@@ -744,12 +754,11 @@ Config.json
 
 ## Create Java codes
 
-The following code example demonstrates the basic usage of docker compose:
+The following code example demonstrates the basic usage of Docker compose:
 
 ### [Blob Storage](#tab/test-for-storage-blob)
 
 ```java
-
 @SpringBootTest(properties = {
         "spring.docker.compose.skip.in-tests=false",
         "spring.docker.compose.file=classpath:storage-compose.yaml",
@@ -780,7 +789,7 @@ public class AzureBlobResourceDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Blob Storage running inside the docker container. This action is done by automatically defining a `AzureStorageBlobConnectionDetails` bean, which is then used by the Blob Storage autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Blob Storage running inside the Docker container. This action is done by automatically defining a `AzureStorageBlobConnectionDetails` bean, which is then used by the Blob Storage autoconfiguration, overriding any connection-related configuration properties.
 
 ### [Queue Storage](#tab/test-for-storage-queue)
 
@@ -815,7 +824,7 @@ class StorageQueueDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Queue Storage running inside the docker container. This action is done by automatically defining an `AzureStorageQueueConnectionDetails` bean, which is then used by the Queue Storage autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Queue Storage running inside the Docker container. This action is done by automatically defining an `AzureStorageQueueConnectionDetails` bean, which is then used by the Queue Storage autoconfiguration, overriding any connection-related configuration properties.
 
 ### [Event Hubs](#tab/test-for-event-hubs)
 
@@ -862,7 +871,7 @@ class EventHubsDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Event Hubs running inside the docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
 
 ### [Event Hubs Binder](#tab/test-for-event-hubs-binder)
 
@@ -950,7 +959,7 @@ class EventHubsDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Event Hubs running inside the docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Event Hubs running inside the Docker container. This action is done by automatically defining an `AzureEventHubsConnectionDetails` bean, which is then used by the Event Hubs autoconfiguration, overriding any connection-related configuration properties.
 
 ### [Service Bus](#tab/test-for-service-bus)
 
@@ -1040,7 +1049,7 @@ class ServiceBusDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Service Bus running inside the docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Service Bus running inside the Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
 
 ### [Service Bus Binder](#tab/test-for-service-bus-binder)
 
@@ -1111,7 +1120,7 @@ class ServiceBusDockerComposeTest {
 }
 ```
 
-With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Service Bus running inside the docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
+With `spring.docker.compose.file`, this configuration enables related beans in the app to communicate with Service Bus running inside the Docker container. This action is done by automatically defining an `AzureServiceBusConnectionDetails` bean, which is then used by the Service Bus autoconfiguration, overriding any connection-related configuration properties.
 
 ---
 

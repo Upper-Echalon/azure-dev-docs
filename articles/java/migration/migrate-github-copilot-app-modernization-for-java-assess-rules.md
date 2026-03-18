@@ -1,5 +1,5 @@
 ---
-title: Understand assessment coverage by GitHub Copilot Modernization
+title: Understand Assessment Coverage Using GitHub Copilot Modernization
 titleSuffix: Azure
 description: Learn how GitHub Copilot modernization detects issues in cloud readiness, Java versions, and security, helping you prepare for a seamless migration.
 author: KarlErickson
@@ -13,14 +13,14 @@ ms.collection: ce-skilling-ai-copilot
 ms.update-cycle: 180-days
 ---
 
-# Understand assessment coverage by GitHub Copilot Modernization
+# Understand assessment coverage by GitHub Copilot modernization
 
-This document describes what the app assessment feature of GitHub Copilot Modernization can detect. The assessment covers two key capabilities:
+This article describes what the app assessment feature of GitHub Copilot modernization can detect. The assessment covers two key capabilities:
 
 - **Issue detection** across three domains critical to your modernization journey:
-  - **Cloud readiness**: identifies 16 categories of concerns, including file system usage, credential management, messaging services, database connections, containerization gaps, session handling, remote communication patterns, and more.
-  - **Java upgrade**: flags outdated Java versions, end-of-OSS-support frameworks (Spring Boot, Spring Cloud, Jakarta EE), hundreds of removed or deprecated APIs, and legacy build tools such as Ant.
-  - **Security**: detects 42 security weaknesses drawn from the ISO/IEC 5055 standard, covering injection vulnerabilities (SQL, LDAP, XPath, OS command), hard-coded credentials and cryptographic keys, synchronization problems, resource-lifecycle problems, and other high-impact CWEs.
+  - **Cloud readiness**: Identifies 16 categories of concerns, including file system usage, credential management, messaging services, database connections, containerization gaps, session handling, remote communication patterns, and more.
+  - **Java upgrade**: Flags outdated Java versions, end-of-OSS-support frameworks (Spring Boot, Spring Cloud, Jakarta EE), hundreds of removed or deprecated APIs, and legacy build tools such as Ant.
+  - **Security**: Detects 42 security weaknesses drawn from the ISO/IEC 5055 standard, covering injection vulnerabilities (SQL, LDAP, XPath, OS command), hard-coded credentials and cryptographic keys, synchronization problems, resource-lifecycle problems, and other high-impact CWEs.
 
 - **Application understanding**: for legacy codebases, the assessment surfaces dependencies and technologies in use, so you get a clear picture of what your application relies on before you begin migrating.
 
@@ -36,7 +36,7 @@ The following sections describe the issue coverage for each domain in detail.
 | `cloud-readiness` | `messaging-service-migration` | Flags dependencies and connection strings for Amazon SQS/SNS, Kafka, RabbitMQ (AMQP), ActiveMQ (Artemis), IBM MQ, TIBCO EMS, Solace PubSub+, Amazon Kinesis, Apache Pulsar, and Google Cloud Pub/Sub.       | **Scalability & Reliability:** Legacy messaging brokers often rely on fixed endpoints and disk-based persistence that hinder horizontal scaling and high availability in cloud environments.     |
 | `cloud-readiness` | `database-migration`          | Detects connection strings, drivers, and timeout settings for MongoDB, MySQL, PostgreSQL, MSSQL, Cassandra, MariaDB, Oracle, Db2, Sybase ASE, Firebird, SQLite, Google Firestore, and Google Cloud Spanner. | **Reliability:** Self-managed or non-native databases lack automated cloud scaling. Hardcoded timeouts and fixed retry intervals can cause blocking and "retry storms" during partial outages.   |
 | `cloud-readiness` | `file-system-management`      | Identifies use of relative/absolute paths, home paths (`/home/`), `file://` schemes, and standard Java IO/NIO or Apache Commons IO calls for local storage access.                                          | **Statelessness:** Cloud containers are ephemeral. Writing to a local file system leads to data loss upon instance restarts or scaling operations; persistent data must be externalized.         |
-| `cloud-readiness` | `local-credential`            | Flags Java KeyStore (.jks) files, `KeyStore.load` method calls, and clear-text passwords (`password`, `pwd`) in property or XML files.                                                                      | **Security Risk:** Sensitive material stored in clear text or local files can be easily compromised if unauthorized individuals access the application environment or configuration files.       |
+| `cloud-readiness` | `local-credential`            | Flags Java KeyStore (`.jks`) files, `KeyStore.load` method calls, and clear-text passwords (`password`, `pwd`) in property or XML files.                                                                    | **Security Risk:** Sensitive material stored in clear text or local files can be easily compromised if unauthorized individuals access the application environment or configuration files.       |
 | `cloud-readiness` | `configuration-management`    | Detects `System.getenv`, `System.getProperty`, external `.properties`/`.xml`/`.ini` files, and Windows Registry access for application settings.                                                            | **Externalization:** OS-specific storage or local files aren't manageable at scale and can't be updated dynamically without code changes across all instances.                                   |
 | `cloud-readiness` | `session-management`          | Identifies data storage in `HttpSession` objects and the use of the "distributable" tag in web descriptors.                                                                                                 | **Scalability:** Standard HTTP sessions are unsuitable for cloud scaling; state must be externalized to a distributed cache to prevent data loss during traffic shifts between instances.        |
 | `cloud-readiness` | `remote-communication`        | Detects tightly coupled protocols (CORBA, RMI, JCA), unsecured HTTP/FTP protocols, Java Mail API, direct Socket/NIO channel usage, and hardcoded URLs.                                                      | **Cloud Compatibility & Security:** Tightly coupled interactions hinder scalability. Unsecured protocols and hardcoded URLs are vulnerable and brittle in dynamic cloud network environments.    |
@@ -58,7 +58,7 @@ The following sections describe the issue coverage for each domain in detail.
 
 ## Domain: Security (ISO 5055 guided)
 
-[ISO/IEC 5055](https://www.it-cisq.org/standards/code-quality-standards/) is an ISO standard for measuring the internal structure of a software product on four business-critical factors: Security, Reliability, Performance Efficiency, and Maintainability. These factors determine how trustworthy, dependable, and resilient a software system is. In essence, ISO 5055 is meant to **"find and prevent the 8% of flaws that cause 90% of production issues"**. ISO 5055 identifies the most critical and impactful CWEs under each quality characteristic: Reliability, Performance Efficiency, Security, and Maintainability. For GitHub Copilot Modernization, you detect against the curated CWEs on security defined in ISO 5055, as the following table reveals.
+[ISO/IEC 5055](https://www.it-cisq.org/standards/code-quality-standards/) is an ISO standard for measuring the internal structure of a software product on four business-critical factors: Security, Reliability, Performance Efficiency, and Maintainability. These factors determine how trustworthy, dependable, and resilient a software system is. In essence, ISO 5055 is meant to **"find and prevent the 8% of flaws that cause 90% of production issues"**. ISO 5055 identifies the most critical and impactful CWEs under each quality characteristic: Reliability, Performance Efficiency, Security, and Maintainability. For GitHub Copilot modernization, you detect against the curated CWEs on security defined in ISO 5055, as the following table reveals.
 
 | CWE_ID     | Title                                                                                      | Description                                                                                                                                                                                                                                                              |
 |:-----------|:-------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

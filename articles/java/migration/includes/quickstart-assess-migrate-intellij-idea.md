@@ -26,11 +26,11 @@ There are two ways to upgrade your JDK version. Both ways use the **GitHub Copil
 
 One way to upgrade your JDK version is to select **Upgrade Runtime & Frameworks** in the **QUICKSTART** section. Another way is to run the **Upgraded Java Runtime** task in the **TASKS - Upgrade Tasks** section. For more information, see [Quickstart: upgrade a Java project with GitHub Copilot app modernization](/java/upgrade/quickstart-upgrade).
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Upgrade options highlighted.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/upgrade-java-version-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Upgrade options highlighted.":::
 
 To upgrade the Spring framework or a third-party dependency, run the **Upgrade Java Framework** task in the **TASKS - Upgrade Tasks** section. For more information, see [Upgrade a Java framework or third-party dependency by using GitHub Copilot app modernization](/java/upgrade/framework-upgrade).
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Upgrade Java Framework task highlighted.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/upgrade-framework-version-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Upgrade Java Framework task highlighted.":::
 
 ## Assess cloud readiness
 
@@ -42,7 +42,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. On the sidebar, select the **GitHub Copilot app modernization** pane, where you can select **Start Assessment** or **Run Assessment** in the **ASSESSMENT** section.
 
-   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Migrate to Azure and Run Assessment buttons highlighted.":::
+   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/run-assessment-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization pane with the Migrate to Azure and Run Assessment buttons highlighted.":::
 
 1. The GitHub Copilot chat window with agent mode opens to call the modernization assessor to execute the app modernization assessment. Select **Continue** to confirm.
 
@@ -52,8 +52,8 @@ Use the following steps to start your migration process with solution assessment
 
 1. Upon completion of the analysis, the modernization assessor produces a categorized view of cloud readiness issues in an opened **Assessment Report**.
 
-   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-old.png" alt-text="Screenshot that shows the assessment report.":::
+   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-intellij-idea.png" alt-text="Screenshot that shows the assessment report.":::
 
 1. When reviewing the summary report, you can select **Migrate to Azure SQL Database (Spring)** from the solution list under the issue **Database Migration (Microsoft SQL)**. Then, select **Run Task** to move to the code remediation stage.
 
-   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution-old.png" alt-text="Screenshot that shows the Migrate to Azure SQL Database option with the Run Task button highlighted.":::
+   :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/confirm-sql-solution-intellij-idea.png" alt-text="Screenshot that shows the Migrate to Azure SQL Database option with the Run Task button highlighted.":::

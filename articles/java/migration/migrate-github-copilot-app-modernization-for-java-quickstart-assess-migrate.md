@@ -26,11 +26,11 @@ The following video demonstrates how GitHub Copilot modernization uses [AppCAT](
 > [!VIDEO https://www.youtube.com/embed/eX8rSMd4Dls]
 
 ::: zone pivot="vscode"
-[!INCLUDE [quickstart-assess-migrate-vscode.md](./includes/quickstart-assess-migrate-vscode.md)]
+[!INCLUDE [quickstart-assess-migrate-visual-studio-code.md](./includes/quickstart-assess-migrate-visual-studio-code.md)]
 ::: zone-end
 
 ::: zone pivot="intellij"
-[!INCLUDE [quickstart-assess-migrate-idea.md](./includes/quickstart-assess-migrate-idea.md)]
+[!INCLUDE [quickstart-assess-migrate-intellij-idea.md](./includes/quickstart-assess-migrate-intellij-idea.md)]
 ::: zone-end
 
 ## Apply a predefined task

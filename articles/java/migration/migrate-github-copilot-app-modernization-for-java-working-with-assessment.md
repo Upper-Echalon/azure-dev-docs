@@ -22,11 +22,11 @@ This comprehensive guide covers advanced assessment capabilities in GitHub Copil
 Application assessment is a critical first step in your modernization journey. This article covers the complete assessment workflow to help you effectively work with assessment reports, configure assessments for different scenarios, and manage assessment data throughout your modernization process.
 
 ::: zone pivot="vscode"
-[!INCLUDE [working-with-assessment-vscode.md](./includes/working-with-assessment-vscode.md)]
+[!INCLUDE [working-with-assessment-visual-studio-code.md](./includes/working-with-assessment-visual-studio-code.md)]
 ::: zone-end
 
 ::: zone pivot="intellij"
-[!INCLUDE [working-with-assessment-idea.md](./includes/working-with-assessment-idea.md)]
+[!INCLUDE [working-with-assessment-intellij-idea.md](./includes/working-with-assessment-intellij-idea.md)]
 ::: zone-end
 
 ## Next step

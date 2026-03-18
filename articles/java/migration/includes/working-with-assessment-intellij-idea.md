@@ -102,7 +102,7 @@ The assessment report consists of several key sections:
   - **Technologies**: Displays all embedded libraries grouped by functionality, enabling you to quickly view the technologies used in the application.
   - **Insights**: Displays file details and information to help you understand the detected technologies.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report dashboard.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dashboard-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report dashboard.":::
 
 #### Issues
 
@@ -119,32 +119,32 @@ Access this part by selecting the **Issues** tab. This tab provides a categorize
 | **Potential**       | Issues that might impact migration and need review.           |
 | **Optional**        | Low-impact issues. Fixing them is recommended but optional.   |
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report issue list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report issue list.":::
 
 For more information, you can expand each reported issue by selecting the title. The report provides the following information:
 
 - A list of files where the incidents occurred, along with the number of code lines impacted. If the file is a Java source file, then selecting the file line number directs you to the corresponding source report.
 - A detailed description of the issue. This description outlines the problem, provides any known solutions, and references supporting documentation regarding either the issue or resolution.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report issue detail.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report issue detail.":::
 
 #### Dependencies
 
 Access this part by selecting the **Dependencies** tab. This tab displays all Java-packaged dependencies found within the application.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report dependency list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-dependency-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report dependency list.":::
 
 #### Technologies
 
 Access this part by selecting the **Technologies** tab. This tab lists the occurrences of technologies, grouped by function, in the analyzed application. This report is an overview of the technologies found in the application, and is designed to assist you in quickly understanding each application's purpose.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report technology list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report technology list.":::
 
 #### Insights
 
 Access this part by selecting the **Insights** tab. Displays file details and information to help you understand the detected technologies.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report insight list.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-insight-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization assessment report insight list.":::
 
 ## Delete assessment report
 
@@ -152,4 +152,4 @@ If you don't want the report anymore, you can choose to delete it.
 
 To remove an assessment report, right-click **Assessment Report** and then select **Delete**.
 
-:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report-old.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report-old.png" alt-text="Screenshot that shows the GitHub Copilot app modernization delete an assessment report.":::
+:::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/delete-assessment-report-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot app modernization delete an assessment report.":::

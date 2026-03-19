@@ -15,7 +15,7 @@ mcp-cli.version: 2.0.0-beta.29+a69a87b82c6e5ae613659f0dfa7dda63fa2c15fa
 
 # Azure MCP Server tools for Azure App Service
 
-The Azure MCP Server lets you manage Azure App Service resources, including deploying and updating web apps and APIs, configuring and updating app settings, diagnosing runtime issues, and listing or retrieving app details, with natural language prompts.
+The Azure Model Context Protocol (MCP) Server lets you manage Azure App Service resources with natural language prompts. You can deploy and update web apps and APIs, configure app settings, diagnose runtime issues, and list or retrieve app details.
 
 Azure App Service is a fully managed platform for building, deploying, and scaling web apps and APIs; for more information, see [Azure App Service documentation](/azure/app-service/).
 
@@ -50,8 +50,8 @@ Example prompts include:
 | **Database** |  Required | The name of the database to connect to (for example, mydb). |
 | **Database server** |  Required | The server name or endpoint for the database (for example, myserver.database.windows.net). |
 | **Database type** |  Required | The type of database (for example, SqlServer, MySQL, PostgreSQL, CosmosDB). |
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Connection string** |  Optional | The connection string for the database. If not provided, a default will be generated. |
+| **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
+| **Connection string** |  Optional | The connection string for the database. If not provided, a default is generated. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: ❌ | Local Required: ❌ |
@@ -77,7 +77,7 @@ Example prompts include:
 |-----------------------|----------------------|-------------|
 | **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
 | **Detector name** |  Required | The name of the diagnostic detector to run (for example, Availability, CpuAnalysis, MemoryAnalysis). |
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 | **End time** |  Optional | The end time in ISO format (for example, 2023-01-01T00:00:00Z). |
 | **Interval** |  Optional | The time interval (for example, PT1H for 1 hour, PT5M for 5 minutes). |
 | **Start time** |  Optional | The start time in ISO format (for example, 2023-01-01T00:00:00Z). |
@@ -101,7 +101,7 @@ Example prompts include:
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 | **Deployment ID** |  Optional | The ID of the deployment. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
@@ -157,7 +157,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- Required parameters: 2 - `App`, `Resource group` -->
 
-This tool retrieves detailed information about detectors for a specified Azure App Service web app. For each detector it returns the detector name, detector type, description, category, and analysis types. The results help you investigate issues and understand the diagnostics available for the web app.
+This tool retrieves detailed information about detectors for a specified Azure App Service web app. For each detector, it returns the detector name, detector type, description, category, and analysis types. The results help you investigate issues and understand the diagnostics available for the web app.
 
 Example prompts include:
 
@@ -166,7 +166,7 @@ Example prompts include:
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
@@ -178,8 +178,8 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 This tool updates an application setting for an App Service web app. You can choose one of three update types: `add`, `set`, or `delete`.
 
 - `add`: Creates a new application setting with the specified name and value. If the application setting already exists, the operation fails and returns an error.
-- `set`: Creates or updates the value of an application setting. If the application setting does not exist, `set` behaves like `add`. If it exists, the value is overwritten.
-- `delete`: Removes the specified application setting. If the application setting does not exist, no action is taken.
+- `set`: Creates or updates the value of an application setting. If the application setting doesn't exist, `set` behaves like `add`. If it exists, the value is overwritten.
+- `delete`: Removes the specified application setting. If the application setting doesn't exist, no action is taken.
 
 For the `add` and `set` update types, both the application setting name and value are required. For the `delete` update type, only the application setting name is required.
 

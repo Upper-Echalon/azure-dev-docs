@@ -3,7 +3,7 @@
  ms.author: diberry
  ms.service: azure-mcp-server
  ms.topic: include
- ms.date: 02/27/2026
+ ms.date: 03/11/2026
 ---
 
 ## Available tools
@@ -14,8 +14,8 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 
 | Product, tool, or service | Namespace | Description |
 |------|------|--------------|
-| [Azure AI best practices](../../tools/azure-ai-best-practices.md) | `azureaibestpractices` | Get recommendations for building AI applications with Azure using natural language prompts. |
-| [Azure best practices](../../tools/azure-best-practices.md) | `get_bestpractices` | Get guidance on Azure Functions development, deployment, and Azure SDK usage. |
+| [Azure best practices](../../tools/azure-best-practices.md) | `get azure bestpractices get` | Get guidance on Azure Functions development, deployment, and Azure SDK usage. |
+| [Azure AI best practices for app development](../../tools/azure-best-practices.md) | `get azure bestpractices ai app` | Get best practices and code generation guidance for building AI applications in Azure. Use it when you need recommendations on writing code for AI agents, chatbots, workflows, or any AI/LLM features. Additionally, this command provides guidance for code generation on Microsoft Foundry for application development. |
 | [Terraform best practices for Azure](../../tools/azure-terraform-best-practices.md) | `azureterraformbestpractices` | Get guidance on implementing Terraform for Azure resources. |
 
 ### AI and Machine Learning
@@ -130,6 +130,7 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 | [Azure Quick Review CLI](../../tools/azure-compliance-quick-review.md) | `extension` | Generate compliance and security reports for Azure resources. |
 | [Azure Quotas](../../tools/azure-quotas.md) | `quota` | Manage Azure resource quotas and limits. |
 | [Azure Resource Health](../../tools/azure-resource-health.md) | `resourcehealth` | Check the health status of Azure resources. |
+| [Azure Well-Architected Framework](../../tools/azure-well-architected-framework.md) | `wellarchitectedframework` | Get architectural best practices, design patterns, and recommendations for Azure services based on the five Well-Architected Framework pillars. |
 | [Azure Workbooks](../../tools/azure-monitor.md) | `workbooks` | Create, manage, and update Azure Workbooks for data visualization and reporting. |
 | [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups. |
 | [Subscription](../../tools/subscription.md) | `subscription` | List Azure subscriptions. |

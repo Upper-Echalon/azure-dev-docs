@@ -124,6 +124,7 @@ Example prompts include:
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **App** |  Optional | The name of the Azure App Service web app (for example, contoso-webapp). |
+| **Resource group** |  Optional | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌

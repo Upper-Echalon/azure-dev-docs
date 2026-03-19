@@ -46,7 +46,7 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
+| **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Database** |  Required | The name of the database to connect to (for example, mydb). |
 | **Database server** |  Required | The server name or endpoint for the database (for example, myserver.database.windows.net). |
 | **Database type** |  Required | The type of database (for example, SqlServer, MySQL, PostgreSQL, CosmosDB). |
@@ -54,17 +54,14 @@ Example prompts include:
 | **Connection string** |  Optional | The connection string for the database. If not provided, a default is generated. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: ❌ | Local Required: ❌ |
+
+Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Diagnose web app
 
 <!-- @mcpcli appservice webapp diagnostic diagnose -->
 
 This tool runs a specified detector on an Azure App Service web app and returns the detector's diagnostic results. Provide `App`, `Detector name`, and `Resource group` to identify the web app and the detector to run. Optionally provide `Start time`, `End time`, and `Interval` to limit the analysis to a specific time range. The output includes the detector results and related diagnostic data to help you investigate app health and behavior.
-
-Examples:
-- Diagnose App Service 'contoso-webapp' with detector 'Availability' in resource group 'contoso-rg'.
-- Diagnose App Service 'contoso-webapp' with detector 'CpuAnalysis' in resource group 'contoso-rg' for the period from '2026-03-01T00:00:00Z' to '2026-03-02T00:00:00Z' with interval 'PT5M'.
 
 <!-- Required parameters: 3 - 'App', 'Detector name', 'Resource group' -->
 
@@ -75,14 +72,15 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
-| **Detector name** |  Required | The name of the diagnostic detector to run (for example, Availability, CpuAnalysis, MemoryAnalysis). |
+| **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
+| **Detector name** |  Required | The name of the diagnostic detector to run (for example, `Availability`, `CpuAnalysis`, `MemoryAnalysis`). |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
-| **End time** |  Optional | The end time in ISO format (for example, 2023-01-01T00:00:00Z). |
-| **Interval** |  Optional | The time interval (for example, PT1H for 1 hour, PT5M for 5 minutes). |
-| **Start time** |  Optional | The start time in ISO format (for example, 2023-01-01T00:00:00Z). |
+| **End time** |  Optional | The end time in ISO format (for example, `2023-01-01T00:00:00Z`). |
+| **Interval** |  Optional | The time interval (for example, `PT1H` for 1 hour, `PT5M` for 5 minutes). |
+| **Start time** |  Optional | The start time in ISO format (for example, `2023-01-01T00:00:00Z`). |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get deployment details
@@ -100,11 +98,12 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
+| **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 | **Deployment ID** |  Optional | The ID of the deployment. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get web app details
@@ -123,10 +122,11 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Optional | The name of the Azure App Service web app (for example, contoso-webapp). |
+| **App** |  Optional | The name of the Azure App Service web app (for example, `contoso-webapp`). |
 | **Resource group** |  Optional | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get app settings
@@ -146,10 +146,11 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service web app (for example, my-webapp). |
+| **App** |  Required | The name of the Azure App Service web app (for example, `my-webapp`). |
 | **Resource group** |  Required | The name of the Azure resource group that contains the web app (for example, prod-rg). |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ✅ | Local Required: ❌
 
 ## List diagnostic detectors
@@ -166,10 +167,11 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
+| **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Update app settings
@@ -194,13 +196,14 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Required | The name of the Azure App Service (for example, my-webapp). |
+| **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Resource group** |  Required | The name of the Azure resource group that contains the web app. |
 | **Setting name** |  Required | The name of the application setting. |
 | **Setting update type** |  Required | The type of update to perform on the application setting. Valid values: `add`, `set`, `delete`. |
 | **Setting value** |  Optional | The value of the application setting. Required for `add` and `set` update types. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Related content

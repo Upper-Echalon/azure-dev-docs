@@ -5,7 +5,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Configure before running assessment
 
-Before running assessment, configure the assessment by selecting **Configure Assessment** in the GitHub Copilot modernization **Assessment** pane.
+Before running the assessment, configure it by selecting **Configure Assessment** in the GitHub Copilot modernization **Assessment** pane.
 
 :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/configure-assessment-report.png" alt-text="Screenshot that shows the GitHub Copilot modernization Assessment pane with the Configure Assessment button highlighted.":::
 
@@ -17,27 +17,27 @@ By default, the assessment runs with Azure Kubernetes Service (AKS), Azure App S
 
 - `target`: the Azure compute service to run the apps on. Choose multiple targets if you haven't decided which one to use. You can then compare the targets on the assessment report.
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `azure-aks`            | Best practices for deploying an app to Azure Kubernetes Service.       |
-  | `azure-appservice`     | Best practices for deploying an app to Azure App Service.              |
-  | `azure-container-apps` | Best practices for deploying an app to Azure Container Apps.           |
+  | Value                  | Description                                                      |
+  |------------------------|------------------------------------------------------------------|
+  | `azure-aks`            | Best practices for deploying an app to Azure Kubernetes Service. |
+  | `azure-appservice`     | Best practices for deploying an app to Azure App Service.        |
+  | `azure-container-apps` | Best practices for deploying an app to Azure Container Apps.     |
 
 - `capability`: the target technology to modernize the apps towards.
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `containerization`     | Best practices for containerizing applications.                        |
-  | `openjdk11`            | Best practices for migrating to OpenJDK 11.                            |
-  | `openjdk17`            | Best practices for migrating to OpenJDK 17.                            |
-  | `openjdk21`            | Best practices for migrating to OpenJDK 21.                            |
+  | Value                  | Description                                     |
+  |------------------------|-------------------------------------------------|
+  | `containerization`     | Best practices for containerizing applications. |
+  | `openjdk11`            | Best practices for migrating to OpenJDK 11.     |
+  | `openjdk17`            | Best practices for migrating to OpenJDK 17.     |
+  | `openjdk21`            | Best practices for migrating to OpenJDK 21.     |
 
 - `os`: the target operating system to run the apps on.
 
-  | Value                  | Description                                                            |
-  |------------------------|------------------------------------------------------------------------|
-  | `linux`                | Best practices for migrating applications to the Linux platform.       |
-  | `windows`              | Best practices for migrating applications to the Windows platform.     |
+  | Value                  | Description                                                        |
+  |------------------------|--------------------------------------------------------------------|
+  | `linux`                | Best practices for migrating applications to the Linux platform.   |
+  | `windows`              | Best practices for migrating applications to the Windows platform. |
 
 - `mode`: the analysis mode.
 
@@ -51,7 +51,7 @@ By default, the assessment runs with Azure Kubernetes Service (AKS), Azure App S
 
 The following examples describe some configurations:
 
-- Example one: you'd like to migrate your apps to AKS as linux containers and want to understand what are the issues to be fixed. Use the following configuration:
+- Example one: You want to migrate your apps to AKS as Linux containers and want to understand what issues need to be fixed. Use the following configuration:
 
   ```yaml
   appcat:
@@ -62,7 +62,7 @@ The following examples describe some configurations:
     mode: issue-only
   ```
 
-- Example two: you'd like to migrate your apps to App Service Linux and want to understand what are the issues to be fixed. Use the following configuration:
+- Example two: You want to migrate your apps to App Service Linux and want to understand what issues need to be fixed. Use the following configuration:
 
   ```yaml
   appcat:
@@ -73,7 +73,7 @@ The following examples describe some configurations:
     mode: issue-only
   ```
 
-- Example three: you'd like to modernize your apps to JDK21 and want to understand what are the issues to be fixed. Use the following configuration:
+- Example three: You want to modernize your apps to JDK21 and want to understand what issues need to be fixed. Use the following configuration:
 
   ```yaml
   appcat:
@@ -82,7 +82,7 @@ The following examples describe some configurations:
     mode: issue-only
   ```
 
-After the tool runs an assessment, the interactive dashboard opens automatically, providing comprehensive analysis results.
+After the tool runs an assessment, it automatically opens the interactive dashboard, which provides comprehensive analysis results.
 
 ## Interpret the assessment report
 
@@ -104,24 +104,24 @@ The assessment report consists of several key sections:
 
 #### Issues
 
-Access this part by selecting the **Issues** tab. This tab provides a categorized issues list of various aspects of Cloud Readiness and Java Upgrade that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
+Access this part by selecting the **Issues** tab. This tab provides a categorized list of issues for various aspects of cloud readiness and Java upgrade that you need to address to successfully migrate the application to Azure. The following tables describe the **Domain** and **Criticality** values:
 
 | Domain              | Description                                                                             |
 |---------------------|-----------------------------------------------------------------------------------------|
 | **Cloud Readiness** | Evaluates app dependencies to suggest Azure services and ensure cloud-native readiness. |
 | **Java Upgrade**    | Identifies JDK and framework issues for version upgrade.                                |
 
-| Criticality         | Description                                                   |
-|---------------------|---------------------------------------------------------------|
-| **Mandatory**       | Issues that must be fixed for migration to Azure.             |
-| **Potential**       | Issues that might impact migration and need review.           |
-| **Optional**        | Low-impact issues. Fixing them is recommended but optional.   |
+| Criticality         | Description                                                 |
+|---------------------|-------------------------------------------------------------|
+| **Mandatory**       | Issues that you must fix for migration to Azure.            |
+| **Potential**       | Issues that might impact migration and need review.         |
+| **Optional**        | Low-impact issues. Fixing them is recommended but optional. |
 
 :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot modernization assessment report issue list.":::
 
-For more information, you can expand each reported issue by selecting the title. The report provides the following information:
+For more information, expand each reported issue by selecting the title. The report provides the following information:
 
-- A list of files where the incidents occurred, along with the number of code lines impacted. If the file is a Java source file, then selecting the file line number directs you to the corresponding source report.
+- A list of files where the incidents occurred, along with the number of code lines impacted. If the file is a Java source file, selecting the file line number directs you to the corresponding source report.
 - A detailed description of the issue. This description outlines the problem, provides any known solutions, and references supporting documentation regarding either the issue or resolution.
 
 :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-issue-detail-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot modernization assessment report issue detail.":::
@@ -134,7 +134,7 @@ Access this part by selecting the **Dependencies** tab. This tab displays all Ja
 
 #### Technologies
 
-Access this part by selecting the **Technologies** tab. This tab lists the occurrences of technologies, grouped by function, in the analyzed application. This report is an overview of the technologies found in the application, and is designed to assist you in quickly understanding each application's purpose.
+Access this part by selecting the **Technologies** tab. This tab lists the occurrences of technologies, grouped by function, in the analyzed application. This report provides an overview of the technologies found in the application, and is designed to assist you in quickly understanding each application's purpose.
 
 :::image type="content" source="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-intellij-idea.png" lightbox="../media/migrate-github-copilot-app-modernization-for-java/assessment-report-technology-list-intellij-idea.png" alt-text="Screenshot that shows the GitHub Copilot modernization assessment report technology list.":::
 
@@ -146,7 +146,7 @@ Access this part by selecting the **Insights** tab. Displays file details and in
 
 ## Delete assessment report
 
-If you don't want the report anymore, you can choose to delete it.
+If you don't want the report anymore, you can delete it.
 
 To remove an assessment report, right-click **Assessment Report** and then select **Delete**.
 

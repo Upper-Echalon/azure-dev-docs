@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Assess and Migrate a Java Project Using GitHub Copilot modernization"
+title: Assess and Migrate a Java Project Using GitHub Copilot modernization
 titleSuffix: Azure
-description: Shows you how to use GitHub Copilot modernization to assess and migrate a Java project.
+description: Learn how to assess and migrate a Java project to Azure using GitHub Copilot modernization. Follow this quickstart to streamline your migration process.
 author: KarlErickson
 ms.author: karler
 ms.reviewer: haozhan
@@ -35,34 +35,34 @@ The following video demonstrates how GitHub Copilot modernization uses [AppCAT](
 
 ## Apply a predefined task
 
-For migration, Copilot provides predefined tasks for common migration scenarios that you might face when migrating to Azure. For example, with the **mi-sql-public-demo** sample, the **Database Migration (Microsoft SQL)** task changes the Azure SQL database connection to use Azure Managed Identity instead of a username and password.
+For migration, Copilot provides predefined tasks for common migration scenarios that you might face when migrating to Azure. For example, by using the `mi-sql-public-demo` sample, the **Database Migration (Microsoft SQL)** task changes the Azure SQL database connection to use Azure Managed Identity instead of a username and password.
 
 To apply a predefined task, use the following steps:
 
 1. In the **Assessment Report**, select **Run Task**. The Copilot chat window opens with Agent Mode selected.
 
-1. The Copilot agent uses various tools for GitHub Copilot modernization and each tool might require confirmation to proceed. **plan.md** and **progress.md** are generated first, and you can review **plan.md** and make changes there, if necessary.
+1. The Copilot agent uses various tools for GitHub Copilot modernization, and each tool might require confirmation to proceed. The agent first generates `plan.md` and `progress.md`. You can review `plan.md` and make changes there, if necessary.
 
-1. Manually input **continue** to confirm and start the migration process.
+1. Manually enter **continue** to confirm and start the migration process.
 
 1. Before it makes any code changes, the agent checks the version control system status and checks out a new branch for migration.
 
-1. Repeatedly select or input **Continue** to confirm the use of tools or commands and wait for the code changes to finish.
+1. Repeatedly select or enter **Continue** to confirm the use of tools or commands, and wait for the code changes to finish.
 
 > [!NOTE]
-> In Visual Studio Code, GitHub Copilot modernization uses the `AppModernization` custom agent with Claude Sonnet 4.5 by default for best results when updating Java code to migrate to Azure. It falls back to the 'auto' model if Sonnet 4.5 is not available to you. You can configure the custom agent to [modify the 'model' setting](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-file-structure) by selecting **Configure Custom Agents** from the **Agent** menu. Alternatively, you can use the language model picker in the chat window to switch models for the current chat session.
+> In Visual Studio Code, GitHub Copilot modernization uses the `AppModernization` custom agent with Claude Sonnet 4.5 by default for best results when updating Java code to migrate to Azure. It falls back to the `auto` model if Sonnet 4.5 isn't available to you. You can configure the custom agent to [modify the `model` setting](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-file-structure) by selecting **Configure Custom Agents** from the **Agent** menu. Alternatively, you can use the language model picker in the chat window to switch models for the current chat session.
 
 ### Validation iteration
 
-After the code changes finish, manually input **continue** to proceed with the validation and fix iteration loop. This loop includes the following five parts:
+After you finish the code changes, manually enter **continue** to proceed with the validation and fix iteration loop. This loop includes the following five parts:
 
-- Apply the `Validate-CVEs` tool. This tool attempts to detected Common Vulnerabilities and Exposures (CVEs) in current dependencies and fixes them.
+- Apply the `Validate-CVEs` tool. This tool attempts to detect Common Vulnerabilities and Exposures (CVEs) in current dependencies and fix them.
 - Apply the `Build-Project` tool. This tool attempts to resolve any build errors.
-- Apply the `Consistency-Validation` tool. This tool analyzes the codes for functional consistency.
+- Apply the `Consistency-Validation` tool. This tool analyzes the code for functional consistency.
 - Apply the `Run-Test` tool. This tool analyzes the project for unit test failures and automatically generates a plan to fix them. The `Run-Test` tool iteratively runs unit tests and fixes any failures.
 - Apply the `Completeness-Validation` tool. This tool catches migration items missed in initial code migration and fixes them.
 
-After all processes complete, input **continue** to generate the migration summary as the final step. Review the code changes and confirm them by selecting **Keep**.
+After all processes complete, enter **continue** to generate the migration summary as the final step. Review the code changes and confirm them by selecting **Keep**.
 
 ## Generate unit test cases
 

@@ -14,13 +14,13 @@ ms.collection: ce-skilling-ai-copilot
 - [Maven](https://maven.apache.org/download.cgi) or [Gradle](https://gradle.org/install/) to build Java projects.
 
 > [!NOTE]
-> If you're using Gradle, only the Gradle wrapper version 5+ is supported. The Kotlin Domain Specific Language (DSL) isn't supported.
+> If you're using Gradle, only the Gradle wrapper version 5 or later is supported. The Kotlin Domain Specific Language (DSL) isn't supported.
 >
 > The function `My Tasks` isn't supported yet for IntelliJ IDEA.
 
 ## Upgrade JDK and dependency versions
 
-There are two ways to upgrade your JDK version. Both ways use the **GitHub Copilot modernization** pane in IntelliJ IDEA, which you can access from the sidebar.
+You can upgrade your JDK version in two ways. Both ways use the **GitHub Copilot modernization** pane in IntelliJ IDEA, which you can access from the sidebar.
 
 One way to upgrade your JDK version is to select **Upgrade Runtime & Frameworks** in the **QUICKSTART** section. Another way is to run the **Upgraded Java Runtime** task in the **TASKS - Upgrade Tasks** section. For more information, see [Quickstart: upgrade a Java project with GitHub Copilot modernization](/java/upgrade/quickstart-upgrade).
 
@@ -36,7 +36,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. Clone the [Java migration copilot samples](https://github.com/Azure-Samples/java-migration-copilot-samples) repository and then check out to the **source** branch.
 
-1. In IntelliJ IDEA, open the **mi-sql-public-demo** project folder in the samples repository.
+1. In IntelliJ IDEA, open the `mi-sql-public-demo` project folder in the samples repository.
 
 1. On the sidebar, select the **GitHub Copilot modernization** pane, where you can select **Start Assessment** or **Run Assessment** in the **ASSESSMENT** section.
 
@@ -44,7 +44,7 @@ Use the following steps to start your migration process with solution assessment
 
 1. The GitHub Copilot chat window with agent mode opens to call the modernization assessor to execute the modernization assessment. Select **Continue** to confirm.
 
-1. The modernization assessor now opens **appcat.log**. This file shows the logs for running AppCAT, which performs the app assessment. Select **Continue** to confirm again.
+1. The modernization assessor now opens `appcat.log`. This file shows the logs for running AppCAT, which performs the app assessment. Select **Continue** to confirm again.
 
 1. The modernization assessor verifies your local environment first. If the AppCAT and its dependencies aren't installed, the agent helps you install them. After installation, the agent calls AppCAT to assess the current project. This step could take several minutes to complete.
 

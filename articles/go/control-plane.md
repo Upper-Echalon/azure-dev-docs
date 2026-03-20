@@ -5,6 +5,7 @@ ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
 ms.devlang: golang
+ai-usage: ai-assisted
 ---
 
 # Use the Azure SDK for Go for control plane operations
@@ -36,20 +37,20 @@ Common scenarios for Go control plane automation include:
 - An Azure subscription
 - Azure CLI installed for local authentication (`az login`)
 
-Management packages live under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. Install the identity package plus only the `arm*` packages you plan to use:
+Management packages are under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. Install the identity package and only the `arm*` packages you plan to use.
 
 ```bash
 go get github.com/Azure/azure-sdk-for-go/sdk/azidentity
 go get github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources
 ```
 
-Many request models use pointer fields for optional ARM properties. Samples often import `github.com/Azure/azure-sdk-for-go/sdk/azcore/to` so you can write `to.Ptr("eastus")` or `to.Ptr("Standard")` without creating one-off helper functions.
+Many request models use pointer fields for optional Azure Resource Manager properties. Samples often import `github.com/Azure/azure-sdk-for-go/sdk/azcore/to` so you can write `to.Ptr("eastus")` or `to.Ptr("Standard")` without creating one-off helper functions.
 
 ## Authentication
 
 All management operations require an authenticated credential from the [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package. The package provides credential types for every environment - local development, CI/CD pipelines, and production workloads running in Azure. All credential types implement the same `azcore.TokenCredential` interface, so you can swap them without changing client code.
 
-Once you have a credential, create a client factory for the package and then ask it for the typed client you need:
+After you get a credential, create a client factory for the package and then ask it for the typed client you need:
 
 ```go
 // Create credential that auto-discovers authentication (Azure CLI, env vars, managed identity)
@@ -74,13 +75,13 @@ if err != nil {
 vmClient := clientFactory.NewVirtualMachinesClient()
 ```
 
-This package-and-client-factory pattern is consistent across the `resourcemanager` modules and is a useful shortcut when you're scanning pkg.go.dev or asking an agent to find the right client for a task.
+This package and client factory pattern is consistent across the `resourcemanager` modules. It's a useful shortcut when you're scanning pkg.go.dev or asking an agent to find the right client for a task.
 
 For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
 ## Long-running operations
 
-Many management operations (creating clusters, deleting resource groups, upgrading infrastructure) are asynchronous. Methods prefixed with `Begin` start the server-side work and return a poller immediately, so your code can decide whether to wait or keep doing other work:
+Many management operations, such as creating clusters, deleting resource groups, and upgrading infrastructure, run asynchronously. Methods prefixed with `Begin` start the server-side work and return a poller immediately. Your code can decide whether to wait or keep doing other work:
 
 ```go
 // Start an asynchronous operation (returns immediately)
@@ -96,7 +97,7 @@ if err != nil {
 }
 ```
 
-A successful `Begin*` call only means Azure accepted the request. The operation can still fail later while the poller runs, which is why both the initial call and `PollUntilDone` need error handling. Use `PollUntilDone` when you want the simplest flow, or use `poller.Poll` and `poller.Done` when you need custom wait logic or progress reporting.
+A successful `Begin*` call only means Azure accepted the request. The operation can still fail later while the poller runs. That's why both the initial call and `PollUntilDone` need error handling. Use `PollUntilDone` when you want the simplest flow. Use `poller.Poll` and `poller.Done` when you need custom wait logic or progress reporting.
 
 ## Error handling
 
@@ -117,14 +118,14 @@ Most `CreateOrUpdate` operations are idempotent. Calling them on an existing res
 
 ## Common pitfalls for automation
 
-- **No timeouts on `context.Context`** - long-running operations (cluster provisioning, deletions) hang indefinitely without `context.WithTimeout`.
-- **Missing subscription ID** - baking subscription IDs into code breaks across environments; read from `AZURE_SUBSCRIPTION_ID`.
-- **Ignoring poller errors** - errors from `Begin*` and `PollUntilDone` are distinct; one can fail while the other succeeds.
-- **Assuming `CreateOrUpdate` requires idempotency shim** - the SDK's `CreateOrUpdate` already handles retries; wrapping it in custom logic causes double-updates.
+- **No timeouts on `context.Context`** - long-running operations, such as cluster provisioning and deletions, hang indefinitely without `context.WithTimeout`.
+- **Missing subscription ID** - baking subscription IDs into code breaks across environments. Read from `AZURE_SUBSCRIPTION_ID`.
+- **Ignoring poller errors** - errors from `Begin*` and `PollUntilDone` are distinct. One can fail while the other succeeds.
+- **Assuming `CreateOrUpdate` requires idempotency shim** - the SDK's `CreateOrUpdate` already handles retries. Wrapping it in custom logic causes double-updates.
 
 ## Provision a resource example
 
-This example shows the common control plane pattern: authenticate, create a resource with tags and timeout, and check the result. Use this as a template for all management operations because the credential, context, and subscription ID pattern applies to all `arm*` clients.
+This example shows the common control plane pattern: authenticate, create a resource with tags and timeout, and check the result. Use this pattern as a template for all management operations because the credential, context, and subscription ID pattern applies to all `arm*` clients.
 
 ```go
 package main
@@ -227,13 +228,13 @@ For full VM samples and operation-specific guidance, see the existing [virtual m
 
 ## Key Vault
 
-The [armkeyvault](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/keyvault/armkeyvault) package manages the lifecycle of Azure Key Vault instances. This is the control plane package for vault infrastructure. Use the separate `azsecrets`, `azkeys`, and `azcertificates` data plane packages to read and write secrets, keys, and certificates.
+The [armkeyvault](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/keyvault/armkeyvault) package manages the lifecycle of Azure Key Vault instances. This package handles the control plane for vault infrastructure. Use the separate `azsecrets`, `azkeys`, and `azcertificates` data plane packages to read and write secrets, keys, and certificates.
 
-Use it to provision vaults with the appropriate SKU and security settings (soft delete, purge protection), manage access policies for principals, configure network access and private endpoints, and enable diagnostic logging. You can also integrate vault provisioning into application onboarding workflows.
+Use this package to provision vaults with the appropriate SKU and security settings, such as soft delete and purge protection. You can also manage access policies for principals, configure network access and private endpoints, and enable diagnostic logging. You can integrate vault provisioning into application onboarding workflows.
 
-[Key Vault management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/keyvault)
+[Key Vault management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/keyvault).
 
-For the runtime-side Key Vault clients, see [Use the Azure SDK for Go for data plane operations](data-plane.md).
+For runtime-side Key Vault clients, see [Use the Azure SDK for Go for data plane operations](data-plane.md).
 
 For a getting started guide, see the [armkeyvault package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/keyvault/armkeyvault#section-readme).
 
@@ -241,7 +242,7 @@ For a getting started guide, see the [armkeyvault package documentation](https:/
 
 The [armcontainerservice](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/containerservice/armcontainerservice) package manages Azure Kubernetes Service clusters across their full lifecycle.
 
-Use it to create clusters with configurable networking, Kubernetes version, and managed identity. You can add and scale node pools, upgrade control plane and node versions (including blue-green strategies), enable add-ons like Azure Policy and monitoring, and query cluster health for operational dashboards. All cluster operations are long-running and follow the poller pattern.
+Use this package to create clusters with configurable networking, Kubernetes version, and managed identity. You can add and scale node pools, upgrade control plane and node versions, enable add-ons like Azure Policy and monitoring, and query cluster health for operational dashboards. All cluster operations are long-running and follow the poller pattern.
 
 [AKS management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/containerservice).
 
@@ -251,7 +252,7 @@ For a getting started guide, see the [armcontainerservice package documentation]
 
 The [armauthorization](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/authorization/armauthorization) package manages Azure Role-Based Access Control. Use it to automate least-privilege access policies across subscriptions and resource groups.
 
-Use it to list and search built-in roles, assign roles to principals (users, service principals, managed identities, or groups) at any scope, create custom role definitions with fine-grained permissions, and audit assignments for compliance reporting and drift detection. Prefer assigning roles to groups rather than individuals, and use built-in roles where possible.
+Use it to list and search built-in roles, assign roles to principals (users, service principals, managed identities, or groups) at any scope, create custom role definitions with fine-grained permissions, and audit assignments for compliance reporting and drift detection. Assign roles to groups rather than individuals, and use built-in roles where possible.
 
 [RBAC management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/authorization).
 

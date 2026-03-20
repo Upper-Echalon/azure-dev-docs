@@ -5,17 +5,16 @@ ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
 ms.devlang: golang
+ai-usage: ai-assisted
 ---
 
-# Overview of the Azure SDK for Go management libraries
+# Overview of the Azure SDK for Go libraries
 
-As explained in [What is the Azure SDK for Go?](overview.md), the Azure SDK for Go includes both management libraries and data plane client libraries. This article stays at the overview level so you can understand what the management libraries are, how they fit into Azure workflows, and where to go next for Go-specific patterns.
+The Azure SDK for Go includes both management libraries and data plane client libraries. This article provides an overview so you can understand what the libraries are, how they fit into Azure workflows, and where to go next for Go-specific patterns.
 
-Management libraries are the packages you use to provision, configure, and govern Azure resources. In Azure documentation, these operations are also called **control plane** operations. For the full list of management libraries, see the [Azure SDK for Go management modules](https://azure.github.io/azure-sdk/releases/latest/mgmt/go.html).
+## Management libraries
 
-## What management libraries are used for
-
-Use the management libraries when your Go code needs to work with Azure resources themselves rather than the data stored inside them. Typical tasks include:
+Use the management libraries libraries to provision, configure, and govern Azure resources. They focus on managing the resources themselves rather than the data stored inside them. Management libraries perform **control plane** operations, which manage Azure resources and service configuration. Typical tasks include:
 
 - Creating or updating resource groups, virtual networks, or virtual machines.
 - Configuring security settings, identities, access policies, and diagnostics.
@@ -24,23 +23,30 @@ Use the management libraries when your Go code needs to work with Azure resource
 
 Most Go management packages live under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. They share common SDK building blocks such as Azure Identity credentials, the Azure Core HTTP pipeline, structured errors, and `Begin*` methods for long-running operations.
 
-## Control plane and data plane
+## Client libraries
 
-Azure SDK documentation often uses two related terms:
+Use the client libraries when your Go application needs to work with data or runtime surfaces inside an already provisioned Azure service. Client libraries perform **data plane** operations, which work with the data stored in or flowing through a service. Typical tasks include:
 
-- **Control plane** operations manage Azure resources and service configuration. For example, creating a storage account, updating a Key Vault access policy, or deleting a resource group.
-- **Data plane** operations work with the data or runtime surface inside an already provisioned service. For example, uploading blobs, sending Service Bus messages, or reading Key Vault secrets.
+- Uploading and downloading blobs from a storage account.
+- Sending and receiving messages with Service Bus or Event Hubs.
+- Reading, writing, or deleting records in a database.
+- Retrieving secrets from Key Vault.
+- Executing queries or operations against provisioned resources.
 
-A single Go solution often uses both planes. You might use a management library once during setup to create a storage account, and then use a data plane client in the application path to upload and download blobs.
+Client library packages have names like `azblob`, `azstorage`, `azkeyvault/azsecrets`, and `azservicebus`. Like management libraries, they share common SDK building blocks including Azure Identity credentials, the Azure Core HTTP pipeline, and structured error handling. Client libraries are typically used after you've already provisioned the underlying Azure service using management libraries.
 
-If you want the Go-specific patterns and examples for each plane, continue with these articles:
+## Using both management and client libraries
 
-- [Use the Azure SDK for Go for control plane operations](control-plane.md)
-- [Use the Azure SDK for Go for data plane operations](data-plane.md)
+A single Go solution can use both management and client libraries across control and data planes. For example, you might use a management library during setup to create a storage account (control plane), and then use a client library in the application to upload and download blobs (data plane). Understanding the distinction helps you choose the right library for each task in your workflow.
+
+If you want the Go-specific patterns and examples for each plane, see these articles:
+
+- [Use the Azure SDK for Go for control plane operations](control-plane.md).
+- [Use the Azure SDK for Go for data plane operations](data-plane.md).
 
 ## Installing packages
 
-In most Go projects, you install only the packages you need for the services your application manages. Management packages are versioned Go modules, so you add them with `go get`.
+In most Go projects, install only the packages you need for the services your application manages. Management packages are versioned Go modules, so add them by using `go get`.
 
 For example, to install a management package plus the common identity dependency:
 
@@ -85,14 +91,14 @@ When you know the Azure service you want to automate, start with the management 
 
 For example:
 
-- `armresources` for resource groups and generic resource operations
-- `armcompute` for virtual machines and related compute resources
-- `armnetwork` for virtual networks, subnets, and network security resources
-- `armkeyvault` for vault provisioning and configuration
+- `armresources` for resource groups and generic resource operations.
+- `armcompute` for virtual machines and related compute resources.
+- `armnetwork` for virtual networks, subnets, and network security resources.
+- `armkeyvault` for vault provisioning and configuration.
 
 ## Next steps
 
-- [Use the Azure SDK for Go for control plane operations](control-plane.md)
-- [Use the Azure SDK for Go for data plane operations](data-plane.md)
-- [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md)
-- [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)
+- [Use the Azure SDK for Go for control plane operations](control-plane.md).
+- [Use the Azure SDK for Go for data plane operations](data-plane.md).
+- [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md).
+- [Azure SDK for Go samples on GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).

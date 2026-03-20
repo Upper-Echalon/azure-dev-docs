@@ -5,20 +5,21 @@ ms.date: 03/13/2026
 ms.topic: overview
 ms.custom: devx-track-go
 ms.devlang: golang
+ai-usage: ai-assisted
 ---
 
 # Use the Azure SDK for Go for data plane operations
 
-Learn how to interact with data stored in Azure services programmatically by using the Azure SDK for Go client libraries. If you want the higher-level introduction to how management libraries and client libraries fit together, start with [Overview of the Azure SDK for Go management libraries](management-libraries.md). This article focuses on the Go data-plane patterns you use after a resource already exists, and points back to [control plane guidance](control-plane.md) for provisioning and configuration work.
+Learn how to interact with data stored in Azure services programmatically by using the Azure SDK for Go client libraries. For a higher-level introduction to how management libraries and client libraries fit together, see [Overview of the Azure SDK for Go management libraries](management-libraries.md). This article focuses on the Go data-plane patterns you use after a resource already exists, and points back to [control plane operations](control-plane.md) for provisioning and configuration work.
 
 ## What is the Azure data plane?
 
-The Azure data plane is the set of APIs that let you interact with data inside Azure services including uploading blobs, sending messages, querying databases, and retrieving secrets. While the control plane provisions and configures resources, the data plane is what your application code calls at runtime. A common Go workflow is to use control plane code once in setup or automation, and then keep data plane clients in the application path that runs every day.
+The Azure data plane is the set of APIs that you use to interact with data inside Azure services, including uploading blobs, sending messages, querying databases, and retrieving secrets. While the control plane provisions and configures resources, the data plane is what your application code calls at runtime. A common Go workflow is to use control plane code once in setup or automation, and then keep data plane clients in the application path that runs every day.
 
 The Azure SDK for Go exposes the data plane through service-specific packages such as **azblob**, **azservicebus**, **azeventhubs**, **azsecrets**, and **azcosmos**. Each package connects to an already-provisioned resource and follows a consistent pattern:
 
 1. Authenticate by using the `azidentity` package.
-1. Create a typed client using a service endpoint or connection string.
+1. Create a typed client by using a service endpoint or connection string.
 1. Call methods on the client to read, write, or process data.
 1. Handle paginated results and errors.
 
@@ -36,7 +37,7 @@ Common scenarios for Go data plane operations include:
 - An Azure subscription with provisioned resources
 - Azure CLI installed for local authentication (`az login`)
 
-All data plane packages depend on the core identity module:
+All data plane packages depend on the core identity module.
 
 ```bash
 go get github.com/Azure/azure-sdk-for-go/sdk/azidentity
@@ -71,7 +72,7 @@ Some services also support connection strings for environments where token-based
 client, err := azservicebus.NewClientFromConnectionString(connectionString, nil)
 ```
 
-For production workloads running in Azure, prefer managed identity. For local development, `DefaultAzureCredential` automatically discovers credentials from `az login`, environment variables, or other sources.
+For production workloads running in Azure, use managed identity. For local development, `DefaultAzureCredential` automatically discovers credentials from `az login`, environment variables, or other sources.
 
 For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
@@ -118,13 +119,13 @@ Common data plane error codes include `BlobNotFound`, `MessageLockLost`, `Secret
 ## Common pitfalls for Go data plane clients
 
 - **Creating a client per operation** - SDK clients maintain connection pooling and are safe for concurrent use; reuse them across your application lifecycle.
-- **No timeouts on operations** - network calls without deadlines hang on DNS/TLS failures; wrap calls in `context.WithTimeout`.
+- **No timeouts on operations** - network calls without deadlines hang on DNS or TLS failures; wrap calls in `context.WithTimeout`.
 - **Mixing connection strings and AAD** - standardize on one auth model (preferably token-based AAD) to avoid secrets sprawl.
 - **Ignoring errors in paging loops** - always check `NextPage` errors before processing items; a failed page read leaves partial results.
 
 ## Upload a blob example
 
-This example shows a production-ready pattern: authenticate with `DefaultAzureCredential`, create a blob client, upload data with a timeout, and verify. This pattern applies to all data plane clients; swap the service endpoint and client type to adapt it for Service Bus, Event Hubs, Cosmos DB, or Key Vault.
+This example shows a production-ready pattern: authenticate by using `DefaultAzureCredential`, create a blob client, upload data with a timeout, and verify. This pattern applies to all data plane clients. Swap the service endpoint and client type to adapt it for Service Bus, Event Hubs, Cosmos DB, or Key Vault.
 
 ```go
 package main
@@ -173,7 +174,7 @@ func main() {
 
 ## Blob Storage
 
-The [azblob](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/storage/azblob) package provides data plane access to Azure Blob Storage - a massively scalable object storage service. This is the package your application uses at runtime to read and write data. Use the separate `armstorage` control plane package to provision storage accounts and containers.
+The [azblob](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/storage/azblob) package provides data plane access to Azure Blob Storage, a massively scalable object storage service. This package is what your application uses at runtime to read and write data. Use the separate `armstorage` control plane package to provision storage accounts and containers.
 
 Use it to upload and download files and documents, list and manage blobs and containers, set metadata and content properties, implement parallel uploads for large files, and build data processing pipelines.
 
@@ -185,7 +186,7 @@ For the package documentation, see the [azblob package reference](https://pkg.go
 
 ## Cosmos DB
 
-The [azcosmos](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos) package provides data plane access to Azure Cosmos DB - a globally distributed, multi-model database. Use it to build applications that need low-latency reads and writes at any scale.
+The [azcosmos](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos) package provides data plane access to Azure Cosmos DB, a globally distributed, multi-model database. Use it to build applications that need low-latency reads and writes at any scale.
 
 Use it to perform CRUD operations on documents, run SQL queries against containers, manage partitioning strategies for efficient data access, handle pagination over large result sets, and execute multi-item batch operations.
 
@@ -201,7 +202,7 @@ For the package documentation, see the [azcosmos package reference](https://pkg.
 
 The [azeventhubs](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs) package provides data plane access to Azure Event Hubs - a real-time data ingestion service for high-throughput event streaming.
 
-Use it to send events with batching for efficient throughput, receive and process events using consumer groups, manage partition assignment and checkpointing, route events with partition keys for ordering guarantees, and build log ingestion and telemetry pipelines.
+Use it to send events with batching for efficient throughput, receive and process events by using consumer groups, manage partition assignment and checkpointing, route events by using partition keys for ordering guarantees, and build log ingestion and telemetry pipelines.
 
 ```bash
 go get github.com/Azure/azure-sdk-for-go/sdk/messaging/azeventhubs
@@ -213,7 +214,7 @@ For the package documentation, see the [azeventhubs package reference](https://p
 
 ## Key Vault
 
-The [azsecrets](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets), [azkeys](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azkeys), and [azcertificates](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azcertificates) packages provide data plane access to Azure Key Vault. These are the packages your application uses at runtime to retrieve secrets and perform cryptographic operations. Use the separate `armkeyvault` control plane package to provision and configure vault instances.
+The [azsecrets](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets), [azkeys](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azkeys), and [azcertificates](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azcertificates) packages provide data plane access to Azure Key Vault. These packages your application uses at runtime to retrieve secrets and perform cryptographic operations. Use the separate `armkeyvault` control plane package to provision and configure vault instances.
 
 Use them to retrieve and set secrets (database passwords, API keys), create and manage cryptographic keys for signing and encryption, manage TLS/SSL certificates with automatic renewal, track secret versions and implement rotation strategies, and cache secrets to reduce latency and API calls.
 

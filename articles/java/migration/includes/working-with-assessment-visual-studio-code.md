@@ -1,8 +1,6 @@
 ---
-ms.topic: include
 ms.date: 03/20/2026
-title: "Working with Assessment in Visual Studio Code: Comprehensive guide to application assessment with GitHub Copilot App Modernization for Java"
-description: Learn how to effectively work with application assessments in GitHub Copilot app modernization in Visual Studio Code, including configuration, interpretation, and report management.
+ms.collection: ce-skilling-ai-copilot
 ---
 
 Key capabilities include:

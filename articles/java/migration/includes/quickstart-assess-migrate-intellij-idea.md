@@ -1,8 +1,6 @@
 ---
-ms.topic: include
 ms.date: 03/20/2026
-title: "Quickstart: Assess and Migrate a Java Project Using GitHub Copilot app modernization in IntelliJ IDEA"
-description: Shows you how to use GitHub Copilot app modernization to assess and migrate a Java project in IntelliJ IDEA.
+ms.collection: ce-skilling-ai-copilot
 ---
 
 ## Prerequisites

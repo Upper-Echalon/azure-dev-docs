@@ -25,11 +25,7 @@ Azure App Service is a fully managed platform for building, deploying, and scali
 
 <!-- @mcpcli appservice database add -->
 
-This tool adds a database connection to an Azure App Service by using the connection string for an existing database. It configures the App Service's connection settings so the app can access the specified database and database server.
-
-Specify the `App`, `Database`, `Database type`, `Database server`, and `Resource group`. You can provide the `Connection string`; if you don't, the tool generates a default connection string. Supported database types include `SqlServer`, `MySQL`, `PostgreSQL`, and `Azure Cosmos DB`.
-
-<!-- Required parameters: 5 - 'App', 'Database', 'Database server', 'Database type', 'Resource group' -->
+This tool adds a database connection to an Azure App Service by using the connection string for an existing database. It configures the App Service's connection settings so the app can access the specified database and database server. If you don't provide a connection string, the tool generates a default connection string. 
 
 Example prompts include:
 
@@ -49,7 +45,7 @@ Example prompts include:
 | **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Database** |  Required | The name of the database to connect to (for example, mydb). |
 | **Database server** |  Required | The server name or endpoint for the database (for example, myserver.database.windows.net). |
-| **Database type** |  Required | The type of database (for example, SqlServer, MySQL, PostgreSQL, CosmosDB). |
+| **Database type** |  Required | The type of database:`SqlServer`, `MySQL`, `PostgreSQL`, and `Cosmos DB`. |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 | **Connection string** |  Optional | The connection string for the database. If not provided, a default is generated. |
 
@@ -61,9 +57,7 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli appservice webapp diagnostic diagnose -->
 
-This tool runs a specified detector on an Azure App Service web app and returns the detector's diagnostic results. Provide `App`, `Detector name`, and `Resource group` to identify the web app and the detector to run. Optionally provide `Start time`, `End time`, and `Interval` to limit the analysis to a specific time range. The output includes the detector results and related diagnostic data to help you investigate app health and behavior.
-
-<!-- Required parameters: 3 - 'App', 'Detector name', 'Resource group' -->
+This tool runs a specified detector on an Azure App Service web app and returns the detector's diagnostic results. The output includes the detector results and related diagnostic data to help you investigate app health and behavior.
 
 Example prompts include:
 
@@ -87,9 +81,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli appservice webapp deployment get -->
 
-This tool retrieves detailed information about deployments in an Azure App Service web app. It returns metadata such as deployment name, whether the deployment is active, start and end times, who authored and performed the deployment, and the deployment type. Provide `App` and `Resource group` to target a specific web app. Specify `Deployment ID` to return details for a single deployment; if you don't provide a deployment ID, the tool returns details for all deployments in the web app.
-
-<!-- Required parameters: 2 - 'App', 'Resource group' -->
+This tool retrieves detailed information about deployments in an Azure App Service web app. It returns metadata such as deployment name, whether the deployment is active, start and end times, who authored and performed the deployment, and the deployment type. 
 
 Example prompts include:
 
@@ -110,9 +102,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli appservice webapp get -->
 
-Retrieves detailed information about Azure App Service web apps, including app name, resource group, location, runtime stack, state, and hostnames. This tool returns details for a specific web app when you provide the `App` name; if you don't provide an `App`, it returns information for all web apps in the subscription or for the specified `resource group` and `subscription`.
-
-<!-- Required parameters: 0 -  -->
+Retrieves detailed information about Azure App Service web apps, including app name, resource group, location, runtime stack, state, and hostnames. 
 
 Example prompts include:
 
@@ -122,7 +112,7 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **App** |  Optional | The name of the Azure App Service web app (for example, `contoso-webapp`). |
+| **App** |  Optional | The name of the Azure App Service web app (for example, `contoso-webapp`). This tool returns details for a specific web app when you provide the `App` name; if you don't provide an `App`, it returns information for all web apps in the subscription or for the specified `resource group` and `subscription`. |
 | **Resource group** |  Optional | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
@@ -134,10 +124,6 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 <!-- @mcpcli appservice webapp settings get-appsettings -->
 
 This tool retrieves the application settings for an Azure App Service web app and returns key-value pairs for each setting. App settings can include connection strings and other sensitive values, so treat returned values as secrets and limit their exposure.
-
-The `App` and `Resource group` parameters identify the web app whose settings are returned. The response is read-only and provides the current configuration values for the app.
-
-<!-- Required parameters: 2 - 'App', 'Resource group' -->
 
 Example prompts include:
 
@@ -156,8 +142,6 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 ## List diagnostic detectors
 
 <!-- @mcpcli appservice webapp diagnostic list -->
-
-<!-- Required parameters: 2 - `App`, `Resource group` -->
 
 This tool retrieves detailed information about detectors for a specified Azure App Service web app. For each detector, it returns the detector name, detector type, description, category, and analysis types. The results help you investigate issues and understand the diagnostics available for the web app.
 
@@ -185,8 +169,6 @@ This tool updates an application setting for an App Service web app. You can cho
 - `delete`: Removes the specified application setting. If the application setting doesn't exist, no action is taken.
 
 For the `add` and `set` update types, both the application setting name and value are required. For the `delete` update type, only the application setting name is required.
-
-<!-- Required parameters: 4 - 'App', 'Resource group', 'Setting name', 'Setting update type' -->
 
 Example prompts include:
 

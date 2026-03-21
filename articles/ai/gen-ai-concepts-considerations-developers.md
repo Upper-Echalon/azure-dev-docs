@@ -60,7 +60,6 @@ In typical English text, one token is about four characters. On average, 100 tok
 For developers, the following libraries help estimate token counts for prompts and completions, which is useful for managing context window limits and costs:
 - the [tiktoken](https://github.com/openai/tiktoken) library (Python and JavaScript)
 - the [Microsoft.ML.Tokenizers](https://www.nuget.org/packages/Microsoft.ML.Tokenizers/2.0.0-preview.1.25127.4#readme-body-tab) library (.NET)
-- the [Hugging Face Tokenizers](https://huggingface.co/docs/tokenizers/python/latest/index) library (JavaScript, Python, and Java)
 
 ### Token usage affects billing
 

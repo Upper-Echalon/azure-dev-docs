@@ -10,7 +10,7 @@ content_well_notification:
 ai-usage: ai-assisted
 ms.topic: concept-article
 ms.custom: build-2025
-tool_count for monitor: 11
+tool_count for monitor: 16
 tool_count for workbooks: 5
 ms.reviewer: jong
 mcp-cli.version: 2.0.0-beta.30
@@ -166,6 +166,7 @@ Example prompts include:
 |-----------|-------------|-------------|
 | **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
 | **Workspace** | Required | The Log Analytics workspace ID or name. |
+| **Table type** | Required | The type of table to query (for example, `CustomLog`, `AzureMetrics`). |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -294,6 +295,115 @@ Example prompts include:
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
+
+## Instrumentation: Get learning resources
+
+<!-- @mcpcli monitor instrumentation get-learning-resource -->
+
+List all available learning resources for Azure Monitor instrumentation or get the content of a specific resource by path. Returns all resource paths by default, or retrieves the full content when a path is specified.
+
+<!-- Required parameters: 0 -  -->
+
+Example prompts include:
+
+- "List all available Azure Monitor onboarding learning resources."
+- "Get the content of the Azure Monitor learning resource at path 'getting-started/overview'."
+- "What learning resources are available for Azure Monitor instrumentation onboarding?"
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Path** | Optional | Learning resource path. When not specified, returns all available resource paths. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ✅
+
+## Instrumentation: Start orchestration
+
+<!-- @mcpcli monitor instrumentation orchestrator-start -->
+
+Start Azure Monitor instrumentation orchestration for a local workspace. Analyzes the workspace and returns the first action to execute. After executing the action, call the next orchestration step to continue. Execute each step exactly as instructed.
+
+<!-- Required parameters: 1 - 'Workspace path' -->
+
+Example prompts include:
+
+- "Start Azure Monitor instrumentation orchestration for workspace 'C:/projects/my-app'."
+- "Analyze workspace 'C:/repos/contoso-api' and return the first Azure Monitor instrumentation step."
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Workspace path** | Required | Absolute path to the workspace folder (for example, `C:/projects/my-app`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
+
+## Instrumentation: Continue orchestration
+
+<!-- @mcpcli monitor instrumentation orchestrator-next -->
+
+Get the next instrumentation action after completing the current one. Call this only after you've executed the exact instruction from the previous response. Provide a brief completion note describing what was executed.
+
+<!-- Required parameters: 2 - 'Session ID', 'Completion note' -->
+
+Example prompts include:
+
+- "After completing the previous Azure Monitor instrumentation step, get the next action for session 'C:/projects/my-app' with completion note 'Ran dotnet add package command'."
+- "Get the next onboarding action using session 'C:/repos/contoso-api' after I completed 'Added Azure Monitor configuration'."
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
+| **Completion note** | Required | One sentence describing what you executed (for example, `Ran dotnet add package command`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
+
+## Instrumentation: Send brownfield analysis
+
+<!-- @mcpcli monitor instrumentation send-brownfield-analysis -->
+
+Send brownfield code analysis findings after the start orchestration step returned a status of `analysis_needed`. You must have scanned the workspace source files and filled in the analysis template before calling this tool.
+
+<!-- Required parameters: 2 - 'Session ID', 'Findings JSON' -->
+
+Example prompts include:
+
+- "Send brownfield code analysis findings to Azure Monitor instrumentation session 'C:/projects/my-app' with the analysis JSON."
+- "Continue migration orchestration by submitting analysis payload to session 'C:/repos/contoso-api'."
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
+| **Findings JSON** | Required | JSON object with brownfield analysis findings including service options and telemetry analysis. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
+
+## Instrumentation: Select enhancements
+
+<!-- @mcpcli monitor instrumentation send-enhancement-select -->
+
+Submit the user's enhancement selection after the start orchestration step returned a status of `enhancement_available`. Present the enhancement options to the user first, then call this tool with their chosen option keys.
+
+<!-- Required parameters: 2 - 'Session ID', 'Enhancement keys' -->
+
+Example prompts include:
+
+- "Send enhancement selection 'redis' for Azure Monitor instrumentation session 'C:/projects/my-app'."
+- "Submit enhancement keys 'redis,processors' for onboarding session 'C:/repos/contoso-api'."
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
+| **Enhancement keys** | Required | One or more enhancement keys, comma-separated (for example, `redis` or `redis,processors`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
 ## Workbooks: List workbooks
 

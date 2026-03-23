@@ -284,7 +284,7 @@ A [dev container](https://code.visualstudio.com/docs/remote/containers) is a Doc
 
 ### Auto-install azd extensions
 
-[!INCLUDE [azd-extensions-dev-container](includes/azd-extensions-dev-container.md)]
+[!INCLUDE [extensions-dev-container](includes/extensions-dev-container.md)]
 
 ::: zone-end
 

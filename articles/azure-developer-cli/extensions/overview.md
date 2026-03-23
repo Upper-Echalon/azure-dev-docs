@@ -110,7 +110,7 @@ azd extension uninstall <extension-name>
 
 ## Use azd extensions in dev containers
 
-[!INCLUDE [azd-extensions-dev-container](../includes/azd-extensions-dev-container.md)]
+[!INCLUDE [extensions-dev-container](../includes/extensions-dev-container.md)]
 
 ## Next steps
 

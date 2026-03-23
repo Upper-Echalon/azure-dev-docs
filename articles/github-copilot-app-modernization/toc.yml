@@ -66,6 +66,8 @@ items:
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-predefined-tasks.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: Working with assessment
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-working-with-assessment.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
+              - name: Understand assessment rules
+                href: ../java/migration/migrate-github-copilot-app-modernization-for-java-assess-rules.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: Optimize chat results with the AppModernization agent
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-quickstart-chat-window.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: "Quickstart: Assess and migrate a Java project"

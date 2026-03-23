@@ -27,7 +27,7 @@ Workbooks provide a flexible canvas for data analysis and the creation of rich v
 
 ## Activity Log: List activity log
 
-<!-- monitor activitylog list -->
+<!-- @mcpcli monitor activitylog list -->
 
 List activity logs for the specified Azure resource over the given prior number of hours.
 
@@ -51,7 +51,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Web Tests: Create or update web tests
 
-<!-- monitor webtests createorupdate 2.0.0-beta.19 -->
+<!-- @mcpcli monitor webtests createorupdate -->
 
 Create or update a standard web test in Azure Monitor to monitor endpoint availability. Use this command to set up new web tests or modify existing ones with configurations such as URL, frequency, locations, and expected responses. This command automatically creates a new test if it doesn't exist or updates an existing test with new settings.
 
@@ -92,7 +92,7 @@ Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 ## Web Tests: Get or list web tests
 
-<!-- monitor webtests get 2.0.0-beta.19 -->
+<!-- @mcpcli monitor webtests get -->
 
 Retrieve details for a specific web test or list all web tests. When the webtest resource is provided, you get detailed information about a single web test. If the webtest resource is omitted, you receive a list of all web tests in your subscription, optionally filtered by resource group.
 
@@ -115,7 +115,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Log Analytics: List workspaces
 
-<!-- monitor workspace list -->
+<!-- @mcpcli monitor workspace list -->
 
 The Azure MCP Server lists all Log Analytics workspaces in a subscription. This provides an overview of your monitoring resources.
 
@@ -131,7 +131,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Log Analytics: List table types
 
-<!-- monitor table type list -->
+<!-- @mcpcli monitor table type list -->
 
 Lists available table types in a Log Analytics workspace. 
 
@@ -152,7 +152,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Log Analytics: List tables
 
-<!-- monitor table list -->
+<!-- @mcpcli monitor table list -->
 
 The Azure MCP Server lists all tables in a Log Analytics workspace. This helps you understand the data available for querying.
 
@@ -174,7 +174,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Log Analytics: Query workspace logs
 
-<!-- monitor workspace log query -->
+<!-- @mcpcli monitor workspace log query -->
 
 The Azure MCP Server can execute Kusto Query Language (KQL) queries against a Log Analytics workspace. This powerful feature allows you to analyze your operational data.
 
@@ -199,7 +199,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Log Analytics: Query resource logs
 
-<!-- monitor resource log query -->
+<!-- @mcpcli monitor resource log query -->
 
 Queries diagnostic and activity logs for a specific Azure resource in a Log Analytics workspace using Kusto Query Language (KQL). 
 
@@ -223,7 +223,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Health: Get entity health
 
-<!-- monitor healthmodels entity get -->
+<!-- @mcpcli monitor healthmodels entity get -->
 
 The Azure MCP Server gets the health status of an entity using Azure Monitor health models. This provides comprehensive health information and monitoring status for Azure resources and applications.
 
@@ -245,7 +245,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Metrics: Query metrics
 
-<!-- monitor metrics query -->
+<!-- @mcpcli monitor metrics query -->
 
 The Azure MCP Server queries Azure Monitor metrics for resources. This allows you to retrieve performance metrics, usage statistics, and monitoring data for your Azure resources over specified time periods.
 
@@ -274,7 +274,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Metrics: List metric definitions
 
-<!-- monitor metrics definitions -->
+<!-- @mcpcli monitor metrics definitions -->
 
 The Azure MCP Server lists available metric definitions for a resource. This helps you discover what metrics are available for monitoring before querying specific metric data.
 

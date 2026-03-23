@@ -1,7 +1,6 @@
 ---
 title: Deploy the Azure MCP Server as a remote MCP server and connect using Microsoft Foundry
 description: Learn how to deploy the Azure MCP Server as a remote MCP server and connect using Microsoft Foundry
-keywords: azure mcp server, azmcp
 author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 02/27/2026
@@ -100,7 +99,7 @@ After deployment, connect your Foundry agent to the Azure MCP Server running on 
     - **Remote MCP Server**: Enter the `CONTAINER_APP_URL` value from the `azd` output for the tool endpoint.
     - **Authentication**: Select **Microsoft Entra → Project Managed Identity**.
     - **Type**: Select **Project Managed Identity**.
-    - **Audience**: Enter the `ENTRA_APP_CLIENT_ID` value from the `azd` output.
+    - **Audience**: Enter the `ENTRA_APP_IDENTIFIER_URI` value from the `azd` output.
 
     Select **Connect** to associate the connection with the agent.
 

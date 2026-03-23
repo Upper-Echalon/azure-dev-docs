@@ -57,12 +57,16 @@ items:
     - name: Use with Azure services
       expanded: true
       items:
+        - name: Azure App Service
+          href: services/azure-mcp-server-for-app-service.md
         - name: Azure Functions
           href: services/azure-mcp-server-for-functions.md
         - name: Azure Key Vault
           href: services/azure-mcp-server-for-key-vault.md
         - name: Azure Redis
           href: services/azure-mcp-server-for-redis.md
+        - name: Azure AI Search
+          href: services/azure-mcp-server-for-search.md
         - name: Azure Speech in Foundry Tools
           href: services/azure-mcp-speech-foundry-tools.md
     - name: Tools
@@ -74,8 +78,8 @@ items:
           items: 
           - name: Azure best practices
             href: tools/azure-best-practices.md
-          - name: AI best practices
-            href: tools/azure-ai-best-practices.md
+          - name: Azure Well-Architected Framework
+            href: tools/azure-well-architected-framework.md
           - name: Terraform best practices for Azure
             href: tools/azure-terraform-best-practices.md
         - name: Azure Advisor

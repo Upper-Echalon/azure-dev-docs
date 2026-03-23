@@ -1,6 +1,6 @@
 ---
-title: Azure Monitor Tools 
-description: "Use the Azure MCP Server with Azure Monitor to query Log Analytics workspaces, analyze metrics, and manage workbooks using natural language prompts."
+title: Azure MCP Server tools for Azure Monitor and Workbooks
+description: Use Azure MCP Server tools to query Azure Monitor logs and metrics, monitor resource health, and manage Azure Workbooks with natural language prompts from your IDE.
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -15,9 +15,9 @@ tool_count for workbooks: 5
 ms.reviewer: jong
 mcp-cli.version: 2.0.0-beta.30
 ---
-# Azure Monitor tools for the Azure MCP Server overview
+# Azure MCP Server tools for Azure Monitor and Workbooks
 
-The Azure MCP Server allows you to manage Azure Monitor resources using natural language prompts. You can query Log Analytics workspaces, analyze operational data, monitor resource health, retrieve performance metrics, and manage Azure Monitor workbooks without needing to know complex KQL syntax.
+The Azure Model Context Protocol (MCP) Server lets you manage Azure Monitor and Workbooks resources with natural language prompts. You can query Log Analytics workspaces, analyze operational data, monitor resource health, retrieve performance metrics, and manage Azure Monitor workbooks.
 
 [Azure Monitor](/azure/azure-monitor/overview) helps you maximize the availability and performance of your applications and services. It provides a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. 
 

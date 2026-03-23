@@ -37,6 +37,7 @@ Example prompts include:
 | **ResourceId** |  Optional | The Azure resource ID to get health status for (for example, /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vm}). |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get resourcehealth health-eventses
@@ -67,6 +68,7 @@ Example prompts include:
 | **Tracking ID** |  Optional | Filter by tracking ID to get a specific service health event. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content

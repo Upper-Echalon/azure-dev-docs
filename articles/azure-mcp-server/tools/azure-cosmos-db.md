@@ -41,6 +41,7 @@ Example prompts include:
 | **Database** |  Optional | The name of the database. Requires `Account` to be specified. When provided, lists containers within this database. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Query container items
@@ -65,6 +66,7 @@ Example prompts include:
 | **Query** |  Optional | SQL query to execute against the container. Uses Azure Cosmos DB SQL API syntax. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content

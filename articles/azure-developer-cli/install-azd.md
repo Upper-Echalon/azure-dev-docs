@@ -282,6 +282,28 @@ A [dev container](https://code.visualstudio.com/docs/remote/containers) is a Doc
 
 1. Rebuild and run your dev container. In Visual Studio Code, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) to execute the **Rebuild and Reopen in Dev Container** command.
 
+### Auto-install azd extensions
+
+The `azd` Dev Container Feature supports an `extensions` option to automatically install a comma-separated list of `azd` extensions during the container build. Extensions installed this way are available as soon as the container starts, reducing manual setup steps.
+
+To auto-install extensions, add the `extensions` option to the `azd` feature entry in your `devcontainer.json` file:
+
+```json
+{
+    "name": "Azure Developer CLI",
+    "image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        },
+        "ghcr.io/azure/azure-dev/azd:latest": {
+            "extensions": "my-ext-1,my-ext-2"
+        }
+    }
+}
+```
+
+The `extensions` value is a comma-separated list of `azd` extension names. The extensions are installed during the container build, so they're ready to use when the container starts. After changing the extensions list, use the **Rebuild and Reopen in Dev Container** command in Visual Studio Code to rebuild the container with the updated extensions.
+
 ::: zone-end
 
 ## Verify your installation

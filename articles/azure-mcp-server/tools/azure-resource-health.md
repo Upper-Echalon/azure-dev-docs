@@ -34,7 +34,7 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **ResourceId** |  Optional | The Azure resource ID to get health status for (for example, /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vm}). |
+| **ResourceId** |  Optional | The Azure resource ID to get health status for (for example, `/subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vm}`). |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -62,8 +62,8 @@ Example prompts include:
 |-----------------------|----------------------|-------------|
 | **Event type** |  Optional | Filter by event type (ServiceIssue, PlannedMaintenance, HealthAdvisory, Security). If not specified, all event types are included. |
 | **Filter** |  Optional | Additional OData filter expression to apply to the service health events query. |
-| **Query end time** |  Optional | End time for the query in ISO 8601 format (for example, 2024-01-31T23:59:59Z). Events up to this time will be included. |
-| **Query start time** |  Optional | Start time for the query in ISO 8601 format (for example, 2024-01-01T00:00:00Z). Events from this time onwards will be included. |
+| **Query end time** |  Optional | End time for the query in ISO 8601 format (for example, `2024-01-31T23:59:59Z`). Events up to this time will be included. |
+| **Query start time** |  Optional | Start time for the query in ISO 8601 format (for example, `2024-01-01T00:00:00Z`). Events from this time onwards will be included. |
 | **Status** |  Optional | Filter by status (Active, Resolved). If not specified, all statuses are included. |
 | **Tracking ID** |  Optional | Filter by tracking ID to get a specific service health event. |
 

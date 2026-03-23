@@ -72,18 +72,10 @@ import (
     "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute"
 )
 ```
+
 ## Authenticating to Azure
 
-To run code against an Azure subscription, you need to authenticate to Azure. The [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package supports multiple options to authenticate to Azure. These options include client/secret, certificate, and managed identity.
-
-The default authentication option is **DefaultAzureCredential**, which uses the environment variables set earlier in this article. In your Go code, you create an `azidentity` object as follows:
-
-```go
-cred, err := azidentity.NewDefaultAzureCredential(nil)
-if err != nil {
-  // handle error
-}
-```
+Authentication in Go apps that use Azure SDK libraries should rely on Microsoft Entra ID with the [Azure Identity library](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity), because token-based authentication is more secure and manageable than connection strings or keys. The recommended credential depends on where the app runs: use managed identities for Azure-hosted apps, developer credentials or a service principal for local development, and a service principal for most on-premises scenarios.
 
 For more information about authentication, see [Azure SDK for Go authentication](./sdk/authentication/authentication-overview.md).
 

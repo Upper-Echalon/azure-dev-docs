@@ -48,7 +48,7 @@ Many request models use pointer fields for optional Azure Resource Manager prope
 
 ## Authentication
 
-All management operations require an authenticated credential from the [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package. The package provides credential types for every environment - local development, CI/CD pipelines, and production workloads running in Azure. All credential types implement the same `azcore.TokenCredential` interface, so you can swap them without changing client code.
+All management operations require an authenticated credential from the [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package. The package provides credential types for every environment including local development, CI/CD pipelines, and production workloads running in Azure. All credential types implement the same `azcore.TokenCredential` interface, so you can swap them without changing client code.
 
 After you get a credential, create a client factory for the package and then ask it for the typed client you need:
 
@@ -62,6 +62,8 @@ rgClient := clientFactory.NewResourceGroupsClient()
 ```
 
 Current `arm*` package docs usually show the client factory pattern because it centralizes shared configuration for related clients. Many packages also expose direct `New<ResourceType>Client(subscriptionID, credential, options)` constructors, but `NewClientFactory(...).New<ResourceType>Client()` is the pattern you'll most often see on pkg.go.dev. For local development, `DefaultAzureCredential` usually picks up your Azure CLI sign-in. In CI/CD and deployed workloads, you can switch to environment-based credentials or managed identity without changing the rest of your client code.
+
+For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
 ## Client packages and typed clients
 
@@ -77,7 +79,6 @@ vmClient := clientFactory.NewVirtualMachinesClient()
 
 This package and client factory pattern is consistent across the `resourcemanager` modules. It's a useful shortcut when you're scanning pkg.go.dev or asking an agent to find the right client for a task.
 
-For a full guide on credential types and best practices, see [Authentication with the Azure SDK for Go](./sdk/authentication/authentication-overview.md) and the [azidentity package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity).
 
 ## Long-running operations
 

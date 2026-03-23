@@ -4,7 +4,7 @@ description: Use Azure MCP Server tools to manage Azure Well-Architected Framewo
 ms.service: azure-mcp-server
 ms.topic: concept-article
 tool_count: 1
-mcp-cli.version: 2.0.0-beta.30+c96af17a200434c8860b42a3de2b25f325fd2001
+mcp-cli.version: 2.0.0-beta.31
 ---
 
 # Azure MCP Server tools for Azure Well-Architected Framework
@@ -40,6 +40,7 @@ Example prompts include:
 | **Service** |  Optional | A single Azure service name. The value is case-insensitive and accepts hyphens, underscores, and spaces. If the name contains spaces, enclose it in double quotes. Examples: `cosmos-db`, `Cosmos_DB`, `Cosmos DB`, `cosmosdb`, `cosmos-database`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content

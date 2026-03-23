@@ -1405,22 +1405,6 @@ azd env set-secret <name> [flags]
 
 Manage azd extensions.
 
-### Install extensions in dev containers
-
-When using a Visual Studio Code Dev Container, the Azure Developer CLI dev container feature supports an `extensions` option to auto-install specified `azd` extensions during the container build. The extensions are available immediately when the container starts.
-
-To configure auto-install, add the `extensions` option to the `azd` feature entry in your `devcontainer.json` file:
-
-```json
-{
-    "features": {
-        "ghcr.io/azure/azure-dev/azd:latest": {
-            "extensions": "ext1,ext2"
-        }
-    }
-}
-```
-
 ### Options
 
 ```azdeveloper

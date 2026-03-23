@@ -3,7 +3,7 @@ title: Azure Developer CLI reference
 description: This article explains the syntax and parameters for the various Azure Developer CLI commands.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 03/07/2026
+ms.date: 03/16/2026
 ms.service: azure-dev-cli
 ms.topic: conceptual
 ms.custom: devx-track-azdevcli
@@ -33,6 +33,7 @@ The Azure Developer CLI (`azd`) is an open-source tool that helps onboard and ma
 * [azd auth](#azd-auth): Authenticate with Azure.
 * [azd completion](#azd-completion): Generate shell completion scripts.
 * [azd config](#azd-config): Manage azd configurations (ex: default Azure subscription, location).
+* [azd copilot](#azd-copilot): Manage Copilot agent settings. (Alpha)
 * [azd deploy](#azd-deploy): Deploy your project code to Azure.
 * [azd down](#azd-down): Delete your project's Azure resources.
 * [azd env](#azd-env): Manage environments (ex: default environment, environment variables).
@@ -707,6 +708,186 @@ azd config unset defaults.location
 * [azd config](#azd-config): Manage azd configurations (ex: default Azure subscription, location).
 * [Back to top](#azd)
 
+## azd copilot
+
+Manage Copilot agent settings. (Alpha)
+
+### Options
+
+```azdeveloper
+      --docs   Opens the documentation for azd copilot in your web browser.
+  -h, --help   Gets help for copilot.
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string   Sets the current working directory.
+      --debug        Enables debugging and diagnostics logging.
+      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent
+
+Manage tool consent.
+
+### Synopsis
+
+Manage consent rules for tool execution.
+
+### Options
+
+```azdeveloper
+      --docs   Opens the documentation for azd copilot consent in your web browser.
+  -h, --help   Gets help for consent.
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string   Sets the current working directory.
+      --debug        Enables debugging and diagnostics logging.
+      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot](#azd-copilot): Manage Copilot agent settings. (Alpha)
+* [azd copilot consent grant](#azd-copilot-consent-grant): Grant consent trust rules.
+* [azd copilot consent list](#azd-copilot-consent-list): List consent rules.
+* [azd copilot consent revoke](#azd-copilot-consent-revoke): Revoke consent rules.
+* [Back to top](#azd)
+
+## azd copilot consent grant
+
+Grant consent trust rules.
+
+### Synopsis
+
+Grant trust rules for tools and servers.
+
+This command creates consent rules that allow tools to execute
+without prompting for permission. You can specify different permission
+levels and scopes for the rules.
+
+Examples:
+
+**Grant always permission to all tools globally**
+azd copilot consent grant --global --permission always
+
+**Grant project permission to a specific tool with read-only scope**
+azd copilot consent grant --server my-server --tool my-tool --permission project --scope read-only
+
+```azdeveloper
+azd copilot consent grant [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type: 'all' or 'readonly' (default "all")
+      --docs                Opens the documentation for azd copilot consent grant in your web browser.
+      --global              Apply globally to all servers
+  -h, --help                Gets help for grant.
+      --operation string    Operation type: 'tool' or 'sampling' (default "tool")
+      --permission string   Permission: 'allow', 'deny', or 'prompt' (default "allow")
+      --scope string        Rule scope: 'global', or 'project' (default "global")
+      --server string       Server name
+      --tool string         Specific tool name (requires --server)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string   Sets the current working directory.
+      --debug        Enables debugging and diagnostics logging.
+      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent list
+
+List consent rules.
+
+### Synopsis
+
+List all consent rules for tools.
+
+```azdeveloper
+azd copilot consent list [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type to filter by (readonly, any)
+      --docs                Opens the documentation for azd copilot consent list in your web browser.
+  -h, --help                Gets help for list.
+      --operation string    Operation to filter by (tool, sampling)
+      --permission string   Permission to filter by (allow, deny, prompt)
+      --scope string        Consent scope to filter by (global, project). If not specified, lists rules from all scopes.
+      --target string       Specific target to operate on (server/tool format)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string   Sets the current working directory.
+      --debug        Enables debugging and diagnostics logging.
+      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent revoke
+
+Revoke consent rules.
+
+### Synopsis
+
+Revoke consent rules for tools.
+
+```azdeveloper
+azd copilot consent revoke [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type to filter by (readonly, any)
+      --docs                Opens the documentation for azd copilot consent revoke in your web browser.
+  -h, --help                Gets help for revoke.
+      --operation string    Operation to filter by (tool, sampling)
+      --permission string   Permission to filter by (allow, deny, prompt)
+      --scope string        Consent scope to filter by (global, project). If not specified, revokes rules from all scopes.
+      --target string       Specific target to operate on (server/tool format)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string   Sets the current working directory.
+      --debug        Enables debugging and diagnostics logging.
+      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
 ## azd deploy
 
 Deploy your project code to Azure.
@@ -788,7 +969,7 @@ Manage environments (ex: default environment, environment variables).
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [azd env get-value](#azd-env-get-value): Get specific environment value.
 * [azd env get-values](#azd-env-get-values): Get all environment values.
 * [azd env list](#azd-env-list): List environments.
@@ -802,7 +983,7 @@ Manage environments (ex: default environment, environment variables).
 
 ## azd env config
 
-Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 
 ### Options
 
@@ -857,7 +1038,7 @@ azd env config get <path> [flags]
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env config set
@@ -905,7 +1086,7 @@ azd env config set myapp.port '"8080"'
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env config unset
@@ -944,7 +1125,7 @@ azd env config unset myapp.endpoint
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env get-value
@@ -1718,163 +1899,7 @@ Manage Model Context Protocol (MCP) server. (Alpha)
 
 ### See also
 
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
 * [azd mcp start](#azd-mcp-start): Starts the MCP server.
-* [Back to top](#azd)
-
-## azd mcp consent
-
-Manage MCP tool consent.
-
-### Synopsis
-
-Manage consent rules for MCP tool execution.
-
-### Options
-
-```azdeveloper
-      --docs   Opens the documentation for azd mcp consent in your web browser.
-  -h, --help   Gets help for consent.
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp](#azd-mcp): Manage Model Context Protocol (MCP) server. (Alpha)
-* [azd mcp consent grant](#azd-mcp-consent-grant): Grant consent trust rules.
-* [azd mcp consent list](#azd-mcp-consent-list): List consent rules.
-* [azd mcp consent revoke](#azd-mcp-consent-revoke): Revoke consent rules.
-* [Back to top](#azd)
-
-## azd mcp consent grant
-
-Grant consent trust rules.
-
-### Synopsis
-
-Grant trust rules for MCP tools and servers.
-
-This command creates consent rules that allow MCP tools to execute
-without prompting for permission. You can specify different permission
-levels and scopes for the rules.
-
-Examples:
-  **Grant always permission to all tools globally**
-  azd mcp consent grant --global --permission always
-
-  **Grant project permission to a specific tool with read-only scope**
-  azd mcp consent grant --server my-server --tool my-tool --permission project --scope read-only
-
-```azdeveloper
-azd mcp consent grant [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type: 'all' or 'readonly' (default "all")
-      --docs                Opens the documentation for azd mcp consent grant in your web browser.
-      --global              Apply globally to all servers
-  -h, --help                Gets help for grant.
-      --operation string    Operation type: 'tool' or 'sampling' (default "tool")
-      --permission string   Permission: 'allow', 'deny', or 'prompt' (default "allow")
-      --scope string        Rule scope: 'global', or 'project' (default "global")
-      --server string       Server name
-      --tool string         Specific tool name (requires --server)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
-* [Back to top](#azd)
-
-## azd mcp consent list
-
-List consent rules.
-
-### Synopsis
-
-List all consent rules for MCP tools.
-
-```azdeveloper
-azd mcp consent list [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type to filter by (readonly, any)
-      --docs                Opens the documentation for azd mcp consent list in your web browser.
-  -h, --help                Gets help for list.
-      --operation string    Operation to filter by (tool, sampling)
-      --permission string   Permission to filter by (allow, deny, prompt)
-      --scope string        Consent scope to filter by (global, project). If not specified, lists rules from all scopes.
-      --target string       Specific target to operate on (server/tool format)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
-* [Back to top](#azd)
-
-## azd mcp consent revoke
-
-Revoke consent rules.
-
-### Synopsis
-
-Revoke consent rules for MCP tools.
-
-```azdeveloper
-azd mcp consent revoke [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type to filter by (readonly, any)
-      --docs                Opens the documentation for azd mcp consent revoke in your web browser.
-  -h, --help                Gets help for revoke.
-      --operation string    Operation to filter by (tool, sampling)
-      --permission string   Permission to filter by (allow, deny, prompt)
-      --scope string        Consent scope to filter by (global, project). If not specified, revokes rules from all scopes.
-      --target string       Specific target to operate on (server/tool format)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
 * [Back to top](#azd)
 
 ## azd mcp start

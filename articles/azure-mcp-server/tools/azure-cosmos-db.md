@@ -59,9 +59,9 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Account** |  Required | The name of the Azure Cosmos DB account to query (for example, contoso-cosmos). |
-| **Container** |  Required | The name of the container to query (for example, orders). |
-| **Database** |  Required | The name of the database to query (for example, ecommerce-db). |
+| **Account** |  Required | The name of the Azure Cosmos DB account to query (for example, `contoso-cosmos`). |
+| **Container** |  Required | The name of the container to query (for example, `orders`). |
+| **Database** |  Required | The name of the database to query (for example, `ecommerce-db`). |
 | **Query** |  Optional | SQL query to execute against the container. Uses Azure Cosmos DB SQL API syntax. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):

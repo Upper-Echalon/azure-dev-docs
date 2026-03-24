@@ -10,10 +10,10 @@ content_well_notification:
 ai-usage: ai-assisted
 ms.topic: concept-article
 ms.custom: build-2025
-tool_count for monitor: 16
+tool_count for monitor: 17
 tool_count for workbooks: 5
 ms.reviewer: jong
-mcp-cli.version: 2.0.0-beta.30
+mcp-cli.version: 2.0.0-beta.31
 ---
 # Azure MCP Server tools for Azure Monitor and Workbooks
 
@@ -49,24 +49,27 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Web Tests: Create or update web tests
+## Web Tests: Create web test
 
-<!-- @mcpcli monitor webtests createorupdate -->
+<!-- @mcpcli monitor webtests create -->
 
-Create or update a standard web test in Azure Monitor to monitor endpoint availability. Use this command to set up new web tests or modify existing ones with configurations such as URL, frequency, locations, and expected responses. This command automatically creates a new test if it doesn't exist or updates an existing test with new settings.
+Create a new standard web test in Azure Monitor to monitor endpoint availability. Specify the web test resource name, associated Application Insights component, test location, and the URL to monitor.
 
 Example prompts include:
-- "Create or update web test resource 'mywebtest' in resource group 'rg-prod' to monitor `https://example.com` every 300 seconds."
-- "Update the web test 'status-check' in resource group 'rg-dev' with expected status code `200` and enable SSL check."
-- "What web tests are configured in resource group 'rg-test'?"
-- "List all web test resources in 'rg-production'."
-- "I need to create or update the web test 'api-monitor' in resource group 'rg-app' with a frequency of 600 seconds."
+
+- "Create a new Standard Web Test with name 'mywebtest' in resource group 'rg-prod' for a given App Insights component"
+- "Set up a web test to monitor `https://example.com` every 300 seconds in resource group 'rg-dev'"
+- "Create web test 'api-monitor' in resource group 'rg-app' with a frequency of 600 seconds"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
 | **Webtest resource** | Required | The name of the Web Test resource to operate on. |
-| **App Insights component** | Optional | The resource ID of the Application Insights component to associate with the web test. |
+| **App Insights component** | Required | The resource ID of the Application Insights component to associate with the web test. |
+| **Location** | Required | The location where the web test resource is created. This should match the App Insights component location. |
+| **Webtest locations** | Required | List of locations to run the test from (comma-separated values). Location refers to the geo-location population tag specific to Availability Tests. |
+| **Request URL** | Required | The absolute URL to test. |
+| **Webtest** | Optional | The name of the test in web test resource. |
 | **Description** | Optional | The description of the web test. |
 | **Enabled** | Optional | Whether the web test is enabled. |
 | **Expected status code** | Optional | Expected HTTP status code. |
@@ -75,43 +78,97 @@ Example prompts include:
 | **Headers** | Optional | HTTP headers to include in the request. Comma-separated `KEY=VALUE`. |
 | **HTTP verb** | Optional | HTTP method (`get`, `post`, etc.). |
 | **Ignore status code** | Optional | Whether to ignore the status code validation. |
-| **Location** | Optional | The location where the web test resource is created. This should match the App Insights component location. |
 | **Parse requests** | Optional | Whether to parse dependent requests. |
 | **Request body** | Optional | The body of the request. |
-| **Request URL** | Optional | The absolute URL to test. |
 | **Retry enabled** | Optional | Whether retries are enabled. |
 | **SSL check** | Optional | Whether to check SSL certificates. |
 | **SSL lifetime check** | Optional | Number of days to check SSL certificate lifetime. |
 | **Timeout** | Optional | Request timeout in seconds (max 2 minutes). Supported values: 30, 60, 90, 120 seconds. |
-| **Webtest** | Optional | The name of the test in web test resource. |
-| **Webtest locations** | Optional | List of locations to run the test from (comma-separated values). Location refers to the geo-location population tag specific to Availability Tests. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-## Web Tests: Get or list web tests
+## Web Tests: Get web test details
 
 <!-- @mcpcli monitor webtests get -->
 
-Retrieve details for a specific web test or list all web tests. When the webtest resource is provided, you get detailed information about a single web test. If the webtest resource is omitted, you receive a list of all web tests in your subscription, optionally filtered by resource group.
+Retrieve details for a specific web test by its resource name. Returns configuration, status, and test settings for the specified web test.
 
 Example prompts include:
 
-- "List all web tests in my subscription"
-- "What web tests are available in my subscription?"
-- "Get details for web test `homepage-load-test`"
-- "Show me the specifics of the web test `api-response-check`"
-- "Can you provide information on web test `checkout-validation` in my subscription?"
+- "Get Web Test details for 'homepage-load-test' in resource group 'rg-prod'"
+- "Show me the configuration of web test 'api-response-check' in resource group 'rg-test'"
+- "Get details for web test 'checkout-validation' in resource group 'rg-dev'"
 
-| Parameter            | Required or optional | Description                                               |
-|----------------------|----------------------|-----------------------------------------------------------|
-| **Webtest resource**  | Optional             | The name of the Web Test resource to operate on.         |
+| Parameter | Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Webtest resource** | Required | The name of the Web Test resource to operate on. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
+## Web Tests: List web tests
+
+<!-- @mcpcli monitor webtests list -->
+
+List all web tests in your subscription, optionally filtered by resource group.
+
+Example prompts include:
+
+- "List all Web Test resources in my subscription"
+- "List all web tests in resource group 'rg-production'"
+- "What web tests are available in my subscription?"
+
+| Parameter | Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Resource group** | Optional | The name of the Azure resource group to filter web tests by. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
+
+## Web Tests: Update web test
+
+<!-- @mcpcli monitor webtests update -->
+
+Update an existing web test in Azure Monitor with new configuration settings. Modify properties such as URL, frequency, locations, and expected responses.
+
+Example prompts include:
+
+- "Update the web test 'status-check' in resource group 'rg-dev' with expected status code 200"
+- "Change the frequency of web test 'api-monitor' in resource group 'rg-app' to 600 seconds"
+- "Update web test 'mywebtest' in resource group 'rg-prod' to enable SSL check"
+
+| Parameter | Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Webtest resource** | Required | The name of the Web Test resource to operate on. |
+| **App Insights component** | Optional | The resource ID of the Application Insights component to associate with the web test. |
+| **Location** | Optional | The location where the web test resource is created. This should match the App Insights component location. |
+| **Webtest locations** | Optional | List of locations to run the test from (comma-separated values). Location refers to the geo-location population tag specific to Availability Tests. |
+| **Request URL** | Optional | The absolute URL to test. |
+| **Webtest** | Optional | The name of the test in web test resource. |
+| **Description** | Optional | The description of the web test. |
+| **Enabled** | Optional | Whether the web test is enabled. |
+| **Expected status code** | Optional | Expected HTTP status code. |
+| **Follow redirects** | Optional | Whether to follow redirects. |
+| **Frequency** | Optional | Test frequency in seconds. Supported values: 300, 600, 900 seconds. |
+| **Headers** | Optional | HTTP headers to include in the request. Comma-separated `KEY=VALUE`. |
+| **HTTP verb** | Optional | HTTP method (`get`, `post`, etc.). |
+| **Ignore status code** | Optional | Whether to ignore the status code validation. |
+| **Parse requests** | Optional | Whether to parse dependent requests. |
+| **Request body** | Optional | The body of the request. |
+| **Retry enabled** | Optional | Whether retries are enabled. |
+| **SSL check** | Optional | Whether to check SSL certificates. |
+| **SSL lifetime check** | Optional | Number of days to check SSL certificate lifetime. |
+| **Timeout** | Optional | Request timeout in seconds (max 2 minutes). Supported values: 30, 60, 90, 120 seconds. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: List workspaces
 
@@ -124,27 +181,6 @@ Example prompts include:
 - **List workspaces**: "Show me all Log Analytics workspaces in my subscription."
 - **View workspaces**: "What workspaces do I have?"
 - **Find workspaces**: "List monitoring workspaces."
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
-
-## Log Analytics: List table types
-
-<!-- @mcpcli monitor table type list -->
-
-Lists available table types in a Log Analytics workspace. 
-
-Example prompts include:
-
-- **List table types**: "Show me table types in the centralmonitoring workspace in resource group 'my-resource-group'"
-- **View available types**: "What table types are available in my Log Analytics workspace in resource group 'my-resource-group'?"
-- **Find table categories**: "List table types for security-logs workspace in resource group 'my-resource-group'"
-
-| Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Workspace** | Required | The Log Analytics workspace ID or name. This can be either the unique identifier (GUID) or the display name of your workspace. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -296,23 +332,21 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Instrumentation: Get learning resources
+## Instrumentation: Get learning resource
 
 <!-- @mcpcli monitor instrumentation get-learning-resource -->
 
-List all available learning resources for Azure Monitor instrumentation or get the content of a specific resource by path. Returns all resource paths by default, or retrieves the full content when a path is specified.
-
-<!-- Required parameters: 0 -  -->
+Get a specific learning resource by path or list all available Azure Monitor onboarding learning resources.
 
 Example prompts include:
 
-- "List all available Azure Monitor onboarding learning resources."
-- "Get the content of the Azure Monitor learning resource at path 'getting-started/overview'."
+- "Get the onboarding learning resource at path 'getting-started/overview'"
+- "List all available Azure Monitor onboarding learning resources"
 - "What learning resources are available for Azure Monitor instrumentation onboarding?"
 
 | Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Path** | Optional | Learning resource path. When not specified, returns all available resource paths. |
+|-----------------------|----------------------|-------------|
+| **Path** | Optional | The path of the learning resource to retrieve. If omitted, lists all available resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -322,18 +356,17 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor instrumentation orchestrator-start -->
 
-Start Azure Monitor instrumentation orchestration for a local workspace. Analyzes the workspace and returns the first action to execute. After executing the action, call the next orchestration step to continue. Execute each step exactly as instructed.
-
-<!-- Required parameters: 1 - 'Workspace path' -->
+Start deterministic instrumentation orchestration for a local workspace. Analyzes the workspace and returns the first Azure Monitor instrumentation step.
 
 Example prompts include:
 
-- "Start Azure Monitor instrumentation orchestration for workspace 'C:/projects/my-app'."
-- "Analyze workspace 'C:/repos/contoso-api' and return the first Azure Monitor instrumentation step."
+- "Start Azure Monitor instrumentation orchestration for workspace '/path/to/project'"
+- "Analyze workspace '/path/to/project' and return the first Azure Monitor instrumentation step"
+- "Begin guided Azure Monitor onboarding for project at '/path/to/project' and give me step one"
 
 | Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Workspace path** | Required | Absolute path to the workspace folder (for example, `C:/projects/my-app`). |
+|-----------------------|----------------------|-------------|
+| **Workspace path** | Required | The absolute path to the local workspace to analyze. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -343,19 +376,18 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli monitor instrumentation orchestrator-next -->
 
-Get the next instrumentation action after completing the current one. Call this only after you've executed the exact instruction from the previous response. Provide a brief completion note describing what was executed.
-
-<!-- Required parameters: 2 - 'Session ID', 'Completion note' -->
+Continue orchestration after completing the previous action. Returns the next instrumentation step in the onboarding flow.
 
 Example prompts include:
 
-- "After completing the previous Azure Monitor instrumentation step, get the next action for session 'C:/projects/my-app' with completion note 'Ran dotnet add package command'."
-- "Get the next onboarding action using session 'C:/repos/contoso-api' after I completed 'Added Azure Monitor configuration'."
+- "After completing the previous Azure Monitor instrumentation step, get the next action for session 'abc-123' with completion note 'installed SDK packages'"
+- "Get the next onboarding action using session 'abc-123' after I completed 'configured telemetry exporters'"
+- "I finished the previous instrumentation step; return the next step for session 'abc-123' with note 'added connection string'"
 
 | Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
-| **Completion note** | Required | One sentence describing what you executed (for example, `Ran dotnet add package command`). |
+|-----------------------|----------------------|-------------|
+| **Session ID** | Required | The orchestration session identifier returned by orchestrator-start. |
+| **Completion note** | Required | A description of what was completed in the previous step. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -365,41 +397,39 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli monitor instrumentation send-brownfield-analysis -->
 
-Send brownfield code analysis findings after the start orchestration step returned a status of `analysis_needed`. You must have scanned the workspace source files and filled in the analysis template before calling this tool.
-
-<!-- Required parameters: 2 - 'Session ID', 'Findings JSON' -->
+Send brownfield analysis findings JSON to continue migration flow. Use this when the orchestrator returns an `analysis_needed` status with an analysis template.
 
 Example prompts include:
 
-- "Send brownfield code analysis findings to Azure Monitor instrumentation session 'C:/projects/my-app' with the analysis JSON."
-- "Continue migration orchestration by submitting analysis payload to session 'C:/repos/contoso-api'."
+- "Send brownfield code analysis findings JSON to Azure Monitor instrumentation session 'abc-123' after analysis was requested"
+- "Continue migration orchestration by submitting analysis payload to session 'abc-123'"
+- "Send completed brownfield telemetry analysis for onboarding session 'abc-123'"
 
 | Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
-| **Findings JSON** | Required | JSON object with brownfield analysis findings including service options and telemetry analysis. |
+|-----------------------|----------------------|-------------|
+| **Session ID** | Required | The orchestration session identifier. |
+| **Findings JSON** | Required | The JSON payload matching the analysis template returned by orchestrator-start. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
-## Instrumentation: Select enhancements
+## Instrumentation: Send enhancement selection
 
 <!-- @mcpcli monitor instrumentation send-enhancement-select -->
 
-Submit the user's enhancement selection after the start orchestration step returned a status of `enhancement_available`. Present the enhancement options to the user first, then call this tool with their chosen option keys.
-
-<!-- Required parameters: 2 - 'Session ID', 'Enhancement keys' -->
+Submit enhancement selection when orchestrator-start returns `enhancement_available`. Sends one or more enhancement keys to continue the onboarding flow.
 
 Example prompts include:
 
-- "Send enhancement selection 'redis' for Azure Monitor instrumentation session 'C:/projects/my-app'."
-- "Submit enhancement keys 'redis,processors' for onboarding session 'C:/repos/contoso-api'."
+- "Submit enhancement selection keys 'logging,tracing' for Azure Monitor instrumentation session 'abc-123'"
+- "Continue instrumentation enhancement flow by sending selected keys 'metrics' to session 'abc-123'"
+- "Send chosen enhancement option key list 'logging,metrics,tracing' for onboarding session 'abc-123'"
 
 | Parameter | Required or optional | Description |
-|-----------|-------------|-------------|
-| **Session ID** | Required | The workspace path returned as `sessionId` from the start orchestration step. |
-| **Enhancement keys** | Required | One or more enhancement keys, comma-separated (for example, `redis` or `redis,processors`). |
+|-----------------------|----------------------|-------------|
+| **Session ID** | Required | The orchestration session identifier. |
+| **Enhancement keys** | Required | Comma-separated list of enhancement keys from the enhancement options. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 

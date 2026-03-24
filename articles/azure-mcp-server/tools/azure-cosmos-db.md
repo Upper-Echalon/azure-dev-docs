@@ -5,12 +5,12 @@ author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
 ms.topic: concept-article
-ms.date: 03/19/2026
+ms.date: 03/24/2026
 content_well_notification:
   - AI-contribution
 ai-usage: ai-assisted
 tool_count: 2
-mcp-cli.version: 2.0.0-beta.29+a69a87b82c6e5ae613659f0dfa7dda63fa2c15fa
+mcp-cli.version: 2.0.0-beta.31
 ---
 
 # Azure MCP Server tools for Azure Cosmos DB

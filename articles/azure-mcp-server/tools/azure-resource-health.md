@@ -44,7 +44,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli resourcehealth health-events list -->
 
-List Azure Service Health events for your subscription to track incidents, planned maintenance, advisories, and security events over a specified time range (for example, the last 30 days). With this tool, you can query planned maintenance, past or ongoing incidents, advisories, and security events and retrieve details about resource availability, potential issues, and timestamps. The tool returns `trackingId`, `title`, `summary`, `eventType`, `status`, `startTime`, `endTime`, and `impactedServices`. Filter results by `Event type`, `Status`, `Tracking ID`, time range (`Query start time` and `Query end time`), or apply an OData `Filter` to narrow the results.
+List Azure Service Health events for your subscription to track incidents, planned maintenance, advisories, and security events over a specified time range (for example, `the last 30 days`). Query planned maintenance, past or ongoing incidents, advisories, and security events to retrieve details about resource availability, potential issues, and timestamps. The tool returns `trackingId`, `title`, `summary`, `eventType`, `status`, `startTime`, `endTime`, and `impactedServices`. Filter results by `Event type`, `Status`, `Tracking ID`, time range (`Query start time` and `Query end time`), or apply an OData `Filter` to narrow the results.
 
 Example: "List service health events with event type 'ServiceIssue' and status 'Active' from '2026-03-01T00:00:00Z' to '2026-03-21T23:59:59Z'."
 

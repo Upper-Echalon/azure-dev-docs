@@ -5,7 +5,7 @@ author: diberry
 ms.author: diberry
 ms.service: azure-app-service
 ms.topic: how-to
-ms.date: 03/05/2026
+ms.date: 03/20/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-generated
@@ -28,6 +28,8 @@ Manage web applications and configure database connections using natural languag
 For Azure App Service developers, this means you can:
 
 - Add a database connection for an App Service
+- Diagnose web app issues using built-in detectors
+- List available diagnostic detectors for a web app
 - Retrieve detailed information about web app deployments
 - Retrieve detailed information about web apps
 - Retrieve application settings for an App Service web app
@@ -57,6 +59,8 @@ Azure MCP Server provides the following tools for Azure App Service operations:
 | Tool | Description |
 | --- | --- |
 | `appservice database add` | Add a database connection for an app using a connection string. |
+| `appservice webapp diagnostic diagnose` | Run a diagnostic detector on a web app and return the results. |
+| `appservice webapp diagnostic list` | List available diagnostic detectors for a web app. |
 | `appservice webapp deployment get` | Retrieve detailed information about web app deployments. |
 | `appservice webapp get` | Retrieve detailed information about Azure App Service web apps. |
 | `appservice webapp settings get-appsettings` | Retrieve application settings for an App Service web app. |
@@ -72,6 +76,8 @@ Ready to use Azure MCP Server with your Azure App Service resources?
 
 1. **Start exploring**: Ask your AI assistant questions about your App Service resources or request operations. Try prompts like:
    - "Add a database connection for 'myapp' to a SQL database named 'mydatabase' with Azure SQL server."
+   - "Diagnose web app 'myapp' in resource group 'rg-prod' with detector 'Availability'."
+   - "List the diagnostic detectors for web app 'myapp' in resource group 'rg-prod'."
    - "Retrieve details for deployment ID '12345' for web app 'myapp'."
    - "Retrieve details for web app 'myapp'."
    - "Retrieve application settings for web app 'myapp'."
@@ -83,6 +89,7 @@ Ready to use Azure MCP Server with your Azure App Service resources?
 
 When using Azure MCP Server with Azure App Service:
 
+- **Use diagnostics to investigate issues**: Run detectors like `Availability` and `CpuAnalysis` to troubleshoot app health before making configuration changes.
 - **Use version control for settings**: Track changes to application settings to prevent configuration drift.
 - **Verify settings before applying updates**: Use get-appsettings to confirm current settings before making changes.
 

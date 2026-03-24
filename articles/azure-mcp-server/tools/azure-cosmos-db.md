@@ -27,8 +27,6 @@ Azure Cosmos DB is a globally distributed, multi-model database service. For mor
 
 List Azure Cosmos DB accounts, databases, or containers. By default, this tool returns all accounts in your subscription. Specify the `Account` to list databases in that account, or specify both the `Account` and the `Database` to list containers in that database. Results are returned at the level you specify: account, database, or container.
 
-<!-- Required parameters: 0 -  -->
-
 Example prompts include:
 
 - "List all Azure Cosmos DB accounts in my subscription."
@@ -49,8 +47,6 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 <!-- @mcpcli cosmos database container item query -->
 
 Query items from an Azure Cosmos DB container. Provide the account name, database name, and container name, and optionally supply a SQL query to filter results. The query uses Azure Cosmos DB SQL API syntax and the tool returns matching items as JSON documents.
-
-<!-- Required parameters: 3 - 'Account', 'Container', 'Database' -->
 
 Example prompts include:
 

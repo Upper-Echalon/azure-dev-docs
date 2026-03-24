@@ -3,7 +3,7 @@ title: Azure Developer CLI reference
 description: This article explains the syntax and parameters for the various Azure Developer CLI commands.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 03/16/2026
+ms.date: 03/20/2026
 ms.service: azure-dev-cli
 ms.topic: conceptual
 ms.custom: devx-track-azdevcli
@@ -33,7 +33,7 @@ The Azure Developer CLI (`azd`) is an open-source tool that helps onboard and ma
 * [azd auth](#azd-auth): Authenticate with Azure.
 * [azd completion](#azd-completion): Generate shell completion scripts.
 * [azd config](#azd-config): Manage azd configurations (ex: default Azure subscription, location).
-* [azd copilot](#azd-copilot): Manage Copilot agent settings. (Alpha)
+* [azd copilot](#azd-copilot): Manage GitHub Copilot agent settings. (Preview)
 * [azd deploy](#azd-deploy): Deploy your project code to Azure.
 * [azd down](#azd-down): Delete your project's Azure resources.
 * [azd env](#azd-env): Manage environments (ex: default environment, environment variables).
@@ -710,7 +710,7 @@ azd config unset defaults.location
 
 ## azd copilot
 
-Manage Copilot agent settings. (Alpha)
+Manage GitHub Copilot agent settings. (Preview)
 
 ### Options
 
@@ -757,7 +757,7 @@ Manage consent rules for tool execution.
 
 ### See also
 
-* [azd copilot](#azd-copilot): Manage Copilot agent settings. (Alpha)
+* [azd copilot](#azd-copilot): Manage GitHub Copilot agent settings. (Preview)
 * [azd copilot consent grant](#azd-copilot-consent-grant): Grant consent trust rules.
 * [azd copilot consent list](#azd-copilot-consent-list): List consent rules.
 * [azd copilot consent revoke](#azd-copilot-consent-revoke): Revoke consent rules.
@@ -904,6 +904,7 @@ azd deploy <service> [flags]
   -e, --environment string    The name of the environment to use.
       --from-package string   Deploys the packaged service located at the provided path. Supports zipped file packages (file path) or container images (image tag).
   -h, --help                  Gets help for deploy.
+      --timeout int           Maximum time in seconds for azd to wait for each service deployment. This stops azd from waiting but does not cancel the Azure-side deployment. (default: 1200) (default 1200)
 ```
 
 ### Options inherited from parent commands

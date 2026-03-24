@@ -3,6 +3,7 @@ title: Azure MCP Server tools for Azure Well-Architected Framework
 description: Use Azure MCP Server tools to manage Azure Well-Architected Framework assessments and recommendations for cloud workloads with natural language prompts from your IDE.
 ms.service: azure-mcp-server
 ms.topic: concept-article
+ms.date: 03/24/2026
 tool_count: 1
 mcp-cli.version: 2.0.0-beta.31
 ---
@@ -15,7 +16,7 @@ Azure Well-Architected Framework is a set of best practices and guidance that he
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## get
+## Get Well-Architected Framework guidance for Azure services
 
 <!-- @mcpcli wellarchitectedframework serviceguide get -->
 
@@ -24,8 +25,6 @@ This tool retrieves Azure Well-Architected Framework guidance for a specific Azu
 Examples:
 - "Show guidance for 'Cosmos DB'"
 - "List all supported services"
-
-<!-- Required parameters: 0 -  -->
 
 Example prompts include:
 

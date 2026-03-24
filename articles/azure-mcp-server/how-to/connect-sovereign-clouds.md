@@ -6,6 +6,8 @@ ms.date: 03/24/2026
 ai-usage: ai-generated
 ---
 
+# Connect Azure MCP Server to sovereign clouds
+
 This article shows you how to configure Azure MCP Server to authenticate against a sovereign cloud instead of the Azure public cloud. For example, use these steps when your subscription is in Azure US Government or Azure China Cloud, or when you need to provide a custom authority host.
 
 ## Prerequisites
@@ -69,21 +71,21 @@ Replace `AzureChinaCloud` with `AzureUSGovernment` when you connect to Azure US 
 
 If you start Azure MCP Server from a shell, or if your MCP client supports environment variables, set `AZURE_CLOUD` before starting the server.
 
-# [PowerShell](#tab/powershell)
+#### [PowerShell](#tab/powershell)
 
 ```powershell
 $env:AZURE_CLOUD = "AzureUSGovernment"
 azmcp server start
 ```
 
-# [Bash](#tab/bash)
+#### [Bash](#tab/bash)
 
 ```bash
 export AZURE_CLOUD=AzureChinaCloud
 azmcp server start
 ```
 
-# [Windows Command Prompt](#tab/cmd)
+#### [Windows Command Prompt](#tab/cmd)
 
 ```cmd
 set AZURE_CLOUD=AzureChinaCloud

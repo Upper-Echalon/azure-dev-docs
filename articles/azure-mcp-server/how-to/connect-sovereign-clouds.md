@@ -6,8 +6,6 @@ ms.date: 03/24/2026
 ai-usage: ai-generated
 ---
 
-# Connect Azure MCP Server to sovereign clouds
-
 This article shows you how to configure Azure MCP Server to authenticate against a sovereign cloud instead of the Azure public cloud. For example, use these steps when your subscription is in Azure US Government or Azure China Cloud, or when you need to provide a custom authority host.
 
 ## Prerequisites
@@ -141,7 +139,17 @@ Set these environment variables on the host or container:
 - `AZURE_CLOUD`.
 - `AzureAd__ClientCredentials__0__TokenExchangeUrl`.
 
-If you use the Microsoft-provided Azure Container Apps templates, verify that both values match the target sovereign cloud before you publish the remote endpoint. For template-based deployments, review the upstream template guidance in the Azure MCP Server repository.
+If you use one of the Microsoft-provided Azure Container Apps templates, this value is set for you. The template derives the correct value from the target cloud before it publishes the remote endpoint. For examples, see the [Foundry managed identity template](https://github.com/Azure-Samples/azmcp-foundry-aca-mi), the [Copilot Studio managed identity template](https://github.com/Azure-Samples/azmcp-copilot-studio-aca-mi), and the [on-behalf-of template](https://github.com/Azure-Samples/azmcp-obo-template).
+
+If you configure the remote server manually, set `AzureAd__ClientCredentials__0__TokenExchangeUrl` to the token exchange audience for your cloud:
+
+| Cloud | Value |
+| --- | --- |
+| Azure Public Cloud | `api://AzureADTokenExchange` |
+| Azure US Government | `api://AzureADTokenExchangeUSGov` |
+| Azure China Cloud | `api://AzureADTokenExchangeChina` |
+
+For template-based deployments, review the upstream [Azure MCP Server azd templates](https://github.com/microsoft/mcp/tree/main/servers/Azure.Mcp.Server/azd-templates) if you want to confirm the generated host or container settings before you publish the remote endpoint.
 
 ## Verify the connection
 

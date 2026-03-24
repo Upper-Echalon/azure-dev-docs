@@ -70,4 +70,4 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 - [What are the Azure MCP Server tools?](index.md)
 - [Get started using Azure MCP Server](../get-started.md)
-- [Azure Resource Health documentation](/azure/service-health/resource-health/)
+- [Azure Resource Health documentation](/azure/service-health/resource-health-overview/)

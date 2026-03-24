@@ -12,7 +12,7 @@ This article shows you how to configure Azure MCP Server to authenticate against
 
 ## Prerequisites
 
-- Access to an Azure subscription in Azure China Cloud or Azure US Government.
+- Access to an Azure subscription in Azure US Government or Azure China Cloud.
 - A client or local setup that can start Azure MCP Server. For setup options, see [Get started with the Azure MCP Server](../get-started.md).
 - At least one supported local authentication tool, such as [Azure CLI](/cli/azure/install-azure-cli), [Azure PowerShell](/powershell/azure/install-az-ps), or [Azure Developer CLI](../../azure-developer-cli/install-azd.md).
 
@@ -163,8 +163,8 @@ If authentication or discovery fails, start with these checks.
 
 1. Check network connectivity. Confirm that you can reach the correct authority host for your cloud.
 
-   - Azure China Cloud: `https://login.chinacloudapi.cn`.
-   - Azure US Government: `https://login.microsoftonline.us`.
+   - Azure US Government: `https://login.microsoftonline.us`
+   - Azure China Cloud: `https://login.chinacloudapi.cn`
 
 1. For remote deployments, confirm that both `AZURE_CLOUD` and `AzureAd__ClientCredentials__0__TokenExchangeUrl` are set correctly.
 

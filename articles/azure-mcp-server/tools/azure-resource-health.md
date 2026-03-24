@@ -12,7 +12,7 @@ mcp-cli.version: 2.0.0-beta.31+ed24dd9783f26645fd2b7218b4d52221b446354f
 
 The Azure MCP Server lets you manage resource health, including checking availability status, viewing health events, and tracking service-impacting issues across your Azure resources, with natural language prompts.
 
-Azure Resource Health provides information about the health of your individual Azure resources and helps you diagnose and mitigate issues; for more information, see [Azure Resource Health documentation](/azure/service-health/resource-health-overview/).
+Azure Resource Health provides information about the health of your individual Azure resources and helps you diagnose and mitigate issues; for more information, see [Azure Resource Health documentation](/azure/service-health/resource-health-overview).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
@@ -70,4 +70,4 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 - [What are the Azure MCP Server tools?](index.md)
 - [Get started using Azure MCP Server](../get-started.md)
-- [Azure Resource Health documentation](/azure/service-health/resource-health-overview/)
+- [Azure Resource Health documentation](/azure/service-health/resource-health-overview)

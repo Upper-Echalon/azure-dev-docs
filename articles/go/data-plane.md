@@ -31,20 +31,6 @@ Common scenarios for Go data plane operations include:
 - Retrieving secrets, keys, and certificates from Key Vault
 - Monitoring application performance with Application Insights
 
-## Prerequisites
-
-- Go 1.18 or later
-- An Azure subscription with provisioned resources
-- Azure CLI installed for local authentication (`az login`)
-
-All data plane packages depend on the core identity module.
-
-```bash
-go get github.com/Azure/azure-sdk-for-go/sdk/azidentity
-```
-
-Install additional packages as needed for the services you want to use.
-
 ## Authentication
 
 Data plane operations support the same credential types from the [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package used for control plane operations. All credential types implement the `azcore.TokenCredential` interface, so you can swap them without changing client code.
@@ -99,6 +85,8 @@ for pager.More() {
 
 Methods that return `*Pager` types follow this same iteration pattern across all data plane packages.
 
+For more details on pagination and other common patterns, see the [Common usage patterns in Azure SDK for Go](azure-sdk-core-concepts.md).
+
 ## Error handling
 
 Data plane operations return structured errors you can inspect for specific error codes:
@@ -115,13 +103,6 @@ if errors.As(err, &respErr) {
 ```
 
 Common data plane error codes include `BlobNotFound`, `MessageLockLost`, `SecretNotFound`, and `RequestEntityTooLarge`. Check the documentation for each service for the full list of error codes.
-
-## Common pitfalls for Go data plane clients
-
-- **Creating a client per operation** - SDK clients maintain connection pooling and are safe for concurrent use; reuse them across your application lifecycle.
-- **No timeouts on operations** - network calls without deadlines hang on DNS or TLS failures; wrap calls in `context.WithTimeout`.
-- **Mixing connection strings and AAD** - standardize on one auth model (preferably token-based AAD) to avoid secrets sprawl.
-- **Ignoring errors in paging loops** - always check `NextPage` errors before processing items; a failed page read leaves partial results.
 
 ## Upload a blob example
 
@@ -181,6 +162,8 @@ Use it to upload and download files and documents, list and manage blobs and con
 ```bash
 go get github.com/Azure/azure-sdk-for-go/sdk/storage/azblob
 ```
+
+To get started, see [Quickstart: Azure Blob Storage client module for Go](/azure/storage/blobs/storage-quickstart-blobs-go).
 
 For the package documentation, see the [azblob package reference](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/storage/azblob#section-readme).
 
@@ -253,11 +236,6 @@ go get github.com/microsoft/ApplicationInsights-Go
 ```
 
 For the service documentation, see the [Application Insights overview](/azure/azure-monitor/app/app-insights-overview).
-
-## Related reading
-
-- For the conceptual overview of how management libraries fit with client libraries, see [Overview of the Azure SDK for Go management libraries](management-libraries.md).
-- For control plane operations (provisioning and managing Azure resources before your application starts using them), see [Use the Azure SDK for Go for control plane operations](control-plane.md).
 
 ## Next steps
 

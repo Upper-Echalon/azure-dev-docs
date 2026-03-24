@@ -31,21 +31,6 @@ Common scenarios for Go control plane automation include:
 - Implementing GitOps-style infrastructure reconciliation
 - Automating compliance auditing and drift detection
 
-## Prerequisites
-
-- Go 1.18 or later
-- An Azure subscription
-- Azure CLI installed for local authentication (`az login`)
-
-Management packages are under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. Install the identity package and only the `arm*` packages you plan to use.
-
-```bash
-go get github.com/Azure/azure-sdk-for-go/sdk/azidentity
-go get github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources
-```
-
-Many request models use pointer fields for optional Azure Resource Manager properties. Samples often import `github.com/Azure/azure-sdk-for-go/sdk/azcore/to` so you can write `to.Ptr("eastus")` or `to.Ptr("Standard")` without creating one-off helper functions.
-
 ## Authentication
 
 All management operations require an authenticated credential from the [azidentity](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity) package. The package provides credential types for every environment including local development, CI/CD pipelines, and production workloads running in Azure. All credential types implement the same `azcore.TokenCredential` interface, so you can swap them without changing client code.
@@ -67,6 +52,8 @@ For a full guide on credential types and best practices, see [Authentication wit
 
 ## Client packages and typed clients
 
+Management packages are under `github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/<service>/arm<service>`. Install the identity package and only the `arm*` packages you plan to use. For example, if you're only managing VMs and resource groups, you only need `armcompute` and `armresources`. Each package contains clients for the resources in that service. For example, `armcompute` has clients for virtual machines, disks, images, and related compute resources.
+
 A single management package often contains several clients, with each client focused on one resource type or operation group. For example, `armcompute` includes clients for virtual machines, disks, images, and related resources. After you choose the package for a service, create one client factory and reuse it to create the typed clients that match the resources you want to manage.
 
 ```go
@@ -78,7 +65,6 @@ vmClient := clientFactory.NewVirtualMachinesClient()
 ```
 
 This package and client factory pattern is consistent across the `resourcemanager` modules. It's a useful shortcut when you're scanning pkg.go.dev or asking an agent to find the right client for a task.
-
 
 ## Long-running operations
 
@@ -100,6 +86,8 @@ if err != nil {
 
 A successful `Begin*` call only means Azure accepted the request. The operation can still fail later while the poller runs. That's why both the initial call and `PollUntilDone` need error handling. Use `PollUntilDone` when you want the simplest flow. Use `poller.Poll` and `poller.Done` when you need custom wait logic or progress reporting.
 
+For more details on patterns, see the [Common usage patterns in Azure SDK for Go](azure-sdk-core-concepts.md).
+
 ## Error handling
 
 Management operations return structured errors you can inspect for specific error codes:
@@ -116,13 +104,6 @@ if errors.As(err, &respErr) {
 ```
 
 Most `CreateOrUpdate` operations are idempotent. Calling them on an existing resource updates the resource instead of failing.
-
-## Common pitfalls for automation
-
-- **No timeouts on `context.Context`** - long-running operations, such as cluster provisioning and deletions, hang indefinitely without `context.WithTimeout`.
-- **Missing subscription ID** - baking subscription IDs into code breaks across environments. Read from `AZURE_SUBSCRIPTION_ID`.
-- **Ignoring poller errors** - errors from `Begin*` and `PollUntilDone` are distinct. One can fail while the other succeeds.
-- **Assuming `CreateOrUpdate` requires idempotency shim** - the SDK's `CreateOrUpdate` already handles retries. Wrapping it in custom logic causes double-updates.
 
 ## Provision a resource example
 
@@ -207,13 +188,13 @@ for pager.More() {
 }
 ```
 
-[Resource group management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/resources)
+[Resource group management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/resource/resourcegroups).
 
-For a getting started guide, see the [armresources package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources#section-readme).
+For a getting started guide, see the [armresources package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources).
 
 ## Virtual machines
 
-The [armcompute](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute) package is a canonical control-plane example because VM management is mostly lifecycle work: create or update a VM, start or stop it, resize it, and eventually delete it. In Go, these workflows use the same `DefaultAzureCredential`, `context.Context`, and client factory pattern shown in the resource group example, so once that pattern is in place you can apply it across compute operations without changing your authentication approach.
+The [armcompute](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute) package is a canonical control-plane example because VM management is mostly lifecycle work: create or update a VM, start or stop it, resize it, and delete it. In Go, these workflows use the same `DefaultAzureCredential`, `context.Context`, and client factory pattern shown in the resource group example, so once that pattern is in place you can apply it across compute operations without changing your authentication approach.
 
 If you need a quick starting point, create the compute client factory and then ask it for the typed VM client:
 
@@ -255,8 +236,6 @@ The [armauthorization](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/
 
 Use it to list and search built-in roles, assign roles to principals (users, service principals, managed identities, or groups) at any scope, create custom role definitions with fine-grained permissions, and audit assignments for compliance reporting and drift detection. Assign roles to groups rather than individuals, and use built-in roles where possible.
 
-[RBAC management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/authorization).
-
 For a getting started guide, see the [armauthorization package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/authorization/armauthorization#section-readme).
 
 ## Virtual networks and network security
@@ -273,7 +252,7 @@ For a getting started guide, see the [armnetwork package documentation](https://
 
 The [armcontainerregistry](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/containerregistry/armcontainerregistry) package manages Azure Container Registry instances.
 
-Use it to provision registries with the appropriate SKU and geo-replication, configure authentication (admin, service principal, or managed identity), manage webhooks for CI/CD, enable vulnerability scanning, and apply retention policies to images. You often use Container Registry alongside AKS. First, provision the registry, and then reference it during cluster creation.
+Use it to provision registries with the appropriate SKU and geo-replication, configure authentication (admin, service principal, or managed identity), manage webhooks for CI/CD, enable vulnerability scanning, and apply retention policies to images. You often use Container Registry alongside Azure Kubernetes Service. First, provision the registry, and then reference it during cluster creation.
 
 [Container Registry management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/containerregistry).
 
@@ -288,12 +267,6 @@ Use it to create storage accounts with the right performance tier and redundancy
 [Storage account management code sample](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/main/sdk/resourcemanager/storage).
 
 For a getting started guide, see the [armstorage package documentation](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/storage/armstorage#section-readme).
-
-## Related reading
-
-For the conceptual overview of management libraries and how they connect to data plane clients, see [Overview of the Azure SDK for Go management libraries](management-libraries.md).
-
-For data plane operations (reading and writing data in Azure services after a resource exists), see [Use the Azure SDK for Go for data plane operations](data-plane.md).
 
 ## Next steps
 

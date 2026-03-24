@@ -6,7 +6,7 @@ ms.date: 03/24/2026
 ai-usage: ai-generated
 ---
 
-This article shows you how to configure Azure MCP Server to authenticate against a sovereign cloud instead of the Azure public cloud. For example, use these steps when your subscription is in Azure US Government or Azure China Cloud, or when you need to provide a custom authority host.
+This article shows you how to configure Azure MCP Server to authenticate against a sovereign cloud instead of the Azure public cloud. For example, use these steps when your subscription is in Azure US Government or Azure China Cloud, or when you need to provide a custom authority host. For more background about Azure sovereign cloud offerings, see [What are sovereign clouds?](/industry/sovereign-cloud/).
 
 ## Prerequisites
 

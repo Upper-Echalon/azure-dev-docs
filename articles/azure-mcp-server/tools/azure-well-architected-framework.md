@@ -12,7 +12,7 @@ mcp-cli.version: 2.0.0-beta.31
 
 The Azure MCP Server lets you manage Azure Well-Architected Framework assessments, run workload reviews, view improvement recommendations, and track remediation plans with natural language prompts.
 
-Azure Well-Architected Framework is a set of best practices and guidance that helps you design, build, and operate secure, high-performing, resilient, and cost-efficient cloud workloads; for more information, see [Azure Well-Architected Framework documentation](https://learn.microsoft.com/azure/architecture/framework/).
+Azure Well-Architected Framework is a set of best practices and guidance that helps you design, build, and operate secure, high-performing, resilient, and cost-efficient cloud workloads; for more information, see [Azure Well-Architected Framework documentation](/azure/architecture/framework/).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 

@@ -3,6 +3,7 @@ title: Azure MCP Server tools for Azure Resource Health
 description: Use Azure MCP Server tools to manage resource health and availability of Azure resources with natural language prompts from your IDE.
 ms.service: azure-mcp-server
 ms.topic: concept-article
+ms.date: 03/24/2026
 tool_count: 2
 mcp-cli.version: 2.0.0-beta.31+ed24dd9783f26645fd2b7218b4d52221b446354f
 ---
@@ -11,17 +12,15 @@ mcp-cli.version: 2.0.0-beta.31+ed24dd9783f26645fd2b7218b4d52221b446354f
 
 The Azure MCP Server lets you manage resource health, including checking availability status, viewing health events, and tracking service-impacting issues across your Azure resources, with natural language prompts.
 
-Azure Resource Health provides information about the health of your individual Azure resources and helps you diagnose and mitigate issues; for more information, see [Azure Resource Health documentation](https://learn.microsoft.com/azure/service-health/resource-health/).
+Azure Resource Health provides information about the health of your individual Azure resources and helps you diagnose and mitigate issues; for more information, see [Azure Resource Health documentation](/azure/service-health/resource-health/).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Get resourcehealth availability-status
+## Get resource health availability status
 
 <!-- @mcpcli resourcehealth availability-status get -->
 
-This tool retrieves the Azure Resource Health availability status for a specific resource or for all resources in a subscription or resource group. It reports whether a resource is `Available`, `Unavailable`, `Degraded`, or `Unknown`, and includes the reason and details to help you investigate and troubleshoot. You can check the health of Azure resources such as virtual machines and storage accounts. Example prompts: "What is the availability status of VM 'appserver-prod'?", "Is storage account 'mystorage01' healthy?", "Show Resource Health for subscription '12345678-1234-1234-1234-123456789abc'".
-
-<!-- Required parameters: 0 -  -->
+This tool retrieves the Azure Resource Health availability status for a specific resource or for all resources in a subscription or resource group. It reports whether a resource is `Available`, `Unavailable`, `Degraded`, or `Unknown`, and includes the reason and details to help you investigate and troubleshoot. You can check the health of Azure resources such as virtual machines and storage accounts. 
 
 Example prompts include:
 
@@ -34,21 +33,17 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **ResourceId** |  Optional | The Azure resource ID to get health status for (for example, `/subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vm}`). |
+| **ResourceId** |  Optional | The Azure resource ID to get health status for such as `/subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vm}`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Get resourcehealth health-eventses
+## Get resource health events
 
 <!-- @mcpcli resourcehealth health-events list -->
 
 List Azure Service Health events for your subscription to track incidents, planned maintenance, advisories, and security events over a specified time range (for example, `the last 30 days`). Query planned maintenance, past or ongoing incidents, advisories, and security events to retrieve details about resource availability, potential issues, and timestamps. The tool returns `trackingId`, `title`, `summary`, `eventType`, `status`, `startTime`, `endTime`, and `impactedServices`. Filter results by `Event type`, `Status`, `Tracking ID`, time range (`Query start time` and `Query end time`), or apply an OData `Filter` to narrow the results.
-
-Example: "List service health events with event type 'ServiceIssue' and status 'Active' from '2026-03-01T00:00:00Z' to '2026-03-21T23:59:59Z'."
-
-<!-- Required parameters: 0 -  -->
 
 Example prompts include:
 

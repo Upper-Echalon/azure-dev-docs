@@ -282,6 +282,10 @@ A [dev container](https://code.visualstudio.com/docs/remote/containers) is a Doc
 
 1. Rebuild and run your dev container. In Visual Studio Code, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) to execute the **Rebuild and Reopen in Dev Container** command.
 
+### Auto-install azd extensions
+
+[!INCLUDE [extensions-dev-container](includes/extensions-dev-container.md)]
+
 ::: zone-end
 
 ## Verify your installation

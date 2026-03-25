@@ -4,7 +4,7 @@ description: A developer focused overview of how billing works on Azure.
 keywords: azure billing, azure portal
 ms.service: azure
 ms.topic: overview
-ms.date: 09/26/2025
+ms.date: 03/25/2026
 ms.custom: overview
 ---
 

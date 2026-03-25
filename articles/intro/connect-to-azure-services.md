@@ -3,7 +3,7 @@ title: Connect your app to Azure Services
 description: An overview of how to connect your applications to Azure.
 ms.service: azure
 ms.topic: overview
-ms.date: 09/24/2025
+ms.date: 03/25/2026
 ---
 
 # Connect your app to Azure services

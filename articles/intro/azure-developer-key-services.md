@@ -4,7 +4,7 @@ description: An overview of important services that developers use when building
 keywords: azure services
 ms.service: azure
 ms.topic: overview
-ms.date: 09/25/2025
+ms.date: 03/25/2026
 ms.custom: overview
 #CustomerIntent: As an experienced developer, I want an overview of Azure services since there are so many new terms and ideas. I want to see the products organized into large categories so I can make sense of them and start building a mental model.
 ---

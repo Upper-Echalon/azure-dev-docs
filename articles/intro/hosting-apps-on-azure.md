@@ -5,7 +5,7 @@ keywords: azure app service, azure functions, azure virtual machines, azure cont
 ms.service: azure
 ms.custom: devx-track-extended-java
 ms.topic: overview
-ms.date: 09/25/2025
+ms.date: 03/25/2026
 #CustomerIntent: As an experienced developer, I want to select the correct hosting services for my applications so that I can get the level of control versus responsibility to meet my business and team needs.
 ---
 

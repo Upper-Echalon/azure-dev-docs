@@ -8,16 +8,6 @@ items:
     items:
       - name: Overview
         href: azure-developer-overview.md
-      - name: Deploy your first app to Azure 👈
-        href: azure-developer-overview.md
-      - name: AI development on Azure 👈
-        items:
-          - name: Set up agent-assisted development 👈
-            href: azure-developer-overview.md
-          - name: Build AI apps on Azure 👈
-            href: ../ai/azure-ai-for-developers.md
-          - name: Azure AI developer resources 👈
-            href: ../ai/resources-overview.md
       - name: Key Azure services for developers
         href: azure-developer-key-services.md
       - name: Host applications on Azure
@@ -30,16 +20,26 @@ items:
         href: azure-developer-key-concepts.md
       - name: Overview of Azure billing
         href: azure-developer-billing.md
+      - name: Get started with Azure dev tools
+        href: quickstart-developer-tools.md
+      - name: AI development on Azure
+        items:
+          - name: Build AI apps on Azure
+            href: ../ai/azure-ai-for-developers.md
+          - name: Azure AI developer resources
+            href: ../ai/resources-overview.md
   - name: Develop apps that use Foundry Tools
     href: ../ai/index.yml
-  - name: Tools 👈
+  - name: Tools
     items:
-      - name: Get started with Azure development tools 👈
-        href: quickstart-developer-tools.md
-      - name: Azure Developer CLI (azd) 👈
+      - name: Azure Developer CLI (azd)
         href: ../azure-developer-cli/overview.md
-      - name: GitHub Copilot for Azure 👈
+      - name: GitHub Copilot for Azure
         href: ../github-copilot-azure/introduction.md
+      - name: VS Code for Web - Azure
+        href: https://code.visualstudio.com/docs/azure/vscodeforweb
+      - name: Azure Tools extension
+        href: https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack
   - name: Azure developer centers
     expanded: true
     items:

@@ -4,7 +4,7 @@ description: An overview of techniques that developers use to provision resource
 keywords: azure portal, azure cli, azure powershell, azure sdk, azure rest apis
 ms.service: azure
 ms.topic: overview
-ms.date: 09/29/2025
+ms.date: 03/25/2026
 ms.custom: overview
 ---
 
@@ -39,6 +39,8 @@ Different tools support various use cases, and most Azure developers use a combi
 * **Use [Infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) tools to declaratively deploy and manage Azure resources**. Tools like [Terraform](../terraform/index.yml), [Ansible](../ansible/index.yml), and [Bicep](/azure/azure-resource-manager/bicep/) let you codify Azure resources in declarative syntax, ensuring consistent deployment across environments and preventing environmental drift.
 
 * **Use AI app templates to bootstrap AI projects quickly.** Azure provides [AI app templates](../ai/intelligent-app-templates.md) that include infrastructure definitions, application code, and deployment configuration for common AI scenarios like chat-with-your-data and document processing.
+
+To get started with Azure developer tools, see the [Quickstart: Azure developer tools](quickstart-developer-tools.md).
 
 ## Azure portal
 
@@ -276,24 +278,12 @@ resource "azurerm_app_service" "main" {
 
 Azure resources can be created programmatically from code. This lets you write applications that dynamically provision Azure resources in response to user requests. The Azure SDK provides resource management packages in .NET, Go, Java, JavaScript, and Python that let you create and manage Azure resources directly in code. Alternatively, the Azure REST API lets you manage Azure resources through HTTP requests to a RESTful endpoint.
 
-> [!div class="nextstepaction"]
-> [Using the Azure SDK for .NET](/dotnet/azure/sdk/resource-management)
-
-> [!div class="nextstepaction"]
-> [Using the Azure SDK for Go](../go/management-libraries.md)
-
-> [!div class="nextstepaction"]
-> [Using the Azure SDK for Java](../java/sdk/overview.md)
-
-> [!div class="nextstepaction"]
-> [Using the Azure SDK for JavaScript](../javascript/core/use-azure-sdk.md)
-
-> [!div class="nextstepaction"]
-> [Using the Azure SDK for Python](../python/sdk/azure-sdk-overview.md)
-
-> [!div class="nextstepaction"]
-> [Using the Azure REST APIs](/rest/api/azure/)
-
+- [Using the Azure SDK for .NET](/dotnet/azure/sdk/resource-management)
+- [Using the Azure SDK for Go](../go/management-libraries.md)
+- [Using the Azure SDK for Java](../java/sdk/overview.md)
+- [Using the Azure SDK for JavaScript](../javascript/core/use-azure-sdk.md)
+- [Using the Azure SDK for Python](../python/sdk/azure-sdk-overview.md)
+- [Using the Azure REST APIs](/rest/api/azure/)
 
 > [!div class="nextstepaction"]
 > [Continue to part 6: Key concepts for building Azure apps](azure-developer-key-concepts.md)

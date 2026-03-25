@@ -3,7 +3,7 @@ title: "Quickstart: Azure developer tools"
 description: Get hands-on with the Azure Developer CLI, Azure Tools for VS Code, and GitHub Copilot for Azure.
 ms.service: azure
 ms.topic: quickstart
-ms.date: 03/04/2026
+ms.date: 03/25/2026
 ms.custom: devx-track-azdevcli
 ai-usage: ai-generated
 ---
@@ -56,6 +56,7 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
+1. Open the terminal using the shortcut (**Ctrl+`**) or from the Command Palette (**Ctrl + Shift + P**) and choosing **Terminal > New Terminal**.
 1. In a terminal, create and change into a new directory for your project.
 
     ```azdeveloper

@@ -4,7 +4,7 @@ description: Understand the factors that affect your overall strategy for design
 keywords: azure account, azure subscription, billing, region, resource groups
 ms.service: azure
 ms.topic: overview
-ms.date: 09/29/2025
+ms.date: 03/25/2026
 ms.custom: overview
 ---
 

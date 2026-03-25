@@ -22,12 +22,13 @@ The Azure MCP Server allows you to manage Azure resources, including subscriptio
 
 <!-- subscription list -->
 
-The Azure MCP Server can list all subscriptions.
+List all Azure subscriptions for the current account. Returns `subscriptionId`, `displayName`, `state`, `tenantId`, and `isDefault` for each subscription. The `isDefault` field indicates the user's default subscription as resolved from the Azure CLI profile (configured via [`az account set`](/cli/azure/account#az-account-set)) or, if not set there, from the `AZURE_SUBSCRIPTION_ID` environment variable.
 
 Example prompts include:
 
 - **List subscriptions**: "Show me all of my subscriptions."
 - **Find subscriptions**: "List all subscriptions starting with `northeast`."
+- **Find default**: "Which subscription is my default?"
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 

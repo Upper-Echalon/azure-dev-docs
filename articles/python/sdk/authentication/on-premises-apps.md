@@ -20,7 +20,7 @@ A different app registration should be created for each environment the app is h
 
 [!INCLUDE [Register the app in Azure](<../../../includes/authentication/create-app-registration.md>)]
 
-[!INCLUDE [Assign roles to the application service principal](<../../../includes/authentication/includes/authentication-assign-service-principal-roles.md>)]
+[!INCLUDE [Assign roles to the application service principal](<../../../includes/authentication/assign-service-principal-roles.md>)]
 
 ---
 

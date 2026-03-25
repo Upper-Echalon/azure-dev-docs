@@ -99,7 +99,7 @@ After deployment, connect your Foundry agent to the Azure MCP Server running on 
     - **Remote MCP Server**: Enter the `CONTAINER_APP_URL` value from the `azd` output for the tool endpoint.
     - **Authentication**: Select **Microsoft Entra → Project Managed Identity**.
     - **Type**: Select **Project Managed Identity**.
-    - **Audience**: Enter the `ENTRA_APP_CLIENT_ID` value from the `azd` output.
+    - **Audience**: Enter the `ENTRA_APP_IDENTIFIER_URI` value from the `azd` output.
 
     Select **Connect** to associate the connection with the agent.
 

@@ -83,7 +83,7 @@ Learn more in the [Ollama session of the course](https://github.com/microsoft/ge
 
 ## Get started with AI for free
 
-You can run AI for free by using [Foundry Local](https://learn.microsoft.com/foundry/foundry-local/get-started), which lets you download AI models and interact with them locally. There's also [AI Toolkit for Visual Studio Code](https://learn.microsoft.com/windows/ai/toolkit/), an extension that supports model download, fine-tuning, and more. [Ollama](https://ollama.com/) is another popular choice for running local models.
+You can run AI for free by using [Foundry Local](/azure/foundry-local/get-started), which lets you download AI models and interact with them locally. There's also [AI Toolkit for Visual Studio Code](/windows/ai/toolkit/), an extension that supports model download, fine-tuning, and more. [Ollama](https://ollama.com/) is another popular choice for running local models.
 
 You can also try models without any local setup by creating a GitHub Codespace and using a Jupyter notebook to test prompt engineering, few-shot learning, and RAG.
 

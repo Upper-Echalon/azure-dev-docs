@@ -58,7 +58,7 @@ Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. T
 
 1. In a terminal, create and change into a new directory for your project.
 
-    ```azdeveloper
+    
     mkdir my-todo-app && cd my-todo-app
     ```
 1. Initialize a project from a starter template. The `todo-nodejs-mongo` template is a full-stack application built with Node.js, Express, and MongoDB. The template includes an Azure Resource Manager (ARM) template that defines the required Azure resources, such as an App Service for hosting the application and an Azure Cosmos DB account for the database.

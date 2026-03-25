@@ -66,7 +66,7 @@ Use the Azure REST API when the Azure SDK doesn't support your programming langu
 
 ## Azure AI Foundry SDK
 
-When building AI applications, you can also use the [Azure AI Foundry SDK](/azure/ai-studio/how-to/develop/sdk-overview) (available for Python, .NET, Java, and JavaScript) to interact with Azure OpenAI models, manage prompts, and orchestrate AI workflows. For keyless authentication to AI services, see [Use Azure OpenAI without keys](../ai/keyless-connections.md).
+When building AI applications, you can also use the [Azure AI Foundry SDK](/azure/foundry/how-to/develop/sdk-overview) (available for Python, .NET, Java, and JavaScript) to interact with Azure OpenAI models, manage prompts, and orchestrate AI workflows. For keyless authentication to AI services, see [Use Azure OpenAI without keys](../ai/keyless-connections.md).
 
 > [!div class="nextstepaction"]
 > [Continue to part 5: How do I create and manage resources in Azure?](azure-developer-create-resources.md)

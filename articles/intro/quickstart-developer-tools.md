@@ -129,7 +129,7 @@ For more information, see [Azure Tools extension pack](https://marketplace.visua
 
 Use GitHub Copilot for Azure to learn about the resources you deployed and get guidance on next steps.
 
-1. In VS Code, open the Copilot Chat view by selecting the chat icon in the activity bar or pressing **Ctrl+Shift+I**.
+1. In VS Code, open the [Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat) view by selecting the chat icon in the activity bar.
 
     [Screenshot of VS Code with Copilot Chat view open]
 

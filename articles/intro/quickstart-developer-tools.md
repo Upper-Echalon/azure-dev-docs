@@ -140,19 +140,7 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
 
     Copilot provides step-by-step guidance tailored to your deployed application.
 
-1. If your app isn't working as expected, troubleshoot problems:
-
-    ```text
-    Are there any errors in my App Service logs?
-    ```
-
-1. To learn about cost, ask about the cost implications of your deployment:
-
-    ```text
-    What is the estimated monthly cost of the resources in my resource group?
-    ```
-
-For more information, see [GitHub Copilot for Azure](../github-copilot-azure/introduction.md).
+For more information, see [GitHub Copilot for Azure](../github-copilot-azure/introduction.md). For example prompts, see [Learning about Azure and your application](../github-copilot-azure/learn-examples.md), [Designing and developing your application](../github-copilot-azure/design-develop-examples.md), and [Deploying your application](../github-copilot-azure/deploy-examples.md).
 
 ## Clean up resources
 

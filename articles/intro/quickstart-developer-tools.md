@@ -105,7 +105,7 @@ Now use the Azure Tools extension to explore the resources that Azure Developer 
     ```
 
     If the command returns your account details, you're already signed in. If not, sign in through VS Code:
-    - Open the Command Palette (**Ctrl + Shift + P**).
+    - Open the Command Palette.
     - Type **Azure: Sign In** and select it.
     - Complete the sign-in flow in your browser.
 

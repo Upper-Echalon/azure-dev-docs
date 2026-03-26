@@ -56,7 +56,7 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. Open the terminal using the shortcut (**Ctrl+`**) or from the Command Palette (**Ctrl + Shift + P**) and choosing **Terminal > New Terminal**.
+1. Open the terminal from the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) via **Terminal > New Terminal**.
 1. In a terminal, create and change into a new directory for your project.
 
     ```bash

@@ -34,11 +34,11 @@ You can choose to use the tools directly in the browser with VS Code for the Web
 
 1. Open [vscode.dev/azure](https://vscode.dev/azure) in your browser.
 1. Sign in by using your Azure account when prompted.
-1. Some Azure extensions are preinstalled. For all Azure tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
+1. Some Azure extensions are preinstalled. For all Azure tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) You can install it from the Extensions view (Ctrl+Shift+X) in VS Code for the Web. Search for "Azure Tools" and select **Install**.
 
 You now have access to the Azure Tools extensions and GitHub Copilot for Azure directly in the browser.
 
-[Screenshot of VS Code for the Web with extensions installed]
+:::image type="content" source="media/quickstart-developer-tools/azure-extensions.png" alt-text="Screenshot of VS Code for the Web showing Azure Tools extension pack details and installed Azure extensions list.":::
 
 For more information about using VS Code for the Web for Azure development, see [VS Code for the Web documentation](https://code.visualstudio.com/docs/azure/vscodeforweb).
 
@@ -56,8 +56,8 @@ Install the following tools locally to get a full development experience on your
 
 Use the Azure Developer CLI to deploy a full-stack to-do application to Azure. This step creates all the Azure resources and deploys the application code.
 
-1. Open the terminal from the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) via **Terminal > New Terminal**.
-1. In a terminal, create and change into a new directory for your project.
+1. Open the terminal from the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) via **Terminal > Create New Terminal**.
+1. In the terminal, create and change into a new directory for your project.
 
     ```bash
     mkdir my-todo-app && cd my-todo-app
@@ -111,7 +111,7 @@ Now use the Azure Tools extension to explore the resources that Azure Developer 
 
 1. Open the Azure view by selecting the Azure icon in the Activity Bar (left sidebar). Expand **Resources** to see your Azure subscriptions. Make sure the resource list is grouped by **Resource Group** by selecting the **Group By** icon at the top of the Resources view and choosing **Resource Group**. Expand your subscription and find the resource group created by Azure Developer CLI. The resource group name starts with the environment name you chose when running `azd init`.
 
-    [Screenshot of Azure Tools view in VS Code showing the resource group and resources created by azd]
+    :::image type="content" source="media/quickstart-developer-tools/azure-resources.png" alt-text="Screenshot of VS Code Azure view showing resources grouped by resource group with the Group By menu open.":::
 
 1. Explore the deployed resources:
     - Expand the resource group to see the App Service, Cosmos DB account, and other resources.
@@ -131,20 +131,11 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
 
 1. In VS Code, open the Copilot Chat view by selecting the chat icon in the activity bar or pressing **Ctrl+Shift+I**.
 
-    [Screenshot of VS Code with Copilot Chat view open]
-
-1. Ask about your deployed resources:
-
-    ```text
-    @azure What resources are in my resource group that contains "todo"?
-    ```
-
-    GitHub Copilot for Azure queries your subscription and lists the resources created by `azd`.
 
 1. Ask for guidance on your application:
 
     ```text
-    @azure How can I add authentication to my Azure App Service?
+    How can I add authentication to my Azure App Service?
     ```
 
     Copilot provides step-by-step guidance tailored to your deployed application.
@@ -152,13 +143,13 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
 1. If your app isn't working as expected, troubleshoot problems:
 
     ```text
-    @azure Are there any errors in my App Service logs?
+    Are there any errors in my App Service logs?
     ```
 
 1. To learn about cost, ask about the cost implications of your deployment:
 
     ```text
-    @azure What is the estimated monthly cost of the resources in my resource group?
+    What is the estimated monthly cost of the resources in my resource group?
     ```
 
 For more information, see [GitHub Copilot for Azure](../github-copilot-azure/introduction.md).

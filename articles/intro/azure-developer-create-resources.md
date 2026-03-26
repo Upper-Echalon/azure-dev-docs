@@ -68,7 +68,7 @@ For the full list of features, see the extension's download page.
 
 :::image type="content" source="./media/visual-studio-code-azure-tools-extension.png" alt-text="A screenshot showing Visual Studio Code with the Azure Tools extension pack installed.":::
 
-## Visual Studio Azure development
+## Azure development in Visual Studio
 
 Developers using [Visual Studio](https://visualstudio.microsoft.com/) access Azure tools through the Azure development workload. Visual Studio's Azure integration includes:
 

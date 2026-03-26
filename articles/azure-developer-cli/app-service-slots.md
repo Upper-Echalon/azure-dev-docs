@@ -10,6 +10,8 @@ ms.custom: devx-track-azdevcli
 ai-usage: ai-generated
 ---
 
+# Deploy to Azure App Service deployment slots with Azure Developer CLI
+
 Azure Developer CLI (`azd`) supports Azure App Service deployment slots for apps hosted on App Service. You can define slots in your infrastructure, deploy code to a specific slot, and swap slots when you're ready to promote a release.
 
 Use this approach for staging, blue-green deployments, smoke testing, and rollbacks without adding custom deployment scripts.

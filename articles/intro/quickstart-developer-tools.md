@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Azure developer tools"
+title: "Quickstart: Get started with Azure developer tools"
 description: Get hands-on with the Azure Developer CLI, Azure Tools for VS Code, and GitHub Copilot for Azure.
 ms.service: azure
 ms.topic: quickstart
@@ -8,7 +8,7 @@ ms.custom: devx-track-azdevcli
 ai-usage: ai-generated
 ---
 
-# Quickstart: Azure developer tools
+# Quickstart: Get started with Azure developer tools
 
 In this quickstart, you use the core Azure developer tools to deploy a sample application to Azure. By the end, you have hands-on experience with:
 
@@ -34,13 +34,13 @@ You can choose to use the tools directly in the browser with VS Code for the Web
 
 1. Open [vscode.dev/azure](https://vscode.dev/azure) in your browser.
 1. Sign in by using your Azure account when prompted.
-1. Some Azure extensions are preinstalled. For all Azure tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) You can install it from the Extensions view (Ctrl+Shift+X) in VS Code for the Web. Search for "Azure Tools" and select **Install**.
+1. Some Azure extensions are preinstalled. For all Azure tools, install the [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) You can install it from the Extensions view in VS Code for the Web. Search for "Azure Tools" and select **Install**.
 
 You now have access to the Azure Tools extensions and GitHub Copilot for Azure directly in the browser.
 
 :::image type="content" source="media/quickstart-developer-tools/azure-extensions.png" alt-text="Screenshot of VS Code for the Web showing Azure Tools extension pack details and installed Azure extensions list.":::
 
-For more information about using VS Code for the Web for Azure development, see [VS Code for the Web documentation](https://code.visualstudio.com/docs/azure/vscodeforweb).
+For more information about using VS Code for the Web for Azure development, see [VS Code for the Web - Azure](https://code.visualstudio.com/docs/azure/vscodeforweb).
 
 # [Install tools locally](#tab/local-install)
 
@@ -140,7 +140,13 @@ Use GitHub Copilot for Azure to learn about the resources you deployed and get g
 
     Copilot provides step-by-step guidance tailored to your deployed application.
 
-For more information, see [GitHub Copilot for Azure](../github-copilot-azure/introduction.md). For example prompts, see [Learning about Azure and your application](../github-copilot-azure/learn-examples.md), [Designing and developing your application](../github-copilot-azure/design-develop-examples.md), and [Deploying your application](../github-copilot-azure/deploy-examples.md).
+For example prompts, see:
+
+- [Example prompts for learning about Azure and your application with GitHub Copilot for Azure](../github-copilot-azure/learn-examples.md)
+- [Example prompts for designing and developing your application with GitHub Copilot for Azure](../github-copilot-azure/design-develop-examples.md)
+- [Example prompts for deploying your application with GitHub Copilot for Azure](../github-copilot-azure/deploy-examples.md)
+
+For more information about GitHub Copilot for Azure, see the [GitHub Copilot for Azure overview](../github-copilot-azure/introduction.md). 
 
 ## Clean up resources
 

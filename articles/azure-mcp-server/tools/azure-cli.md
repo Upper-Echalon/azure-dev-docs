@@ -37,7 +37,7 @@ The Azure MCP Server generates Azure CLI commands to accomplish specific goals.
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [extension cli generate](../includes/tools/annotations/azure-extension-cli-generate-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get CLI installation instructions
 
@@ -57,7 +57,7 @@ The Azure MCP Server provides installation instructions for CLI tools including 
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [extension cli install](../includes/tools/annotations/azure-extension-cli-install-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ✅
 
 ## Related content
 

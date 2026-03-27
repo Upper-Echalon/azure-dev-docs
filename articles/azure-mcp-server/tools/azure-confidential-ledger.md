@@ -46,7 +46,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [confidentialledger entries append](../includes/tools/annotations/azure-confidential-ledger-entries-append-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Get an entry from the ledger
 
@@ -67,7 +67,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [confidentialledger entries get](../includes/tools/annotations/azure-confidential-ledger-entries-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

@@ -39,7 +39,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents connect](../includes/tools/annotations/azure-ai-foundry-agents-connect-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Agents: Create a new agent
 
@@ -62,7 +62,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents create](../includes/tools/annotations/azure-ai-foundry-agents-create-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Agents: Evaluate an agent
 
@@ -89,7 +89,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents evaluate](../includes/tools/annotations/azure-ai-foundry-agents-evaluate-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Agents: Get agent sample for language SDK
 
@@ -109,7 +109,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents get-sdk-sample](../includes/tools/annotations/azure-ai-foundry-agents-get-sdk-sample-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Agents: List agents
 
@@ -132,7 +132,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents list](../includes/tools/annotations/azure-ai-foundry-agents-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Agents: Query and execute an agent
 
@@ -160,7 +160,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry agents query-and-evaluate](../includes/tools/annotations/azure-ai-foundry-agents-query-evaluate-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Knowledge: List knowledge indexes
 
@@ -186,7 +186,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry knowledge index list](../includes/tools/annotations/azure-ai-foundry-knowledge-index-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Knowledge: Get index schema
 
@@ -207,7 +207,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry knowledge index schema](../includes/tools/annotations/azure-ai-foundry-knowledge-index-schema-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Models: List available models
 
@@ -233,7 +233,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry models list](../includes/tools/annotations/azure-ai-foundry-models-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Models: Deploy a model
 
@@ -265,7 +265,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry models deploy](../includes/tools/annotations/azure-ai-foundry-models-deploy-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Models: List model deployments
 
@@ -287,7 +287,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry models deployments list](../includes/tools/annotations/azure-ai-foundry-models-deployments-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## OpenAI: Create chat completions
 
@@ -326,7 +326,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry openai chat-completions-create](../includes/tools/annotations/azure-ai-foundry-openai-chat-completions-create-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## OpenAI: Create embeddings
 
@@ -360,7 +360,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry openai embeddings-create](../includes/tools/annotations/azure-ai-foundry-openai-embeddings-create-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## OpenAI: Create completions
 
@@ -387,7 +387,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry openai create-completion](../includes/tools/annotations/azure-ai-foundry-openai-create-completion-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## OpenAI: List models and deployments
 
@@ -416,7 +416,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry openai models-list](../includes/tools/annotations/azure-ai-foundry-openai-models-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Resources: Get Foundry resource
 
@@ -439,7 +439,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry resource get](../includes/tools/annotations/azure-ai-foundry-resource-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Threads: Create a new thread
 
@@ -460,7 +460,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry threads create](../includes/tools/annotations/azure-ai-foundry-threads-create-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Threads: Get thread messages
 
@@ -481,7 +481,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry threads get-messages](../includes/tools/annotations/azure-ai-foundry-threads-get-messages-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Threads: List all threads
 
@@ -501,7 +501,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [foundry threads list](../includes/tools/annotations/azure-ai-foundry-threads-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

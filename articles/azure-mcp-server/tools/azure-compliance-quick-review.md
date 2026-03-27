@@ -34,7 +34,7 @@ The Azure MCP Server can execute Azure Quick Review CLI commands to generate com
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [extension azqr](../includes/tools/annotations/azure-extension-compliance-review-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

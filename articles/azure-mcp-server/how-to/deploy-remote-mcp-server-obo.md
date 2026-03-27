@@ -31,13 +31,9 @@ The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app re
 - [Azure CLI](/cli/azure/install-azure-cli)
 - The list of Azure MCP Server tool namespaces you want to enable. See [azmcp-commands.md](https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/docs/azmcp-commands.md). The template in this article enables the `storage` namespace by default.
 
-## The Azure MCP Server OBO template
-
-Use the Azure Developer CLI (`azd`) `azmcp-obo-aca` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. `azd` simplifies provisioning and deploying Azure resources with concise commands like `azd up` and `azd down`.
-
 ## Deploy the Azure MCP Server
 
-Deploy the Azure MCP Server to Azure Container Apps:
+This article uses the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-obo-aca) `azd` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. Deploy the server:
 
 1. Initialize the `azmcp-obo-aca` template with the `azd init` command.
 
@@ -235,22 +231,11 @@ azd down
 
 > [!NOTE]
 > `azd down` doesn't delete the Entra app registrations. After running `azd down`, manually delete them in the Azure portal by searching for the `ENTRA_APP_CLIENT_CLIENT_ID` and `ENTRA_APP_SERVER_CLIENT_ID` values.
-
-## Template structure
-
-The `azd` template includes the following Bicep modules:
-
-- **`main.bicep`**: Orchestrates all resource deployments.
-- **`entra-app.bicep`**: Creates both Entra app registrations and configures the federated identity credential on the server app.
-- **`aca-infrastructure.bicep`**: Deploys the Container App hosting the Azure MCP Server.
-- **`aca-storage-managed-identity.bicep`**: Creates the user-assigned managed identity.
-- **`application-insights.bicep`**: Deploys Application Insights for telemetry and monitoring.
-
 ## Troubleshooting
 
 The following sections provide details on common errors you might encounter and how to resolve them.
 
-### IDW10502: MsalUiRequiredException
+**IDW10502: MsalUiRequiredException**
 
 ```text
 {"status":500,"message":"IDW10502: An MsalUiRequiredException was thrown due to a challenge for the user..."}
@@ -258,15 +243,15 @@ The following sections provide details on common errors you might encounter and 
 
 The server's OBO token exchange failed because admin consent hasn't been granted for the downstream API permissions on the server app registration. In the Azure portal, find the server app registration (using `ENTRA_APP_SERVER_CLIENT_ID`) → **API permissions** → **Grant admin consent**.
 
-### OBO token exchange failures
+**OBO token exchange failures**
 
 Check the Entra sign-in logs for details. In the Azure portal, go to **Microsoft Entra ID** → **Monitoring** → **Sign-in logs** → **User sign-ins (non-interactive)**. Look for entries where the application matches your server app registration and the resource matches the downstream Azure API.
 
-### Container App errors
+**Container App errors**
 
 Open the Azure portal, go to your Container App → **Monitoring** → **Log stream** to view real-time application logs. Application Insights telemetry is available under **Investigate → Search** or via Log Analytics queries on the `requests` and `traces` tables.
 
-### ServiceManagementReference error on redeploy
+**ServiceManagementReference error on redeploy**
 
 ```text
 {"error":{"code":"BadRequest","message":"ServiceManagementReference field is required for Update..."}}
@@ -284,13 +269,8 @@ This error occurs when running `azd up` on an existing deployment that was origi
 }
 ```
 
-## Known issues
-
-- **Consent options**: The user or a tenant admin must grant the client app access to the user's data during the authentication flow. To learn more, see [application consent experience](/entra/identity-platform/application-consent-experience). Consent can be granted in the following ways:
-  - A user can consent during sign-in just for that user. Tenant security policy might block this.
-  - A tenant admin can grant consent for all users under the client app registration's **API permissions** blade in the Azure portal.
-  - The server app registration can pre-authorize the client app under **Expose an API** in the Azure portal.
-- **Copilot Studio connector issues**: For known issues specific to the Power Apps custom connector (single-tenant requirement, cross-tenant errors, tenant isolation policy), see [Known issues](deploy-remote-mcp-server-copilot-studio.md#known-issues) in the Copilot Studio deployment article.
+> [!NOTE]
+> For a list of other known issues, see [KnownIssues.md](https://github.com/Azure-Samples/azmcp-obo-aca/blob/main/KnownIssues.md) in the template repository.
 
 ## Related content
 

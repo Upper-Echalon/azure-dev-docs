@@ -1,18 +1,21 @@
 ---
-title: Azure Subscription Tools 
-description: Learn how to use the Azure MCP Server with Azure Subscriptions.
+title: Azure MCP Server tools for Azure Subscriptions
+description: Use Azure MCP Server tools to list and identify Azure subscriptions with natural language prompts from your IDE.
 author: diberry
 ms.author: diberry
-ms.date: 02/27/2026
-content_well_notification: 
+ms.service: azure-mcp-server
+ms.topic: concept-article
+ms.date: 03/27/2026
+content_well_notification:
   - AI-contribution
 ai-usage: ai-assisted
-ms.topic: concept-article
-ms.custom: build-2025
---- 
-# Subscription tools for the Azure MCP Server overview
+tool_count: 1
+mcp-cli.version: 2.0.0-beta.33
+---
 
-The Azure MCP Server allows you to manage Azure resources, including subscriptions, using natural language prompts. This server enables you to quickly list subscriptions without needing to remember complex syntax.
+# Azure MCP Server tools for Azure Subscriptions
+
+The Azure Model Context Protocol (MCP) Server lets you list and identify Azure subscriptions with natural language prompts.
 
 [Azure Subscriptions](/azure/cost-management-billing/manage/cloud-subscription) provide a way to organize and manage access to Azure resources. Subscriptions are the foundation for resource management, billing, and access control in Azure.
 
@@ -20,15 +23,15 @@ The Azure MCP Server allows you to manage Azure resources, including subscriptio
 
 ## List subscriptions
 
-<!-- subscription list -->
+<!-- @mcpcli subscription list -->
 
-List all Azure subscriptions for the current account. Returns `subscriptionId`, `displayName`, `state`, `tenantId`, and `isDefault` for each subscription. The `isDefault` field indicates the user's default subscription as resolved from the Azure CLI profile (configured via [`az account set`](/cli/azure/account#az-account-set)) or, if not set there, from the `AZURE_SUBSCRIPTION_ID` environment variable.
+This tool lists all Azure subscriptions for the current account. For each subscription, it returns the subscription ID, display name, state, tenant ID, and whether it's the default subscription. The `isDefault` field indicates the user's default subscription as resolved from the Azure CLI profile (configured via [`az account set`](/cli/azure/account#az-account-set)) or, if not set there, from the `AZURE_SUBSCRIPTION_ID` environment variable.
 
 Example prompts include:
 
-- **List subscriptions**: "Show me all of my subscriptions."
-- **Find subscriptions**: "List all subscriptions starting with `northeast`."
-- **Find default**: "Which subscription is my default?"
+- "Show me all of my subscriptions."
+- "List all subscriptions starting with 'northeast'."
+- "Which subscription is my default?"
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 

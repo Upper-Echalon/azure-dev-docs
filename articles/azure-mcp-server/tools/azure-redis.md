@@ -43,7 +43,9 @@ Example prompts include:
 | **Access keys authentication** |  Optional | Whether to enable access keys for authentication for the Redis resource. (Default: `false`). |
 | **Modules** |  Optional | A list of modules to enable on the Azure Managed Redis resource (for example, `RedisBloom`, `RedisJSON`). |
 
-[!INCLUDE [redis create](../includes/tools/annotations/azure-managed-redis-create-annotations.md)]
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## List Redis resources
 
@@ -61,7 +63,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [redis list](../includes/tools/annotations/azure-managed-redis-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

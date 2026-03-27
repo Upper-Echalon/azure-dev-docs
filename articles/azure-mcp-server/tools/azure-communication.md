@@ -48,7 +48,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [communication email send](../includes/tools/annotations/azure-communication-services-email-send-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## SMS: Send SMS message
 
@@ -73,7 +73,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [communication sms send](../includes/tools/annotations/azure-communication-services-sms-send-annotations.md)]
+Destructive: ❌ | Idempotent: ❌ | Open World: ✅ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

@@ -1,6 +1,6 @@
 ---
-title: Deploy to Azure App Service deployment slots with Azure Developer CLI
-description: Learn how to define Azure App Service deployment slots in your infrastructure, deploy to a slot with Azure Developer CLI, and swap slots for promotion or rollback.
+title: Deploy to Azure App Service slots with Azure Developer CLI
+description: Learn how to use Azure Developer CLI to deploy to Azure App Service slots and swap slots for staging, promotion, or rollback. Get started today.
 author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 03/26/2026
@@ -73,7 +73,7 @@ azd deploy myapi
 
 For example, if your service is named `web`, set `AZD_DEPLOY_WEB_SLOT_NAME`. This approach is useful for CI/CD because you can set the same environment variable in your pipeline before running `azd deploy`.
 
-## Swap Azure App Service slots
+## Swap Azure App Service deployment slots
 
 Use the `azure.appservice` extension to swap slots after validation. If the extension isn't already installed, `azd` prompts you to install it the first time you run the command.
 
@@ -99,10 +99,10 @@ Use these patterns to support common release flows:
 - Roll back by swapping production back into the staging slot with `--src @main --dst staging`.
 - Target a specific App Service-backed service in a multiservice `azd` project with `--service`.
 
-## Recommended workflow
+## Recommended deployment slot workflow
 
 1. Define one or more App Service deployment slots in your Bicep templates.
-1. Provision the App Service resources with `azd provision` or `azd up`.
+1. Provision the App Service resources by using `azd provision` or `azd up`.
 1. Deploy application code to a staging slot by setting `AZD_DEPLOY_<SERVICE_NAME>_SLOT_NAME` or by selecting the slot when prompted.
 1. Validate the staged deployment.
 1. Run `azd appservice swap --src <slot> --dst @main` to promote the release.

@@ -34,11 +34,11 @@ Example prompts include:
 - "Connect database 'appdata' database type 'PostgreSQL' with database server 'pgserver.postgres.database.azure.com' to app 'backend-app' in resource group 'rg-backend'."
 - "Add CosmosDB database 'catalogdb' database type 'CosmosDB' with database server 'contoso-cosmos.documents.azure.com' to app 'ecommerce-app' in resource group 'rg-ecommerce'."
 - "Add database 'inventory' of database type 'SqlServer' on database server 'adventure-works-sql.database.windows.net' to app 'inventory-service' in resource group 'rg-inventory'."
-- "Configure database 'analytics' database type 'PostgreSQL' on database server 'contoso-pg.postgres.database.azure.com' for app 'analytics-api' in resource group 'rg-analytics' using connection string 'Server=tcp:contoso-pg.postgres.database.azure.com;Database=analytics;User Id=<user>;Password=<password>'."
-- "Add database 'customers' database type 'MySQL' with database server 'adventure-works-mysql.mysql.database.azure.com' to app 'crm-web' in resource group 'rg-crm' using connection string 'Server=adventure-works-mysql.mysql.database.azure.com;Database=customers;Uid=<user>;Pwd=<password>'."
+- "Configure database 'analytics' database type 'PostgreSQL' on database server 'contoso-pg.postgres.database.azure.com' for app 'analytics-api' in resource group 'rg-analytics' using connection string 'Server=tcp:contoso-pg.postgres.database.azure.com;Database=analytics;User Id=\<your-username\>;Password=\<your-password\>'."
+- "Add database 'customers' database type 'MySQL' with database server 'adventure-works-mysql.mysql.database.azure.com' to app 'crm-web' in resource group 'rg-crm' using connection string 'Server=adventure-works-mysql.mysql.database.azure.com;Database=customers;Uid=\<your-username\>;Pwd=\<your-password\>'."
 - "Connect database 'sessiondb' database type 'CosmosDB' on database server 'fabrikam-cosmos.documents.azure.com' to app 'session-service' in resource group 'rg-session'."
 - "Set up database 'orders' database type 'SqlServer' on database server 'fabrikam-sql.database.windows.net' for app 'order-processor' in resource group 'rg-orders'."
-- "Configure database 'logs' database type 'PostgreSQL' on database server 'fabrikam-pg.postgres.database.azure.com' for app 'logger-app' in resource group 'rg-logging' with connection string 'Host=fabrikam-pg.postgres.database.azure.com;Database=logs;Username=<user>;Password=<password>'."
+- "Configure database 'logs' database type 'PostgreSQL' on database server 'fabrikam-pg.postgres.database.azure.com' for app 'logger-app' in resource group 'rg-logging' with connection string 'Host=fabrikam-pg.postgres.database.azure.com;Database=logs;Username=\<your-username\>;Password=\<your-password\>'."
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|

@@ -3,6 +3,7 @@ title: Deploy the Azure MCP Server with on-behalf-of authentication
 description: Learn how to deploy the Azure MCP Server as a remote MCP server that uses the on-behalf-of flow to call Azure services on behalf of a signed-in user.
 author: alexwolfmsft
 ms.author: alexwolf
+ms.reviewer: alexwolf
 ms.date: 03/27/2026
 ms.topic: how-to
 ai-usage: ai-generated
@@ -10,13 +11,13 @@ ai-usage: ai-generated
 
 # Deploy Azure MCP Server with on-behalf-of authentication
 
-Deploy [Azure MCP Server](https://mcr.microsoft.com/product/azure-sdk/azure-mcp) as a self-hosted remote server over HTTPS on Azure Container Apps. This article uses the on-behalf-of (OBO) authentication model, which lets the server call Azure services using the identity of the signed-in user rather than the server's own managed identity. Agents in [Microsoft Foundry](https://azure.microsoft.com/products/ai-foundry) and [Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio) can connect to the deployed server and invoke Azure MCP tools that operate with the user's own permissions and access.
+Deploy [Azure MCP Server](https://mcr.microsoft.com/product/azure-sdk/azure-mcp) as a self-hosted remote server over HTTPS on Azure Container Apps. This article uses the on-behalf-of (OBO) authentication model, which lets the server call Azure services by using the identity of the signed-in user rather than the server's own managed identity. Agents in [Microsoft Foundry](https://azure.microsoft.com/products/ai-foundry) and [Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio) can connect to the deployed server and invoke Azure MCP tools that operate with the user's own permissions and access.
 
 ## How the OBO flow works
 
 The on-behalf-of flow is distinct from the managed identity approach used in other Azure MCP Server templates:
 
-- **Managed identity approach**: The server authenticates to downstream Azure services using its own managed identity. All users share the permissions granted to that identity.
+- **Managed identity approach**: The server authenticates to downstream Azure services by using its own managed identity. All users share the permissions granted to that identity.
 - **OBO approach**: When a user authenticates with the server, the server exchanges the user's token for a new token scoped to a downstream Azure service. The server calls Azure services *on behalf of* the user, so each user's own Azure permissions determine what they can do.
 
 The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app registrations to enable this flow:
@@ -33,9 +34,9 @@ The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app re
 
 ## Deploy the Azure MCP Server
 
-This article uses the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-obo-aca) `azd` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. Deploy the server:
+This article shows how to use the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-obo-aca) `azd` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. Deploy the server:
 
-1. Initialize the `azmcp-obo-aca` template with the `azd init` command.
+1. Initialize the `azmcp-obo-aca` template by using the `azd init` command.
 
     ```bash
     azd init -t azmcp-obo-aca
@@ -43,13 +44,13 @@ This article uses the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-o
 
     When prompted, enter an environment name.
 
-1. Run the template with the `azd up` command.
+1. Run the template by using the `azd up` command.
 
     ```bash
     azd up
     ```
 
-    `azd` prompts you for the following:
+    `azd` prompts you for the following values:
 
     - **Subscription**: Select the subscription for the provisioned resources.
     - **Resource group**: Create or select a resource group to hold the resources.
@@ -57,14 +58,14 @@ This article uses the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-o
 `azd` uses the template files to provision the following resources and configurations:
 
 - **Azure Container App**: Runs the Azure MCP Server with the `storage` namespace enabled.
-- **User-assigned managed identity**: Provides a client credential for the server app registration via a federated identity credential. The server uses this identity to perform the OBO token exchange.
+- **User-assigned managed identity**: Provides a client credential for the server app registration through a federated identity credential. The server uses this identity to perform the OBO token exchange.
 - **Entra app registration (server)**: The OAuth 2.0 resource exposed to clients. Has the `Mcp.Tools.ReadWrite` scope, and carries Azure Resource Manager and Azure Storage API permissions for the OBO exchange.
 - **Entra app registration (client)**: Used by clients such as Foundry agents and Power Apps custom connectors to authenticate with the server. Pre-authorized on the server app to eliminate the need for user consent.
 - **Application Insights**: Provides telemetry and monitoring.
 
 ### Retrieve deployment outputs
 
-After deployment completes, retrieve the `azd` environment variables with the `azd env get-values` command.
+After the deployment finishes, use the `azd env get-values` command to get the `azd` environment variables.
 
 ```bash
 azd env get-values
@@ -86,13 +87,13 @@ Keep this output available. You need these values in the sections that follow.
 
 ### Grant admin consent and add the API scope
 
-After deployment, you must complete two required configuration steps before clients can connect.
+After deployment, complete two required configuration steps before clients can connect.
 
 #### Add the API scope to the client app registration
 
-The client app registration must have permission to call the server app's `Mcp.Tools.ReadWrite` scope.
+The client app registration needs permission to call the server app's `Mcp.Tools.ReadWrite` scope.
 
-1. In the Azure portal, search for the client app registration using the `ENTRA_APP_CLIENT_CLIENT_ID` value.
+1. In the Azure portal, search for the client app registration by using the `ENTRA_APP_CLIENT_CLIENT_ID` value.
 1. Go to **API permissions** → **Add a permission** → **My APIs** tab.
 1. Select the server app registration and add the `Mcp.Tools.ReadWrite` scope.
 1. Select **Grant admin consent** to apply the permission to all users.
@@ -102,9 +103,9 @@ The client app registration must have permission to call the server app's `Mcp.T
 
 #### Grant admin consent for downstream API permissions
 
-The server app registration has Azure Resource Manager and Azure Storage API permissions configured, but these require admin consent before the OBO token exchange can succeed.
+The server app registration has Azure Resource Manager and Azure Storage API permissions configured, but these permissions require admin consent before the OBO token exchange can succeed.
 
-1. In the [Azure portal](https://portal.azure.com), search for the server app registration using the `ENTRA_APP_SERVER_CLIENT_ID` value.
+1. In the [Azure portal](https://portal.azure.com), search for the server app registration by using the `ENTRA_APP_SERVER_CLIENT_ID` value.
 1. Go to **API permissions**.
 1. Select **Grant admin consent for \<your tenant\>** and confirm.
 
@@ -123,11 +124,11 @@ After deploying and completing the post-deployment configuration, you can connec
 
 # [C# client app](#tab/csharp)
 
-The template includes a .NET console app in the `client/` folder that you can use to verify the deployment locally. The app authenticates interactively through the browser using the client app registration, connects to the MCP server, lists the available tools, and optionally calls the `storage_account_get` tool.
+The template includes a .NET console app in the `client/` folder that you can use to verify the deployment locally. The app authenticates interactively through the browser by using the client app registration, connects to the MCP server, lists the available tools, and optionally calls the `storage_account_get` tool.
 
 **Prerequisites**: [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 
-1. In the `client/` folder, open `appsettings.json` and set the following values using the `azd env get-values` output:
+1. In the `client/` folder, open `appsettings.json` and set the following values by using the `azd env get-values` output:
 
     ```json
     {
@@ -160,12 +161,12 @@ If you encounter authentication errors such as `MsalUiRequiredException`, see th
 
 # [Microsoft Foundry](#tab/foundry)
 
-A Foundry agent connects to the Azure MCP Server using OAuth identity passthrough. In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
+A Foundry agent connects to the Azure MCP Server by using OAuth identity passthrough. In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
 
 1. Go to your Foundry project at https://ai.azure.com/nextgen.
-1. Select **Build → Create agent**.
-1. Select **+ Add** in the tools section, then select the **Custom** tab.
-1. Select **Model Context Protocol (MCP)**, then select **Create**.
+1. Select **Build** > **Create agent**.
+1. Select **+ Add** in the tools section, and then select the **Custom** tab.
+1. Select **Model Context Protocol (MCP)**, and then select **Create**.
 1. Configure the MCP connection:
 
     | Field | Value |
@@ -180,25 +181,25 @@ A Foundry agent connects to the Azure MCP Server using OAuth identity passthroug
 
 1. Create a client secret on the client app registration:
     - In the Azure portal, open the client app registration.
-    - Go to **Manage → Certificates & secrets** → **New client secret**.
+    - Go to **Manage** > **Certificates & secrets** > **New client secret**.
     - Copy the secret value and paste it into the **Client secret** field in Foundry.
 
 1. Select **Connect**.
 
 1. After Foundry creates the connection, copy the **Redirect URL** that appears.
-1. In the Azure portal, go to the client app registration → **Manage → Authentication**.
+1. In the Azure portal, go to the client app registration > **Manage** > **Authentication**.
 1. Under **Web**, add the redirect URL as a new entry.
 
-After completing these steps, prompt the Foundry Agent to load the MCP tools and call them.
+After you complete these steps, prompt the Foundry Agent to load the MCP tools and call them.
 
 > [!NOTE]
-> Foundry currently supports client secrets for OAuth identity passthrough. Using a federated identity credential instead of a client secret is recommended for production scenarios. See [federated identity credentials](/entra/workload-id/workload-identity-federation) for more information.
+> Foundry currently supports client secrets for OAuth identity passthrough. For production scenarios, use a federated identity credential instead of a client secret. For more information, see [federated identity credentials](/entra/workload-id/workload-identity-federation).
 
 # [Copilot Studio](#tab/copilot-studio)
 
-Connecting a Copilot Studio agent to this server follows the same custom connector steps as the standard Copilot Studio deployment. See [Deploy a remote Azure MCP Server and connect to it using Copilot Studio](deploy-remote-mcp-server-copilot-studio.md) for the full walkthrough.
+Connecting a Copilot Studio agent to this server follows the same custom connector steps as the standard Copilot Studio deployment. For the full walkthrough, see [Deploy a remote Azure MCP Server and connect to it using Copilot Studio](deploy-remote-mcp-server-copilot-studio.md).
 
-When following that guide, use the output values from this template (`CONTAINER_APP_URL`, `ENTRA_APP_CLIENT_CLIENT_ID`, `ENTRA_APP_SERVER_CLIENT_ID`, `AZURE_TENANT_ID`) wherever the guide references `azd` output values. The key difference is that in the **Security** step of the custom connector, you must set **Enable on-behalf-of login** to `true` and set **Resource URL** to the `ENTRA_APP_SERVER_CLIENT_ID` value — this is what activates the OBO flow so the connector authenticates on behalf of the signed-in user.
+When you follow that guide, use the output values from this template (`CONTAINER_APP_URL`, `ENTRA_APP_CLIENT_CLIENT_ID`, `ENTRA_APP_SERVER_CLIENT_ID`, `AZURE_TENANT_ID`) wherever the guide references `azd` output values. The key difference is that in the **Security** step of the custom connector, you must set **Enable on-behalf-of login** to `true` and set **Resource URL** to the `ENTRA_APP_SERVER_CLIENT_ID` value. This setting activates the OBO flow so the connector authenticates on behalf of the signed-in user.
 
 ---
 
@@ -208,7 +209,7 @@ The template enables the `storage` namespace by default. To enable additional to
 
 1. Identify the API permissions required for the tools you want. See the [API permissions reference](https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/azd-templates/api-permissions.md).
 
-1. Add the permissions to the server app registration with the Azure CLI:
+1. Add the permissions to the server app registration by using the Azure CLI:
 
     ```bash
     az ad app permission add \
@@ -245,7 +246,7 @@ The following sections provide details on common errors you might encounter and 
 {"status":500,"message":"IDW10502: An MsalUiRequiredException was thrown due to a challenge for the user..."}
 ```
 
-The server's OBO token exchange failed because admin consent hasn't been granted for the downstream API permissions on the server app registration. In the Azure portal, find the server app registration (using `ENTRA_APP_SERVER_CLIENT_ID`) → **API permissions** → **Grant admin consent**.
+The server's OBO token exchange failed because admin consent isn't granted for the downstream API permissions on the server app registration. In the Azure portal, find the server app registration (using `ENTRA_APP_SERVER_CLIENT_ID`) → **API permissions** → **Grant admin consent**.
 
 **OBO token exchange failures**
 

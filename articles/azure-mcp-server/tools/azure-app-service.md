@@ -29,22 +29,22 @@ This tool adds a database connection to an Azure App Service by using the connec
 
 Example prompts include:
 
-- "Add database 'ordersdb' of database type 'SqlServer' with database server 'sql-prod.database.windows.net' to app 'webapp-prod' in resource group 'rg-prod'."
-- "Configure database 'userdb' database type 'MySQL' on database server 'mysql-prod.mysql.database.azure.com' for app 'api-staging' in resource group 'rg-staging'."
+- "Add database 'ordersdb' of database type 'SqlServer' with database server 'contoso-sql.database.windows.net' to app 'webapp-prod' in resource group 'rg-prod'."
+- "Configure database 'userdb' database type 'MySQL' on database server 'contoso-mysql.mysql.database.azure.com' for app 'api-staging' in resource group 'rg-staging'."
 - "Connect database 'appdata' database type 'PostgreSQL' with database server 'pgserver.postgres.database.azure.com' to app 'backend-app' in resource group 'rg-backend'."
-- "Add CosmosDB database 'catalogdb' database type 'CosmosDB' with database server 'cosmos-prod.documents.azure.com' to app 'ecommerce-app' in resource group 'rg-ecommerce'."
-- "Add database 'inventory' of database type 'SqlServer' on database server 'sql-inventory.database.windows.net' to app 'inventory-service' in resource group 'rg-inventory'."
-- "Configure database 'analytics' database type 'PostgreSQL' on database server 'analytics-pg.postgres.database.azure.com' for app 'analytics-api' in resource group 'rg-analytics' using connection string 'Server=tcp:analytics-pg.postgres.database.azure.com;Database=analytics;User Id=admin;Password=P@ssw0rd'."
-- "Add database 'customers' database type 'MySQL' with database server 'mysql-customers.mysql.database.azure.com' to app 'crm-web' in resource group 'rg-crm' using connection string 'Server=mysql-customers.mysql.database.azure.com;Database=customers;Uid=admin;Pwd=Secret123'."
-- "Connect database 'sessiondb' database type 'CosmosDB' on database server 'cosmos-session.documents.azure.com' to app 'session-service' in resource group 'rg-session'."
-- "Set up database 'orders' database type 'SqlServer' on database server 'orders-sql.database.windows.net' for app 'order-processor' in resource group 'rg-orders'."
-- "Configure database 'logs' database type 'PostgreSQL' on database server 'logs-pg.postgres.database.azure.com' for app 'logger-app' in resource group 'rg-logging' with connection string 'Host=logs-pg.postgres.database.azure.com;Database=logs;Username=logadmin;Password=LogP@ss'."
+- "Add CosmosDB database 'catalogdb' database type 'CosmosDB' with database server 'contoso-cosmos.documents.azure.com' to app 'ecommerce-app' in resource group 'rg-ecommerce'."
+- "Add database 'inventory' of database type 'SqlServer' on database server 'adventure-works-sql.database.windows.net' to app 'inventory-service' in resource group 'rg-inventory'."
+- "Configure database 'analytics' database type 'PostgreSQL' on database server 'contoso-pg.postgres.database.azure.com' for app 'analytics-api' in resource group 'rg-analytics' using connection string 'Server=tcp:contoso-pg.postgres.database.azure.com;Database=analytics;User Id=<user>;Password=<password>'."
+- "Add database 'customers' database type 'MySQL' with database server 'adventure-works-mysql.mysql.database.azure.com' to app 'crm-web' in resource group 'rg-crm' using connection string 'Server=adventure-works-mysql.mysql.database.azure.com;Database=customers;Uid=<user>;Pwd=<password>'."
+- "Connect database 'sessiondb' database type 'CosmosDB' on database server 'fabrikam-cosmos.documents.azure.com' to app 'session-service' in resource group 'rg-session'."
+- "Set up database 'orders' database type 'SqlServer' on database server 'fabrikam-sql.database.windows.net' for app 'order-processor' in resource group 'rg-orders'."
+- "Configure database 'logs' database type 'PostgreSQL' on database server 'fabrikam-pg.postgres.database.azure.com' for app 'logger-app' in resource group 'rg-logging' with connection string 'Host=fabrikam-pg.postgres.database.azure.com;Database=logs;Username=<user>;Password=<password>'."
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **App** |  Required | The name of the Azure App Service (for example, `my-webapp`). |
 | **Database** |  Required | The name of the database to connect to (for example, mydb). |
-| **Database server** |  Required | The server name or endpoint for the database (for example, myserver.database.windows.net). |
+| **Database server** |  Required | The server name or endpoint for the database (for example, contoso-server.database.windows.net). |
 | **Database type** |  Required | The type of database:`SqlServer`, `MySQL`, `PostgreSQL`, and `Cosmos DB`. |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 | **Connection string** |  Optional | The connection string for the database. If not provided, a default is generated. |
@@ -173,7 +173,7 @@ For the `add` and `set` update types, both the application setting name and valu
 Example prompts include:
 
 - "Add application setting name 'feature-flag' with value 'true' to app 'my-webapp' in resource group 'rg-prod' with setting update type 'add'."
-- "Set application setting name 'db-connection-string' with value 'Server=tcp:prod-sql.database.windows.net;Initial Catalog=orders' on app 'orders-webapp' in resource group 'rg-orders' with setting update type 'set'."
+- "Set application setting name 'db-connection-string' with value 'Server=tcp:contoso-sql.database.windows.net;Initial Catalog=orders' on app 'orders-webapp' in resource group 'rg-orders' with setting update type 'set'."
 - "Delete application setting name 'old-api-key' from app 'legacy-service' in resource group 'rg-archive' with setting update type 'delete'."
 
 | Parameter |  Required or optional | Description |

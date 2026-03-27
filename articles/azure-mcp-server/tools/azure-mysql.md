@@ -44,7 +44,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql database list](../includes/tools/annotations/azure-database-for-mysql-database-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Database: query
 
@@ -91,7 +91,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql database query](../includes/tools/annotations/azure-database-for-mysql-database-query-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Server: config get
 
@@ -116,7 +116,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql server config get](../includes/tools/annotations/azure-database-for-mysql-server-config-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Server: list all instances in resource group
 
@@ -139,7 +139,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql server list](../includes/tools/annotations/azure-database-for-mysql-server-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Server: get parameter
 
@@ -164,7 +164,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql server param get](../includes/tools/annotations/azure-database-for-mysql-server-param-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Server: set parameter
 
@@ -190,7 +190,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql server param set](../includes/tools/annotations/azure-database-for-mysql-server-param-set-annotations.md)]
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Table: list all tables in database
 
@@ -215,7 +215,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql table list](../includes/tools/annotations/azure-database-for-mysql-table-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Table: get table schema 
 
@@ -241,7 +241,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [mysql table schema get](../includes/tools/annotations/azure-database-for-mysql-table-schema-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

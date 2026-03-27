@@ -27,8 +27,8 @@ The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app re
 ## Prerequisites
 
 - Azure subscription with **Owner** or **User Access Administrator** permissions
-- [Azure Developer CLI (azd)](/azure/developer/azure-developer-cli/install-azd)
-- [Azure CLI](/cli/azure/install-azure-cli)
+- [Azure Developer CLI (azd)](/azure/developer/azure-developer-cli/install-azd) installed
+- [Azure CLI](/cli/azure/install-azure-cli) installed
 - The list of Azure MCP Server tool namespaces you want to enable. See [azmcp-commands.md](https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/docs/azmcp-commands.md). The template in this article enables the `storage` namespace by default.
 
 ## Deploy the Azure MCP Server
@@ -119,9 +119,46 @@ az ad app permission admin-consent --id <ENTRA_APP_SERVER_CLIENT_ID>
 
 ## Connect to the server
 
-After deploying and completing the post-deployment configuration, you can connect clients to the server. The following sections cover three options: Microsoft Foundry agents, Copilot Studio agents, and a local C# test client included with the template.
+After deploying and completing the post-deployment configuration, you can connect clients to the server. Select the option that fits your scenario.
 
-### Connect from Microsoft Foundry
+# [C# client app](#tab/csharp)
+
+The template includes a .NET console app in the `client/` folder that you can use to verify the deployment locally. The app authenticates interactively through the browser using the client app registration, connects to the MCP server, lists the available tools, and optionally calls the `storage_account_get` tool.
+
+**Prerequisites**: [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+
+1. In the `client/` folder, open `appsettings.json` and set the following values using the `azd env get-values` output:
+
+    ```json
+    {
+      "McpServer": {
+        "Url": "<CONTAINER_APP_URL>"
+      },
+      "EntraClientClientId": "<ENTRA_APP_CLIENT_CLIENT_ID>",
+      "SubscriptionId": "<AZURE_SUBSCRIPTION_ID>"
+    }
+    ```
+
+    > [!TIP]
+    > You can also create an `appsettings.Development.json` file with your local values and set the `DOTNET_ENVIRONMENT` environment variable to `Development` to load it without modifying the committed file.
+
+1. From the `client/` folder, run the app:
+
+    ```bash
+    dotnet run
+    ```
+
+    The app opens a browser window for you to sign in. After sign-in, it connects to the MCP server and prints the list of available tools.
+
+1. To also call the `storage_account_get` tool and list storage accounts in your subscription, pass the `--list-accounts` flag:
+
+    ```bash
+    dotnet run -- --list-accounts true
+    ```
+
+If you encounter authentication errors such as `MsalUiRequiredException`, see the [Troubleshooting](#troubleshooting) section.
+
+# [Microsoft Foundry](#tab/foundry)
 
 A Foundry agent connects to the Azure MCP Server using OAuth identity passthrough. In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
 
@@ -157,46 +194,13 @@ After completing these steps, prompt the Foundry Agent to load the MCP tools and
 > [!NOTE]
 > Foundry currently supports client secrets for OAuth identity passthrough. Using a federated identity credential instead of a client secret is recommended for production scenarios. See [federated identity credentials](/entra/workload-id/workload-identity-federation) for more information.
 
-### Connect from Copilot Studio
+# [Copilot Studio](#tab/copilot-studio)
 
 Connecting a Copilot Studio agent to this server follows the same custom connector steps as the standard Copilot Studio deployment. See [Deploy a remote Azure MCP Server and connect to it using Copilot Studio](deploy-remote-mcp-server-copilot-studio.md) for the full walkthrough.
 
 When following that guide, use the output values from this template (`CONTAINER_APP_URL`, `ENTRA_APP_CLIENT_CLIENT_ID`, `ENTRA_APP_SERVER_CLIENT_ID`, `AZURE_TENANT_ID`) wherever the guide references `azd` output values. The key difference is that in the **Security** step of the custom connector, you must set **Enable on-behalf-of login** to `true` and set **Resource URL** to the `ENTRA_APP_SERVER_CLIENT_ID` value — this is what activates the OBO flow so the connector authenticates on behalf of the signed-in user.
 
-### Connect using the C# client app
-
-The template includes a .NET console app in the `client/` folder that you can use to verify the deployment locally. The app authenticates interactively through the browser using the client app registration, connects to the MCP server, lists the available tools, and optionally calls the `storage_account_get` tool.
-
-1. In the `client/` folder, open `appsettings.json` and set the following values using the `azd env get-values` output:
-
-    ```json
-    {
-      "McpServer": {
-        "Url": "<CONTAINER_APP_URL>"
-      },
-      "EntraClientClientId": "<ENTRA_APP_CLIENT_CLIENT_ID>",
-      "SubscriptionId": "<AZURE_SUBSCRIPTION_ID>"
-    }
-    ```
-
-    > [!TIP]
-    > You can also create an `appsettings.Development.json` file with your local values and set the `DOTNET_ENVIRONMENT` environment variable to `Development` to load it without modifying the committed file.
-
-1. From the `client/` folder, run the app:
-
-    ```bash
-    dotnet run
-    ```
-
-    The app opens a browser window for you to sign in. After sign-in, it connects to the MCP server and prints the list of available tools.
-
-1. To also call the `storage_account_get` tool and list storage accounts in your subscription, pass the `--list-accounts` flag:
-
-    ```bash
-    dotnet run -- --list-accounts true
-    ```
-
-If you encounter authentication errors such as `MsalUiRequiredException`, see the [Troubleshooting](#troubleshooting) section.
+---
 
 ## Add more Azure tools
 

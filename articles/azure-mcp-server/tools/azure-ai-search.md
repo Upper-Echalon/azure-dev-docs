@@ -55,7 +55,7 @@ This tool runs a search query against an Azure AI Search index and returns the m
 Example prompts include:
 
 - "Search for 'machine learning' in the 'documents' index of my 'contoso-search' service."
-- "Query index 'products' for 'noise-cancelling headphones' in Azure AI Search service 'fabrikam-search'."
+- "Query index 'products' for 'noise-canceling headphones' in Azure AI Search service 'fabrikam-search'."
 - "Search my 'content' index in 'my-search-service' for anything mentioning 'climate change'."
 
 | Parameter |  Required or optional | Description |

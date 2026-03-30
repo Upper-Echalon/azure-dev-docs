@@ -121,13 +121,13 @@ Supported commands include
 * monitor
 * show
 
-`azd pipeline` is not supported in Sovereign Clouds.
+`azd pipeline` isn't supported in Sovereign Clouds.
 
-`devcenter` platform is not supported in Sovereign Clouds.
+`devcenter` platform isn't supported in Sovereign Clouds.
 
 ## Deploying with Terraform
 
-When deploying to a sovereign cloud using `azd` and Terraform, the `az` CLI must also be configured to use the desired cloud. See Terraform's [Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli) documentation.
+When you deploy to a sovereign cloud using `azd` and Terraform, the `az` CLI must also be configured to use the desired cloud. See Terraform's [Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli) documentation.
 
 Set the environment variable `ARM_ENVIRONMENT` to the desired environment. Common values include:
 

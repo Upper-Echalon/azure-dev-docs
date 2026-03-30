@@ -65,21 +65,18 @@ Use the `cloud` object to set the name of the cloud in the project's azure.yaml 
 name: project-name
 cloud:
   name: AzureCloud
-# ...
 ```
 
 ```yaml
 name: project-name
 cloud:
   name: AzureChinaCloud
-# ...
 ```
 
 ```yaml
 name: project-name
 cloud:
   name: AzureUSGovernment
-# ...
 ```
 
 ### Configure clouds in an environment's config.json file

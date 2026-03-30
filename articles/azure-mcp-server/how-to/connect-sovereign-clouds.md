@@ -26,9 +26,6 @@ Azure MCP Server recognizes the following cloud names and maps them to the corre
 
 Aliases are case-insensitive.
 
-> [!NOTE]
-> You can also pass a custom authority host URL that starts with `https://` if you need to target a nonstandard environment.
-
 ## Configure the cloud for Azure MCP Server
 
 You can set the cloud either in the server arguments or through configuration. If you specify the cloud in more than one place, Azure MCP Server resolves the value in this order.

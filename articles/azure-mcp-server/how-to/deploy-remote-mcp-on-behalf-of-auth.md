@@ -17,12 +17,12 @@ Deploy [Azure MCP Server](https://mcr.microsoft.com/product/azure-sdk/azure-mcp)
 
 The on-behalf-of flow is distinct from the managed identity approach used in other Azure MCP Server templates:
 
-- **Managed identity approach**: The server authenticates to downstream Azure services by using its own managed identity. All users share the permissions granted to that identity.
+- **Managed identity approach**: The server authenticates to downstream Azure services by using its own managed identity. All users share the permissions granted to that identity. For a Microsoft Foundry example that uses this model, see [Deploy a remote Azure MCP Server and connect using Microsoft Foundry](deploy-remote-mcp-server-microsoft-foundry.md).
 - **OBO approach**: When a user authenticates with the server, the server exchanges the user's token for a new token scoped to a downstream Azure service. The server calls Azure services *on behalf of* the user, so each user's own Azure permissions determine what they can do.
 
 The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app registrations to enable this flow:
 
-- **Server app registration**: Exposed to clients as the OAuth 2.0 resource. When a user's token arrives, the server uses a federated identity credential (backed by a managed identity) to perform the OBO token exchange with downstream APIs like Azure Resource Manager and Azure Storage.
+- **Server app registration**: Exposed to clients as the OAuth 2.0 resource. When a user's token arrives, the server uses a federated identity credential (backed by a managed identity) to perform the OBO token exchange to access downstream APIs like Azure Resource Manager and Azure Storage.
 - **Client app registration**: Used by external clients (Foundry agents, Copilot Studio custom connectors) to authenticate against the server. The client app is pre-authorized on the server app so users don't need to consent separately.
 
 ## Prerequisites
@@ -34,7 +34,7 @@ The template provisions two [Microsoft Entra](/entra/fundamentals/whatis) app re
 
 ## Deploy the Azure MCP Server
 
-This article shows how to use the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-obo-aca) `azd` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. Deploy the server:
+This article shows how to use the [`azmcp-obo-aca`](https://github.com/Azure-Samples/azmcp-obo-template/) `azd` template to deploy the Azure MCP Server to Azure Container Apps with OBO authentication. Deploy the server:
 
 1. Initialize the `azmcp-obo-aca` template by using the `azd init` command.
 
@@ -58,7 +58,7 @@ This article shows how to use the [`azmcp-obo-aca`](https://github.com/Azure-Sam
 `azd` uses the template files to provision the following resources and configurations:
 
 - **Azure Container App**: Runs the Azure MCP Server with the `storage` namespace enabled.
-- **User-assigned managed identity**: Provides a client credential for the server app registration through a federated identity credential. The server uses this identity to perform the OBO token exchange.
+- **User-assigned managed identity**: Provides a client credential for the server app registration through a [federated identity credential](/entra/workload-id/workload-identity-federatio). The server uses this identity to perform the OBO token exchange.
 - **Entra app registration (server)**: The OAuth 2.0 resource exposed to clients. Has the `Mcp.Tools.ReadWrite` scope, and carries Azure Resource Manager and Azure Storage API permissions for the OBO exchange.
 - **Entra app registration (client)**: Used by clients such as Foundry agents and Power Apps custom connectors to authenticate with the server. Pre-authorized on the server app to eliminate the need for user consent.
 - **Application Insights**: Provides telemetry and monitoring.
@@ -161,7 +161,7 @@ If you encounter authentication errors such as `MsalUiRequiredException`, see th
 
 ### [Microsoft Foundry](#tab/foundry)
 
-A Foundry agent connects to the Azure MCP Server by using OAuth identity passthrough. In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
+A Foundry agent connects to the Azure MCP Server by using [OAuth identity passthrough](/azure/foundry/agents/how-to/mcp-authentication#oauth-identity-passthrough). In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
 
 1. Go to your Foundry project at https://ai.azure.com/nextgen.
 1. Select **Build** > **Create agent**.
@@ -191,9 +191,6 @@ A Foundry agent connects to the Azure MCP Server by using OAuth identity passthr
 1. Under **Web**, add the redirect URL as a new entry.
 
 After you complete these steps, prompt the Foundry Agent to load the MCP tools and call them.
-
-> [!NOTE]
-> Foundry currently supports client secrets for OAuth identity passthrough. For production scenarios, use a federated identity credential instead of a client secret. For more information, see [federated identity credentials](/entra/workload-id/workload-identity-federation).
 
 ### [Copilot Studio](#tab/copilot-studio)
 

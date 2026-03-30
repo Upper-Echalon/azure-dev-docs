@@ -122,7 +122,7 @@ az ad app permission admin-consent --id <ENTRA_APP_SERVER_CLIENT_ID>
 
 After deploying and completing the post-deployment configuration, you can connect clients to the server. Select the option that fits your scenario.
 
-# [C# client app](#tab/csharp)
+### [C# client app](#tab/csharp)
 
 The template includes a .NET console app in the `client/` folder that you can use to verify the deployment locally. The app authenticates interactively through the browser by using the client app registration, connects to the MCP server, lists the available tools, and optionally calls the `storage_account_get` tool.
 
@@ -159,7 +159,7 @@ The template includes a .NET console app in the `client/` folder that you can us
 
 If you encounter authentication errors such as `MsalUiRequiredException`, see the [Troubleshooting](#troubleshooting) section.
 
-# [Microsoft Foundry](#tab/foundry)
+### [Microsoft Foundry](#tab/foundry)
 
 A Foundry agent connects to the Azure MCP Server by using OAuth identity passthrough. In this mode, the signed-in user's identity flows through all the way to the Azure service calls via the OBO exchange.
 
@@ -195,7 +195,7 @@ After you complete these steps, prompt the Foundry Agent to load the MCP tools a
 > [!NOTE]
 > Foundry currently supports client secrets for OAuth identity passthrough. For production scenarios, use a federated identity credential instead of a client secret. For more information, see [federated identity credentials](/entra/workload-id/workload-identity-federation).
 
-# [Copilot Studio](#tab/copilot-studio)
+### [Copilot Studio](#tab/copilot-studio)
 
 Connecting a Copilot Studio agent to this server follows the same custom connector steps as the standard Copilot Studio deployment. For the full walkthrough, see [Deploy a remote Azure MCP Server and connect to it using Copilot Studio](deploy-remote-mcp-server-copilot-studio.md).
 

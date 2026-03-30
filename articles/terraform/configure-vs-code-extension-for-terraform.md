@@ -33,7 +33,7 @@ In this article, you learn how to:
 
 1. Launch Visual Studio Code.
 
-1. From the left menu, select **Extensions**, and enter `Microsoft Terraform` in the search text box.
+1. Select **Extensions** and search for Microsoft Terraform."
 
     :::image type="content" source="media/configure-vs-code-extension-for-terraform/search-for-microsoft-terraform-extension.png" alt-text="Search Visual Studio Code extensions in Marketplace.":::
 
@@ -54,7 +54,7 @@ In this article, you learn how to:
     :::image type="content" source="media/configure-vs-code-extension-for-terraform/installed-extensions-microsoft-terraform.png" alt-text="View installed Microsoft Terraform extension.":::
 
     :::image type="content" source="media/configure-vs-code-extension-for-terraform/installed-extensions-azure-resources.png" alt-text="View installed Azure Resources extensions.":::
-    
+
 You can now run all supported Terraform commands in your Cloud Shell environment from within Visual Studio Code.
 
 ## 3. Implement the Terraform code
@@ -110,9 +110,7 @@ You can now run all supported Terraform commands in your Cloud Shell environment
 
 1. In the Command Palette text box, start entering `Microsoft Terraform: Plan` and select it when it displays.
 
-    **Key points:**
-
-    - This command runs [terraform plan](https://www.terraform.io/docs/commands/plan.html) to create an execution plan from the Terraform configuration files in the current directory.
+   This command runs [terraform plan](https://www.terraform.io/docs/commands/plan.html) to create an execution plan from the Terraform configuration files in the current directory.
 
 ## 7. Apply a Terraform execution plan within Visual Studio Code
 
@@ -167,4 +165,4 @@ Get-AzResourceGroup -Name <resource_group_name>
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Read more about the Microsoft Terraform Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureterraform)
+> Read more about the [Microsoft Terraform Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureterraform)

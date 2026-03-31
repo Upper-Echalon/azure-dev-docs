@@ -16,10 +16,10 @@ This guide explains how to configure the Azure Developer CLI to provision resour
 The Azure Developer CLI supports the following clouds:
 
 * Azure Public (`AzureCloud`) default
-* Azure China Cloud (`AzureChinaCloud`)
+* Azure operated by 21Vianet Cloud (`AzureChinaCloud`)
 * Azure US Government (`AzureUSGovernment`)
 
-The Azure Public cloud is the default and will be used if no cloud is specified.
+The Azure Public cloud is the default and is used if no cloud is specified.
 
 ## Authentication
 
@@ -37,9 +37,9 @@ azd auth login
 Clouds can be configured at the user, project, or environment level. The order of configuration precedence is:
 
 1. **Environment configuration** is selected first
-1. If no cloud is confiugred in the environment, the **project configuration** (azure.yaml) is used
+1. If no cloud is configured in the environment, the **project configuration** (azure.yaml) is used
 1. If no cloud is set in the project configuration, the **user configuration** (`azd config set`) is used
-1. If no cloud is set in the user configuration azd uses the public `AzureCloud`
+1. If no cloud is set in the user configuration, azd uses the public `AzureCloud`
 
 ### Configure clouds with user settings (azd config set)
 

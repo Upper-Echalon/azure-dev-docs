@@ -55,7 +55,7 @@ items:
           - name: Azure Container Apps with Copilot Studio
             href: how-to/deploy-remote-mcp-server-copilot-studio.md
           - name: Azure Container Apps with on-behalf-of authentication
-            href: how-to/deploy-remote-mcp-server-on-behalf-of-auth.md
+            href: how-to/deploy-remote-mcp-server-on-behalf-of.md
     - name: Use with Azure services
       expanded: true
       items:

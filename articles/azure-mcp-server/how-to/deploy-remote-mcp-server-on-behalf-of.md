@@ -58,7 +58,7 @@ This article shows how to use the [`azmcp-obo-aca`](https://github.com/Azure-Sam
 `azd` uses the template files to provision the following resources and configurations:
 
 - **Azure Container App**: Runs the Azure MCP Server with the `storage` namespace enabled.
-- **User-assigned managed identity**: Provides a client credential for the server app registration through a [federated identity credential](/entra/workload-id/workload-identity-federatio). The server uses this identity to perform the OBO token exchange.
+- **User-assigned managed identity**: Provides a client credential for the server app registration through a [federated identity credential](/entra/workload-id/workload-identity-federation). The server uses this identity to perform the OBO token exchange.
 - **Entra app registration (server)**: The OAuth 2.0 resource exposed to clients. Has the `Mcp.Tools.ReadWrite` scope, and carries Azure Resource Manager and Azure Storage API permissions for the OBO exchange.
 - **Entra app registration (client)**: Used by clients such as Foundry agents and Power Apps custom connectors to authenticate with the server. Pre-authorized on the server app to eliminate the need for user consent.
 - **Application Insights**: Provides telemetry and monitoring.

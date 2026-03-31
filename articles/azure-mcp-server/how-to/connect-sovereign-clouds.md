@@ -12,7 +12,7 @@ This article shows you how to configure Azure MCP Server to authenticate against
 
 ## Prerequisites
 
-- Access to an Azure subscription in Azure US Government or Azure in China Cloud.
+- Access to an Azure subscription in Azure US Government or Azure in China.
 - A client or local setup that can start Azure MCP Server. For setup options, see [Get started with the Azure MCP Server](../get-started.md).
 - At least one supported local authentication tool, such as [Azure CLI](/cli/azure/install-azure-cli), [Azure PowerShell](/powershell/azure/install-az-ps), or [Azure Developer CLI](../../azure-developer-cli/install-azd.md).
 
@@ -24,7 +24,7 @@ Azure MCP Server recognizes the following cloud names and maps them to the corre
 | --- | --- | --- |
 | Azure Public Cloud | `https://login.microsoftonline.com` | `AzureCloud`, `AzurePublicCloud`, `Public`, `AzurePublic` |
 | Azure US Government | `https://login.microsoftonline.us` | `AzureUSGovernment`, `USGov`, `AzureUSGovernmentCloud`, `USGovernment` |
-| Azure in China Cloud | `https://login.chinacloudapi.cn` | `AzureChinaCloud`, `China`, `AzureChina` |
+| Azure in China | `https://login.chinacloudapi.cn` | `AzureChinaCloud`, `China`, `AzureChina` |
 
 Aliases are case-insensitive.
 
@@ -62,7 +62,7 @@ If your MCP client starts Azure MCP Server for you, add `--cloud` to the server 
 }
 ```
 
-Replace `AzureUSGovernment` with `AzureChinaCloud` when you connect to the Azure in China Cloud.
+Replace `AzureUSGovernment` with `AzureChinaCloud` when you connect to the Azure in China.
 
 ### Configure using environment variables
 
@@ -104,7 +104,7 @@ az cloud set --name AzureUSGovernment
 az login
 ```
 
-For Azure in China Cloud, replace `AzureUSGovernment` with `AzureChinaCloud`.
+For Azure in China, replace `AzureUSGovernment` with `AzureChinaCloud`.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
@@ -114,7 +114,7 @@ Use Azure PowerShell when your workflow relies on the Azure PowerShell credentia
 Connect-AzAccount -Environment AzureUSGovernment
 ```
 
-For Azure in China Cloud, replace `AzureUSGovernment` with `AzureChinaCloud`.
+For Azure in China, replace `AzureUSGovernment` with `AzureChinaCloud`.
 
 ### [Azure Developer CLI](#tab/azure-developer-cli)
 
@@ -125,7 +125,7 @@ azd config set cloud.name AzureUSGovernment
 azd auth login
 ```
 
-For Azure in China Cloud, replace `AzureUSGovernment` with `AzureChinaCloud`.
+For Azure in China, replace `AzureUSGovernment` with `AzureChinaCloud`.
 
 ---
 
@@ -146,7 +146,7 @@ If you configure the remote server manually, set `AzureAd__ClientCredentials__0_
 | --- | --- |
 | Azure Public Cloud | `api://AzureADTokenExchange` |
 | Azure US Government | `api://AzureADTokenExchangeUSGov` |
-| Azure in China Cloud | `api://AzureADTokenExchangeChina` |
+| Azure in China | `api://AzureADTokenExchangeChina` |
 
 For template-based deployments, review the upstream [Azure MCP Server azd templates](https://github.com/microsoft/mcp/tree/main/servers/Azure.Mcp.Server/azd-templates) if you want to confirm the generated host or container settings before you publish the remote endpoint.
 
@@ -171,7 +171,7 @@ If authentication or discovery fails, start with these checks.
 1. Check network connectivity. Confirm that you can reach the correct authority host for your cloud.
 
    - Azure US Government: `https://login.microsoftonline.us`
-   - Azure in China Cloud: `https://login.chinacloudapi.cn`
+   - Azure in China: `https://login.chinacloudapi.cn`
 
 1. For remote deployments, confirm that both `AZURE_CLOUD` and `AzureAd__ClientCredentials__0__TokenExchangeUrl` are set correctly.
 

@@ -205,7 +205,7 @@
 | Resource Management - Container Registry | npm [12.0.0](https://www.npmjs.com/package/@azure/arm-containerregistry/v/12.0.0)<br>npm [12.1.0-beta.1](https://www.npmjs.com/package/@azure/arm-containerregistry/v/12.1.0-beta.1) | [docs](/javascript/api/overview/azure/arm-containerregistry-readme) | GitHub [12.0.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerregistry/arm-containerregistry) |
 | Resource Management - Container Service | npm [1.0.0-beta.2](https://www.npmjs.com/package/@azure-rest/arm-containerservice/v/1.0.0-beta.2) |  | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerservice/arm-containerservice-rest) |
 | Resource Management - Container Service | npm [25.0.0](https://www.npmjs.com/package/@azure/arm-containerservice/v/25.0.0) | [docs](/javascript/api/overview/azure/arm-containerservice-readme) | GitHub [25.0.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerservice/arm-containerservice) |
-| Resource Management - Container Service Fleet | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-containerservicefleet/v/2.0.0)<br>npm [2.1.0-beta.2](https://www.npmjs.com/package/@azure/arm-containerservicefleet/v/2.1.0-beta.2) | [docs](/javascript/api/overview/azure/arm-containerservicefleet-readme) | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerservicefleet_2.0.0/sdk/containerservice/arm-containerservicefleet/)<br>GitHub [2.1.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerservicefleet_2.1.0-beta.2/sdk/containerservice/arm-containerservicefleet/) |
+| Resource Management - Container Service Fleet | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-containerservicefleet/v/2.0.0)<br>npm [2.1.0-beta.3](https://www.npmjs.com/package/@azure/arm-containerservicefleet/v/2.1.0-beta.3) | [docs](/javascript/api/overview/azure/arm-containerservicefleet-readme) | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerservicefleet_2.0.0/sdk/containerservice/arm-containerservicefleet/)<br>GitHub [2.1.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerservicefleet_2.1.0-beta.3/sdk/containerservice/arm-containerservicefleet/) |
 | Resource Management - Containerregistrytasks | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/arm-containerregistrytasks/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/arm-containerregistrytasks-readme) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerregistrytasks_1.0.0-beta.1/sdk/containerregistry/arm-containerregistrytasks/) |
 | Resource Management - Containerservicesafeguards | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/arm-containerservicesafeguards/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/arm-containerservicesafeguards-readme) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-containerservicesafeguards_1.0.0-beta.1/sdk/containerservice/arm-containerservicesafeguards/) |
 | Resource Management - Content Delivery Network | npm [9.1.0](https://www.npmjs.com/package/@azure/arm-cdn/v/9.1.0) | [docs](/javascript/api/overview/azure/arm-cdn-readme) | GitHub [9.1.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/cdn/arm-cdn) |
@@ -431,13 +431,13 @@
 | App Configuration Provider | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.0-preview) |  |  |
 | App Configuration Provider | npm [2.4.1](https://www.npmjs.com/package/@azure/app-configuration-provider/v/2.4.1) |  |  |
 | App Configuration Provider File Source | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer-file-source/v/3.0.0-preview) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0-beta.34) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/1.0.3)<br>npm [2.0.0-beta.34](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0-beta.34) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0-beta.35) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-arm64/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-x64/v/0.5.13) |  |  |
@@ -564,7 +564,7 @@
 | @autorest/system-requirements | npm [1.1.1](https://www.npmjs.com/package/@autorest/system-requirements/v/1.1.1) |  |  |
 | @autorest/test-utils | npm [0.6.1](https://www.npmjs.com/package/@autorest/test-utils/v/0.6.1) |  |  |
 | @autorest/testmodeler | npm [2.6.2](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.2)<br>npm [2.6.4-ci.254802bfc.0](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.4-ci.254802bfc.0) |  |  |
-| @autorest/typescript | npm [6.0.64](https://www.npmjs.com/package/@autorest/typescript/v/6.0.64) |  |  |
+| @autorest/typescript | npm [6.0.65](https://www.npmjs.com/package/@autorest/typescript/v/6.0.65) |  |  |
 | @azure/static-web-apps-cli | npm [2.0.8](https://www.npmjs.com/package/@azure/static-web-apps-cli/v/2.0.8) |  |  |
 | @cadl-lang/compiler | npm [0.40.0](https://www.npmjs.com/package/@cadl-lang/compiler/v/0.40.0) |  |  |
 | @cadl-lang/eslint-config-cadl | npm [0.5.0](https://www.npmjs.com/package/@cadl-lang/eslint-config-cadl/v/0.5.0) |  |  |

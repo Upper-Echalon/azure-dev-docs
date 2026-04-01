@@ -302,10 +302,10 @@ The following table shows the property mappings between `azure-spring-boot-start
 > | `azure.activedirectory.client-id`                                                        | `spring.cloud.azure.active-directory.credential.client-id`                                             |
 > | `azure.activedirectory.client-secret`                                                    | `spring.cloud.azure.active-directory.credential.client-secret`                                         |
 > | `azure.activedirectory.graph-membership-uri`                                             | Check the following table for more information.                                                        |
-> | `azure.activedirectory.jwt-connect-timeout`                                              | `spring.cloud.azure.active-directory.jwt-connect-timeout.`                                             |
-> | `azure.activedirectory.jwt-read-timeout`                                                 | `spring.cloud.azure.active-directory.jwt-read-timeout.`                                                |
-> | `azure.activedirectory.jwt-size-limit`                                                   | `spring.cloud.azure.active-directory.jwt-size-limit.`                                                  |
-> | `azure.activedirectory.jwk-set-cache-lifespan`                                           | `spring.cloud.azure.active-directory.jwk-set-cache-lifespan.`                                          |
+> | `azure.activedirectory.jwt-connect-timeout`                                              | `spring.cloud.azure.active-directory.jwt-connect-timeout`                                              |
+> | `azure.activedirectory.jwt-read-timeout`                                                 | `spring.cloud.azure.active-directory.jwt-read-timeout`                                                 |
+> | `azure.activedirectory.jwt-size-limit`                                                   | `spring.cloud.azure.active-directory.jwt-size-limit`                                                   |
+> | `azure.activedirectory.jwk-set-cache-lifespan`                                           | `spring.cloud.azure.active-directory.jwk-set-cache-lifespan`                                           |
 > | `azure.activedirectory.jwk-set-cache-refresh-time`                                       | `spring.cloud.azure.active-directory.jwk-set-cache-refresh-time`                                       |
 > | `azure.activedirectory.post-logout-redirect-uri`                                         | `spring.cloud.azure.active-directory.post-logout-redirect-uri`                                         |
 > | `azure.activedirectory.session-stateless`                                                | `spring.cloud.azure.active-directory.session-stateless`                                                |
@@ -655,7 +655,7 @@ For general information, use the following links:
 #### SDK configuration changes
 
 > [!IMPORTANT]
-> Configuration prefix has been changed from `spring.cloud.azure.eventhub` to `spring.cloud.azure.eventhubs.`
+> Configuration prefix has been changed from `spring.cloud.azure.eventhub` to `spring.cloud.azure.eventhubs`.
 
 For changes to the child entries for this prefix, see the following tables:
 
@@ -1170,7 +1170,7 @@ For general information, use the following links:
 #### SDK configuration changes
 
 > [!IMPORTANT]
-> Configuration prefix has been changed from `spring.cloud.azure.eventhub` to `spring.cloud.azure.eventhubs.`
+> Configuration prefix has been changed from `spring.cloud.azure.eventhub` to `spring.cloud.azure.eventhubs`.
 
 > [!IMPORTANT]
 > The binder type is renamed from: `eventhub` to `eventhubs`.

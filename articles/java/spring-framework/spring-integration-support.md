@@ -106,7 +106,7 @@ Checkpointing configurable properties of `spring-cloud-azure-starter-integration
 > | `spring.cloud.azure.eventhubs.processor.checkpoint-store.account-key`                    | String  | Storage account access key.                         |
 > | `spring.cloud.azure.eventhubs.processor.checkpoint-store.container-name`                 | String  | Storage container name.                             |
 
-Common Azure Service SDK configuration options are configurable for Storage Blob checkpoint store as well. The supported configuration options are introduced in [Spring Cloud Azure configuration](configuration.md), and could be configured with either the unified prefix `spring.cloud.azure.` or the prefix of `spring.cloud.azure.eventhubs.processor.checkpoint-store`.
+Common Azure Service SDK configuration options are configurable for Storage Blob checkpoint store as well. The supported configuration options are introduced in [Spring Cloud Azure configuration](configuration.md), and could be configured with either the unified prefix `spring.cloud.azure.` or the prefix of `spring.cloud.azure.eventhubs.processor.checkpoint-store.`.
 
 #### Event Hub processor configuration properties
 

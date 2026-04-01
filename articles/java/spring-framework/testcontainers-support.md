@@ -851,4 +851,4 @@ With `@ServiceConnection`, this configuration enables related beans in the app t
 
 ## Samples
 
-For more information, see the [spring-cloud-azure-testcontainers examples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/spring-cloud-azure-testcontainers).
+For more information, see the [`spring-cloud-azure-testcontainers` examples](https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/spring-cloud-azure-testcontainers).

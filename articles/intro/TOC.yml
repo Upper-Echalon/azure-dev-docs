@@ -4,7 +4,7 @@ items:
   - name: What's new in Azure developer documentation
     href: whats-new.md
   - name: Get started
-    expanded: true
+    expanded: false
     items:
       - name: Overview
         href: azure-developer-overview.md
@@ -22,13 +22,7 @@ items:
         href: azure-developer-billing.md
       - name: Get started with Azure dev tools
         href: quickstart-developer-tools.md
-      - name: AI development on Azure
-        items:
-          - name: Build AI apps on Azure
-            href: ../ai/azure-ai-for-developers.md
-          - name: Azure AI developer resources
-            href: ../ai/resources-overview.md
-  - name: Develop apps that use Foundry Tools
+  - name: AI development on Azure
     href: ../ai/index.yml
   - name: Tools
     items:

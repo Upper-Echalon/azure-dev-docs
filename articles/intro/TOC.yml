@@ -8,6 +8,8 @@ items:
     items:
       - name: Overview
         href: azure-developer-overview.md
+      - name: Get started with Azure dev tools
+        href: quickstart-developer-tools.md
       - name: Key Azure services for developers
         href: azure-developer-key-services.md
       - name: Host applications on Azure
@@ -20,8 +22,6 @@ items:
         href: azure-developer-key-concepts.md
       - name: Overview of Azure billing
         href: azure-developer-billing.md
-      - name: Get started with Azure dev tools
-        href: quickstart-developer-tools.md
   - name: AI development on Azure
     href: ../ai/index.yml
   - name: Tools

@@ -304,7 +304,7 @@
 | Resource Management - Managedops | npm [1.0.0-beta.2](https://www.npmjs.com/package/@azure/arm-managedops/v/1.0.0-beta.2) | [docs](/javascript/api/overview/azure/arm-managedops-readme) | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-managedops_1.0.0-beta.2/sdk/managedops/arm-managedops/) |
 | Resource Management - Management Groups | npm [2.0.2](https://www.npmjs.com/package/@azure/arm-managementgroups/v/2.0.2) | [docs](/javascript/api/overview/azure/arm-managementgroups-readme) | GitHub [2.0.2](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/managementgroups/arm-managementgroups) |
 | Resource Management - Management Partner | npm [3.0.1](https://www.npmjs.com/package/@azure/arm-managementpartner/v/3.0.1) | [docs](/javascript/api/overview/azure/arm-managementpartner-readme) | GitHub [3.0.1](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/managementpartner/arm-managementpartner) |
-| Resource Management - Maps | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-maps/v/3.1.0) | [docs](/javascript/api/overview/azure/arm-maps-readme) | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/maps/arm-maps) |
+| Resource Management - Maps | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-maps/v/3.1.0)<br>npm [4.0.0-beta.1](https://www.npmjs.com/package/@azure/arm-maps/v/4.0.0-beta.1) | [docs](/javascript/api/overview/azure/arm-maps-readme) | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/maps/arm-maps) |
 | Resource Management - MariaDB | npm [2.1.0](https://www.npmjs.com/package/@azure/arm-mariadb/v/2.1.0) | [docs](/javascript/api/overview/azure/arm-mariadb-readme) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/mariadb/arm-mariadb) |
 | Resource Management - Marketplace | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/arm-marketplace/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/arm-marketplace-readme) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-marketplace_1.0.0-beta.1/sdk/marketplace/arm-marketplace/) |
 | Resource Management - Marketplace Ordering | npm [3.1.1](https://www.npmjs.com/package/@azure/arm-marketplaceordering/v/3.1.1) | [docs](/javascript/api/overview/azure/arm-marketplaceordering-readme) | GitHub [3.1.1](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/marketplaceordering/arm-marketplaceordering) |
@@ -420,7 +420,7 @@
 | @microsoft.azure/autorest-core | npm [2.0.4432](https://www.npmjs.com/package/@microsoft.azure/autorest-core/v/2.0.4432) |  |  |
 | @microsoft.azure/autorest.testserver | npm [3.3.51](https://www.npmjs.com/package/@microsoft.azure/autorest.testserver/v/3.3.51) |  |  |
 | @microsoft.azure/openapi-validator | npm [2.2.4](https://www.npmjs.com/package/@microsoft.azure/openapi-validator/v/2.2.4) |  |  |
-| @microsoft.azure/openapi-validator-rulesets | npm [2.2.5](https://www.npmjs.com/package/@microsoft.azure/openapi-validator-rulesets/v/2.2.5) |  |  |
+| @microsoft.azure/openapi-validator-rulesets | npm [2.2.6](https://www.npmjs.com/package/@microsoft.azure/openapi-validator-rulesets/v/2.2.6) |  |  |
 | @typespec/best-practices | npm [0.46.0-dev.0](https://www.npmjs.com/package/@typespec/best-practices/v/0.46.0-dev.0) |  |  |
 | @typespec/bundler | npm [0.5.1](https://www.npmjs.com/package/@typespec/bundler/v/0.5.1) |  |  |
 | @typespec/http-server-javascript | npm [0.58.0-alpha.9](https://www.npmjs.com/package/@typespec/http-server-javascript/v/0.58.0-alpha.9) |  |  |
@@ -431,13 +431,13 @@
 | App Configuration Provider | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.0-preview) |  |  |
 | App Configuration Provider | npm [2.4.1](https://www.npmjs.com/package/@azure/app-configuration-provider/v/2.4.1) |  |  |
 | App Configuration Provider File Source | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer-file-source/v/3.0.0-preview) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0-beta.35) |  |  |
-| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/1.0.3)<br>npm [2.0.0-beta.35](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0-beta.35) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0-beta.36) |  |  |
+| Azure MCP | npm [1.0.3](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/1.0.3)<br>npm [2.0.0-beta.36](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0-beta.36) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-arm64/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-x64/v/0.5.13) |  |  |

@@ -24,12 +24,25 @@ Use the following instructions when creating, editing, or reviewing articles tha
 - When an article must reference older Java versions, note the relevant end-of-support timelines and recommend upgrading.
 - Java 25 is the current latest release. New content should prefer Java 21 LTS but can target Java 25 where appropriate.
 - For PRs that update articles targeting pre-Java 21 versions, suggest considering an update to Java 21+ but don't block the PR on it.
+- Every article with Java prerequisites must explicitly list the minimum Java version in the **Prerequisites** section (for example, "Java 21 or later"). Don't assume the reader will infer the version from other context.
 
 ## Authentication and identity
 
 - Prefer `DefaultAzureCredential` over other credential types unless the article specifically covers an alternative authentication flow.
 - Prefer Azure Identity over connection strings, keys, or other non-identity-based authentication.
 - Use Azure Key Vault for secrets management rather than hardcoding or environment variables where feasible.
+
+## Spring Boot version guidance
+
+- Target **Spring Boot 3.x** (current latest) for new content. Spring Boot 3.x requires Java 17+, which aligns with the Java 21 baseline.
+- Don't introduce Spring Boot 2.7.x in new articles — it reached end of OSS support in November 2023. When an existing article references Spring Boot 2.7.x, note the end-of-support status and suggest upgrading.
+- For PRs that update Spring Boot 2.7.x articles, suggest considering an update to Spring Boot 3.x but don't block the PR on it.
+- When an article targets a specific Spring Boot version, document the minimum Java version in the **Prerequisites** section:
+
+  | Spring Boot | Minimum Java | Recommended |
+  | --- | --- | --- |
+  | 3.2.x, 3.1.x, 3.0.x | Java 17 | Java 17 or 21 |
+  | 2.7.x (end-of-life) | Java 8 | Java 11 or 17 |
 
 ## Spring Cloud Azure conventions
 

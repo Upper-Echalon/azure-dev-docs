@@ -23,7 +23,8 @@ Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **PowerShell** (v7.4+) — Install: `winget install Microsoft.PowerShell`
+- **Bash**
 
 ## When to use this skill
 
@@ -31,35 +32,27 @@ Use the **Microsoft Foundry** skill when you need to:
 
 - Deploy agent to Foundry
 - Work with hosted agent
-- Create agent
+- Create agent in Azure
 - Work with invoke agent
-- Evaluate agent
-- Run batch eval
-- Optimize prompt
+- Evaluate agent in Azure
+- Run batch eval in Azure
+- Optimize prompt in Azure
 - Work with improve prompt, prompt optimization, prompt optimizer, and improve agent instructions
-- Optimize agent instructions
-- Optimize system prompt
-- Deploy model
+- Optimize agent instructions in Azure
+- Optimize system prompt in Azure
+- Deploy model in Azure
 - Work with Foundry project, role-based access control (RBAC), role assignment, and permissions
 - Work with quota, capacity, and region
-- Troubleshoot agent
+- Troubleshoot agent in Azure
 - Work with deployment failure
 - Create dataset from traces
 - Work with dataset versioning and eval trending
-- Create Ai Services
+- Create AI Services in Azure
 - Work with Cognitive Services
-- Create Foundry resource
-- Provision resource
+- Create Foundry resource in Azure
+- Provision resource in Azure
 - Work with knowledge index, agent monitoring, customize deployment, and onboard
 - Work with availability
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- Work with Azure Functions and App Service
-- General Azure deploy (use `azure-deploy`)
-- General Azure prep (use `azure-prepare`)
 
 ## What it provides
 
@@ -68,9 +61,9 @@ The Microsoft Foundry skill provides GitHub Copilot with specialized knowledge. 
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "How do I deploy an AI model from Microsoft Foundry catalog?"
 - "Build a RAG application with Azure AI Foundry knowledge index"

@@ -25,6 +25,13 @@ List, find, and show Azure resources across subscriptions or resource groups. Ha
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Key Vault** — Key vault for secrets and certificate management
+- **Azure Storage account** — Storage account for blob, file, queue, or table data
+- **Azure Kubernetes Service cluster** — Azure Kubernetes Service (AKS) cluster for container orchestration
+- **Azure Cosmos DB account** — Cosmos DB account for NoSQL data
+
 ## When to use this skill
 
 Use the **Azure Resource Lookup** skill when you need to:
@@ -35,12 +42,6 @@ Use the **Azure Resource Lookup** skill when you need to:
 - Orphaned resource discovery (not for cost analysis)
 - Work with unattached disks, count resources by type, and cross-subscription lookup
 - And Azure Resource Graph queries
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- Work with deploying/changing resources (use `azure-deploy`), cost optimization (use `azure-cost`), and or non-Azure clouds
 
 ## What it provides
 
@@ -56,9 +57,9 @@ The Azure Resource Lookup skill provides GitHub Copilot with specialized knowled
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "List the websites in my subscription"
 - "Show me the websites in my resource group"

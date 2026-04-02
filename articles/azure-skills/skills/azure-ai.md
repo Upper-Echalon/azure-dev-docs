@@ -29,18 +29,10 @@ ms.service: azure-mcp-server
 
 Use the **Azure AI Services** skill when you need to:
 
-- Work with Ai Search
-- Query search
+- Work with AI Search
+- Query search in Azure
 - Work with vector search, hybrid search, semantic search, and speech-to-text
 - Work with text-to-speech, transcribe, and convert text to speech
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 

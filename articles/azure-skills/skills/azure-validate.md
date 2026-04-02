@@ -29,30 +29,22 @@ Pre-deployment validation for Azure readiness. Run deep checks on configuration,
 
 Use the **Azure Validate** skill when you need to:
 
-- Validate my app
-- Check deployment readiness
-- Run preflight checks
-- Verify configuration
+- Validate my app in Azure
+- Check deployment readiness in Azure
+- Run preflight checks in Azure
+- Verify configuration in Azure
 - Check if ready to deploy
 - Validate azure.yaml
-- Validate Bicep
-- Test before deploying
-- Troubleshoot deployment errors
+- Validate Bicep in Azure
+- Test before deploying in Azure
+- Troubleshoot deployment errors in Azure
 - Validate Azure Functions
-- Validate function app
-- Validate serverless deployment
-- Verify RBAC roles
-- Check role assignments
+- Validate function app in Azure
+- Validate serverless deployment in Azure
+- Verify RBAC roles in Azure
+- Check role assignments in Azure
 - Review managed identity permissions
 - Work with what-if analysis
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -61,9 +53,9 @@ The Azure Validate skill provides GitHub Copilot with specialized knowledge. Pre
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Check if my app is ready to deploy to Azure"
 - "Validate my azure.yaml configuration"

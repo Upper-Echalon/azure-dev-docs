@@ -23,7 +23,8 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **PowerShell** (v7.4+) — Install: `winget install Microsoft.PowerShell`
+- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
 
 ## When to use this skill
 
@@ -32,14 +33,6 @@ Use the **App Insights Instrumentation** skill when you need to:
 - Work with how to instrument app, App Insights SDK, telemetry patterns, and what is App Insights
 - Work with Application Insights guidance, instrumentation examples, and Apm best practices
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
-
 ## What it provides
 
 The App Insights Instrumentation skill provides GitHub Copilot with specialized knowledge. Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
@@ -47,9 +40,9 @@ The App Insights Instrumentation skill provides GitHub Copilot with specialized 
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Instrument my webapp to send telemetry to App Insights"
 - "How do I instrument my app with Azure App Insights?"

@@ -25,23 +25,19 @@ Analyze Azure resource groups and generate detailed Mermaid architecture diagram
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Key Vault** — Key vault for secrets and certificate management
+
 ## When to use this skill
 
 Use the **Azure Resource Visualizer** skill when you need to:
 
-- Create architecture diagram
+- Create architecture diagram in Azure
 - Visualize Azure resources
 - Work with show resource relationships and generate Mermaid diagram
-- Analyze resource group
+- Analyze resource group in Azure
 - Work with diagram my resources, architecture visualization, resource topology, and map Azure infrastructure
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -50,9 +46,9 @@ The Azure Resource Visualizer skill provides GitHub Copilot with specialized kno
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Create an architecture diagram for my Azure resource group"
 - "Generate a Mermaid diagram of my resource group"

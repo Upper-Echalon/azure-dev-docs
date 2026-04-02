@@ -25,27 +25,24 @@ Check/manage Azure quotas and usage across providers. For deployment planning, c
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Storage account** — Storage account for blob, file, queue, or table data
+- **Azure Cosmos DB account** — Cosmos DB account for NoSQL data
+
 ## When to use this skill
 
 Use the **Azure Quotas** skill when you need to:
 
-- Check quotas
+- Check quotas in Azure
 - Work with service limits and current usage
-- Request quota increase
+- Request quota increase in Azure
 - Work with quota exceeded
-- Validate capacity
+- Validate capacity in Azure
 - Work with regional availability
-- Provisioning limits
+- Provisioning limits in Azure
 - Work with vCPU limit
 - How many vCPUs available in my subscription
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -54,9 +51,9 @@ The Azure Quotas skill provides GitHub Copilot with specialized knowledge. Check
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "How do I check my Azure quota limits?"
 - "What are the service limits for my Azure subscription?"

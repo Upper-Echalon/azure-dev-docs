@@ -41,14 +41,6 @@ Use the **Azure Messaging** skill when you need to:
 - Work with connection inactive, link detach, slow reconnect, and session error
 - Work with duplicate events, offset reset, and receive batch
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
-
 ## What it provides
 
 The Azure Messaging skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
@@ -65,9 +57,9 @@ The Azure Messaging skill provides GitHub Copilot with specialized knowledge. Tr
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "event hub SDK error in my Python app"
 - "my event hub consumer isn't receiving messages"

@@ -25,17 +25,21 @@ Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clus
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Key Vault** — Key vault for secrets and certificate management
+- **Azure Kubernetes Service cluster** — AKS cluster for container orchestration
+
 ## When to use this skill
 
 Use the **Azure Kubernetes** skill when you need to:
 
-- Create AKS environment
-- Provision AKS environment
-- Enable AKS observability
-- Design AKS networking
-- Choose AKS SKU
-- Secure AKS
-
+- Create AKS environment in Azure
+- Provision AKS environment in Azure
+- Enable AKS observability in Azure
+- Design AKS networking in Azure
+- Choose AKS SKU in Azure
+- Secure AKS in Azure
 
 ## What it provides
 
@@ -92,9 +96,9 @@ The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. P
 - **Stop/Start** dev/test clusters: `az aks stop/start`
 - Consider **Reserved Instances** or **Savings Plans** for steady-state workloads
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Help me create an AKS cluster"
 - "I need to set up a new Kubernetes cluster on Azure"

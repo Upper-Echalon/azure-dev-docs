@@ -25,21 +25,19 @@ Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Storage account** — Storage account for blob, file, queue, or table data
+- **Azure Cosmos DB account** — Cosmos DB account for NoSQL data
+
 ## When to use this skill
 
 Use the **Azure Storage** skill when you need to:
 
 - Work with blob storage, file shares, queue storage, and table storage
 - Work with data lake
-- Upload files
+- Upload files in Azure
 - Work with download blobs, storage accounts, access tiers, and lifecycle management
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- Work with SQL databases and Cosmos Db (use `azure-prepare`)
-- Messaging with Event Hubs or Service Bus (use `azure-messaging`)
 
 ## What it provides
 

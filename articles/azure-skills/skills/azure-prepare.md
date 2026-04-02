@@ -23,25 +23,26 @@ Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfile
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
+- **Terraform** (v1.5+) — Install: `https://developer.hashicorp.com/terraform/install`
 
 ## When to use this skill
 
 Use the **Azure Prepare** skill when you need to:
 
-- Create app
-- Build web app
-- Create API
+- Create app in Azure
+- Build web app in Azure
+- Create API in Azure
 - Create serverless HTTP API
-- Create frontend
-- Create back end
-- Build a service
+- Create frontend in Azure
+- Create back end in Azure
+- Build a service in Azure
 - Work with modernize application
-- Update application
-- Add authentication
-- Add caching
+- Update application in Azure
+- Add authentication in Azure
+- Add caching in Azure
 - Work with host on Azure
-- Create and deploy
+- Create and deploy in Azure
 - Deploy to Azure
 - Deploy to Azure using Terraform
 - Deploy to Azure App Service
@@ -55,14 +56,6 @@ Use the **Azure Prepare** skill when you need to:
 - Prepare my Azure application to use Key Vault
 - Work with managed identity
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
-
 ## What it provides
 
 The Azure Prepare skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
@@ -70,9 +63,9 @@ The Azure Prepare skill provides GitHub Copilot with specialized knowledge. Prep
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Create a dad joke generator and deploy to Azure"
 - "Build a web app and host it on Azure"

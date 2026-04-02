@@ -25,12 +25,16 @@ Unified Azure cost management: query historical costs, forecast future spending,
 - **GitHub Copilot**
 - **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
+### Required resources
+
+- **Azure Kubernetes Service cluster** — AKS cluster for container orchestration
+
 ## When to use this skill
 
 Use the **Azure Cost Optimization** skill when you need to:
 
-- Deploying resources
-- Provisioning infrastructure
+- Deploying resources in Azure
+- Provisioning infrastructure in Azure
 - Work with diagnostics and security audits
 - Or estimating costs for new resources not yet deployed
 - Work with Azure costs, Azure spending, Azure bill, and cost breakdown
@@ -40,23 +44,14 @@ Use the **Azure Cost Optimization** skill when you need to:
 - Work with actual cost, amortized cost, forecast spending, and projected costs
 - Work with estimate bill, future costs, budget forecast, and end of month costs
 - How much will I spend
-- Optimize costs
+- Optimize costs in Azure
 - Work with reduce spending
-- Find cost savings
+- Find cost savings in Azure
 - Work with orphaned resources, rightsize VMs, cost analysis, and reduce waste
 - Work with unused resources
-- Optimize Redis costs
+- Optimize Redis costs in Azure
 - Work with cost by tag, cost by resource group, AKS cost analysis add-on, and namespace cost
 - Work with cost spike, anomaly, budget alert, and AKS cost visibility
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- Deploying resources
-- Provisioning infrastructure
-- Work with diagnostics and security audits
-- Or estimating costs for new resources not yet deployed
 
 ## What it provides
 

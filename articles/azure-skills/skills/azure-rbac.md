@@ -37,14 +37,6 @@ Use the **Azure RBAC** skill when you need to:
 - What role do I need to grant access
 - Work with permissions to assign roles
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
-
 ## What it provides
 
 The Azure RBAC skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
@@ -52,9 +44,9 @@ The Azure RBAC skill provides GitHub Copilot with specialized knowledge. Helps u
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "What Azure RBAC role should I assign to my managed identity?"
 - "Which Azure role gives least privilege access to read blobs from storage?"

@@ -23,27 +23,23 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
+
+### Required resources
+
+- **Azure Key Vault** — Key vault for secrets and certificate management
 
 ## When to use this skill
 
 Use the **Entra App Registration** skill when you need to:
 
-- Create app registration
+- Create app registration in Azure
 - Work with register Azure Ad app
-- Configure OAuth
-- Set up authentication
-- Add API permissions
-- Work with generate service principal, MSAL example, console app auth, and Entra Id setup
+- Configure OAuth in Azure
+- Set up authentication in Azure
+- Add API permissions in Azure
+- Work with generate service principal, MSAL example, console app auth, and Entra ID setup
 - Work with Azure Ad authentication
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- Azure role-based access control (RBAC) or role assignments (use `azure-rbac`)
-- Key Vault secrets (use `azure-keyvault-expiration-audit`)
-- General Azure resource security guidance
 
 ## What it provides
 
@@ -52,9 +48,9 @@ The Entra App Registration skill provides GitHub Copilot with specialized knowle
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "How do I create an app registration in Azure?"
 - "Register an Microsoft Entra ID app for my web application"

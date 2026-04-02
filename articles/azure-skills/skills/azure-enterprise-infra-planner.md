@@ -31,18 +31,10 @@ Use the **Azure Enterprise Infrastructure Planner** skill when you need to:
 
 - Plan Azure infrastructure
 - Work with architect Azure landing zone
-- Design hub-spoke network
+- Design hub-spoke network in Azure
 - Plan multi-region Dr topology
 - Set up VNets firewalls and private endpoints
 - Subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem about clouds
-- Write a Python script to parse CSV files
 
 ## What it provides
 
@@ -51,9 +43,9 @@ The Azure Enterprise Infrastructure Planner skill provides GitHub Copilot with s
 
 
 
-## Example prompts
+## Example triggers
 
-Try these prompts with GitHub Copilot:
+Try these prompts with GitHub Copilot to activate this skill:
 
 - "Deploy a geo-redundant backup solution for on-premises SQL servers using Azure Backup, configure encryption-at-rest, and automate monthly DR tests."
 - "Deploy 3-tier architecture with hardened OS images, virtual machine (VM) backups scheduled daily, and application-level redundancy for the business logic tier."

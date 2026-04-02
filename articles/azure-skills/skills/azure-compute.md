@@ -30,28 +30,12 @@ Azure virtual machine (VM) and Virtual machine scale set (virtual machine scale 
 Use the **Azure Compute** skill when you need to:
 
 - Work with Azure VM and Virtual machine scale set (VMSS)
-- Scale set
-- Recommend
-- Compare
+- Scale set in Azure
 - Work with server, website, burstable, and lightweight
-- Work with VM family and workload
-- Learning
-- Simulation
-- Work with dev/test, backend, autoscale, and load balancer
-- Work with Flexible orchestration, Uniform orchestration, and cost estimate
-- Connect
-- Refused
-- Work with Linux, black screen, reset password, and reach VM
-- Work with port 3389
-- Troubleshoot
-
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
+- Work with VM family, workload, dev/test, and backend
+- Work with autoscale, load balancer, Flexible orchestration, and Uniform orchestration
+- Work with cost estimate, Linux, black screen, and reset password
+- Work with reach VM and port 3389
 
 ## What it provides
 

@@ -29,15 +29,15 @@ Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. G
 
 Use the **`azure-upgrade`** skill when you need to:
 
-- upgrade Consumption to Flex Consumption
-- upgrade Azure Functions plan
-- migrate hosting plan
-- upgrade Functions Sku
-- move to Flex Consumption
-- upgrade Azure service tier
-- change hosting plan
-- upgrade function app plan
-- migrate App Service to Container Apps
+- Upgrade Consumption to Flex Consumption
+- Upgrade Azure Functions plan
+- Migrate hosting plan
+- Upgrade Functions Sku
+- Move to Flex Consumption
+- Upgrade Azure service tier
+- Work with change hosting plan
+- Upgrade function app plan
+- Migrate App Service to Container Apps
 
 ### When NOT to use this skill
 
@@ -45,12 +45,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-upgrade` skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
-
 
 
 

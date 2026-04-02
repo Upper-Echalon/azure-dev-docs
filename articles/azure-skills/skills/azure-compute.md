@@ -29,34 +29,21 @@ Azure virtual machine (VM) and Virtual machine scale set (virtual machine scale 
 
 Use the **`azure-compute`** skill when you need to:
 
-- Azure VM
-- Vmss
-- scale set
-- recommend
-- compare
-- server
-- website
-- burstable
-- lightweight
-- VM family
-- workload
-- learning
-- simulation
-- dev/test
-- backend
-- autoscale
-- load balancer
-- Flexible orchestration
-- Uniform orchestration
-- cost estimate
-- connect
-- refused
-- Linux
-- black screen
-- reset password
-- reach VM
-- port 3389
-- troubleshoot
+- Work with Azure VM and Vmss
+- Scale set
+- Recommend
+- Compare
+- Work with server, website, burstable, and lightweight
+- Work with VM family and workload
+- Learning
+- Simulation
+- Work with dev/test, backend, autoscale, and load balancer
+- Work with Flexible orchestration, Uniform orchestration, and cost estimate
+- Connect
+- Refused
+- Work with Linux, black screen, reset password, and reach VM
+- Work with port 3389
+- Troubleshoot
 
 ### When NOT to use this skill
 
@@ -64,12 +51,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-compute` skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
-
 
 
 

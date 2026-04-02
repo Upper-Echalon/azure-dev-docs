@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 
 
-**Skill:** `azure-AI` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-AI)
+**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-AI)
 
 ## Prerequisites
 
@@ -27,17 +27,12 @@ ms.service: azure-mcp-server
 
 ## When to use this skill
 
-Use the **azure-AI** skill when you need to:
+Use the **`azure-ai`** skill when you need to:
 
-- AI Search
-- query search
-- vector search
-- hybrid search
-- semantic search
-- speech-to-text
-- text-to-speech
-- transcribe
-- convert text to speech
+- Work with AI Search
+- Query search
+- Work with vector search, hybrid search, semantic search, and speech-to-text
+- Work with text-to-speech, transcribe, and convert text to speech
 
 ### When NOT to use this skill
 
@@ -45,11 +40,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
-The azure-AI skill provides GitHub Copilot with specialized knowledge about azure-AI services and workflows in Azure.
+The `azure-ai` skill provides GitHub Copilot with specialized knowledge about `azure-ai` services and workflows in Azure.
 
 ### Azure services knowledge
 
@@ -59,7 +54,6 @@ The azure-AI skill provides GitHub Copilot with specialized knowledge about azur
 | Speech | Speech-to-text, text-to-speech |
 | OpenAI | GPT models, embeddings, DALL-E |
 | Document Intelligence | Form extraction, OCR |
-
 
 
 

@@ -29,37 +29,31 @@ Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfile
 
 Use the **`azure-prepare`** skill when you need to:
 
-- create app
-- build web app
-- create API
-- create serverless Http API
-- create frontend
-- create back end
-- build a service
-- modernize application
-- update application
-- add authentication
-- add caching
-- host on Azure
-- create and deploy
-- deploy to Azure
-- deploy to Azure using Terraform
-- deploy to Azure App Service
-- deploy to Azure App Service using Terraform
-- deploy to Azure Container Apps
-- deploy to Azure Container Apps using Terraform
-- generate Terraform
-- generate Bicep
-- function app
-- timer trigger
-- service bus trigger
-- event-driven function
-- containerized Node.js app
-- social media app
-- static portfolio website
-- todo list with frontend and API
-- prepare my Azure application to use Key Vault
-- managed identity
+- Create app
+- Build web app
+- Create API
+- Create serverless Http API
+- Create frontend
+- Create back end
+- Build a service
+- Work with modernize application
+- Update application
+- Add authentication
+- Add caching
+- Work with host on Azure
+- Create and deploy
+- Deploy to Azure
+- Deploy to Azure using Terraform
+- Deploy to Azure App Service
+- Deploy to Azure App Service using Terraform
+- Deploy to Azure Container Apps
+- Deploy to Azure Container Apps using Terraform
+- Work with generate Terraform, generate Bicep, function app, and timer trigger
+- Work with service bus trigger, event-driven function, containerized Node.js app, and social media app
+- Work with static portfolio website
+- Todo list with frontend and API
+- Prepare my Azure application to use Key Vault
+- Work with managed identity
 
 ### When NOT to use this skill
 
@@ -67,12 +61,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-prepare` skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
-
 
 
 

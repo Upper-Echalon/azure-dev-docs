@@ -29,17 +29,11 @@ Execute Azure deployments for ALREADY-PREPARED applications that have existing .
 
 Use the **`azure-deploy`** skill when you need to:
 
-- run azd up
-- run azd deploy
-- execute deployment
-- push to production
-- push to cloud
-- go live
-- ship it
-- bicep deploy
-- terraform apply
-- publish to Azure
-- launch on Azure
+- Run azd up
+- Run azd deploy
+- Execute deployment
+- Work with push to production, push to cloud, go live, and ship it
+- Work with bicep deploy, terraform apply, publish to Azure, and launch on Azure
 
 ### When NOT to use this skill
 
@@ -47,12 +41,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-deploy` skill provides GitHub Copilot with specialized knowledge. Execute Azure deployments for ALREADY-PREPARED applications that have existing . azure/deployment-plan.
-
 
 
 

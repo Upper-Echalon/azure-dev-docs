@@ -29,41 +29,17 @@ Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Ser
 
 Use the **`azure-messaging`** skill when you need to:
 
-- event hub SDK error
-- service bus SDK issue
-- messaging connection failure
-- Amqp error
-- event processor host issue
-- message lock lost
-- message lock expired
-- lock renewal
-- lock renewal batch
-- send timeout
-- receiver disconnected
-- SDK troubleshooting
-- azure messaging SDK
-- event hub consumer
-- service bus queue issue
-- topic subscription error
-- enable logging event hub
-- service bus logging
-- eventhub python
-- servicebus java
-- eventhub javascript
-- servicebus dotnet
-- event hub checkpoint
-- event hub not receiving messages
-- service bus dead letter
-- batch processing lock
-- session lock expired
-- idle timeout
-- connection inactive
-- link detach
-- slow reconnect
-- session error
-- duplicate events
-- offset reset
-- receive batch
+- Work with event hub SDK error, service bus SDK issue, messaging connection failure, and Amqp error
+- Work with event processor host issue, message lock lost, message lock expired, and lock renewal
+- Work with lock renewal batch, send timeout, receiver disconnected, and SDK troubleshooting
+- Work with azure messaging SDK, event hub consumer, service bus queue issue, and topic subscription error
+- Enable logging event hub
+- Work with service bus logging, eventhub python, servicebus java, and eventhub javascript
+- Work with servicebus dotnet and event hub checkpoint
+- Event hub not receiving messages
+- Work with service bus dead letter, batch processing lock, session lock expired, and idle timeout
+- Work with connection inactive, link detach, slow reconnect, and session error
+- Work with duplicate events, offset reset, and receive batch
 
 ### When NOT to use this skill
 
@@ -71,12 +47,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-messaging` skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
-
 
 ### Related tools
 

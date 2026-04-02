@@ -29,21 +29,9 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 
 Use the **appinsights-instrumentation** skill when you need to:
 
-- how to instrument app
-- App Insights SDK
-- telemetry patterns
-- what is App Insights
-- Application Insights guidance
-- instrumentation examples
-- Apm best practices
+- Work with how to instrument app, App Insights SDK, telemetry patterns, and what is App Insights
+- Work with Application Insights guidance, instrumentation examples, and Apm best practices
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Explain quantum computing
 
 ## What it provides
 
@@ -52,21 +40,6 @@ The appinsights-instrumentation skill provides GitHub Copilot with specialized k
 
 
 
-
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Instrument my webapp to send telemetry to App Insights"
-- "How do I instrument my app with Azure App Insights?"
-- "Add AppInsights instrumentation to my web application"
-- "Add App Insights instrumentation to my Node.js app"
-- "Configure Application Insights for my Python webapp"
-- "Set up telemetry monitoring in Azure"
-- "Instrument my application to send data to App Insights"
-- "Add observability to my Azure web application"
-- "How to enable App Insights auto-instrumentation?"
-- "Configure telemetry for my Azure App Service"
 
 
 ## Related content

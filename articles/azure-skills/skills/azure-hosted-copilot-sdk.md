@@ -29,29 +29,15 @@ Build and deploy GitHub Copilot SDK apps to Azure.
 
 Use the **`azure-hosted-copilot-sdk`** skill when you need to:
 
-- build copilot app
-- create copilot app
-- copilot SDK
-- @github/copilot-sdk
-- scaffold copilot project
-- copilot-powered app
-- deploy copilot app
-- host on azure
-- azure model
-- Byom
-- bring your own model
-- use my own model
-- azure openai model
-- DefaultAzureCredential
-- self-hosted model
-- copilot SDK service
-- chat app with copilot
-- copilot-sdk-service template
-- azd init copilot
-- CopilotClient
-- createSession
-- sendAndWait
-- GitHub Models API
+- Build copilot app
+- Create copilot app
+- Work with copilot SDK, @github/copilot-sdk, scaffold copilot project, and copilot-powered app
+- Deploy copilot app
+- Work with host on azure, azure model, Byom, and bring your own model
+- Use my own model
+- Work with azure openai model, DefaultAzureCredential, self-hosted model, and copilot SDK service
+- Work with chat app with copilot, copilot-sdk-service template, azd init copilot, and CopilotClient
+- Work with createSession, sendAndWait, and GitHub Models API
 
 ### When NOT to use this skill
 
@@ -59,12 +45,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-hosted-copilot-sdk` skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
-
 
 
 

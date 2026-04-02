@@ -29,18 +29,17 @@ Plan, create, and configure production-ready Azure Kubernetes Service (Azure Kub
 
 Use the **`azure-kubernetes`** skill when you need to:
 
-- create AKS environment
-- provision AKS environment
-- enable AKS observability
-- design AKS networking
-- choose AKS Sku
-- secure AKS
+- Create AKS environment
+- Provision AKS environment
+- Enable AKS observability
+- Design AKS networking
+- Choose AKS Sku
+- Secure AKS
 
 
 ## What it provides
 
 The `azure-kubernetes` skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure CNI Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
-
 
 ### Related tools
 

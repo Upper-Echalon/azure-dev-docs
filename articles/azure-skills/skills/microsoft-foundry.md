@@ -29,55 +29,41 @@ Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, Azure Cont
 
 Use the **microsoft-foundry** skill when you need to:
 
-- deploy agent to Foundry
-- hosted agent
-- create agent
-- invoke agent
-- evaluate agent
-- run batch eval
-- optimize prompt
-- improve prompt
-- prompt optimization
-- prompt optimizer
-- improve agent instructions
-- optimize agent instructions
-- optimize system prompt
-- deploy model
-- Foundry project
-- role-based access control (RBAC)
-- role assignment
-- permissions
-- quota
-- capacity
-- region
-- troubleshoot agent
-- deployment failure
-- create dataset from traces
-- dataset versioning
-- eval trending
-- create AI Services
-- Cognitive Services
-- create Foundry resource
-- provision resource
-- knowledge index
-- agent monitoring
-- customize deployment
-- onboard
-- availability
+- Deploy agent to Foundry
+- Work with hosted agent
+- Create agent
+- Work with invoke agent
+- Evaluate agent
+- Run batch eval
+- Optimize prompt
+- Work with improve prompt, prompt optimization, prompt optimizer, and improve agent instructions
+- Optimize agent instructions
+- Optimize system prompt
+- Deploy model
+- Work with Foundry project, role-based access control (RBAC), role assignment, and permissions
+- Work with quota, capacity, and region
+- Troubleshoot agent
+- Work with deployment failure
+- Create dataset from traces
+- Work with dataset versioning and eval trending
+- Create AI Services
+- Work with Cognitive Services
+- Create Foundry resource
+- Provision resource
+- Work with knowledge index, agent monitoring, customize deployment, and onboard
+- Work with availability
 
 ### When NOT to use this skill
 
 Don't use this skill for:
 
-- Azure Functions
-- App Service
-- general Azure deploy (use `azure-deploy`)
-- general Azure prep (use `azure-prepare`)
+- Work with Azure Functions and App Service
+- General Azure deploy (use `azure-deploy`)
+- General Azure prep (use `azure-prepare`)
 
 ## What it provides
 
 The microsoft-foundry skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, ACR push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
-
 
 
 

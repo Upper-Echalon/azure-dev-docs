@@ -29,14 +29,14 @@ Assess and migrate cross-cloud workloads to Azure with migration reports and cod
 
 Use the **`azure-cloud-migrate`** skill when you need to:
 
-- migrate Lambda to Azure Functions
-- migrate Aws to Azure
-- Lambda migration assessment
-- convert Aws serverless to Azure
-- migration readiness report
-- migrate from Aws
-- migrate from Gcp
-- cross-cloud migration
+- Migrate Lambda to Azure Functions
+- Migrate Aws to Azure
+- Work with Lambda migration assessment
+- Convert Aws serverless to Azure
+- Work with migration readiness report
+- Migrate from Aws
+- Migrate from Gcp
+- Work with cross-cloud migration
 
 ### When NOT to use this skill
 
@@ -44,12 +44,11 @@ Don't use this skill for:
 
 - What is the weather today?
 - Help me write a poem
-- Explain quantum computing
+- Work with Explain quantum computing
 
 ## What it provides
 
 The `azure-cloud-migrate` skill provides GitHub Copilot with specialized knowledge. Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
-
 
 
 

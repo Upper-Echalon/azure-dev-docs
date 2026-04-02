@@ -29,12 +29,12 @@ Architect and provision enterprise Azure infrastructure from workload descriptio
 
 Use the **`azure-enterprise-infra-planner`** skill when you need to:
 
-- plan Azure infrastructure
-- architect Azure landing zone
-- design hub-spoke network
-- plan multi-region DR topology
-- set up VNets firewalls and private endpoints
-- subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
+- Plan Azure infrastructure
+- Work with architect Azure landing zone
+- Design hub-spoke network
+- Plan multi-region DR topology
+- Set up VNets firewalls and private endpoints
+- Subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
 
 ### When NOT to use this skill
 
@@ -47,7 +47,6 @@ Don't use this skill for:
 ## What it provides
 
 The `azure-enterprise-infra-planner` skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with WAF alignment. Generates Bicep or Terraform directly (no azd).
-
 
 
 

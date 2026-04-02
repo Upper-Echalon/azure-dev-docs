@@ -29,24 +29,17 @@ Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table
 
 Use the **`azure-storage`** skill when you need to:
 
-- blob storage
-- file shares
-- queue storage
-- table storage
-- data lake
-- upload files
-- download blobs
-- storage accounts
-- access tiers
-- lifecycle management
+- Work with blob storage, file shares, queue storage, and table storage
+- Work with data lake
+- Upload files
+- Work with download blobs, storage accounts, access tiers, and lifecycle management
 
 ### When NOT to use this skill
 
 Don't use this skill for:
 
-- SQL databases
-- Cosmos DB (use `azure-prepare`)
-- messaging with Event Hubs or Service Bus (use `azure-messaging`)
+- Work with SQL databases and Cosmos DB (use `azure-prepare`)
+- Messaging with Event Hubs or Service Bus (use `azure-messaging`)
 
 ## What it provides
 
@@ -61,7 +54,6 @@ The `azure-storage` skill provides GitHub Copilot with specialized knowledge. Az
 | Queue Storage | Async messaging, task queues |
 | Table Storage | NoSQL key-value (consider Cosmos DB) |
 | Data Lake | Big data analytics, hierarchical namespace |
-
 
 
 

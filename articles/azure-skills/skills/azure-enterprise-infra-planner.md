@@ -32,7 +32,7 @@ Use the **Azure Enterprise Infrastructure Planner** skill when you need to:
 - Plan Azure infrastructure
 - Work with architect Azure landing zone
 - Design hub-spoke network
-- Plan multi-region DR topology
+- Plan multi-region Dr topology
 - Set up VNets firewalls and private endpoints
 - Subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
 

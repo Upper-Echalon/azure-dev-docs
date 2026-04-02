@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes
-description: Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, sku selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
+description: Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -33,7 +33,7 @@ Use the **Azure Kubernetes** skill when you need to:
 - Provision AKS environment
 - Enable AKS observability
 - Design AKS networking
-- Choose AKS Sku
+- Choose AKS SKU
 - Secure AKS
 
 

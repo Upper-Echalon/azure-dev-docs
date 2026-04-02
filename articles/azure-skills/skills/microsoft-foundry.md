@@ -46,7 +46,7 @@ Use the **Microsoft Foundry** skill when you need to:
 - Work with deployment failure
 - Create dataset from traces
 - Work with dataset versioning and eval trending
-- Create AI Services
+- Create Ai Services
 - Work with Cognitive Services
 - Create Foundry resource
 - Provision resource

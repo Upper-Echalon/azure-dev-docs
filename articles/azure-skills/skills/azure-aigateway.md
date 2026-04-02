@@ -30,13 +30,13 @@ Configure Azure API Management as an AI Gateway for AI models, Model Context Pro
 Use the **Azure AI Gateway** skill when you need to:
 
 - Work with semantic caching, token limit, content safety, and load balancing
-- Work with AI model governance, MCP rate limiting, and jailbreak detection
+- Work with Ai model governance, MCP rate limiting, and jailbreak detection
 - Add Azure OpenAI backend
-- Add AI Foundry model
-- Test AI gateway
+- Add Ai Foundry model
+- Test Ai gateway
 - Work with Llm policies
-- Configure AI backend
-- Work with token metrics, AI cost control, convert API to MCP, and import OpenAPI to gateway
+- Configure Ai backend
+- Work with token metrics, Ai cost control, convert API to MCP, and import OpenAPI to gateway
 
 ### When NOT to use this skill
 

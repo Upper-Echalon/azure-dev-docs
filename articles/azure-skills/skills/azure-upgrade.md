@@ -32,7 +32,7 @@ Use the **Azure Upgrade** skill when you need to:
 - Upgrade Consumption to Flex Consumption
 - Upgrade Azure Functions plan
 - Migrate hosting plan
-- Upgrade Functions Sku
+- Upgrade Functions SKU
 - Move to Flex Consumption
 - Upgrade Azure service tier
 - Work with change hosting plan

@@ -38,7 +38,7 @@ Use the **Azure Storage** skill when you need to:
 
 Don't use this skill for:
 
-- Work with SQL databases and Cosmos DB (use `azure-prepare`)
+- Work with SQL databases and Cosmos Db (use `azure-prepare`)
 - Messaging with Event Hubs or Service Bus (use `azure-messaging`)
 
 ## What it provides

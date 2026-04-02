@@ -32,7 +32,7 @@ Use the **Azure Prepare** skill when you need to:
 - Create app
 - Build web app
 - Create API
-- Create serverless Http API
+- Create serverless HTTP API
 - Create frontend
 - Create back end
 - Build a service

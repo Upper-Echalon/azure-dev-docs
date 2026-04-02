@@ -35,23 +35,14 @@ Use the **Azure Cost Optimization** skill when you need to:
 
 - Deploying resources in Azure
 - Provisioning infrastructure in Azure
-- Work with diagnostics and security audits
-- Or estimating costs for new resources not yet deployed
-- Work with Azure costs, Azure spending, Azure bill, and cost breakdown
-- Work with cost by service and cost by resource
-- How much am I spending
-- Work with show my bill, monthly cost summary, cost trends, and top cost drivers
-- Work with actual cost, amortized cost, forecast spending, and projected costs
-- Work with estimate bill, future costs, budget forecast, and end of month costs
-- How much will I spend
+- Work with diagnostics, security audits, Azure costs, and Azure spending
+- Work with Azure bill, cost breakdown, cost by service, and cost by resource
+- Work with monthly cost summary, cost trends, top cost drivers, and actual cost
+- Work with amortized cost, forecast spending, projected costs, and estimate bill
+- Work with future costs, budget forecast, and end of month costs
 - Optimize costs in Azure
 - Work with reduce spending
 - Find cost savings in Azure
-- Work with orphaned resources, rightsize VMs, cost analysis, and reduce waste
-- Work with unused resources
-- Optimize Redis costs in Azure
-- Work with cost by tag, cost by resource group, AKS cost analysis add-on, and namespace cost
-- Work with cost spike, anomaly, budget alert, and AKS cost visibility
 
 ## What it provides
 

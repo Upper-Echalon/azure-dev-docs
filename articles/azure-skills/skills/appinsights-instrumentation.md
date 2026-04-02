@@ -30,8 +30,8 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 
 Use the **App Insights Instrumentation** skill when you need to:
 
-- Work with how to instrument app, App Insights SDK, telemetry patterns, and what is App Insights
-- Work with Application Insights guidance, instrumentation examples, and Apm best practices
+- Work with App Insights SDK, telemetry patterns, Application Insights guidance, and instrumentation examples
+- Work with Apm best practices
 
 ## What it provides
 

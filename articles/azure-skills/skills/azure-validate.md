@@ -39,12 +39,6 @@ Use the **Azure Validate** skill when you need to:
 - Test before deploying in Azure
 - Troubleshoot deployment errors in Azure
 - Validate Azure Functions
-- Validate function app in Azure
-- Validate serverless deployment in Azure
-- Verify RBAC roles in Azure
-- Check role assignments in Azure
-- Review managed identity permissions
-- Work with what-if analysis
 
 ## What it provides
 

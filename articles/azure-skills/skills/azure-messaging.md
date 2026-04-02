@@ -39,7 +39,6 @@ Use the **Azure Messaging** skill when you need to:
 - Event hub not receiving messages
 - Work with service bus dead letter, batch processing lock, session lock expired, and idle timeout
 - Work with connection inactive, link detach, slow reconnect, and session error
-- Work with duplicate events, offset reset, and receive batch
 
 ## What it provides
 

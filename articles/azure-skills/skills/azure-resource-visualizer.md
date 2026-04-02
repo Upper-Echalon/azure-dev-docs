@@ -35,7 +35,7 @@ Use the **Azure Resource Visualizer** skill when you need to:
 
 - Create architecture diagram in Azure
 - Visualize Azure resources
-- Work with show resource relationships and generate Mermaid diagram
+- Work with generate Mermaid diagram
 - Analyze resource group in Azure
 - Work with diagram my resources, architecture visualization, resource topology, and map Azure infrastructure
 

@@ -40,21 +40,6 @@ Use the **Azure Prepare** skill when you need to:
 - Work with modernize application
 - Update application in Azure
 - Add authentication in Azure
-- Add caching in Azure
-- Work with host on Azure
-- Create and deploy in Azure
-- Deploy to Azure
-- Deploy to Azure using Terraform
-- Deploy to Azure App Service
-- Deploy to Azure App Service using Terraform
-- Deploy to Azure Container Apps
-- Deploy to Azure Container Apps using Terraform
-- Work with generate Terraform, generate Bicep, function app, and timer trigger
-- Work with service bus trigger, event-driven function, containerized Node.js app, and social media app
-- Work with static portfolio website
-- Todo list with front end and API
-- Prepare my Azure application to use Key Vault
-- Work with managed identity
 
 ## What it provides
 

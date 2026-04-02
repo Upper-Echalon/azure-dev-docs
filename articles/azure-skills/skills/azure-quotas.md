@@ -42,7 +42,6 @@ Use the **Azure Quotas** skill when you need to:
 - Work with regional availability
 - Provisioning limits in Azure
 - Work with vCPU limit
-- How many vCPUs available in my subscription
 
 ## What it provides
 

@@ -29,12 +29,9 @@ Helps users find the right Azure RBAC role for an identity with least privilege 
 
 Use the **Azure RBAC** skill when you need to:
 
-- Work with bicep for role assignment
-- What role should I assign
-- Work with least privilege role, RBAC role for, role to read blobs, and role for managed identity
-- Work with custom role definition
+- Work with bicep for role assignment, least privilege role, RBAC role for, and role to read blobs
+- Work with role for managed identity and custom role definition
 - Assign role to identity
-- What role do I need to grant access
 - Work with permissions to assign roles
 
 ## What it provides

@@ -40,19 +40,6 @@ Use the **Microsoft Foundry** skill when you need to:
 - Work with improve prompt, prompt optimization, prompt optimizer, and improve agent instructions
 - Optimize agent instructions in Azure
 - Optimize system prompt in Azure
-- Deploy model in Azure
-- Work with Foundry project, role-based access control (RBAC), role assignment, and permissions
-- Work with quota, capacity, and region
-- Troubleshoot agent in Azure
-- Work with deployment failure
-- Create dataset from traces
-- Work with dataset versioning and eval trending
-- Create AI Services in Azure
-- Work with Cognitive Services
-- Create Foundry resource in Azure
-- Provision resource in Azure
-- Work with knowledge index, agent monitoring, customize deployment, and onboard
-- Work with availability
 
 ## What it provides
 

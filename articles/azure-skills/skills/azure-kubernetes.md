@@ -61,9 +61,9 @@ The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. P
 - **Azure CNI powered by Cilium** (recommended): eBPF-based for high-performance packet processing, network policies, and observability
 - **Static Egress Gateway** for stable, predictable outbound IPs
 - For restricted egress: UDR + Azure Firewall or NVA
-- **App Routing addon with Gateway API** &#8212; recommended default for HTTP/HTTPS workloads
+- **App Routing addon with Gateway API** — recommended default for HTTP/HTTPS workloads
 - **Istio service mesh with Gateway API** - for advanced traffic management, mTLS, canary releases
-- **Application Gateway for Containers** &#8212; for L7 load balancing with Web Application Firewall (WAF) integration
+- **Application Gateway for Containers** — for L7 load balancing with Web Application Firewall (WAF) integration
 - Enable **LocalDNS** on all node pools for reliable, performant DNS resolution
 - Use **Microsoft Entra ID** everywhere (control plane, Workload Identity for pods, node access). Avoid static credentials.
 - Azure Key Vault through **Secrets Store CSI Driver** for secrets
@@ -84,7 +84,7 @@ The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. P
 - **Dedicated system node pool**: At least 2 nodes, tainted for system workloads only (`CriticalAddonsOnly`)
 - Enable **Node Auto Provisioning (NAP)** on all pools for cost savings and responsive scaling
 - Use **latest generation SKUs (v5/v6)** for host-level optimizations
-- **Avoid B-series VMs** &#8212; burstable SKUs cause performance/reliability issues
+- **Avoid B-series VMs** — burstable SKUs cause performance/reliability issues
 - Use SKUs with **at least 4 vCPUs** for production workloads
 - Set **topology spread constraints** to distribute pods across hosts/zones per SLO
 - Deploy across **3 Availability Zones** (`--zones 1 2 3`)

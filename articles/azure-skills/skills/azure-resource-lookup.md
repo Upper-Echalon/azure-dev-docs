@@ -1,6 +1,6 @@
 ---
 title: Azure Resource Lookup
-description: List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
+description: List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure Resource Lookup
 
-List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
+List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
 **Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-resource-lookup)
 
@@ -45,13 +45,13 @@ Use the **Azure Resource Lookup** skill when you need to:
 
 ## What it provides
 
-The Azure Resource Lookup skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
+The Azure Resource Lookup skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
 ### Related tools
 
 | Tool | Command | Purpose |
 |------|---------|---------|
-| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool &#8212; generate ARG queries from user intent |
+| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool — generate ARG queries from user intent |
 | `mcp_azure_mcp_subscription_list` | `List available subscriptions` | Discover subscription scope before querying |
 | `mcp_azure_mcp_group_list` | `List resource groups` | Narrow query scope |
 

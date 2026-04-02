@@ -1,6 +1,6 @@
 ---
 title: Azure Deploy
-description: Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.
+description: Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure Deploy
 
-Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.
+Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
 **Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-deploy)
 
@@ -37,7 +37,7 @@ Use the **Azure Deploy** skill when you need to:
 
 ## What it provides
 
-The Azure Deploy skill provides GitHub Copilot with specialized knowledge. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.
+The Azure Deploy skill provides GitHub Copilot with specialized knowledge. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
 
 

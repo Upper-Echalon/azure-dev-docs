@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure Compliance
 
-Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
+Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
 **Skill:** `azure-compliance` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-compliance)
 
@@ -34,13 +34,13 @@ Run Azure compliance and security audits with azqr plus Key Vault expiration che
 Use the **Azure Compliance** skill when you need to:
 
 - Work with compliance scan and security audit
-- Before running azqr (compliance cli tool)
+- Before running `azqr` (compliance cli tool)
 - Work with Azure best practices, Key Vault expiration check, expired certificates, and expiring secrets
 - Work with orphaned resources and compliance assessment
 
 ## What it provides
 
-The Azure Compliance skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
+The Azure Compliance skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
 
 
@@ -49,7 +49,7 @@ The Azure Compliance skill provides GitHub Copilot with specialized knowledge. R
 
 Try these prompts with GitHub Copilot to activate this skill:
 
-- "Run azqr to check Azure compliance"
+- "Run `azqr` to check Azure compliance"
 - "Check my Azure subscription for compliance issues"
 - "Perform compliance assessment using Azure Quick Review"
 - "Assess my Azure resources against best practices"

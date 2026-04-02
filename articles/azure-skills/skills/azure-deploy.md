@@ -29,8 +29,8 @@ Execute Azure deployments for already-prepared applications that have existing .
 
 Use the **Azure Deploy** skill when you need to:
 
-- Run azd up in Azure
-- Run azd deploy in Azure
+- Run `azd` up in Azure
+- Run `azd` deploy in Azure
 - Execute deployment in Azure
 - Work with push to production, push to cloud, go live, and ship it
 - Work with bicep deploy, terraform apply, publish to Azure, and launch on Azure
@@ -51,7 +51,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Push my deploy to Azure production"
 - "Ship and deploy my Azure app"
 - "Run the Azure deployment now"
-- "Deploy my Azure Functions app to the cloud using azd"
+- "Deploy my Azure Functions app to the cloud using `azd`"
 - "Deploy my serverless function app to Azure"
 - "Deploy Azure Functions to production"
 - "Deploy my app and verify the role-based access control (RBAC) roles are assigned correctly"

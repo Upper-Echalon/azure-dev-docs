@@ -1,6 +1,6 @@
 ---
 title: Azure Compute
-description: Azure VM and VMSS router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
+description: Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -32,7 +32,7 @@ Use the **Azure Compute** skill when you need to:
 - Work with Azure VM and Virtual machine scale set (VMSS)
 - Scale set in Azure
 - Work with server, website, burstable, and lightweight
-- Work with VM family, workload, dev/test, and backend
+- Work with VM family, workload, `dev/test`, and backend
 - Work with autoscale, load balancer, Flexible orchestration, and Uniform orchestration
 - Work with cost estimate, Linux, black screen, and reset password
 - Work with reach VM and port 3389

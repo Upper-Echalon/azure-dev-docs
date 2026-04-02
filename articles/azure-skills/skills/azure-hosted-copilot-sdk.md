@@ -31,13 +31,13 @@ Use the **Azure Hosted Copilot SDK** skill when you need to:
 
 - Build copilot app in Azure
 - Create copilot app in Azure
-- Work with copilot SDK, @github/copilot-SDK, scaffold copilot project, and copilot-powered app
+- Work with copilot SDK, @github/`copilot-SDK`, scaffold copilot project, and copilot-powered app
 - Deploy copilot app in Azure
-- Work with host on azure, azure model, Byom, and bring your own model
+- Work with host on azure, azure model, `Byom`, and bring your own model
 - Use my own model
-- Work with azure openai model, DefaultAzureCredential, self-hosted model, and copilot SDK service
-- Work with chat app with copilot, copilot-SDK-service template, azd init copilot, and CopilotClient
-- Work with createSession, sendAndWait, and GitHub Models API
+- Work with azure openai model, `DefaultAzureCredential`, self-hosted model, and copilot SDK service
+- Work with chat app with copilot, `copilot-SDK`-service template, `azd` init copilot, and `CopilotClient`
+- Work with `createSession`, `sendAndWait`, and GitHub Models API
 
 ## What it provides
 
@@ -56,7 +56,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Build with the GitHub Copilot SDK and host it"
 - "Build a Copilot SDK app with my own Azure model"
 - "Create a copilot app using my Azure OpenAI model"
-- "Set up a copilot service with BYOM and DefaultAzureCredential"
+- "Set up a copilot service with `BYOM` and `DefaultAzureCredential`"
 - "Build a copilot app that uses a self-hosted model on Azure"
 - "Deploy a copilot SDK app with my own endpoint"
 - "Create a copilot app and bring your own model from Azure OpenAI"

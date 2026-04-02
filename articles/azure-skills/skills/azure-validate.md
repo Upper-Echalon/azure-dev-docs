@@ -65,7 +65,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Is my app ready for Azure deployment?"
 - "Validate my Bicep configuration"
 - "Validate my Bicep template before deploying to Azure"
-- "Check my deployment permissions before running azd up"
+- "Check my deployment permissions before running `azd` up"
 - "Verify my Bicep files are valid before provisioning"
 
 

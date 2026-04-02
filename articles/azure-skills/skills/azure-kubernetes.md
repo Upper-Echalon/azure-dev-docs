@@ -93,7 +93,7 @@ The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. P
 - Configure **PodDisruptionBudgets** for all production workloads
 - Use **topology spread constraints** to ensure pod distribution across failure domains
 - Use **Spot node pools** for batch/interruptible workloads (up to 90% savings)
-- **Stop/Start** dev/test clusters: `az aks stop/start`
+- **Stop/Start** `dev/test` clusters: `az aks stop/start`
 - Consider **Reserved Instances** or **Savings Plans** for steady-state workloads
 
 ## Example triggers

@@ -1,6 +1,6 @@
 ---
 title: Entra App Registration
-description: Guides Microsoft Entra id app registration, OAuth 2.0 authentication, and MSAL integration.
+description: Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -34,12 +34,12 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 Use the **Entra App Registration** skill when you need to:
 
 - Create app registration in Azure
-- Work with register Azure Ad app
+- Work with register Microsoft Entra ID app
 - Configure OAuth in Azure
 - Set up authentication in Azure
 - Add API permissions in Azure
 - Work with generate service principal, MSAL example, console app auth, and Entra ID setup
-- Work with Azure Ad authentication
+- Work with Microsoft Entra ID authentication
 
 ## What it provides
 

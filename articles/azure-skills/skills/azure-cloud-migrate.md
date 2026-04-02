@@ -2,7 +2,7 @@
 title: azure-cloud-migrate
 description: Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -50,5 +50,5 @@ The `azure-cloud-migrate` skill provides GitHub Copilot with specialized knowled
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

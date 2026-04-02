@@ -2,7 +2,7 @@
 title: microsoft-foundry
 description: Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, ACR push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -72,5 +72,5 @@ The microsoft-foundry skill provides GitHub Copilot with specialized knowledge. 
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

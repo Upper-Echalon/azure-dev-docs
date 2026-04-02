@@ -2,7 +2,7 @@
 title: azure-kubernetes
 description: Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure CNI Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -53,5 +53,5 @@ The `azure-kubernetes` skill provides GitHub Copilot with specialized knowledge.
 
 ## Related content
 
-- [Azure MCP Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure MCP Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

@@ -2,7 +2,7 @@
 title: azure-enterprise-infra-planner
 description: Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with WAF alignment. Generates Bicep or Terraform directly (no azd).
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -48,5 +48,5 @@ The `azure-enterprise-infra-planner` skill provides GitHub Copilot with speciali
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

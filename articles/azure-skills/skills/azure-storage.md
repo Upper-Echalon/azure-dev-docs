@@ -2,7 +2,7 @@
 title: azure-storage
 description: Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -61,5 +61,5 @@ The `azure-storage` skill provides GitHub Copilot with specialized knowledge. Az
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

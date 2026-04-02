@@ -2,7 +2,7 @@
 title: azure-resource-lookup
 description: List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -60,5 +60,5 @@ The `azure-resource-lookup` skill provides GitHub Copilot with specialized knowl
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

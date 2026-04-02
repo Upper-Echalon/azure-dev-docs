@@ -2,7 +2,7 @@
 title: azure-compute
 description: Azure VM and VMSS router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -57,5 +57,5 @@ The `azure-compute` skill provides GitHub Copilot with specialized knowledge. Az
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

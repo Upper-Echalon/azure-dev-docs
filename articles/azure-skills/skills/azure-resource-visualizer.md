@@ -2,7 +2,7 @@
 title: azure-resource-visualizer
 description: Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -47,5 +47,5 @@ The `azure-resource-visualizer` skill provides GitHub Copilot with specialized k
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

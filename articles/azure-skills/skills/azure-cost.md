@@ -2,7 +2,7 @@
 title: azure-cost
 description: Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste. WHEN: &quot;Azure costs&quot;, &quot;Azure spending&quot;, &quot;Azure bill&quot;, &quot;cost breakdown&quot;, &quot;cost by service&quot;, &quot;cost by resource&quot;, &quot;how much am I spending&quot;, &quot;show my bill&quot;, &quot;monthly cost summary&quot;, &quot;cost trends&quot;, &quot;top cost drivers&quot;, &quot;actual cost&quot;, &quot;amortized cost&quot;, &quot;forecast spending&quot;, &quot;projected costs&quot;, &quot;estimate bill&quot;, &quot;future costs&quot;, &quot;budget forecast&quot;, &quot;end of month costs&quot;, &quot;how much will I spend&quot;, &quot;optimize costs&quot;, &quot;reduce spending&quot;, &quot;find cost savings&quot;, &quot;orphaned resources&quot;, &quot;rightsize VMs&quot;, &quot;cost analysis&quot;, &quot;reduce waste&quot;, &quot;unused resources&quot;, &quot;optimize Redis costs&quot;, &quot;cost by tag&quot;, &quot;cost by resource group&quot;, &quot;AKS cost analysis add-on&quot;, &quot;namespace cost&quot;, &quot;cost spike&quot;, &quot;anomaly&quot;, &quot;budget alert&quot;, &quot;AKS cost visibility&quot;. DO NOT.
 ms.topic: reference
-ms.date: 2026-04-02
+ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
@@ -78,5 +78,5 @@ The `azure-cost` skill provides GitHub Copilot with specialized knowledge. Unifi
 
 ## Related content
 
-- [Azure Model Context Protocol (MCP) Server overview](/azure/copilot/azure-mcp-server)
-- [GitHub Copilot for Azure documentation](/azure/copilot/)
+- [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
+- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

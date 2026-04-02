@@ -13,6 +13,17 @@ ms.custom: build-2025
 
 Azure AI Tools is a collection of AI-powered developer tools that help you manage, deploy, and troubleshoot Azure resources using natural language. The toolset includes GitHub Copilot for Azure, the Azure MCP Server, and Azure Skills — which work together across IDEs, terminals, and CI/CD pipelines.
 
+## Why Azure AI Tools?
+
+Building on Azure typically requires navigating portal UIs, reading documentation across multiple services, writing infrastructure-as-code templates, and debugging deployment issues — all before writing your first line of application code. This friction slows teams down and creates a steep learning curve, especially for developers new to Azure.
+
+Azure AI Tools eliminates this friction by bringing Azure directly into your development workflow:
+
+- **Reduce context switching** — Ask questions about Azure services, manage resources, and deploy applications without leaving your IDE or terminal.
+- **Accelerate onboarding** — New team members can discover and use Azure services through natural language instead of memorizing CLI commands, portal navigation, or ARM/Bicep syntax.
+- **Enforce best practices automatically** — Azure Skills embed guardrails and proven patterns into every workflow, so deployments follow organizational standards without manual review checklists.
+- **Work where you already are** — Whether you use VS Code, Visual Studio, Cursor, IntelliJ, or a CLI, Azure AI Tools meets you in your existing environment.
+
 ## Key components
 
 | Component | What it does | Best for | Learn more |

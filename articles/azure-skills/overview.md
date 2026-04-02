@@ -13,6 +13,10 @@ ms.date: 03/16/2026
 
 # What is Azure Skills?
 
+## Azure Skills in Visual Studio Code
+
+The following demonstration shows Azure Skills in action inside Visual Studio Code. A developer uses natural language in the Copilot chat panel to interact with Azure services — no portal, no CLI commands, no context switching.
+
 :::image type="content" source="media/azure-skills-visual-studio-code-demonstration.gif" alt-text="Animated demonstration of Azure Skills running in Visual Studio Code, showing a developer using natural language to interact with Azure services through the Copilot chat panel." lightbox="media/azure-skills-visual-studio-code-demonstration.gif":::
 
 **Azure Skills** is a plugin that connects GitHub Copilot CLI or Claude Code to your Azure account.It gives your AI assistant the ability to manage resources, deploy applications, and monitor services directly from your development environment.

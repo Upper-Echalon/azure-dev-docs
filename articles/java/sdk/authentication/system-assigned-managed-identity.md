@@ -2,7 +2,7 @@
 title: Authenticate Azure-hosted Java apps by using a system-assigned managed identity
 titleSuffix: Azure SDK for Java
 description: Learn how to authenticate Azure-hosted Java apps to Azure resources by using a system-assigned managed identity.
-ms.date: 02/24/2026
+ms.date: 04/02/2026
 ms.topic: how-to
 ms.custom: devx-track-java, devx-track-azurecli
 author: bmitchell287
@@ -26,11 +26,9 @@ In the following sections, you learn:
 
 The following sections describe the steps to enable and use a system-assigned managed identity for an Azure-hosted app. If you need to use a user-assigned managed identity, see [Authenticate Azure-hosted Java apps to Azure resources by using a user-assigned managed identity](user-assigned-managed-identity.md).
 
-[!INCLUDE [Language agnostic system assigned procedures](../../../includes/authentication/system-assigned-managed-identity.md)]
+[!INCLUDE [Language-agnostic system-assigned procedures](../../../includes/authentication/system-assigned-managed-identity.md)]
 
-## Authenticate to Azure services from your app
-
-The [Azure Identity library](/java/api/com.azure.identity) provides various credentials as implementations of `TokenCredential`. Each implementation supports different scenarios and Microsoft Entra authentication flows. For Azure-hosted apps, use `DefaultAzureCredential`, which automatically discovers managed identity credentials when running in Azure.
+[!INCLUDE [Java implement-managed-identity-concepts](includes/implement-managed-identity-concepts.md)]
 
 ### Implement the code
 
@@ -43,40 +41,34 @@ Add the `azure-identity` dependency to your `pom.xml` file:
 </dependency>
 ```
 
-You access Azure services by using specialized client classes from the Azure SDK client libraries. The following code examples show you how to configure the credential for system-assigned managed identity authentication.
+Azure services are accessed using specialized client classes from the various Azure SDK client libraries. The following code example demonstrates how to create a credential instance and use it with an Azure SDK service client. In your application code, complete the following steps to authenticate using a managed identity:
 
-#### Use DefaultAzureCredential
+1. Import the `DefaultAzureCredentialBuilder`, `ManagedIdentityCredentialBuilder`, and `TokenCredential` classes.
+1. Pass an appropriate `TokenCredential` instance to the client:
+    - Use `DefaultAzureCredential` when running locally
+    - Use `ManagedIdentityCredential` when your app is running in Azure
 
-Use `DefaultAzureCredential` for Azure-hosted apps because it automatically discovers managed identity credentials when running in Azure. For system-assigned managed identities, no extra configuration is required.
+The following example demonstrates authenticating a `SecretClient` using a system-assigned managed identity:
 
 ```java
-import com.azure.identity.DefaultAzureCredential;
+import com.azure.core.credential.TokenCredential;
 import com.azure.identity.DefaultAzureCredentialBuilder;
-import com.azure.security.keyvault.secrets.SecretClient;
-import com.azure.security.keyvault.secrets.SecretClientBuilder;
-
-// DefaultAzureCredential automatically discovers managed identity when running in Azure
-DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
-
-// Azure SDK client builders accept the credential as a parameter
-SecretClient client = new SecretClientBuilder()
-    .vaultUrl("https://<your-key-vault-name>.vault.azure.net")
-    .credential(credential)
-    .buildClient();
-```
-
-#### Use ManagedIdentityCredential
-
-If you want to explicitly use the managed identity credential and avoid the credential chain lookup in `DefaultAzureCredential`, use `ManagedIdentityCredential` directly. For system-assigned managed identities, don't specify a client ID:
-
-```java
-import com.azure.identity.ManagedIdentityCredential;
 import com.azure.identity.ManagedIdentityCredentialBuilder;
 import com.azure.security.keyvault.secrets.SecretClient;
 import com.azure.security.keyvault.secrets.SecretClientBuilder;
 
-// For system-assigned managed identity, don't specify a client ID
-ManagedIdentityCredential credential = new ManagedIdentityCredentialBuilder().build();
+TokenCredential credential = null;
+
+// Set up credential based on environment (Azure or local development)
+String environment = System.getenv("ENV");
+
+if (environment != null && environment.equals("production")) {
+    credential = new ManagedIdentityCredentialBuilder()
+        .build();
+} else {
+    credential = new DefaultAzureCredentialBuilder()
+        .build();
+}
 
 // Azure SDK client builders accept the credential as a parameter
 SecretClient client = new SecretClientBuilder()
@@ -94,5 +86,3 @@ This article covered authentication using a system-assigned managed identity. Th
 - [Authenticate Java apps to Azure services during local development by using service principals](local-development-service-principal.md)
 
 If you run into issues related to Azure-hosted application authentication, see [Troubleshoot Azure-hosted application authentication](../troubleshooting-authentication-azure-hosted.md).
-
-After you master authentication, see [Configure logging in the Azure SDK for Java](../logging-overview.md) for information on the logging functionality provided by the SDK.

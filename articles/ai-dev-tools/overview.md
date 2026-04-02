@@ -11,6 +11,8 @@ ms.custom: build-2025
 
 # Azure AI Tools overview
 
+:::image type="content" source="../azure-skills/media/azure-skills-visual-studio-code-demonstration.gif" alt-text="Animated demonstration of Azure Skills running in Visual Studio Code, showing a developer using natural language to interact with Azure services through the Copilot chat panel." lightbox="../azure-skills/media/azure-skills-visual-studio-code-demonstration.gif":::
+
 Azure AI Tools is a collection of AI-powered developer tools that help you manage, deploy, and troubleshoot Azure resources using natural language. The toolset includes GitHub Copilot for Azure, the Azure MCP Server, and Azure Skills — which work together across IDEs, terminals, and CI/CD pipelines.
 
 ## Why Azure AI Tools?

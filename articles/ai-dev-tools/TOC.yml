@@ -2,65 +2,67 @@ items:
 - name: AI dev tools for Azure
   href: index.yml
   items:
-    - name: Azure Skills
+  - name: Overview
+    href: overview.md
+  - name: GitHub Copilot for Azure
+    href: ../github-copilot-azure/introduction.md
+    items:
+    - name: Get started
+      href: ../github-copilot-azure/get-started.md
+    - name: Deploy with agent mode
+      href: ../github-copilot-azure/quickstart-deploy-app-agent-mode.md
+    - name: Learn about Azure
+      href: ../github-copilot-azure/learn-examples.md
+    - name: Design and develop
+      href: ../github-copilot-azure/design-develop-examples.md
+    - name: Deploy your app
+      href: ../github-copilot-azure/deploy-examples.md
+    - name: Troubleshoot
+      href: ../github-copilot-azure/troubleshoot-examples.md
+    - name: Advanced scenarios
       items:
-        - name: Overview
-          href: ../azure-skills/overview.md
-        - name: Install and configure
-          href: ../azure-skills/install.md
-        - name: Quickstart
-          href: ../azure-skills/quickstart.md
-        - name: Skills reference
-          items:
-            - name: Skills reference overview
-              href: ../azure-skills/skills-reference.md
-            - name: Development lifecycle
-              items:
-                - name: azure-prepare
-                  href: ../azure-skills/skills/azure-prepare.md
-                - name: azure-validate
-                  href: ../azure-skills/skills/azure-validate.md
-                - name: azure-deploy
-                  href: ../azure-skills/skills/azure-deploy.md
-            - name: AI & Machine Learning
-              items:
-                - name: azure-ai
-                  href: ../azure-skills/skills/azure-ai.md
-                - name: azure-aigateway
-                  href: ../azure-skills/skills/azure-aigateway.md
-                - name: microsoft-foundry
-                  href: ../azure-skills/skills/microsoft-foundry.md
-            - name: Data & Analytics
-              items:
-                - name: azure-postgres
-                  href: ../azure-skills/skills/azure-postgres.md
-                - name: azure-kusto
-                  href: ../azure-skills/skills/azure-kusto.md
-                - name: azure-storage
-                  href: ../azure-skills/skills/azure-storage.md
-            - name: Security & Identity
-              items:
-                - name: azure-rbac
-                  href: ../azure-skills/skills/azure-rbac.md
-                - name: azure-compliance
-                  href: ../azure-skills/skills/azure-compliance.md
-                - name: entra-app-registration
-                  href: ../azure-skills/skills/entra-app-registration.md
-            - name: Infrastructure & Monitoring
-              items:
-                - name: azure-resource-lookup
-                  href: ../azure-skills/skills/azure-resource-lookup.md
-                - name: azure-resource-visualizer
-                  href: ../azure-skills/skills/azure-resource-visualizer.md
-                - name: azure-diagnostics
-                  href: ../azure-skills/skills/azure-diagnostics.md
-                - name: azure-observability
-                  href: ../azure-skills/skills/azure-observability.md
-                - name: appinsights-instrumentation
-                  href: ../azure-skills/skills/appinsights-instrumentation.md
-                - name: azure-cost-optimization
-                  href: ../azure-skills/skills/azure-cost-optimization.md
-    - name: Azure MCP Server
-      href: ../azure-mcp-server/overview.md
-    - name: GitHub Copilot for Azure
-      href: ../github-copilot-azure/introduction.md
+      - name: Create Bicep files
+        href: ../github-copilot-azure/bicep-generate-edit.md
+      - name: Generate Django / PostgreSQL app
+        href: ../github-copilot-azure/generate-deploy-django-postgresql.md
+  - name: Azure MCP Server
+    href: ../azure-mcp-server/overview.md
+    items:
+    - name: Get started
+      href: ../azure-mcp-server/get-started.md
+    - name: Code editors and tools
+      items:
+      - name: Visual Studio Code
+        href: ../azure-mcp-server/get-started/tools/visual-studio-code.md
+      - name: Visual Studio
+        href: ../azure-mcp-server/get-started/tools/visual-studio.md
+      - name: Cursor
+        href: ../azure-mcp-server/get-started/tools/cursor.md
+      - name: Windsurf
+        href: ../azure-mcp-server/get-started/tools/windsurf.md
+      - name: IntelliJ
+        href: ../azure-mcp-server/get-started/tools/jet-brains.md
+    - name: Concepts
+      href: ../azure-mcp-server/concepts.md
+    - name: Connect
+      items:
+      - name: GitHub Copilot coding agent
+        href: ../azure-mcp-server/how-to/github-copilot-coding-agent.md
+      - name: GitHub Copilot CLI
+        href: ../azure-mcp-server/how-to/github-copilot-cli.md
+    - name: Self-host
+      items:
+      - name: Azure Container Apps with Microsoft Foundry
+        href: ../azure-mcp-server/how-to/deploy-remote-mcp-server-microsoft-foundry.md
+      - name: Azure Container Apps with Copilot Studio
+        href: ../azure-mcp-server/how-to/deploy-remote-mcp-server-copilot-studio.md
+    - name: Tools reference
+      href: ../azure-mcp-server/tools/index.md
+  - name: Azure Skills
+    items:
+    - name: Overview
+      href: ../azure-skills/overview.md
+    - name: Install and configure
+      href: ../azure-skills/install.md
+    - name: Quickstart
+      href: ../azure-skills/quickstart.md

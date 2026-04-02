@@ -1,6 +1,6 @@
 ---
 title: Entra App Registration
-description: Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
+description: Guides Microsoft Entra id app registration, OAuth 2.0 authentication, and msal integration.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Entra App Registration
 
-Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
+Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and msal integration.
 
 **Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/entra-app-registration)
 
@@ -47,7 +47,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The Entra App Registration skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
+The Entra App Registration skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and msal integration.
 
 
 

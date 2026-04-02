@@ -1,6 +1,6 @@
 ---
 title: Azure Enterprise Infrastructure Planner
-description: Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with Waf alignment. Generates Bicep or Terraform directly (no azd).
+description: Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no azd).
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure Enterprise Infrastructure Planner
 
-Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with Waf alignment. Generates Bicep or Terraform directly (no azd).
+Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no azd).
 
 **Skill:** `azure-enterprise-infra-planner` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-enterprise-infra-planner)
 
@@ -46,7 +46,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The Azure Enterprise Infrastructure Planner skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with Waf alignment. Generates Bicep or Terraform directly (no azd).
+The Azure Enterprise Infrastructure Planner skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no azd).
 
 
 

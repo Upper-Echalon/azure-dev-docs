@@ -1,6 +1,6 @@
 ---
 title: Azure Compute
-description: Azure Vm and Vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
+description: Azure vm and vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure Compute
 
-Azure Vm and Vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
+Azure vm and vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
 **Skill:** `azure-compute` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-compute)
 
@@ -55,7 +55,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The Azure Compute skill provides GitHub Copilot with specialized knowledge. Azure Vm and Vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
+The Azure Compute skill provides GitHub Copilot with specialized knowledge. Azure vm and vmss router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
 
 

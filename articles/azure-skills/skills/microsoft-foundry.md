@@ -1,6 +1,6 @@
 ---
 title: Microsoft Foundry
-description: Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, Acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
+description: Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Microsoft Foundry
 
-Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, Acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
+Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
 **Skill:** `microsoft-foundry` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/microsoft-foundry)
 
@@ -63,7 +63,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The Microsoft Foundry skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, Acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
+The Microsoft Foundry skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
 
 

@@ -68,57 +68,51 @@ items:
       href: ../azure-skills/quickstart.md
     - name: Skills reference
       items:
-      - name: AI and Machine Learning
-        items:
-        - name: Azure AI Services
-          href: ../azure-skills/skills/azure-ai.md
-        - name: Azure AI Gateway
-          href: ../azure-skills/skills/azure-aigateway.md
-        - name: Azure Hosted Copilot SDK
-          href: ../azure-skills/skills/azure-hosted-copilot-sdk.md
-        - name: Microsoft Foundry
-          href: ../azure-skills/skills/microsoft-foundry.md
-      - name: Data and Storage
-        items:
-        - name: Azure Kusto (Data Explorer)
-          href: ../azure-skills/skills/azure-kusto.md
-        - name: Azure Messaging
-          href: ../azure-skills/skills/azure-messaging.md
-        - name: Azure Storage
-          href: ../azure-skills/skills/azure-storage.md
-      - name: Development Lifecycle
-        items:
-        - name: Azure Deploy
-          href: ../azure-skills/skills/azure-deploy.md
-        - name: Azure Prepare
-          href: ../azure-skills/skills/azure-prepare.md
-        - name: Azure Upgrade
-          href: ../azure-skills/skills/azure-upgrade.md
-        - name: Azure Validate
-          href: ../azure-skills/skills/azure-validate.md
-      - name: Infrastructure and Compute
-        items:
-        - name: Azure Compute
-          href: ../azure-skills/skills/azure-compute.md
-        - name: Azure Enterprise Infrastructure Planner
-          href: ../azure-skills/skills/azure-enterprise-infra-planner.md
-        - name: Azure Kubernetes
-          href: ../azure-skills/skills/azure-kubernetes.md
-      - name: Migration
-        items:
-        - name: Azure Cloud Migration
-          href: ../azure-skills/skills/azure-cloud-migrate.md
-      - name: Monitoring and Diagnostics
-        items:
-        - name: App Insights Instrumentation
-          href: ../azure-skills/skills/appinsights-instrumentation.md
-        - name: Azure Cost Optimization
-          href: ../azure-skills/skills/azure-cost.md
-        - name: Azure Diagnostics
-          href: ../azure-skills/skills/azure-diagnostics.md
-        - name: Azure Quotas
-          href: ../azure-skills/skills/azure-quotas.md
-        - name: Azure Resource Lookup
-          href: ../azure-skills/skills/azure-resource-lookup.md
-        - name: Azure Resource Visualizer
-          href: ../azure-skills/skills/azure-resource-visualizer.md
+      - name: App Insights Instrumentation
+        href: ../azure-skills/skills/appinsights-instrumentation.md
+      - name: Azure AI Gateway
+        href: ../azure-skills/skills/azure-aigateway.md
+      - name: Azure AI Services
+        href: ../azure-skills/skills/azure-ai.md
+      - name: Azure Cloud Migration
+        href: ../azure-skills/skills/azure-cloud-migrate.md
+      - name: Azure Compliance
+        href: ../azure-skills/skills/azure-compliance.md
+      - name: Azure Compute
+        href: ../azure-skills/skills/azure-compute.md
+      - name: Azure Cost Optimization
+        href: ../azure-skills/skills/azure-cost.md
+      - name: Azure Deploy
+        href: ../azure-skills/skills/azure-deploy.md
+      - name: Azure Diagnostics
+        href: ../azure-skills/skills/azure-diagnostics.md
+      - name: Azure Enterprise Infrastructure Planner
+        href: ../azure-skills/skills/azure-enterprise-infra-planner.md
+      - name: Azure Hosted Copilot SDK
+        href: ../azure-skills/skills/azure-hosted-copilot-sdk.md
+      - name: Azure Kubernetes
+        href: ../azure-skills/skills/azure-kubernetes.md
+      - name: Azure Kusto (Data Explorer)
+        href: ../azure-skills/skills/azure-kusto.md
+      - name: Azure Messaging
+        href: ../azure-skills/skills/azure-messaging.md
+      - name: Azure Prepare
+        href: ../azure-skills/skills/azure-prepare.md
+      - name: Azure Quotas
+        href: ../azure-skills/skills/azure-quotas.md
+      - name: Azure RBAC
+        href: ../azure-skills/skills/azure-rbac.md
+      - name: Azure Resource Lookup
+        href: ../azure-skills/skills/azure-resource-lookup.md
+      - name: Azure Resource Visualizer
+        href: ../azure-skills/skills/azure-resource-visualizer.md
+      - name: Azure Storage
+        href: ../azure-skills/skills/azure-storage.md
+      - name: Azure Upgrade
+        href: ../azure-skills/skills/azure-upgrade.md
+      - name: Azure Validate
+        href: ../azure-skills/skills/azure-validate.md
+      - name: Entra App Registration
+        href: ../azure-skills/skills/entra-app-registration.md
+      - name: Microsoft Foundry
+        href: ../azure-skills/skills/microsoft-foundry.md

@@ -55,13 +55,6 @@ Use the **`azure-prepare`** skill when you need to:
 - Prepare my Azure application to use Key Vault
 - Work with managed identity
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -70,20 +63,6 @@ The `azure-prepare` skill provides GitHub Copilot with specialized knowledge. Pr
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Create a dad joke generator and deploy to Azure"
-- "Build a web app and host it on Azure"
-- "I want to deploy my application to Azure"
-- "Set up Azure infrastructure for my project"
-- "Prepare my app for Azure deployment"
-- "Create an API and run it on Azure"
-- "Migrate my application to Azure"
-- "Configure Azure hosting for my app"
-- "Create a serverless HTTP API using Azure Functions and deploy to Azure"
-- "Create an event-driven function app to process messages and deploy to Azure Functions"
 
 
 ## Related content

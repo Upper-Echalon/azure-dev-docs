@@ -38,13 +38,6 @@ Use the **`azure-cloud-migrate`** skill when you need to:
 - Migrate from Gcp
 - Work with cross-cloud migration
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -53,18 +46,6 @@ The `azure-cloud-migrate` skill provides GitHub Copilot with specialized knowled
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "How do I migrate my AWS Lambda functions to Azure Functions?"
-- "I want to migrate from AWS to Azure"
-- "Can you do a Lambda migration assessment for my project?"
-- "Convert my serverless functions to Azure"
-- "Generate a migration readiness report for my Lambda functions"
-- "Help me migrate code to Azure Functions"
-- "Assess my AWS Lambda project for Azure migration"
-- "I need to move my Lambda workloads to Azure Functions"
 
 
 ## Related content

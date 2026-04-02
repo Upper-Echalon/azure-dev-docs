@@ -29,16 +29,13 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 
 Use the **entra-app-registration** skill when you need to:
 
-- create app registration
-- register Microsoft Entra ID app
-- configure OAuth
-- set up authentication
-- add API permissions
-- generate service principal
-- Msal example
-- console app auth
-- Entra ID setup
-- Microsoft Entra ID authentication
+- Create app registration
+- Work with register Microsoft Entra ID app
+- Configure OAuth
+- Set up authentication
+- Add API permissions
+- Work with generate service principal, Msal example, console app auth, and Entra ID setup
+- Work with Microsoft Entra ID authentication
 
 ### When NOT to use this skill
 
@@ -46,7 +43,7 @@ Don't use this skill for:
 
 - Azure role-based access control (RBAC) or role assignments (use `azure-rbac`)
 - Key Vault secrets (use `azure-keyvault-expiration-audit`)
-- general Azure resource security guidance
+- General Azure resource security guidance
 
 ## What it provides
 
@@ -55,21 +52,6 @@ The entra-app-registration skill provides GitHub Copilot with specialized knowle
 
 
 
-
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "How do I create an app registration in Azure?"
-- "Register an Microsoft Entra ID app for my web application"
-- "Configure OAuth authentication for my application"
-- "Set up authentication with Microsoft Entra ID"
-- "Add API permissions to my Entra app registration"
-- "Generate a service principal for Azure authentication"
-- "Show me an MSAL example for Entra authentication"
-- "Create a console app with Microsoft Entra ID authentication"
-- "Help me set up Entra ID authentication for my app"
-- "Configure Microsoft Entra ID OAuth authentication for my API"
 
 
 ## Related content

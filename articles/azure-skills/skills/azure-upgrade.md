@@ -39,13 +39,6 @@ Use the **`azure-upgrade`** skill when you need to:
 - Upgrade function app plan
 - Migrate App Service to Container Apps
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -54,18 +47,6 @@ The `azure-upgrade` skill provides GitHub Copilot with specialized knowledge. As
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Upgrade my function app from Consumption to Flex Consumption"
-- "Move my function app to a better plan"
-- "Is my function app ready for Flex Consumption?"
-- "Automate the steps to upgrade my Functions plan"
-- "Upgrade my Azure Functions SKU"
-- "Change my function app hosting plan"
-- "Migrate my Azure Functions from Consumption to Flex Consumption"
-- "Assess my function app for upgrade readiness"
 
 
 ## Related content

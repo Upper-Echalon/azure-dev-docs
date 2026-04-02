@@ -46,13 +46,6 @@ Use the **`azure-validate`** skill when you need to:
 - Review managed identity permissions
 - Work with what-if analysis
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -61,20 +54,6 @@ The `azure-validate` skill provides GitHub Copilot with specialized knowledge. P
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Check if my app is ready to deploy to Azure"
-- "Validate my azure.yaml configuration"
-- "Run preflight checks before Azure deployment"
-- "Troubleshoot deployment errors"
-- "Verify my infrastructure configuration before deploying"
-- "Is my app ready for Azure deployment?"
-- "Validate my Bicep configuration"
-- "Validate my Bicep template before deploying to Azure"
-- "Check my deployment permissions before running azd up"
-- "Verify my Bicep files are valid before provisioning"
 
 
 ## Related content

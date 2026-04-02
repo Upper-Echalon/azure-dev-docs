@@ -29,31 +29,17 @@ Debug Azure production issues on Azure using AppLens, Azure Monitor, resource he
 
 Use the **`azure-diagnostics`** skill when you need to:
 
-- debug production issues
-- troubleshoot container apps
-- troubleshoot functions
-- troubleshoot Azure Kubernetes Service (AKS)
-- kubectl can't connect
-- kube-system/CoreDNS failures
-- pod pending
-- crashloop
-- node not ready
-- upgrade failures
-- analyze logs
-- insights
-- image pull failures
-- cold start issues
-- health probe failures
-- resource health
-- root cause of errors
+- Debug production issues
+- Troubleshoot container apps
+- Troubleshoot functions
+- Troubleshoot Azure Kubernetes Service (AKS)
+- Work with kubectl can't connect, kube-system/CoreDNS failures, pod pending, and crashloop
+- Work with node not ready
+- Upgrade failures
+- Analyze logs
+- Work with insights, image pull failures, cold start issues, and health probe failures
+- Work with resource health and root cause of errors
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Explain quantum computing
 
 ## What it provides
 
@@ -62,21 +48,6 @@ The `azure-diagnostics` skill provides GitHub Copilot with specialized knowledge
 
 
 
-
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Debug my Azure Container App"
-- "Troubleshoot production issues in my container app"
-- "Diagnose errors in my Azure service"
-- "Help me troubleshoot container apps on Azure"
-- "Analyze logs with KQL for my app"
-- "How do I analyze application logs?"
-- "View application logs for my container"
-- "Fix image pull failures in Container Apps"
-- "My container app has image pull errors"
-- "Resolve cold start issues"
 
 
 ## Related content

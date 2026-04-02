@@ -45,13 +45,6 @@ Use the **`azure-compute`** skill when you need to:
 - Work with port 3389
 - Troubleshoot
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 

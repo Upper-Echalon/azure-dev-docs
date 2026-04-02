@@ -41,13 +41,6 @@ Use the **`azure-messaging`** skill when you need to:
 - Work with connection inactive, link detach, slow reconnect, and session error
 - Work with duplicate events, offset reset, and receive batch
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Work with Explain quantum computing
 
 ## What it provides
 
@@ -65,20 +58,6 @@ The `azure-messaging` skill provides GitHub Copilot with specialized knowledge. 
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "event hub SDK error in my Python app"
-- "my event hub consumer isn't receiving messages"
-- "event hub checkpoint store failing"
-- "eventhub python connection timeout"
-- "eventhub javascript client disconnects"
-- "service bus SDK issue with message lock lost"
-- "service bus queue issue with dead letter"
-- "servicebus java send timeout"
-- "servicebus dotnet receiver disconnected"
-- "service bus message lock expired during batch processing"
 
 
 ## Related content

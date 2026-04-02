@@ -112,6 +112,8 @@ items:
         items:
         - name: App Insights Instrumentation
           href: ../azure-skills/skills/appinsights-instrumentation.md
+        - name: Azure Cost Optimization
+          href: ../azure-skills/skills/azure-cost.md
         - name: Azure Diagnostics
           href: ../azure-skills/skills/azure-diagnostics.md
         - name: Azure Quotas

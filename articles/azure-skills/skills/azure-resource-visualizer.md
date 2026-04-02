@@ -29,23 +29,12 @@ Analyze Azure resource groups and generate detailed Mermaid architecture diagram
 
 Use the **`azure-resource-visualizer`** skill when you need to:
 
-- create architecture diagram
-- visualize Azure resources
-- show resource relationships
-- generate Mermaid diagram
-- analyze resource group
-- diagram my resources
-- architecture visualization
-- resource topology
-- map Azure infrastructure
+- Create architecture diagram
+- Visualize Azure resources
+- Work with show resource relationships and generate Mermaid diagram
+- Analyze resource group
+- Work with diagram my resources, architecture visualization, resource topology, and map Azure infrastructure
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem
-- Explain quantum computing
 
 ## What it provides
 
@@ -54,21 +43,6 @@ The `azure-resource-visualizer` skill provides GitHub Copilot with specialized k
 
 
 
-
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Create an architecture diagram for my Azure resource group"
-- "Generate a Mermaid diagram of my resource group"
-- "Visualize my Azure resources"
-- "Visualize the architecture of my Azure resources"
-- "Architecture visualization for my Azure infrastructure"
-- "Show me the relationships between my Azure resources"
-- "Show resource relationships"
-- "How are my Azure resources connected?"
-- "Analyze my resource group"
-- "Analyze resource group architecture"
 
 
 ## Related content

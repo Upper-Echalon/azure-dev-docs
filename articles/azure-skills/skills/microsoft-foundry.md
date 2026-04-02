@@ -68,20 +68,6 @@ The microsoft-foundry skill provides GitHub Copilot with specialized knowledge. 
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "How do I deploy an AI model from Microsoft Foundry catalog?"
-- "Build a RAG application with Azure AI Foundry knowledge index"
-- "Create an AI agent in Microsoft Foundry with web search"
-- "Evaluate agent performance using Foundry evaluators"
-- "Optimize my prompt for a Microsoft Foundry agent"
-- "Improve my agent instructions in Azure AI Foundry"
-- "Use a prompt optimizer on my Foundry system prompt"
-- "Set up agent monitoring and continuous evaluation in Foundry"
-- "Help me with Microsoft Foundry model deployment"
-- "How to use knowledge index for RAG in Azure AI Foundry?"
 
 
 ## Related content

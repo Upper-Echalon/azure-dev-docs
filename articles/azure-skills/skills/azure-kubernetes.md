@@ -48,64 +48,7 @@ The `azure-kubernetes` skill provides GitHub Copilot with specialized knowledge.
 | `mcp_azure_mcp_aks` | `AKS Model Context Protocol (MCP) entry point used to discover the exact AKS-specific tools exposed by the client` | Discover the callable AKS tool first, then use that tool's parameters |
 
 
-## Suggested workflow
 
-- **AKS Automatic** (default): Best for most production workloads, provides a curated experience with pre-configured best practices for security, reliability, and performance. Use unless you have specific custom requirements for networking, autoscaling, or node pool configurations not supported by Node Auto-Provisioning (NAP).
-- **AKS Standard**: Use if you need full control over environment configuration, which requires additional overhead to set up and manage.
-- **Azure CNI Overlay** (recommended): pod IPs from private overlay range, not virtual network (VNet)-routable, scales to large environments and good for most workloads
-- **Azure CNI (VNet-routable)**: pod IPs directly from VNet (pod subnet or node subnet), use when pods must be directly addressable from VNet or on-prem
-- **Azure CNI powered by Cilium** (recommended): eBPF-based for high-performance packet processing, network policies, and observability
-- **Static Egress Gateway** for stable, predictable outbound IPs
-- For restricted egress: UDR + Azure Firewall or NVA
-- **App Routing addon with Gateway API** &#8212; recommended default for HTTP/HTTPS workloads
-- **Istio service mesh with Gateway API** - for advanced traffic management, mTLS, canary releases
-- **Application Gateway for Containers** &#8212; for L7 load balancing with Web Application Firewall (WAF) integration
-- Enable **LocalDNS** on all node pools for reliable, performant DNS resolution
-- Use **Microsoft Entra ID** everywhere (control plane, Workload Identity for pods, node access). Avoid static credentials.
-- Azure Key Vault through **Secrets Store CSI Driver** for secrets
-- Enable **Azure Policy** + **Deployment Safeguards**
-- Enable **Encryption at rest** for etcd/API server; **in-transit** for node-to-node
-- Allow only signed, policy-approved images (Azure Policy + Ratify), prefer **Azure Container Registry**
-- **Isolation**: Use namespaces, network policies, scoped logging
-- Use Managed Prometheus and Container Insights with Grafana for AKS observability (logs + metrics).
-- Enable Diagnostic Settings to collect control plane logs and audit logs in a Log Analytics workspace for security monitoring and troubleshooting.
-- For other monitoring and troubleshooting tools, use features like the Agentic CLI for AKS, Application Insights, Resource Health Center, AppLens detectors, and Azure Advisors.
-- Configure **Maintenance Windows** for controlled upgrade timing
-- Enable **auto-upgrades** for control plane and node OS to stay up-to-date with security patches and Kubernetes versions
-- Consider **LTS versions** for enterprise stability (2-year support) by upgrading your AKS environment to the Premium tier
-- **Fleet upgrades**: Use **AKS Fleet Manager** for staged rollout across test to production environments
-- Use **Ephemeral OS disks** (`--node-osdisk-type Ephemeral`) for faster node startup
-- Select **Azure Linux** as node OS (smaller footprint, faster boot)
-- Enable **KEDA** for event-driven autoscaling beyond HPA
-- **Dedicated system node pool**: At least 2 nodes, tainted for system workloads only (`CriticalAddonsOnly`)
-- Enable **Node Auto Provisioning (NAP)** on all pools for cost savings and responsive scaling
-- Use **latest generation SKUs (v5/v6)** for host-level optimizations
-- **Avoid B-series VMs** &#8212; burstable SKUs cause performance/reliability issues
-- Use SKUs with **at least 4 vCPUs** for production workloads
-- Set **topology spread constraints** to distribute pods across hosts/zones per SLO
-- Deploy across **3 Availability Zones** (`--zones 1 2 3`)
-- Use **Standard tier** for zone-redundant control plane + 99.95% SLA for API server availability
-- Enable **Microsoft Defender for Containers** for runtime protection
-- Configure **PodDisruptionBudgets** for all production workloads
-- Use **topology spread constraints** to ensure pod distribution across failure domains
-- Use **Spot node pools** for batch/interruptible workloads (up to 90% savings)
-- **Stop/Start** dev/test clusters: `az aks stop/start`
-- Consider **Reserved Instances** or **Savings Plans** for steady-state workloads
-
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Help me create an AKS cluster"
-- "I need to set up a new Kubernetes cluster on Azure"
-- "Create a production-ready AKS cluster with best practices"
-- "How do I provision an AKS cluster for my team?"
-- "What networking options should I choose for AKS?"
-- "AKS Day-0 checklist"
-- "Plan AKS configuration for production"
-- "Design AKS networking with private API server"
-- "What's the difference between AKS Automatic and Standard?"
-- "Should I use AKS Automatic or Standard SKU?"
 
 
 ## Related content

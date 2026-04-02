@@ -36,13 +36,6 @@ Use the **`azure-enterprise-infra-planner`** skill when you need to:
 - Set up VNets firewalls and private endpoints
 - Subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
 
-### When NOT to use this skill
-
-Don't use this skill for:
-
-- What is the weather today?
-- Help me write a poem about clouds
-- Write a Python script to parse CSV files
 
 ## What it provides
 
@@ -51,18 +44,6 @@ The `azure-enterprise-infra-planner` skill provides GitHub Copilot with speciali
 
 
 
-## Example prompts
-
-Try these prompts with GitHub Copilot:
-
-- "Deploy a geo-redundant backup solution for on-premises SQL servers using Azure Backup, configure encryption-at-rest, and automate monthly DR tests."
-- "Deploy 3-tier architecture with hardened OS images, virtual machine (VM) backups scheduled daily, and application-level redundancy for the business logic tier."
-- "Configure a site recovery plan for disaster failover from East to West Azure region, replicate major VM workloads, and automate DNS failbacks."
-- "Provision a jumpbox VM for secure management, establish NSGs for each tier, and connect tiers using internal Azure Load Balancer."
-- "Spin up Linux VMs for each tier using Terraform, automate patch management through Azure Automation, and log traffic between subnets for compliance."
-- "Deploy three distinct VM scale sets for a legacy app, route incoming HTTP/S through Application Gateway with WAF, and encrypt all data disks."
-- "Set up Azure Backup for critical VM workloads, create a long-term retention policy for compliance, and test backup restores quarterly."
-- "Deploy disaster recovery for VMware VMs using Azure Site Recovery, configure runbooks for smooth failover, and maintain compliance audit trails."
 
 
 ## Related content

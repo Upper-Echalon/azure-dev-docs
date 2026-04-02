@@ -16,14 +16,14 @@ Execute Azure deployments for already-prepared applications that have existing .
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
 
@@ -51,7 +51,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Push my deploy to Azure production"
 - "Ship and deploy my Azure app"
 - "Run the Azure deployment now"
-- "Deploy my Azure Functions app to the cloud using `azd`"
+- "Deploy my Azure Functions app to cloud using `azd`"
 - "Deploy my serverless function app to Azure"
 - "Deploy Azure Functions to production"
 - "Deploy my app and verify the role-based access control (RBAC) roles are assigned correctly"

@@ -16,15 +16,15 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **PowerShell** (v7.4+) — Install: `winget install Microsoft.PowerShell`
-- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
+- **PowerShell** (v7.4+)—Install: `winget install Microsoft.PowerShell`
+- **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
 
 ## When to use this skill
 
@@ -52,7 +52,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Set up telemetry monitoring in Azure"
 - "Instrument my application to send data to App Insights"
 - "Add observability to my Azure web application"
-- "How to enable App Insights auto-instrumentation?"
+- "How to enable App Insights autoinstrumentation?"
 - "Configure telemetry for my Azure App Service"
 
 

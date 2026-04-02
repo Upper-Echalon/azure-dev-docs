@@ -16,21 +16,21 @@ List, find, and show Azure resources across subscriptions or resource groups. Ha
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### Required resources
 
-- **Azure Key Vault** — Key vault for secrets and certificate management
-- **Azure Storage account** — Storage account for blob, file, queue, or table data
-- **Azure Kubernetes Service cluster** — Azure Kubernetes Service (AKS) cluster for container orchestration
-- **Azure Cosmos DB account** — Cosmos DB account for NoSQL data
+- **Azure Key Vault**—Key vault for secrets and certificate management
+- **Azure Storage account**—Storage account for blob, file, queue, or table data
+- **Azure Kubernetes Service cluster**—Azure Kubernetes Service (AKS) cluster for container orchestration
+- **Azure Cosmos DB account**—Cosmos DB account for NoSQL data
 
 ## When to use this skill
 

@@ -16,15 +16,15 @@ Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfile
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
-- **Terraform** (v1.5+) — Install: `https://developer.hashicorp.com/terraform/install`
+- **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
+- **Terraform** (v1.5+)—Install: `https://developer.hashicorp.com/terraform/install`
 
 ## When to use this skill
 
@@ -34,7 +34,7 @@ Use the **Azure Prepare** skill when you need to:
 - Build web app in Azure
 - Create API in Azure
 - Create serverless HTTP API
-- Create frontend in Azure
+- Create front end in Azure
 - Create back end in Azure
 - Build a service in Azure
 - Work with modernize application
@@ -52,7 +52,7 @@ Use the **Azure Prepare** skill when you need to:
 - Work with generate Terraform, generate Bicep, function app, and timer trigger
 - Work with service bus trigger, event-driven function, containerized Node.js app, and social media app
 - Work with static portfolio website
-- Todo list with frontend and API
+- Todo list with front end and API
 - Prepare my Azure application to use Key Vault
 - Work with managed identity
 

@@ -16,14 +16,14 @@ Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recom
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
 
@@ -32,7 +32,7 @@ Use the **Azure Compute** skill when you need to:
 - Work with Azure VM and Virtual machine scale set (VMSS)
 - Scale set in Azure
 - Work with server, website, burstable, and lightweight
-- Work with VM family, workload, `dev/test`, and backend
+- Work with VM family, workload, `dev/test`, and back end
 - Work with autoscale, load balancer, Flexible orchestration, and Uniform orchestration
 - Work with cost estimate, Linux, black screen, and reset password
 - Work with reach VM and port 3389

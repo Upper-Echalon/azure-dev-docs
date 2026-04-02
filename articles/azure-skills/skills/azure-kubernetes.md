@@ -16,19 +16,19 @@ Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clus
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI** (v2.60.0+) — Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### Required resources
 
-- **Azure Key Vault** — Key vault for secrets and certificate management
-- **Azure Kubernetes Service cluster** — AKS cluster for container orchestration
+- **Azure Key Vault**—Key vault for secrets and certificate management
+- **Azure Kubernetes Service cluster**—AKS cluster for container orchestration
 
 ## When to use this skill
 
@@ -75,7 +75,7 @@ The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. P
 - Enable Diagnostic Settings to collect control plane logs and audit logs in a Log Analytics workspace for security monitoring and troubleshooting.
 - For other monitoring and troubleshooting tools, use features like the Agentic CLI for AKS, Application Insights, Resource Health Center, AppLens detectors, and Azure Advisors.
 - Configure **Maintenance Windows** for controlled upgrade timing
-- Enable **auto-upgrades** for control plane and node OS to stay up-to-date with security patches and Kubernetes versions
+- Enable **automatic upgrades** for control plane and node OS to stay up-to-date with security patches and Kubernetes versions
 - Consider **LTS versions** for enterprise stability (2-year support) by upgrading your AKS environment to the Premium tier
 - **Fleet upgrades**: Use **AKS Fleet Manager** for staged rollout across test to production environments
 - Use **Ephemeral OS disks** (`--node-osdisk-type Ephemeral`) for faster node startup

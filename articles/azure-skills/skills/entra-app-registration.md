@@ -16,18 +16,18 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI with Bicep** (v2.60.0+) — Install: `az bicep install`
+- **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
 
 ### Required resources
 
-- **Azure Key Vault** — Key vault for secrets and certificate management
+- **Azure Key Vault**—Key vault for secrets and certificate management
 
 ## When to use this skill
 

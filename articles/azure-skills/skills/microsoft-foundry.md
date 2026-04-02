@@ -16,14 +16,14 @@ Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, 
 
 ## Prerequisites
 
-- **Azure authentication** — Sign in with `az login` or use a service principal.
-- **Azure subscription** — An active Azure subscription is required.
-- **GitHub Copilot** — GitHub Copilot with the Azure extension enabled.
+- **Azure authentication**—Sign in with `az login` or use a service principal.
+- **Azure subscription**—An active Azure subscription is required.
+- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 
 ### Required tools
 
 - **GitHub Copilot**
-- **PowerShell** (v7.4+) — Install: `winget install Microsoft.PowerShell`
+- **PowerShell** (v7.4+)—Install: `winget install Microsoft.PowerShell`
 - **Bash**
 
 ## When to use this skill

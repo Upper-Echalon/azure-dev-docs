@@ -1,5 +1,5 @@
 ---
-title: azure-storage
+title: Azure Storage
 description: Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-storage
+# Azure Storage
 
 Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 
@@ -27,7 +27,7 @@ Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table
 
 ## When to use this skill
 
-Use the **`azure-storage`** skill when you need to:
+Use the **Azure Storage** skill when you need to:
 
 - Work with blob storage, file shares, queue storage, and table storage
 - Work with data lake
@@ -43,7 +43,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The `azure-storage` skill provides GitHub Copilot with specialized knowledge. Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
+The Azure Storage skill provides GitHub Copilot with specialized knowledge. Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 
 ### Azure services knowledge
 

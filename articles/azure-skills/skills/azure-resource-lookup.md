@@ -1,5 +1,5 @@
 ---
-title: azure-resource-lookup
+title: Azure Resource Lookup
 description: List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-resource-lookup
+# Azure Resource Lookup
 
 List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
 
@@ -27,7 +27,7 @@ List, find, and show Azure resources across subscriptions or resource groups. Ha
 
 ## When to use this skill
 
-Use the **`azure-resource-lookup`** skill when you need to:
+Use the **Azure Resource Lookup** skill when you need to:
 
 - Work with resource inventory
 - Find resources by tag
@@ -44,7 +44,7 @@ Don't use this skill for:
 
 ## What it provides
 
-The `azure-resource-lookup` skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
+The Azure Resource Lookup skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like &quot;list websites&quot;, &quot;list virtual machines&quot;, &quot;list my VMs&quot;, &quot;show storage accounts&quot;, &quot;find container apps&quot;, and &quot;what resources do I have&quot;.
 
 ### Related tools
 
@@ -56,6 +56,20 @@ The `azure-resource-lookup` skill provides GitHub Copilot with specialized knowl
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "List the websites in my subscription"
+- "Show me the websites in my resource group"
+- "List all virtual machines in my subscription"
+- "Show me all VMs in resource group 'my-rg'"
+- "List my Azure storage accounts"
+- "List all my Azure Container Registries"
+- "List the container apps in my subscription"
+- "Show me the container apps in my resource group"
+- "What resources do I have across all my subscriptions?"
+- "Show me all my Azure resources"
 
 
 ## Related content

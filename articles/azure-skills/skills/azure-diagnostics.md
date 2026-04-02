@@ -1,5 +1,5 @@
 ---
-title: azure-diagnostics
+title: Azure Diagnostics
 description: Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-diagnostics
+# Azure Diagnostics
 
 Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
@@ -27,7 +27,7 @@ Debug Azure production issues on Azure using AppLens, Azure Monitor, resource he
 
 ## When to use this skill
 
-Use the **`azure-diagnostics`** skill when you need to:
+Use the **Azure Diagnostics** skill when you need to:
 
 - Debug production issues
 - Troubleshoot container apps
@@ -40,14 +40,35 @@ Use the **`azure-diagnostics`** skill when you need to:
 - Work with insights, image pull failures, cold start issues, and health probe failures
 - Work with resource health and root cause of errors
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-diagnostics` skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
+The Azure Diagnostics skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "Debug my Azure Container App"
+- "Troubleshoot production issues in my container app"
+- "Diagnose errors in my Azure service"
+- "Help me troubleshoot container apps on Azure"
+- "Analyze logs with KQL for my app"
+- "How do I analyze application logs?"
+- "View application logs for my container"
+- "Fix image pull failures in Container Apps"
+- "My container app has image pull errors"
+- "Resolve cold start issues"
 
 
 ## Related content

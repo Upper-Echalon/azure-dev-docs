@@ -1,5 +1,5 @@
 ---
-title: azure-upgrade
+title: Azure Upgrade
 description: Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-upgrade
+# Azure Upgrade
 
 Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
@@ -27,7 +27,7 @@ Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. G
 
 ## When to use this skill
 
-Use the **`azure-upgrade`** skill when you need to:
+Use the **Azure Upgrade** skill when you need to:
 
 - Upgrade Consumption to Flex Consumption
 - Upgrade Azure Functions plan
@@ -39,14 +39,33 @@ Use the **`azure-upgrade`** skill when you need to:
 - Upgrade function app plan
 - Migrate App Service to Container Apps
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-upgrade` skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
+The Azure Upgrade skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "Upgrade my function app from Consumption to Flex Consumption"
+- "Move my function app to a better plan"
+- "Is my function app ready for Flex Consumption?"
+- "Automate the steps to upgrade my Functions plan"
+- "Upgrade my Azure Functions SKU"
+- "Change my function app hosting plan"
+- "Migrate my Azure Functions from Consumption to Flex Consumption"
+- "Assess my function app for upgrade readiness"
 
 
 ## Related content

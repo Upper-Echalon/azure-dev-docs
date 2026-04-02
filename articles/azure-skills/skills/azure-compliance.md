@@ -1,5 +1,5 @@
 ---
-title: azure-compliance
+title: Azure Compliance
 description: Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-compliance
+# Azure Compliance
 
 Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
@@ -27,21 +27,42 @@ Run Azure compliance and security audits with azqr plus Key Vault expiration che
 
 ## When to use this skill
 
-Use the **`azure-compliance`** skill when you need to:
+Use the **Azure Compliance** skill when you need to:
 
 - Work with compliance scan and security audit
 - Before running azqr (compliance cli tool)
 - Work with Azure best practices, Key Vault expiration check, expired certificates, and expiring secrets
 - Work with orphaned resources and compliance assessment
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-compliance` skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
+The Azure Compliance skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "Run azqr to check Azure compliance"
+- "Check my Azure subscription for compliance issues"
+- "Perform compliance assessment using Azure Quick Review"
+- "Assess my Azure resources against best practices"
+- "Review my Azure security posture"
+- "Run compliance scan on my Azure subscription"
+- "Identify orphaned resources in Azure"
+- "Find resources that don't comply with best practices"
+- "Show me expired certificates in my Key Vault"
+- "Check what secrets are expiring in the next 30 days"
 
 
 ## Related content

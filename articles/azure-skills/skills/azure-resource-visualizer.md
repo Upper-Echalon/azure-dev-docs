@@ -1,5 +1,5 @@
 ---
-title: azure-resource-visualizer
+title: Azure Resource Visualizer
 description: Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-resource-visualizer
+# Azure Resource Visualizer
 
 Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
@@ -27,7 +27,7 @@ Analyze Azure resource groups and generate detailed Mermaid architecture diagram
 
 ## When to use this skill
 
-Use the **`azure-resource-visualizer`** skill when you need to:
+Use the **Azure Resource Visualizer** skill when you need to:
 
 - Create architecture diagram
 - Visualize Azure resources
@@ -35,14 +35,35 @@ Use the **`azure-resource-visualizer`** skill when you need to:
 - Analyze resource group
 - Work with diagram my resources, architecture visualization, resource topology, and map Azure infrastructure
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-resource-visualizer` skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
+The Azure Resource Visualizer skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "Create an architecture diagram for my Azure resource group"
+- "Generate a Mermaid diagram of my resource group"
+- "Visualize my Azure resources"
+- "Visualize the architecture of my Azure resources"
+- "Architecture visualization for my Azure infrastructure"
+- "Show me the relationships between my Azure resources"
+- "Show resource relationships"
+- "How are my Azure resources connected?"
+- "Analyze my resource group"
+- "Analyze resource group architecture"
 
 
 ## Related content

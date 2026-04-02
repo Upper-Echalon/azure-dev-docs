@@ -1,6 +1,6 @@
 ---
-title: entra-app-registration
-description: Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
+title: Entra App Registration
+description: Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -8,9 +8,9 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# entra-app-registration
+# Entra App Registration
 
-Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
+Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
 
 **Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/entra-app-registration)
 
@@ -27,7 +27,7 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 
 ## When to use this skill
 
-Use the **entra-app-registration** skill when you need to:
+Use the **Entra App Registration** skill when you need to:
 
 - Create app registration
 - Work with register Microsoft Entra ID app
@@ -47,11 +47,25 @@ Don't use this skill for:
 
 ## What it provides
 
-The entra-app-registration skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
+The Entra App Registration skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra Id app registration, OAuth 2.0 authentication, and Msal integration.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "How do I create an app registration in Azure?"
+- "Register an Microsoft Entra ID app for my web application"
+- "Configure OAuth authentication for my application"
+- "Set up authentication with Microsoft Entra ID"
+- "Add API permissions to my Entra app registration"
+- "Generate a service principal for Azure authentication"
+- "Show me an MSAL example for Entra authentication"
+- "Create a console app with Microsoft Entra ID authentication"
+- "Help me set up Entra ID authentication for my app"
+- "Configure Microsoft Entra ID OAuth authentication for my API"
 
 
 ## Related content

@@ -1,5 +1,5 @@
 ---
-title: azure-aigateway
+title: Azure AI Gateway
 description: Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-aigateway
+# Azure AI Gateway
 
 Configure Azure API Management as an AI Gateway for AI models, Model Context Protocol (MCP) tools, and agents.
 
@@ -27,7 +27,7 @@ Configure Azure API Management as an AI Gateway for AI models, Model Context Pro
 
 ## When to use this skill
 
-Use the **`azure-aigateway`** skill when you need to:
+Use the **Azure AI Gateway** skill when you need to:
 
 - Work with semantic caching, token limit, content safety, and load balancing
 - Work with AI model governance, MCP rate limiting, and jailbreak detection
@@ -38,14 +38,35 @@ Use the **`azure-aigateway`** skill when you need to:
 - Configure AI backend
 - Work with token metrics, AI cost control, convert API to MCP, and import OpenAPI to gateway
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-aigateway` skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
+The Azure AI Gateway skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "Set up an AI Gateway for my Azure OpenAI models"
+- "Configure Azure API Management as a gateway for my AI models"
+- "Add a gateway to my MCP server"
+- "Set up APIM for my AI workloads"
+- "Add rate limiting to my model requests"
+- "Limit tokens for my AI API"
+- "How do I ratelimit my MCP server?"
+- "Enable semantic caching for my AI API"
+- "Set up semantic cache for Azure OpenAI in APIM"
+- "Add content safety to my AI endpoint"
 
 
 ## Related content

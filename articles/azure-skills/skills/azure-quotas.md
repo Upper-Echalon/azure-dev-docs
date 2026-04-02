@@ -1,5 +1,5 @@
 ---
-title: azure-quotas
+title: Azure Quotas
 description: Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-quotas
+# Azure Quotas
 
 Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
@@ -27,7 +27,7 @@ Check/manage Azure quotas and usage across providers. For deployment planning, c
 
 ## When to use this skill
 
-Use the **`azure-quotas`** skill when you need to:
+Use the **Azure Quotas** skill when you need to:
 
 - Check quotas
 - Work with service limits and current usage
@@ -39,14 +39,35 @@ Use the **`azure-quotas`** skill when you need to:
 - Work with vCPU limit
 - How many vCPUs available in my subscription
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-quotas` skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
+The Azure Quotas skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "How do I check my Azure quota limits?"
+- "What are the service limits for my Azure subscription?"
+- "Check current usage for my compute quota"
+- "I need to request a quota increase for VMs in East US"
+- "My deployment failed with a quota exceeded error"
+- "How do I validate deployment capacity before provisioning?"
+- "Help me select a region based on quota availability"
+- "Compare quotas across regions for Standard_D4s_v3"
+- "What is the provisioning limit for public IP addresses?"
+- "Check regional capacity for Container Apps"
 
 
 ## Related content

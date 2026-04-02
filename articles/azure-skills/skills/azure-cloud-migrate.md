@@ -1,6 +1,6 @@
 ---
-title: azure-cloud-migrate
-description: Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
+title: Azure Cloud Migration
+description: Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports Aws, Gcp, and other providers.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry
@@ -8,9 +8,9 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# azure-cloud-migrate
+# Azure Cloud Migration
 
-Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
+Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports Aws, Gcp, and other providers.
 
 **Skill:** `azure-cloud-migrate` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-cloud-migrate)
 
@@ -27,7 +27,7 @@ Assess and migrate cross-cloud workloads to Azure with migration reports and cod
 
 ## When to use this skill
 
-Use the **`azure-cloud-migrate`** skill when you need to:
+Use the **Azure Cloud Migration** skill when you need to:
 
 - Migrate Lambda to Azure Functions
 - Migrate Aws to Azure
@@ -38,14 +38,33 @@ Use the **`azure-cloud-migrate`** skill when you need to:
 - Migrate from Gcp
 - Work with cross-cloud migration
 
+### When NOT to use this skill
+
+Don't use this skill for:
+
+- What is the weather today?
+- Help me write a poem
+- Work with Explain quantum computing
 
 ## What it provides
 
-The `azure-cloud-migrate` skill provides GitHub Copilot with specialized knowledge. Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
+The Azure Cloud Migration skill provides GitHub Copilot with specialized knowledge. Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports Aws, Gcp, and other providers.
 
 
 
 
+## Example prompts
+
+Try these prompts with GitHub Copilot:
+
+- "How do I migrate my AWS Lambda functions to Azure Functions?"
+- "I want to migrate from AWS to Azure"
+- "Can you do a Lambda migration assessment for my project?"
+- "Convert my serverless functions to Azure"
+- "Generate a migration readiness report for my Lambda functions"
+- "Help me migrate code to Azure Functions"
+- "Assess my AWS Lambda project for Azure migration"
+- "I need to move my Lambda workloads to Azure Functions"
 
 
 ## Related content

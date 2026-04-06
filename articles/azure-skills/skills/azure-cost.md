@@ -19,14 +19,7 @@ Unified Azure cost management: query historical costs, forecast future spending,
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
-
-### Required resources
-
 - **Azure Kubernetes Service cluster**—Azure Kubernetes Service (AKS) cluster for container orchestration
 
 ## When to use this skill
@@ -46,7 +39,7 @@ Use this skill when you need to:
 
 ## What it provides
 
-This skill provides GitHub Copilot with specialized knowledge. Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
+This skill enables GitHub Copilot to query historical Azure costs, forecast future spending, and identify optimization opportunities to reduce waste.
 
 ### Related tools
 
@@ -57,9 +50,6 @@ This skill provides GitHub Copilot with specialized knowledge. Unified Azure cos
 | `azure__get_azure_bestpractices` | `Get Azure best practices` | `intent` (Required): optimization context |
 | `azure__extension_azqr` | `Run Azure Quick Review compliance scan` | `subscription` (Required): subscription ID, `resource-group` (Optional): resource group name |
 | `azure__aks` | `Azure Kubernetes Service operations` | varies by sub-command |
-
-
-
 
 
 ## Related content

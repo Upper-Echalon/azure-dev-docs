@@ -19,7 +19,7 @@ Make sure you have:
 - **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
 - **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/overview.md), Claude Code, or another platform that supports Azure Skills plugins
-- **Azure CLI** (optional but recommended) — Recommended for easier authentication during development
+- **Azure CLI** (optional) — Simplifies authentication during local development. [Install Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli).
 
 > [!NOTE]
 > Azure Skills uses the same authentication patterns as [Azure MCP Server](../../developer/azure-mcp-server/overview.md). If you're already authenticated for Azure MCP Server, Azure Skills can use those same credentials.
@@ -79,13 +79,13 @@ Azure Skills picks up these environment variables automatically.
 
 If you're running Azure Skills on an Azure resource (VM, Container Apps, Azure Functions), managed identity handles authentication automatically. No manual setup needed.
 
-For more details, see [Azure managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
+For more details, see [Azure managed identities](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview).
 
 ---
 
 ## Install the plugin
 
-These commands are for **GitHub Copilot CLI**. In your Copilot CLI, install Azure Skills from the plugin marketplace:
+In GitHub Copilot CLI, install Azure Skills from the plugin marketplace:
 
 ```bash
 /plugin marketplace add microsoft/github-copilot-for-azure
@@ -124,14 +124,14 @@ Open your AI assistant's chat window and try these prompts:
 Analyze my project structure and prepare a deployment plan for deploying to Azure. What infrastructure do I need and how should I set it up?
 ```
 
-Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase, generate infrastructure-as-code templates, and create a detailed deployment plan at `.azure/plan.md`. It considers your project type, dependencies, and best practices, then asks for your approval before proceeding.
+Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase, generate infrastructure-as-code templates, and create a detailed deployment plan at `.azure/plan.md`. It considers your project type, dependencies, and best practices. The assistant then asks for your approval before proceeding.
 
 **Diagnose an Azure resource health issue:**
 ```prompt
 I'm getting errors from my Azure App Service. What's wrong and how do I fix it?
 ```
 
-Expected response: The assistant invokes `azure-diagnostics` to inspect your app service, check logs, review recent deployments, and identify potential configuration or runtime issues. It provides specific remediation steps based on the diagnostics.
+Expected response: The assistant invokes `azure-diagnostics` to inspect your app service, check logs, review recent deployments, and identify potential configuration or runtime issues. It then provides specific remediation steps.
 
 **Set up monitoring and observability:**
 ```prompt

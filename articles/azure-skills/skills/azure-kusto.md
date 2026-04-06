@@ -1,5 +1,5 @@
 ---
-title: Azure Kusto (Data Explorer)
+title: Azure skill for Kusto (Data Explorer)
 description: Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Kusto (Data Explorer)
+# Azure skill for Kusto (Data Explorer)
 
 Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis.
 
@@ -27,14 +27,14 @@ Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log anal
 
 ## When to use this skill
 
-Use the **Azure Kusto (Data Explorer)** skill when you need to:
+Use this skill when you need to:
 
 - Work with KQL queries, Kusto database queries, Azure Data Explorer, and ADX clusters
 - Work with log analytics, time series data, IoT telemetry, and anomaly detection
 
 ## What it provides
 
-The Azure Kusto (Data Explorer) skill provides GitHub Copilot with specialized knowledge. Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis.
+This skill provides GitHub Copilot with specialized knowledge. Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis.
 
 
 

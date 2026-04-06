@@ -1,5 +1,5 @@
 ---
-title: Azure Upgrade
+title: Azure skill for upgrade
 description: Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Upgrade
+# Azure skill for upgrade
 
 Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
@@ -27,7 +27,7 @@ Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. G
 
 ## When to use this skill
 
-Use the **Azure Upgrade** skill when you need to:
+Use this skill when you need to:
 
 - Upgrade Consumption to Flex Consumption
 - Upgrade Azure Functions plan
@@ -41,7 +41,7 @@ Use the **Azure Upgrade** skill when you need to:
 
 ## What it provides
 
-The Azure Upgrade skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
+This skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Resource Lookup
+title: Azure skill for resource lookup
 description: List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Resource Lookup
+# Azure skill for resource lookup
 
 List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
@@ -34,7 +34,7 @@ List, find, and show Azure resources across subscriptions or resource groups. Ha
 
 ## When to use this skill
 
-Use the **Azure Resource Lookup** skill when you need to:
+Use this skill when you need to:
 
 - Work with resource inventory
 - Find resources by tag
@@ -45,7 +45,7 @@ Use the **Azure Resource Lookup** skill when you need to:
 
 ## What it provides
 
-The Azure Resource Lookup skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
+This skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
 ### Related tools
 

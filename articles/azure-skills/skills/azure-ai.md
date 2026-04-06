@@ -1,5 +1,5 @@
 ﻿---
-title: Azure AI Services skill
+title: Azure skill for AI Services
 description: 
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure AI Services skill
+# Azure skill for AI Services
 
 
 
@@ -23,7 +23,7 @@ ms.service: azure-mcp-server
 
 ## When to use this skill
 
-Use the **Azure AI Services** skill when you need to:
+Use this skill when you need to:
 
 - Work with AI Search
 - Query search in Azure
@@ -32,7 +32,7 @@ Use the **Azure AI Services** skill when you need to:
 
 ## What it provides
 
-The Azure AI Services skill provides GitHub Copilot with specialized knowledge about Azure AI Services services and workflows in Azure.
+This skill provides GitHub Copilot with specialized knowledge about Azure AI Services services and workflows in Azure.
 
 ### Azure services knowledge
 

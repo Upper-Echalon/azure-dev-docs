@@ -1,5 +1,5 @@
 ---
-title: Azure Kubernetes
+title: Azure skill for Kubernetes
 description: Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Kubernetes
+# Azure skill for Kubernetes
 
 Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 
@@ -32,7 +32,7 @@ Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clus
 
 ## When to use this skill
 
-Use the **Azure Kubernetes** skill when you need to:
+Use this skill when you need to:
 
 - Create AKS environment in Azure
 - Provision AKS environment in Azure
@@ -43,7 +43,7 @@ Use the **Azure Kubernetes** skill when you need to:
 
 ## What it provides
 
-The Azure Kubernetes skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
+This skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 
 ### Related tools
 

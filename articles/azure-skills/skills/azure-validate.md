@@ -1,5 +1,5 @@
 ---
-title: Azure Validate
+title: Azure skill for validate
 description: Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before deploying.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Validate
+# Azure skill for validate
 
 Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), role-based access control (RBAC) role assignments, managed identity permissions, and prerequisites before deploying.
 
@@ -27,7 +27,7 @@ Pre-deployment validation for Azure readiness. Run deep checks on configuration,
 
 ## When to use this skill
 
-Use the **Azure Validate** skill when you need to:
+Use this skill when you need to:
 
 - Validate my app in Azure
 - Check deployment readiness in Azure
@@ -42,7 +42,7 @@ Use the **Azure Validate** skill when you need to:
 
 ## What it provides
 
-The Azure Validate skill provides GitHub Copilot with specialized knowledge. Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before deploying.
+This skill provides GitHub Copilot with specialized knowledge. Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before deploying.
 
 
 

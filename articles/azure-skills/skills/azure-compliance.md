@@ -1,5 +1,5 @@
 ---
-title: Azure Compliance
+title: Azure skill for compliance
 description: Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Compliance
+# Azure skill for compliance
 
 Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
@@ -31,7 +31,7 @@ Run Azure compliance and security audits with `azqr` plus Key Vault expiration c
 
 ## When to use this skill
 
-Use the **Azure Compliance** skill when you need to:
+Use this skill when you need to:
 
 - Work with compliance scan and security audit
 - Before running `azqr` (compliance cli tool)
@@ -40,7 +40,7 @@ Use the **Azure Compliance** skill when you need to:
 
 ## What it provides
 
-The Azure Compliance skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
+This skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
 
 

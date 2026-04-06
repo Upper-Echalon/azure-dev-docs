@@ -1,5 +1,5 @@
 ---
-title: Azure Prepare
+title: Azure skill for prepare
 description: Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Prepare
+# Azure skill for prepare
 
 Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
@@ -28,7 +28,7 @@ Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfile
 
 ## When to use this skill
 
-Use the **Azure Prepare** skill when you need to:
+Use this skill when you need to:
 
 - Create app in Azure
 - Build web app in Azure
@@ -43,7 +43,7 @@ Use the **Azure Prepare** skill when you need to:
 
 ## What it provides
 
-The Azure Prepare skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
+This skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
 
 

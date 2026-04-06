@@ -1,5 +1,5 @@
 ---
-title: Azure Resource Visualizer
+title: Azure skill for resource visualizer
 description: Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Resource Visualizer
+# Azure skill for resource visualizer
 
 Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
@@ -31,7 +31,7 @@ Analyze Azure resource groups and generate detailed Mermaid architecture diagram
 
 ## When to use this skill
 
-Use the **Azure Resource Visualizer** skill when you need to:
+Use this skill when you need to:
 
 - Create architecture diagram in Azure
 - Visualize Azure resources
@@ -41,7 +41,7 @@ Use the **Azure Resource Visualizer** skill when you need to:
 
 ## What it provides
 
-The Azure Resource Visualizer skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
+This skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
 
 

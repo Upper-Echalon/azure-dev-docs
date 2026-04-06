@@ -1,5 +1,5 @@
 ---
-title: Azure Messaging
+title: Azure skill for messaging
 description: Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Messaging
+# Azure skill for messaging
 
 Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
@@ -27,7 +27,7 @@ Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Ser
 
 ## When to use this skill
 
-Use the **Azure Messaging** skill when you need to:
+Use this skill when you need to:
 
 - Work with event hub SDK error, service bus SDK issue, messaging connection failure, and `Amqp` error
 - Work with event processor host issue, message lock lost, message lock expired, and lock renewal
@@ -42,7 +42,7 @@ Use the **Azure Messaging** skill when you need to:
 
 ## What it provides
 
-The Azure Messaging skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
+This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
 ### Related tools
 

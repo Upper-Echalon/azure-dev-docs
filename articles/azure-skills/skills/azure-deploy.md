@@ -1,5 +1,5 @@
 ---
-title: Azure Deploy
+title: Azure skill for deploy
 description: Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Deploy
+# Azure skill for deploy
 
 Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
@@ -27,7 +27,7 @@ Execute Azure deployments for already-prepared applications that have existing .
 
 ## When to use this skill
 
-Use the **Azure Deploy** skill when you need to:
+Use this skill when you need to:
 
 - Run `azd` up in Azure
 - Run `azd` deploy in Azure
@@ -37,7 +37,7 @@ Use the **Azure Deploy** skill when you need to:
 
 ## What it provides
 
-The Azure Deploy skill provides GitHub Copilot with specialized knowledge. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
+This skill provides GitHub Copilot with specialized knowledge. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
 
 

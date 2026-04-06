@@ -1,5 +1,5 @@
 ---
-title: Azure Enterprise Infrastructure Planner
+title: Azure skill for enterprise infrastructure planning
 description: Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no azd).
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Enterprise Infrastructure Planner
+# Azure skill for enterprise infrastructure planning
 
 Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
@@ -27,7 +27,7 @@ Architect and provision enterprise Azure infrastructure from workload descriptio
 
 ## When to use this skill
 
-Use the **Azure Enterprise Infrastructure Planner** skill when you need to:
+Use this skill when you need to:
 
 - Plan Azure infrastructure
 - Work with architect Azure landing zone
@@ -38,7 +38,7 @@ Use the **Azure Enterprise Infrastructure Planner** skill when you need to:
 
 ## What it provides
 
-The Azure Enterprise Infrastructure Planner skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
+This skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
 
 

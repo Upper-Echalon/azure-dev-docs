@@ -1,5 +1,5 @@
 ﻿---
-title: App Insights Instrumentation skill
+title: Azure skill for App Insights instrumentation
 description: Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# App Insights Instrumentation skill
+# Azure skill for App Insights instrumentation
 
 Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
@@ -24,14 +24,14 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 
 ## When to use this skill
 
-Use the **App Insights Instrumentation** skill when you need to:
+Use this skill when you need to:
 
 - Work with App Insights SDK, telemetry patterns, Application Insights guidance, and instrumentation examples
 - Work with Apm best practices
 
 ## What it provides
 
-The App Insights Instrumentation skill provides GitHub Copilot with specialized knowledge. Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
+This skill provides GitHub Copilot with specialized knowledge. Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
 
 

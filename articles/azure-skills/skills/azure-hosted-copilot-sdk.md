@@ -1,5 +1,5 @@
 ---
-title: Azure Hosted Copilot SDK
+title: Azure skill for Hosted Copilot SDK
 description: Build and deploy GitHub Copilot SDK apps to Azure.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Hosted Copilot SDK
+# Azure skill for Hosted Copilot SDK
 
 Build and deploy GitHub Copilot SDK apps to Azure.
 
@@ -27,7 +27,7 @@ Build and deploy GitHub Copilot SDK apps to Azure.
 
 ## When to use this skill
 
-Use the **Azure Hosted Copilot SDK** skill when you need to:
+Use this skill when you need to:
 
 - Build copilot app in Azure
 - Create copilot app in Azure
@@ -41,7 +41,7 @@ Use the **Azure Hosted Copilot SDK** skill when you need to:
 
 ## What it provides
 
-The Azure Hosted Copilot SDK skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
+This skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
 
 
 

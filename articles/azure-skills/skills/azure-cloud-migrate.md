@@ -1,5 +1,5 @@
 ---
-title: Azure Cloud Migration
+title: Azure skill for cloud migration
 description: Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Cloud Migration
+# Azure skill for cloud migration
 
 Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 
@@ -27,7 +27,7 @@ Assess and migrate cross-cloud workloads to Azure with migration reports and cod
 
 ## When to use this skill
 
-Use the **Azure Cloud Migration** skill when you need to:
+Use this skill when you need to:
 
 - Migrate Lambda to Azure Functions
 - Migrate AWS to Azure
@@ -40,7 +40,7 @@ Use the **Azure Cloud Migration** skill when you need to:
 
 ## What it provides
 
-The Azure Cloud Migration skill provides GitHub Copilot with specialized knowledge. Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
+This skill provides GitHub Copilot with specialized knowledge. Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Azure AI Gateway
+title: Azure skill for AI Gateway
 description: Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure AI Gateway
+# Azure skill for AI Gateway
 
 Configure Azure API Management as an AI Gateway for AI models, Model Context Protocol (MCP) tools, and agents.
 
@@ -27,7 +27,7 @@ Configure Azure API Management as an AI Gateway for AI models, Model Context Pro
 
 ## When to use this skill
 
-Use the **Azure AI Gateway** skill when you need to:
+Use this skill when you need to:
 
 - Work with semantic caching, token limit, content safety, and load balancing
 - Work with AI model governance, MCP rate limiting, and jailbreak detection
@@ -40,7 +40,7 @@ Use the **Azure AI Gateway** skill when you need to:
 
 ## What it provides
 
-The Azure AI Gateway skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
+This skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 
 
 

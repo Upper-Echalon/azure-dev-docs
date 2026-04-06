@@ -1,5 +1,5 @@
 ---
-title: Azure Compute
+title: Azure skill for compute
 description: Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Compute
+# Azure skill for compute
 
 Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
@@ -27,7 +27,7 @@ Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recom
 
 ## When to use this skill
 
-Use the **Azure Compute** skill when you need to:
+Use this skill when you need to:
 
 - Work with Azure VM and Virtual machine scale set (VMSS)
 - Scale set in Azure
@@ -39,7 +39,7 @@ Use the **Azure Compute** skill when you need to:
 
 ## What it provides
 
-The Azure Compute skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
+This skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Quotas
+title: Azure skill for quotas
 description: Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Quotas
+# Azure skill for quotas
 
 Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
@@ -32,7 +32,7 @@ Check/manage Azure quotas and usage across providers. For deployment planning, c
 
 ## When to use this skill
 
-Use the **Azure Quotas** skill when you need to:
+Use this skill when you need to:
 
 - Check quotas in Azure
 - Work with service limits and current usage
@@ -45,7 +45,7 @@ Use the **Azure Quotas** skill when you need to:
 
 ## What it provides
 
-The Azure Quotas skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
+This skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
 
 

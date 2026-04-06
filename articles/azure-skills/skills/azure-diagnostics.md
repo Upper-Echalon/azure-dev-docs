@@ -1,5 +1,5 @@
 ---
-title: Azure Diagnostics
+title: Azure skill for diagnostics
 description: Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Diagnostics
+# Azure skill for diagnostics
 
 Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
@@ -31,7 +31,7 @@ Debug Azure production issues on Azure using AppLens, Azure Monitor, resource he
 
 ## When to use this skill
 
-Use the **Azure Diagnostics** skill when you need to:
+Use this skill when you need to:
 
 - Debug production issues in Azure
 - Troubleshoot container apps in Azure
@@ -46,7 +46,7 @@ Use the **Azure Diagnostics** skill when you need to:
 
 ## What it provides
 
-The Azure Diagnostics skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
+This skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
 
 

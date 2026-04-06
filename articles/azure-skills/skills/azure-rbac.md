@@ -1,5 +1,5 @@
 ---
-title: Azure RBAC
+title: Azure skill for role-based access control (RBAC)
 description: Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure role-based access control (RBAC)
+# Azure skill for role-based access control (RBAC)
 
 Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
@@ -27,7 +27,7 @@ Helps users find the right Azure RBAC role for an identity with least privilege 
 
 ## When to use this skill
 
-Use the **Azure RBAC** skill when you need to:
+Use this skill when you need to:
 
 - Work with bicep for role assignment, least privilege role, RBAC role for, and role to read blobs
 - Work with role for managed identity and custom role definition
@@ -36,7 +36,7 @@ Use the **Azure RBAC** skill when you need to:
 
 ## What it provides
 
-The Azure RBAC skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
+This skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
 
 

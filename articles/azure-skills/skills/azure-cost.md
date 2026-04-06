@@ -1,5 +1,5 @@
 ---
-title: Azure Cost Optimization
+title: Azure skill for cost optimization
 description: Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# Azure Cost Optimization
+# Azure skill for cost optimization
 
 Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
 
@@ -31,7 +31,7 @@ Unified Azure cost management: query historical costs, forecast future spending,
 
 ## When to use this skill
 
-Use the **Azure Cost Optimization** skill when you need to:
+Use this skill when you need to:
 
 - Deploying resources in Azure
 - Provisioning infrastructure in Azure
@@ -46,7 +46,7 @@ Use the **Azure Cost Optimization** skill when you need to:
 
 ## What it provides
 
-The Azure Cost Optimization skill provides GitHub Copilot with specialized knowledge. Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
+This skill provides GitHub Copilot with specialized knowledge. Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
 
 ### Related tools
 

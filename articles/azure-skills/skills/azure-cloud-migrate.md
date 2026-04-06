@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 
-**Skill:** `azure-cloud-migrate` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-cloud-migrate)
+**Skill:** `azure-cloud-migrate` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-cloud-migrate)
 
 ## Prerequisites
 

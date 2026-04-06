@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
-**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-resource-lookup)
+**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-resource-lookup)
 
 ## Prerequisites
 

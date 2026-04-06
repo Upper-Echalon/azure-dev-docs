@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Build and deploy GitHub Copilot SDK apps to Azure.
 
-**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-hosted-copilot-sdk)
+**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-hosted-copilot-sdk)
 
 ## Prerequisites
 

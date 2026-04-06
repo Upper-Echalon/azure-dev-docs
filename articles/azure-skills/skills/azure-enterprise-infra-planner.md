@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
-**Skill:** `azure-enterprise-infra-planner` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-enterprise-infra-planner)
+**Skill:** `azure-enterprise-infra-planner` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-enterprise-infra-planner)
 
 ## Prerequisites
 

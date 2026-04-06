@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
-**Skill:** `microsoft-foundry` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/microsoft-foundry)
+**Skill:** `microsoft-foundry` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/microsoft-foundry)
 
 ## Prerequisites
 

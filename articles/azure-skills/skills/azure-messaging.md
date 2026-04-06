@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
-**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-messaging)
+**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-messaging)
 
 ## Prerequisites
 

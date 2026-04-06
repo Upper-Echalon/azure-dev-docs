@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
 
-**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-cost)
+**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-cost)
 
 ## Prerequisites
 

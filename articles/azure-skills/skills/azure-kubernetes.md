@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 
-**Skill:** `azure-kubernetes` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-kubernetes)
+**Skill:** `azure-kubernetes` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-kubernetes)
 
 ## Prerequisites
 

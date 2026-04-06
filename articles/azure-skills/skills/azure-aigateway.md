@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Configure Azure API Management as an AI Gateway for AI models, Model Context Protocol (MCP) tools, and agents.
 
-**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-aigateway)
+**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-aigateway)
 
 ## Prerequisites
 

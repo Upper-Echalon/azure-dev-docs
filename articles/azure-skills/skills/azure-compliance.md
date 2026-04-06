@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
-**Skill:** `azure-compliance` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-compliance)
+**Skill:** `azure-compliance` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-compliance)
 
 ## Prerequisites
 

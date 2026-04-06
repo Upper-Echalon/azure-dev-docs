@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
-**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/appinsights-instrumentation)
+**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/appinsights-instrumentation)
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
-**Skill:** `azure-upgrade` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-upgrade)
+**Skill:** `azure-upgrade` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-upgrade)
 
 ## Prerequisites
 

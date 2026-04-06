@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), role-based access control (RBAC) role assignments, managed identity permissions, and prerequisites before deploying.
 
-**Skill:** `azure-validate` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-validate)
+**Skill:** `azure-validate` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-validate)
 
 ## Prerequisites
 

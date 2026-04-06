@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
-**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-prepare)
+**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-prepare)
 
 ## Prerequisites
 

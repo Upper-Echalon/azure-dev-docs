@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
 
-**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/entra-app-registration)
+**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/entra-app-registration)
 
 ## Prerequisites
 

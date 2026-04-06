@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 
 
-**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-AI)
+**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-ai)
 
 ## Prerequisites
 

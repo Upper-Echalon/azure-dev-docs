@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 
-**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-storage)
+**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-storage)
 
 ## Prerequisites
 

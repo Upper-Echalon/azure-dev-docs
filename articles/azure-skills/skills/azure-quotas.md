@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
-**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-quotas)
+**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-quotas)
 
 ## Prerequisites
 

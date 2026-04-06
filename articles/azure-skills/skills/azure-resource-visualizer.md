@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
-**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-resource-visualizer)
+**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-resource-visualizer)
 
 ## Prerequisites
 

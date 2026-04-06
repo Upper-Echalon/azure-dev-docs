@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
-**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-rbac)
+**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-rbac)
 
 ## Prerequisites
 

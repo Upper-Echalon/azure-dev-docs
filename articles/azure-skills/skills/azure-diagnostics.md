@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
-**Skill:** `azure-diagnostics` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-diagnostics)
+**Skill:** `azure-diagnostics` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-diagnostics)
 
 ## Prerequisites
 

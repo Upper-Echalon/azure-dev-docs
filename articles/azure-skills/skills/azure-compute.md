@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
-**Skill:** `azure-compute` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-compute)
+**Skill:** `azure-compute` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-compute)
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ ms.service: azure-mcp-server
 
 Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
-**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/GitHub-Copilot-for-Azure/tree/main/plugin/skills/azure-deploy)
+**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-deploy)
 
 ## Prerequisites
 

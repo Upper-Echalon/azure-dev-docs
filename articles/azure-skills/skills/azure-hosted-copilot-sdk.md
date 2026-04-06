@@ -29,15 +29,15 @@ Build and deploy GitHub Copilot SDK apps to Azure.
 
 Use this skill when you need to:
 
-- Build copilot app in Azure
-- Create copilot app in Azure
-- Work with copilot SDK, @github/`copilot-SDK`, scaffold copilot project, and copilot-powered app
-- Deploy copilot app in Azure
-- Work with host on azure, azure model, `Byom`, and bring your own model
-- Use my own model
-- Work with azure openai model, `DefaultAzureCredential`, self-hosted model, and copilot SDK service
-- Work with chat app with copilot, `copilot-SDK`-service template, `azd` init copilot, and `CopilotClient`
-- Work with `createSession`, `sendAndWait`, and GitHub Models API
+- Build custom copilot applications on Azure infrastructure.
+- Create and configure copilot applications.
+- Use the GitHub Copilot SDK to scaffold and build copilot-powered applications.
+- Deploy your copilot application to Azure infrastructure.
+- Host applications on Azure using Azure OpenAI models or bring your own model (BYOM).
+- Integrate your own large language model (LLM) with the Copilot SDK.
+- Configure Azure OpenAI models, managed identity authentication, and the Copilot SDK service.
+- Build chat applications using the Copilot SDK service template and the `CopilotClient` library.
+- Implement session management and message handling using the GitHub Models API.
 
 ## What it provides
 

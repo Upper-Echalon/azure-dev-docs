@@ -29,12 +29,12 @@ Architect and provision enterprise Azure infrastructure from workload descriptio
 
 Use this skill when you need to:
 
-- Plan Azure infrastructure
-- Work with architect Azure landing zone
-- Design hub-spoke network in Azure
-- Plan multi-region Dr topology
-- Set up VNets firewalls and private endpoints
-- Subscription-scope Bicep deployment'. Prefer `azure-prepare` For app-centric workflows
+- Design enterprise Azure infrastructure from high-level requirements.
+- Architect Azure landing zones with security, governance, and cost controls.
+- Design hub-and-spoke network topologies for multi-region Azure deployments.
+- Plan multi-region disaster recovery topologies.
+- Configure virtual network security with firewalls and private endpoints.
+- Deploy Bicep templates at subscription scope (for infrastructure-only workflows; use `azure-prepare` for application-centric deployments).
 
 ## What it provides
 

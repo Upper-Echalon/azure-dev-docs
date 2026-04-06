@@ -10,7 +10,7 @@ ms.service: azure-ai-dev-tools
 
 # Install and configure Azure Skills
 
-This article walks you through installing Azure Skills into your AI assistant and verifying it works. After setup, you'll be able to ask questions about your Azure resources, prepare deployment plans, and manage cloud operations—all from your chat interface.
+This article shows you how to install Azure Skills, authenticate to your Azure account, and verify the installation. After setup, you'll be able to ask questions about your Azure resources, prepare deployment plans, and manage cloud operations—all from your chat interface.
 
 ## Prerequisites
 
@@ -92,9 +92,7 @@ These commands are for **GitHub Copilot CLI**. In your Copilot CLI, install Azur
 /plugin install azure@github-copilot-for-azure
 ```
 
-These commands:
-- Register the Azure plugin marketplace with your AI assistant
-- Download and install the Azure Skills plugin (latest version from the marketplace)
+These commands perform two actions: (1) Register Microsoft's official Azure plugin marketplace, and (2) Download and install the latest version of the Azure Skills plugin.
 
 > [!NOTE]
 > For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](https://learn.microsoft.com/azure/developer/azure-mcp-server/). Refer to your platform's documentation for installing MCP servers.
@@ -117,7 +115,7 @@ After installation, confirm Azure Skills is ready to use.
 
 ## Try it out: Your first Azure Skills interaction
 
-Now that Azure Skills is installed and verified, try substantive interactions that demonstrate the power of Azure Skills automation.
+Now that Azure Skills is installed and verified, try these representative interactions that show what Azure Skills can do.
 
 Open your AI assistant's chat window and try these prompts:
 
@@ -137,7 +135,7 @@ Expected response: The assistant invokes `azure-diagnostics` to inspect your app
 
 **Set up monitoring and observability:**
 ```prompt
-Configure monitoring and alerting for my deployed application. What Application Insights should I instrument and what metrics should I track?
+Configure monitoring and alerting for my application. Which Application Insights features should I enable? What metrics should I track?
 ```
 
 Expected response: The assistant uses `azure-observability` and `appinsights-instrumentation` to propose a monitoring strategy, generate instrumentation code for your application, and configure Azure Alerts for critical metrics. It walks through the setup and provides code samples tailored to your app stack.

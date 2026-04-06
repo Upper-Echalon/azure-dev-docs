@@ -19,16 +19,16 @@ ms.service: azure-mcp-server
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash` (Azure Command-Line Interface)
 
 ## When to use this skill
 
 Use this skill when you need to:
 
-- Work with AI Search
-- Query search in Azure
-- Work with vector search, hybrid search, semantic search, and speech-to-text
-- Work with text-to-speech, transcribe, and convert text to speech
+- Query and manage Azure AI Search resources.
+- Perform full-text, vector, hybrid, and semantic search queries.
+- Execute vector, hybrid, and semantic search queries.
+- Convert speech to text and text to speech using Azure Cognitive Services.
 
 ## What it provides
 

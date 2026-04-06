@@ -23,7 +23,7 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 ### Required tools
 
 - **GitHub Copilot**
-- **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
+- **Azure CLI with Bicep** (v2.60.0+) – Install: `az bicep install`
 
 ### Required resources
 
@@ -33,10 +33,10 @@ Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL i
 
 Use this skill when you need to:
 
-- Create app registration in Azure
-- Work with register Microsoft Entra ID app
-- Configure OAuth in Azure
-- Set up authentication in Azure
+Create a Microsoft Entra ID app registration for your application.
+Register your application with Microsoft Entra ID.
+Configure OAuth 2.0 authentication flows for your registered application.
+Set up authentication and authorization for your application.
 - Add API permissions in Azure
 - Work with generate service principal, MSAL example, console app auth, and Entra ID setup
 - Work with Microsoft Entra ID authentication
@@ -53,12 +53,12 @@ This skill provides GitHub Copilot with specialized knowledge. Guides Microsoft 
 Try these prompts with GitHub Copilot to activate this skill:
 
 - "How do I create an app registration in Azure?"
-- "Register an Microsoft Entra ID app for my web application"
+- "Register a Microsoft Entra ID app for my web application"
 - "Configure OAuth authentication for my application"
 - "Set up authentication with Microsoft Entra ID"
 - "Add API permissions to my Entra app registration"
 - "Generate a service principal for Azure authentication"
-- "Show me an MSAL example for Entra authentication"
+- "Show me MSAL examples for Microsoft Entra ID authentication."
 - "Create a console app with Microsoft Entra ID authentication"
 - "Help me set up Entra ID authentication for my app"
 - "Configure Microsoft Entra ID OAuth authentication for my API"

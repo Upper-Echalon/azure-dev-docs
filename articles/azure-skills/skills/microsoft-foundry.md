@@ -30,16 +30,16 @@ Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, 
 
 Use this skill when you need to:
 
-- Deploy agent to Foundry
-- Work with hosted agent
-- Create agent in Azure
-- Work with invoke agent
-- Evaluate agent in Azure
-- Run batch eval in Azure
-- Optimize prompt in Azure
-- Work with improve prompt, prompt optimization, prompt optimizer, and improve agent instructions
-- Optimize agent instructions in Azure
-- Optimize system prompt in Azure
+- Deploy agents to Azure AI Foundry.
+- Configure and manage hosted agents.
+- Create agents in Azure AI Foundry.
+- Invoke and test agents.
+- Evaluate agent performance using Azure AI Foundry evaluators.
+- Run batch evaluations against your agents.
+- Optimize prompts for agent instructions.
+- Improve agent prompts and system instructions using the prompt optimizer.
+- Refine agent instructions for better performance.
+- Optimize system prompts for your agents.
 
 ## What it provides
 

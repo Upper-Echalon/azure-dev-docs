@@ -33,16 +33,16 @@ Unified Azure cost management: query historical costs, forecast future spending,
 
 Use this skill when you need to:
 
-- Deploying resources in Azure
-- Provisioning infrastructure in Azure
-- Work with diagnostics, security audits, Azure costs, and Azure spending
-- Work with Azure bill, cost breakdown, cost by service, and cost by resource
-- Work with monthly cost summary, cost trends, top cost drivers, and actual cost
-- Work with amortized cost, forecast spending, projected costs, and estimate bill
-- Work with future costs, budget forecast, and end of month costs
-- Optimize costs in Azure
-- Work with reduce spending
-- Find cost savings in Azure
+- Estimate costs for deploying resources to Azure.
+- Analyze costs of provisioning infrastructure.
+- Analyze diagnostics, security audits, and Azure spending patterns.
+- Review your Azure bill, costs broken down by service, and costs per resource.
+- Compare monthly cost summaries, identify cost trends, and pinpoint top cost drivers.
+- Calculate amortized costs, forecast spending, and estimate your monthly bill.
+- Plan future costs and set budget forecasts.
+- Identify and implement cost optimization strategies.
+- Find opportunities to reduce cloud spending.
+- Discover cost-saving recommendations tailored to your infrastructure.
 
 ## What it provides
 

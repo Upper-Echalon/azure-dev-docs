@@ -47,7 +47,7 @@ Open `.azure/plan.md` and review:
 - **Project Information** — Application name and deployment mode
 - **Requirements** — Classification and scale (small, medium, large)
 - **Components** — Technologies detected
-- **Recipe** — Deployment strategy (AZD, Bicep, Terraform, or Azure CLI)
+- **Deployment Strategy** — Technology used to deploy your application (Azure Developer CLI, Bicep, Terraform, or Azure CLI).
 - **Architecture** — Azure services selected
 - **Implementation Plan** — Step-by-step tasks
 
@@ -190,7 +190,7 @@ If you make code changes, redeploy easily:
    ```bash
    Update the deployment with my latest changes
    ```
-3. The skill runs azure-prepare to check for changes, then azure-deploy to update
+3. The skill runs `azure-prepare` to check for changes, then `azure-deploy` to update your resources.
 
 Updated resources reuse existing infrastructure. Only changed components redeploy.
 

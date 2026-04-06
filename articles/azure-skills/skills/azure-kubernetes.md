@@ -56,7 +56,7 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 
 - **AKS Automatic** (default): Best for most production workloads, provides a curated experience with pre-configured best practices for security, reliability, and performance. Use unless you have specific custom requirements for networking, autoscaling, or node pool configurations not supported by Node Auto-Provisioning (NAP).
 - **AKS Standard**: Use if you need full control over environment configuration, which requires additional overhead to set up and manage.
-- **Azure CNI Overlay** (recommended): pod IPs from private overlay range, not virtual network (VNet)-routable, scales to large environments and good for most workloads
+- **Azure CNI Overlay** (recommended): Uses private IP addresses for pods (not routable from the virtual network), scales to large environments, and works well for most production workloads.
 - **Azure CNI (VNet-routable)**: pod IPs directly from VNet (pod subnet or node subnet), use when pods must be directly addressable from VNet or on-prem
 - **Azure CNI powered by Cilium** (recommended): eBPF-based for high-performance packet processing, network policies, and observability
 - **Static Egress Gateway** for stable, predictable outbound IPs
@@ -93,7 +93,7 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 - Configure **PodDisruptionBudgets** for all production workloads
 - Use **topology spread constraints** to ensure pod distribution across failure domains
 - Use **Spot node pools** for batch/interruptible workloads (up to 90% savings)
-- **Stop/Start** `dev/test` clusters: `az aks stop/start`
+- **Stop/Start development and test clusters** to reduce costs: `az aks stop` and `az aks start`
 - Consider **Reserved Instances** or **Savings Plans** for steady-state workloads
 
 ## Example triggers

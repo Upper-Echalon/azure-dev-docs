@@ -29,14 +29,14 @@ Assess and migrate cross-cloud workloads to Azure with migration reports and cod
 
 Use this skill when you need to:
 
-- Migrate Lambda to Azure Functions
-- Migrate AWS to Azure
-- Work with Lambda migration assessment
-- Convert AWS serverless to Azure
-- Work with migration readiness report
-- Migrate from AWS in Azure
-- Migrate from GCP in Azure
-- Work with cross-cloud migration
+- Migrate AWS Lambda functions to Azure Functions.
+- Plan and execute migrations of AWS infrastructure to Azure.
+- Perform readiness assessments for Lambda function migrations.
+- Convert AWS serverless architectures to Azure Compute services.
+- Generate migration readiness reports.
+- Execute migrations from AWS to Azure Cloud.
+- Execute migrations from Google Cloud Platform to Azure.
+- Plan migrations across multiple cloud providers to Azure.
 
 ## What it provides
 

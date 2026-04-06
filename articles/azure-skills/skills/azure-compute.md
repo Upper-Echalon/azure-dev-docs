@@ -29,13 +29,13 @@ Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recom
 
 Use this skill when you need to:
 
-- Work with Azure VM and Virtual machine scale set (VMSS)
-- Scale set in Azure
-- Work with server, website, burstable, and lightweight
-- Work with VM family, workload, `dev/test`, and back end
+- Create and manage Azure virtual machines (VMs) and virtual machine scale sets (VMSS).
+- Configure autoscaling for virtual machine scale sets.
+- Select appropriate VM SKUs for your workload (server, web hosting, burstable compute, or lightweight).
+- Optimize VM selection for different workloads, including development/test scenarios and back-end services.
 - Work with autoscale, load balancer, Flexible orchestration, and Uniform orchestration
 - Work with cost estimate, Linux, black screen, and reset password
-- Work with reach VM and port 3389
+- Configure remote desktop connectivity (RDP port 3389) for Windows virtual machines.
 
 ## What it provides
 

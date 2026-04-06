@@ -29,16 +29,16 @@ Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Ser
 
 Use this skill when you need to:
 
-- Work with event hub SDK error, service bus SDK issue, messaging connection failure, and `Amqp` error
-- Work with event processor host issue, message lock lost, message lock expired, and lock renewal
+- Troubleshoot Event Hubs SDK errors, Service Bus SDK issues, and messaging connection failures (including AMQP protocol errors).
+- Resolve event processor host issues, message lock expiration, and lock renewal failures.
 - Work with lock renewal batch, send timeout, receiver disconnected, and SDK troubleshooting
-- Work with azure messaging SDK, event hub consumer, service bus queue issue, and topic subscription error
-- Enable logging event hub
-- Work with service bus logging, `eventhub` python, `servicebus` java, and `eventhub` javascript
-- Work with `servicebus` dotnet and event hub checkpoint
+- Debug Azure Messaging SDK problems affecting Event Hubs consumers, Service Bus queues, and topic subscriptions.
+- Enable and configure logging for Event Hubs.
+- Set up logging for Service Bus and configure SDK logging in Python, Java, and JavaScript.
+- Configure .NET Service Bus clients and manage Event Hubs checkpoints.
 - Event hub not receiving messages
-- Work with service bus dead letter, batch processing lock, session lock expired, and idle timeout
-- Work with connection inactive, link detach, slow reconnect, and session error
+- Handle dead-letter messages, resolve batch processing locks, and troubleshoot session timeouts.
+- Address inactive connections, link detachment, slow reconnection, and session errors.
 
 ## What it provides
 
@@ -50,7 +50,7 @@ This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and 
 |------|---------|---------|
 | `mcp_azure_mcp_eventhubs` | `Namespace/hub ops` | List namespaces, hubs, consumer groups |
 | `mcp_azure_mcp_servicebus` | `Queue/topic ops` | List namespaces, queues, topics, subscriptions |
-| `mcp_azure_mcp_monitor` | ``logs_query`` | Query diagnostic logs with KQL |
+| `mcp_azure_mcp_monitor` | `logs_query` | Query diagnostic logs with KQL |
 | `mcp_azure_mcp_resourcehealth` | ``get`` | Check service health status |
 | `mcp_azure_mcp_documentation` | `Doc search` | Search Microsoft Learn for troubleshooting docs |
 

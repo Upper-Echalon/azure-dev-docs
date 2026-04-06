@@ -1,4 +1,4 @@
-﻿---
+---
 title: Azure skill for App Insights instrumentation
 description: Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 ms.topic: reference

@@ -232,8 +232,8 @@
         "typespec/**/*.yml": "typespec",
         "rust/**/*.md": "azure-rust",
         "rust/**/*.yml": "azure-rust",
-        "ai-dev-tools/**/*.md": "azure-ai-dev-tools",
-        "ai-dev-tools/**/*.yml": "azure-ai-dev-tools"
+        "ai-dev-tools/**/*.md": "azure-mcp-server",
+        "ai-dev-tools/**/*.yml": "azure-mcp-server"
       },
       "ms.subservice": {
         "ai/**/*.md": "intelligent-apps",

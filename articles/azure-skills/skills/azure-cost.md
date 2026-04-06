@@ -1,6 +1,6 @@
 ---
 title: Azure skill for cost optimization
-description: Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
+description: "Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste."
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry

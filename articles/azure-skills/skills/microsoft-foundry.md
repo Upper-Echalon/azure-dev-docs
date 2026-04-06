@@ -1,6 +1,6 @@
 ---
 title: Azure skill for Microsoft Foundry
-description: Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
+description: "Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted and prompt agent create, container start, batch eval, prompt optimization, and dataset curation from traces."
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry

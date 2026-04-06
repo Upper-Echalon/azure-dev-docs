@@ -1,6 +1,6 @@
-﻿---
+---
 title: Azure skill for AI Services
-description: 
+description: Azure AI Services including AI Search, Speech, OpenAI, and Document Intelligence.
 ms.topic: reference
 ms.date: 4/2/2026
 author: diberry

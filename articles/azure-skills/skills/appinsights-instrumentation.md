@@ -1,5 +1,5 @@
----
-title: App Insights Instrumentation
+﻿---
+title: App Insights Instrumentation skill
 description: Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 ms.topic: reference
 ms.date: 4/2/2026
@@ -8,7 +8,7 @@ ms.author: diberry
 ms.service: azure-mcp-server
 ---
 
-# App Insights Instrumentation
+# App Insights Instrumentation skill
 
 Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
@@ -19,10 +19,6 @@ Guidance for instrumenting webapps with Azure Application Insights. Provides tel
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **PowerShell** (v7.4+)—Install: `winget install Microsoft.PowerShell`
 - **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
 
@@ -40,7 +36,7 @@ The App Insights Instrumentation skill provides GitHub Copilot with specialized 
 
 
 
-## Example triggers
+## Example prompts
 
 Try these prompts with GitHub Copilot to activate this skill:
 

@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Azure skill for cost optimization
 
-Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste.
+Analyze and optimize your Azure spending with historical cost queries, spending forecasts, and actionable cost-reduction recommendations.
 
 **Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-cost)
 
@@ -39,18 +39,17 @@ Use this skill when you need to:
 
 ## What it provides
 
-This skill enables GitHub Copilot to query historical Azure costs, forecast future spending, and identify optimization opportunities to reduce waste.
+This skill gives GitHub Copilot access to Azure Cost Management APIs and optimization best practices. It can analyze your current spending, project future costs, and suggest specific ways to reduce waste.
 
 ### Related tools
 
 | Tool | Command | Purpose |
 |------|---------|---------|
-| `azure__documentation` | `Search Azure documentation` | `query` (Required): search terms |
-| `azure__extension_cli_generate` | `Generate Azure CLI commands` | `intent` (Required): task description, `cli-type` (Required): `"az"` |
-| `azure__get_azure_bestpractices` | `Get Azure best practices` | `intent` (Required): optimization context |
-| `azure__extension_azqr` | `Run Azure Quick Review compliance scan` | `subscription` (Required): subscription ID, `resource-group` (Optional): resource group name |
-| `azure__aks` | `Azure Kubernetes Service operations` | varies by sub-command |
-
+| `azure__documentation` | Search Azure documentation | Search for relevant Azure documentation by keyword |
+| `azure__extension_cli_generate` | Generate Azure CLI commands | Generate Azure CLI commands from a natural-language description |
+| `azure__get_azure_bestpractices` | Get Azure best practices | Retrieve best practices for a specific optimization scenario |
+| `azure__extension_azqr` | Run Azure Quick Review | Run a compliance scan against a subscription or resource group |
+| `azure__aks` | Azure Kubernetes Service operations | Manage Azure Kubernetes Service clusters and workloads |
 
 ## Related content
 

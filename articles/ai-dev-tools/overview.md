@@ -1,6 +1,6 @@
 ---
 title: Azure AI Tools overview
-description: Learn about Azure AI Tools — a collection of AI-powered developer tools including GitHub Copilot for Azure, Azure MCP Server, and Azure Skills that help you build, deploy, and manage Azure applications using natural language.
+description: Azure AI Tools helps you build, deploy, and manage Azure applications with natural language through GitHub Copilot for Azure, Azure MCP Server, and Azure Skills.
 author: diberry
 ms.author: diberry
 ms.date: 04/02/2026
@@ -20,7 +20,7 @@ Building on Azure typically requires navigating portal UIs, reading documentatio
 Azure AI Tools eliminates this friction by bringing Azure directly into your development workflow:
 
 - **Reduce context switching:** Ask questions about Azure services, manage resources, and deploy applications without leaving your IDE or terminal.
-- **Accelerate onboarding:** New team members can discover and use Azure services through natural language instead of memorizing CLI commands, portal navigation, or ARM/Bicep syntax.
+- **Accelerate onboarding:** New team members can discover and use Azure services through natural language. They do not need to memorize CLI commands, portal navigation, or ARM/Bicep syntax.
 - **Enforce best practices automatically:** Azure Skills embed guardrails and proven patterns into every workflow. Deployments follow organizational standards without manual review checklists.
 - **Work where you already are:** Whether you use VS Code, Visual Studio, Cursor, IntelliJ, or a CLI, Azure AI Tools meets you in your existing environment.
 
@@ -28,9 +28,9 @@ Azure AI Tools eliminates this friction by bringing Azure directly into your dev
 
 | Tool | What it does | Best for |
 |---|---|---|
-| [GitHub Copilot for Azure](../github-copilot-azure/introduction.md) | VS Code and Visual Studio extension that surfaces Azure tools, skills, and instruction files through GitHub Copilot | Developers who want an integrated IDE experience with Azure-specific guidance |
-| [Azure MCP Server](../azure-mcp-server/overview.md) | Standalone MCP server providing 35+ Azure service tools with Entra ID auth and RBAC | Developers who want Azure tools in any MCP-compatible client (VS Code, Cursor, Windsurf, IntelliJ, CLI) |
-| [Azure Skills](../azure-skills/overview.md) | Domain-specific knowledge modules that provide end-to-end workflows with guardrails for common Azure scenarios | Developers who want guided, best-practice workflows for deployment, security, diagnostics, and more |
+| [GitHub Copilot for Azure](../github-copilot-azure/introduction.md) | Extension that surfaces Azure tools and skills through GitHub Copilot | Integrated IDE experience in VS Code or Visual Studio |
+| [Azure MCP Server](../azure-mcp-server/overview.md) | Standalone MCP server with 35+ Azure tools and Microsoft Entra ID authentication | Azure tools in any MCP-compatible client |
+| [Azure Skills](../azure-skills/overview.md) | Knowledge modules that provide end-to-end workflows with guardrails | Guided, best-practice Azure workflows |
 
 ## Choose the right tool
 
@@ -44,9 +44,9 @@ Use the following decision flow to determine which Azure AI Tool best fits your 
    - Yes → **[GitHub Copilot for Azure (Visual Studio extension)](../github-copilot-azure/introduction.md)** — The only option for Visual Studio today.
    - No → Continue to step 3.
 
-3. **Do you want interactive Azure tooling (ask questions, get answers)?**
-   - Yes, and you want the VS Code extension experience → **[GitHub Copilot for Azure (VS Code extension)](../github-copilot-azure/introduction.md)**.
-   - Yes, and you want IDE flexibility (Cursor, IntelliJ, Windsurf, etc.) → **[Azure MCP Server (local)](../azure-mcp-server/overview.md)**.
+3. **Do you want interactive Azure tooling?**
+   - Yes, in VS Code → **[GitHub Copilot for Azure](../github-copilot-azure/introduction.md)**.
+   - Yes, in another IDE such as Cursor, IntelliJ, or Windsurf → **[Azure MCP Server](../azure-mcp-server/overview.md)**.
    - No → Continue to step 4.
 
 4. **Do you want end-to-end Azure workflows with guardrails and best practices?**
@@ -82,7 +82,7 @@ Azure AI Tools uses a layered architecture to connect your development environme
 | Deploy an application | Azure Skills (azure-deploy) | "Deploy my app to Azure" |
 | Troubleshoot a failing app | GitHub Copilot for Azure + Azure MCP Server | "Why is my app returning 500 errors?" |
 | Query resources across subscriptions | Azure MCP Server | "Show me all VMs across my subscriptions" |
-| Set up E2E deployment pipeline | Azure Skills (azure-prepare → azure-validate → azure-deploy) | "Prepare and deploy my Node.js app to Azure" |
+| Set up end-to-end deployment pipeline | Azure Skills (azure-prepare, azure-validate, azure-deploy) | "Prepare and deploy my Node.js app to Azure" |
 
 ## Related content
 

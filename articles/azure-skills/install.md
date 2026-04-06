@@ -1,6 +1,6 @@
 ---
 title: Install and configure Azure Skills
-description: Prerequisites, installation steps, and configuration options for Azure Skills plugin.
+description: Learn how to install, authenticate, and configure the Azure Skills plugin for your AI assistant.
 ms.topic: how-to
 ms.date: 03/16/2026
 author: diberry
@@ -10,7 +10,7 @@ ms.service: azure-mcp-server
 
 # Install and configure Azure Skills
 
-This article shows you how to install Azure Skills, authenticate to your Azure account, and verify the installation. After setup, you'll be able to ask questions about your Azure resources, prepare deployment plans, and manage cloud operations—all from your chat interface.
+This article shows you how to install Azure Skills, authenticate to your Azure account, and verify the installation. After setup, you can ask questions about your Azure resources, prepare deployment plans, and manage cloud operations from your chat interface.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ Azure Skills picks up these environment variables automatically.
 
 ### [Managed identity](#tab/managed-identity)
 
-If you're running Azure Skills on an Azure resource (VM, Container Apps, Azure Functions), managed identity handles authentication automatically. No manual setup needed.
+If you run Azure Skills on an Azure resource such as a virtual machine, Container Apps, or Azure Functions, managed identity handles authentication automatically. Managed identity requires no manual setup.
 
 For more details, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
@@ -92,7 +92,7 @@ In GitHub Copilot CLI, install Azure Skills from the plugin marketplace:
 /plugin install azure@github-copilot-for-azure
 ```
 
-These commands perform two actions: (1) Register Microsoft's official Azure plugin marketplace, and (2) Download and install the latest version of the Azure Skills plugin.
+The first command registers Microsoft's official Azure plugin marketplace. The second command downloads and installs the latest version of the Azure Skills plugin.
 
 > [!NOTE]
 > For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](../azure-mcp-server/overview.md). Refer to your platform's documentation for installing MCP servers.
@@ -105,7 +105,7 @@ After installation, confirm Azure Skills is ready to use.
    ```bash
    /plugin list
    ```
-   You should see `azure (github-copilot-for-azure)` in the output, with a list of available skills.
+   The output includes `azure (github-copilot-for-azure)` and a list of available skills.
 
 2. Test with a quick command:
    ```bash
@@ -113,9 +113,9 @@ After installation, confirm Azure Skills is ready to use.
    ```
    Your AI assistant queries your Azure account and displays your subscriptions. The response shows subscription names, IDs, and status.
 
-## Try it out: Your first Azure Skills interaction
+## Try Azure Skills
 
-Now that Azure Skills is installed and verified, try these representative interactions that show what Azure Skills can do.
+Now that Azure Skills is installed and verified, try these prompts to explore what Azure Skills can do.
 
 Open your AI assistant's chat window and try these prompts:
 
@@ -124,7 +124,7 @@ Open your AI assistant's chat window and try these prompts:
 Analyze my project structure and prepare a deployment plan for deploying to Azure. What infrastructure do I need and how should I set it up?
 ```
 
-Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase, generate infrastructure-as-code templates, and create a detailed deployment plan at `.azure/plan.md`. It considers your project type, dependencies, and best practices. The assistant then asks for your approval before proceeding.
+Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase and generate infrastructure-as-code templates. It creates a detailed deployment plan at `.azure/plan.md`. The plan considers your project type, dependencies, and best practices. The assistant then asks for your approval before proceeding.
 
 **Diagnose an Azure resource health issue:**
 ```prompt
@@ -201,16 +201,9 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 - Verify the subscription ID or name is correct
 - Check that your credentials have access to the subscription
 
-## Next steps
-
-- [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
-- [Azure Skills overview](overview.md) — Learn what each skill does
-- [Azure MCP Server documentation](../azure-mcp-server/overview.md) — Understand the underlying Azure integration
-
 ## Related content
 
-- [Overview of Azure Skills](overview.md) — Understand the business value and capabilities of Azure Skills
-- [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
-- [Azure Skills overview](overview.md) — Learn what each skill does
-- [GitHub Copilot for Azure](/azure/copilot/overview) — Learn about GitHub Copilot's Azure integration features
-- [Azure MCP Server get started guide](../azure-mcp-server/get-started.md) — Connect Azure MCP Server to your development tools
+- [Get started with Azure Skills](quickstart.md)
+- [Overview of Azure Skills](overview.md)
+- [GitHub Copilot for Azure](/azure/copilot/overview)
+- [Azure MCP Server get started guide](../azure-mcp-server/get-started.md)

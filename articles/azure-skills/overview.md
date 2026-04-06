@@ -3,7 +3,7 @@ title: What is Azure Skills?
 description: Connect your AI assistant to Azure to manage resources, deploy apps, and monitor services without leaving your editor.
 author: diberry
 ms.author: diberry
-ms.service: azure-ai-dev-tools
+ms.service: azure-mcp-server
 ms.topic: overview
 ms.date: 03/16/2026
 
@@ -50,5 +50,5 @@ This structured approach keeps deployments safe and auditable. You always review
 
 - [Install and configure Azure Skills](install.md) — Detailed setup instructions and authentication options.
 - [Get started with Azure Skills](quickstart.md) — Hands-on walkthrough for your first deployment.
-- [Azure Skills reference](skills-reference.md) — Full documentation of all 18 skills and their capabilities.
-- [Azure MCP Server](https://learn.microsoft.com/azure/developer/azure-mcp-server/) — Technical documentation for the underlying Azure integration.
+- [Azure Skills overview](overview.md) — Full documentation of all 18 skills and their capabilities.
+- [Azure MCP Server](../azure-mcp-server/overview.md) — Technical documentation for the underlying Azure integration.

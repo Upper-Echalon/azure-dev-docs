@@ -16,20 +16,12 @@ landingContent:
         links:
           - text: Overview
             url: ../azure-skills/overview.md
-      - linkListType: concept
-        links:
-          - text: Key concepts
-            url: ../azure-skills/concepts.md
       - linkListType: get-started
         links:
           - text: Install and configure
             url: ../azure-skills/install.md
           - text: Quickstart
             url: ../azure-skills/quickstart.md
-      - linkListType: reference
-        links:
-          - text: Skills reference
-            url: ../azure-skills/skills-reference.md
   - title: Azure MCP Server
     linkLists:
       - linkListType: overview

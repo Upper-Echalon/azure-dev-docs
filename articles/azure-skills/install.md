@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.date: 03/16/2026
 author: diberry
 ms.author: diberry
-ms.service: azure-ai-dev-tools
+ms.service: azure-mcp-server
 ---
 
 # Install and configure Azure Skills
@@ -18,11 +18,11 @@ Make sure you have:
 
 - **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
-- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/overview.md), Claude Code, or another platform that supports Azure Skills plugins
-- **Azure CLI** (optional) — Simplifies authentication during local development. [Install Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli).
+- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another platform that supports Azure Skills plugins
+- **Azure CLI** (optional) — Simplifies authentication during local development. [Install Azure CLI](/cli/azure/install-azure-cli).
 
 > [!NOTE]
-> Azure Skills uses the same authentication patterns as [Azure MCP Server](../../developer/azure-mcp-server/overview.md). If you're already authenticated for Azure MCP Server, Azure Skills can use those same credentials.
+> Azure Skills uses the same authentication patterns as [Azure MCP Server](../azure-mcp-server/overview.md). If you're already authenticated for Azure MCP Server, Azure Skills can use those same credentials.
 
 ## Authenticate to Azure
 
@@ -33,7 +33,7 @@ Azure Skills needs credentials to access your Azure resources. Choose the authen
 This is the easiest method for local development and testing.
 
 1. **Install Azure CLI:**
-   - Visit the [Azure CLI installation guide](https://learn.microsoft.com/cli/azure/install-azure-cli)
+   - Visit the [Azure CLI installation guide](/cli/azure/install-azure-cli)
    - Or use a package manager: `brew install azure-cli` (macOS), `apt-get install azure-cli` (Linux)
 
 2. **Sign in to Azure:**
@@ -50,7 +50,7 @@ This is the easiest method for local development and testing.
 
 ### [Environment variables](#tab/environment-variables)
 
-Use environment variables when you need to authenticate in scripts, CI/CD pipelines, or environments where the Azure CLI isn't available. You'll need a [service principal](https://learn.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
+Use environment variables when you need to authenticate in scripts, CI/CD pipelines, or environments where the Azure CLI isn't available. You'll need a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli).
 
 **Bash or Zsh:**
 ```bash
@@ -79,7 +79,7 @@ Azure Skills picks up these environment variables automatically.
 
 If you're running Azure Skills on an Azure resource (VM, Container Apps, Azure Functions), managed identity handles authentication automatically. No manual setup needed.
 
-For more details, see [Azure managed identities](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview).
+For more details, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
 ---
 
@@ -95,7 +95,7 @@ In GitHub Copilot CLI, install Azure Skills from the plugin marketplace:
 These commands perform two actions: (1) Register Microsoft's official Azure plugin marketplace, and (2) Download and install the latest version of the Azure Skills plugin.
 
 > [!NOTE]
-> For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](https://learn.microsoft.com/azure/developer/azure-mcp-server/). Refer to your platform's documentation for installing MCP servers.
+> For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](../azure-mcp-server/overview.md). Refer to your platform's documentation for installing MCP servers.
 
 ## Verify installation
 
@@ -144,11 +144,11 @@ Expected response: The assistant uses `azure-observability` and `appinsights-ins
 
 Azure Skills is available across these platforms:
 
-- **[GitHub Copilot CLI](../github-copilot-azure/overview.md)** — Full integration with GitHub Copilot tools
+- **[GitHub Copilot CLI](../github-copilot-azure/introduction.md)** — Full integration with GitHub Copilot tools
 - **Claude Code** — Through the MCP protocol  
 - **Other MCP-compatible AI assistants** — Any tool that supports the Model Context Protocol
 
-For a complete list of tools that support Azure integration, see [Azure MCP Server supported tools](../../developer/azure-mcp-server/get-started.md#connect-to-azure-mcp-server).
+For a complete list of tools that support Azure integration, see [Azure MCP Server supported tools](../azure-mcp-server/get-started.md#connect-to-azure-mcp-server).
 
 ## Configuration options
 
@@ -188,7 +188,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 **Problem:** Your Azure account doesn't have permissions for an operation.
 
 **Solutions:**
-- Check your [Azure RBAC role assignments](https://learn.microsoft.com/azure/role-based-access-control/role-assignments-list-portal)
+- Check your [Azure RBAC role assignments](/azure/role-based-access-control/role-assignments-list-portal)
 - Request additional roles from your Azure administrator
 - Use a different subscription where you have higher permissions
 
@@ -204,13 +204,13 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 ## Next steps
 
 - [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
-- [Azure Skills reference](skills-reference.md) — Learn what each skill does
-- [Azure MCP Server documentation](https://learn.microsoft.com/azure/developer/azure-mcp-server/) — Understand the underlying Azure integration
+- [Azure Skills overview](overview.md) — Learn what each skill does
+- [Azure MCP Server documentation](../azure-mcp-server/overview.md) — Understand the underlying Azure integration
 
 ## Related content
 
 - [Overview of Azure Skills](overview.md) — Understand the business value and capabilities of Azure Skills
 - [Get started with Azure Skills](quickstart.md) — Complete a hands-on deployment walkthrough
-- [Azure Skills reference](skills-reference.md) — Learn what each skill does
+- [Azure Skills overview](overview.md) — Learn what each skill does
 - [GitHub Copilot for Azure](/azure/copilot/overview) — Learn about GitHub Copilot's Azure integration features
-- [Azure MCP Server get started guide](../../developer/azure-mcp-server/get-started.md) — Connect Azure MCP Server to your development tools
+- [Azure MCP Server get started guide](../azure-mcp-server/get-started.md) — Connect Azure MCP Server to your development tools

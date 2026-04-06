@@ -5,7 +5,7 @@ ms.topic: quickstart
 ms.date: 03/16/2026
 author: diberry
 ms.author: diberry
-ms.service: azure-ai-dev-tools
+ms.service: azure-mcp-server
 ---
 
 # Get started with Azure Skills
@@ -250,6 +250,4 @@ Why did validation fail? Fix the errors.
 
 ## Next steps
 
-- [Key concepts in Azure Skills](concepts.md) — Understand how skills work
-- [Azure Skills reference](skills-reference.md) — Explore all 18 available skills
-- [Azure MCP Server documentation](https://learn.microsoft.com/azure/developer/azure-mcp-server/) — Deeper technical details
+- [Azure MCP Server documentation](../azure-mcp-server/overview.md) — Deeper technical details

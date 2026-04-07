@@ -25,7 +25,7 @@ Azure Container Apps is a fully managed serverless container platform for buildi
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
 
-## Get Azure container appses
+## List container apps
 
 <!-- @mcpcli containerapps list -->
 

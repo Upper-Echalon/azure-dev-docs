@@ -1,15 +1,15 @@
 ---
 
-title: Azure MCP Server tools for Azure Deploy
-description: Use Azure MCP Server tools to manage deployments and deployment pipelines for Azure applications and infrastructure with natural language prompts from your IDE.
-ms.date: 04/06/2026
-ms.service: azure-mcp-server
-ms.topic: concept-article
-tool_count: 5
-mcp-cli.version: 2.0.0-beta.38+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
+title: Azure MCP Server tools for Azure Deploy
+description: Use Azure MCP Server tools to manage deployments and deployment pipelines for Azure applications and infrastructure with natural language prompts from your IDE.
+ms.date: 04/06/2026
+ms.service: azure-mcp-server
+ms.topic: concept-article
+tool_count: 5
+mcp-cli.version: 2.0.0-beta.38+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
 author: diberry
 ms.author: diberry
-ms.reviewer: mbaldwin
+ms.reviewer: qianwens
 ai-usage: ai-generated
 ms.custom: build-2025
 content_well_notification:
@@ -18,7 +18,7 @@ content_well_notification:
 
 # Azure MCP Server tools for Azure Deploy
 
-The Azure MCP Server lets you manage Azure Deploy tasks, including: operations to generate architecture diagrams and get app logs, get deploy plans, get IaC rules, and get pipeline guidance, with natural language prompts.
+The Azure MCP Server helps you manage Azure Deploy tasks. These tasks include operations that generate architecture diagrams, get app logs, retrieve deploy plans, fetch IaC rules, and provide pipeline guidance, all through natural language prompts.
 
 Azure Deploy is a set of tools that help you plan, validate, and monitor deployments to Azure resources. For more information, see [Azure Deploy documentation](/azure/azure-resource-manager/).
 
@@ -39,7 +39,7 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Azd env name** |  Required | The environment name created by the Azure Developer CLI (azd) and stored in AZURE_ENV_NAME during `azd init` or `azd up`. If not provided, in context, this tool checks the .azure directory in the workspace, or run `azd env list`. |
+| **AZD env name** |  Required | The environment name created by the Azure Developer CLI (azd) and stored in AZURE_ENV_NAME during `azd init` or `azd up`. If not provided, in context, this tool checks the .azure directory in the workspace, or run `azd env list`. |
 | **Workspace folder** |  Required | The full path to the workspace folder that contains the azd project. |
 | **Limit** |  Optional | The maximum number of log rows to retrieve. Use it to limit results or avoid exceeding token limits. Default is 200. |
 
@@ -51,7 +51,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli deploy architecture diagram generate -->
 
-This tool is part of the Model Context Protocol (MCP) toolset. Generates an Azure service architecture diagram that shows recommended Azure services and their logical connections for an application. This tool renders the diagram from an application topology (AppTopology) provided as input. You provide an AppTopology that describes services, compute hosts, dependencies, and environment settings. You can build the AppTopology by scanning the workspace to detect services, frameworks, and environment variables for connection strings, and for .NET Aspire applications, include aspireManifest.json. The diagram focuses on service selection and connections. It doesn't show detailed network topology or security design.
+This tool is part of the Model Context Protocol (MCP) toolset. It generates an Azure service architecture diagram that shows recommended Azure services and their logical connections for an application. This tool renders the diagram from an application topology (AppTopology) provided as input. You provide an AppTopology that describes services, compute hosts, dependencies, and environment settings. You can build the AppTopology by scanning the workspace to detect services, frameworks, and environment variables for connection strings. For .NET Aspire applications, include `aspireManifest.json`. The diagram focuses on service selection and connections. It doesn't show detailed network topology or security design.
 
 Example prompts include:
 
@@ -65,7 +65,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Get iac rules
+## Get IaC rules
 
 <!-- @mcpcli deploy iac rules get -->
 
@@ -78,7 +78,7 @@ Example prompts include:
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Deployment tool** |  Required | The deployment tool to use. Valid values: `AzCli`, `AZD`. |
-| **Iac type** |  Optional | The type of IaC file used for deployment. Valid values: bicep, terraform. Leave empty ONLY if user wants to use AzCli command script and no IaC file. |
+| **IaC type** |  Optional | The type of IaC file used for deployment. Valid values: bicep, terraform. Leave empty ONLY if user wants to use AzCli command script and no IaC file. |
 | **Resource types** |  Optional | List of Azure resource types to generate rules for. Get the value from context and use the same resources defined in plan. Valid value: 'appservice','containerapp','function','aks','azuredatabaseforpostgresql','azuredatabaseformysql','azuresqldatabase','azurecosmosdb','azurestorageaccount','azurekeyvault'. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
@@ -95,7 +95,7 @@ Examples
 
 <!-- @mcpcli deploy pipeline guidance get -->
 
-This Model Context Protocol (MCP) tool generates CI/CD pipeline configuration and step-by-step guidance to deploy an application to Azure using GitHub Actions or Azure DevOps pipelines. It supports Azure Developer CLI (azd) and Azure CLI–based deployments, and it can generate pipelines that provision infrastructure and deploy application code.
+This Model Context Protocol (MCP) tool generates CI/CD pipeline configuration and step-by-step guidance to deploy an application to Azure by using GitHub Actions or Azure DevOps pipelines. It supports Azure Developer CLI (azd) and Azure CLI–based deployments. It can generate pipelines that provision infrastructure and deploy application code.
 
 Choose GitHub Actions or Azure DevOps, decide whether the pipeline should only deploy or also provision infrastructure, and confirm whether the project uses azd (for example, `an azure.yaml file is present`). Specify `deploy-only` or `provision-and-deploy`, and set `Is azd project` to `true` only if the project uses azd tooling and an azure.yaml file is available.
 
@@ -105,8 +105,8 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Deploy option** |  Required | Valid values: deploy-only, provision-and-deploy. Default to deploy-only. Set to 'provision-and-deploy' ONLY WHEN user explicitly wants infra provisioning pipeline using local provisioning scripts. |
-| **Is azd project** |  Required | Whether to use azd tool in the deployment pipeline. Set to `true` ONLY if azure.yaml is provided or the context suggests AZD tools. |
+| **Deploy option** |  Required | Valid values: deploy-only, provision-and-deploy. Default to deploy-only. Set to 'provision-and-deploy' only when you explicitly want an infra provisioning pipeline that uses local provisioning scripts. |
+| **Is azd project** |  Required | Whether to use azd tool in the deployment pipeline. Set to `true` only if azure.yaml is provided or the context suggests AZD tools. |
 | **Pipeline platform** |  Required | The platform for the deployment pipeline. Valid values: github-actions, azure-devops. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):

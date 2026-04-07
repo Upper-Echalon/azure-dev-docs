@@ -1,37 +1,44 @@
 ---
-title: Azure Well-Architected Framework tools for architecture guidance
-description: Use Azure MCP Server tools to get Azure Well-Architected Framework guidance, best practices, and recommendations for Azure services from your IDE.
-#customer intent: As a developer, I want to get Well-Architected Framework guidance for Azure services so I can follow architectural best practices.
-ms.date: 03/11/2026
+title: Azure MCP Server tools for Azure Well-Architected Framework
+description: Use Azure MCP Server tools to get Azure Well-Architected Framework guidance, best practices, and recommendations for Azure services with natural language prompts from your IDE.
+author: diberry
+ms.author: diberry
 ms.service: azure-mcp-server
 ms.topic: concept-article
-ms.reviewer: skakara
+ms.date: 03/27/2026
+reviewer: skakara
+content_well_notification:
+  - AI-contribution
+ai-usage: ai-assisted
 tool_count: 1
+mcp-cli.version: 2.0.0-beta.33
 ---
 
-# Azure Well-Architected Framework tools for the Azure MCP Server overview
+# Azure MCP Server tools for Azure Well-Architected Framework
 
-The MCP Server lets you get Azure Well-Architected Framework guidance, best practices, and recommendations for Azure services with natural language prompts.
+The Azure Model Context Protocol (MCP) Server lets you get Azure Well-Architected Framework guidance, best practices, and recommendations for Azure services with natural language prompts.
 
-Azure Well-Architected Framework is a set of guiding tenets that enable you to optimize your workloads across five pillars: reliability, security, cost optimization, operational excellence, and performance efficiency. For more information, see [Azure Well-Architected Framework documentation](/azure/architecture/framework/).
+Azure Well-Architected Framework is a set of guiding tenets that help you design, build, and optimize workloads across five pillars: reliability, security, cost optimization, operational excellence, and performance efficiency; for more information, see [Azure Well-Architected Framework documentation](/azure/architecture/framework/).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Get service guide
+## Get Well-Architected Framework service guide
 
 <!-- @mcpcli wellarchitectedframework serviceguide get -->
 
-Get Azure Well-Architected Framework guidance for a specific Azure service. This tool returns architectural best practices, design patterns, and recommendations based on the five pillars: reliability, security, cost optimization, operational excellence, and performance efficiency. Specify an Azure service name such as `App Service`, `SQL Database`, or `Cosmos DB`.
+This tool retrieves Azure Well-Architected Framework guidance for a specific Azure service, or lists all supported services when no service is specified. When you provide a service, the tool returns architectural best practices, design patterns, and recommendations across the five pillars: reliability, security, cost optimization, operational excellence, and performance efficiency.
 
 Example prompts include:
-- "Get Well-Architected Framework guidance for `SQL Database`."
-- "What is the WAF guidance for `App Service`?"
-- "Show me the best practices for `Storage Accounts`."
-- "What is the architectural guidance for `Azure Functions`?"
 
-| Parameter | Required or optional | Description |
+- "Show all services with Well-Architected Framework guidance."
+- "Which services have architectural guidance under the Well-Architected Framework?"
+- "Retrieve Well-Architected Framework guidance for service 'App Service'."
+- "What's the WAF guidance for service 'Cosmos DB'?"
+- "Show the architectural guidance for 'Azure Functions'."
+
+| Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Service** | Required | The Azure service name (case-insensitive; spaces and hyphens are normalized). For example, `App Service`, `app-service`, `SQL Database`, `sql-database`, `Cosmos DB`, or `cosmos-db`. |
+| **Service** |  Optional | A single Azure service name. The value is case-insensitive and accepts hyphens, underscores, and spaces. If the name contains spaces, enclose it in double quotes. Examples: `cosmos-db`, `Cosmos_DB`, `Cosmos DB`, `cosmosdb`, `cosmos-database`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 

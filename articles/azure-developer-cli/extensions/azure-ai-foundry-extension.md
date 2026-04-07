@@ -170,6 +170,53 @@ These security configurations follow Azure best practices and work out of the bo
 
 You see the agent's response in the chat window.
 
+## Operate and troubleshoot agents with azd
+
+After deploying your agent, use the following `azd` commands to invoke, develop, monitor, and manage it.
+
+### Invoke the agent
+
+Use `azd ai agent invoke` to call your deployed agent remotely or locally. This command sends a message to the agent and returns its response.
+
+```bash
+azd ai agent invoke --message "What is 12 multiplied by 8?"
+```
+
+### Run the agent locally
+
+Use `azd ai agent run` to start a local development loop. This command runs your agent on your local machine, picks up changes immediately, and connects to the remote Azure resources defined in your `.azure/<environment-name>/.env` file.
+
+```bash
+azd ai agent run
+```
+
+### Stream real-time logs
+
+Use `azd ai agent monitor` with the `--follow` flag to tail live log output from your deployed agent. This is useful for observing agent behavior and diagnosing issues in real time.
+
+```bash
+azd ai agent monitor --follow
+```
+
+### Check agent health and status
+
+Use `azd ai agent show` to view the current health, deployment status, and endpoint information for your agent.
+
+```bash
+azd ai agent show
+```
+
+### Tear down all resources
+
+Use `azd down` to deprovision all Azure resources created by `azd up`. This removes the Microsoft Foundry account, project, model deployments, container registry, and any other infrastructure defined in your Bicep files.
+
+```bash
+azd down
+```
+
+> [!WARNING]
+> `azd down` permanently deletes all provisioned resources. Use this command with care in shared or production environments.
+
 ## Advanced configuration
 
 You can customize your projects to meet advanced requirements beyond the default workflow.
@@ -223,6 +270,24 @@ Environment variables that `azd` sets or uses:
 | `AZURE_AI_FOUNDRY_PROJECT_ENDPOINT` | Endpoint for agent management and runtime calls. |
 
 These variables are stored in `.azure/<environment-name>/.env`. Customize them for each environment (dev, test, and prod).
+
+### Use multiple environments
+
+`azd` supports multiple named environments so you can maintain separate configurations for development, testing, and production without overwriting each other's settings.
+
+Create a new environment with `azd env new`:
+
+```bash
+azd env new my-agent-prod
+```
+
+Switch between existing environments with `azd env select`:
+
+```bash
+azd env select my-agent-dev
+```
+
+Each environment has its own `.azure/<environment-name>/.env` file that stores the environment variables listed in the table above. When you run `azd up` or `azd provision`, `azd` targets the currently selected environment. Use this pattern to deploy the same agent definition to different Azure subscriptions or regions.
 
 ## Sample use cases and scenarios
 

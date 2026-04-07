@@ -5,7 +5,7 @@ ms.service: azure-mcp-server
 ms.topic: concept-article
 ms.date: 03/24/2026
 tool_count: 2
-mcp-cli.version: 2.0.0-beta.31+ed24dd9783f26645fd2b7218b4d52221b446354f
+mcp-cli.version: 2.0.0-beta.38
 ---
 
 # Azure MCP Server tools for Azure Resource Health

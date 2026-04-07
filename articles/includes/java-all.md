@@ -57,7 +57,7 @@
 | Core - Client - HTTP OkHttp | Maven [1.13.3](https://central.sonatype.com/artifact/com.azure/azure-core-http-okhttp/1.13.3) | [docs](/java/api/overview/azure/core-http-okhttp-readme) | GitHub [1.13.3](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-core-http-okhttp_1.13.3/sdk/core/azure-core-http-okhttp/) |
 | Core - Client - Test | Maven [1.26.2](https://central.sonatype.com/artifact/com.azure/azure-core-test/1.26.2)<br>Maven [1.27.0-beta.14](https://central.sonatype.com/artifact/com.azure/azure-core-test/1.27.0-beta.14) | [docs](/java/api/overview/azure/core-test-readme) | GitHub [1.26.2](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-core-test_1.26.2/sdk/core/azure-core-test/)<br>GitHub [1.27.0-beta.14](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-core-test_1.27.0-beta.14/sdk/core/azure-core-test/) |
 | Core - Plugin - Tracing OpenTelemetry Plugin | Maven [1.0.0-beta.62](https://central.sonatype.com/artifact/com.azure/azure-core-tracing-opentelemetry/1.0.0-beta.62) | [docs](/java/api/overview/azure/core-tracing-opentelemetry-readme?view=azure-java-preview&amp;preserve-view=true) | GitHub [1.0.0-beta.62](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-core-tracing-opentelemetry_1.0.0-beta.62/sdk/core/azure-core-tracing-opentelemetry/) |
-| Cosmos DB | Maven [4.79.0](https://central.sonatype.com/artifact/com.azure/azure-cosmos/4.79.0) | [docs](/java/api/overview/azure/cosmos-readme) | GitHub [4.79.0](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-cosmos_4.79.0/sdk/cosmos/azure-cosmos/) |
+| Cosmos DB | Maven [4.79.1](https://central.sonatype.com/artifact/com.azure/azure-cosmos/4.79.1) | [docs](/java/api/overview/azure/cosmos-readme) | GitHub [4.79.1](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-cosmos_4.79.1/sdk/cosmos/azure-cosmos/) |
 | Cosmos Kafka Connect | Maven [2.9.0](https://central.sonatype.com/artifact/com.azure.cosmos.kafka/azure-cosmos-kafka-connect/2.9.0) |  | GitHub [2.9.0](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-cosmos-kafka-connect_2.9.0/sdk/cosmos/azure-cosmos-kafka-connect/) |
 | Cosmos Spark 3.4 | Maven [4.46.0](https://central.sonatype.com/artifact/com.azure.cosmos.spark/azure-cosmos-spark_3-4_2-12/4.46.0) |  | GitHub [4.46.0](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-cosmos-spark_3-4_2-12_4.46.0/sdk/cosmos/azure-cosmos-spark_3-4_2-12/) |
 | Cosmos Spark 3.5 | Maven [4.46.0](https://central.sonatype.com/artifact/com.azure.cosmos.spark/azure-cosmos-spark_3-5_2-12/4.46.0) |  | GitHub [4.46.0](https://github.com/Azure/azure-sdk-for-java/tree/item.GroupId+azure-cosmos-spark_3-5_2-12_4.46.0/sdk/cosmos/azure-cosmos-spark_3-5_2-12/) |
@@ -606,19 +606,19 @@
 | Storage - Java | Maven [10.0.0](https://central.sonatype.com/artifact/com.microsoft.azure/azure-storage-java/10.0.0) |  |  |
 | Support | Maven [0.1.8](https://central.sonatype.com/artifact/com.microsoft.azure/azure-support/0.1.8) |  |  |
 | synapseml | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml/0.9.3) |  |  |
-| synapseml_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml_2.12/1.1.2) |  |  |
+| synapseml_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml_2.12/1.1.3) |  |  |
 | synapseml-cognitive | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-cognitive/0.9.3) |  |  |
-| synapseml-cognitive_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-cognitive_2.12/1.1.2) |  |  |
+| synapseml-cognitive_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-cognitive_2.12/1.1.3) |  |  |
 | synapseml-core | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-core/0.9.3) |  |  |
-| synapseml-core_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-core_2.12/1.1.2) |  |  |
+| synapseml-core_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-core_2.12/1.1.3) |  |  |
 | synapseml-deep-learning | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-deep-learning/0.9.3) |  |  |
-| synapseml-deep-learning_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-deep-learning_2.12/1.1.2) |  |  |
+| synapseml-deep-learning_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-deep-learning_2.12/1.1.3) |  |  |
 | synapseml-lightgbm | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-lightgbm/0.9.3) |  |  |
-| synapseml-lightgbm_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-lightgbm_2.12/1.1.2) |  |  |
+| synapseml-lightgbm_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-lightgbm_2.12/1.1.3) |  |  |
 | synapseml-opencv | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-opencv/0.9.3) |  |  |
-| synapseml-opencv_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-opencv_2.12/1.1.2) |  |  |
+| synapseml-opencv_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-opencv_2.12/1.1.3) |  |  |
 | synapseml-vw | Maven [0.9.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-vw/0.9.3) |  |  |
-| synapseml-vw_2.12 | Maven [1.1.2](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-vw_2.12/1.1.2) |  |  |
+| synapseml-vw_2.12 | Maven [1.1.3](https://central.sonatype.com/artifact/com.microsoft.azure/synapseml-vw_2.12/1.1.3) |  |  |
 | synapseutils | Maven [1.1](https://central.sonatype.com/artifact/com.microsoft.azure.synapse/synapseutils/1.1) |  |  |
 | synapseutils_2.11 | Maven [1.5.3](https://central.sonatype.com/artifact/com.microsoft.azure.synapse/synapseutils_2.11/1.5.3) |  |  |
 | synapseutils_2.12 | Maven [1.5.4](https://central.sonatype.com/artifact/com.microsoft.azure.synapse/synapseutils_2.12/1.5.4) |  |  |

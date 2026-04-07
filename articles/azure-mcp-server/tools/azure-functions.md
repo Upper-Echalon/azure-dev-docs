@@ -25,7 +25,7 @@ Azure Functions is a serverless compute service for running event-driven code wi
 
 
 
-## Get functions languages
+## Get languages
 
 <!-- @mcpcli functions language list -->
 

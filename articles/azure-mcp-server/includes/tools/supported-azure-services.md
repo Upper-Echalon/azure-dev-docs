@@ -3,60 +3,196 @@
  ms.author: diberry
  ms.service: azure-mcp-server
  ms.topic: include
- ms.date: 4/6/2026
+ ms.date: 03/11/2026
 ---
 
 ## Available tools
 
 Azure MCP Server provides the following tools for Azure services and Azure-related functionality.
 
-| Tool |  Description |
-|------|--------------|
-| [Azure best practices](../../tools/azure-best-practices.md) | Get guidance on Azure Functions development, deployment, and Azure SDK usage. |
-| [Azure Application Insights](../../tools/application-insights.md) | List Application Insights resources. |
-| [Azure AI Foundry](../../tools/azure-foundry.md) | Work with Azure AI Foundry models, deployments, and endpoints. |
-| [Azure AI Search](../../tools/azure-ai-search.md) | Manage Azure AI Search resources, including search services, indexes, and queries. |
-| [Azure AI Speech](../../tools/ai-services-speech.md) | Manage Azure AI Speech resources such as speech-to-text services. |
-| [Azure App Configuration](../../tools/app-configuration.md) | Manage centralized application settings and feature flags. |
-| [Azure App Lens](../../tools/azure-app-lens.md) | Diagnose and analyze application performance issues using Azure App Lens. |
-| [Azure App Service](../../tools/azure-app-service.md) | Manage database connections for Azure App Service instances. |
-| [Azure Bicep schema](../../tools/azure-bicep-schema.md) | Retrieve Bicep schemas for Azure resources to use in Infrastructure as Code templates. |
-| [Azure CLI](../../tools/azure-cli.md) | Find Azure CLI commands and get installation instructions for CLI tools. |
-| [Azure Cloud Architect](../../tools/azure-cloud-architect.md) | Design cloud systems by gathering requirements through guided questions and recommending optimal solutions. |
-| [Azure Communication Services](../../tools/azure-communication.md) | Send SMS and email messages using Azure Communication Services. |
-| [Azure Compliance Quick Review](../../tools/azure-compliance-quick-review.md) | Generate compliance and security reports for Azure resources. |
-| [Azure Compute](../../tools/azure-compute.md) | Manage Azure Virtual Machines, managed disks, and virtual machine scale sets. Create, delete, get, and update compute resources. |
-| [Azure Confidential Ledger](../../tools/azure-confidential-ledger.md) | Manage Azure Confidential Ledger resources, including ledgers and transactions. |
-| [Azure Container Apps](../../tools/azure-container-apps.md) | List Azure Container Apps in your subscription or resource group. |
-| [Azure Container Registry](../../tools/azure-container-registry.md) | List Azure Container Registry instances. |
-| [Azure Cosmos DB](../../tools/azure-cosmos-db.md) | Work with Azure Cosmos DB accounts, databases, containers, and documents. |
-| [Azure Data Explorer](../../tools/azure-data-explorer.md) | Work with Azure Data Explorer clusters, databases, tables, and queries. |
-| [Azure Database for MySQL](../../tools/azure-mysql.md) | Manage Azure Database for MySQL servers, databases, and tables. |
-| [Azure Database for PostgreSQL](../../tools/azure-database-postgresql.md) | Manage Azure Database for PostgreSQL servers, databases, and tables. |
-| [Azure Deploy](../../tools/azure-deploy.md) | Deploy and manage Azure resources using templates and scripts. |
-| [Azure Developer CLI](../../tools/azure-cli.md) | Get installation instructions for Azure Developer CLI (azd), learn usage for deployment scenarios, and access azd MCP tools when azd is installed locally |
-| [Azure Event Grid](../../tools/azure-event-grid.md) | Manage Azure Event Grid resources, including topics and subscriptions. |
-| [Azure Event Hubs](../../tools/azure-event-hubs.md) | Manage Azure Event Hubs namespaces and event hubs. |
-| [Azure Functions](../../tools/azure-functions.md) | Generate Azure Functions code from templates, list supported languages, and get project scaffolding for serverless development. |
-| [Azure Key Vault](../../tools/azure-key-vault.md) | List and create keys, secrets, certificates in Azure Key Vault. |
-| [Azure Kubernetes Service](../../tools/azure-kubernetes.md) | List Azure Kubernetes Service clusters. |
-| [Azure Load Testing](../../tools/azure-load-testing.md) | Create, run, and see load testing. |
-| [Azure Managed Grafana](../../tools/azure-grafana.md) | List Azure Managed Grafana workspaces. |
-| [Azure Managed Lustre](../../tools/azure-managed-lustre.md) | Manage Azure Managed Lustre file systems. |
-| [Azure Marketplace](../../tools/azure-marketplace.md) | Discover Azure Marketplace products and offers. |
-| [Azure MCP tool](../../tools/azure-mcp-tool.md) | Discover and manage available Azure MCP Server tools. |
-| [Azure Monitor](../../tools/azure-monitor.md) | Query Azure Monitor logs and metrics, manage workbooks, configure web tests, and monitor resource health. |
-| [Azure Native ISV](../../tools/azure-native-isv.md) | Work with Azure Native ISV services, including Datadog integration for monitoring and observability. |
-| [Azure Quick Review CLI](../../tools/azure-compliance-quick-review.md) | Generate compliance and security reports for Azure resources. |
-| [Azure Quotas](../../tools/azure-quotas.md) | Manage Azure resource quotas and limits. |
-| [Azure RBAC](../../tools/azure-rbac.md) | View and manage Azure role-based access control assignments. |
-| [Azure Redis](../../tools/azure-redis.md) | Manage Azure Redis instances, Redis clusters, and access policies. |
-| [Azure Resource Health](../../tools/azure-health-resource.md) | Check the health status of Azure resources. |
-| [Azure Service Bus](../../tools/service-bus.md) | Work with Azure Service Bus messaging services. |
-| [Azure SignalR](../../tools/azure-signalr.md) | Manage Azure SignalR resources and runtimes. |
-| [Azure SQL](../../tools/azure-sql.md) | Work with Azure SQL Database servers, databases, firewall rules, and elastic pools. |
-| [Azure Storage](../../tools/storage.md) | List Azure Storage accounts, containers, blobs, and tables. |
-| [Azure Virtual Desktop](../../tools/azure-virtual-desktop.md) | Manage Azure Virtual Desktop host pools, session hosts, and user sessions. |
-| [Resource Groups](../../tools/resource-group.md) | List Azure resource groups. |
-| [Subscription](../../tools/subscription.md) | List Azure subscriptions. |
-| [Terraform best practices for Azure](../../tools/azure-terraform-best-practices.md) | Get guidance on implementing Terraform for Azure resources. |
+### Best practices
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure best practices](../../tools/azure-best-practices.md) | `get azure bestpractices get` | Get guidance on Azure Functions development, deployment, and Azure SDK usage. |
+| [Azure AI best practices for app development](../../tools/azure-best-practices.md) | `get azure bestpractices ai app` | Get best practices and code generation guidance for building AI applications in Azure. Use it when you need recommendations on writing code for AI agents, chatbots, workflows, or any AI/LLM features. Additionally, this command provides guidance for code generation on Microsoft Foundry for application development. |
+| [Terraform best practices for Azure](../../tools/azure-terraform-best-practices.md) | `azureterraformbestpractices` | Get guidance on implementing Terraform for Azure resources. |
+
+### AI and Machine Learning
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Microsoft Foundry](../../tools/azure-foundry.md) | `foundry` | Work with Foundry models, deployments, and endpoints. |
+| [Azure AI Search](../../tools/azure-ai-search.md) | `search` | Manage Azure AI Search resources, including search services, indexes, and queries. |
+| [Azure Speech in Foundry Tools](../../tools/ai-services-speech.md) | `speech` | Manage Speech resources such as speech-to-text and text-to-speech services. |
+
+### Analytics
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure App Lens](../../tools/azure-app-lens.md) | `applens` | Diagnose and analyze application performance issues using Azure App Lens. |
+| [Azure Data Explorer](../../tools/azure-data-explorer.md) | `kusto` | Work with Azure Data Explorer clusters, databases, tables, and queries. |
+| [Azure Event Hubs](../../tools/azure-event-hubs.md) | `eventhubs` | Manage Azure Event Hubs namespaces and event hubs. |
+
+
+
+### Compute
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage web apps, database connections, diagnostics, deployments, and application settings for Azure App Service. |
+| [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
+| [Azure Kubernetes Service](../../tools/azure-kubernetes.md) | `aks` | List Azure Kubernetes Service clusters. |
+| [Azure Service Fabric](../../tools/azure-service-fabric.md) | `servicefabric` | Manage Service Fabric managed clusters, including node details and restarts. |
+| [Azure Virtual Machines](../../tools/azure-virtual-machines.md) | `compute` | Get details for Azure virtual machines, virtual machine scale sets, and managed disks. |
+
+### Containers
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Container Registry](../../tools/azure-container-registry.md) | `acr` | List Azure Container Registry instances. |
+| [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
+| [Azure Kubernetes Service](../../tools/azure-kubernetes.md) | `aks` | List Azure Kubernetes Service clusters. |
+| [Azure Service Fabric](../../tools/azure-service-fabric.md) | `servicefabric` | Manage Service Fabric managed clusters, including node details and restarts. |
+
+### Databases
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Cosmos DB](../../tools/azure-cosmos-db.md) | `cosmos` | Work with Azure Cosmos DB accounts, databases, containers, and documents. |
+| [Azure Database for MySQL](../../tools/azure-mysql.md) | `mysql` | Manage Azure Database for MySQL servers, databases, and tables. |
+| [Azure Database for PostgreSQL](../../tools/azure-database-postgresql.md) | `postgres` | Manage Azure Database for PostgreSQL servers, databases, and tables. |
+| [Azure Redis](../../tools/azure-redis.md) | `redis` | Create and list Azure Redis resources, including Managed Redis and Cache for Redis. |
+| [Azure SQL](../../tools/azure-sql.md) | `sql` | Work with Azure SQL Database servers, databases, firewall rules, and elastic pools. |
+
+### Developer tools
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure App Configuration](../../tools/app-configuration.md) | `appconfig` | Manage centralized application settings and feature flags. |
+| [Azure Application Insights](../../tools/application-insights.md) | `applicationinsights` | List Application Insights resources. |
+| [Azure CLI](../../tools/azure-cli.md) | `extension` | Find Azure CLI commands and get installation instructions for CLI tools. |
+| [Azure Developer CLI](../../tools/azure-cli.md) | `extension` | Get installation instructions for Azure Developer CLI (azd), learn usage for deployment scenarios, and access azd MCP tools when azd is installed locally |
+| [Azure Load Testing](../../tools/azure-load-testing.md) | `loadtesting` | Create, run, and see load testing. |
+
+### DevOps
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Bicep schema](../../tools/azure-bicep-schema.md) | `bicepschema` | Retrieve Bicep schemas for Azure resources to use in Infrastructure as Code templates. |
+| [Azure Deploy](../../tools/azure-deploy.md) | `deploy` | Deploy and manage Azure resources using templates and scripts. |
+| [Azure Developer CLI](../../tools/azure-cli.md) | `extension` | Get installation instructions for Azure Developer CLI (azd), learn usage for deployment scenarios, and access azd MCP tools when azd is installed locally |
+| [Azure Managed Grafana](../../tools/azure-grafana.md) | `grafana` | List Azure Managed Grafana workspaces. |
+| [Azure Monitor](../../tools/azure-monitor.md) | `monitor` | Query Azure Monitor logs and metrics. |
+| [Azure Workbooks](../../tools/azure-monitor.md) | `workbooks` | Create, manage, and update Azure Workbooks for data visualization and reporting. |
+
+
+### Hybrid and multicloud
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Database for PostgreSQL](../../tools/azure-database-postgresql.md) | `postgres` | Manage Azure Database for PostgreSQL servers, databases, and tables. |
+| [Azure SQL](../../tools/azure-sql.md) | `sql` | Work with Azure SQL Database servers, databases, firewall rules, and elastic pools. |
+
+### Identity
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure RBAC](../../tools/azure-rbac.md) | `role` | View and manage Azure role-based access control assignments. |
+
+### Integration
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Event Grid](../../tools/azure-event-grid.md) | `eventgrid` | Manage Azure Event Grid resources, including topics and subscriptions. |
+| [Azure Native ISV](../../tools/azure-native-isv.md) | `datadog` | Work with Azure Native ISV services, including Datadog integration for monitoring and observability. |
+| [Azure Service Bus](../../tools/azure-service-bus.md) | `servicebus` | Manage Azure Service Bus resources, including queues, topics, and peek at messages. |
+
+### Internet of Things (IoT)
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Cosmos DB](../../tools/azure-cosmos-db.md) | `cosmos` | Work with Azure Cosmos DB accounts, databases, containers, and documents. |
+| [Azure Event Grid](../../tools/azure-event-grid.md) | `eventgrid` | Manage Azure Event Grid resources, including topics and subscriptions. |
+| [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
+
+### Management and governance
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Advisor](../../tools/azure-advisor.md) | `advisor` | Get recommendations to optimize Azure resources and improve performance. |
+| [Azure Cloud Architect](../../tools/azure-cloud-architect.md) | `cloudarchitect` | Design cloud systems by gathering requirements through guided questions and recommending optimal solutions. |
+| [Azure Managed Grafana](../../tools/azure-grafana.md) | `grafana` | List Azure Managed Grafana workspaces. |
+| [Azure Migrate](../../tools/azure-migrate.md) | `azuremigrate` | Get step-by-step guidance for changing a Platform Landing Zone and make or download platform landing zone setups for Azure Migrate projects. |
+| [Azure Monitor](../../tools/azure-monitor.md) | `monitor` | Query Azure Monitor logs and metrics. |
+| [Azure Policy](../../tools/azure-policy.md) | `policy` | Manage Azure Policy assignments, definitions, and initiatives. |
+| [Azure Pricing](../../tools/azure-pricing.md) | `pricing` | Get Azure retail pricing, cost estimates, and billing details for services, SKUs, and regions. |
+| [Azure Quick Review CLI](../../tools/azure-compliance-quick-review.md) | `extension` | Generate compliance and security reports for Azure resources. |
+| [Azure Quotas](../../tools/azure-quotas.md) | `quota` | Manage Azure resource quotas and limits. |
+| [Azure Resource Health](../../tools/azure-resource-health.md) | `resourcehealth` | Check the health status of Azure resources. |
+| [Azure Well-Architected Framework](../../tools/azure-well-architected-framework.md) | `wellarchitectedframework` | Get architectural best practices, design patterns, and recommendations for Azure services based on the five Well-Architected Framework pillars. |
+| [Azure Workbooks](../../tools/azure-monitor.md) | `workbooks` | Create, manage, and update Azure Workbooks for data visualization and reporting. |
+| [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups and list resources within a group. |
+| [Subscription](../../tools/subscription.md) | `subscription` | List Azure subscriptions. |
+
+### Messaging
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Event Grid](../../tools/azure-event-grid.md) | `eventgrid` | Manage Azure Event Grid resources, including topics and subscriptions. |
+| [Azure Event Hubs](../../tools/azure-event-hubs.md) | `eventhubs` | Manage Azure Event Hubs namespaces and event hubs. |
+| [Azure Service Bus](../../tools/azure-service-bus.md) | `servicebus` | Manage Azure Service Bus resources, including queues, topics, and peek at messages. |
+
+### Mobile
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Foundry](../../tools/azure-foundry.md) | `foundry` | Work with Foundry models, deployments, and endpoints. |
+| [Azure AI Search](../../tools/azure-ai-search.md) | `search` | Manage Azure AI Search resources, including search services, indexes, and queries. |
+| [Azure App Configuration](../../tools/app-configuration.md) | `appconfig` | Manage centralized application settings and feature flags. |
+| [Azure Communication Services](../../tools/azure-communication.md) | `communication` | Send SMS and email messages using Azure Communication Services. |
+
+### Security
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure App Configuration](../../tools/app-configuration.md) | `appconfig` | Manage centralized application settings and feature flags. |
+| [Azure Confidential Ledger](../../tools/azure-confidential-ledger.md) | `confidentialledger` | Manage Azure Confidential Ledger resources, including ledgers and transactions. |
+| [Azure Key Vault](../../tools/azure-key-vault.md) | `keyvault` | List and create keys, secrets, certificates in Azure Key Vault. |
+
+### Storage
+
+| Product, tool, or service | Namespace | Description |
+|------|------|------------|
+| [Azure Confidential Ledger](../../tools/azure-confidential-ledger.md) | `confidentialledger` | Manage Azure Confidential Ledger resources, including ledgers and transactions. |
+| [Azure File Sync](../../tools/azure-file-sync.md) | `storagesync` | Manage Azure file sync services, register servers, create sync groups, configure cloud endpoints, and set up server endpoints for Azure File Sync. |
+| [Azure Files](../../tools/azure-file-shares.md) | `fileshares` | Manage Azure file shares, including creating, updating, deleting, and snapshotting file shares. |
+| [Azure Managed Lustre](../../tools/azure-managed-lustre.md) | `managedlustre` | Manage Azure Managed Lustre file systems, including auto-import and auto-export jobs. |
+| [Azure Storage](../../tools/azure-storage.md) | `storage` | Manage Azure Storage accounts, containers, blobs, and tables. |
+| [Azure Storage](../../tools/storage.md) | `storage` | List Azure Storage accounts, containers, blobs, and tables. |
+
+
+### Virtual desktop infrastructure (VDI)
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Virtual Desktop](../../tools/azure-virtual-desktop.md) | `virtualdesktop` | Manage Azure Virtual Desktop host pools, session hosts, and user sessions. |
+
+### Web
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure AI Search](../../tools/azure-ai-search.md) | `search` | Manage Azure AI Search resources, including search services, indexes, and queries. |
+| [Azure App Configuration](../../tools/app-configuration.md) | `appconfig` | Manage centralized application settings and feature flags. |
+| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage web apps, database connections, diagnostics, deployments, and application settings for Azure App Service. |
+| [Azure Communication Services](../../tools/azure-communication.md) | `communication` | Send SMS and email messages using Azure Communication Services. |
+| [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
+| [Azure SignalR](../../tools/azure-signalr.md) | `signalr` | Manage Azure SignalR resources and runtimes. |
+
+### Other
+
+| Product, tool, or service | Namespace | Description |
+|------|------|--------------|
+| [Azure Marketplace](../../tools/azure-marketplace.md) | `marketplace` | Discover Azure Marketplace products and offers. |
+| [Azure MCP tool](../../tools/azure-mcp-tool.md) | No namespace | Discover and manage available Azure MCP Server tools. |
+

@@ -43,7 +43,7 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
-## Get functions project
+## Get project
 
 <!-- @mcpcli functions project get -->
 

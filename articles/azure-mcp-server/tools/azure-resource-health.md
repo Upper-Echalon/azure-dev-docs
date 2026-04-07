@@ -4,6 +4,7 @@ description: Use Azure MCP Server tools to manage resource health and availabili
 ms.service: azure-mcp-server
 ms.topic: concept-article
 ms.date: 03/24/2026
+reviewer: shdesmu
 tool_count: 2
 mcp-cli.version: 2.0.0-beta.38
 ---

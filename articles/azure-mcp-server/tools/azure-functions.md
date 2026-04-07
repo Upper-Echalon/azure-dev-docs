@@ -63,7 +63,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Get functions template
+## Get template
 
 <!-- @mcpcli functions template get -->
 

@@ -4,18 +4,19 @@ description: Use Azure MCP Server tools to query Azure Monitor logs and metrics,
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
-ms.date: 03/23/2026
+ms.date: 04/07/2026
 content_well_notification: 
   - AI-contribution
-ai-usage: ai-assisted
+ai-usage: ai-generated
 ms.topic: concept-article
 ms.custom: build-2025
-tool_count for monitor: 17
+tool_count for monitor: 16
 tool_count for workbooks: 5
 ms.reviewer: jong
-mcp-cli.version: 2.0.0-beta.31
+mcp-cli.version: 2.0.0-beta.38
 ---
 # Azure MCP Server tools for Azure Monitor and Workbooks
+
 
 The Azure Model Context Protocol (MCP) Server lets you manage Azure Monitor and Workbooks resources with natural language prompts. You can query Log Analytics workspaces, analyze operational data, monitor resource health, retrieve performance metrics, and manage Azure Monitor workbooks.
 
@@ -25,162 +26,98 @@ Workbooks provide a flexible canvas for data analysis and the creation of rich v
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Activity Log: List activity log
+## Activity Log: Get activity logs
 
 <!-- @mcpcli monitor activitylog list -->
 
-List activity logs for the specified Azure resource over the given prior number of hours.
+Lists Azure Monitor activity logs for a specified Azure resource for a given number of past hours. This tool helps you understand resource deployment history, configuration changes, and access patterns. It returns activity log events that include timestamp, operation name, status, and caller information. Use the results to investigate failed deployments, unexpected changes, or access issues.
 
 Example prompts include:
 
-- **Recent critical events**: "Show activity logs for resource 'web-app-prod' for the last 4 hours with Critical and Error events only"
-- **Storage account activity**: "Get activity logs for resource 'mystorageaccount' of type 'Microsoft.Storage/storageAccounts' from the last 24 hours, limit to top 50 entries"
-- **VM monitoring**: "List all activity logs for resource 'production-vm01' from the past 12 hours"
+- "List the activity logs for the last '720' hours for resource 'webapp-prod'."
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Resource name** |  Required | The name of the Azure resource to retrieve activity logs for. |
-| **Resource type** |  Optional | The type of the Azure resource (for example, `Microsoft.Storage/storageAccounts`). Only provide this if needed to disambiguate between multiple resources with the same name. |
-| **Hours** |  Optional | The number of hours prior to now to retrieve activity logs for. |
-| **Event level** |  Optional | The level of activity logs to retrieve. Valid levels are: Critical, Error, Informational, Verbose, Warning. If not provided, returns all levels. |
+| **Event level** |  Optional | The level of activity logs to retrieve. Valid levels are: `Critical`, `Error`, `Informational`, `Verbose`, `Warning`. If not provided, returns all levels. |
+| **Hours** |  Optional | The number of hours before now to retrieve activity logs for. |
+| **Resource type** |  Optional | The type of the Azure resource (for example, `'Microsoft.Storage/storageAccounts'`). Only provide this if needed to disambiguate between multiple resources with the same name. |
 | **Top** |  Optional | The maximum number of activity logs to retrieve. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Web Tests: Create web test
+## Web Tests: Create or update web test
 
-<!-- @mcpcli monitor webtests create -->
+<!-- @mcpcli monitor webtests createorupdate -->
 
-Create a new standard web test in Azure Monitor to monitor endpoint availability. Specify the web test resource name, associated Application Insights component, test location, and the URL to monitor.
+Part of the Model Context Protocol (MCP) tooling, this tool creates or updates a standard web test in Azure Monitor to check endpoint availability. You specify monitoring settings such as the URL, frequency, locations, and expected responses. If the test doesn't exist, this tool creates it; otherwise it updates the existing test with the new settings.
 
 Example prompts include:
 
-- "Create a new Standard Web Test with name 'mywebtest' in resource group 'rg-prod' for a given App Insights component"
-- "Set up a web test to monitor `https://example.com` every 300 seconds in resource group 'rg-dev'"
-- "Create web test 'api-monitor' in resource group 'rg-app' with a frequency of 600 seconds"
+- "Create a new Standard Web Test with webtest resource 'webtest-prod-availability' in resource group 'rg-prod-monitoring' and associate it with AppInsights component '/subscriptions/12345678-1234-1234-1234-123456789abc/resourceGroups/rg-ai/providers/microsoft.insights/components/appinsights-prod'."
+- "Update an existing Standard Web Test for webtest resource 'webtest-prod-availability' in resource group 'rg-prod-monitoring' to link it to AppInsights component '/subscriptions/12345678-1234-1234-1234-123456789abc/resourceGroups/rg-ai/providers/microsoft.insights/components/appinsights-prod'."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
+| **Resource group** | Required | The name of the Azure resource group. |
 | **Webtest resource** | Required | The name of the Web Test resource to operate on. |
-| **App Insights component** | Required | The resource ID of the Application Insights component to associate with the web test. |
-| **Location** | Required | The location where the web test resource is created. This should match the App Insights component location. |
-| **Webtest locations** | Required | List of locations to run the test from (comma-separated values). Location refers to the geo-location population tag specific to Availability Tests. |
-| **Request URL** | Required | The absolute URL to test. |
-| **Webtest** | Optional | The name of the test in web test resource. |
-| **Description** | Optional | The description of the web test. |
+| **Appinsights component** | Optional | The resource ID of the Application Insights component to associate with the web test. |
+| **Description** | Optional | A brief description of the web test. |
 | **Enabled** | Optional | Whether the web test is enabled. |
 | **Expected status code** | Optional | Expected HTTP status code. |
-| **Follow redirects** | Optional | Whether to follow redirects. |
-| **Frequency** | Optional | Test frequency in seconds. Supported values: 300, 600, 900 seconds. |
-| **Headers** | Optional | HTTP headers to include in the request. Comma-separated `KEY=VALUE`. |
-| **HTTP verb** | Optional | HTTP method (`get`, `post`, etc.). |
+| **Follow redirects** | Optional | Whether to follow HTTP redirects. |
+| **Frequency** | Optional | Test frequency in seconds. Supported values: 300, 600, 900. |
+| **Headers** | Optional | HTTP headers to include in the request, as comma-separated KEY=VALUE pairs. |
+| **HTTP verb** | Optional | HTTP method to use, for example get or post. |
 | **Ignore status code** | Optional | Whether to ignore the status code validation. |
+| **Location** | Optional | The location where the web test resource is created. This should match the Application Insights component location. |
 | **Parse requests** | Optional | Whether to parse dependent requests. |
-| **Request body** | Optional | The body of the request. |
-| **Retry enabled** | Optional | Whether retries are enabled. |
-| **SSL check** | Optional | Whether to check SSL certificates. |
-| **SSL lifetime check** | Optional | Number of days to check SSL certificate lifetime. |
-| **Timeout** | Optional | Request timeout in seconds (max 2 minutes). Supported values: 30, 60, 90, 120 seconds. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
-
-## Web Tests: Get web test details
-
-<!-- @mcpcli monitor webtests get -->
-
-Retrieve details for a specific web test by its resource name. Returns configuration, status, and test settings for the specified web test.
-
-Example prompts include:
-
-- "Get Web Test details for 'homepage-load-test' in resource group 'rg-prod'"
-- "Show me the configuration of web test 'api-response-check' in resource group 'rg-test'"
-- "Get details for web test 'checkout-validation' in resource group 'rg-dev'"
-
-| Parameter | Required or optional | Description |
-|-----------------------|----------------------|-------------|
-| **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Webtest resource** | Required | The name of the Web Test resource to operate on. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
-
-## Web Tests: List web tests
-
-<!-- @mcpcli monitor webtests list -->
-
-List all web tests in your subscription, optionally filtered by resource group.
-
-Example prompts include:
-
-- "List all Web Test resources in my subscription"
-- "List all web tests in resource group 'rg-production'"
-- "What web tests are available in my subscription?"
-
-| Parameter | Required or optional | Description |
-|-----------------------|----------------------|-------------|
-| **Resource group** | Optional | The name of the Azure resource group to filter web tests by. |
-
-[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
-
-Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
-
-## Web Tests: Update web test
-
-<!-- @mcpcli monitor webtests update -->
-
-Update an existing web test in Azure Monitor with new configuration settings. Modify properties such as URL, frequency, locations, and expected responses.
-
-Example prompts include:
-
-- "Update the web test 'status-check' in resource group 'rg-dev' with expected status code 200"
-- "Change the frequency of web test 'api-monitor' in resource group 'rg-app' to 600 seconds"
-- "Update web test 'mywebtest' in resource group 'rg-prod' to enable SSL check"
-
-| Parameter | Required or optional | Description |
-|-----------------------|----------------------|-------------|
-| **Resource group** | Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Webtest resource** | Required | The name of the Web Test resource to operate on. |
-| **App Insights component** | Optional | The resource ID of the Application Insights component to associate with the web test. |
-| **Location** | Optional | The location where the web test resource is created. This should match the App Insights component location. |
-| **Webtest locations** | Optional | List of locations to run the test from (comma-separated values). Location refers to the geo-location population tag specific to Availability Tests. |
+| **Request body** | Optional | The body to send with the request. |
 | **Request URL** | Optional | The absolute URL to test. |
-| **Webtest** | Optional | The name of the test in web test resource. |
-| **Description** | Optional | The description of the web test. |
-| **Enabled** | Optional | Whether the web test is enabled. |
-| **Expected status code** | Optional | Expected HTTP status code. |
-| **Follow redirects** | Optional | Whether to follow redirects. |
-| **Frequency** | Optional | Test frequency in seconds. Supported values: 300, 600, 900 seconds. |
-| **Headers** | Optional | HTTP headers to include in the request. Comma-separated `KEY=VALUE`. |
-| **HTTP verb** | Optional | HTTP method (`get`, `post`, etc.). |
-| **Ignore status code** | Optional | Whether to ignore the status code validation. |
-| **Parse requests** | Optional | Whether to parse dependent requests. |
-| **Request body** | Optional | The body of the request. |
 | **Retry enabled** | Optional | Whether retries are enabled. |
-| **SSL check** | Optional | Whether to check SSL certificates. |
+| **SSL check** | Optional | Whether to validate SSL certificates. |
 | **SSL lifetime check** | Optional | Number of days to check SSL certificate lifetime. |
-| **Timeout** | Optional | Request timeout in seconds (max 2 minutes). Supported values: 30, 60, 90, 120 seconds. |
+| **Timeout** | Optional | Request timeout in seconds. Supported values: 30, 60, 90, 120. |
+| **Web test name** | Optional | The name of the test within the web test resource. |
+| **Webtest locations** | Optional | Comma-separated list of locations to run the test from. Location refers to the geo-location population tag for Availability Tests. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
+## Web Tests: Get web test
+
+<!-- @mcpcli monitor webtests get -->
+
+This tool gets details for a specific web test or lists all web tests. When you specify the Webtest resource, this tool returns detailed information for that web test. When you don't specify the Webtest resource, this tool returns a list of all web tests in the subscription, and you can filter the list by resource group.
+
+Example prompts include:
+
+- "Get Web Test details for webtest resource 'webtest-prod' in my subscription in resource group 'rg-monitoring'."
+- "List all Web Test resources in my subscription."
+- "List all Web Test resources in my subscription in resource group 'rg-prod'."
+
+| Parameter | Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Webtest resource** | Optional | The name of the Web Test resource to operate on. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
+
 ## Log Analytics: List workspaces
 
 <!-- @mcpcli monitor workspace list -->
 
-The Azure MCP Server lists all Log Analytics workspaces in a subscription. This provides an overview of your monitoring resources.
+This tool lists Log Analytics workspaces in a subscription. It retrieves each workspace's name, ID, location, and other key properties. You can use it to identify workspaces before you query their logs or examine workspace settings.
 
 Example prompts include:
 
-- **List workspaces**: "Show me all Log Analytics workspaces in my subscription."
-- **View workspaces**: "What workspaces do I have?"
-- **Find workspaces**: "List monitoring workspaces."
+- "List Log Analytics workspaces in my subscription."
+- "Display my Log Analytics workspaces."
+- "Get the Log Analytics workspaces in my subscription."
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -190,19 +127,38 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor table list -->
 
-The Azure MCP Server lists all tables in a Log Analytics workspace. This helps you understand the data available for querying.
+This tool, a Model Context Protocol (MCP) tool, lists all tables in a Log Analytics workspace. For example, list tables in workspace 'prod-law' in resource group 'rg-monitoring' to preview available columns and data types. It returns table names and schemas you use to build Kusto Query Language (KQL) queries. You can filter by table type, for example `CustomLog` or `AzureMetrics`.
 
 Example prompts include:
 
-- **List tables**: "Show tables in centralmonitoring workspace in resource group 'my-resource-group'"
-- **View tables**: "What tables are in workspace app-monitoring in resource group 'my-resource-group'?"
-- **Find tables**: "List tables in security-logs workspace in resource group 'my-resource-group'"
+- "List all tables in Log Analytics workspace 'prod-law' of table type 'CustomLog' in resource group 'rg-prod'."
+- "Show me tables of table type 'AzureMetrics' for workspace 'f1b2c3d4-5678-90ab-cdef-1234567890ab' in resource group 'rg-monitoring'."
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Workspace** | Required | The Log Analytics workspace ID or name. |
-| **Table type** | Required | The type of table to query (for example, `CustomLog`, `AzureMetrics`). |
+| **Resource group** | Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
+| **Table type** | Required | The type of table to query. Options: `CustomLog`, `AzureMetrics`, and more. |
+| **Workspace name** | Required | The Log Analytics workspace ID or name. This can be either the unique identifier (GUID) or the display name of your workspace. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
+
+## Log Analytics: Get table types
+
+<!-- @mcpcli monitor table type list -->
+
+This Model Context Protocol (MCP) tool lists available table types in an Azure Log Analytics workspace. It returns the names of the table types. You can use those names when you write queries against Azure Monitor Logs.
+
+Example prompts include:
+
+- "List all available table types in Log Analytics workspace name 'prod-law-01' in resource group 'rg-prod'."
+- "What table types are available in Log Analytics workspace name 'analytics-workspace' in resource group 'rg-logs'?"
+
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Resource group** | Required | The name of the Azure resource group that contains the workspace. |
+| **Workspace name** | Required | The name or ID of the Log Analytics workspace. You can use the workspace GUID or the display name. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -212,20 +168,18 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor workspace log query -->
 
-The Azure MCP Server can execute Kusto Query Language (KQL) queries against a Log Analytics workspace. This powerful feature allows you to analyze your operational data.
+Query logs across an entire Log Analytics workspace using Kusto Query Language (KQL). This tool runs workspace-wide queries that return logs across all resources and tables in the workspace. This tool is part of the Model Context Protocol (MCP) tools. For example, you can ask: 'show all errors in my workspace', 'what happened in my workspace in the last 24 hours', 'list failed requests across the workspace'.
 
 Example prompts include:
 
-- **Simple query**: "Query table 'AzureDiagnostics' with query 'AzureDiagnostics | where Level == "Error" | take 100' in workspace 'app-monitoring' in resource group 'monitoring-rg' for last 1 hour"
-- **Filter query**: "Query table 'SecurityEvent' with query 'SecurityEvent | where EventID == 4625 | project TimeGenerated, Account, Computer' in workspace 'security-workspace' in resource group 'security-rg'"
-- **Complex query**: "Query table 'Perf' with query 'Perf | where CounterName == "% Processor Time" and Computer contains "web" | summarize avg(CounterValue) by bin(TimeGenerated, 1h)' in workspace 'monitoring-workspace' in resource group 'prod-rg' for last 24 hours"
+- "Show logs with query 'errors' from table 'Syslog' in Log Analytics workspace 'my-workspace' in resource group 'rg-prod'."
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Workspace** | Required | The Log Analytics workspace ID or name. |
-| **Table** | Required | The name of the table to query. |
-| **Query** | Required | The KQL query to execute against the Log Analytics workspace. |
+| **Query** | Required | The Kusto Query Language (KQL) query to run against the Log Analytics workspace. You can use predefined queries by name: `recent` shows the most recent logs, ordered by TimeGenerated; `errors` shows error-level logs, ordered by TimeGenerated. Or, provide a custom KQL query. |
+| **Resource group** | Required | The name of the Azure resource group that contains the workspace. |
+| **Table name** | Required | The name of the table to query within the workspace. |
+| **Workspace name** | Required | The Log Analytics workspace ID or name. You can provide either the globally unique identifier (GUID) or the display name of the workspace. |
 | **Hours** | Optional | The number of hours to query back from now. |
 | **Limit** | Optional | The maximum number of results to return. |
 
@@ -237,19 +191,17 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor resource log query -->
 
-Queries diagnostic and activity logs for a specific Azure resource in a Log Analytics workspace using Kusto Query Language (KQL). 
+Query diagnostic and activity logs for a specific Azure resource in a Log Analytics workspace by using Kusto Query Language (KQL). This tool filters results to the specified resource and runs the provided KQL query against the chosen table. For example, ask "Show logs for resource 'app-monitor' for the last 24 hours."
 
 Example prompts include:
 
-- **Query recent logs**: "Query table 'AppServiceConsoleLogs' with query 'recent' for resource '/subscriptions/abc123/resourceGroups/prod/providers/Microsoft.Web/sites/myapp'"
-- **Find errors**: "Query table 'AppServiceHTTPLogs' with query 'errors' for resource '/subscriptions/abc123/resourceGroups/prod/providers/Microsoft.Web/sites/mywebapp' in the last 4 hours"
-- **Resource diagnostics**: "Query table 'StorageBlobLogs' with query 'StorageBlobLogs | take 100' for resource '/subscriptions/abc123/resourceGroups/prod/providers/Microsoft.Storage/storageAccounts/mystorage' with limit 100"
+- "Show logs with query 'recent' for resource ID '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/rg-prod/providers/Microsoft.Compute/virtualMachines/my-vm' in table 'AzureDiagnostics'."
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource ID** | Required | The Azure Resource ID to query logs. Example: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<YOUR-RESOURCE-GROUP>/providers/Microsoft.OperationalInsights/workspaces/<YOUR-WORKSPACE>`. |
-| **Table** | Required | The name of the table to query. This is the specific table within the workspace. |
-| **Query** | Required | The KQL query to execute against the Log Analytics workspace. You can use predefined queries by name such as `recent` which shows most recent logs ordered by TimeGenerated and `errors` which shows error-level logs ordered by TimeGenerated. Otherwise, provide a custom KQL query. |
+| **Query** | Required | The KQL query to execute against the Log Analytics workspace. You can use predefined queries by name: `recent` shows the most recent logs ordered by TimeGenerated; `errors` shows error-level logs ordered by TimeGenerated. Otherwise, provide a custom KQL query. |
+| **Resource ID** | Required | The Azure Resource ID of the resource to query. Example: /subscriptions/&lt;sub&gt;/resourceGroups/&lt;rg&gt;/providers/Microsoft.OperationalInsights/workspaces/&lt;ws&gt;. |
+| **Table name** | Required | The name of the table to query within the workspace. |
 | **Hours** | Optional | The number of hours to query back from now. |
 | **Limit** | Optional | The maximum number of results to return. |
 
@@ -261,19 +213,17 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor healthmodels entity get -->
 
-The Azure MCP Server gets the health status of an entity using Azure Monitor health models. This provides comprehensive health information and monitoring status for Azure resources and applications.
+This tool retrieves the health status and recent health events for a specific entity in an Azure Monitor health model. The Model Context Protocol (MCP) tool reports application-level health based on custom health models, not basic resource availability. For basic resource availability, use Azure Resource Health or the `azmcp_resourcehealth_availability-status_get` tool. To query logs in a Log Analytics workspace, use `azmcp_monitor_workspace_log_query`. To query logs for a specific Azure resource, use `azmcp_monitor_resource_log_query`.
 
 Example prompts include:
 
-- **Check entity health**: "Get health for entity 'app-prod-001' with model 'webapp-health' in resource group 'prod-rg'"
-- **Monitor resource health**: "What's the health of entity 'web-app-prod' using model 'application-health' in resource group 'monitoring-rg'?"
-- **Check system status**: "Get health info for entity 'sql-prod-db' with model 'database-health' in resource group 'data-rg'"
+- "Show me the health status of entity 'order-service' using the health model 'app-health-v1' in resource group 'rg-prod'."
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource group** |  Required | The name of the Azure resource group. This is a logical container for Azure resources. |
-| **Model** | Required | The name of the health model. |
-| **Entity** | Required | The entity ID to get health for. |
+| **Entity name** | Required | The entity to get health for. |
+| **Health model** | Required | The name of the health model for which to get the health. |
+| **Resource group** | Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -283,26 +233,29 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor metrics query -->
 
-The Azure MCP Server queries Azure Monitor metrics for resources. This allows you to retrieve performance metrics, usage statistics, and monitoring data for your Azure resources over specified time periods.
+Query Azure Monitor metrics for a resource. This tool returns time series data for the specified metrics, helping you analyze resource performance and availability. This tool is part of the Model Context Protocol (MCP) tools.
 
 Example prompts include:
 
-- **Query VM metrics**: "Get metrics 'Percentage CPU,Available Memory Bytes' with namespace 'Microsoft.Compute/virtualMachines' for resource 'prod-vm01' from January 1 to January 2"
-- **Query storage metrics**: "Show metrics 'Transactions,Availability' with namespace 'Microsoft.Storage/storageAccounts' for resource 'mystorageaccount'"
-- **Query app metrics**: "Get metrics 'ResponseTime,Requests' with namespace 'Microsoft.Web/sites' for resource 'mywebapp' last 24 hours"
+- "Analyze performance trends and response times for Application Insights resource 'appinsights-prod' with metrics 'requests/duration' and metric namespace 'microsoft.insights/components'."
+- "Check the availability metric 'availabilityResults/availabilityPercentage' for Application Insights resource 'appinsights-staging' using metric namespace 'microsoft.insights/components'?"
+- "Get the metric 'requests/duration' with aggregation 'Average' and interval 'PT1M' for resource 'appinsights-prod' using metric namespace 'microsoft.insights/components'."
+- "Investigate error rates and failed requests for Application Insights resource 'appinsights-prod' using metrics 'requests/failed,exceptions/count' and metric namespace 'microsoft.insights/components'."
+- "Query the metric 'requests/count' for resource type 'Microsoft.Insights/components' resource 'appinsights-qa' with metric namespace 'microsoft.insights/components' and interval 'PT5M'."
+- "What's the requests per second rate using metric 'requests/count' with aggregation 'Count' for Application Insights resource 'appinsights-prod' and metric namespace 'microsoft.insights/components'?"
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource** | Required | The name of the resource to query metrics for. |
-| **Metric namespace** | Required | The metric namespace. |
-| **Metrics** | Required | The metric names to query. |
-| **Resource type** | Optional | The type of the resource. |
-| **Start time** | Optional | The start time for the query. |
-| **End time** | Optional | The end time for the query. |
-| **Interval** | Optional | The interval for aggregation. |
-| **Aggregation** | Optional | The aggregation method. |
-| **Filter** | Optional | Filter for the metrics query. |
-| **Max buckets** | Optional | Maximum number of buckets. |
+| **Metric names** | Required | The names of metrics to query, comma-separated. |
+| **Metric namespace** | Required | The metric namespace to query. Obtain this value from the azmcp-monitor-metrics-definitions tool. |
+| **Resource name** | Required | The name of the Azure resource to query metrics for. |
+| **Aggregation** | Optional | The aggregation type to use, such as Average, Maximum, Minimum, Total, or Count. |
+| **End time** | Optional | The end time for the query in ISO format (for example, `2023-01-01T00:00:00Z`). Defaults to now. |
+| **Filter** | Optional | The OData filter to apply to the metrics query. |
+| **Interval** | Optional | The time interval for data points (for example, `PT1H` for 1 hour, `PT5M` for 5 minutes). |
+| **Max buckets** | Optional | The maximum number of time buckets to return. Defaults to 50. |
+| **Resource type** | Optional | The Azure resource type (for example, `Microsoft.Storage/storageAccounts`, `Microsoft.Compute/virtualMachines`). If not specified, the tool attempts to infer the type from the resource name. |
+| **Start time** | Optional | The start time for the query in ISO format (for example, `2023-01-01T00:00:00Z`). Defaults to 24 hours ago. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -312,21 +265,21 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor metrics definitions -->
 
-The Azure MCP Server lists available metric definitions for a resource. This helps you discover what metrics are available for monitoring before querying specific metric data.
+This tool lists metric definitions for an Azure resource. It returns metadata about each metric, including namespaces, descriptions, and aggregation types, so you can determine which metrics to query for a resource.
 
 Example prompts include:
 
-- **List storage metrics**: "Show metrics for mystorageaccount."
-- **Find transaction metrics**: "Find transaction metrics for storageacct."
-- **List VM metrics**: "List metrics for prod-vm in production group."
+- "Get metric definitions for resource name 'app-insights-prod'."
+- "List metric definitions for resource name 'mystorageacct' with resource type 'Microsoft.Storage/storageAccounts' and metric namespace 'Storage'."
+- "Show metric definitions for resource name 'vm-prod-01' with search string 'cpu' and limit '20'."
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource name** | Required | The name of the resource. |
-| **Resource type** | Optional | The type of the resource. |
-| **Metric namespace** | Optional | The metric namespace. |
-| **Search string** | Optional | Search string to filter metrics. |
-| **Limit** | Optional | Maximum number of results to return. |
+| **Resource name** | Required | The name of the Azure resource to query metrics for. |
+| **Limit** | Optional | The maximum number of metric definitions to return. Defaults to 10. |
+| **Metric namespace** | Optional | The metric namespace to query. Obtain this value from the azmcp-monitor-metrics-definitions tool. |
+| **Resource type** | Optional | The Azure resource type (for example, `Microsoft.Storage/storageAccounts`, `Microsoft.Compute/virtualMachines`). If you don't specify it, the tool attempts to infer the resource type from the resource name. |
+| **Search string** | Optional | A string to filter the metric definitions. The filter performs case-insensitive matching on metric name and description. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -336,17 +289,20 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor instrumentation get-learning-resource -->
 
-Get a specific learning resource by path or list all available Azure Monitor onboarding learning resources.
+This tool lists all available learning resources for Azure Monitor instrumentation, or it retrieves the content of a specific resource by path. By default, the tool returns all resource paths. If you specify a path, the tool returns the full resource content. To instrument an application, use the orchestrator-start tool.
 
 Example prompts include:
 
-- "Get the onboarding learning resource at path 'getting-started/overview'"
-- "List all available Azure Monitor onboarding learning resources"
-- "What learning resources are available for Azure Monitor instrumentation onboarding?"
+- "Get the onboarding learning resource at path 'onboarding/get-started.md'."
+- "Show me the content of the Azure Monitor onboarding learning resource at path 'onboarding/quickstart.md'."
+- "Retrieve the content of the Azure Monitor learning resource file at path 'samples/instrumentation-guide.html'."
+- "List all Azure Monitor onboarding learning resources."
+- "Show me all learning resource paths for Azure Monitor instrumentation."
+- "Which learning resources are available for Azure Monitor instrumentation onboarding?"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Path** | Optional | The path of the learning resource to retrieve. If omitted, lists all available resources. |
+| **Path** | Optional | Learning resource path. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -356,17 +312,17 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor instrumentation orchestrator-start -->
 
-Start deterministic instrumentation orchestration for a local workspace. Analyzes the workspace and returns the first Azure Monitor instrumentation step.
+Start here for Model Context Protocol (MCP) tools that instrument Azure Monitor. This tool analyzes the workspace and returns the first action to execute. After you execute the action, call orchestrator-next to continue. Follow the action in the `instruction` field exactly.
 
 Example prompts include:
 
-- "Start Azure Monitor instrumentation orchestration for workspace '/path/to/project'"
-- "Analyze workspace '/path/to/project' and return the first Azure Monitor instrumentation step"
-- "Begin guided Azure Monitor onboarding for project at '/path/to/project' and give me step one"
+- "Start Azure Monitor instrumentation orchestration for workspace path '/home/dev/workspace-monitoring'."
+- "Analyze workspace path '/src/projects/my-app-workspace' and return the first Azure Monitor instrumentation step."
+- "Begin guided Azure Monitor onboarding for project at workspace path '/workspace/my-app' and give me step one."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Workspace path** | Required | The absolute path to the local workspace to analyze. |
+| **Workspace path** | Required | Absolute path to the workspace folder. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -376,18 +332,29 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli monitor instrumentation orchestrator-next -->
 
-Continue orchestration after completing the previous action. Returns the next instrumentation step in the onboarding flow.
+Get the next instrumentation action after you complete the current one.
+
+This tool is part of the Model Context Protocol (MCP) suite.
+
+After you execute the exact `instruction` from the previous response, run this tool to receive the next action.
+
+Expected workflow:
+1. You receive an action from orchestrator-start or orchestrator-next.
+1. You execute the `instruction` field exactly.
+1. You run this tool with a concise `Completion note` to get the next action.
+
+Returns: The next action to execute, or `complete` status when all steps are done.
 
 Example prompts include:
 
-- "After completing the previous Azure Monitor instrumentation step, get the next action for session 'abc-123' with completion note 'installed SDK packages'"
-- "Get the next onboarding action using session 'abc-123' after I completed 'configured telemetry exporters'"
-- "I finished the previous instrumentation step; return the next step for session 'abc-123' with note 'added connection string'"
+- "After completing the previous Azure Monitor instrumentation step, get the next action for session ID 'session-abc123' with completion note 'Added UseAzureMonitor() to Program.cs'."
+- "Get the next onboarding action for session ID 'workspace/session-2026' with completion note 'Ran dotnet add package Microsoft.ApplicationInsights'."
+- "After finishing the previous instrumentation step, return the next step for session ID 'session-789xyz' with completion note 'Updated appsettings.json to enable Application Insights'."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Session ID** | Required | The orchestration session identifier returned by orchestrator-start. |
-| **Completion note** | Required | A description of what was completed in the previous step. |
+| **Completion note** | Required | One sentence describing what you executed, for example, 'Ran dotnet add package command' or 'Added UseAzureMonitor() to Program.cs'. |
+| **Session ID** | Required | The workspace path returned as sessionId from orchestrator-start. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -397,18 +364,18 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli monitor instrumentation send-brownfield-analysis -->
 
-Send brownfield analysis findings JSON to continue migration flow. Use this when the orchestrator returns an `analysis_needed` status with an analysis template.
+Sends brownfield code analysis findings after `orchestrator-start` returns status `analysis_needed`. This tool is part of the Model Context Protocol (MCP) workflow. You must scan the workspace source files and fill in the analysis template before you call this tool. After this tool succeeds, continue with `orchestrator-next`.
 
 Example prompts include:
 
-- "Send brownfield code analysis findings JSON to Azure Monitor instrumentation session 'abc-123' after analysis was requested"
-- "Continue migration orchestration by submitting analysis payload to session 'abc-123'"
-- "Send completed brownfield telemetry analysis for onboarding session 'abc-123'"
+- "Send brownfield code analysis findings JSON '{"serviceOptions":null,"initializers":null,"processors":null,"clientUsage":null,"sampling":{"found":false,"hasCustomSampling":false},"telemetryPipeline":null,"logging":null}' to Azure Monitor instrumentation session 'workspace-7a3b' after analysis was requested."
+- "Continue migration orchestration by submitting findings JSON '{"serviceOptions":{"found":true,"details":"AddApplicationInsightsTelemetry used"},"initializers":[],"processors":[],"clientUsage":null,"sampling":{"found":false,"hasCustomSampling":false},"telemetryPipeline":null,"logging":null}' to session 'sess-01234'."
+- "Send completed brownfield telemetry analysis as findings JSON '{"serviceOptions":null,"initializers":null,"processors":null,"clientUsage":{"found":true},"sampling":{"found":false,"hasCustomSampling":false},"telemetryPipeline":null,"logging":{"found":true}}' for onboarding session 'session-9f3b'."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Session ID** | Required | The orchestration session identifier. |
-| **Findings JSON** | Required | The JSON payload matching the analysis template returned by orchestrator-start. |
+| **Findings JSON** | Required | JSON object with brownfield analysis findings. Required properties: serviceOptions (service options findings from analyzing AddApplicationInsightsTelemetry() call, null if not found), initializers (telemetry initializer findings from analyzing ITelemetryInitializer or IConfigureOptions&lt;TelemetryConfiguration&gt; implementations, null if none found), processors (telemetry processor findings from analyzing ITelemetryProcessor implementations, null if none found), clientUsage (TelemetryClient usage findings from analyzing direct TelemetryClient usage, null if not found), sampling (custom sampling configuration findings, null if no custom sampling), telemetryPipeline (custom ITelemetryChannel or TelemetrySinks usage findings, null if not found), logging (explicit logger provider and filter findings, null if not found). For sections that don't exist in the codebase, pass an empty default object, for example found: `false` or hasCustomSampling: `false`, instead of null. |
+| **Session ID** | Required | The workspace path returned as `sessionId` from `orchestrator-start`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -418,18 +385,18 @@ Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 <!-- @mcpcli monitor instrumentation send-enhancement-select -->
 
-Submit enhancement selection when orchestrator-start returns `enhancement_available`. Sends one or more enhancement keys to continue the onboarding flow.
+Submit the user's enhancement selection after `orchestrator-start` returns status `enhancement_available`. Present the enhancement choices to the user, then call this tool with the chosen enhancement keys. You can select multiple enhancements by passing a comma-separated list, for example, `redis,processors`. After this tool succeeds, continue with `orchestrator-next`.
 
 Example prompts include:
 
-- "Submit enhancement selection keys 'logging,tracing' for Azure Monitor instrumentation session 'abc-123'"
-- "Continue instrumentation enhancement flow by sending selected keys 'metrics' to session 'abc-123'"
-- "Send chosen enhancement option key list 'logging,metrics,tracing' for onboarding session 'abc-123'"
+- "Submit enhancement keys 'redis,processors' for Azure Monitor instrumentation session ID 'workspaces/my-app/session-abc123'."
+- "Continue instrumentation enhancement flow by sending enhancement keys 'redis' to session ID 'workspaces/prod-app/session-789'."
+- "Send chosen enhancement keys 'entityframework,otlp' for onboarding session ID 'workspaces/onboard/session-456'."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Session ID** | Required | The orchestration session identifier. |
-| **Enhancement keys** | Required | Comma-separated list of enhancement keys from the enhancement options. |
+| **Enhancement keys** | Required | One or more enhancement keys, comma-separated (for example, `redis`, `redis,processors`, `entityframework,otlp`). |
+| **Session ID** | Required | The workspace path returned as `sessionId` from `orchestrator-start`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -508,7 +475,7 @@ Example prompts include:
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
 | **Display name** | Required | The display name of the workbook. |
-| **Resource group** | Required | The name of the Azure resource group. |
+| **Resource group** | Required | The name of the Azure resource group containing the workbook. |
 | **Serialized content** | Required | The serialized JSON content of the workbook. |
 | **Source ID** | Optional | The linked resource ID for the workbook. By default, this is `azure monitor`. |
 

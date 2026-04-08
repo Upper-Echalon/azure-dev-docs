@@ -5,6 +5,7 @@ description: Use Azure MCP Server tools to diagnose and troubleshoot Azure App S
 ms.date: 04/07/2026
 ms.service: azure-mcp-server
 ms.topic: concept-article
+review: msalaman 
 tool_count: 1
 mcp-cli.version: 2.0.0-beta.39
 author: diberry
@@ -17,7 +18,7 @@ content_well_notification:
 
 # Azure MCP Server tools for Azure AppLens
 
-Use Azure MCP Server to diagnose Azure App Service resources with natural language prompts.
+Use Azure MCP Server to diagnose Azure App Service resources by using natural language prompts.
 
 Azure AppLens identifies and troubleshoots application and platform issues for Azure App Service. For more information, see [Azure AppLens documentation](/azure/app-service/).
 
@@ -50,4 +51,4 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 - [What are the Azure MCP Server tools?](index.md)
 - [Get started using Azure MCP Server](../get-started.md)
-- [Azure App Service diagnostics documentation](/azure/app-service/troubleshoot-diagnostic-tools)
+- [Azure App Service diagnostics documentation](/azure/app-service/troubleshoot-diagnostic-logs)

@@ -29,7 +29,7 @@ Azure Deploy is a set of tools that help you plan, validate, and monitor deploym
 
 <!-- @mcpcli deploy app logs get -->
 
-Shows application logs for applications that the Azure Developer CLI (azd) deploys. This tool queries the application's Log Analytics workspace for Azure Container Apps, Azure App Service, and Azure Functions. It automatically discovers the workspace and associated resources from the azd environment configuration. It works only for applications deployed by `azd up`.
+This tool shows application logs for applications that the Azure Developer CLI (azd) deploys. This tool queries the application's Log Analytics workspace for Azure Container Apps, Azure App Service, and Azure Functions. It automatically discovers the workspace and associated resources from the azd environment configuration. It works only for applications deployed by `azd up`.
 
 Check deployment status or troubleshoot post-deployment issues.
 
@@ -39,7 +39,7 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **AZD env name** |  Required | The environment name created by the Azure Developer CLI (azd) and stored in AZURE_ENV_NAME during `azd init` or `azd up`. If not provided, in context, this tool checks the .azure directory in the workspace, or run `azd env list`. |
+| **AZD env name** |  Required | The environment name created by the Azure Developer CLI (azd) and stored in AZURE_ENV_NAME during `azd init` or `azd up`. If not provided in context, this tool checks the `.azure` directory in the workspace, or runs `azd env list`. |
 | **Workspace folder** |  Required | The full path to the workspace folder that contains the azd project. |
 | **Limit** |  Optional | The maximum number of log rows to retrieve. Use it to limit results or avoid exceeding token limits. Default is 200. |
 
@@ -55,7 +55,7 @@ This tool is part of the Model Context Protocol (MCP) toolset. It generates an A
 
 Example prompts include:
 
-- "Generate the azure architecture diagram for this application Raw mcp tool input '\<secure-password\>'."
+- "Generate the Azure architecture diagram for this application raw MCP tool input '\<secure-password\>'."
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -78,8 +78,8 @@ Example prompts include:
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Deployment tool** |  Required | The deployment tool to use. Valid values: `AzCli`, `AZD`. |
-| **IaC type** |  Optional | The type of IaC file used for deployment. Valid values: bicep, terraform. Leave empty ONLY if user wants to use AzCli command script and no IaC file. |
-| **Resource types** |  Optional | List of Azure resource types to generate rules for. Get the value from context and use the same resources defined in plan. Valid value: 'appservice','containerapp','function','aks','azuredatabaseforpostgresql','azuredatabaseformysql','azuresqldatabase','azurecosmosdb','azurestorageaccount','azurekeyvault'. |
+| **IaC type** |  Optional | The type of IaC file used for deployment. Valid values include `bicep`, `terraform`. Leave empty only if you want to use Azure CLI command script without IaC file. |
+| **Resource types** |  Optional | List of Azure resource types to generate rules for. Get the value from context and use the same resources defined in the plan. Valid value: `appservice`,`containerapp`,`function`,`aks`,`azuredatabaseforpostgresql`,`azuredatabaseformysql`,`azuresqldatabase`,`azurecosmosdb`,`azurestorageaccount`,`azurekeyvault`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -97,17 +97,17 @@ Examples
 
 This Model Context Protocol (MCP) tool generates CI/CD pipeline configuration and step-by-step guidance to deploy an application to Azure by using GitHub Actions or Azure DevOps pipelines. It supports Azure Developer CLI (azd) and Azure CLI–based deployments. It can generate pipelines that provision infrastructure and deploy application code.
 
-Choose GitHub Actions or Azure DevOps, decide whether the pipeline should only deploy or also provision infrastructure, and confirm whether the project uses azd (for example, `an azure.yaml file is present`). Specify `deploy-only` or `provision-and-deploy`, and set `Is azd project` to `true` only if the project uses azd tooling and an azure.yaml file is available.
+You can choose GitHub Actions or Azure DevOps, decide whether the pipeline should only deploy or also provision infrastructure, and confirm whether the project uses azd (for example, an `azure.yaml` file is present). Specify `deploy-only` or `provision-and-deploy`, and set `Is azd project` to `true` only if the project uses azd tooling and an azure.yaml file is available.
 
 Example prompts include:
 
-- "How do I set up a CI/CD pipeline with GitHub Actions to deploy my app to Azure, with Deploy option 'deploy-only', Is azd project 'false', Pipeline platform 'github-actions'?"
+- "How do I set up a CI/CD pipeline with GitHub Actions to deploy my app to Azure, with Deploy option 'deploy-only', it isn't an AZD project, and the pipeline platform 'github-actions'?"
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Deploy option** |  Required | Valid values: deploy-only, provision-and-deploy. Default to deploy-only. Set to 'provision-and-deploy' only when you explicitly want an infra provisioning pipeline that uses local provisioning scripts. |
-| **Is azd project** |  Required | Whether to use azd tool in the deployment pipeline. Set to `true` only if azure.yaml is provided or the context suggests AZD tools. |
-| **Pipeline platform** |  Required | The platform for the deployment pipeline. Valid values: github-actions, azure-devops. |
+| **Deploy option** |  Required | Valid values: deploy-only, provision-and-deploy. Default to deploy-only. Set to `provision-and-deploy` only when you explicitly want an infra provisioning pipeline that uses local provisioning scripts. |
+| **Is AZD project** |  Required | Whether to use AZD tool in the deployment pipeline. Set to `true` only if `azure.yaml` is provided or the context suggests AZD tools. |
+| **Pipeline platform** |  Required | The platform for the deployment pipeline. Valid values: `github-actions`, `azure-devops`. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -123,7 +123,7 @@ This tool doesn't scan your workspace or detect resources automatically. You ana
 
 Example prompts include:
 
-- "How do I create a step-by-step deployment plan for project name 'my-webapp' to Azure with deploy option 'provision-and-deploy', provisioning tool 'AZD', source type 'from-project', target app service 'WebApp', workspace folder '/home/dev/my-webapp', and Iac options 'bicep'?"
+- "How do I create a step-by-step deployment plan for project name 'my-webapp' to Azure with deploy option 'provision-and-deploy', provisioning tool 'AZD', source type 'from-project', target app service 'WebApp', workspace folder '/home/dev/my-webapp', and IaC options 'bicep'?"
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -133,7 +133,7 @@ Example prompts include:
 | **Source type** |  Required | The source of the plan to generate from. Valid values: `from-project`, `from-azure`, `from-context`. Use `from-project` to base the plan on project files in the workspace. Use `from-azure` to base the plan on existing Azure resources. Use `from-context` to base the plan on values you provide when no project files or Azure resources exist. |
 | **Target app service** |  Required | The Azure service to deploy the application. Valid values: `ContainerApp`, `WebApp`, `FunctionApp`, `AKS`. Recommend one based on the application architecture and runtime. |
 | **Workspace folder** |  Required | The full path of the workspace folder. |
-| **Iac options** |  Optional | The Infrastructure as Code option. Valid values: `bicep`, `terraform`. Leave empty to use an Azure CLI script. |
+| **IaC options** |  Optional | The Infrastructure as Code option. Valid values: `bicep`, `terraform`. Leave empty to use an Azure CLI script. |
 | **Resource group** | Optional | The name of the Azure resource group. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):

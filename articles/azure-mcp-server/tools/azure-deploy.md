@@ -6,7 +6,7 @@ ms.date: 04/06/2026
 ms.service: azure-mcp-server
 ms.topic: concept-article
 tool_count: 5
-mcp-cli.version: 2.0.0-beta.38+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
+mcp-cli.version: 2.0.0-beta.39+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
 author: diberry
 ms.author: diberry
 ms.reviewer: qianwens

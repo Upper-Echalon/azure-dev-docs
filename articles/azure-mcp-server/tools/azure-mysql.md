@@ -6,7 +6,7 @@ ms.date: 04/07/2026
 ms.service: azure-mcp-server
 ms.topic: concept-article
 tool_count: 6
-mcp-cli.version: 2.0.0-beta.38
+mcp-cli.version: 2.0.0-beta.39
 author: diberry
 ms.author: diberry
 ms.reviewer: mbaldwin
@@ -25,7 +25,7 @@ Azure Database for MySQL is a managed relational database service based on the M
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
 
-## Get MySQL servers databaseses
+## Get MySQL servers databases
 
 <!-- @mcpcli mysql list -->
 

@@ -13,7 +13,7 @@ ms.custom: build-2025
 tool_count for monitor: 16
 tool_count for workbooks: 5
 ms.reviewer: jong
-mcp-cli.version: 2.0.0-beta.38
+mcp-cli.version: 2.0.0-beta.39
 ---
 # Azure MCP Server tools for Azure Monitor and Workbooks
 

@@ -1,16 +1,17 @@
 ---
 title: Get started with Azure Skills
-description: Deploy your first Azure application using Azure Skills in 5 minutes.
+description: "Azure Skills quickstart: Deploy your first Azure application in minutes. Learn how to prepare, validate, and launch Node.js apps with step-by-step guidance."
 ms.topic: quickstart
 ms.date: 03/16/2026
 author: diberry
 ms.author: diberry
+ms.reviewer: alexwolf
 ms.service: azure-mcp-server
 ---
 
 # Get started with Azure Skills
 
-In this quickstart, you prepare, validate, and deploy a simple application to Azure using Azure Skills.
+In this quickstart, you prepare, validate, and deploy a simple application to Azure by using Azure Skills.
 
 ## Prerequisites
 
@@ -22,28 +23,31 @@ In this quickstart, you prepare, validate, and deploy a simple application to Az
 ## Scenario
 
 You have a simple Node.js application. You want to deploy it to Azure with:
+
 - Web application hosting (Azure App Service)
 - A storage account for application data
 - Monitoring with Application Insights
 
-## Step 1: Prepare your application
+## Prepare your application
 
-In your AI assistant, navigate to your project directory and ask:
+In your AI assistant, go to your project directory and ask:
 
-```bash
+```text
 Prepare my application for Azure deployment
 ```
 
 The `azure-prepare` skill:
+
 1. Analyzes your codebase
-2. Identifies technology stack (Node.js, npm, etc.)
-3. Creates `.azure/plan.md` with a deployment strategy
-4. Generates infrastructure-as-code
-5. Waits for your approval
+1. Identifies technology stack (Node.js, npm, and so on)
+1. Creates `.azure/plan.md` with a deployment strategy
+1. Generates infrastructure as code
+1. Waits for your approval
 
 ### Review the generated plan
 
 Open `.azure/plan.md` and review:
+
 - **Project Information** — Application name and deployment mode
 - **Requirements** — Classification and scale (small, medium, large)
 - **Components** — Technologies detected
@@ -85,29 +89,31 @@ Example plan content:
 
 If the plan looks correct, tell your AI assistant:
 
-```bash
+```text
 Approve this plan and proceed to validation
 ```
 
 The skill updates the plan status to `Approved` and moves to the next step.
 
-## Step 2: Validate the deployment plan
+## Validate the deployment plan
 
-Your AI assistant now runs the `azure-validate` skill to check:
+Your AI assistant runs the `azure-validate` skill to check:
+
 - Azure CLI access and permissions
-- Bicep/Terraform template syntax (if applicable)
+- Bicep or Terraform template syntax, if applicable
 - Azure subscription and region availability
 - Service quota limits
 - Required permissions for your account
 
-Validation completes and records proof of all checks in the plan. The plan status updates to `Validated`.
+Validation finishes and records proof of all checks in the plan. The plan status updates to `Validated`.
 
 ### Review validation results
 
 Check `.azure/plan.md` for the **Validation Proof** section, which shows:
+
 - Commands executed
 - Timestamp
-- Results (passed/failed)
+- Results (passed or failed)
 
 Example:
 
@@ -120,30 +126,32 @@ Example:
 
 If validation fails, review errors and ask your AI assistant to fix issues:
 
-```bash
+```text
 Fix the validation errors and try again
 ```
 
-## Step 3: Deploy to Azure
+## Deploy to Azure
 
 When your plan is validated, tell your AI assistant:
 
-```bash
+```text
 Deploy my application to Azure
 ```
 
 The `azure-deploy` skill:
+
 1. Confirms plan status is `Validated`
-2. Provisions Azure resources (storage, app service, monitoring)
-3. Deploys your application code
-4. Configures application settings
-5. Provides your application endpoint
+1. Provisions Azure resources (storage, app service, monitoring)
+1. Deploys your application code
+1. Configures application settings
+1. Provides your application endpoint
 
 Deployment typically takes 3-5 minutes.
 
 ### View your deployed application
 
 After successful deployment, your AI assistant provides:
+
 - Application URL (for App Service)
 - Storage account name and access keys
 - Application Insights instrumentation key
@@ -165,32 +173,34 @@ Monitor your app: https://portal.azure.com/...
 
 Visit your application URL in a browser to verify it's running.
 
-## Step 4: Verify your deployment
+## Verify your deployment
 
 Test your application:
 
-1. **Visit your URL** — Open the application URL in a browser
-2. **Check monitoring** — View logs in Application Insights
-3. **Test functionality** — Use key features of your app
+1. **Visit your URL** — Open the application URL in a browser.
+1. **Check monitoring** — View logs in Application Insights.
+1. **Test functionality** — Use key features of your app.
 
 Ask your AI assistant for monitoring status:
 
-```bash
+```text
 Show me the application logs and performance metrics
 ```
 
 Your AI assistant queries Application Insights and displays recent activity, errors, and performance data.
 
-## Step 5: Update and redeploy
+## Update and redeploy
 
 If you make code changes, redeploy easily:
 
-1. **Update your code** in your editor
-2. **Ask your AI assistant:**
-   ```bash
+1. **Update your code** in your editor.
+1. **Ask your AI assistant:**
+
+   ```text
    Update the deployment with my latest changes
    ```
-3. The skill runs `azure-prepare` to check for changes, then `azure-deploy` to update your resources.
+
+1. The skill runs `azure-prepare` to check for changes, then `azure-deploy` to update your resources.
 
 Updated resources reuse existing infrastructure. Only changed components redeploy.
 
@@ -198,14 +208,15 @@ Updated resources reuse existing infrastructure. Only changed components redeplo
 
 When you no longer need your application, delete Azure resources to avoid charges:
 
-```bash
+```text
 Delete all Azure resources for this application
 ```
 
 Your AI assistant:
+
 1. Lists resources to be deleted (for your confirmation)
-2. Deletes the resource group and all contents
-3. Confirms cleanup complete
+1. Deletes the resource group and all contents
+1. Confirms cleanup complete
 
 Example:
 
@@ -217,7 +228,7 @@ Resources to delete:
 Are you sure? (yes/no)
 ```
 
-Type "yes" to confirm deletion.
+Type `yes` to confirm deletion.
 
 ## Troubleshooting
 
@@ -225,14 +236,15 @@ Type "yes" to confirm deletion.
 
 **Problem:** Your AI assistant can't authenticate to Azure.
 
-**Solution:** Re-authenticate with `az login` and try again.
+**Solution:** Re-authenticate by using `az login` and try again.
 
 ### Plan validation fails
 
 **Problem:** Azure Skills reports validation errors.
 
 **Solution:** Ask your AI assistant to review and fix issues:
-```bash
+
+```text
 Why did validation fail? Fix the errors.
 ```
 
@@ -241,10 +253,12 @@ Why did validation fail? Fix the errors.
 **Problem:** The provided URL returns an error or times out.
 
 **Solution:**
-1. Verify the URL is correct
-2. Wait 1-2 minutes for DNS propagation
-3. Check Application Insights logs for errors:
-   ```bash
+
+1. Verify the URL is correct.
+1. Wait 1-2 minutes for DNS propagation.
+1. Check Application Insights logs for errors.
+
+   ```text
    Show me recent errors in Application Insights
    ```
 

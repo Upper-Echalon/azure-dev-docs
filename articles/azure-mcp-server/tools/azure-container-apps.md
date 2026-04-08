@@ -7,6 +7,7 @@ ms.service: azure-mcp-server
 ms.topic: concept-article
 tool_count: 1
 mcp-cli.version: 2.0.0-beta.39
+reviewer: ArthurMa1978
 author: diberry
 ms.author: diberry
 ai-usage: ai-generated

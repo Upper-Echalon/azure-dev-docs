@@ -6,6 +6,7 @@ content_well_notification:
   - AI-contribution
 author: diberry
 ms.author: diberry
+reviewer: akromm
 ms.service: azure-mcp-server
 ms.topic: concept-article
 ms.date: 03/24/2026

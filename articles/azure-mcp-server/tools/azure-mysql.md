@@ -9,7 +9,7 @@ tool_count: 6
 mcp-cli.version: 2.0.0-beta.39
 author: diberry
 ms.author: diberry
-ms.reviewer: mbaldwin
+ms.reviewer: mattkohnms 
 ai-usage: ai-generated
 ms.custom: build-2025
 content_well_notification:
@@ -18,7 +18,7 @@ content_well_notification:
 
 # Azure MCP Server tools for Azure Database for MySQL
 
-The Azure MCP Server lets you manage Azure Database for MySQL servers, databases, configuration settings, and schemas, including: get and list servers and databases, query table schemas and data, and set server parameters, with natural language prompts.
+The Azure MCP Server tools help you manage Azure Database for MySQL servers, databases, configuration settings, and schemas. You can use the tools to get and list servers and databases, query table schemas and data, and set server parameters by using natural language prompts.
 
 Azure Database for MySQL is a managed relational database service based on the MySQL community edition. For more information, see [Azure Database for MySQL documentation](/azure/mysql/).
 
@@ -62,7 +62,7 @@ Examples
 
 <!-- @mcpcli mysql database query -->
 
-The Model Context Protocol (MCP) tool executes a safe, read-only SQL `SELECT` query against an Azure Database for MySQL Flexible Server database. Use this tool to retrieve or inspect table data without modifying it. The tool rejects non-`SELECT` statements such as `INSERT`, `UPDATE`, `DELETE`, `REPLACE`, `MERGE`, `TRUNCATE`, `ALTER`, `CREATE`, and `DROP`. It also rejects multi-statements, comments that hide writes, transaction control (`BEGIN`/`COMMIT`/`ROLLBACK`), `INTO OUTFILE`, and other destructive keywords. This tool executes only a single `SELECT` statement to ensure data integrity.
+The Model Context Protocol (MCP) tool runs a safe, read-only SQL `SELECT` query against an Azure Database for MySQL Flexible Server database. Use this tool to retrieve or inspect table data without modifying it. The tool rejects non-`SELECT` statements such as `INSERT`, `UPDATE`, `DELETE`, `REPLACE`, `MERGE`, `TRUNCATE`, `ALTER`, `CREATE`, and `DROP`. It also rejects multistatements, comments that hide writes, transaction control (`BEGIN`/`COMMIT`/`ROLLBACK`), `INTO OUTFILE`, and other destructive keywords. This tool executes only a single `SELECT` statement to ensure data integrity.
 
 For best results, list the columns you need instead of using `SELECT *`. Add `WHERE` filters, use `LIMIT`/`OFFSET` for paging, and add `ORDER BY` for deterministic results. Avoid returning unnecessary sensitive data.
 
@@ -72,10 +72,10 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Database name** |  Required | The MySQL database to be accessed. |
-| **Query** |  Required | Query to be executed against a MySQL database. |
+| **Database name** |  Required | The MySQL database to access. |
+| **Query** |  Required | Query to execute against a MySQL database. |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
-| **Server name** |  Required | The MySQL server to be accessed. |
+| **Server name** |  Required | The MySQL server to access. |
 | **User name** |  Required | The user name to access MySQL server. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
@@ -103,11 +103,11 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
-## Get server param
+## Get server parameter
 
 <!-- @mcpcli mysql server param get -->
 
-This Model Context Protocol (MCP) tool retrieves the current value of a single server configuration parameter on Azure Database for MySQL Flexible Server. Use this tool to inspect a setting, for example `max_connections`, `wait_timeout`, or `slow_query_log`, before you change it. This tool requires a user account with sufficient privileges to read server parameters.
+This Model Context Protocol (MCP) tool retrieves the current value of a single server configuration parameter on Azure Database for MySQL Flexible Server. Use this tool to inspect a setting, such as `max_connections`, `wait_timeout`, or `slow_query_log`, before you change it. This tool requires a user account with sufficient privileges to read server parameters.
 
 Example prompts include:
 
@@ -115,16 +115,16 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Parameter** |  Required | The MySQL parameter to be accessed. |
+| **Parameter** |  Required | The MySQL parameter to access. |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
-| **Server name** |  Required | The MySQL server to be accessed. |
+| **Server name** |  Required | The MySQL server to access. |
 | **User name** |  Required | The user name to access MySQL server. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Update server param
+## Update server parameter
 
 <!-- @mcpcli mysql server param set -->
 
@@ -136,9 +136,9 @@ Example prompts include:
 
 | Parameter |  Required or optional | Description |
 |-----------------------|----------------------|-------------|
-| **Parameter** |  Required | The MySQL parameter to be accessed. |
+| **Parameter** |  Required | The MySQL parameter to access. |
 | **Resource group** |  Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
-| **Server name** |  Required | The MySQL server to be accessed. |
+| **Server name** |  Required | The MySQL server to access. |
 | **User name** |  Required | The user name to access MySQL server. |
 | **Value** |  Required | The value to set for the MySQL parameter. |
 

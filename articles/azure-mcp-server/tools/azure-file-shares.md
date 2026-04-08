@@ -12,8 +12,6 @@ ai-usage: ai-generated
 ms.custom: build-2025
 content_well_notification:
   - AI-contribution
-ai-usage: ai-assisted
-ms.topic: concept-article
 reviewer: ankushbindlish2
 ---
 
@@ -26,6 +24,8 @@ The Azure MCP Server lets you manage Azure file shares (`Microsoft.FileShares`) 
 :heavy_multiplication_x: **Doesn't apply to:** Classic file shares created with the `Microsoft.Storage` resource provider
 
 [Azure Files](/azure/storage/files/storage-files-introduction) is a managed file sharing service in the cloud. Azure file shares provide high-performance, fully managed storage for your applications and workloads. This article applies only to file shares created with the `Microsoft.FileShares` resource provider (preview), which is currently only available for NFS file shares. It doesn't apply to classic file shares created with the `Microsoft.Storage` resource provider.
+
+[!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
 ## Get limits
 
@@ -44,6 +44,8 @@ Example prompts include:
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Location** | Required | The Azure region or location name (for example, `eastus`, `westeurope`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -64,6 +66,8 @@ Example prompts include:
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
 | **Location** | Required | The Azure region or location name (for example, `eastus`, `westeurope`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -86,6 +90,8 @@ Example prompts include:
 | **Location** | Required | The Azure region or location name (for example, `eastus`, `westeurope`). |
 | **Provisioned storage in GiB (gibibytes)** | Required | The desired provisioned storage size of the share in GiB. |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## File Share: Check name availability
@@ -106,6 +112,8 @@ Example prompts include:
 |-----------------------|----------------------|-------------|
 | **Name** | Required | The name of the file share. |
 | **Location** | Required | The Azure region or location name (for example, `EastUS`, `WestEurope`). |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -140,6 +148,8 @@ Example prompts include:
 | **Allowed subnets** | Optional | Comma-separated list of subnet IDs allowed to access the file share. |
 | **Tags** | Optional | Resource tags as JSON (for example, `{"key1":"value1","key2":"value2"}`). |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File Share: Get file share
@@ -160,6 +170,8 @@ Example prompts include:
 |-----------------------|----------------------|-------------|
 | **Resource group** | Optional | The name of the Azure resource group. The resource group is a logical container for Azure resources. |
 | **Name** | Optional | The name of the file share. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -189,6 +201,8 @@ Example prompts include:
 | **Allowed subnets** | Optional | Comma-separated list of subnet IDs allowed to access the file share. |
 | **Tags** | Optional | Resource tags as JSON (for example, `{"key1":"value1","key2":"value2"}`). |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File Share: Delete file share
@@ -210,6 +224,8 @@ Example prompts include:
 | **Resource group** | Required | The name of the Azure resource group. The resource group is a logical container for Azure resources. |
 | **Name** | Required | The name of the file share. |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Private Endpoint Connection: Get private endpoint connection
@@ -229,6 +245,8 @@ Example prompts include:
 | **Resource group** | Required | The name of the Azure resource group. The resource group is a logical container for Azure resources. |
 | **File share name** | Required | The name of the file share. |
 | **Connection name** | Optional | The name of the private endpoint connection. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -251,6 +269,8 @@ Example prompts include:
 | **Connection name** | Required | The name of the private endpoint connection. |
 | **Status** | Required | The connection status (`Approved`, `Rejected`, or `Pending`). |
 | **Description** | Optional | Description for the connection state change. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
@@ -275,6 +295,8 @@ Example prompts include:
 | **Snapshot name** | Required | The name of the snapshot. |
 | **Metadata** | Optional | Custom metadata for the snapshot as a JSON object (for example, `{"key1":"value1","key2":"value2"}`). |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File Share Snapshot: Get snapshot
@@ -296,6 +318,8 @@ Example prompts include:
 | **Resource group** | Required | The name of the Azure resource group. The resource group is a logical container for Azure resources. |
 | **File share name** | Required | The name of the parent file share. |
 | **Snapshot name** | Optional | The name of the snapshot. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
@@ -320,6 +344,8 @@ Example prompts include:
 | **Snapshot name** | Required | The name of the snapshot. |
 | **Metadata** | Optional | Custom metadata for the snapshot as a JSON object (for example, `{"key1":"value1","key2":"value2"}`). |
 
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File share snapshot: Delete snapshot
@@ -341,6 +367,8 @@ Example prompts include:
 | **Resource group** | Required | The name of the Azure resource group. The resource group is a logical container for Azure resources. |
 | **File share name** | Required | The name of the parent file share. |
 | **Snapshot name** | Required | The name of the snapshot. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 

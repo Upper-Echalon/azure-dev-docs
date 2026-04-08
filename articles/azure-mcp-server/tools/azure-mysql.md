@@ -9,7 +9,7 @@ tool_count: 6
 mcp-cli.version: 2.0.0-beta.39
 author: diberry
 ms.author: diberry
-ms.reviewer: mattkohnms 
+reviewer: mattkohnms 
 ai-usage: ai-generated
 ms.custom: build-2025
 content_well_notification:

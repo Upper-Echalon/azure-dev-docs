@@ -5,7 +5,7 @@ description: Use Azure MCP Server tools to diagnose and troubleshoot Azure App S
 ms.date: 04/07/2026
 ms.service: azure-mcp-server
 ms.topic: concept-article
-review: msalaman 
+reviewer: msalaman 
 tool_count: 1
 mcp-cli.version: 2.0.0-beta.39
 author: diberry

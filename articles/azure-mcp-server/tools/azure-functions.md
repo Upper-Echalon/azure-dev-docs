@@ -12,7 +12,7 @@ ms.topic: concept-article
 ms.custom: build-2025
 tool_count: 3
 mcp-cli.version: 2.0.0-beta.39+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
-reviewer:  jongio
+reviewer: manvkaur
 ---
 
 # Azure MCP Server tools for Azure Functions

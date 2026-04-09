@@ -138,7 +138,7 @@ func main() {
 
 For more information about using the Azure SDK for Go for Azure services, see [Use the Azure SDK for Go for data plane operations](data-plane.md).
 
-## Using the Azure SDK for Go reference documentation
+## Using the Azure SDK for Go repository
 
 After you instantiate a client, use it to make API calls to your Azure resources. For resource management scenarios, most use cases are CRUD (create, read, update, delete) operations.
 

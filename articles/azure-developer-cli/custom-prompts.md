@@ -60,7 +60,7 @@ Add the parameter to your `infra/main.bicep` file:
 param projectOwner string
 ```
 
-When you run `azd up`, the user types a value and presses Enter. That's all you need.
+When you run `azd up`, the user types a value and presses Enter.
 
 ## Option 3: Hooks for custom logic
 
@@ -76,20 +76,30 @@ The hook approach works through the following chain:
 1. `main.parameters.json` references the values as `${VARIABLE_NAME}`.
 1. Bicep receives them as regular parameters during provisioning.
 
-```
-azure.yaml (hooks)  →  preprovision script  →  azd env set  →  .azure/<env>/.env
-                                                                      |
-main.bicep  ←  main.parameters.json references ${VARIABLE_NAME}  ←───┘
-```
-
 ### Create the hook script
 
-Create a `hooks/preprovision.ps1` file (or `preprovision.sh` for Linux/macOS) that prompts the user and stores values:
+Create a hook script that prompts the user and stores the result. The following examples include an idempotency guard that skips the prompt on re-runs if a value is already set, and a `default` case that handles invalid input.
+
+#### [PowerShell](#tab/powershell)
+
+Create a `hooks/preprovision.ps1` file:
 
 ```powershell
 Write-Host "========================================"
 Write-Host "  Custom Pre-Provision Configuration"
 Write-Host "========================================"
+
+# Skip prompt if value is already set
+$existingTeam = $null
+$output = azd env get-value CUSTOM_TEAM_NAME 2>&1
+if ($LASTEXITCODE -eq 0 -and $output) {
+    $existingTeam = $output.Trim()
+}
+
+if ($existingTeam) {
+    Write-Host "Team name is already set to: $existingTeam"
+    exit 0
+}
 
 Write-Host "Available teams:"
 Write-Host "  1) platform-engineering"
@@ -105,14 +115,71 @@ $teamName = switch ($choice) {
     "3" { "data-science" }
     "4" { "devops" }
     "5" { Read-Host "Enter custom team name" }
+    default {
+        Write-Error "Invalid selection: $choice"
+        exit 1
+    }
 }
 
 # Store in azd environment
 azd env set CUSTOM_TEAM_NAME $teamName
+Write-Host "Team name set to: $teamName"
 ```
 
-> [!TIP]
-> Make your hook scripts idempotent. Check for an existing value at the top of the script so that re-running `azd up` skips the prompt if a value is already set.
+#### [Bash](#tab/bash)
+
+Create a `hooks/preprovision.sh` file:
+
+```bash
+#!/bin/bash
+set -e
+
+echo "========================================"
+echo "  Custom Pre-Provision Configuration"
+echo "========================================"
+
+# Skip prompt if value is already set
+EXISTING_TEAM=""
+if azd env get-value CUSTOM_TEAM_NAME >/dev/null 2>&1; then
+    EXISTING_TEAM=$(azd env get-value CUSTOM_TEAM_NAME 2>/dev/null)
+fi
+
+if [ -n "$EXISTING_TEAM" ]; then
+    echo "Team name is already set to: $EXISTING_TEAM"
+    exit 0
+fi
+
+echo "Available teams:"
+echo "  1) platform-engineering"
+echo "  2) app-development"
+echo "  3) data-science"
+echo "  4) devops"
+echo "  5) Enter custom value"
+
+echo -n "Select a team (1-5): "
+read -r CHOICE
+
+case $CHOICE in
+    1) TEAM_NAME="platform-engineering" ;;
+    2) TEAM_NAME="app-development" ;;
+    3) TEAM_NAME="data-science" ;;
+    4) TEAM_NAME="devops" ;;
+    5)
+        echo -n "Enter custom team name: "
+        read -r TEAM_NAME
+        ;;
+    *)
+        echo "Invalid selection: $CHOICE" >&2
+        exit 1
+        ;;
+esac
+
+# Store in azd environment
+azd env set CUSTOM_TEAM_NAME "$TEAM_NAME"
+echo "Team name set to: $TEAM_NAME"
+```
+
+---
 
 ### Map the variable to a Bicep parameter
 
@@ -132,7 +199,7 @@ In your `main.bicep` file, declare the parameter with a default so `azd` doesn't
 
 ```bicep
 @description('Team name - set by preprovision hook')
-param customTeamName string = 'unset'
+param customTeamName string = ''
 ```
 
 ### Enable the hook
@@ -153,9 +220,6 @@ hooks:
 ```
 
 The `interactive: true` setting binds the script to the console so it can read user input. For more information on hook configuration, see [Customize your Azure Developer CLI workflows using command and event hooks](azd-extensibility.md).
-
-> [!NOTE]
-> Public templates should include both `.ps1` and `.sh` hook scripts for cross-platform support. If your team uses PowerShell 7 across all platforms, a single `.ps1` with `shell: pwsh` works everywhere.
 
 ## Choose the right approach
 
@@ -179,7 +243,7 @@ azd env config set infra.parameters.environmentType "prod"
 azd env config set infra.parameters.projectOwner "ci-bot"
 
 # Run with no prompts
-azd up --subscription <id> --location eastus --no-prompt
+azd up --subscription <subscription-id> --location eastus --no-prompt
 ```
 
 If a required value is missing, `azd` reports exactly which parameter is missing and shows the `azd env config set` command needed to fix it.

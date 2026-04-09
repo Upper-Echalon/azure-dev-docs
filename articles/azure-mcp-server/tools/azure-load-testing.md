@@ -47,7 +47,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [loadtesting test create](../includes/tools/annotations/azure-load-testing-test-create-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Test: Get test details
 
@@ -72,7 +72,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [loadtesting test get](../includes/tools/annotations/azure-load-testing-test-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Test resources: List test resources
 
@@ -94,7 +94,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [loadtesting testresource list](../includes/tools/annotations/azure-load-testing-test-resource-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Test resources: Create test resource
 
@@ -114,7 +114,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [loadtesting testresource create](../includes/tools/annotations/azure-load-testing-test-resource-create-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Test runs: Create or update test run
 

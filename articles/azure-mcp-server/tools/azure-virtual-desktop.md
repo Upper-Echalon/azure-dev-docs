@@ -44,7 +44,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [virtualdesktop hostpool list](../includes/tools/annotations/azure-virtual-desktop-host-pool-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Host pools: List session hosts in a host pool
 
@@ -67,7 +67,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [virtualdesktop hostpool host list](../includes/tools/annotations/azure-virtual-desktop-host-pool-host-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Host pools: List user sessions
 
@@ -91,7 +91,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [virtualdesktop hostpool host user-list](../includes/tools/annotations/azure-virtual-desktop-host-pool-host-user-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

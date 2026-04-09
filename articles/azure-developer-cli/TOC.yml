@@ -95,6 +95,8 @@
           href: app-service-slots.md
         - name: Docker support as a language
           href: docker-language-support.md
+        - name: Custom prompts and parameters
+          href: custom-prompts.md
         - name: Metadata configuration
           href: metadata.md
         - name: Resource Group Scoped Deployments

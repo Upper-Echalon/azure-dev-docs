@@ -12,6 +12,7 @@ ms.topic: concept-article
 ms.custom: build-2025
 tool_count for monitor: 16
 tool_count for workbooks: 5
+ms.reviewer: jong
 reviewer: jongio
 mcp-cli.version: 2.0.0-beta.39
 ---
@@ -127,7 +128,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli monitor table list -->
 
-This tool, a Model Context Protocol (MCP) tool, lists all tables in a Log Analytics workspace. For example, list tables in workspace 'prod-law' in resource group 'rg-monitoring' to preview available columns and data types. It returns table names and schemas you use to build Kusto Query Language (KQL) queries. You can filter by table type, for example `CustomLog` or `AzureMetrics`.
+This tool lists all tables in a Log Analytics workspace. For example, list tables in workspace 'prod-law' in resource group 'rg-monitoring' to preview available columns and data types. It returns table names and schemas you use to build Kusto Query Language (KQL) queries. You can filter by table type, for example `CustomLog` or `AzureMetrics`.
 
 Example prompts include:
 
@@ -136,9 +137,7 @@ Example prompts include:
 
 | Parameter | Required or optional | Description |
 |-----------|-------------|-------------|
-| **Resource group** | Required | The name of the Azure resource group. This resource group is a logical container for Azure resources. |
-| **Table type** | Required | The type of table to query. Options: `CustomLog`, `AzureMetrics`, and more. |
-| **Workspace name** | Required | The Log Analytics workspace ID or name. This can be either the unique identifier (GUID) or the display name of your workspace. |
+| **Workspace name** | Optional | The Log Analytics workspace ID or name. This can be either the unique identifier (GUID) or the display name of your workspace. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
@@ -412,8 +411,6 @@ It returns workbook metadata, including `id`, `name`, `location`, `category`, an
 
 By default, the search targets workbooks in your current Azure context (tenant/subscription). You can use `Resource group` to explicitly specify your search scope. The tool returns the server-side total count by default. The maximum results returned is 50, with a maximum limit of 1000; adjust this with `Max results`. Choose `Output format` as `summary` for minimal tokens or `full` for complete `serializedData` output.
 
-<!-- Required parameters: 0 -  -->
-
 Example prompts include:
 
 - "Show me all workbooks in resource group 'monitoring-rg'."
@@ -444,8 +441,6 @@ Retrieve full workbook details via the Azure Resource Manager (ARM) API, includi
 
 It returns full workbook properties, `serializedData`, tags, and `ETag`. You can provide multiple `Workbook IDs` for batch operations. The command reports partial failures for individual workbooks. For better performance, use the list tool to discover workbooks first, then use show for specific workbooks.
 
-<!-- Required parameters: 1 - 'Workbook IDs' -->
-
 Example prompts include:
 
 - "Show me the details of the workbook with resource ID '/subscriptions/abc123/resourceGroups/monitoring/providers/Microsoft.Insights/workbooks/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1'."
@@ -464,8 +459,6 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 <!-- @mcpcli workbooks create -->
 
 Create a new workbook in the specified resource group and subscription. You can set the display name and the serialized JSON content for the workbook. This command returns the created workbook information upon successful completion.
-
-<!-- Required parameters: 3 - 'Display name', 'Resource group', 'Serialized content' -->
 
 Example prompts include:
 
@@ -488,8 +481,6 @@ Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 <!-- @mcpcli workbooks update -->
 
 Update properties of an existing Azure workbook by adding new steps, modifying content, or changing the display name. This action returns the updated workbook details. You need the workbook resource ID and can specify either new serialized content or a new display name.
-
-<!-- Required parameters: 1 - 'Workbook ID' -->
 
 Example prompts include:
 
@@ -515,8 +506,6 @@ Delete one or more workbooks by their Azure resource IDs. This command performs 
 For batch operations, you can provide multiple `Workbook IDs` values. The command reports partial failures per workbook, ensuring that individual failures don't affect the entire batch operation.
 
 To learn more, see [Manage Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-manage).
-
-<!-- Required parameters: 1 - 'Workbook IDs' -->
 
 Example prompts include:
 

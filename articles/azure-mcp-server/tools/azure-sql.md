@@ -9,14 +9,14 @@ ms.author: diberry
 reviewer: akromm
 ms.service: azure-mcp-server
 ms.topic: concept-article
-ms.date: 03/24/2026
+ms.date: 04/09/2026
 tool_count: 13
 mcp-cli.version: 2.0.0-beta.31
 ---
 
 # Azure MCP Server tools for Azure SQL Database
 
-The Azure MCP Server lets you manage Azure SQL Database resources, including: creating, deleting, updating, and listing databases, with natural language prompts.
+The Azure MCP Server lets you manage Azure SQL Database resources, including creating, deleting, updating, and listing databases, with natural language prompts.
 
 Azure SQL Database is a relational database service in the Microsoft Azure cloud that provides high availability, scalability, and security. For more information, see [Azure SQL Database documentation](/azure/sql-database/).
 

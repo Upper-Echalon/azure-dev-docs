@@ -132,7 +132,7 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 | [Azure Resource Health](../../tools/azure-resource-health.md) | `resourcehealth` | Check the health status of Azure resources. |
 | [Azure Well-Architected Framework](../../tools/azure-well-architected-framework.md) | `wellarchitectedframework` | Get architectural best practices, design patterns, and recommendations for Azure services based on the five Well-Architected Framework pillars. |
 | [Azure Workbooks](../../tools/azure-monitor.md) | `workbooks` | Create, manage, and update Azure Workbooks for data visualization and reporting. |
-| [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups. |
+| [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups and list resources within a group. |
 | [Subscription](../../tools/subscription.md) | `subscription` | List Azure subscriptions. |
 
 ### Messaging

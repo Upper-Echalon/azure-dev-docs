@@ -44,7 +44,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares limits](../includes/tools/annotations/azure-fileshares-limits-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get usage
 
@@ -66,7 +66,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares usage](../includes/tools/annotations/azure-fileshares-usage-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Get recommendations
 
@@ -89,7 +89,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares rec](../includes/tools/annotations/azure-fileshares-rec-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share: Check name availability
@@ -113,7 +113,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare check-name-availability](../includes/tools/annotations/azure-fileshares-fileshare-check-name-availability-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share: Create file share
@@ -149,7 +149,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare create](../includes/tools/annotations/azure-fileshares-fileshare-create-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share: Get file share
@@ -172,7 +172,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare get](../includes/tools/annotations/azure-fileshares-fileshare-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share: Update file share
@@ -203,7 +203,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare update](../includes/tools/annotations/azure-fileshares-fileshare-update-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share: Delete file share
@@ -227,7 +227,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare delete](../includes/tools/annotations/azure-fileshares-fileshare-delete-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File Share Snapshot: Create snapshot
 
@@ -252,7 +252,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare snapshot create](../includes/tools/annotations/azure-fileshares-fileshare-snapshot-create-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## File Share Snapshot: Get snapshot
 
@@ -276,7 +276,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare snapshot get](../includes/tools/annotations/azure-fileshares-fileshare-snapshot-get-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## File Share Snapshot: Update snapshot
 
@@ -301,7 +301,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare snapshot update](../includes/tools/annotations/azure-fileshares-fileshare-snapshot-update-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 
 ## File Share Snapshot: Delete snapshot
@@ -326,7 +326,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [fileshares fileshare snapshot delete](../includes/tools/annotations/azure-fileshares-fileshare-snapshot-delete-annotations.md)]
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 
 ## Related content

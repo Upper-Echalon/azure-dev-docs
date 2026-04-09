@@ -10,9 +10,9 @@ ms.custom: devx-track-azdevcli
 ai-usage: ai-generated
 ---
 
-# Add custom prompts to your azd workflow
+# Add custom prompts to your workflow
 
-By default, `azd up` prompts for three things: environment name, subscription, and location. However, real projects often need additional input, such as an environment type, project owner, or team name. This article walks through three approaches for adding custom prompts, from simplest to most flexible. You can mix and match all three in the same template.
+By default, `azd up` prompts for three things: environment name, subscription, and location. However, real projects often need extra input, such as an environment type, project owner, or team name. This article describes three approaches for adding custom prompts, from simplest to most flexible. You can mix and match all three approaches in the same template.
 
 ## Option 1: Selection list with the @allowed decorator
 
@@ -30,7 +30,7 @@ Add the decorated parameter to your `infra/main.bicep` file:
 param environmentType string
 ```
 
-When you run `azd up`, `azd` automatically presents a pick list for this parameter. The user can navigate with arrow keys and type to filter, just like the subscription picker.
+When you run `azd up`, `azd` automatically presents a pick list for this parameter. The user can navigate by using arrow keys and type to filter, just like the subscription picker.
 
 No extra configuration is needed. Add the parameter to your Bicep file and `azd` handles the rest.
 
@@ -72,7 +72,7 @@ The hook approach works through the following chain:
 
 1. A hook script runs and prompts the user with custom menus, validation, or other logic.
 1. The script stores values using `azd env set VARIABLE_NAME value`.
-1. Values are persisted in `.azure/<env>/.env`.
+1. Values persist in `.azure/<env>/.env`.
 1. `main.parameters.json` references the values as `${VARIABLE_NAME}`.
 1. Bicep receives them as regular parameters during provisioning.
 

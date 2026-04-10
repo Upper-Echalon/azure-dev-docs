@@ -37,7 +37,7 @@ Azure MCP is built in to Visual Studio 2022. You need the Azure development work
 
 1. If prompted, sign in to your Azure account.
 
-1. In the chat area, select **All Tools** mode, then select the **Select tools** button (two wrenches icon) to display a list of available tools. Enable the Azure MCP Server tools by checking the top node for **Azure MCP Server**.
+1. In the chat area, select the Select tools button (two wrenches icon) to display a list of available tools. Enable all Azure tools by checking the top nodes for **Azure MCP Server v.x.x.x**.
 
 > [!NOTE]
 > The Azure MCP tools are disabled by default in Visual Studio 2022 and need to be manually enabled before use. The VS-specific tools that are available in Visual Studio 2026 aren't included in Visual Studio 2022.

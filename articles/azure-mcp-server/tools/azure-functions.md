@@ -23,9 +23,9 @@ Azure Functions is a serverless compute service for running event-driven code wi
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Get function app
+## Function app: list or get
 
-<!-- functionapp get -->
+<!-- @mcpcli functionapp get -->
 
 Get details for a specific function app or list all function apps in your subscription. Returns information including name, location, status, and app service plan.
 
@@ -46,7 +46,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 
 
-## Get languages
+## Functions language: list
 
 <!-- @mcpcli functions language list -->
 
@@ -64,7 +64,7 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
-## Get project
+## Functions project: get
 
 <!-- @mcpcli functions project get -->
 
@@ -84,7 +84,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Get template
+## Functions template: list or get
 
 <!-- @mcpcli functions template get -->
 

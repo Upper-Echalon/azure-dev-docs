@@ -96,7 +96,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Get disk details
+## Get managed disk details
 
 <!-- @mcpcli compute disk get -->
 
@@ -118,7 +118,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Update disk
+## Update managed disk
 
 <!-- @mcpcli compute disk update -->
 

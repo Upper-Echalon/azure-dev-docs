@@ -105,7 +105,7 @@ if err != nil {
 
 For more information about managing Azure resources with Go, see [Use the Azure SDK for Go for control plane operations](control-plane.md).
 
-Use the same pattern to connect with other Azure services. For example, install the [armnetwork](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork) package and create a [virtual network](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork#VirtualNetworksClient) client to manage virtual network (VNET) resources.
+Use the same pattern to connect with other Azure services. For example, install the [`armnetwork`](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork) package and create a [virtual network](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork#VirtualNetworksClient) client to manage virtual network resources.
 
 ```go
 client, err := armnetwork.NewVirtualNetworksClient("<subscription ID>", cred, nil)

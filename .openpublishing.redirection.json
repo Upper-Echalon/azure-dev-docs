@@ -1459,16 +1459,20 @@
       "redirect_url": "/azure/developer/go/management-libraries"
     },
     {
+      "source_path": "articles/go/manage-resource-groups.md",
+      "redirect_url": "/azure/developer/go/control-plane"
+    },
+    {
       "source_path": "articles/go/azure-sdk-qs-vm.md",
-      "redirect_url": "/azure/developer/go"
+      "redirect_url": "/azure/developer/go/control-plane"
     },
     {
       "source_path": "articles/go/azure-sdk-containers-samples.md",
-      "redirect_url": "/azure/developer/go"
+      "redirect_url": "/azure/developer/go/data-plane"
     },
     {
       "source_path": "articles/go/azure-sdk-sql-database-samples.md",
-      "redirect_url": "/azure/developer/go"
+      "redirect_url": "/azure/developer/go/data-plane"
     },
     {
       "source_path": "articles/go/azure-sdk-tools.md",

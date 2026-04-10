@@ -89,6 +89,8 @@ items:
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-quickstart-containerization.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: "Quickstart: Deploy your project"
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-quickstart-deploy-to-azure.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
+            - name: "Re-architecture (preview)"
+              href: ../java/migration/github-copilot-app-modernization-for-java-rearchitecture.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
         - name: .NET
           expanded: true
           items:

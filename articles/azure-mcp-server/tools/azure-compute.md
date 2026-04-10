@@ -96,7 +96,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Managed disk: get details
+## Managed disk: list or get
 
 <!-- @mcpcli compute disk get -->
 
@@ -225,7 +225,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Virtual machine: get details
+## Virtual machine: list or get
 
 <!-- @mcpcli compute vm get -->
 
@@ -340,7 +340,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Virtual machine scale set: get details
+## Virtual machine scale set: list or get
 
 <!-- @mcpcli compute vmss get -->
 

@@ -4,7 +4,7 @@ description: Use Azure MCP Server tools to manage Azure Functions app resources 
 keywords: azure mcp server, azmcp, function apps
 author: diberry
 ms.author: diberry
-ms.date: 4/6/2026
+ms.date: 04/06/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-generated
@@ -13,11 +13,12 @@ ms.custom: build-2025
 tool_count: 4
 mcp-cli.version: 2.0.0-beta.39+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
 reviewer: manvkaur
+ms.reviewer: manvkaur
 ---
 
 # Azure MCP Server tools for Azure Functions
 
-The Azure MCP Server lets you manage Azure Functions resources with natural language prompts. You can manage existing function app resources and generate Azure Functions code, including function templates, project scaffolding, and language discovery.
+The Azure MCP Server enables you to manage Azure Functions resources by using natural language prompts. You can manage existing function app resources and generate Azure Functions code, including function templates, project scaffolding, and language discovery.
 
 Azure Functions is a serverless compute service for running event-driven code without managing infrastructure. For more information, see [Azure Functions documentation](/azure/azure-functions/).
 
@@ -31,9 +32,9 @@ Get details for a specific function app or list all function apps in your subscr
 
 Example prompts include:
 
-- "List all Function Apps in my subscription"
-- "Show me all Function Apps in resource group 'rg-production'"
-- "Retrieve details for the Function App named 'HealthMonitor' in resource group 'rg-production'"
+- "List all Function Apps in my subscription."
+- "Show me all Function Apps in resource group 'rg-production'."
+- "Retrieve details for the Function App named 'HealthMonitor' in resource group 'rg-production'."
 - "Can you get the configuration of Function App 'DataProcessor' within resource group 'rg-analytics'?"
 
 | Parameter |  Required or optional | Description |
@@ -46,11 +47,11 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 
 
-## Functions language: list
+## Functions: get language list
 
 <!-- @mcpcli functions language list -->
 
-This tool, part of the Model Context Protocol (MCP) suite, lists supported programming languages for Azure Functions development. It helps you discover available languages, compare language options, and choose a language to start a project. It returns language names, runtime versions, prerequisites, recommended development tools, and init, run, and build commands. Review this information before you use functions project get and functions template get.
+This tool lists supported programming languages for Azure Functions development. It helps you discover available languages, compare language options, and choose a language to start a project. It returns language names, runtime versions, prerequisites, recommended development tools, and init, run, and build commands. Review this information before you use functions project get and functions template get.
 
 Example prompts include:
 
@@ -64,11 +65,11 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
-## Functions project: get
+## Functions: get project get
 
 <!-- @mcpcli functions project get -->
 
-This Model Context Protocol (MCP) tool returns project scaffolding information for a new Azure Functions app. It provides a project structure overview, setup instructions, and a file list that help you initialize a serverless project. The output helps you create the files and folders for the selected programming language.
+This tool returns project scaffolding information for a new Azure Functions app. It provides a project structure overview, setup instructions, and a file list that help you initialize a serverless project. The output helps you create the files and folders for the selected programming language.
 
 Example prompts include:
 
@@ -84,7 +85,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Functions template: list or get
+## Functions: list or get template
 
 <!-- @mcpcli functions template get -->
 

@@ -131,7 +131,7 @@ Write-Host "Team name set to: $teamName"
 Create a `hooks/preprovision.sh` file:
 
 ```bash
-#!/bin/bash
+#!/bin/sh
 set -e
 
 echo "========================================"
@@ -156,7 +156,7 @@ echo "  3) data-science"
 echo "  4) devops"
 echo "  5) Enter custom value"
 
-echo -n "Select a team (1-5): "
+printf "Select a team (1-5): "
 read -r CHOICE
 
 case $CHOICE in
@@ -165,7 +165,7 @@ case $CHOICE in
     3) TEAM_NAME="data-science" ;;
     4) TEAM_NAME="devops" ;;
     5)
-        echo -n "Enter custom team name: "
+        printf "Enter custom team name: "
         read -r TEAM_NAME
         ;;
     *)

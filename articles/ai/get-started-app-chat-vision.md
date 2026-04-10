@@ -326,7 +326,7 @@ The `configure_openai()` function sets up the OpenAI client before the app start
 
 - The `get_bearer_token_provider()` function refreshes Azure credentials and uses them as bearer tokens.
 - The Azure OpenAI endpoint path ends with `/openai/v1/`, the generally available OpenAI-compatible endpoint for Microsoft Foundry Models.
-- The function is async, since Quart is an asynchronous web app framework. We always recommend using asynchronous (ASGI) web app frameworks when apps make slow network calls, for better concurrency.
+- The function is async, since Quart is an asynchronous web app framework. Quart lets request handlers be async, so while the app is awaiting slow LLM API responses, the server can keep handling other requests.
 
 Here's the complete authentication setup code from `chat.py`:
 

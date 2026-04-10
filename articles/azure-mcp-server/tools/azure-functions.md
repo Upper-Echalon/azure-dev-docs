@@ -1,6 +1,6 @@
 ---
 title: Azure MCP Server tools for Azure Functions
-description: Use Azure MCP Server tools to generate Azure Functions code and explore function templates with natural language prompts from your IDE.
+description: Use Azure MCP Server tools to manage Azure Functions app resources and generate Azure Functions code with natural language prompts from your IDE.
 keywords: azure mcp server, azmcp, function apps
 author: diberry
 ms.author: diberry
@@ -10,18 +10,39 @@ content_well_notification:
 ai-usage: ai-generated
 ms.topic: concept-article
 ms.custom: build-2025
-tool_count: 3
+tool_count: 4
 mcp-cli.version: 2.0.0-beta.39+0410ff6ade5c70a207a8e7c7a7c78be69f7f1d76
 reviewer: manvkaur
 ---
 
 # Azure MCP Server tools for Azure Functions
 
-The Azure MCP Server lets you manage Azure Functions resources, including: get and list operations for functions languages, functions project, and functions template, with natural language prompts.
+The Azure MCP Server lets you manage Azure Functions resources with natural language prompts. You can manage existing function app resources and generate Azure Functions code, including function templates, project scaffolding, and language discovery.
 
 Azure Functions is a serverless compute service for running event-driven code without managing infrastructure. For more information, see [Azure Functions documentation](/azure/azure-functions/).
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
+
+## Get function app
+
+<!-- functionapp get -->
+
+Get details for a specific function app or list all function apps in your subscription. Returns information including name, location, status, and app service plan.
+
+Example prompts include:
+
+- "List all Function Apps in my subscription"
+- "Show me all Function Apps in resource group 'rg-production'"
+- "Retrieve details for the Function App named 'HealthMonitor' in resource group 'rg-production'"
+- "Can you get the configuration of Function App 'DataProcessor' within resource group 'rg-analytics'?"
+
+| Parameter |  Required or optional | Description |
+|-----------------------|----------------------|-------------|
+| **Function app** |  Optional | The name of the function app. |
+
+[Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
+
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 
@@ -81,7 +102,7 @@ Example prompts include:
 |-----------------------|----------------------|-------------|
 | **Language** |  Required | Programming language for the Azure Functions project. Valid values: python, typescript, javascript, java, csharp, powershell. |
 | **Runtime version** |  Optional | Optional runtime version for Java or TypeScript/JavaScript. When provided, template placeholders like {{javaVersion}} or {{nodeVersion}} are replaced automatically. See 'functions language list' for supported versions. |
-| **Template name** |  Optional | Name of the function template to retrieve (for example, `HttpTrigger`, `BlobTrigger`). Omit to list all available templates for the specified language. |
+| **Template name** |  Optional | Name of the function template to retrieve. Omit to list all available templates for the specified language and valid values of template name. |
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 

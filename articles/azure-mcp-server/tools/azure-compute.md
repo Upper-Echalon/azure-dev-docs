@@ -18,7 +18,7 @@ Azure Compute provides scalable computing resources for applications and workloa
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
-## Create managed disk
+## Managed disk: create
 
 <!-- @mcpcli compute disk create -->
 
@@ -76,7 +76,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-## Delete managed disk
+## Managed disk: delete
 
 <!-- @mcpcli compute disk delete -->
 
@@ -96,7 +96,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Get managed disk details
+## Managed disk: get details
 
 <!-- @mcpcli compute disk get -->
 
@@ -118,7 +118,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Update managed disk
+## Managed disk: update
 
 <!-- @mcpcli compute disk update -->
 
@@ -160,7 +160,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-## Create virtual machine
+## Virtual machine: create
 
 <!-- @mcpcli compute vm create -->
 
@@ -203,7 +203,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Delete virtual machine
+## Virtual machine: delete
 
 <!-- @mcpcli compute vm delete -->
 
@@ -225,7 +225,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Get virtual machine details
+## Virtual machine: get details
 
 <!-- @mcpcli compute vm get -->
 
@@ -256,7 +256,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Update virtual machine
+## Virtual machine: update
 
 <!-- @mcpcli compute vm update -->
 
@@ -282,7 +282,7 @@ Here are some example prompts for using this tool:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
-## Create virtual machine scale set
+## Virtual machine scale set: create
 
 <!-- @mcpcli compute vmss create -->
 
@@ -318,7 +318,7 @@ Create a scale set by specifying the `resource group`, `VMSS name`, and `admin u
 
 Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Delete virtual machine scale set
+## Virtual machine scale set: delete
 
 <!-- @mcpcli compute vmss delete -->
 
@@ -340,7 +340,7 @@ Example prompts include:
 
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
-## Get virtual machine scale set
+## Virtual machine scale set: get details
 
 <!-- @mcpcli compute vmss get -->
 
@@ -364,7 +364,7 @@ Example prompts include:
 
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
-## Update virtual machine scale set
+## Virtual machine scale set: update
 
 <!-- @mcpcli compute vmss update -->
 

@@ -20,28 +20,30 @@ Azure Compute provides scalable computing resources for applications and workloa
 
 ## Create managed disk
 
+<!-- @mcpcli compute disk create -->
+
 Creates a new Azure managed disk in the specified resource group. You can create empty disks (specify `size-gb`), disks from a source such as a snapshot, another managed disk, or a blob URI (specify `source`), disks from a Shared Image Gallery image version (specify `gallery-image-reference`), or disks ready for upload (specify `upload-type` and `upload-size-bytes`). If you don't specify the location, it defaults to the resource group's location. You can configure disk size, storage SKU (for example, `Premium_LRS`, `Standard_LRS`, `UltraSSD_LRS`), OS type, availability zone, hypervisor generation, tags, encryption settings, performance tier, shared disk, on-demand bursting, and IOPS/throughput limits for UltraSSD disks. Create a disk with network access policy `DenyAll`, `AllowAll`, or `AllowPrivate`, and associate a disk access resource during creation.
 
 Example prompts include:
-- "Create a 128 GB managed disk named <disk-name> in resource group <resource-group>"
-- "Create a new `Premium_LRS` disk called <disk-name> in resource group <resource-group> with 256 GB"
-- "Create a managed disk <disk-name> in resource group <resource-group> in `eastus`"
-- "Create a disk from snapshot <snapshot-resource-id> in resource group <resource-group>"
-- "Create a managed disk <disk-name> in resource group <resource-group> from blob <blob-uri>"
-- "Create a 64 GB `Standard_LRS` Linux disk named <disk-name> in resource group <resource-group> in zone 1"
-- "Create a managed disk <disk-name> in resource group <resource-group> with tags env=prod team=infra"
-- "Create a 128 GB `Premium_LRS` disk named <disk-name> in resource group <resource-group> with performance tier `P30`"
-- "Create a disk <disk-name> in resource group <resource-group> with customer-managed encryption using disk encryption set <disk-encryption-set-id>"
-- "Create a managed disk from gallery image version <image-version-resource-id> in resource group <resource-group>"
-- "Create a data disk from LUN 0 of gallery image version <image-version-resource-id> in resource group <resource-group>"
-- "Create a disk ready for upload named <disk-name> in resource group <resource-group> with upload size 20972032 bytes"
-- "Create a Trusted Launch upload disk named <disk-name> in resource group <resource-group> with `UploadWithSecurityData` type and security type `TrustedLaunch`"
-- "Create an `UltraSSD_LRS` disk named <disk-name> in resource group <resource-group> with 256 GB, 10000 IOPS, and 500 MBps throughput"
-- "Create a shared managed disk named <disk-name> in resource group <resource-group> with 512 GB and max shares set to 3"
-- "Create a managed disk <disk-name> in resource group <resource-group> with network access policy `DenyAll` and disk access <disk-access-resource-id>"
-- "Create a 128 GB managed disk named <disk-name> in resource group <resource-group> with on-demand bursting enabled"
-- "Create a managed disk <disk-name> in resource group <resource-group> with encryption type `EncryptionAtRestWithPlatformAndCustomerKeys`"
-- "Create a V2 hypervisor generation disk named <disk-name> in resource group <resource-group> with 128 GB"
+- "Create a 128 GB managed disk named `<disk-name>` in resource group `<resource-group>`"
+- "Create a new `Premium_LRS` disk called `<disk-name>` in resource group `<resource-group>` with 256 GB"
+- "Create a managed disk `<disk-name>` in resource group `<resource-group>` in `eastus`"
+- "Create a disk from snapshot `<snapshot-resource-id>` in resource group `<resource-group>`"
+- "Create a managed disk `<disk-name>` in resource group `<resource-group>` from blob `<blob-uri>`"
+- "Create a 64 GB `Standard_LRS` Linux disk named `<disk-name>` in resource group `<resource-group>` in zone 1"
+- "Create a managed disk `<disk-name>` in resource group `<resource-group>` with tags env=prod team=infra"
+- "Create a 128 GB `Premium_LRS` disk named `<disk-name>` in resource group `<resource-group>` with performance tier `P30`"
+- "Create a disk `<disk-name>` in resource group `<resource-group>` with customer-managed encryption using disk encryption set `<disk-encryption-set-id>`"
+- "Create a managed disk from gallery image version `<image-version-resource-id>` in resource group `<resource-group>`"
+- "Create a data disk from LUN 0 of gallery image version `<image-version-resource-id>` in resource group `<resource-group>`"
+- "Create a disk ready for upload named `<disk-name>` in resource group `<resource-group>` with upload size 20972032 bytes"
+- "Create a Trusted Launch upload disk named `<disk-name>` in resource group `<resource-group>` with `UploadWithSecurityData` type and security type `TrustedLaunch`"
+- "Create an `UltraSSD_LRS` disk named `<disk-name>` in resource group `<resource-group>` with 256 GB, 10000 IOPS, and 500 MBps throughput"
+- "Create a shared managed disk named `<disk-name>` in resource group `<resource-group>` with 512 GB and max shares set to 3"
+- "Create a managed disk `<disk-name>` in resource group `<resource-group>` with network access policy `DenyAll` and disk access `<disk-access-resource-id>`"
+- "Create a 128 GB managed disk named `<disk-name>` in resource group `<resource-group>` with on-demand bursting enabled"
+- "Create a managed disk `<disk-name>` in resource group `<resource-group>` with encryption type `EncryptionAtRestWithPlatformAndCustomerKeys`"
+- "Create a V2 hypervisor generation disk named `<disk-name>` in resource group `<resource-group>` with 128 GB"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -76,6 +78,8 @@ Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 ## Delete managed disk
 
+<!-- @mcpcli compute disk delete -->
+
 Delete an Azure managed disk from the specified resource group. This operation is idempotent - it returns success whether the disk was removed or didn't exist.
 
 Example prompts include:
@@ -94,15 +98,17 @@ Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 ## Get disk details
 
+<!-- @mcpcli compute disk get -->
+
 Lists available Azure managed disks or retrieves detailed information about a specific disk. You can view all disks in a subscription or in a specific resource group, including disk size, SKU, provisioning state, and OS type. The tool supports wildcard patterns in disk names (for example, `win_OsDisk*`). If you provide a disk name without specifying a resource group, it searches across the entire subscription. Specifying a resource group scopes the search to that resource group. Both parameters are optional.
 
 Example prompts include:
 - "List all managed disks in my subscription."
-- "Show me all disks in resource group <resource-group>."
-- "Get details of disk <disk-name>."
+- "Show me all disks in resource group `<resource-group>`."
+- "Get details of disk `<disk-name>`."
 - "What are the available disk sizes?"
-- "Show me the disks with name pattern `win_OsDisk*` in resource group <resource-group>."
-- "Get information about disk <disk-name> in resource group <resource-group>."
+- "Show me the disks with name pattern `win_OsDisk*` in resource group `<resource-group>`."
+- "Get information about disk `<disk-name>` in resource group `<resource-group>`."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -113,6 +119,8 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Update disk
+
+<!-- @mcpcli compute disk update -->
 
 Update or modify properties of an existing Azure managed disk that you previously created. If you don't specify the resource group, the disk is located by name within the subscription. This operation supports changing disk size (only increases are allowed), storage SKU, IOPS and throughput limits (for UltraSSD only), maximum shares for shared disk attachments, on-demand bursting, tags, encryption settings, disk access, and performance tier. You can modify the network access policy to `DenyAll`, `AllowAll`, or `AllowPrivate` on an existing disk. Only specified properties are updated; unspecified properties remain unchanged.
 
@@ -153,6 +161,8 @@ Example prompts include:
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Create virtual machine
+
+<!-- @mcpcli compute vm create -->
 
 Create, deploy, or provision a single Azure Virtual Machine (VM). This command launches a new Linux or Windows VM with either SSH key or password authentication. It automatically creates networking resources (VNet, subnet, NSG, NIC, public IP) if you don't specify them. The default VM size is `Standard_DS1_v2`, and the default OS is Ubuntu 24.04 LTS if you don't specify otherwise.
 
@@ -195,6 +205,8 @@ Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 ## Delete virtual machine
 
+<!-- @mcpcli compute vm delete -->
+
 Delete an Azure virtual machine permanently. This operation is irreversible and the VM data is lost. Use the `Force deletion` parameter to force-delete a VM that is in a running or failed state.
 
 Example prompts include:
@@ -214,6 +226,8 @@ Example prompts include:
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
 ## Get virtual machine details
+
+<!-- @mcpcli compute vm get -->
 
 List or get Azure Virtual Machines (VMs) in a subscription or resource group. This command returns VM details, including the name, location, size, provisioning state, OS type, and instance view with runtime status and power state.
 
@@ -244,6 +258,8 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 ## Update virtual machine
 
+<!-- @mcpcli compute vm update -->
+
 Update, modify, or reconfigure an existing Azure virtual machine (VM). You can resize a VM, update tags, configure boot diagnostics, or change user data. You might need to deallocate the VM before resizing it to certain sizes.
 
 Here are some example prompts for using this tool:
@@ -267,6 +283,8 @@ Here are some example prompts for using this tool:
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Create virtual machine scale set
+
+<!-- @mcpcli compute vmss create -->
 
 Create, deploy, or provision an Azure Virtual Machine Scale Set (VMSS) for running multiple identical VM instances. This tool helps you deploy workloads that require horizontal scaling, load balancing, or high availability across instances. The default configuration creates two instances of size Standard_DS1_v2 running Ubuntu 24.04 LTS.
 
@@ -302,6 +320,8 @@ Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: 
 
 ## Delete virtual machine scale set
 
+<!-- @mcpcli compute vmss delete -->
+
 Delete an Azure Virtual Machine Scale Set and all its VM instances permanently. This operation is irreversible. Use the `Force deletion` parameter to force-delete a scale set that is in a running or failed state.
 
 Example prompts include:
@@ -321,6 +341,8 @@ Example prompts include:
 Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ✅ | Local Required: ❌
 
 ## Get Virtual Machine Scale Set
+
+<!-- @mcpcli compute vmss get -->
 
 List or get Azure Virtual Machine Scale Sets (VMSS) and their instances in a subscription or resource group. This tool returns scale set details, including name, location, SKU, capacity, upgrade policy, and individual VM instance information.
 
@@ -343,6 +365,8 @@ Example prompts include:
 Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Update virtual machine scale set
+
+<!-- @mcpcli compute vmss update -->
 
 Update, modify, or reconfigure an existing Azure Virtual Machine Scale Set (VMSS). You can scale the instance count, resize VMs, change the upgrade policy, or update tags on a scale set. Some changes require `update-instances` to roll out to existing VMs. This tool doesn't create a new VMSS. Use `VMSS create` instead. To update a single VM, use `VM update`.
 

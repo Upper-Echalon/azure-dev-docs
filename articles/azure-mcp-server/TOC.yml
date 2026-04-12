@@ -112,6 +112,8 @@ items:
           href: tools/azure-communication.md
         - name: Azure Confidential Ledger
           href: tools/azure-confidential-ledger.md
+        - name: Azure Container Apps
+          href: tools/azure-container-apps.md
         - name: Azure Container Registry
           href: tools/azure-container-registry.md
         - name: Azure Cosmos DB

@@ -29,7 +29,7 @@ Azure MCP is built in to Visual Studio 2022. You need the Azure development work
 
 1. On the Workloads tab, make sure the **Azure development** workload is selected.
 
-   :::image type="content" source="../media/get-started/visual-studio-2022-installer-workloads.png" alt-text="Screenshot that shows the Visual Studio Installer with the Modify button highlighted.":::
+   :::image type="content" source="../media/get-started/visual-studio-2022-installer-workloads.png" alt-text="Screenshot that shows the Visual Studio Installer with the Azure development button highlighted.":::
 
 1. Select the **Install** button to complete the installation.
 

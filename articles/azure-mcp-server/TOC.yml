@@ -110,8 +110,12 @@ items:
           href: tools/azure-cloud-architect.md
         - name: Azure Communication Services
           href: tools/azure-communication.md
+        - name: Azure Compute
+          href: tools/azure-compute.md          
         - name: Azure Confidential Ledger
           href: tools/azure-confidential-ledger.md
+        - name: Azure Container Apps
+          href: tools/azure-container-apps.md
         - name: Azure Container Registry
           href: tools/azure-container-registry.md
         - name: Azure Cosmos DB
@@ -182,8 +186,6 @@ items:
           href: tools/azure-storage.md
         - name: Azure Virtual Desktop
           href: tools/azure-virtual-desktop.md
-        - name: Azure Virtual Machines
-          href: tools/azure-virtual-machines.md
         - name: Resource Group
           href: tools/resource-group.md
         - name: Subscription

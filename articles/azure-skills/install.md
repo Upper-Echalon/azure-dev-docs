@@ -1,6 +1,6 @@
 ---
 title: Install and configure Azure Skills
-description: "Azure Skills: Install, authenticate, and configure your AI assistant to manage Azure resources. Get started quickly and streamline cloud operations."
+description: "Install, authenticate, and configure Azure Skills to manage Azure resources from your AI assistant."
 ms.topic: how-to
 ms.date: 03/16/2026
 author: diberry
@@ -11,23 +11,23 @@ ms.service: azure-mcp-server
 
 # Install and configure Azure Skills
 
-This article shows you how to install Azure Skills, authenticate to your Azure account, and verify the installation. After setup, you can ask questions about your Azure resources, prepare deployment plans, and manage cloud operations from your chat interface.
+This article shows you how to install Azure Skills, authenticate to your Azure account, and verify the installation. After setup, you can manage Azure resources from your chat interface.
 
 ## Prerequisites
 
 Make sure you have:
 
-- **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
-- **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
-- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another platform that supports Azure Skills
-- **Azure CLI** (optional) — Simplifies authentication during local development. [Install Azure CLI](/cli/azure/install-azure-cli).
+- **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
+- **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
+- **Azure CLI** (optional) — Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli).
 
 > [!NOTE]
-> Azure Skills uses the same authentication patterns as [Azure MCP Server](../azure-mcp-server/overview.md). If you're already authenticated for Azure MCP Server, Azure Skills can use those same credentials.
+> Azure Skills uses the same authentication as [Azure MCP Server](../azure-mcp-server/overview.md). If you already authenticated for Azure MCP Server, Azure Skills uses those credentials.
 
 ## Authenticate to Azure
 
-Azure Skills needs credentials to access your Azure resources. Choose the authentication method that fits your use case.
+Azure Skills needs credentials to access your Azure resources. Choose the method that fits your use case.
 
 ### [Azure CLI (recommended)](#tab/azure-cli)
 
@@ -51,11 +51,11 @@ This method is the easiest for local development and testing.
    az account show
    ```
 
-   You see your subscription details printed to the terminal. Azure Skills automatically detects this authentication.
+   You see your subscription details in the terminal. Azure Skills detects this authentication.
 
 ### [Environment variables](#tab/environment-variables)
 
-Use environment variables for scripts, pipelines, or environments where the Azure CLI isn't available. You need a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli).
+Use environment variables for scripts or pipelines where the Azure CLI isn't available. Create a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli) first.
 
 **Bash or Zsh:**
 
@@ -85,7 +85,7 @@ Azure Skills detects these environment variables automatically.
 
 ### [Managed identity](#tab/managed-identity)
 
-If you run Azure Skills on an Azure resource such as a virtual machine, Container Apps, or Azure Functions, managed identity handles authentication automatically with no manual setup.
+If you run Azure Skills on an Azure resource (virtual machine, Container Apps, or Azure Functions), managed identity handles authentication with no manual setup.
 
 For more details, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
@@ -121,7 +121,7 @@ Install the **Azure MCP** extension from the Visual Studio Marketplace:
 
 👉 [Azure MCP Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server)
 
-The Azure MCP extension also installs a companion extension that brings Azure Skills into VS Code. Together they configure the Azure MCP Server, Foundry MCP, and the full skills layer automatically.
+The Azure MCP extension installs a companion extension that brings Azure Skills into VS Code. Together they configure the Azure MCP Server and the full skills layer.
 
 > [!NOTE]
 > The skills extension requires **Git CLI** to be installed on your machine.
@@ -160,7 +160,7 @@ After installation, confirm Azure Skills is ready to use.
    /plugin list
    ```
 
-   The output includes `azure (azure-skills)` and a list of available skills.
+   The output includes `azure (azure-skills)` and available skills.
 
 1. Test with a quick command:
 
@@ -168,7 +168,7 @@ After installation, confirm Azure Skills is ready to use.
    /ask List my Azure subscriptions
    ```
 
-   Your AI assistant queries your Azure account and displays your subscriptions. The response shows subscription names, IDs, and status.
+   Your AI assistant queries your Azure account and displays your subscriptions.
 
 ## Try Azure Skills
 
@@ -180,7 +180,7 @@ Now that you've installed and verified Azure Skills, try these prompts in your A
 Analyze my project structure and prepare a deployment plan for deploying to Azure. What infrastructure do I need and how should I set it up?
 ```
 
-Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase. It generates infrastructure-as-code templates and creates a deployment plan at `.azure/plan.md`. The assistant asks for your approval before proceeding.
+Expected response: The assistant analyzes your codebase and generates infrastructure-as-code templates. It creates a deployment plan at `.azure/plan.md` and asks for your approval.
 
 **Diagnose an Azure resource health issue:**
 
@@ -188,7 +188,7 @@ Expected response: The assistant uses the `azure-prepare` skill to analyze your 
 I'm getting errors from my Azure App Service. What's wrong and how do I fix it?
 ```
 
-Expected response: The assistant invokes `azure-diagnostics` to inspect your app service and check logs. It reviews recent deployments, identifies issues, and provides remediation steps.
+Expected response: The assistant inspects your app service, checks logs, and reviews recent deployments. It identifies issues and provides remediation steps.
 
 **Set up monitoring and observability:**
 
@@ -196,7 +196,7 @@ Expected response: The assistant invokes `azure-diagnostics` to inspect your app
 Configure monitoring and alerting for my application. Which Application Insights features should I enable? What metrics should I track?
 ```
 
-Expected response: The assistant uses `azure-observability` and `appinsights-instrumentation` to propose a monitoring strategy. It generates instrumentation code and configures Azure Alerts for critical metrics. Code samples are tailored to your app stack.
+Expected response: The assistant proposes a monitoring strategy and generates instrumentation code. It configures Azure Alerts for critical metrics tailored to your app stack.
 
 ## Supported AI assistants
 
@@ -234,7 +234,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Plugin not found" error
 
-**Problem:** Azure Skills plugin isn't installed or recognized.
+**Problem:** The Azure Skills plugin isn't installed or recognized.
 
 **Solutions:**
 
@@ -245,7 +245,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Insufficient permissions" error
 
-**Problem:** Your Azure account doesn't have permissions for an operation.
+**Problem:** Your Azure account doesn't have the required permissions.
 
 **Solutions:**
 

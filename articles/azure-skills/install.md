@@ -17,10 +17,10 @@ This article shows you how to install Azure Skills, authenticate to your Azure a
 
 Make sure you have:
 
-- **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
-- **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
-- **Azure CLI** (optional) — Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli).
+- **Node.js LTS**: [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
+- **Azure account**: [Create a free account](https://azure.microsoft.com/free/) if you do not have one.
+- **An AI assistant**: [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
+- **Azure CLI** (optional): Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli).
 
 > [!NOTE]
 > Azure Skills uses the same authentication as [Azure MCP Server](../azure-mcp-server/overview.md). If you already authenticated for Azure MCP Server, Azure Skills uses those credentials.
@@ -55,7 +55,7 @@ This method is the easiest for local development and testing.
 
 ### [Environment variables](#tab/environment-variables)
 
-Use environment variables for scripts or pipelines where the Azure CLI isn't available. Create a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli) first.
+Use environment variables for scripts or pipelines where the Azure CLI is not available. Create a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli) first.
 
 **Bash or Zsh:**
 
@@ -172,7 +172,7 @@ After installation, confirm Azure Skills is ready to use.
 
 ## Try Azure Skills
 
-Now that you've installed and verified Azure Skills, try these prompts in your AI assistant's chat window:
+Now that you installed and verified Azure Skills, try these prompts in your AI assistant's chat window:
 
 **Prepare a deployment plan for your project:**
 
@@ -202,9 +202,9 @@ Expected response: The assistant proposes a monitoring strategy and generates in
 
 You can use Azure Skills across these platforms:
 
-- **[GitHub Copilot CLI](../github-copilot-azure/introduction.md)** — Full integration with GitHub Copilot tools
-- **Claude Code** — Through the Model Context Protocol (MCP)
-- **Other MCP-compatible AI assistants** — Any tool that supports MCP
+- **[GitHub Copilot CLI](../github-copilot-azure/introduction.md)**: Full integration with GitHub Copilot tools
+- **Claude Code**: Through the Model Context Protocol (MCP)
+- **Other MCP-compatible AI assistants**: Any tool that supports MCP
 
 For a complete list of tools that support Azure integration, see [Azure MCP Server supported tools](../azure-mcp-server/get-started.md#connect-to-azure-mcp-server).
 
@@ -224,7 +224,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Authentication failed" error
 
-**Problem:** Your AI assistant can't authenticate to Azure.
+**Problem:** Your AI assistant cannot authenticate to Azure.
 
 **Solutions:**
 
@@ -234,7 +234,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Plugin not found" error
 
-**Problem:** The Azure Skills plugin isn't installed or recognized.
+**Problem:** The Azure Skills plugin is not installed or recognized.
 
 **Solutions:**
 
@@ -245,7 +245,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Insufficient permissions" error
 
-**Problem:** Your Azure account doesn't have the required permissions.
+**Problem:** Your Azure account does not have the required permissions.
 
 **Solutions:**
 
@@ -255,7 +255,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Invalid subscription" error
 
-**Problem:** Azure Skills can't find or access your specified subscription.
+**Problem:** Azure Skills cannot find or access your specified subscription.
 
 **Solutions:**
 

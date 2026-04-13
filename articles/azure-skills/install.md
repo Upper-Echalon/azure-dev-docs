@@ -19,7 +19,7 @@ Make sure you have:
 
 - **Node.js LTS** — [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - **Azure account** — [Create a free account](https://azure.microsoft.com/free/) if you don't have one
-- **An AI assistant** — [GitHub Copilot CLI](../github-cilot-azure/introduction.md), Claude Code, or another platform that supports Azure Skills plugins
+- **An AI assistant** — [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another platform that supports Azure Skills
 - **Azure CLI** (optional) — Simplifies authentication during local development. [Install Azure CLI](/cli/azure/install-azure-cli).
 
 > [!NOTE]
@@ -55,7 +55,7 @@ This method is the easiest for local development and testing.
 
 ### [Environment variables](#tab/environment-variables)
 
-Use environment variables when you need to authenticate in scripts, CI/CD pipelines, or environments where the Azure CLI isn't available. You need a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli).
+Use environment variables for scripts, pipelines, or environments where the Azure CLI isn't available. You need a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli).
 
 **Bash or Zsh:**
 
@@ -81,11 +81,11 @@ set AZURE_CLIENT_ID=your-client-id
 set AZURE_CLIENT_SECRET=your-client-secret
 ```
 
-Azure Skills automatically picks up these environment variables.
+Azure Skills detects these environment variables automatically.
 
 ### [Managed identity](#tab/managed-identity)
 
-If you run Azure Skills on an Azure resource such as a virtual machine, Container Apps, or Azure Functions, managed identity handles authentication automatically. Managed identity requires no manual setup.
+If you run Azure Skills on an Azure resource such as a virtual machine, Container Apps, or Azure Functions, managed identity handles authentication automatically with no manual setup.
 
 For more details, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
@@ -172,9 +172,7 @@ After installation, confirm Azure Skills is ready to use.
 
 ## Try Azure Skills
 
-Now that you installed and verified Azure Skills, try these prompts to explore what Azure Skills can do.
-
-Open your AI assistant's chat window and try these prompts:
+Now that you've installed and verified Azure Skills, try these prompts in your AI assistant's chat window:
 
 **Prepare a deployment plan for your project:**
 
@@ -182,7 +180,7 @@ Open your AI assistant's chat window and try these prompts:
 Analyze my project structure and prepare a deployment plan for deploying to Azure. What infrastructure do I need and how should I set it up?
 ```
 
-Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase and generate infrastructure-as-code templates. It creates a detailed deployment plan at `.azure/plan.md`. The plan considers your project type, dependencies, and best practices. The assistant then asks for your approval before proceeding.
+Expected response: The assistant uses the `azure-prepare` skill to analyze your codebase. It generates infrastructure-as-code templates and creates a deployment plan at `.azure/plan.md`. The assistant asks for your approval before proceeding.
 
 **Diagnose an Azure resource health issue:**
 
@@ -190,7 +188,7 @@ Expected response: The assistant uses the `azure-prepare` skill to analyze your 
 I'm getting errors from my Azure App Service. What's wrong and how do I fix it?
 ```
 
-Expected response: The assistant invokes `azure-diagnostics` to inspect your app service, check logs, review recent deployments, and identify potential configuration or runtime issues. It then provides specific remediation steps.
+Expected response: The assistant invokes `azure-diagnostics` to inspect your app service and check logs. It reviews recent deployments, identifies issues, and provides remediation steps.
 
 **Set up monitoring and observability:**
 
@@ -198,15 +196,15 @@ Expected response: The assistant invokes `azure-diagnostics` to inspect your app
 Configure monitoring and alerting for my application. Which Application Insights features should I enable? What metrics should I track?
 ```
 
-Expected response: The assistant uses `azure-observability` and `appinsights-instrumentation` to propose a monitoring strategy, generate instrumentation code for your application, and configure Azure Alerts for critical metrics. It walks through the setup and provides code samples tailored to your app stack.
+Expected response: The assistant uses `azure-observability` and `appinsights-instrumentation` to propose a monitoring strategy. It generates instrumentation code and configures Azure Alerts for critical metrics. Code samples are tailored to your app stack.
 
 ## Supported AI assistants
 
 You can use Azure Skills across these platforms:
 
 - **[GitHub Copilot CLI](../github-copilot-azure/introduction.md)** — Full integration with GitHub Copilot tools
-- **Claude Code** — Through the MCP protocol  
-- **Other MCP-compatible AI assistants** — Any tool that supports the Model Context Protocol
+- **Claude Code** — Through the Model Context Protocol (MCP)
+- **Other MCP-compatible AI assistants** — Any tool that supports MCP
 
 For a complete list of tools that support Azure integration, see [Azure MCP Server supported tools](../azure-mcp-server/get-started.md#connect-to-azure-mcp-server).
 

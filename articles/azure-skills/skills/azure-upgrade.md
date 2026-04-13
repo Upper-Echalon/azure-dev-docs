@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
-**Skill:** `azure-upgrade` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-upgrade)
+**Skill:** `azure-upgrade` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-upgrade/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
 ## Prerequisites
 
@@ -35,13 +39,9 @@ Use this skill when you need to:
 - Upgrade function app plan
 - Migrate App Service to Container Apps
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Upgrade my function app from Consumption to Flex Consumption"
 - "Move my function app to a better plan"
@@ -55,4 +55,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-upgrade/skill.md)

@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
-**Skill:** `azure-compute` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-compute)
+**Skill:** `azure-compute` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-compute/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
 
 ## Prerequisites
 
@@ -33,11 +37,7 @@ Use this skill when you need to:
 - Work with cost estimate, Linux, black screen, and reset password
 - Configure remote desktop connectivity (RDP port 3389) for Windows virtual machines.
 
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-compute/skill.md)

@@ -12,7 +12,19 @@ ms.service: azure-mcp-server
 
 List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
-**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-resource-lookup)
+**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
+
+### Related tools
+
+| Tool | Command | Purpose |
+|------|---------|---------|
+| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool — generate ARG queries from user intent |
+| `mcp_azure_mcp_subscription_list` | `List available subscriptions` | Discover subscription scope before querying |
+| `mcp_azure_mcp_group_list` | `List resource groups` | Narrow query scope |
 
 ## Prerequisites
 
@@ -36,21 +48,9 @@ Use this skill when you need to:
 - Work with unattached disks, count resources by type, and cross-subscription lookup
 - And Azure Resource Graph queries
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
-
-### Related tools
-
-| Tool | Command | Purpose |
-|------|---------|---------|
-| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool — generate ARG queries from user intent |
-| `mcp_azure_mcp_subscription_list` | `List available subscriptions` | Discover subscription scope before querying |
-| `mcp_azure_mcp_group_list` | `List resource groups` | Narrow query scope |
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "List the websites in my subscription"
 - "Show me the websites in my resource group"
@@ -66,4 +66,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/skill.md)

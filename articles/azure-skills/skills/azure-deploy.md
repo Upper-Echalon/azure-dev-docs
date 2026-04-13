@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
-**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-deploy)
+**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/skill.md)
+
+## What it provides
+
+This skill enables GitHub Copilot to execute production deployments using your prepared infrastructure-as-code files. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
 ## Prerequisites
 
@@ -31,13 +35,9 @@ Execute deployments using Azure Developer CLI or your infrastructure-as-code too
 - Work with push to production, push to cloud, go live, and ship it
 - Work with bicep deploy, terraform apply, publish to Azure, and launch on Azure
 
-## What it provides
+## Example prompts
 
-This skill enables GitHub Copilot to execute production deployments using your prepared infrastructure-as-code files. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Execute deployment to Azure production"
 - "Deploy and provision my Azure infrastructure"
@@ -53,4 +53,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/skill.md)

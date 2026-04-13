@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
-**Skill:** `microsoft-foundry` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/microsoft-foundry)
+**Skill:** `microsoft-foundry` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/microsoft-foundry/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
 ## Prerequisites
 
@@ -37,13 +41,9 @@ Use this skill when you need to:
 - Refine agent instructions for better performance.
 - Optimize system prompts for your agents.
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "How do I deploy an AI model from Microsoft Foundry catalog?"
 - "Build a RAG application with Azure AI Foundry knowledge index"
@@ -59,4 +59,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/microsoft-foundry/skill.md)

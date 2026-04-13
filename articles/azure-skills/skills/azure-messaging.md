@@ -12,7 +12,21 @@ ms.service: azure-mcp-server
 
 Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
-**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-messaging)
+**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
+
+### Related tools
+
+| Tool | Command | Purpose |
+|------|---------|---------|
+| `mcp_azure_mcp_eventhubs` | `Namespace/hub ops` | List namespaces, hubs, consumer groups |
+| `mcp_azure_mcp_servicebus` | `Queue/topic ops` | List namespaces, queues, topics, subscriptions |
+| `mcp_azure_mcp_monitor` | `logs_query` | Query diagnostic logs with KQL |
+| `mcp_azure_mcp_resourcehealth` | ``get`` | Check service health status |
+| `mcp_azure_mcp_documentation` | `Doc search` | Search Microsoft Learn for troubleshooting docs |
 
 ## Prerequisites
 
@@ -36,23 +50,9 @@ Use this skill when you need to:
 - Handle dead-letter messages, resolve batch processing locks, and troubleshoot session timeouts.
 - Address inactive connections, link detachment, slow reconnection, and session errors.
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
-
-### Related tools
-
-| Tool | Command | Purpose |
-|------|---------|---------|
-| `mcp_azure_mcp_eventhubs` | `Namespace/hub ops` | List namespaces, hubs, consumer groups |
-| `mcp_azure_mcp_servicebus` | `Queue/topic ops` | List namespaces, queues, topics, subscriptions |
-| `mcp_azure_mcp_monitor` | `logs_query` | Query diagnostic logs with KQL |
-| `mcp_azure_mcp_resourcehealth` | ``get`` | Check service health status |
-| `mcp_azure_mcp_documentation` | `Doc search` | Search Microsoft Learn for troubleshooting docs |
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "event hub SDK error in my Python app"
 - "my event hub consumer isn't receiving messages"
@@ -68,4 +68,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/skill.md)

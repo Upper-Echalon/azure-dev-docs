@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
-**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-rbac)
+**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
 ## Prerequisites
 
@@ -30,13 +34,9 @@ Use this skill when you need to:
 - Assign role to identity
 - Work with permissions to assign roles
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "What Azure RBAC role should I assign to my managed identity?"
 - "Which Azure role gives least privilege access to read blobs from storage?"
@@ -52,4 +52,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/skill.md)

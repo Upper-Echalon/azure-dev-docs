@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
-**Skill:** `azure-diagnostics` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-diagnostics)
+**Skill:** `azure-diagnostics` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-diagnostics/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
 
 ## Prerequisites
 
@@ -37,13 +41,9 @@ Use this skill when you need to:
 - Work with insights, image pull failures, cold start issues, and health probe failures
 - Work with resource health and root cause of errors
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Debug my Azure Container App"
 - "Troubleshoot production issues in my container app"
@@ -59,4 +59,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-diagnostics/skill.md)

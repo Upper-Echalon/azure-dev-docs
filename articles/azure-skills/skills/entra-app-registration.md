@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
 
-**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/entra-app-registration)
+**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
 
 ## Prerequisites
 
@@ -34,13 +38,9 @@ Set up authentication and authorization for your application.
 - Work with generate service principal, MSAL example, console app auth, and Entra ID setup
 - Work with Microsoft Entra ID authentication
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "How do I create an app registration in Azure?"
 - "Register a Microsoft Entra ID app for my web application"
@@ -56,4 +56,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/skill.md)

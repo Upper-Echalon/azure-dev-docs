@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 This skill queries and analyzes data in Azure Data Explorer (also called Kusto or ADX) using Kusto Query Language (KQL) to support log analytics, telemetry monitoring, and time-series analysis.
 
-**Skill:** `azure-kusto` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-kusto)
+**Skill:** `azure-kusto` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-kusto/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. This skill queries and analyzes data in Azure Data Explorer (also called Kusto or ADX) using Kusto Query Language (KQL) to support log analytics, telemetry monitoring, and time-series analysis.
 
 ## Prerequisites
 
@@ -28,11 +32,7 @@ Use this skill when you need to:
 - Write KQL queries to analyze logs, telemetry data, and time-series information in Azure Data Explorer clusters.
 - Perform log analytics, analyze time-series data from IoT devices, and detect anomalies.
 
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge. This skill queries and analyzes data in Azure Data Explorer (also called Kusto or ADX) using Kusto Query Language (KQL) to support log analytics, telemetry monitoring, and time-series analysis.
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-kusto/skill.md)

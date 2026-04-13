@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
-**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-resource-visualizer)
+**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
 ## Prerequisites
 
@@ -32,13 +36,9 @@ Use this skill when you need to:
 - Analyze resource group in Azure
 - Work with diagram my resources, architecture visualization, resource topology, and map Azure infrastructure
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Create an architecture diagram for my Azure resource group"
 - "Generate a Mermaid diagram of my resource group"
@@ -54,4 +54,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/skill.md)

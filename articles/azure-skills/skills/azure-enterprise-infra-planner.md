@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
-**Skill:** `azure-enterprise-infra-planner` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-enterprise-infra-planner)
+**Skill:** `azure-enterprise-infra-planner` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-enterprise-infra-planner/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
 ## Prerequisites
 
@@ -32,13 +36,9 @@ Use this skill when you need to:
 - Configure virtual network security with firewalls and private endpoints.
 - Deploy Bicep templates at subscription scope (for infrastructure-only workflows; use `azure-prepare` for application-centric deployments).
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Deploy a geo-redundant backup solution for on-premises SQL servers using Azure Backup, configure encryption-at-rest, and automate monthly DR tests."
 - "Deploy 3-tier architecture with hardened OS images, virtual machine (VM) backups scheduled daily, and application-level redundancy for the business logic tier."
@@ -52,4 +52,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-enterprise-infra-planner/skill.md)

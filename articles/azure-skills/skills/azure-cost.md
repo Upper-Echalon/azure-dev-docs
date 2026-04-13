@@ -12,7 +12,21 @@ ms.service: azure-mcp-server
 
 Analyze and optimize your Azure spending with historical cost queries, spending forecasts, and actionable cost-reduction recommendations.
 
-**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-cost)
+**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/skill.md)
+
+## What it provides
+
+This skill gives GitHub Copilot access to Azure Cost Management APIs and optimization best practices. It can analyze your current spending, project future costs, and suggest specific ways to reduce waste.
+
+### Related tools
+
+| Tool | Command | Purpose |
+|------|---------|---------|
+| `azure__documentation` | Search Azure documentation | Search for relevant Azure documentation by keyword |
+| `azure__extension_cli_generate` | Generate Azure CLI commands | Generate Azure CLI commands from a natural-language description |
+| `azure__get_azure_bestpractices` | Get Azure best practices | Retrieve best practices for a specific optimization scenario |
+| `azure__extension_azqr` | Run Azure Quick Review | Run a compliance scan against a subscription or resource group |
+| `azure__aks` | Azure Kubernetes Service operations | Manage Azure Kubernetes Service clusters and workloads |
 
 ## Prerequisites
 
@@ -37,21 +51,7 @@ Use this skill when you need to:
 - Find opportunities to reduce cloud spending.
 - Discover cost-saving recommendations tailored to your infrastructure.
 
-## What it provides
-
-This skill gives GitHub Copilot access to Azure Cost Management APIs and optimization best practices. It can analyze your current spending, project future costs, and suggest specific ways to reduce waste.
-
-### Related tools
-
-| Tool | Command | Purpose |
-|------|---------|---------|
-| `azure__documentation` | Search Azure documentation | Search for relevant Azure documentation by keyword |
-| `azure__extension_cli_generate` | Generate Azure CLI commands | Generate Azure CLI commands from a natural-language description |
-| `azure__get_azure_bestpractices` | Get Azure best practices | Retrieve best practices for a specific optimization scenario |
-| `azure__extension_azqr` | Run Azure Quick Review | Run a compliance scan against a subscription or resource group |
-| `azure__aks` | Azure Kubernetes Service operations | Manage Azure Kubernetes Service clusters and workloads |
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/skill.md)

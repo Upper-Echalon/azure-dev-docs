@@ -12,7 +12,17 @@ ms.service: azure-mcp-server
 
 Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
 
-**Skill:** `azure-kubernetes` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-kubernetes)
+**Skill:** `azure-kubernetes` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-kubernetes/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
+
+### Related tools
+
+| Tool | Command | Purpose |
+|------|---------|---------|
+| `mcp_azure_mcp_aks` | `AKS Model Context Protocol (MCP) entry point used to discover the exact AKS-specific tools exposed by the client` | Discover the callable AKS tool first, then use that tool's parameters |
 
 ## Prerequisites
 
@@ -33,16 +43,6 @@ Use this skill when you need to:
 - Design AKS networking in Azure
 - Choose AKS SKU in Azure
 - Secure AKS in Azure
-
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
-
-### Related tools
-
-| Tool | Command | Purpose |
-|------|---------|---------|
-| `mcp_azure_mcp_aks` | `AKS Model Context Protocol (MCP) entry point used to discover the exact AKS-specific tools exposed by the client` | Discover the callable AKS tool first, then use that tool's parameters |
 
 ## Suggested workflow
 
@@ -88,9 +88,9 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 - **Stop/Start development and test clusters** to reduce costs: `az aks stop` and `az aks start`
 - Consider **Reserved Instances** or **Savings Plans** for steady-state workloads
 
-## Example triggers
+## Example prompts
 
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Help me create an AKS cluster"
 - "I need to set up a new Kubernetes cluster on Azure"
@@ -106,4 +106,3 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure MCP Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

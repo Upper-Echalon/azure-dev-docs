@@ -10,9 +10,20 @@ ms.service: azure-mcp-server
 
 # Azure skill for AI Services
 
+**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/skill.md)
 
+## What it provides
 
-**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-ai)
+This skill provides GitHub Copilot with specialized knowledge about Azure AI Services services and workflows in Azure.
+
+### Azure services knowledge
+
+| Service | When to use |
+|---------|------------|
+| AI Search | Full-text, vector, hybrid search |
+| Speech | Speech-to-text, text-to-speech |
+| OpenAI | GPT models, embeddings, DALL-E |
+| Document Intelligence | Form extraction, OCR |
 
 ## Prerequisites
 
@@ -30,24 +41,7 @@ Use this skill when you need to:
 - Execute vector, hybrid, and semantic search queries.
 - Convert speech to text and text to speech using Azure Cognitive Services.
 
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge about Azure AI Services services and workflows in Azure.
-
-### Azure services knowledge
-
-| Service | When to use |
-|---------|------------|
-| AI Search | Full-text, vector, hybrid search |
-| Speech | Speech-to-text, text-to-speech |
-| OpenAI | GPT models, embeddings, DALL-E |
-| Document Intelligence | Form extraction, OCR |
-
-
-
-
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/skill.md)

@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
-**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-prepare)
+**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
 ## Prerequisites
 
@@ -37,13 +41,9 @@ Use this skill when you need to:
 - Update application in Azure
 - Add authentication in Azure
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Create a dad joke generator and deploy to Azure"
 - "Build a web app and host it on Azure"
@@ -59,4 +59,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/skill.md)

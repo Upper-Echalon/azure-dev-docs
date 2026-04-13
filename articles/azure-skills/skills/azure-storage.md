@@ -12,7 +12,21 @@ ms.service: azure-mcp-server
 
 Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 
-**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-storage)
+**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
+
+### Azure services knowledge
+
+| Service | When to use |
+|---------|------------|
+| Blob Storage | Objects, files, backups, static content |
+| File Shares | SMB file shares, lift-and-shift |
+| Queue Storage | Async messaging, task queues |
+| Table Storage | NoSQL key-value (consider Cosmos DB) |
+| Data Lake | Big data analytics, hierarchical namespace |
 
 ## Prerequisites
 
@@ -32,25 +46,7 @@ Use this skill when you need to:
 - Upload files in Azure
 - Work with download blobs, storage accounts, access tiers, and lifecycle management
 
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge. Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
-
-### Azure services knowledge
-
-| Service | When to use |
-|---------|------------|
-| Blob Storage | Objects, files, backups, static content |
-| File Shares | SMB file shares, lift-and-shift |
-| Queue Storage | Async messaging, task queues |
-| Table Storage | NoSQL key-value (consider Cosmos DB) |
-| Data Lake | Big data analytics, hierarchical namespace |
-
-
-
-
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/skill.md)

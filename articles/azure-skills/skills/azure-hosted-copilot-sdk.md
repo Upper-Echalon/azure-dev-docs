@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Build and deploy GitHub Copilot SDK apps to Azure.
 
-**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-hosted-copilot-sdk)
+**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
 
 ## Prerequisites
 
@@ -35,13 +39,9 @@ Use this skill when you need to:
 - Build chat applications using the Copilot SDK service template and the `CopilotClient` library.
 - Implement session management and message handling using the GitHub Models API.
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Build a Copilot SDK app and deploy it"
 - "Create a new copilot SDK service"
@@ -57,4 +57,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/skill.md)

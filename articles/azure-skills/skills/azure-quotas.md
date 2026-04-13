@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
-**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-quotas)
+**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
 ## Prerequisites
 
@@ -36,13 +40,9 @@ Use this skill when you need to:
 - Provisioning limits in Azure
 - Work with vCPU limit
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "How do I check my Azure quota limits?"
 - "What are the service limits for my Azure subscription?"
@@ -58,4 +58,4 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/skill.md)

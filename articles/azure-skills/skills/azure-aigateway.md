@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Configure Azure API Management as an AI Gateway for AI models, Model Context Protocol (MCP) tools, and agents.
 
-**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/azure-aigateway)
+**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-aigateway/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 
 ## Prerequisites
 
@@ -34,13 +38,9 @@ Use this skill when you need to:
 - Configure AI back end in Azure
 - Work with token metrics, AI cost control, convert API to MCP, and import OpenAPI to gateway
 
-## What it provides
+## Example prompts
 
-This skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
-
-## Example triggers
-
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Set up an AI Gateway for my Azure OpenAI models"
 - "Configure Azure API Management as a gateway for my AI models"
@@ -56,4 +56,3 @@ Try these prompts with GitHub Copilot to activate this skill:
 ## Related content
 
 - [Azure MCP Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)

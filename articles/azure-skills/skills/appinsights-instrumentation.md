@@ -12,7 +12,11 @@ ms.service: azure-mcp-server
 
 Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
-**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/azure-skills/tree/main/skills/appinsights-instrumentation)
+**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/skill.md)
+
+## What it provides
+
+This skill provides GitHub Copilot with specialized knowledge. Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
 ## Prerequisites
 
@@ -29,16 +33,9 @@ Use this skill when you need to:
 - Work with App Insights SDK, telemetry patterns, Application Insights guidance, and instrumentation examples
 - Work with Apm best practices
 
-## What it provides
-
-This skill provides GitHub Copilot with specialized knowledge. Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
-
-
-
-
 ## Example prompts
 
-Try these prompts with GitHub Copilot to activate this skill:
+Try these prompts to activate this skill:
 
 - "Instrument my webapp to send telemetry to App Insights"
 - "How do I instrument my app with Azure App Insights?"
@@ -51,8 +48,7 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "How to enable App Insights autoinstrumentation?"
 - "Configure telemetry for my Azure App Service"
 
-
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [GitHub Copilot for Azure documentation](/azure/developer/github-copilot-azure/introduction)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/skill.md)

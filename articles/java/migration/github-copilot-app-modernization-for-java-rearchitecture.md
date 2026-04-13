@@ -35,7 +35,8 @@ Common re-architecture scenarios include:
 
 - Visual Studio Code with the [GitHub Copilot modernization](https://marketplace.visualstudio.com/items?itemName=vscjava.migrate-java-to-azure) extension installed.
 - A GitHub Copilot subscription. For more information, see [Copilot plans](https://github.com/features/copilot/plans?ref_product=copilot).
-- (Optional) [Python](https://www.python.org/downloads/) for building a knowledge graph, which gives the agent a clearer understanding of your project structure during the rewriting process. If Python isn't available, the knowledge graph step is skipped.
+- (Optional) [Python](https://www.python.org/downloads/) 3.7 or later for building a knowledge graph, which gives the agent a clearer understanding of your project structure during the rewriting process. If Python isn't available, the knowledge graph step is skipped.
+- (Optional) [Node.js](https://nodejs.org/) 18 or later for running Playwright tests as part of runtime validation. If Node.js isn't available, the Playwright test step is skipped.
 - (Optional) [Docker Desktop](https://www.docker.com/products/docker-desktop/) for runtime validation. If Docker isn't available, the runtime validation step is skipped.
 
 ## Enable the re-architecture feature

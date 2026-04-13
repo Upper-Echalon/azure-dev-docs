@@ -19,10 +19,6 @@ Execute Azure deployments for already-prepared applications that have existing .
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -39,9 +35,6 @@ Execute deployments using Azure Developer CLI or your infrastructure-as-code too
 
 This skill enables GitHub Copilot to execute production deployments using your prepared infrastructure-as-code files. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -56,7 +49,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Deploy Azure Functions to production"
 - "Deploy my app and verify the role-based access control (RBAC) roles are assigned correctly"
 - "Run deployment and check live role assignments on Azure"
-
 
 ## Related content
 

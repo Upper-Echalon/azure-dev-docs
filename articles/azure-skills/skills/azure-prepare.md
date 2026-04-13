@@ -19,10 +19,6 @@ Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfile
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI with Bicep** (v2.60.0+)—Install: `az bicep install`
 - **Terraform** (v1.5+)—Install: `https://developer.hashicorp.com/terraform/install`
 
@@ -45,9 +41,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -62,7 +55,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Configure Azure hosting for my app"
 - "Create a serverless HTTP API using Azure Functions and deploy to Azure"
 - "Create an event-driven function app to process messages and deploy to Azure Functions"
-
 
 ## Related content
 

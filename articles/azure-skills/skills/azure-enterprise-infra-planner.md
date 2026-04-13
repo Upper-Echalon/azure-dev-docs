@@ -19,10 +19,6 @@ Architect and provision enterprise Azure infrastructure from workload descriptio
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -40,9 +36,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with waf alignment. Generates Bicep or Terraform directly (no `azd`).
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -55,7 +48,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Deploy three distinct VM scale sets for a legacy app, route incoming HTTP/S through Application Gateway with Web Application Firewall (WAF), and encrypt all data disks."
 - "Set up Azure Backup for critical VM workloads, create a long-term retention policy for compliance, and test backup restores quarterly."
 - "Deploy disaster recovery for VMware VMs using Azure Site Recovery, configure runbooks for smooth failover, and maintain compliance audit trails."
-
 
 ## Related content
 

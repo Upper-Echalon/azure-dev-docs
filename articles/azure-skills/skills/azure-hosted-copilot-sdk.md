@@ -19,10 +19,6 @@ Build and deploy GitHub Copilot SDK apps to Azure.
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -43,9 +39,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -60,7 +53,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Build a copilot app that uses a self-hosted model on Azure"
 - "Deploy a copilot SDK app with my own endpoint"
 - "Create a copilot app and bring your own model from Azure OpenAI"
-
 
 ## Related content
 

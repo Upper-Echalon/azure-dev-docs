@@ -19,10 +19,6 @@ Azure virtual machine (VM) and Virtual machine scale set (VMSS) router for recom
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -40,11 +36,6 @@ Use this skill when you need to:
 ## What it provides
 
 This skill provides GitHub Copilot with specialized knowledge. Azure VM and Virtual machine scale set (VMSS) router for recommendations, pricing, autoscale, orchestration, and connectivity troubleshooting.
-
-
-
-
-
 
 ## Related content
 

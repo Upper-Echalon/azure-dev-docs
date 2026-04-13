@@ -19,10 +19,6 @@ Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. G
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -43,9 +39,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Assess and upgrade Azure workloads between plans, tiers, or SKUs within Azure. Generates assessment reports and automates upgrade steps.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -58,7 +51,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Change my function app hosting plan"
 - "Migrate my Azure Functions from Consumption to Flex Consumption"
 - "Assess my function app for upgrade readiness"
-
 
 ## Related content
 

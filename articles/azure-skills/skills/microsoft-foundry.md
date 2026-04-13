@@ -19,10 +19,6 @@ Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, 
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **PowerShell** (v7.4+)—Install: `winget install Microsoft.PowerShell`
 - **Bash**
 
@@ -45,9 +41,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, acr push, hosted/prompt agent create, container start, batch eval, prompt optimization, prompt optimizer workflows, agent.yaml, dataset curation from traces.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -62,7 +55,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Set up agent monitoring and continuous evaluation in Foundry"
 - "Help me with Microsoft Foundry model deployment"
 - "How to use knowledge index for RAG in Azure AI Foundry?"
-
 
 ## Related content
 

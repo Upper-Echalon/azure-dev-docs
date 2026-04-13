@@ -19,14 +19,7 @@ Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clus
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
-
-### Required resources
-
 - **Azure Key Vault**—Key vault for secrets and certificate management
 - **Azure Kubernetes Service cluster**—AKS cluster for container orchestration
 
@@ -50,7 +43,6 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 | Tool | Command | Purpose |
 |------|---------|---------|
 | `mcp_azure_mcp_aks` | `AKS Model Context Protocol (MCP) entry point used to discover the exact AKS-specific tools exposed by the client` | Discover the callable AKS tool first, then use that tool's parameters |
-
 
 ## Suggested workflow
 
@@ -110,7 +102,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Design AKS networking with private API server"
 - "What's the difference between AKS Automatic and Standard?"
 - "Should I use AKS Automatic or Standard SKU?"
-
 
 ## Related content
 

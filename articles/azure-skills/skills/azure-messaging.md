@@ -19,10 +19,6 @@ Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Ser
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -54,8 +50,6 @@ This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and 
 | `mcp_azure_mcp_resourcehealth` | ``get`` | Check service health status |
 | `mcp_azure_mcp_documentation` | `Doc search` | Search Microsoft Learn for troubleshooting docs |
 
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -70,7 +64,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "`servicebus` java send timeout"
 - "`servicebus` dotnet receiver disconnected"
 - "service bus message lock expired during batch processing"
-
 
 ## Related content
 

@@ -19,10 +19,6 @@ Configure Azure API Management as an AI Gateway for AI models, Model Context Pro
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -42,9 +38,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -59,7 +52,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Enable semantic caching for my AI API"
 - "Set up semantic cache for Azure OpenAI in APIM"
 - "Add content safety to my AI endpoint"
-
 
 ## Related content
 

@@ -19,14 +19,7 @@ Run Azure compliance and security audits with `azqr` plus Key Vault expiration c
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
-
-### Required resources
-
 - **Azure Key Vault**—Key vault for secrets and certificate management
 
 ## When to use this skill
@@ -42,9 +35,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Run Azure compliance and security audits with `azqr` plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -59,7 +49,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Find resources that don't comply with best practices"
 - "Show me expired certificates in my Key Vault"
 - "Check what secrets are expiring in the next 30 days"
-
 
 ## Related content
 

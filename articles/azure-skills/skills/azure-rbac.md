@@ -19,10 +19,6 @@ Helps users find the right Azure RBAC role for an identity with least privilege 
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -38,9 +34,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -55,7 +48,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "What is the least privilege role for reading from a storage queue?"
 - "I need to assign a role to my app service managed identity for database access"
 - "Generate Bicep code for assigning a role to my function app"
-
 
 ## Related content
 

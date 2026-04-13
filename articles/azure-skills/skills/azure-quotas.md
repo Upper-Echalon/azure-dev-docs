@@ -19,14 +19,7 @@ Check/manage Azure quotas and usage across providers. For deployment planning, c
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
-
-### Required resources
-
 - **Azure Storage account**—Storage account for blob, file, queue, or table data
 - **Azure Cosmos DB account**—Cosmos DB account for NoSQL data
 
@@ -47,9 +40,6 @@ Use this skill when you need to:
 
 This skill provides GitHub Copilot with specialized knowledge. Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
-
-
-
 ## Example triggers
 
 Try these prompts with GitHub Copilot to activate this skill:
@@ -64,7 +54,6 @@ Try these prompts with GitHub Copilot to activate this skill:
 - "Compare quotas across regions for Standard_D4s_v3"
 - "What is the provisioning limit for public IP addresses?"
 - "Check regional capacity for Container Apps"
-
 
 ## Related content
 

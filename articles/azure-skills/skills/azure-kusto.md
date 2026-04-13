@@ -19,10 +19,6 @@ This skill queries and analyzes data in Azure Data Explorer (also called Kusto o
 - **Azure authentication**—Sign in with `az login` or use a service principal.
 - **Azure subscription**—An active Azure subscription is required.
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-
-### Required tools
-
-- **GitHub Copilot**
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ## When to use this skill
@@ -35,11 +31,6 @@ Use this skill when you need to:
 ## What it provides
 
 This skill provides GitHub Copilot with specialized knowledge. This skill queries and analyzes data in Azure Data Explorer (also called Kusto or ADX) using Kusto Query Language (KQL) to support log analytics, telemetry monitoring, and time-series analysis.
-
-
-
-
-
 
 ## Related content
 

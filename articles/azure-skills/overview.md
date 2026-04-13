@@ -19,9 +19,9 @@ The following demonstration shows Azure Skills in action inside Visual Studio Co
 
 :::image type="content" source="media/azure-skills-visual-studio-code-demonstration.gif" alt-text="Animated demonstration of Azure Skills running in Visual Studio Code, showing a developer using natural language to interact with Azure services through the Copilot chat panel." lightbox="media/azure-skills-visual-studio-code-demonstration.gif":::
 
-**Azure Skills** is a plugin that connects GitHub Copilot CLI or Claude Code to your Azure account.It gives your AI assistant the ability to manage resources, deploy applications, and monitor services directly from your development environment.
+**Azure Skills** are agent skills that extend Azure-specific domain knowledge and specialized workflows for your coding agent. Azure Skills gives your AI assistant the ability to manage resources, deploy applications, and monitor services directly from your development environment.
 
-Work with Azure without switching between tools, context windows, or documentation tabs. Ask your AI assistant to build, validate, and deploy—and it handles the Azure operations for you. Azure Skills is built on the **Azure MCP Server**, which provides your AI assistant with tools to interact with 40+ Azure services. Skills layer high-level workflows on top of those tools.
+Work with Azure without switching between tools, context windows, or documentation tabs. Ask your AI assistant to build, validate, and deploy, and it handles the Azure operations for you. Azure Skills uses the [Azure MCP Server](../azure-mcp-server/overview.md) to provide your AI assistant with tools to interact with 40+ Azure services. Skills layer high-level workflows on top of those tools.
 
 Traditional Azure workflows require context-switching between your editor, the Azure portal, and documentation while learning CLI commands and running validation steps manually. **Azure Skills** eliminates this friction. Your AI assistant becomes a full Azure development partner, understanding your application architecture and executing Azure operations at your direction.
 
@@ -50,5 +50,5 @@ This structured approach keeps deployments safe and auditable. You always review
 
 - [Install and configure Azure Skills](install.md) — Detailed setup instructions and authentication options.
 - [Get started with Azure Skills](quickstart.md) — Hands-on walkthrough for your first deployment.
-- [Azure Skills overview](overview.md) — Full documentation of all 18 skills and their capabilities.
+- [Azure Skills reference](skills/azure-deploy.md) — Full documentation of all skills and their capabilities.
 - [Azure MCP Server](../azure-mcp-server/overview.md) — Technical documentation for the underlying Azure integration.

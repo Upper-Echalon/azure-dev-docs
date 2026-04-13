@@ -1,6 +1,6 @@
 ---
 title: Install and configure Azure Skills
-description: "Azure Skills plugin: Install, authenticate, and configure your AI assistant to manage Azure resources. Get started quickly and streamline cloud operations."
+description: "Azure Skills: Install, authenticate, and configure your AI assistant to manage Azure resources. Get started quickly and streamline cloud operations."
 ms.topic: how-to
 ms.date: 03/16/2026
 author: diberry
@@ -91,19 +91,64 @@ For more details, see [Azure managed identities](/entra/identity/managed-identit
 
 ---
 
-## Install the plugin
+## Install Azure Skills
 
-In GitHub Copilot CLI, install Azure Skills from the plugin marketplace:
+Choose the installation method for your AI assistant.
 
-```bash
+### [GitHub Copilot CLI](#tab/copilot-cli)
+
+Add the marketplace (first time only):
+
+```
 /plugin marketplace add microsoft/azure-skills
+```
+
+Install the plugin:
+
+```
 /plugin install azure@azure-skills
 ```
 
-The first command registers Microsoft's official Azure plugin marketplace. The second command downloads and installs the latest version of the Azure Skills plugin.
+Update the plugin:
+
+```
+/plugin update azure@azure-skills
+```
+
+### [VS Code](#tab/vscode)
+
+Install the **Azure MCP** extension from the Visual Studio Marketplace:
+
+👉 [Azure MCP Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server)
+
+The Azure MCP extension also installs a companion extension that brings Azure Skills into VS Code. Together they configure the Azure MCP Server, Foundry MCP, and the full skills layer automatically.
 
 > [!NOTE]
-> For other MCP-compatible platforms like Claude Code, Azure Skills is available through the [Azure MCP Server](../azure-mcp-server/overview.md). Refer to your platform's documentation for installing MCP servers.
+> The skills extension requires **Git CLI** to be installed on your machine.
+
+### [Claude Code](#tab/claude-code)
+
+Add the marketplace (first time only):
+
+```bash
+/plugin marketplace add microsoft/azure-skills
+```
+
+Install the plugin:
+
+```bash
+/plugin install azure@azure-skills
+```
+
+Update:
+
+```bash
+/plugin marketplace update azure-skills
+```
+
+---
+
+For the full list of supported hosts and installation options, see the [Azure Skills repository](https://github.com/microsoft/azure-skills).
 
 ## Verify installation
 
@@ -115,7 +160,7 @@ After installation, confirm Azure Skills is ready to use.
    /plugin list
    ```
 
-   The output includes `azure (github-copilot-for-azure)` and a list of available skills.
+   The output includes `azure (azure-skills)` and a list of available skills.
 
 1. Test with a quick command:
 
@@ -195,8 +240,8 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 **Solutions:**
 
-- Run `/plugin marketplace add microsoft/github-copilot-for-azure` to register the marketplace.
-- Run `/plugin install azure@github-copilot-for-azure` to install the plugin.
+- Run `/plugin marketplace add microsoft/azure-skills` to register the marketplace.
+- Run `/plugin install azure@azure-skills` to install the plugin.
 - Restart your AI assistant.
 - Verify Node.js LTS is installed.
 

@@ -17,8 +17,8 @@ This article shows you how to install Azure Skills, authenticate to your Azure a
 
 Make sure you have:
 
-- **Node.js LTS**: [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
-- **Azure account**: [Create a free account](https://azure.microsoft.com/free/) if you do not have one.
+- **Node.js Long Term Support (LTS)**: [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
+- **Azure account**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
 - **An AI assistant**: [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
 - **Azure CLI** (optional): Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli).
 
@@ -55,7 +55,7 @@ This method is the easiest for local development and testing.
 
 ### [Environment variables](#tab/environment-variables)
 
-Use environment variables for scripts or pipelines where the Azure CLI is not available. Create a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli) first.
+Use environment variables for scripts or pipelines where the Azure CLI isn't available. Create a [service principal](/cli/azure/create-an-azure-service-principal-azure-cli) first.
 
 **Bash or Zsh:**
 
@@ -87,7 +87,7 @@ Azure Skills detects these environment variables automatically.
 
 If you run Azure Skills on an Azure resource (virtual machine, Container Apps, or Azure Functions), managed identity handles authentication with no manual setup.
 
-For more details, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
+For more information, see [Azure managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
 ---
 
@@ -212,7 +212,7 @@ For a complete list of tools that support Azure integration, see [Azure MCP Serv
 
 ### Telemetry
 
-By default, Azure Skills collects usage telemetry to improve the service.
+By default, Azure Skills collect usage telemetry to improve the service.
 
 **To disable telemetry:**
 
@@ -224,7 +224,7 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Authentication failed" error
 
-**Problem:** Your AI assistant cannot authenticate to Azure.
+**Problem:** Your AI assistant can't authenticate to Azure.
 
 **Solutions:**
 
@@ -234,32 +234,32 @@ export AZURE_MCP_COLLECT_TELEMETRY=false
 
 ### "Plugin not found" error
 
-**Problem:** The Azure Skills plugin is not installed or recognized.
+**Problem:** The Azure Skills plugin isn't installed or recognized.
 
 **Solutions:**
 
-- Run `/plugin marketplace add microsoft/azure-skills` to register the marketplace.
-- Run `/plugin install azure@azure-skills` to install the plugin.
+- To register the marketplace, run `/plugin marketplace add microsoft/azure-skills` .
+- To install the plugin, run `/plugin install azure@azure-skills`.
 - Restart your AI assistant.
-- Verify Node.js LTS is installed.
+- Verify Node.js is installed.
 
 ### "Insufficient permissions" error
 
-**Problem:** Your Azure account does not have the required permissions.
+**Problem:** Your Azure account doesn't have the required permissions.
 
 **Solutions:**
 
-- Check your [Azure RBAC role assignments](/azure/role-based-access-control/role-assignments-list-portal).
-- Request additional roles from your Azure administrator.
+- Check your [Azure role-based access control (RBAC) role assignments](/azure/role-based-access-control/role-assignments-list-portal).
+- Request more roles from your Azure administrator.
 - Use a different subscription where you have higher permissions.
 
 ### "Invalid subscription" error
 
-**Problem:** Azure Skills cannot find or access your specified subscription.
+**Problem:** Azure Skills can't find or access your specified subscription.
 
 **Solutions:**
 
-- Run `az account list` to see available subscriptions.
+- To see available subscriptions, run `az account list`. 
 - Verify the subscription ID or name is correct.
 - Check that your credentials have access to the subscription.
 

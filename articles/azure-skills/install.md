@@ -115,13 +115,13 @@ Update the plugin:
 /plugin update azure@azure-skills
 ```
 
-### [VS Code](#tab/vscode)
+### [Visual Studio Code](#tab/vscode)
 
 Install the **Azure MCP** extension from the Visual Studio Marketplace:
 
 👉 [Azure MCP Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server)
 
-The Azure MCP extension installs a companion extension that brings Azure Skills into VS Code. Together they configure the Azure MCP Server and the full skills layer.
+The Azure MCP extension installs a companion extension that brings Azure Skills into Visual Studio Code. Together they configure the Azure MCP Server and the full skills layer.
 
 > [!NOTE]
 > The skills extension requires **Git CLI** to be installed on your machine.

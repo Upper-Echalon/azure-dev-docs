@@ -20,9 +20,8 @@ This skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate,
 
 ## Prerequisites
 
-- **Azure authentication**: Sign in with `az login` or use a service principal.
-- **Azure subscription**: An active Azure subscription is required.
-- **GitHub Copilot**: GitHub Copilot with the Azure extension enabled.
+- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **GitHub Copilot**: With the Azure extension enabled.
 - **PowerShell** (v7.4+): Install with `winget install Microsoft.PowerShell`
 - **Bash**
 

@@ -20,10 +20,9 @@ This skill provides GitHub Copilot with specialized knowledge. Prepare Azure app
 
 ## Prerequisites
 
-- **Azure authentication**: Sign in with `az login` or use a service principal.
-- **Azure subscription**: An active Azure subscription is required.
-- **GitHub Copilot**: GitHub Copilot with the Azure extension enabled.
-- **Azure CLI with Bicep** (v2.60.0+): Install with `az bicep install`
+- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **GitHub Copilot**: With the Azure extension enabled.
+- **Azure CLI with Bicep** (v2.60.0+): [Install](/cli/azure/install-azure-cli), sign in with `az login`, then run `az bicep install`.
 - **Terraform** (v1.5+): Install with `https://developer.hashicorp.com/terraform/install`
 
 ## When to use this skill

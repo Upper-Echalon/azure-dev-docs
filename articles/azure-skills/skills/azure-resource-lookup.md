@@ -28,10 +28,9 @@ This skill provides GitHub Copilot with specialized knowledge. List, find, and s
 
 ## Prerequisites
 
-- **Azure authentication**: Sign in with `az login` or use a service principal.
-- **Azure subscription**: An active Azure subscription is required.
-- **GitHub Copilot**: GitHub Copilot with the Azure extension enabled.
-- **Azure CLI** (v2.60.0+): Install with `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **GitHub Copilot**: With the Azure extension enabled.
+- **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 - **Azure Key Vault**: Key vault for secrets and certificate management
 - **Azure Storage account**: Storage account for blob, file, queue, or table data
 - **Azure Kubernetes Service cluster**: Azure Kubernetes Service (AKS) cluster for container orchestration

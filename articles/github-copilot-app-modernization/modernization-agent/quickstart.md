@@ -6,7 +6,7 @@ ms.author: karler
 ms.reviewer: jessiehuang
 ms.topic: quickstart
 ai-usage: ai-assisted
-ms.date: 03/13/2026
+ms.date: 04/14/2026
 ---
 
 # Quickstart: Install and use the GitHub Copilot modernization agent
@@ -121,21 +121,23 @@ modernize
 The main menu appears:
 
 ```Modernize CLI
-○ How would you like to modernize your Java app?
+○ What would you like to do?
 
-  > 1. Assess application
-       Analyze the project and identify modernization opportunities
-    2. Create modernization plan
-       Generate a structured plan to guide the agent
-    3. Execute modernization plan
-       Run the tasks defined in the modernization plan
+  > Assess        Analyze your source application and generate an assessment report
+    Plan          Create a modernization plan based on assessment findings
+    Execute       Run tasks defined in your modernization plan
+  ──────────────
+    Upgrade       Upgrade your runtime and frameworks to the latest versions
 ```
 
 ### Step 1: Assess the application
 
-1. Select **1. Assess application**.
-1. Follow the prompts to configure assessment options (or press Enter to use defaults).
-1. Review your selections and press Enter to start the assessment.
+1. Select **Assess** from the main menu.
+1. Choose how to specify your target repositories. You can select **Current folder** to use your current directory, **Manual input** to enter local paths or remote Git URLs, or **From a config file** to load repositories from a JSON config file. For this quickstart, select **Current folder**.
+1. Choose the execution mode. Select **Assess locally** to run the assessment on your machine, or **Delegate to Cloud Agents** to let cloud agents run the assessment in parallel. For this quickstart, select **Assess locally**.
+1. Select assessment domains (for example, **Java upgrade** and **Cloud Readiness**) and press `Enter`.
+1. Review the assessment configuration options (Analysis Coverage, Target Runtime, and so on). Press `Enter` on **Continue** to accept the recommended defaults, or adjust individual settings as needed.
+1. Accept the default output path or enter a custom one, then press `Enter` to start the assessment.
 1. Wait for the assessment to complete.
 
 The assessment results are saved to `.github\modernize\assessment\` in your project directory. The agent analyzes your code, dependencies, and configuration to identify:

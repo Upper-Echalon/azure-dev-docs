@@ -31,10 +31,10 @@ This skill provides GitHub Copilot with specialized knowledge. Azure Storage Ser
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **GitHub Copilot**: With the Azure extension enabled.
+- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
-- **Azure Storage account**: Storage account for blob, file, queue, or table data
-- **Azure Cosmos DB account**: Cosmos DB account for NoSQL data
+- **[Azure Storage](https://learn.microsoft.com/azure/storage/common/storage-account-create)**: A storage account for blob, file, queue, or table data.
+- **[Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/nosql/quickstart-portal)**: A Cosmos DB account for NoSQL data.
 
 ## When to use this skill
 

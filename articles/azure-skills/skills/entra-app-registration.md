@@ -21,9 +21,9 @@ This skill provides GitHub Copilot with specialized knowledge. Guides Microsoft 
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **GitHub Copilot**: With the Azure extension enabled.
+- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI with Bicep** (v2.60.0+): [Install](/cli/azure/install-azure-cli), sign in with `az login`, then run `az bicep install`.
-- **Azure Key Vault**: Key vault for secrets and certificate management
+- **[Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/quick-create-portal)**: A key vault for secrets and certificate management.
 
 ## When to use this skill
 

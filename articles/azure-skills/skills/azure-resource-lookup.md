@@ -29,12 +29,12 @@ This skill provides GitHub Copilot with specialized knowledge. List, find, and s
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **GitHub Copilot**: With the Azure extension enabled.
+- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
-- **Azure Key Vault**: Key vault for secrets and certificate management
-- **Azure Storage account**: Storage account for blob, file, queue, or table data
-- **Azure Kubernetes Service cluster**: Azure Kubernetes Service (AKS) cluster for container orchestration
-- **Azure Cosmos DB account**: Cosmos DB account for NoSQL data
+- **[Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/quick-create-portal)**: A key vault for secrets and certificate management.
+- **[Azure Storage](https://learn.microsoft.com/azure/storage/common/storage-account-create)**: A storage account for blob, file, queue, or table data.
+- **[Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
+- **[Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/nosql/quickstart-portal)**: A Cosmos DB account for NoSQL data.
 
 ## When to use this skill
 

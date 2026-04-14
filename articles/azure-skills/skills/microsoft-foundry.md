@@ -21,9 +21,9 @@ This skill provides GitHub Copilot with specialized knowledge. Deploy, evaluate,
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **GitHub Copilot**: With the Azure extension enabled.
-- **PowerShell** (v7.4+): Install with `winget install Microsoft.PowerShell`
-- **Bash**
+- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **[PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)** (v7.4+): Install with `winget install Microsoft.PowerShell`.
+- **Bash**: A Bash-compatible shell (macOS/Linux terminal or [WSL](https://learn.microsoft.com/windows/wsl/install) on Windows).
 
 ## When to use this skill
 

@@ -31,7 +31,7 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 - **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
 - **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 - **Azure Key Vault**—Key vault for secrets and certificate management
-- **Azure Kubernetes Service cluster**—AKS cluster for container orchestration
+- **Azure Kubernetes Service cluster**—Azure Kubernetes Service (AKS) cluster for container orchestration
 
 ## When to use this skill
 

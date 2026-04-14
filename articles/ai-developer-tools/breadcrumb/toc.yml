@@ -7,6 +7,6 @@ items:
     tocHref: /azure/developer
     topicHref: /azure/developer/index
     items:
-    - name: AI dev tools
+    - name: AI developer tools
       tocHref: /azure
-      topicHref: /azure/developer/ai-dev-tools/TOC
+      topicHref: /azure/developer/ai-developer-tools/TOC

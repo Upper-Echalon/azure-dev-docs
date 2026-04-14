@@ -1,5 +1,5 @@
 items:
-- name: AI dev tools for Azure
+- name: AI developer tools for Azure
   href: index.yml
   items:
   - name: Overview

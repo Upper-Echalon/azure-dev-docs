@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: AI dev tools for Azure documentation
+title: AI developer tools for Azure documentation
 summary: Explore AI-powered developer tools for Azure including the Azure MCP Server, GitHub Copilot MCP servers, and Azure Skills. Build intelligent workflows that connect AI agents to Azure services.
 
 metadata:
-  title: AI dev tools for Azure documentation
+  title: AI developer tools for Azure documentation
   description: Learn about AI-powered developer tools for Azure, including MCP servers, GitHub Copilot integrations, and Azure Skills for building agentic workflows.
   ms.topic: landing-page
   ms.date: 07/11/2025

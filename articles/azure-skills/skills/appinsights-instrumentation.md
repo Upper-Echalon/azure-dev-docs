@@ -21,8 +21,8 @@ This skill provides GitHub Copilot with specialized knowledge. Guidance for inst
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
-- **[PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)** (v7.4+): Install with `winget install Microsoft.PowerShell`.
+- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **[PowerShell](/powershell/scripting/install/installing-powershell)** (v7.4+): Install with `winget install Microsoft.PowerShell`.
 - **Azure CLI with Bicep** (v2.60.0+): [Install](/cli/azure/install-azure-cli), sign in with `az login`, then run `az bicep install`.
 
 ## When to use this skill

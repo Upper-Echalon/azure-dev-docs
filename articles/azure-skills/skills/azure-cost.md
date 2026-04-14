@@ -31,9 +31,9 @@ This skill gives GitHub Copilot access to Azure Cost Management APIs and optimiz
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
-- **[Azure Kubernetes Service](https://learn.microsoft.com/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
+- **[Azure Kubernetes Service](/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
 
 ## When to use this skill
 

@@ -22,20 +22,20 @@ This skill provides GitHub Copilot with specialized knowledge. List, find, and s
 
 | Tool | Command | Purpose |
 |------|---------|---------|
-| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool — generate ARG queries from user intent |
+| `extension_cli_generate` | `Generate `az graph query` commands` | Primary tool - generate ARG queries from user intent |
 | `mcp_azure_mcp_subscription_list` | `List available subscriptions` | Discover subscription scope before querying |
 | `mcp_azure_mcp_group_list` | `List resource groups` | Narrow query scope |
 
 ## Prerequisites
 
-- **Azure authentication**—Sign in with `az login` or use a service principal.
-- **Azure subscription**—An active Azure subscription is required.
-- **GitHub Copilot**—GitHub Copilot with the Azure extension enabled.
-- **Azure CLI** (v2.60.0+)—Install: `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
-- **Azure Key Vault**—Key vault for secrets and certificate management
-- **Azure Storage account**—Storage account for blob, file, queue, or table data
-- **Azure Kubernetes Service cluster**—Azure Kubernetes Service (AKS) cluster for container orchestration
-- **Azure Cosmos DB account**—Cosmos DB account for NoSQL data
+- **Azure authentication**: Sign in with `az login` or use a service principal.
+- **Azure subscription**: An active Azure subscription is required.
+- **GitHub Copilot**: GitHub Copilot with the Azure extension enabled.
+- **Azure CLI** (v2.60.0+): Install with `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+- **Azure Key Vault**: Key vault for secrets and certificate management
+- **Azure Storage account**: Storage account for blob, file, queue, or table data
+- **Azure Kubernetes Service cluster**: Azure Kubernetes Service (AKS) cluster for container orchestration
+- **Azure Cosmos DB account**: Cosmos DB account for NoSQL data
 
 ## When to use this skill
 

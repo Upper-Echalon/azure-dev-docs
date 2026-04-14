@@ -3,7 +3,7 @@ title: Azure Developer CLI reference
 description: This article explains the syntax and parameters for the various Azure Developer CLI commands.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 03/07/2026
+ms.date: 04/04/2026
 ms.service: azure-dev-cli
 ms.topic: conceptual
 ms.custom: devx-track-azdevcli
@@ -20,11 +20,12 @@ The Azure Developer CLI (`azd`) is an open-source tool that helps onboard and ma
 ### Options
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --docs         Opens the documentation for azd in your web browser.
-  -h, --help         Gets help for azd.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+      --docs                 Opens the documentation for azd in your web browser.
+  -e, --environment string   The name of the environment to use.
+  -h, --help                 Gets help for azd.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -33,6 +34,7 @@ The Azure Developer CLI (`azd`) is an open-source tool that helps onboard and ma
 * [azd auth](#azd-auth): Authenticate with Azure.
 * [azd completion](#azd-completion): Generate shell completion scripts.
 * [azd config](#azd-config): Manage azd configurations (ex: default Azure subscription, location).
+* [azd copilot](#azd-copilot): Manage GitHub Copilot agent settings. (Preview)
 * [azd deploy](#azd-deploy): Deploy your project code to Azure.
 * [azd down](#azd-down): Delete your project's Azure resources.
 * [azd env](#azd-env): Manage environments (ex: default environment, environment variables).
@@ -50,6 +52,7 @@ The Azure Developer CLI (`azd`) is an open-source tool that helps onboard and ma
 * [azd show](#azd-show): Display information about your project and its resources.
 * [azd template](#azd-template): Find and view template details.
 * [azd up](#azd-up): Provision and deploy your project to Azure with a single command.
+* [azd update](#azd-update): Updates azd to the latest version.
 * [azd version](#azd-version): Print the version number of Azure Developer CLI.
 
 ## azd add
@@ -70,9 +73,10 @@ azd add [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -93,9 +97,10 @@ Authenticate with Azure.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -147,9 +152,10 @@ azd auth login [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -179,9 +185,10 @@ azd auth logout [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -211,9 +218,10 @@ azd auth status [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -244,9 +252,10 @@ See each sub-command's help for details on how to use the generated script.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -276,9 +285,10 @@ azd completion bash
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -304,9 +314,10 @@ azd completion fig
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -332,9 +343,10 @@ azd completion fish
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -360,9 +372,10 @@ azd completion powershell
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -388,9 +401,10 @@ azd completion zsh
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -427,9 +441,10 @@ The configuration directory can be overridden by specifying a path in the AZD_CO
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -471,9 +486,10 @@ azd config get <path> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -499,9 +515,10 @@ azd config list-alpha [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -531,9 +548,10 @@ azd config options [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -570,9 +588,10 @@ azd config reset [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -615,9 +634,10 @@ azd config set defaults.location eastus
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -653,9 +673,10 @@ azd config show [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -697,14 +718,202 @@ azd config unset defaults.location
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
 
 * [azd config](#azd-config): Manage azd configurations (ex: default Azure subscription, location).
+* [Back to top](#azd)
+
+## azd copilot
+
+Manage GitHub Copilot agent settings. (Preview)
+
+### Options
+
+```azdeveloper
+      --docs   Opens the documentation for azd copilot in your web browser.
+  -h, --help   Gets help for copilot.
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent
+
+Manage tool consent.
+
+### Synopsis
+
+Manage consent rules for tool execution.
+
+### Options
+
+```azdeveloper
+      --docs   Opens the documentation for azd copilot consent in your web browser.
+  -h, --help   Gets help for consent.
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot](#azd-copilot): Manage GitHub Copilot agent settings. (Preview)
+* [azd copilot consent grant](#azd-copilot-consent-grant): Grant consent trust rules.
+* [azd copilot consent list](#azd-copilot-consent-list): List consent rules.
+* [azd copilot consent revoke](#azd-copilot-consent-revoke): Revoke consent rules.
+* [Back to top](#azd)
+
+## azd copilot consent grant
+
+Grant consent trust rules.
+
+### Synopsis
+
+Grant trust rules for tools and servers.
+
+This command creates consent rules that allow tools to execute
+without prompting for permission. You can specify different permission
+levels and scopes for the rules.
+
+Examples:
+
+**Grant always permission to all tools globally**
+
+azd copilot consent grant --global --permission always
+
+**Grant project permission to a specific tool with read-only scope**
+
+azd copilot consent grant --server my-server --tool my-tool --permission project --scope read-only
+
+```azdeveloper
+azd copilot consent grant [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type: 'all' or 'readonly' (default "all")
+      --docs                Opens the documentation for azd copilot consent grant in your web browser.
+      --global              Apply globally to all servers
+  -h, --help                Gets help for grant.
+      --operation string    Operation type: 'tool' or 'sampling' (default "tool")
+      --permission string   Permission: 'allow', 'deny', or 'prompt' (default "allow")
+      --scope string        Rule scope: 'global', or 'project' (default "global")
+      --server string       Server name
+      --tool string         Specific tool name (requires --server)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent list
+
+List consent rules.
+
+### Synopsis
+
+List all consent rules for tools.
+
+```azdeveloper
+azd copilot consent list [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type to filter by (readonly, any)
+      --docs                Opens the documentation for azd copilot consent list in your web browser.
+  -h, --help                Gets help for list.
+      --operation string    Operation to filter by (tool, sampling)
+      --permission string   Permission to filter by (allow, deny, prompt)
+      --scope string        Consent scope to filter by (global, project). If not specified, lists rules from all scopes.
+      --target string       Specific target to operate on (server/tool format)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
+* [Back to top](#azd)
+
+## azd copilot consent revoke
+
+Revoke consent rules.
+
+### Synopsis
+
+Revoke consent rules for tools.
+
+```azdeveloper
+azd copilot consent revoke [flags]
+```
+
+### Options
+
+```azdeveloper
+      --action string       Action type to filter by (readonly, any)
+      --docs                Opens the documentation for azd copilot consent revoke in your web browser.
+  -h, --help                Gets help for revoke.
+      --operation string    Operation to filter by (tool, sampling)
+      --permission string   Permission to filter by (allow, deny, prompt)
+      --scope string        Consent scope to filter by (global, project). If not specified, revokes rules from all scopes.
+      --target string       Specific target to operate on (server/tool format)
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [azd copilot consent](#azd-copilot-consent): Manage tool consent.
 * [Back to top](#azd)
 
 ## azd deploy
@@ -723,6 +932,7 @@ azd deploy <service> [flags]
   -e, --environment string    The name of the environment to use.
       --from-package string   Deploys the packaged service located at the provided path. Supports zipped file packages (file path) or container images (image tag).
   -h, --help                  Gets help for deploy.
+      --timeout int           Maximum time in seconds for azd to wait for each service deployment. This stops azd from waiting but does not cancel the Azure-side deployment. (default: 1200) (default 1200)
 ```
 
 ### Options inherited from parent commands
@@ -781,14 +991,15 @@ Manage environments (ex: default environment, environment variables).
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [azd env get-value](#azd-env-get-value): Get specific environment value.
 * [azd env get-values](#azd-env-get-values): Get all environment values.
 * [azd env list](#azd-env-list): List environments.
@@ -802,7 +1013,7 @@ Manage environments (ex: default environment, environment variables).
 
 ## azd env config
 
-Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 
 ### Options
 
@@ -814,9 +1025,10 @@ Manage environment configuration (ex: stored in `.azure/<environment>/config.jso
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -857,7 +1069,7 @@ azd env config get <path> [flags]
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env config set
@@ -905,7 +1117,7 @@ azd env config set myapp.port '"8080"'
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env config unset
@@ -944,7 +1156,7 @@ azd env config unset myapp.endpoint
 
 ### See also
 
-* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in `.azure/<environment>/config.json`).
+* [azd env config](#azd-env-config): Manage environment configuration (ex: stored in .azure/{environment}/config.json).
 * [Back to top](#azd)
 
 ## azd env get-value
@@ -1023,9 +1235,10 @@ azd env list [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1053,9 +1266,10 @@ azd env new <environment> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1142,9 +1356,10 @@ azd env select [<environment>] [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1234,9 +1449,10 @@ Manage azd extensions.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1270,9 +1486,10 @@ azd extension install <extension-id> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1301,9 +1518,10 @@ azd extension list [--installed] [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1330,9 +1548,10 @@ azd extension show <extension-id> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1354,9 +1573,10 @@ View and manage extension sources
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1389,9 +1609,10 @@ azd extension source add [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1417,9 +1638,10 @@ azd extension source list [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1445,9 +1667,10 @@ azd extension source remove <name> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1482,9 +1705,10 @@ azd extension source validate <name-or-path-or-url> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1511,9 +1735,10 @@ azd extension uninstall [extension-id] [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1542,9 +1767,10 @@ azd extension upgrade [extension-id] [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1566,19 +1792,20 @@ Develop, test and run hooks for a project.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
 
-* [azd hooks run](#azd-hooks-run): Runs the specified hook for the project and services
+* [azd hooks run](#azd-hooks-run): Runs the specified hook for the project, provisioning layers, and services
 * [Back to top](#azd)
 
 ## azd hooks run
 
-Runs the specified hook for the project and services
+Runs the specified hook for the project, provisioning layers, and services
 
 ```azdeveloper
 azd hooks run <name> [flags]
@@ -1590,6 +1817,7 @@ azd hooks run <name> [flags]
       --docs                 Opens the documentation for azd hooks run in your web browser.
   -e, --environment string   The name of the environment to use.
   -h, --help                 Gets help for run.
+      --layer string         Only runs hooks for the specified provisioning layer.
       --platform string      Forces hooks to run for the specified platform.
       --service string       Only runs hooks for the specified service.
 ```
@@ -1621,9 +1849,10 @@ Manage your Infrastructure as Code (IaC).
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1711,170 +1940,15 @@ Manage Model Context Protocol (MCP) server. (Alpha)
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
 
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
 * [azd mcp start](#azd-mcp-start): Starts the MCP server.
-* [Back to top](#azd)
-
-## azd mcp consent
-
-Manage MCP tool consent.
-
-### Synopsis
-
-Manage consent rules for MCP tool execution.
-
-### Options
-
-```azdeveloper
-      --docs   Opens the documentation for azd mcp consent in your web browser.
-  -h, --help   Gets help for consent.
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp](#azd-mcp): Manage Model Context Protocol (MCP) server. (Alpha)
-* [azd mcp consent grant](#azd-mcp-consent-grant): Grant consent trust rules.
-* [azd mcp consent list](#azd-mcp-consent-list): List consent rules.
-* [azd mcp consent revoke](#azd-mcp-consent-revoke): Revoke consent rules.
-* [Back to top](#azd)
-
-## azd mcp consent grant
-
-Grant consent trust rules.
-
-### Synopsis
-
-Grant trust rules for MCP tools and servers.
-
-This command creates consent rules that allow MCP tools to execute
-without prompting for permission. You can specify different permission
-levels and scopes for the rules.
-
-Examples:
-  **Grant always permission to all tools globally**
-  azd mcp consent grant --global --permission always
-
-  **Grant project permission to a specific tool with read-only scope**
-  azd mcp consent grant --server my-server --tool my-tool --permission project --scope read-only
-
-```azdeveloper
-azd mcp consent grant [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type: 'all' or 'readonly' (default "all")
-      --docs                Opens the documentation for azd mcp consent grant in your web browser.
-      --global              Apply globally to all servers
-  -h, --help                Gets help for grant.
-      --operation string    Operation type: 'tool' or 'sampling' (default "tool")
-      --permission string   Permission: 'allow', 'deny', or 'prompt' (default "allow")
-      --scope string        Rule scope: 'global', or 'project' (default "global")
-      --server string       Server name
-      --tool string         Specific tool name (requires --server)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
-* [Back to top](#azd)
-
-## azd mcp consent list
-
-List consent rules.
-
-### Synopsis
-
-List all consent rules for MCP tools.
-
-```azdeveloper
-azd mcp consent list [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type to filter by (readonly, any)
-      --docs                Opens the documentation for azd mcp consent list in your web browser.
-  -h, --help                Gets help for list.
-      --operation string    Operation to filter by (tool, sampling)
-      --permission string   Permission to filter by (allow, deny, prompt)
-      --scope string        Consent scope to filter by (global, project). If not specified, lists rules from all scopes.
-      --target string       Specific target to operate on (server/tool format)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
-* [Back to top](#azd)
-
-## azd mcp consent revoke
-
-Revoke consent rules.
-
-### Synopsis
-
-Revoke consent rules for MCP tools.
-
-```azdeveloper
-azd mcp consent revoke [flags]
-```
-
-### Options
-
-```azdeveloper
-      --action string       Action type to filter by (readonly, any)
-      --docs                Opens the documentation for azd mcp consent revoke in your web browser.
-  -h, --help                Gets help for revoke.
-      --operation string    Operation to filter by (tool, sampling)
-      --permission string   Permission to filter by (allow, deny, prompt)
-      --scope string        Consent scope to filter by (global, project). If not specified, revokes rules from all scopes.
-      --target string       Specific target to operate on (server/tool format)
-```
-
-### Options inherited from parent commands
-
-```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
-```
-
-### See also
-
-* [azd mcp consent](#azd-mcp-consent): Manage MCP tool consent.
 * [Back to top](#azd)
 
 ## azd mcp start
@@ -1902,9 +1976,10 @@ azd mcp start [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -1987,9 +2062,10 @@ Manage and configure your deployment pipelines.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2168,9 +2244,10 @@ Find and view template details.
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2200,9 +2277,10 @@ azd template list [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2228,9 +2306,10 @@ azd template show <template> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2252,9 +2331,10 @@ View and manage template sources. (Beta)
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2292,9 +2372,10 @@ azd template source add <key> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2320,9 +2401,10 @@ azd template source list [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2348,9 +2430,10 @@ azd template source remove <key> [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also
@@ -2388,6 +2471,36 @@ azd up [flags]
 
 * [Back to top](#azd)
 
+## azd update
+
+Updates azd to the latest version.
+
+```azdeveloper
+azd update [flags]
+```
+
+### Options
+
+```azdeveloper
+      --channel string             Update channel: stable or daily.
+      --check-interval-hours int   Override the update check interval in hours.
+      --docs                       Opens the documentation for azd update in your web browser.
+  -h, --help                       Gets help for update.
+```
+
+### Options inherited from parent commands
+
+```azdeveloper
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
+```
+
+### See also
+
+* [Back to top](#azd)
+
 ## azd version
 
 Print the version number of Azure Developer CLI.
@@ -2406,9 +2519,10 @@ azd version [flags]
 ### Options inherited from parent commands
 
 ```azdeveloper
-  -C, --cwd string   Sets the current working directory.
-      --debug        Enables debugging and diagnostics logging.
-      --no-prompt    Accepts the default value instead of prompting, or it fails if there is no default.
+  -C, --cwd string           Sets the current working directory.
+      --debug                Enables debugging and diagnostics logging.
+  -e, --environment string   The name of the environment to use.
+      --no-prompt            Accepts the default value instead of prompting, or it fails if there is no default.
 ```
 
 ### See also

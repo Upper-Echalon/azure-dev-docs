@@ -39,7 +39,7 @@ The following GitHub Copilot modernization capabilities are currently available:
 
 - **Code transformations**: Upgrade Java or .NET runtime and framework, and migrate to Azure.
 
-  Uses tools like `OpenRewrite` to upgrade code, including API replacements and dependency updates. AI-powered predefined tasks encode expert knowledge for common Azure migration scenarios, including secret management, message queue integration, and identity services. The system can capture and reuse migration patterns. You can convert Git commits into reusable migration patterns through custom tasks. The system learns from existing code changes and applies similar fixes across multiple codebases. Migration patterns are applied uniformly across teams and projects to ensure consistency.
+  Uses tools like `OpenRewrite` to upgrade code, including API replacements and dependency updates. AI-powered predefined tasks encode expert knowledge for common Azure migration scenarios, including secret management, message queue integration, and identity services. The system can capture and reuse migration patterns. You can convert Git commits into reusable migration patterns through custom skills. The system learns from existing code changes and applies similar fixes across multiple codebases. Migration patterns are applied uniformly across teams and projects to ensure consistency.
 
 - **Modernize and secure**: Ensure successful build, migrate unit tests, and address Common Vulnerabilities and Exposures (CVEs).
 

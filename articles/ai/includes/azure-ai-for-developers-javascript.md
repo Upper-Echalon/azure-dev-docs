@@ -2,8 +2,8 @@
 ms.custom: overview
 ms.topic: include
 ms.date: 12/18/2025
-ms.author: johalexander
-author: ms-johnalex
+ms.author: rotabor
+author: bobtabor-msft
 ms.service: azure
 ---
 

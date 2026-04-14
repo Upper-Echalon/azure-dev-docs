@@ -40,11 +40,11 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 
 | Product, tool, or service | Namespace | Description |
 |------|------|--------------|
-| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage database connections for Azure App Service instances. |
+| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage web apps, database connections, diagnostics, deployments, and application settings for Azure App Service. |
 | [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
 | [Azure Kubernetes Service](../../tools/azure-kubernetes.md) | `aks` | List Azure Kubernetes Service clusters. |
 | [Azure Service Fabric](../../tools/azure-service-fabric.md) | `servicefabric` | Manage Service Fabric managed clusters, including node details and restarts. |
-| [Azure Virtual Machines](../../tools/azure-virtual-machines.md) | `compute` | Get details for Azure virtual machines, virtual machine scale sets, and managed disks. |
+| [Azure Compute](../../tools/azure-compute.md) | `compute` | Get details for Azure virtual machines, virtual machine scale sets, and managed disks. |
 
 ### Containers
 
@@ -132,7 +132,7 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 | [Azure Resource Health](../../tools/azure-resource-health.md) | `resourcehealth` | Check the health status of Azure resources. |
 | [Azure Well-Architected Framework](../../tools/azure-well-architected-framework.md) | `wellarchitectedframework` | Get architectural best practices, design patterns, and recommendations for Azure services based on the five Well-Architected Framework pillars. |
 | [Azure Workbooks](../../tools/azure-monitor.md) | `workbooks` | Create, manage, and update Azure Workbooks for data visualization and reporting. |
-| [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups. |
+| [Resource Groups](../../tools/resource-group.md) | `group` | List Azure resource groups and list resources within a group. |
 | [Subscription](../../tools/subscription.md) | `subscription` | List Azure subscriptions. |
 
 ### Messaging
@@ -184,7 +184,7 @@ Azure MCP Server provides the following tools for Azure services and Azure-relat
 |------|------|--------------|
 | [Azure AI Search](../../tools/azure-ai-search.md) | `search` | Manage Azure AI Search resources, including search services, indexes, and queries. |
 | [Azure App Configuration](../../tools/app-configuration.md) | `appconfig` | Manage centralized application settings and feature flags. |
-| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage database connections for Azure App Service instances. |
+| [Azure App Service](../../tools/azure-app-service.md) | `appservice` | Manage web apps, database connections, diagnostics, deployments, and application settings for Azure App Service. |
 | [Azure Communication Services](../../tools/azure-communication.md) | `communication` | Send SMS and email messages using Azure Communication Services. |
 | [Azure Functions](../../tools/azure-functions.md) | `functionapp` | List Azure Functions. |
 | [Azure SignalR](../../tools/azure-signalr.md) | `signalr` | Manage Azure SignalR resources and runtimes. |

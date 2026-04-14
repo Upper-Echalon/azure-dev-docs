@@ -91,6 +91,8 @@
           href: remote-builds.md
         - name: Publishing workflows
           href: publishing-workflows.md
+        - name: Azure App Service deployment slots
+          href: app-service-slots.md
         - name: Docker support as a language
           href: docker-language-support.md
         - name: Metadata configuration
@@ -119,6 +121,8 @@
           href: work-with-environments.md
         - name: Manage environment variables
           href: manage-environment-variables.md
+        - name: Use environment secrets
+          href: environment-secrets.md
         - name: Environment variables FAQ
           href: environment-variables-faq.md
       - name: Full stack
@@ -143,6 +147,8 @@
       href: azd-config.md
     - name: Customize workflows using command and event hooks
       href: azd-extensibility.md
+    - name: Custom prompts and parameters
+      href: custom-prompts.md
     - name: Enable demo mode
       href: demo-mode.md
     - name: Configure template sources

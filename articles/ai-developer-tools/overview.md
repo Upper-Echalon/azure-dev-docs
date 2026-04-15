@@ -67,6 +67,8 @@ Use the following decision flow to determine which tool best fits your scenario.
 
 ## Primary scenarios
 
+All three tools — GitHub Copilot for Azure, Azure MCP Server, and Azure Skills — support most Azure development scenarios. The following table shows the recommended starting point for each scenario, but you can use any tool for any task.
+
 | Scenario | Recommended tool | Example prompts |
 |---|---|---|
 | Learn about Azure services | GitHub Copilot for Azure | "What Azure services should I use with my app?" |
@@ -75,6 +77,21 @@ Use the following decision flow to determine which tool best fits your scenario.
 | Troubleshoot a failing app | GitHub Copilot for Azure | "Why is my app returning 500 errors?" |
 | Query resources across subscriptions | Azure MCP Server | "Show me all VMs across my subscriptions" |
 | Set up end-to-end deployment pipeline | Azure Skills (azure-prepare, azure-validate, azure-deploy) | "Prepare and deploy my Node.js app to Azure" |
+
+<!-- OPTION B — Capability matrix (alternative to table above, for team discussion 2026-04-16)
+
+Replace the "Recommended tool" table above with this capability matrix:
+
+| Scenario | GitHub Copilot for Azure | Azure MCP Server | Azure Skills |
+|---|---|---|---|
+| Learn about Azure services | ✅ Best fit | ✅ | ✅ |
+| Manage Azure resources | ✅ | ✅ Best fit | ✅ |
+| Deploy an application | ✅ | ✅ | ✅ Best fit |
+| Troubleshoot a failing app | ✅ Best fit | ✅ | ✅ |
+| Query resources across subscriptions | ✅ | ✅ Best fit | ✅ |
+| Set up end-to-end deployment pipeline | ✅ | ✅ | ✅ Best fit |
+
+END OPTION B -->
 
 ## Related content
 

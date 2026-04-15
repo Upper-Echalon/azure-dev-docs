@@ -17,22 +17,22 @@ Execute Azure deployments for already-prepared applications that have existing .
 
 ## What it provides
 
-This skill enables GitHub Copilot to execute production deployments using your prepared infrastructure-as-code files. Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
+This skill enables GitHub Copilot to execute production deployments using your prepared infrastructure-as-code files. You get automated provisioning, reliable updates to deployed resources, and safe infrastructure deployments without manual CLI commands.
 
 ## Prerequisites
 
 - **Prepared deployment plan**: Run the [azure-prepare](azure-prepare.md) skill first to generate your `.azure/deployment-plan.md` and infrastructure files. Then run the [azure-validate](azure-validate.md) skill to verify readiness.
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)** with the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 
 ## When to use this skill
 
 Use this skill when you need to:
 
-Run the `azd up` command to provision and deploy resources to Azure.
-Run the `azd deploy` command to update deployed resources.
-Execute deployments using Azure Developer CLI or your infrastructure-as-code tool.
+- Provision and deploy resources to Azure using the `azd up` command
+- Update deployed resources using the `azd deploy` command
+- Execute deployments with Azure Developer CLI or your infrastructure-as-code tool
 - Work with push to production, push to cloud, go live, and ship it
 - Work with bicep deploy, terraform apply, publish to Azure, and launch on Azure
 

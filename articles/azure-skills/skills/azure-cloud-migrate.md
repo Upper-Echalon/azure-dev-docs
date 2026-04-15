@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.2
 
 Assess and migrate cross-cloud workloads to Azure with migration reports and code conversion guidance. Supports AWS, GCP, and other providers.
 
-**Skill:** `azure-cloud-migrate` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cloud-migrate/skill.md)
+**Skill:** `azure-cloud-migrate` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cloud-migrate/SKILL.md)
 
 ## What it provides
 
@@ -54,4 +54,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cloud-migrate/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cloud-migrate/SKILL.md)

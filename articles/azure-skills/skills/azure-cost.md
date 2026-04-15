@@ -13,7 +13,7 @@ ms.custom: skill-version-1.1.0
 
 Analyze and optimize your Azure spending with historical cost queries, spending forecasts, and actionable cost-reduction recommendations.
 
-**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/skill.md)
+**Skill:** `azure-cost` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/SKILL.md)
 
 ## What it provides
 
@@ -41,13 +41,12 @@ This skill gives GitHub Copilot access to Azure Cost Management APIs and optimiz
 
 Use this skill when you need to:
 
-- Estimate costs for deploying resources to Azure.
-- Analyze costs of provisioning infrastructure.
-- Analyze diagnostics, security audits, and Azure spending patterns.
+- Analyze costs of your existing Azure resources and infrastructure.
 - Review your Azure bill, costs broken down by service, and costs per resource.
 - Compare monthly cost summaries, identify cost trends, and pinpoint top cost drivers.
-- Calculate amortized costs, forecast spending, and estimate your monthly bill.
-- Plan future costs and set budget forecasts.
+- Calculate amortized costs and actual spending.
+- Forecast future spending and project end-of-month costs.
+- Plan budget forecasts based on historical data.
 - Identify and implement cost optimization strategies.
 - Find opportunities to reduce cloud spending.
 - Discover cost-saving recommendations tailored to your infrastructure.
@@ -55,4 +54,4 @@ Use this skill when you need to:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/SKILL.md)

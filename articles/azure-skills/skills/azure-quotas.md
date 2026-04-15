@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.6
 
 Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection.
 
-**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/skill.md)
+**Skill:** `azure-quotas` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/SKILL.md)
 
 ## What it provides
 
@@ -58,4 +58,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-quotas/SKILL.md)

@@ -13,7 +13,7 @@ ms.custom: skill-version-3.0.1
 
 Configure Azure API Management as an AI Gateway for AI models, Model Context Protocol (MCP) tools, and agents.
 
-**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-aigateway/skill.md)
+**Skill:** `azure-aigateway` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-aigateway/SKILL.md)
 
 ## What it provides
 

@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.6
 
 Build and deploy GitHub Copilot SDK apps to Azure.
 
-**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/skill.md)
+**Skill:** `azure-hosted-copilot-sdk` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/SKILL.md)
 
 ## What it provides
 
@@ -57,4 +57,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-hosted-copilot-sdk/SKILL.md)

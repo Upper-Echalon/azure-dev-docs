@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.4
 
 Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
-**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/skill.md)
+**Skill:** `azure-messaging` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/SKILL.md)
 
 ## What it provides
 
@@ -68,4 +68,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/SKILL.md)

@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.2
 
 Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references.
 
-**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/skill.md)
+**Skill:** `appinsights-instrumentation` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/SKILL.md)
 
 ## What it provides
 
@@ -51,4 +51,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/appinsights-instrumentation/SKILL.md)

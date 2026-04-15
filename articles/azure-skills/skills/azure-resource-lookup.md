@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.1
 
 List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like "list websites", "list virtual machines", "list my VMs", "show storage accounts", "find container apps", and "what resources do I have".
 
-**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/skill.md)
+**Skill:** `azure-resource-lookup` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/SKILL.md)
 
 ## What it provides
 
@@ -66,4 +66,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-lookup/SKILL.md)

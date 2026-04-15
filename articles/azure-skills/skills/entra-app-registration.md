@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.1
 
 Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.
 
-**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/skill.md)
+**Skill:** `entra-app-registration` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/SKILL.md)
 
 ## What it provides
 
@@ -56,4 +56,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/entra-app-registration/SKILL.md)

@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.2
 
 Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
 
-**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/skill.md)
+**Skill:** `azure-rbac` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/SKILL.md)
 
 ## What it provides
 
@@ -53,4 +53,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/SKILL.md)

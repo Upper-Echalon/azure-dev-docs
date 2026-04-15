@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.4
 
 Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), role-based access control (RBAC) role assignments, managed identity permissions, and prerequisites before deploying.
 
-**Skill:** `azure-validate` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-validate/skill.md)
+**Skill:** `azure-validate` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-validate/SKILL.md)
 
 ## What it provides
 
@@ -68,4 +68,4 @@ This skill is the second step in the deployment workflow:
 - [Azure skill for prepare](azure-prepare.md)
 - [Azure skill for deploy](azure-deploy.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-validate/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-validate/SKILL.md)

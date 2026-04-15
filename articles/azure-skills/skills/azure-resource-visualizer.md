@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.1
 
 Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources.
 
-**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/skill.md)
+**Skill:** `azure-resource-visualizer` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/SKILL.md)
 
 ## What it provides
 
@@ -54,4 +54,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-resource-visualizer/SKILL.md)

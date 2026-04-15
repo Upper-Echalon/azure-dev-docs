@@ -13,7 +13,7 @@ ms.custom: skill-version-1.1.15
 
 Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).
 
-**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/skill.md)
+**Skill:** `azure-prepare` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/SKILL.md)
 
 ## What it provides
 
@@ -69,4 +69,4 @@ This skill is the first step in the deployment workflow:
 - [Azure skill for validate](azure-validate.md)
 - [Azure skill for deploy](azure-deploy.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/SKILL.md)

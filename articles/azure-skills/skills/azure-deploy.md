@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.19
 
 Execute Azure deployments for already-prepared applications that have existing .azure/deployment-plan.md and infrastructure files.
 
-**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/skill.md)
+**Skill:** `azure-deploy` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/SKILL.md)
 
 ## What it provides
 
@@ -64,4 +64,4 @@ This skill is the final step in the deployment workflow:
 - [Azure skill for prepare](azure-prepare.md)
 - [Azure skill for validate](azure-validate.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/SKILL.md)

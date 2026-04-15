@@ -11,7 +11,7 @@ ms.custom: skill-version-1.0.1
 
 # Azure skill for AI Services
 
-**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/skill.md)
+**Skill:** `azure-ai` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/SKILL.md)
 
 ## What it provides
 
@@ -44,4 +44,4 @@ Use this skill when you need to:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-ai/SKILL.md)

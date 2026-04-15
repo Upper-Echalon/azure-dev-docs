@@ -13,7 +13,7 @@ ms.custom: skill-version-1.0.0
 
 Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Provides object storage, SMB file shares, async messaging, NoSQL key-value, and big data analytics capabilities. Includes access tiers (hot, cool, archive) and lifecycle management.
 
-**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/skill.md)
+**Skill:** `azure-storage` | [Source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/SKILL.md)
 
 ## What it provides
 
@@ -49,4 +49,4 @@ Use this skill when you need to:
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
-- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/skill.md)
+- [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-storage/SKILL.md)

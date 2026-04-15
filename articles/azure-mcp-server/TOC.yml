@@ -194,7 +194,7 @@ items:
   href: tools/index.md
 - name: Troubleshooting
   href: https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/TROUBLESHOOTING.md
-- name: Host MCP servers on Azure
+- name: Host Custom MCP servers on Azure in any language
   items:
     - name: Azure Container Apps hosting custom MCP servers with .NET
       href: ../ai/build-openai-mcp-server-dotnet.md

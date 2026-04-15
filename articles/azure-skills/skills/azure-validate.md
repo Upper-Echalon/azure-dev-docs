@@ -54,7 +54,17 @@ Try these prompts to activate this skill:
 - "Check my deployment permissions before running `azd` up"
 - "Verify my Bicep files are valid before provisioning"
 
+## Deployment workflow
+
+This skill is the second step in the deployment workflow:
+
+1. [**azure-prepare**](azure-prepare.md) — generates infrastructure files and `.azure/deployment-plan.md`
+1. **azure-validate** (this skill) — validates the deployment plan and infrastructure before deploying
+1. [**azure-deploy**](azure-deploy.md) — executes the deployment
+
 ## Related content
 
+- [Azure skill for prepare](azure-prepare.md)
+- [Azure skill for deploy](azure-deploy.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-validate/skill.md)

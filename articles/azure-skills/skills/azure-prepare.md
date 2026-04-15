@@ -55,7 +55,17 @@ Try these prompts to activate this skill:
 - "Create a serverless HTTP API using Azure Functions and deploy to Azure"
 - "Create an event-driven function app to process messages and deploy to Azure Functions"
 
+## Deployment workflow
+
+This skill is the first step in the deployment workflow:
+
+1. **azure-prepare** (this skill) — generates infrastructure files and `.azure/deployment-plan.md`
+1. [**azure-validate**](azure-validate.md) — validates the deployment plan and infrastructure before deploying
+1. [**azure-deploy**](azure-deploy.md) — executes the deployment
+
 ## Related content
 
+- [Azure skill for validate](azure-validate.md)
+- [Azure skill for deploy](azure-deploy.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-prepare/skill.md)

@@ -20,6 +20,7 @@ This skill enables GitHub Copilot to execute production deployments using your p
 
 ## Prerequisites
 
+- **Prepared deployment plan**: Run the [azure-prepare](azure-prepare.md) skill first to generate your `.azure/deployment-plan.md` and infrastructure files. Then run the [azure-validate](azure-validate.md) skill to verify readiness.
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
 - **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
@@ -49,7 +50,17 @@ Try these prompts to activate this skill:
 - "Deploy my app and verify the role-based access control (RBAC) roles are assigned correctly"
 - "Run deployment and check live role assignments on Azure"
 
+## Deployment workflow
+
+This skill is the final step in the deployment workflow:
+
+1. [**azure-prepare**](azure-prepare.md) — generates infrastructure files and `.azure/deployment-plan.md`
+1. [**azure-validate**](azure-validate.md) — validates the deployment plan and infrastructure before deploying
+1. **azure-deploy** (this skill) — executes the deployment
+
 ## Related content
 
+- [Azure skill for prepare](azure-prepare.md)
+- [Azure skill for validate](azure-validate.md)
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-deploy/skill.md)

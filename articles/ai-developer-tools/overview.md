@@ -29,7 +29,7 @@ The Azure AI developer tools eliminate this friction by bringing Azure directly 
 | Tool | What it does | Best for |
 |---|---|---|
 | [GitHub Copilot for Azure](../github-copilot-azure/introduction.md) | Extension that surfaces Azure tools and skills through GitHub Copilot | Integrated IDE experience in VS Code or Visual Studio |
-| [Azure MCP Server](../azure-mcp-server/overview.md) | Standalone MCP server with 35+ Azure tools and Microsoft Entra ID authentication | Azure tools in any MCP-compatible client |
+| [Azure MCP Server](../azure-mcp-server/overview.md) | Standalone MCP server with 270+ tools across 50+ Azure services and Microsoft Entra ID authentication | Azure tools in any MCP-compatible client |
 | [Azure Skills](../azure-skills/overview.md) | Knowledge modules that provide end-to-end workflows with guardrails | Guided, best-practice Azure workflows |
 
 ## Choose the right tool
@@ -57,7 +57,8 @@ Use the following decision flow to determine which tool best fits your scenario.
 | Environment | GitHub Copilot for Azure | Azure MCP Server | Azure Skills |
 |---|---|---|---|
 | VS Code | ✅ Extension + MCP Server | ✅ | ✅ |
-| Visual Studio 2022 | ✅ Extension | ✅ | ❌ |
+| Visual Studio 2022 | ✅ Built-in (with Azure Workload) | ✅ | ❌ |
+| Visual Studio 2026 | ✅ Built-in (with Azure Workload) | ✅ | ❌ |
 | Cursor | ❌ | ✅ | ✅ |
 | Windsurf | ❌ | ✅ | ✅ |
 | IntelliJ | ❌ | ✅ | ✅ |

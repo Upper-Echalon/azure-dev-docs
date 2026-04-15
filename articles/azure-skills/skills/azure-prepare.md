@@ -6,6 +6,7 @@ ms.date: 4/2/2026
 author: diberry
 ms.author: diberry
 ms.service: azure-mcp-server
+ms.custom: skill-version-1.1.15
 ---
 
 # Azure skill for prepare

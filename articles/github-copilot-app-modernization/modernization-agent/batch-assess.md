@@ -6,7 +6,7 @@ ms.author: karler
 ms.reviewer: jessiehuang
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.date: 04/14/2026
+ms.date: 04/17/2026
 ---
 
 # Batch assessment with the GitHub Copilot modernization agent
@@ -91,13 +91,13 @@ Make sure you have the right permissions for the repositories or fork them.
 
 Each repo entry supports the following fields:
 
-| Field | Description | Required |
-|---|---|---|
-| `name` | A friendly name for the repository (used in reports and dashboards). | Yes |
-| `url` | Git clone URL in HTTPS or SSH format. | One of `url` or `path` |
-| `path` | Absolute local directory path. | One of `url` or `path` |
-| `branch` | Branch to check out after cloning. | No |
-| `description` | Human-readable description. | No |
+| Field         | Description                                                          | Required               |
+|---------------|----------------------------------------------------------------------|------------------------|
+| `name`        | A friendly name for the repository (used in reports and dashboards). | Yes                    |
+| `url`         | Git clone URL in HTTPS or SSH format.                                | One of `url` or `path` |
+| `path`        | Absolute local directory path.                                       | One of `url` or `path` |
+| `branch`      | Branch to check out after cloning.                                   | No                     |
+| `description` | Human-readable description.                                          | No                     |
 
 **Full format with app grouping** (optional, for organized reporting):
 
@@ -132,19 +132,19 @@ You can add an `apps[]` section to group repositories into logical applications.
 
 Each app entry supports:
 
-| Field | Description | Required |
-|---|---|---|
-| `identifier` | Unique display name of the application. | Yes |
-| `description` | Human-readable description. | No |
-| `repos` | List of repo names that belong to this app. | Yes |
-| `output` | Where to distribute this app's assessment report after generation. | No |
+| Field         | Description                                                        | Required |
+|---------------|--------------------------------------------------------------------|----------|
+| `identifier`  | Unique display name of the application.                            | Yes      |
+| `description` | Human-readable description.                                        | No       |
+| `repos`       | List of repo names that belong to this app.                        | Yes      |
+| `output`      | Where to distribute this app's assessment report after generation. | No       |
 
 The `output` field supports the following distribution types:
 
-| Type | Description | Required fields |
-|---|---|---|
-| `local` | Copy reports to a local directory. | `path` |
-| `git` | Push reports to a Git repository. The URL format is `https://github.com/org/repo.git#branch:path`. | `url` |
+| Type    | Description                                                                                        | Required fields |
+|---------|----------------------------------------------------------------------------------------------------|-----------------|
+| `local` | Copy reports to a local directory.                                                                 | `path`          |
+| `git`   | Push reports to a Git repository. The URL format is `https://github.com/org/repo.git#branch:path`. | `url`           |
 
 > [!TIP]
 > You can include repositories from different organizations and use different authentication methods as long as you have access.
@@ -183,11 +183,11 @@ Two execution modes are available:
     > [!TIP]
     > You can also select **Manual input** to enter local paths or remote Git URLs directly, or **Current folder** to assess the project in your current directory.
 
-1. If the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press `Enter`.
+1. If the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press `Enter` to confirm your selection.
+1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection.
 
-    - **Use arrow keys** to navigate and press `Space` to toggle individual repositories.
+    - **Use arrow keys** to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
     :::image type="content" source="../media/modernization-agent/assess-repo-list.png" alt-text="Screenshot of Modernize CLI that shows the repository list in the terminal." lightbox="../media/modernization-agent/assess-repo-list.png":::
 
@@ -195,7 +195,7 @@ Two execution modes are available:
 
     :::image type="content" source="../media/modernization-agent/assess-locally-option.png" alt-text="Screenshot of Modernize CLI that shows the assess mode menu in the terminal." lightbox="../media/modernization-agent/assess-locally-option.png":::
 
-1. Select the assessment domains to analyze. Choose from **Java upgrade** and **Cloud Readiness**, then press `Enter`.
+1. Select the assessment domains to analyze. Choose from **Java upgrade** and **Cloud Readiness**, then press <kbd>Enter</kbd>.
 
     :::image type="content" source="../media/modernization-agent/assess-domain-selection.png" alt-text="Screenshot of Modernize CLI that shows the assessment domain selection in the terminal." lightbox="../media/modernization-agent/assess-domain-selection.png":::
 
@@ -206,15 +206,14 @@ Two execution modes are available:
     - **Java / CLOUD READINESS**: Target Compute Services, Target Operating System, and Containerization.
     - **.NET / CLOUD READINESS**: Target Compute Services.
 
-    Use the arrow keys to navigate, press `Enter` to change a value, or select **Continue** to proceed with the current settings.
+    Use the arrow keys to navigate, press <kbd>Enter</kbd> to change a value, or select **Continue** to proceed with the current settings.
 
     :::image type="content" source="../media/modernization-agent/assess-configuration.png" alt-text="Screenshot of Modernize CLI that shows the assessment configuration page in the terminal." lightbox="../media/modernization-agent/assess-configuration.png":::
 
     > [!TIP]
     > The recommended defaults work for most scenarios. You only need to change these settings if you have specific requirements, such as targeting a particular JDK version or Azure compute service.
 
-
-1. Enter the output path for assessment results or press `Enter` to accept the default.
+1. Enter the output path for assessment results or press <kbd>Enter</kbd> to accept the default.
 
 1. The agent automatically:
 
@@ -310,11 +309,11 @@ Configure GitHub Copilot Modernization MCP Server in Cloud Coding Agent section 
 
     :::image type="content" source="../media/modernization-agent/source-type-selection.png" alt-text="Screenshot of Modernize CLI that shows the source type selection in the terminal." lightbox="../media/modernization-agent/source-type-selection.png":::
 
-1. If you selected **From a config file** and the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press `Enter`.
+1. If you selected **From a config file** and the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press `Enter` to confirm your selection.
+1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection.
 
-    - **Use arrow keys** to navigate and press `Space` to toggle individual repositories.
+    - **Use arrow keys** to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
     :::image type="content" source="../media/modernization-agent/assess-repo-list.png" alt-text="Screenshot of Modernize CLI that shows the repository list in terminal." lightbox="../media/modernization-agent/assess-repo-list.png":::
 
@@ -325,7 +324,7 @@ Configure GitHub Copilot Modernization MCP Server in Cloud Coding Agent section 
     > [!NOTE]
     > When delegating to Cloud Coding Agents, the domain selection and assessment configuration steps are not supported now. The cloud agent will just adopt the default configurations to run assessment.
 
-1. Enter the output path for assessment results or press `Enter` to accept the default.
+1. Enter the output path for assessment results or press <kbd>Enter</kbd> to accept the default.
 
 1. The agent automatically delegates assessment tasks for each repository to Cloud Coding Agents and executes them in the cloud in parallel.
 

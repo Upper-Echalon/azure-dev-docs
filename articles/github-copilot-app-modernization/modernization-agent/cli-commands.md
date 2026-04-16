@@ -6,7 +6,7 @@ ms.author: karler
 ms.reviewer: jessiehuang
 ms.topic: reference
 ai-usage: ai-assisted
-ms.date: 04/14/2026
+ms.date: 04/17/2026
 ---
 
 # GitHub Copilot modernization agent CLI commands
@@ -69,17 +69,17 @@ modernize assess [options]
 
 #### Options
 
-| Option | Description | Default |
-|---|---|---|
-| `--source <source>` | Source to assess (repeatable). Accepts local paths, Git URLs, or a JSON config file path. Use multiple `--source` flags to specify several repositories. | `.` (current directory) |
-| `--output-path <path>` | A custom output path for assessment results. | `.github/modernize/assessment/` |
-| `--issue-url <url>` | A GitHub issue URL to update with the assessment summary. | None |
-| `--format <format>` | Output format for assessment reports: `html` or `markdown`. | `html` |
-| `--assess-config <path>` | Path to an assessment configuration YAML file that overrides default assessment parameters such as target runtime, compute services, and analysis coverage. | Auto-discovered or defaults |
-| `--model <model>` | The LLM model to use. | `claude-sonnet-4.6` |
-| `--delegate <delegate>` | The execution mode: `local` (this machine) or `cloud` (Cloud Coding Agent). | `local` |
-| `--wait` | Waits for the delegated tasks to complete and generate results (only valid with `--delegate cloud`). | Disabled |
-| `--force` | Forces restart delegation, ignoring ongoing tasks (only valid with `--delegate cloud`). | Disabled |
+| Option                   | Description                                                                                                                                                 | Default                         |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| `--source <source>`      | Source to assess (repeatable). Accepts local paths, Git URLs, or a JSON config file path. Use multiple `--source` flags to specify several repositories.    | `.` (current directory)         |
+| `--output-path <path>`   | A custom output path for assessment results.                                                                                                                | `.github/modernize/assessment/` |
+| `--issue-url <url>`      | A GitHub issue URL to update with the assessment summary.                                                                                                   | None                            |
+| `--format <format>`      | Output format for assessment reports: `html` or `markdown`.                                                                                                 | `html`                          |
+| `--assess-config <path>` | Path to an assessment configuration YAML file that overrides default assessment parameters such as target runtime, compute services, and analysis coverage. | Auto-discovered or defaults     |
+| `--model <model>`        | The LLM model to use.                                                                                                                                       | `claude-sonnet-4.6`             |
+| `--delegate <delegate>`  | The execution mode: `local` (this machine) or `cloud` (Cloud Coding Agent).                                                                                 | `local`                         |
+| `--wait`                 | Waits for the delegated tasks to complete and generate results (only valid with `--delegate cloud`).                                                        | Disabled                        |
+| `--force`                | Forces restart delegation, ignoring ongoing tasks (only valid with `--delegate cloud`).                                                                     | Disabled                        |
 
 #### Examples
 
@@ -326,11 +326,11 @@ modernize upgrade [prompt] [options]
 
 #### Options
 
-| Option | Description | Default |
-|---|---|---|
-| `--source <source>` | Source to upgrade (repeatable). Accepts local paths, Git URLs, or a JSON config file path. Use multiple `--source` flags to specify several repositories. | `.` (current directory) |
-| `--delegate <delegate>` | The execution mode: `local` (this machine) or `cloud` (Cloud Coding Agent). | `local` |
-| `--model <model>` | The LLM model to use. | `claude-sonnet-4.6` |
+| Option                  | Description                                                                                                                                               | Default                 |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| `--source <source>`     | Source to upgrade (repeatable). Accepts local paths, Git URLs, or a JSON config file path. Use multiple `--source` flags to specify several repositories. | `.` (current directory) |
+| `--delegate <delegate>` | The execution mode: `local` (this machine) or `cloud` (Cloud Coding Agent).                                                                               | `local`                 |
+| `--model <model>`       | The LLM model to use.                                                                                                                                     | `claude-sonnet-4.6`     |
 
 #### Examples
 
@@ -480,13 +480,13 @@ Create a `.github/modernize/repos.json` file to define your repository list. The
 
 Each repo entry supports the following fields:
 
-| Field | Description | Required |
-|---|---|---|
-| `name` | A friendly name for the repository. | Yes |
-| `url` | Git clone URL (HTTPS or SSH). | One of `url` or `path` |
-| `path` | Absolute local directory path. | One of `url` or `path` |
-| `branch` | Branch to check out after cloning. | No |
-| `description` | Human-readable description. | No |
+| Field         | Description                         | Required               |
+|---------------|-------------------------------------|------------------------|
+| `name`        | A friendly name for the repository. | Yes                    |
+| `url`         | Git clone URL (HTTPS or SSH).       | One of `url` or `path` |
+| `path`        | Absolute local directory path.      | One of `url` or `path` |
+| `branch`      | Branch to check out after cloning.  | No                     |
+| `description` | Human-readable description.         | No                     |
 
 **Full format with app grouping** (optional, for organized reporting):
 
@@ -521,19 +521,19 @@ You can add an `apps[]` section to group repositories into logical applications.
 
 Each app entry supports:
 
-| Field | Description | Required |
-|---|---|---|
-| `identifier` | Unique display name of the application. | Yes |
-| `description` | Human-readable description. | No |
-| `repos` | List of repo names that belong to this app. | Yes |
-| `output` | Where to distribute this app's assessment report after generation. | No |
+| Field         | Description                                                        | Required |
+|---------------|--------------------------------------------------------------------|----------|
+| `identifier`  | Unique display name of the application.                            | Yes      |
+| `description` | Human-readable description.                                        | No       |
+| `repos`       | List of repo names that belong to this app.                        | Yes      |
+| `output`      | Where to distribute this app's assessment report after generation. | No       |
 
 The `output` field supports the following distribution types:
 
-| Type | Description | Required fields |
-|---|---|---|
-| `local` | Copy reports to a local directory. | `path` |
-| `git` | Push reports to a Git repository. URL format: `https://github.com/org/repo.git#branch:path`. | `url` |
+| Type    | Description                                                                                  | Required fields |
+|---------|----------------------------------------------------------------------------------------------|-----------------|
+| `local` | Copy reports to a local directory.                                                           | `path`          |
+| `git`   | Push reports to a Git repository. URL format: `https://github.com/org/repo.git#branch:path`. | `url`           |
 
 > [!IMPORTANT]
 > Cloud Coding Agent delegation (`--delegate cloud`) requires repositories to have **GitHub (github.com) repository URLs**. Local path repositories and non-GitHub providers (GitLab, Azure DevOps) are not supported for cloud delegation and are skipped.

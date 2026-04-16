@@ -432,13 +432,13 @@
 | App Configuration Provider | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.0-preview) |  |  |
 | App Configuration Provider | npm [2.4.1](https://www.npmjs.com/package/@azure/app-configuration-provider/v/2.4.1) |  |  |
 | App Configuration Provider File Source | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer-file-source/v/3.0.0-preview) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/3.0.0-beta.2) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-arm64/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-x64/v/0.5.13) |  |  |
@@ -466,7 +466,7 @@
 | TypeSpec Events | npm [0.81.0](https://www.npmjs.com/package/@typespec/events/v/0.81.0) |  |  |
 | TypeSpec HTTP Canonicalization | npm [0.16.1](https://www.npmjs.com/package/@typespec/http-canonicalization/v/0.16.1) |  |  |
 | TypeSpec HTTP Client | npm [0.15.1](https://www.npmjs.com/package/@typespec/http-client/v/0.15.1) |  |  |
-| TypeSpec HTTP Client Java | npm [0.7.0](https://www.npmjs.com/package/@typespec/http-client-java/v/0.7.0) |  |  |
+| TypeSpec HTTP Client Java | npm [0.8.1](https://www.npmjs.com/package/@typespec/http-client-java/v/0.8.1) |  |  |
 | TypeSpec HTTP Client JavaScript | npm [0.14.1](https://www.npmjs.com/package/@typespec/http-client-js/v/0.14.1) |  |  |
 | TypeSpec HTTP Client Python | npm [0.28.3](https://www.npmjs.com/package/@typespec/http-client-python/v/0.28.3) |  |  |
 | TypeSpec HTTP Specs | npm [0.1.0-alpha.36](https://www.npmjs.com/package/@typespec/http-specs/v/0.1.0-alpha.36) |  |  |
@@ -490,7 +490,7 @@
 | Azure Functions | npm [4.12.0](https://www.npmjs.com/package/@azure/functions/v/4.12.0) |  | GitHub [4.12.0](https://github.com/Azure/azure-functions-nodejs-library) |
 | Batch | npm [12.0.0](https://www.npmjs.com/package/@azure/batch/v/12.0.0) |  | GitHub [12.0.0](https://github.com/azure/azure-sdk-for-js/tree/main/sdk/batch/batch) |
 | Code Model | npm [3.0.137](https://www.npmjs.com/package/@azure/autorest.codemodel-v3/v/3.0.137) |  |  |
-| Communication Calling | npm [1.42.1](https://www.npmjs.com/package/@azure/communication-calling/v/1.42.1) |  | GitHub [1.42.1](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/communication) |
+| Communication Calling | npm [1.43.1](https://www.npmjs.com/package/@azure/communication-calling/v/1.43.1) |  | GitHub [1.43.1](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/communication) |
 | Communication Signaling | npm [1.0.0-beta.34](https://www.npmjs.com/package/@azure/communication-signaling/v/1.0.0-beta.34) |  | GitHub [1.0.0-beta.34](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/communication) |
 | Computer Vision | npm [8.2.0](https://www.npmjs.com/package/@azure/cognitiveservices-computervision/v/8.2.0) |  |  |
 | Content Safety | npm [5.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-contentmoderator/v/5.0.1) |  |  |

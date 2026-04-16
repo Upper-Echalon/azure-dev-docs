@@ -16,7 +16,7 @@ This quickstart guides you through installing the GitHub Copilot modernization a
 ## Prerequisites
 
 - **A GitHub Copilot subscription**: Free, Pro, Pro+, Business, or Enterprise plan. See [Copilot plans](https://github.com/features/copilot/plans).
-- **GitHub CLI**: Install the GitHub CLI (`gh`) for authentication, `v2.45.0` or above. See [Installing gh](https://cli.github.com/).
+- **GitHub CLI**: Install the GitHub CLI (`gh`) for authentication, version `v2.45.0` or later. See [Installing gh](https://cli.github.com/).
 
 ### Platform requirements
 
@@ -135,9 +135,9 @@ The main menu appears:
 1. Select **Assess** from the main menu.
 1. Choose how to specify your target repositories. You can select **Current folder** to use your current directory, **Manual input** to enter local paths or remote Git URLs, or **From a config file** to load repositories from a JSON config file. For this quickstart, select **Current folder**.
 1. Choose the execution mode. Select **Assess locally** to run the assessment on your machine, or **Delegate to Cloud Agents** to let cloud agents run the assessment in parallel. For this quickstart, select **Assess locally**.
-1. Select assessment domains (for example, **Java upgrade** and **Cloud Readiness**) and press <kbd>Enter</kbd>.
-1. Review the assessment configuration options (Analysis Coverage, Target Runtime, and so on). press <kbd>Enter</kbd> on **Continue** to accept the recommended defaults, or adjust individual settings as needed.
-1. Accept the default output path or enter a custom one, then press <kbd>Enter</kbd> to start the assessment.
+1. Select assessment domains, such as **Java upgrade** and **Cloud Readiness**, and press <kbd>Enter</kbd>.
+1. Review the assessment configuration options, such as Analysis Coverage and Target Runtime. Press <kbd>Enter</kbd> on **Continue** to accept the recommended defaults, or adjust individual settings as needed.
+1. Accept the default output path or enter a custom one, and then press <kbd>Enter</kbd> to start the assessment.
 1. Wait for the assessment to complete.
 
 The assessment results are saved to `.github\modernize\assessment\` in your project directory. The agent analyzes your code, dependencies, and configuration to identify:
@@ -226,4 +226,4 @@ After execution finishes, you can review all changes that the agent made before 
 
 ## Provide feedback
 
-We value your input! If you have any feedback about the Modernization agent, [create an issue at the github-copilot-appmod repository](https://github.com/microsoft/github-copilot-appmod/issues/new?template=feedback-template.yml) or use the [GitHub Copilot modernization feedback form](https://aka.ms/ghcp-appmod/feedback).
+Your input is important! If you have any feedback about the Modernization agent, [create an issue at the github-copilot-appmod repository](https://github.com/microsoft/github-copilot-appmod/issues/new?template=feedback-template.yml) or use the [GitHub Copilot modernization feedback form](https://aka.ms/ghcp-appmod/feedback).

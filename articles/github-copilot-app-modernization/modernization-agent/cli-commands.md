@@ -536,7 +536,7 @@ The `output` field supports the following distribution types:
 | `git`   | Push reports to a Git repository. URL format: `https://github.com/org/repo.git#branch:path`. | `url`           |
 
 > [!IMPORTANT]
-> Cloud Coding Agent delegation (`--delegate cloud`) requires repositories to have **GitHub (github.com) repository URLs**. Local path repositories and non-GitHub providers (GitLab, Azure DevOps) are not supported for cloud delegation and are skipped.
+> Cloud Coding Agent delegation (`--delegate cloud`) requires repositories to have **GitHub (github.com) repository URLs**. Local path repositories and non-GitHub providers (GitLab, Azure DevOps) aren't supported for cloud delegation and are skipped.
 
 Then use `--source` to pass the config file path:
 

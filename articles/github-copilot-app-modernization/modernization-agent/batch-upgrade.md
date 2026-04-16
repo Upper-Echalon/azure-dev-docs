@@ -125,7 +125,7 @@ Batch upgrade supports two execution modes and two interaction methods:
 - **Best for**: Enterprise-scale operations, large portfolios (5+ repos), or parallel processing.
 - **How it works**: Submits tasks to GitHub Cloud Coding Agents for parallel execution in the cloud.
 - **Setup required**: MCP server configuration in each repository (configured during setup).
-- **Supports**: Only repositories with GitHub (github.com) URLs. Local paths and non-GitHub providers are not supported.
+- **Supports**: Only repositories with GitHub (github.com) URLs. Local paths and non-GitHub providers aren't supported.
 
 > [!IMPORTANT]
 > Cloud Coding Agent delegation requires repositories to have **GitHub (github.com) repository URLs**. Repositories specified with local paths or hosted on non-GitHub providers (GitLab, Azure DevOps) are skipped during cloud delegation. Use local execution for those repositories.
@@ -187,9 +187,9 @@ After you configure your repositories and choose an execution mode, start the ba
     > [!TIP]
     > You can also select **Manual input** to enter local paths or remote Git URLs directly, or **Current folder** to upgrade the project in your current directory.
 
-1. If the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
+1. If the `repos.json` file is detected at the default location, the agent automatically fills it in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection.
+1. All repositories are selected by default. Deselect any repositories you want to skip, and then press <kbd>Enter</kbd> to confirm your selection.
 
     - **Use arrow keys** to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
@@ -254,9 +254,9 @@ Before running the upgrade, configure the GitHub Copilot Modernization MCP Serve
 
     :::image type="content" source="../media/modernization-agent/source-type-selection.png" alt-text="Screenshot of Modernize CLI that shows the source type selection in the terminal." lightbox="../media/modernization-agent/source-type-selection.png":::
 
-1. If the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
+1. If the `repos.json` file is detected at the default location, the agent automatically fills it in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection. Use arrow keys to navigate and press <kbd>Space</kbd> to toggle individual repositories.
+1. All repositories are selected by default. Deselect any repositories you want to skip, and then press <kbd>Enter</kbd> to confirm your selection. Use arrow keys to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
     :::image type="content" source="../media/modernization-agent/upgrade-repo-list.png" alt-text="Screenshot of Modernize CLI that shows the repository list in terminal." lightbox="../media/modernization-agent/upgrade-repo-list.png":::
 

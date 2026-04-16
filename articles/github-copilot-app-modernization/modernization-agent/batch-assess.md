@@ -159,7 +159,7 @@ Two execution modes are available:
 - **Cloud Coding Agent delegation**: The modernization agent submits tasks to GitHub Cloud Coding Agents for parallel processing in the cloud. This mode is faster for multi-repo scenarios.
 
 > [!IMPORTANT]
-> Cloud Coding Agent delegation requires repositories to have **GitHub (github.com) repository URLs**. Local path repositories and non-GitHub providers (GitLab, Azure DevOps) are not supported for cloud delegation. Use local execution for those repositories.
+> Cloud Coding Agent delegation requires repositories to have **GitHub (github.com) repository URLs**. Local path repositories and non-GitHub providers (GitLab, Azure DevOps) aren't supported for cloud delegation. Use local execution for those repositories.
 
 > [!TIP]
 > By using Cloud Coding Agent delegation, you enable parallel execution across all repositories. This approach significantly reduces the total assessment time for large portfolios.
@@ -183,9 +183,9 @@ Two execution modes are available:
     > [!TIP]
     > You can also select **Manual input** to enter local paths or remote Git URLs directly, or **Current folder** to assess the project in your current directory.
 
-1. If the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
+1. If the `repos.json` file is detected at the default location, the agent automatically fills it in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection.
+1. All repositories are selected by default. Deselect any repositories you want to skip, and then press <kbd>Enter</kbd> to confirm your selection.
 
     - **Use arrow keys** to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
@@ -195,7 +195,7 @@ Two execution modes are available:
 
     :::image type="content" source="../media/modernization-agent/assess-locally-option.png" alt-text="Screenshot of Modernize CLI that shows the assess mode menu in the terminal." lightbox="../media/modernization-agent/assess-locally-option.png":::
 
-1. Select the assessment domains to analyze. Choose from **Java upgrade** and **Cloud Readiness**, then press <kbd>Enter</kbd>.
+1. Select the assessment domains to analyze. Choose from **Java upgrade** and **Cloud Readiness**, and then press <kbd>Enter</kbd>.
 
     :::image type="content" source="../media/modernization-agent/assess-domain-selection.png" alt-text="Screenshot of Modernize CLI that shows the assessment domain selection in the terminal." lightbox="../media/modernization-agent/assess-domain-selection.png":::
 
@@ -309,9 +309,9 @@ Configure GitHub Copilot Modernization MCP Server in Cloud Coding Agent section 
 
     :::image type="content" source="../media/modernization-agent/source-type-selection.png" alt-text="Screenshot of Modernize CLI that shows the source type selection in the terminal." lightbox="../media/modernization-agent/source-type-selection.png":::
 
-1. If you selected **From a config file** and the `repos.json` file is detected at the default location, it is automatically filled in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
+1. If you selected **From a config file** and the `repos.json` file is detected at the default location, the agent automatically fills it in. Otherwise, enter the path to your config file and press <kbd>Enter</kbd>.
 
-1. All repositories are selected by default. Deselect any repositories you want to skip, then press <kbd>Enter</kbd> to confirm your selection.
+1. All repositories are selected by default. Deselect any repositories you want to skip, and then press <kbd>Enter</kbd> to confirm your selection.
 
     - **Use arrow keys** to navigate and press <kbd>Space</kbd> to toggle individual repositories.
 
@@ -322,7 +322,7 @@ Configure GitHub Copilot Modernization MCP Server in Cloud Coding Agent section 
     :::image type="content" source="../media/modernization-agent/assess-delegate-cloud-coding-agents-option.png" alt-text="Screenshot of Modernize CLI that shows the assess menu with the Delegate to Cloud Coding Agents option selected." lightbox="../media/modernization-agent/assess-delegate-cloud-coding-agents-option.png":::
 
     > [!NOTE]
-    > When delegating to Cloud Coding Agents, the domain selection and assessment configuration steps are not supported now. The cloud agent will just adopt the default configurations to run assessment.
+    > When you delegate to Cloud Coding Agents, the domain selection and assessment configuration steps aren't supported. The cloud agent uses the default configurations to run assessment.
 
 1. Enter the output path for assessment results or press <kbd>Enter</kbd> to accept the default.
 
@@ -330,7 +330,7 @@ Configure GitHub Copilot Modernization MCP Server in Cloud Coding Agent section 
 
     :::image type="content" source="../media/modernization-agent/assess-delegate-cloud-coding-agents-progress.png" alt-text="Screenshot of Modernize CLI that shows the output of the progress of delegating assessment to Cloud Coding Agents in the terminal." lightbox="../media/modernization-agent/assess-delegate-cloud-coding-agents-progress.png":::
 
-    The agent then pulls the per-app assessment results back to local and generates the aggregated report locally.
+    The agent pulls the per-app assessment results back to local and generates the aggregated report locally.
 
     :::image type="content" source="../media/modernization-agent/assess-aggregated-report-output.png" alt-text="Screenshot of Modernize CLI that shows the Aggregating Assessment Reports in the terminal." lightbox="../media/modernization-agent/assess-aggregated-report-output.png":::
 
@@ -373,7 +373,7 @@ The aggregated report provides a comprehensive view across assessed applications
 ### Recommendations
 
 - Azure Services: maps current dependencies to recommended Azure equivalents. Shared dependencies across apps are decided once, so you avoid per-app rework.
-- Target Platform: guides hosting choice, such as Container Apps versus AKS, and surfaces consolidation opportunities.
+- Target Platform: guides hosting choice, such as Azure Container Apps versus AKS, and surfaces consolidation opportunities.
 - Upgrade Path: identifies which apps need framework upgrades as a prerequisite, separating upgrade work from migration work.
 - Migration Waves: sequences apps by readiness and risk into phases. This approach enables early wins while harder apps are prepared in parallel.
 
@@ -400,7 +400,7 @@ The aggregated report provides a comprehensive view across assessed applications
 **Assessment failures:**
 
 - Check if the repository contains valid Java or .NET projects.
-- Verify that build files exist, such as `pom.xml`, `build.gradle`, `*.csproj`, `*.sln` or `*.slnx`.
+- Verify that build files exist, such as `pom.xml`, `build.gradle`, `*.csproj`, `*.sln`, or `*.slnx`.
 - Review error messages in the console output.
 
 **Cloud Coding Agent delegation problems:**

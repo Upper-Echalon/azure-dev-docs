@@ -73,21 +73,6 @@ All three tools — GitHub Copilot for Azure, Azure MCP Server, and Azure Skills
 | Query resources across subscriptions | "Show me all VMs across my subscriptions" |
 | Set up end-to-end deployment pipeline | "Prepare and deploy my Node.js app to Azure" |
 
-<!-- OPTION B — Capability matrix (alternative to table above, for team discussion 2026-04-16)
-
-Replace the "Recommended tool" table above with this capability matrix:
-
-| Scenario | GitHub Copilot for Azure | Azure MCP Server | Azure Skills |
-|---|---|---|---|
-| Learn about Azure services | ✅ Best fit | ✅ | ✅ |
-| Manage Azure resources | ✅ | ✅ Best fit | ✅ |
-| Deploy an application | ✅ | ✅ | ✅ Best fit |
-| Troubleshoot a failing app | ✅ Best fit | ✅ | ✅ |
-| Query resources across subscriptions | ✅ | ✅ Best fit | ✅ |
-| Set up end-to-end deployment pipeline | ✅ | ✅ | ✅ Best fit |
-
-END OPTION B -->
-
 ## Related content
 
 - [GitHub Copilot for Azure documentation](../github-copilot-azure/introduction.md)

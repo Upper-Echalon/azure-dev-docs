@@ -30,8 +30,9 @@ This skill provides GitHub Copilot with specialized knowledge. Assess and migrat
 Use this skill when you need to:
 
 - Migrate AWS Lambda functions to Azure Functions.
-- Plan and execute migrations of AWS infrastructure to Azure.
-- Perform readiness assessments for Lambda function migrations.
+- Migrate GCP Cloud Run services to Azure Container Apps.
+- Plan and execute migrations of AWS or GCP infrastructure to Azure.
+- Perform readiness assessments for Lambda function or Cloud Run migrations.
 - Convert AWS serverless architectures to Azure Compute services.
 - Generate migration readiness reports.
 - Execute migrations from AWS to Azure Cloud.
@@ -50,6 +51,8 @@ Try these prompts to activate this skill:
 - "Help me migrate code to Azure Functions"
 - "Assess my AWS Lambda project for Azure migration"
 - "I need to move my Lambda workloads to Azure Functions"
+- "Migrate my GCP Cloud Run services to Azure Container Apps"
+- "How do I move from Cloud Run to Azure?"
 
 ## Related content
 

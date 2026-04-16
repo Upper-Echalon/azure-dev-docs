@@ -19,6 +19,9 @@ Build and deploy GitHub Copilot SDK apps to Azure.
 
 This skill provides GitHub Copilot with specialized knowledge. Build and deploy GitHub Copilot SDK apps to Azure.
 
+> [!NOTE]
+> This skill automatically activates when your codebase contains `@github/copilot-sdk` in `package.json` or `CopilotClient` in source files. When detected, this skill becomes the entry point for deploy, modify, and add-feature workflows instead of the general-purpose azure-prepare skill.
+
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.

@@ -35,7 +35,6 @@ This skill provides GitHub Copilot with specialized knowledge. Azure Storage Ser
 - **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 - **[Azure Storage](/azure/storage/common/storage-account-create)**: A storage account for blob, file, queue, or table data.
-- **[Azure Cosmos DB](/azure/cosmos-db/nosql/quickstart-portal)**: A Cosmos DB account for NoSQL data.
 
 ## When to use this skill
 

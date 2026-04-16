@@ -40,6 +40,7 @@ Use this skill when you need to:
 - Improve agent prompts and system instructions using the prompt optimizer.
 - Refine agent instructions for better performance.
 - Optimize system prompts for your agents.
+- Manage RBAC permissions, role assignments, managed identities, and service principals for Foundry resources.
 
 ## Example prompts
 

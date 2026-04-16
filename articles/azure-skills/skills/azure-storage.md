@@ -45,6 +45,18 @@ Use this skill when you need to:
 - Upload files in Azure
 - Work with download blobs, storage accounts, access tiers, and lifecycle management
 
+## Example prompts
+
+Try these prompts to activate this skill:
+
+- "Upload a file to my Azure Blob Storage container"
+- "Download a blob from my storage account"
+- "List all containers in my Azure Storage account"
+- "Set up lifecycle management to move blobs to archive tier"
+- "Create a file share in my storage account"
+- "What's the difference between hot, cool, and archive access tiers?"
+- "Set up a queue storage for async processing"
+
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)

@@ -50,9 +50,9 @@ Use this skill when you need to:
 - **AKS Standard**: Use if you need full control over environment configuration, which requires additional overhead to set up and manage.
 - **Azure CNI Overlay** (recommended): Uses private IP addresses for pods (not routable from the virtual network), scales to large environments, and works well for most production workloads.
 - **Azure CNI (VNet-routable)**: pod IPs directly from VNet (pod subnet or node subnet), use when pods must be directly addressable from VNet or on-prem
-- **Azure CNI powered by Cilium** (recommended): eBPF-based for high-performance packet processing, network policies, and observability
+- **Azure CNI powered by Cilium** (recommended): eBPF (extended Berkeley Packet Filter)-based for high-performance packet processing, network policies, and observability
 - **Static Egress Gateway** for stable, predictable outbound IPs
-- For restricted egress: UDR + Azure Firewall or NVA
+- For restricted egress: user-defined route (UDR) + Azure Firewall or network virtual appliance (NVA)
 - **App Routing addon with Gateway API** - recommended default for HTTP/HTTPS workloads
 - **Istio service mesh with Gateway API** - for advanced traffic management, mTLS, canary releases
 - **Application Gateway for Containers** - for L7 load balancing with Web Application Firewall (WAF) integration
@@ -68,11 +68,11 @@ Use this skill when you need to:
 - For other monitoring and troubleshooting tools, use features like the Agentic CLI for AKS, Application Insights, Resource Health Center, AppLens detectors, and Azure Advisors.
 - Configure **Maintenance Windows** for controlled upgrade timing
 - Enable **automatic upgrades** for control plane and node OS to stay up-to-date with security patches and Kubernetes versions
-- Consider **LTS versions** for enterprise stability (2-year support) by upgrading your AKS environment to the Premium tier
+- Consider **Long-Term Support (LTS) versions** for enterprise stability (2-year support) by upgrading your AKS environment to the Premium tier
 - **Fleet upgrades**: Use **AKS Fleet Manager** for staged rollout across test to production environments
 - Use **Ephemeral OS disks** (`--node-osdisk-type Ephemeral`) for faster node startup
 - Select **Azure Linux** as node OS (smaller footprint, faster boot)
-- Enable **KEDA** for event-driven autoscaling beyond HPA
+- Enable **KEDA (Kubernetes Event-Driven Autoscaling)** for event-driven autoscaling beyond Horizontal Pod Autoscaler (HPA)
 - **Dedicated system node pool**: At least 2 nodes, tainted for system workloads only (`CriticalAddonsOnly`)
 - Enable **Node Auto Provisioning (NAP)** on all pools for cost savings and responsive scaling
 - Use **latest generation SKUs (v5/v6)** for host-level optimizations

@@ -36,21 +36,16 @@ The Azure AI developer tools eliminate this friction by bringing Azure directly 
 
 Use the following decision flow to determine which tool best fits your scenario.
 
-1. **Do you need remote or self-hosted AI tooling?**
-   - Yes → **Azure MCP Server (self-hosted)** — Deploy as a remote MCP server for your team.
+1. **Are you using VS Code or Visual Studio?**
+   - Yes → **[GitHub Copilot for Azure](../github-copilot-azure/introduction.md)** — Includes Azure MCP Server built-in.
    - No → Continue to step 2.
 
-1. **Are you using Visual Studio?**
-   - Yes → **[GitHub Copilot for Azure (Visual Studio extension)](../github-copilot-azure/introduction.md)** — The only option for Visual Studio today.
+1. **Using another IDE (Cursor, IntelliJ, Windsurf)?**
+   - Yes → **[Azure MCP Server](../azure-mcp-server/overview.md)** — Install the standalone MCP server.
    - No → Continue to step 3.
 
-1. **Do you want interactive Azure tooling?**
-   - Yes, in VS Code → **[GitHub Copilot for Azure](../github-copilot-azure/introduction.md)**.
-   - Yes, in another IDE such as Cursor, IntelliJ, or Windsurf → **[Azure MCP Server](../azure-mcp-server/overview.md)**.
-   - No → Continue to step 4.
-
-1. **Do you want end-to-end Azure workflows with guardrails and best practices?**
-   - Yes → **[Azure Skills](../azure-skills/overview.md)** — Available in GitHub Copilot CLI, Claude Code, VS Code, and other tools.
+1. **Want end-to-end workflows with guardrails?**
+   - Yes → **[Azure Skills](../azure-skills/overview.md)** — Available across multiple hosts including GitHub Copilot CLI, Claude Code, and VS Code.
 
 ## Supported development environments
 

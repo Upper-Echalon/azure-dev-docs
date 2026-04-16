@@ -30,10 +30,10 @@ This skill provides GitHub Copilot with specialized knowledge. Guides Microsoft 
 
 Use this skill when you need to:
 
-Create a Microsoft Entra ID app registration for your application.
-Register your application with Microsoft Entra ID.
-Configure OAuth 2.0 authentication flows for your registered application.
-Set up authentication and authorization for your application.
+- Create a Microsoft Entra ID app registration for your application.
+- Register your application with Microsoft Entra ID.
+- Configure OAuth 2.0 authentication flows for your registered application.
+- Set up authentication and authorization for your application.
 - Add API permissions in Azure
 - Work with generate service principal, MSAL example, console app auth, and Entra ID setup
 - Work with Microsoft Entra ID authentication

@@ -32,6 +32,18 @@ Use this skill when you need to:
 - Write KQL queries to analyze logs, telemetry data, and time-series information in Azure Data Explorer clusters.
 - Perform log analytics, analyze time-series data from IoT devices, and detect anomalies.
 
+## Example prompts
+
+Try these prompts to activate this skill:
+
+- "Query my Kusto database for events in the last hour"
+- "Write a KQL query to analyze telemetry data from my ADX cluster"
+- "Show me the schema for tables in my Azure Data Explorer cluster"
+- "Analyze IoT sensor data for anomalies in the last 24 hours"
+- "Create a time series chart of application logs from my Kusto database"
+- "What tables are available in my Azure Data Explorer cluster?"
+- "Aggregate request latency metrics by service using KQL"
+
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)

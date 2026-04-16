@@ -37,6 +37,19 @@ Use this skill when you need to:
 - Work with cost estimate, Linux, black screen, and reset password
 - Configure remote desktop connectivity (RDP port 3389) for Windows virtual machines.
 
+## Example prompts
+
+Try these prompts to activate this skill:
+
+- "Help me choose a VM for my workload"
+- "What VM size should I use for a web server?"
+- "Compare Azure VM families for machine learning workloads"
+- "How much will a Standard D4s v3 VM cost?"
+- "Help me set up autoscale for my VM scale set"
+- "I can't connect to my VM via RDP, help me troubleshoot"
+- "How do I reset the password on my Azure VM?"
+- "What's the difference between Flexible and Uniform orchestration?"
+
 ## Related content
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)

@@ -95,6 +95,9 @@ Approve this plan and proceed to validation
 
 The skill updates the plan status to `Approved` and moves to the next step.
 
+> [!TIP]
+> If the skill doesn't recognize your project type, make sure you're in the project root directory with a recognizable project file (package.json, requirements.txt, .csproj, or similar).
+
 ## Validate the deployment plan
 
 Your AI assistant runs the `azure-validate` skill to check:
@@ -129,6 +132,9 @@ If validation fails, review errors and ask your AI assistant to fix issues:
 ```text
 Fix the validation errors and try again
 ```
+
+> [!TIP]
+> If validation fails, check that your Azure account has the required permissions and that the resources specified in the plan are available in your selected region.
 
 ## Deploy to Azure
 
@@ -172,6 +178,9 @@ Monitor your app: https://portal.azure.com/...
 ```
 
 Visit your application URL in a browser to verify it's running.
+
+> [!TIP]
+> If deployment fails, check the error output for permission or quota issues. Run `az account show` to verify you're authenticated to the correct subscription.
 
 ## Verify your deployment
 

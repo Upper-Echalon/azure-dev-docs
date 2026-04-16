@@ -17,7 +17,13 @@ Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clus
 
 ## What it provides
 
-This skill provides GitHub Copilot with specialized knowledge. Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure cni Overlay, egress configuration), security, and operations (autoscaling, upgrade strategy, cost analysis).
+This skill gives GitHub Copilot deep expertise in AKS cluster planning and configuration. It helps you make critical Day-0 decisions — networking topology, API server access, and pod IP model — that are difficult to change after cluster creation. Specifically, it provides:
+
+- **SKU selection guidance**: Recommends AKS Automatic vs Standard based on your control and customization needs.
+- **Networking configuration**: Advises on Azure CNI Overlay vs VNet-routable CNI, egress strategies (Static Egress Gateway, UDR + Firewall), ingress options (App Routing, Istio, Application Gateway for Containers), and DNS settings.
+- **Security best practices**: Guides Microsoft Entra ID integration, Workload Identity for pods, Key Vault secrets via CSI Driver, Azure Policy with Deployment Safeguards, and image signing.
+- **Operations and scaling**: Configures autoscaling (KEDA, Node Auto Provisioning), upgrade strategies (maintenance windows, Fleet Manager), and observability (Managed Prometheus, Container Insights, Grafana).
+- **Cost optimization**: Recommends Spot node pools, ephemeral OS disks, latest-generation VM SKUs, and Reserved Instances or Savings Plans.
 
 ### Related tools
 
@@ -28,7 +34,7 @@ This skill provides GitHub Copilot with specialized knowledge. Plan, create, and
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **AI assistant with Azure Skills**: [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), Visual Studio Code with [Azure MCP extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server), Claude Code, or another [compatible MCP client](../install.md).
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 - **[Azure Key Vault](/azure/key-vault/general/quick-create-portal)**: A key vault for secrets and certificate management.
 - **[Azure Kubernetes Service](/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
@@ -106,3 +112,4 @@ Try these prompts to activate this skill:
 ## Related content
 
 - [Azure MCP Server overview](/azure/developer/azure-mcp-server/overview)
+

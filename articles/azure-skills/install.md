@@ -20,7 +20,7 @@ Make sure you have:
 - **Node.js Long Term Support (LTS)**: [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
 - **Azure account**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
 - **An AI assistant**: [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
-- **Azure CLI** (optional): Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli).
+- **Azure CLI** (recommended for local development): Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli). Environment variables or managed identity can be used as alternatives in CI/CD pipelines.
 
 > [!NOTE]
 > Azure Skills uses the same authentication as [Azure MCP Server](../azure-mcp-server/overview.md). If you already authenticated for Azure MCP Server, Azure Skills uses those credentials.

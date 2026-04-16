@@ -19,6 +19,14 @@ Analyze and optimize your Azure spending with historical cost queries, spending 
 
 This skill gives GitHub Copilot access to Azure Cost Management APIs and optimization best practices. It can analyze your current spending, project future costs, and suggest specific ways to reduce waste.
 
+## Prerequisites
+
+- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **AI assistant with Azure Skills**: [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), Visual Studio Code with [Azure MCP extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server), Claude Code, or another [compatible MCP client](../install.md).
+- **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
+- **Azure roles**: Your account must have the [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader), [Monitoring Reader](/azure/role-based-access-control/built-in-roles#monitoring-reader), and [Reader](/azure/role-based-access-control/built-in-roles#reader) roles on the target subscription or resource group.
+- **[Azure Kubernetes Service](/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
+
 ### Related tools
 
 | Tool | Command | Purpose |
@@ -28,14 +36,6 @@ This skill gives GitHub Copilot access to Azure Cost Management APIs and optimiz
 | `azure__get_azure_bestpractices` | Get Azure best practices | Retrieve best practices for a specific optimization scenario |
 | `azure__extension_azqr` | Run Azure Quick Review | Run a compliance scan against a subscription or resource group |
 | `azure__aks` | Azure Kubernetes Service operations | Manage Azure Kubernetes Service clusters and workloads |
-
-## Prerequisites
-
-- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
-- **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
-- **Azure roles**: Your account must have the [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader), [Monitoring Reader](/azure/role-based-access-control/built-in-roles#monitoring-reader), and [Reader](/azure/role-based-access-control/built-in-roles#reader) roles on the target subscription or resource group.
-- **[Azure Kubernetes Service](/azure/aks/learn/quick-kubernetes-deploy-portal)**: An AKS cluster for container orchestration.
 
 ## When to use this skill
 
@@ -55,3 +55,4 @@ Use this skill when you need to:
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-cost/SKILL.md)
+

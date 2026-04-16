@@ -23,7 +23,7 @@ This skill enables GitHub Copilot to execute production deployments using your p
 
 - **Prepared deployment plan**: Run the [azure-prepare](azure-prepare.md) skill first to generate your `.azure/deployment-plan.md` and infrastructure files. Then run the [azure-validate](azure-validate.md) skill to verify readiness.
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)** with the Azure extension enabled.
+- **AI assistant with Azure Skills**: [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), Visual Studio Code with [Azure MCP extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server), Claude Code, or another [compatible MCP client](../install.md).
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 
 ## When to use this skill

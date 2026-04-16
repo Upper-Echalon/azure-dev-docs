@@ -17,12 +17,17 @@ Helps users find the right Azure RBAC role for an identity with least privilege 
 
 ## What it provides
 
-This skill provides GitHub Copilot with specialized knowledge. Helps users find the right Azure RBAC role for an identity with least privilege access, then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions required to grant roles.
+This skill gives GitHub Copilot expertise in Azure role-based access control so it can guide you through secure role assignments. Specifically, it provides:
+
+- **Least-privilege role recommendations**: Searches built-in Azure roles to find the minimal role definition that matches the permissions your identity needs.
+- **Custom role definitions**: When no built-in role fits, generates a custom role definition scoped to exactly the permissions you require.
+- **Role assignment commands**: Produces ready-to-run Azure CLI commands and Bicep code snippets for assigning roles to managed identities, service principals, or users.
+- **Granting permissions guidance**: Explains what permissions you need (such as `Microsoft.Authorization/roleAssignments/write`) to assign roles, and which built-in roles like User Access Administrator or Owner provide them.
 
 ## Prerequisites
 
 - **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
+- **AI assistant with Azure Skills**: [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), Visual Studio Code with [Azure MCP extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server), Claude Code, or another [compatible MCP client](../install.md).
 - **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 - **Azure role**: Your account must have `Microsoft.Authorization/roleAssignments/write` permission, such as [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner).
 
@@ -54,3 +59,4 @@ Try these prompts to activate this skill:
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-rbac/SKILL.md)
+

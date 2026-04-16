@@ -19,6 +19,12 @@ Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Ser
 
 This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems.
 
+## Prerequisites
+
+- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
+- **AI assistant with Azure Skills**: [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), Visual Studio Code with [Azure MCP extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-mcp-server), Claude Code, or another [compatible MCP client](../install.md).
+- **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
+
 ### Related tools
 
 | Tool | Command | Purpose |
@@ -28,12 +34,6 @@ This skill provides GitHub Copilot with specialized knowledge. Troubleshoot and 
 | `mcp_azure_mcp_monitor` | `logs_query` | Query diagnostic logs with KQL |
 | `mcp_azure_mcp_resourcehealth` | ``get`` | Check service health status |
 | `mcp_azure_mcp_documentation` | `Doc search` | Search Microsoft Learn for troubleshooting docs |
-
-## Prerequisites
-
-- **Azure subscription**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **[GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started)**: With the Azure extension enabled.
-- **Azure CLI** (v2.60.0+): [Install](/cli/azure/install-azure-cli) and sign in with `az login`.
 
 ## When to use this skill
 
@@ -69,3 +69,4 @@ Try these prompts to activate this skill:
 
 - [Azure Model Context Protocol (MCP) Server overview](/azure/developer/azure-mcp-server/overview)
 - [Skill source code](https://github.com/microsoft/azure-skills/blob/main/skills/azure-messaging/SKILL.md)
+

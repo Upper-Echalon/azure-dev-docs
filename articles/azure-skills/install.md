@@ -160,7 +160,7 @@ After installation, confirm Azure Skills is ready to use.
    /plugin list
    ```
 
-   The output includes `azure (azure-skills)` and available skills.
+   The output includes `azure@azure-skills` and available skills.
 
 1. Test with a quick command:
 

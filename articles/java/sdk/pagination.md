@@ -90,7 +90,7 @@ client.listSecrets()
       .forEach(page -> {
           System.out.println("Response code: " + page.getStatusCode());
           System.out.println("Continuation Token: " + page.getContinuationToken());
-          page.getElements().forEach(secret -> System.out.println("Secret value: " + secret))
+          page.getElements().forEach(secret -> System.out.println("Secret value: " + secret));
       });
 ```
 

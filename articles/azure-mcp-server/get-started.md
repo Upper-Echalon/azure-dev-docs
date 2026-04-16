@@ -3,7 +3,7 @@ title: Get started with the Azure MCP Server
 description: Overview of the options for using the Azure MCP Server with tools and languages
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 02/19/2026
+ms.date: 03/27/2026
 ms.topic: get-started
 content_well_notification: 
   - AI-contribution
@@ -28,8 +28,8 @@ You can optionally install Azure MCP Server directly using one of the supported 
 
 For more information, see [Install with a package manager](https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md#package-manager).
 
-- **NuGet**: [Azure.Mcp](https://www.nuget.org/packages/Azure.Mcp/2.0.0-beta.20)
-- **NPM**: [@azure/mcp](https://www.npmjs.com/package/@azure/mcp/v/2.0.0-beta.20)
+- **NuGet**: [Azure.Mcp](https://www.nuget.org/packages/Azure.Mcp)
+- **NPM**: [@azure/mcp](https://www.npmjs.com/package/@azure/mcp)
 - **PyPI**: [msmcp-azure](https://pypi.org/project/msmcp-azure/)
 
 ## Connect to Azure MCP Server

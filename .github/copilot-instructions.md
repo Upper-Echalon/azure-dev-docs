@@ -18,6 +18,8 @@ documentation for application development using Microsoft Azure that publishes t
 
 - [.github/instructions/rust-instructions.md](.github/instructions/rust-instructions.md)
 - [.github/instructions/azd-schema-instructions.md](.github/instructions/azd-schema-instructions.md)
+- [.github/instructions/java-instructions.md](.github/instructions/java-instructions.md)
+- [.github/instructions/java-sample-guidelines.md](.github/instructions/java-sample-guidelines.md)
 
 ## Disclosure
 

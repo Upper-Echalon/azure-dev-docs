@@ -432,13 +432,13 @@
 | App Configuration Provider | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.0-preview) |  |  |
 | App Configuration Provider | npm [2.4.1](https://www.npmjs.com/package/@azure/app-configuration-provider/v/2.4.1) |  |  |
 | App Configuration Provider File Source | npm [3.0.0-preview](https://www.npmjs.com/package/@azure/app-configuration-importer-file-source/v/3.0.0-preview) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/3.0.0-beta.2) |  |  |
-| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/3.0.0-beta.2) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/3.0.0-beta.3) |  |  |
+| Azure MCP | npm [2.0.0](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.0)<br>npm [3.0.0-beta.3](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/3.0.0-beta.3) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-arm64/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-x64/v/0.5.13) |  |  |
@@ -567,7 +567,7 @@
 | @autorest/system-requirements | npm [1.1.1](https://www.npmjs.com/package/@autorest/system-requirements/v/1.1.1) |  |  |
 | @autorest/test-utils | npm [0.6.1](https://www.npmjs.com/package/@autorest/test-utils/v/0.6.1) |  |  |
 | @autorest/testmodeler | npm [2.6.2](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.2)<br>npm [2.6.4-ci.254802bfc.0](https://www.npmjs.com/package/@autorest/testmodeler/v/2.6.4-ci.254802bfc.0) |  |  |
-| @autorest/typescript | npm [6.0.67](https://www.npmjs.com/package/@autorest/typescript/v/6.0.67) |  |  |
+| @autorest/typescript | npm [6.0.68](https://www.npmjs.com/package/@autorest/typescript/v/6.0.68) |  |  |
 | @azure/static-web-apps-cli | npm [2.0.8](https://www.npmjs.com/package/@azure/static-web-apps-cli/v/2.0.8) |  |  |
 | @cadl-lang/compiler | npm [0.40.0](https://www.npmjs.com/package/@cadl-lang/compiler/v/0.40.0) |  |  |
 | @cadl-lang/eslint-config-cadl | npm [0.5.0](https://www.npmjs.com/package/@cadl-lang/eslint-config-cadl/v/0.5.0) |  |  |

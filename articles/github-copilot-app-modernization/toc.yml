@@ -23,7 +23,7 @@ items:
               - name: Batch assessment
                 href: modernization-agent/batch-assess.md
               - name: Batch upgrade
-                href: modernization-agent/batch-upgrade.md              
+                href: modernization-agent/batch-upgrade.md
           - name: Customization
             href: modernization-agent/customization.md
           - name: CI/CD integration
@@ -79,8 +79,8 @@ items:
               - name: Migrate from Oracle to PostgreSQL
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-oracle-to-postgresql.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: Migration via custom agent
-                href: ../java/migration/migrate-github-copilot-app-modernization-for-java-custom-agent.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json    
-            - name: "Re-architect (preview)"
+                href: ../java/migration/migrate-github-copilot-app-modernization-for-java-custom-agent.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
+            - name: Re-architect (preview)
               href: ../java/migration/github-copilot-app-modernization-for-java-rearchitecture.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
             - name: Infrastructure and deployment
               expanded: true
@@ -91,7 +91,6 @@ items:
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-quickstart-containerization.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
               - name: "Quickstart: Deploy your project"
                 href: ../java/migration/migrate-github-copilot-app-modernization-for-java-quickstart-deploy-to-azure.md?toc=/azure/developer/github-copilot-app-modernization/toc.json&bc=/azure/developer/github-copilot-app-modernization/breadcrumb/toc.json
-            
         - name: .NET
           expanded: true
           items:

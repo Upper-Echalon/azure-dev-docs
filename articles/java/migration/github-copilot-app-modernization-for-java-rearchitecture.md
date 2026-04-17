@@ -1,12 +1,12 @@
 ---
-title: Re-architect projects by using GitHub Copilot modernization
+title: Re-architect Projects by Using GitHub Copilot Modernization
 titleSuffix: Azure
 description: Learn how to use the re-architecture feature in GitHub Copilot modernization to rewrite projects from legacy frameworks to modern architectures.
 author: KarlErickson
 ms.author: karler
 ms.reviewer: xiading
 ms.topic: overview
-ms.date: 04/10/2026
+ms.date: 04/17/2026
 ms.custom: devx-track-java
 ms.subservice: migration-copilot
 ms.collection: ce-skilling-ai-copilot
@@ -15,7 +15,7 @@ ai-usage: ai-generated
 
 # Re-architect projects by using GitHub Copilot modernization
 
-This article describes how to use the re-architecture feature in GitHub Copilot modernization to rewrite projects from legacy frameworks to modern architectures, for example, from Struts to Spring MVC.
+This article describes how to use the re-architecture feature in GitHub Copilot modernization to rewrite projects from legacy frameworks to modern architectures, such as from Struts to Spring MVC.
 
 > [!IMPORTANT]
 > The re-architecture feature is currently in preview. Preview features might have limited capabilities and aren't recommended for production use.
@@ -41,11 +41,11 @@ Common re-architecture scenarios include:
 
 ## Enable the re-architecture feature
 
-The re-architecture feature requires manual activation in VS Code because it's in preview.
+The re-architecture feature is in preview, so you need to activate it manually in Visual Studio Code.
 
 Use the following steps to enable the feature:
 
-1. In VS Code, open the **Settings** editor by selecting **File** > **Preferences** > **Settings** (or **Code** > **Preferences** > **Settings** on macOS).
+1. In Visual Studio Code, open the **Settings** editor by selecting **File** > **Preferences** > **Settings** (or **Code** > **Preferences** > **Settings** on macOS).
 
 1. Search for `appmod.experimental.task.rearchitecture`.
 
@@ -65,7 +65,7 @@ After you enable the feature, use the re-architecture agent in the GitHub Copilo
 
 Use the following steps to re-architect a project:
 
-1. Open your project in VS Code.
+1. Open your project in Visual Studio Code.
 
 1. Open the **GitHub Copilot Chat** panel.
 
@@ -73,7 +73,7 @@ Use the following steps to re-architect a project:
 
 1. Describe the transformation you want to perform. For example:
 
-   ```text
+   ```prompt
    Rewrite the entire project from Struts to Spring MVC
    ```
 
@@ -94,7 +94,7 @@ You can improve the transformation results by providing additional context in yo
 
 For example:
 
-```text
+```prompt
 Rewrite the entire project from Struts to Spring MVC using Spring Boot 3.2.
 Refer to the Spring MVC migration guide at https://docs.spring.io/spring-framework/reference/web/webmvc.html.
 Keep the existing backend business logic unchanged.

@@ -1,5 +1,5 @@
 ---
-title: Azure skill for Hosted Copilot SDK
+title: Azure skill for hosted Copilot SDK
 description: Build and deploy GitHub Copilot SDK apps to Azure.
 ms.topic: reference
 ms.date: 4/2/2026

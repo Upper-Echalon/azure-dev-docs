@@ -8,9 +8,9 @@ items:
 - name: Skills reference
   items:
   - name: App Insights Instrumentation
-    href: skills/appinsights-instrumentation.md
+    href: skills/app-insights-instrumentation.md
   - name: Azure AI Gateway
-    href: skills/azure-aigateway.md
+    href: skills/azure-ai-gateway.md
   - name: Azure AI Services
     href: skills/azure-ai.md
   - name: Azure Cloud Migration

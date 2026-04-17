@@ -1,5 +1,5 @@
 ---
-title: Azure skill for Kusto (Data Explorer)
+title: Azure skill for Kusto (Azure Data Explorer)
 description: This skill queries and analyzes data in Azure Data Explorer (also called Kusto or ADX) using Kusto Query Language (KQL) to support log analytics, telemetry monitoring, and time-series analysis.
 ms.topic: reference
 ms.date: 4/2/2026

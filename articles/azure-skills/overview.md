@@ -13,6 +13,8 @@ ms.date: 03/16/2026
 
 # What is Azure Skills?
 
+Azure Skills are agent skills that extend your AI coding assistant with Azure-specific domain knowledge and specialized workflows. They give your assistant the ability to manage resources, deploy applications, and monitor services directly from your development environment.
+
 ## Azure Skills in Visual Studio Code
 
 The following demonstration shows Azure Skills in action inside Visual Studio Code. A developer uses natural language in the Copilot chat panel to interact with Azure services — no portal, no CLI commands, no context switching.

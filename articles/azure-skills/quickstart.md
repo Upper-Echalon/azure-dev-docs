@@ -11,18 +11,18 @@ ms.service: azure-mcp-server
 
 # Get started with Azure Skills
 
-In this quickstart, you prepare, validate, and deploy a simple application to Azure by using Azure Skills.
+In this quickstart, you prepare, validate, and deploy an application to Azure by using Azure Skills.
 
 ## Prerequisites
 
 - Azure Skills installed ([Install and configure Azure Skills](install.md))
 - Azure CLI authenticated (`az login` completed successfully)
 - GitHub Copilot CLI or Claude Code ready to use
-- A sample application (or create a simple Node.js app)
+- A sample application (or create a Node.js app)
 
 ## Scenario
 
-You have a simple Node.js application. You want to deploy it to Azure with:
+You have a Node.js application. You want to deploy it to Azure with:
 
 - Web application hosting (Azure App Service)
 - A storage account for application data
@@ -48,12 +48,12 @@ The `azure-prepare` skill:
 
 Open `.azure/plan.md` and review:
 
-- **Project Information** — Application name and deployment mode
-- **Requirements** — Classification and scale (small, medium, large)
-- **Components** — Technologies detected
-- **Deployment Strategy** — Technology used to deploy your application (Azure Developer CLI, Bicep, Terraform, or Azure CLI).
-- **Architecture** — Azure services selected
-- **Implementation Plan** — Step-by-step tasks
+- **Project Information**—Application name and deployment mode
+- **Requirements**—Classification and scale (small, medium, large)
+- **Components**—Technologies detected
+- **Deployment Strategy**—Technology used to deploy your application (Azure Developer CLI, Bicep, Terraform, or Azure CLI).
+- **Architecture**—Azure services selected
+- **Implementation Plan**—Step-by-step tasks
 
 Example plan content:
 
@@ -96,7 +96,7 @@ Approve this plan and proceed to validation
 The skill updates the plan status to `Approved` and moves to the next step.
 
 > [!TIP]
-> If the skill doesn't recognize your project type, make sure you're in the project root directory with a recognizable project file (package.json, requirements.txt, .csproj, or similar).
+> If the skill doesn't recognize your project type, make sure you're in the project root directory with a recognizable project file (`package.json`, `requirements.txt`, `.csproj`, or similar).
 
 ## Validate the deployment plan
 
@@ -177,7 +177,7 @@ Resources deployed:
 Monitor your app: https://portal.azure.com/...
 ```
 
-Visit your application URL in a browser to verify it's running.
+To verify that your app is running, visit your application URL in a browser.
 
 > [!TIP]
 > If deployment fails, check the error output for permission or quota issues. Run `az account show` to verify you're authenticated to the correct subscription.
@@ -186,9 +186,9 @@ Visit your application URL in a browser to verify it's running.
 
 Test your application:
 
-1. **Visit your URL** — Open the application URL in a browser.
-1. **Check monitoring** — View logs in Application Insights.
-1. **Test functionality** — Use key features of your app.
+1. **Visit your URL**—Open the application URL in a browser.
+1. **Check monitoring**—View logs in Application Insights.
+1. **Test functionality**—Use key features of your app.
 
 Ask your AI assistant for monitoring status:
 
@@ -245,7 +245,7 @@ Type `yes` to confirm deletion.
 
 **Problem:** Your AI assistant can't authenticate to Azure.
 
-**Solution:** Re-authenticate by using `az login` and try again.
+**Solution:** Reauthenticate by using `az login` and try again.
 
 ### Plan validation fails
 
@@ -273,4 +273,4 @@ Why did validation fail? Fix the errors.
 
 ## Next steps
 
-- [Azure MCP Server documentation](../azure-mcp-server/overview.md) — Deeper technical details
+- [Azure Model Context Protocol (MCP) Server documentation](../azure-mcp-server/overview.md)—Deeper technical details

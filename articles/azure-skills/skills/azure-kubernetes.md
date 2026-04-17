@@ -23,7 +23,7 @@ This skill gives GitHub Copilot deep expertise in AKS cluster planning and confi
 - **Networking configuration**: Advises on Azure CNI Overlay vs VNet-routable CNI, egress strategies (Static Egress Gateway, UDR + Firewall), ingress options (App Routing, Istio, Application Gateway for Containers), and DNS settings.
 - **Security best practices**: Guides Microsoft Entra ID integration, Workload Identity for pods, Key Vault secrets via CSI Driver, Azure Policy with Deployment Safeguards, and image signing.
 - **Operations and scaling**: Configures autoscaling (KEDA, Node Auto Provisioning), upgrade strategies (maintenance windows, Fleet Manager), and observability (Managed Prometheus, Container Insights, Grafana).
-- **Cost optimization**: Recommends Spot node pools, ephemeral OS disks, latest-generation VM SKUs, and Reserved Instances or Savings Plans.
+- **Optimization**: Recommends rightsizing, Spot node pools, Cluster AutoScaler (CAS), and Vertical Pod Autoscaler (VPA).
 
 ### Related tools
 

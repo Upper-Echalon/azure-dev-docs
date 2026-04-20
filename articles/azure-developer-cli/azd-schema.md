@@ -122,22 +122,6 @@ infra:
           run: ./scripts/post-provision.sh
 ```
 
-### Terraform as IaC provider
-
-```yaml
-name: yourApp-terraform
-metadata:
-  template: yourApp-terraform@0.0.1-beta
-services:
-  web:
-    project: ./src/web
-    dist: build
-    language: js
-    host: appservice
-infra:
-  provider: terraform
-```
-
 ## `services`
 
 _(object)_ Definition of services that comprise the application. Each key is a service name, and the value is a service configuration object.

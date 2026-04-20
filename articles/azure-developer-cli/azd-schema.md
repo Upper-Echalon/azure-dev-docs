@@ -10,9 +10,11 @@ ms.service: azure-dev-cli
 ai-usage: ai-generated
 ---
 
-# Azure Developer CLI azure.yaml schema
+# Azure Developer CLI schema reference
 
-The [azure.yaml](https://aka.ms/azure.yaml.json) schema defines and describes the apps and types of Azure resources that are included in `azd` projects.
+The `azure.yaml` file is the configuration file for Azure Developer CLI (`azd`) projects. Place it in the root of your project to define the services, Azure resources, infrastructure, hooks, and CI/CD pipeline that make up your application. When you run commands like `azd up`, `azd provision`, or `azd deploy`, the CLI reads this file to understand your app's structure and how to deploy it to Azure.
+
+This article is a complete reference for the [azure.yaml schema](https://aka.ms/azure.yaml.json). For getting started with `azd` templates, see [Azure Developer CLI templates overview](./azd-templates.md).
 
 ## Sample
 

@@ -36,9 +36,9 @@ Get file share limits for a subscription and location.
 Example prompts include:
 
 - "Show me the current file share limits in the 'eastus' location."
-- "What are the file share limits for location 'westeurope'?"
-- "Get the file share limits for location 'centralus'."
-- "Provide the file share limits for location 'eastus2'."
+- "What are the file share limits for location 'westeurope?'"
+- "Get the file share limits for location 'centralus.'"
+- "Provide the file share limits for location 'eastus2.'"
 - "Retrieve file share limits for the 'westus' region."
 
 | Parameter | Required or optional | Description |
@@ -57,10 +57,10 @@ Get file share usage data for a subscription and location.
 
 Example prompts include:
 
-- "Show me the usage details for file shares in location 'eastus'."
-- "I want to see usage for file shares in region 'westeurope'."
-- "Get usage statistics for file shares in location 'centralus'."
-- "Can you provide usage information for file shares in 'eastus2'?"
+- "Show me the usage details for file shares in location 'eastus.'"
+- "I want to see usage for file shares in region 'westeurope.'"
+- "Get usage statistics for file shares in location 'centralus.'"
+- "Can you provide usage information for file shares in 'eastus2?'"
 - "Display usage for file shares in the 'westus' region."
 
 | Parameter | Required or optional | Description |
@@ -79,10 +79,10 @@ Get provisioning parameter recommendations for a file share based on the desired
 
 Example prompts include:
 
-- "Get recommendations for a 1,000-GiB file share in location 'eastus'."
-- "Can you provide recommendations for a 500-GiB file share in 'westeurope'?"
-- "Get details for a 2,000-GiB file share in location 'centralus'."
-- "I want to see recommendations for a 5,000-GiB file share in 'eastus2'."
+- "Get recommendations for a 1,000-GiB file share in location 'eastus.'"
+- "Can you provide recommendations for a 500-GiB file share in 'westeurope?'"
+- "Get details for a 2,000-GiB file share in location 'centralus.'"
+- "I want to see recommendations for a 5,000-GiB file share in 'eastus2.'"
 - "Retrieve recommendations for a 250-GiB file share in the 'westus' region."
 
 | Parameter | Required or optional | Description |
@@ -102,11 +102,11 @@ Check if a file share name is available in a specific location.
 
 Example prompts include:
 
-- "Can you check if the file share name 'projectdata' is available in location 'eastus'?"
-- "I want to see if 'salesbackup' is an available file share name in 'westeurope'."
-- "Check the availability of the file share name 'teamfiles' in location 'EastUS'."
-- "Is the name 'archive2024' free for a new file share in 'WestUS'?"
-- "Verify whether 'clientdocs' can be used as a file share name in location 'centralus'."
+- "Can you check if the file share name 'projectdata' is available in location 'eastus?'"
+- "I want to see if 'salesbackup' is an available file share name in 'westeurope.'"
+- "Check the availability of the file share name 'teamfiles' in location 'EastUS.'"
+- "Is the name 'archive2024' free for a new file share in 'WestUS?'"
+- "Verify whether 'clientdocs' can be used as a file share name in location 'centralus.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -125,11 +125,11 @@ Create a new Azure file share resource in a resource group. This operation creat
 
 Example prompts include:
 
-- "Create a new file share named 'project-data' in resource group 'rg-prod' at location 'eastus'."
-- "I need to create a file share called 'backupshare' in resource group 'rg-backup' at location 'westeurope'."
-- "Set up a file share 'userdocs' in resource group 'rg-dev' at location 'centralus'."
-- "Create the file share 'archive2024' in resource group 'rg-archive' at location 'eastus2'."
-- "Generate a file share named 'mediafiles' in resource group 'rg-media' at location 'westus'."
+- "Create a new file share named 'project-data' in resource group 'rg-prod' at location 'eastus.'"
+- "I need to create a file share called 'backupshare' in resource group 'rg-backup' at location 'westeurope.'"
+- "Set up a file share 'userdocs' in resource group 'rg-dev' at location 'centralus.'"
+- "Create the file share 'archive2024' in resource group 'rg-archive' at location 'eastus2.'"
+- "Generate a file share named 'mediafiles' in resource group 'rg-media' at location 'westus.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -160,11 +160,11 @@ Get details of a specific file share or list all file shares. If you provide a n
 
 Example prompts include:
 
-- "Show me all file shares in resource group 'rg-prod'."
-- "List every file share available under the resource group 'rg-backup'."
-- "Get details for the file share 'reports2024' in resource group 'rg-production'."
-- "Can you retrieve information on file share 'archive-logs' for resource group 'rg-data'."
-- "I need to see the file share 'projectfiles' from resource group 'rg-dev'."
+- "Show me all file shares in resource group 'rg-prod.'"
+- "List every file share available under the resource group 'rg-backup.'"
+- "Get details for the file share 'reports2024' in resource group 'rg-production.'"
+- "Can you retrieve information on file share 'archive-logs' for resource group 'rg-data.'"
+- "I need to see the file share 'projectfiles' from resource group 'rg-dev.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -186,8 +186,8 @@ Example prompts include:
 - "Update the file share named 'projectdocs' in resource group 'rg-prod' to modify its quota."
 - "Make changes to the file share 'shareddata' within resource group 'rg-backup' by updating access settings."
 - "Apply new settings to the file share 'datahub' in resource group 'rg-data' to increase throughput."
-- "Change configuration settings for the file share 'prod-share' in resource group 'rg-production'."
-- "I need to update the file share 'reports2024' in resource group 'rg-analytics'."
+- "Change configuration settings for the file share 'prod-share' in resource group 'rg-production.'"
+- "I need to update the file share 'reports2024' in resource group 'rg-analytics.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -213,11 +213,11 @@ Delete a file share permanently. You can't undo this operation.
 
 Example prompts include:
 
-- "Delete the file share named 'backup-share' in resource group 'rg-prod'."
-- "Remove the file share 'project-files' in resource group 'rg-marketing'."
-- "I want to delete the file share 'temp-data' in resource group 'rg-dev'."
-- "Can you delete the file share 'archive-old' in resource group 'rg-archive'?"
-- "Remove the file share 'cleanup-share' from resource group 'rg-cleanup'."
+- "Delete the file share named 'backup-share' in resource group 'rg-prod.'"
+- "Remove the file share 'project-files' in resource group 'rg-marketing.'"
+- "I want to delete the file share 'temp-data' in resource group 'rg-dev.'"
+- "Can you delete the file share 'archive-old' in resource group 'rg-archive?'"
+- "Remove the file share 'cleanup-share' from resource group 'rg-cleanup.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -236,9 +236,9 @@ Get details of a specific private endpoint connection or list all private endpoi
 
 Example prompts include:
 
-- "List all private endpoint connections for file share 'projectfiles' in resource group 'rg-prod'."
-- "Get the private endpoint connection named 'myconnection' for file share 'datashare' in resource group 'rg-data'."
-- "Show me private endpoint connections on file share 'backupshare' in resource group 'rg-backup'."
+- "List all private endpoint connections for file share 'projectfiles' in resource group 'rg-prod.'"
+- "Get the private endpoint connection named 'myconnection' for file share 'datashare' in resource group 'rg-data.'"
+- "Show me private endpoint connections on file share 'backupshare' in resource group 'rg-backup.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -258,9 +258,9 @@ Update the state of a private endpoint connection for a file share. Use this ope
 
 Example prompts include:
 
-- "Approve the private endpoint connection 'myconnection' for file share 'projectfiles' in resource group 'rg-prod'."
-- "Reject the private endpoint connection named 'extconnection' on file share 'datashare' in resource group 'rg-data' with description 'Not authorized'."
-- "Update the private endpoint connection 'pendingconn' to 'Approved' for file share 'backupshare' in resource group 'rg-backup'."
+- "Approve the private endpoint connection 'myconnection' for file share 'projectfiles' in resource group 'rg-prod.'"
+- "Reject the private endpoint connection named 'extconnection' on file share 'datashare' in resource group 'rg-data' with description 'Not authorized.'"
+- "Update the private endpoint connection 'pendingconn' to 'Approved' for file share 'backupshare' in resource group 'rg-backup.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -307,11 +307,11 @@ Get details of a specific file share snapshot or list all snapshots. If you prov
 
 Example prompts include:
 
-- "Show me all snapshots for file share 'projectfileshare' in resource group 'rg-prod'."
-- "List snapshots available on the file share 'teamdata' in resource group 'rg-finance'."
-- "Get the snapshot named 'snapshot20240601' from file share 'backupshare' in resource group 'rg-backup'."
-- "Retrieve details for the snapshot 'dailybackup' on file share 'reports' in resource group 'rg-analytics'."
-- "I need to see the snapshot 'weekendcopy' from file share 'mediafiles' in resource group 'rg-media'."
+- "Show me all snapshots for file share 'projectfileshare' in resource group 'rg-prod.'"
+- "List snapshots available on the file share 'teamdata' in resource group 'rg-finance.'"
+- "Get the snapshot named 'snapshot20240601' from file share 'backupshare' in resource group 'rg-backup.'"
+- "Retrieve details for the snapshot 'dailybackup' on file share 'reports' in resource group 'rg-analytics.'"
+- "I need to see the snapshot 'weekendcopy' from file share 'mediafiles' in resource group 'rg-media.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -331,11 +331,11 @@ Update the properties and metadata of an Azure file share snapshot, such as tags
 
 Example prompts include:
 
-- "Update the snapshot 'backup-snap-jan23' for file share 'backupshare' in resource group 'rg-backup'."
-- "Apply updates to snapshot 'data-snapshot' on file share 'datafiles' in resource group 'rg-data'."
-- "Can you update snapshot 'snapshot2024' for file share 'reports' in resource group 'rg-analytics'."
-- "Update the snapshot named 'endofmonth' on file share 'finance-data' in resource group 'rg-finance'."
-- "Modify the properties of snapshot 'weeklybackup' for file share 'devfileshare' in resource group 'rg-dev'."
+- "Update the snapshot 'backup-snap-jan23' for file share 'backupshare' in resource group 'rg-backup.'"
+- "Apply updates to snapshot 'data-snapshot' on file share 'datafiles' in resource group 'rg-data.'"
+- "Can you update snapshot 'snapshot2024' for file share 'reports' in resource group 'rg-analytics.'"
+- "Update the snapshot named 'endofmonth' on file share 'finance-data' in resource group 'rg-finance.'"
+- "Modify the properties of snapshot 'weeklybackup' for file share 'devfileshare' in resource group 'rg-dev.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -356,11 +356,11 @@ Delete a file share snapshot permanently. This operation can't be undone.
 
 Example prompts include:
 
-- "Delete snapshot 'backup-snap-jan15' from file share 'datafiles' in resource group 'rg-prod'."
-- "Remove snapshot 'weekly-backup' from file share 'backupshare' in resource group 'rg-backup'."
-- "Delete snapshot 'snapshot2024-03-15' from file share 'reports' in resource group 'rg-analytics'."
-- "Delete the snapshot 'dailybackup' from file share 'projectfiles' in resource group 'rg-dev'."
-- "Remove snapshot 'weeklysnap' from file share 'archive' in resource group 'rg-archive'."
+- "Delete snapshot 'backup-snap-jan15' from file share 'datafiles' in resource group 'rg-prod.'"
+- "Remove snapshot 'weekly-backup' from file share 'backupshare' in resource group 'rg-backup.'"
+- "Delete snapshot 'snapshot2024-03-15' from file share 'reports' in resource group 'rg-analytics.'"
+- "Delete the snapshot 'dailybackup' from file share 'projectfiles' in resource group 'rg-dev.'"
+- "Remove snapshot 'weeklysnap' from file share 'archive' in resource group 'rg-archive.'"
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|

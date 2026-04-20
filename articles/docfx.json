@@ -50,6 +50,14 @@
       "feedback_help_link_url": "https://learn.microsoft.com/answers/questions/"      
     },
     "fileMetadata": {
+      "breadcrumb_path": {
+        "github-copilot-azure/**/*.md": "/azure/developer/ai-developer-tools/breadcrumb/toc.json",
+        "github-copilot-azure/**/*.yml": "/azure/developer/ai-developer-tools/breadcrumb/toc.json",
+        "azure-mcp-server/**/*.md": "/azure/developer/ai-developer-tools/breadcrumb/toc.json",
+        "azure-mcp-server/**/*.yml": "/azure/developer/ai-developer-tools/breadcrumb/toc.json",
+        "azure-skills/**/*.md": "/azure/developer/ai-developer-tools/breadcrumb/toc.json",
+        "azure-skills/**/*.yml": "/azure/developer/ai-developer-tools/breadcrumb/toc.json"
+      },
       "feedback_help_link_url": {
         "github-copilot-azure/**/*.md": "https://github.com/microsoft/GitHub-Copilot-for-Azure"
       },

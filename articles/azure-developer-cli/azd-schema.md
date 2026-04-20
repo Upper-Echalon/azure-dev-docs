@@ -179,14 +179,6 @@ The `host` property determines the type of Azure resource used for service imple
 > [!NOTE]
 > When `host` is `containerapp`, you must provide either `image` or `project`, but not both. If `image` is set, the container is deployed from the specified image. If `project` is set, the container image is built from source.
 
-### Service hooks
-
-Service level hooks execute during service lifecycle events. Hooks should match service event names prefixed with `pre` or `post`. When specifying paths, they should be relative to the service path. See [Customize your Azure Developer CLI workflows using command and event hooks](./azd-extensibility.md) for more details.
-
-Supported service hooks: `prerestore`, `postrestore`, `prebuild`, `postbuild`, `prepackage`, `postpackage`, `prepublish`, `postpublish`, `predeploy`, `postdeploy`.
-
-Each hook uses the [Hook definition](#hook-definition) format.
-
 ### `docker`
 
 _(object)_ Docker configuration for a service. Only applicable for hosts that support containers (`containerapp`, `aks`, `ai.endpoint`, `azure.ai.agent`).
@@ -269,6 +261,14 @@ _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when
 | `dir` | N | string | The relative path to the kustomize directory. Supports environment variable substitution. |
 | `edits` | N | array of strings | The kustomize edits to apply before deployment. Supports environment variable substitution. |
 | `env` | N | object | Environment key/value pairs used to generate a `.env` file in the kustomize directory. Values support environment variable substitution. |
+
+### Service hooks
+
+Service level hooks execute during service lifecycle events. Hooks should match service event names prefixed with `pre` or `post`. When specifying paths, they should be relative to the service path. See [Customize your Azure Developer CLI workflows using command and event hooks](./azd-extensibility.md) for more details.
+
+Supported service hooks: `prerestore`, `postrestore`, `prebuild`, `postbuild`, `prepackage`, `postpackage`, `prepublish`, `postpublish`, `predeploy`, `postdeploy`.
+
+Each hook uses the [Hook definition](#hook-definition) format.
 
 ### Service samples
 

@@ -726,5 +726,7 @@ cloud:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Customize your Azure Developer CLI workflows using command and event hooks](./azd-extensibility.md)
+- [Customize workflows using command and event hooks](./azd-extensibility.md)
+- [Azure Developer CLI templates overview](./azd-templates.md)
+- [Use Terraform as an IaC provider](./use-terraform-for-azd.md)
+- [Manage environment variables](./manage-environment-variables.md)

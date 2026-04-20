@@ -147,7 +147,7 @@ _(object)_ Definition of services that comprise the application. Each key is a s
 | `apiVersion` | N | string | Resource provider API version for deployments. Only valid when `host` is `containerapp`. |
 | `hooks` | N | object | Service level hooks. See [Service hooks](#service-hooks). |
 
-### Host types
+#### Host types
 
 The `host` property determines the type of Azure resource used for service implementation and controls which other properties are valid.
 
@@ -165,7 +165,7 @@ The `host` property determines the type of Azure resource used for service imple
 > [!NOTE]
 > When `host` is `containerapp`, you must provide either `image` or `project`, but not both. If `image` is set, the container is deployed from the specified image. If `project` is set, the container image is built from source.
 
-### `docker`
+#### `docker`
 
 _(object)_ Docker configuration for a service. Only applicable for hosts that support containers (`containerapp`, `aks`, `ai.endpoint`, `azure.ai.agent`).
 
@@ -181,7 +181,7 @@ _(object)_ Docker configuration for a service. Only applicable for hosts that su
 | `network` | N | string | The networking mode for RUN instructions during docker build. Passed as `--network` to docker build. For example, use `host` to allow the build container to access the host network. |
 | `remoteBuild` | N | boolean | Whether to build the image remotely. If set to `true`, the image is built remotely using the Azure Container Registry remote build feature. If the remote build fails, `azd` automatically falls back to building locally using Docker or Podman if available. |
 
-### `k8s`
+#### `k8s`
 
 _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when `host` is `aks`.
 
@@ -195,26 +195,26 @@ _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when
 | `helm` | N | object | The helm configuration. See [Helm config](#helm-config). |
 | `kustomize` | N | object | The kustomize configuration. See [Kustomize config](#kustomize-config). |
 
-#### Deployment config
+##### Deployment config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `name` | N | string | The name of the k8s deployment resource to use during deployment. If not set, searches for a deployment resource in the same namespace that contains the service name. Default: service name. |
 
-#### Service config
+##### Service config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `name` | N | string | The name of the k8s service resource to use as the default service endpoint. If not set, searches for a service resource in the same namespace that contains the service name. Default: service name. |
 
-#### Ingress config
+##### Ingress config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `name` | N | string | The name of the k8s ingress resource to use as the default service endpoint. If not set, searches for an ingress resource in the same namespace that contains the service name. Default: service name. |
 | `relativePath` | N | string | The relative path to the service from the root of your ingress controller. When set, it's appended to the root of your ingress resource path. |
 
-#### Helm config
+##### Helm config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -238,7 +238,7 @@ _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when
 | `namespace` | N | string | The k8s namespace to install the helm chart. Defaults to the service namespace. |
 | `values` | N | string | Relative path from service to a `values.yaml` to pass to the helm chart. |
 
-#### Kustomize config
+##### Kustomize config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -246,7 +246,7 @@ _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when
 | `edits` | N | array of strings | The kustomize edits to apply before deployment. Supports environment variable substitution. |
 | `env` | N | object | Environment key/value pairs used to generate a `.env` file in the kustomize directory. Values support environment variable substitution. |
 
-### Service hooks
+#### Service hooks
 
 Service level hooks execute during service lifecycle events. Hooks should match service event names prefixed with `pre` or `post`. When specifying paths, they should be relative to the service path. See [Customize your Azure Developer CLI workflows using command and event hooks](./azd-extensibility.md) for more details.
 
@@ -254,9 +254,9 @@ Supported service hooks: `prerestore`, `postrestore`, `prebuild`, `postbuild`, `
 
 Each hook uses the [Hook definition](#hook-definition) format.
 
-### Service samples
+#### Service samples
 
-#### Container Apps with Docker options
+##### Container Apps with Docker options
 
 ```yaml
 services:
@@ -275,7 +275,7 @@ services:
       remoteBuild: true
 ```
 
-#### Container Apps from a prebuilt image
+##### Container Apps from a prebuilt image
 
 ```yaml
 services:
@@ -284,7 +284,7 @@ services:
     host: containerapp
 ```
 
-#### AKS with service level hooks
+##### AKS with service level hooks
 
 ```yaml
 services:

@@ -147,6 +147,9 @@ _(object)_ Definition of services that comprise the application. Each key is a s
 | `apiVersion` | N | string | Resource provider API version for deployments. Only valid when `host` is `containerapp`. |
 | `hooks` | N | object | Service level hooks. See [Service hooks](#service-hooks). |
 
+> [!TIP]
+> See [Service samples](#service-samples) for complete YAML examples of different service configurations.
+
 #### Host types
 
 The `host` property determines the type of Azure resource used for service implementation and controls which other properties are valid.
@@ -321,6 +324,9 @@ _(object)_ Definition of Azure resources used by the application. Each key is a 
 | `type` | Y | string | The type of resource. See [Resource types](#resource-types). |
 | `uses` | N | array | Other resources that this resource depends on. |
 | `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
+
+> [!TIP]
+> See [Resources sample](#resources-sample) for a complete YAML example combining multiple resource types.
 
 ### Resource types
 
@@ -502,6 +508,9 @@ _(object)_ Command level hooks. Hooks should match `azd` command names prefixed 
 Supported command hooks: `preprovision`, `postprovision`, `preinfracreate`, `postinfracreate`, `preinfradelete`, `postinfradelete`, `predown`, `postdown`, `preup`, `postup`, `prepackage`, `postpackage`, `prepublish`, `postpublish`, `predeploy`, `postdeploy`, `prerestore`, `postrestore`.
 
 Each hook uses the [Hook definition](#hook-definition) format.
+
+> [!TIP]
+> See [Hook samples](#hook-samples) for complete YAML examples including platform-specific hooks, typed executors, and multiple hooks per event.
 
 ```yaml
 hooks:

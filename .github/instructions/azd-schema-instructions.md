@@ -28,8 +28,7 @@ A local copy is kept at `articles/azure-developer-cli/source-schema.json` to ser
 1. `## Sample` — introductory YAML examples
 1. `## Top-level properties` — summary table with anchor links
 1. One `## {propertyName}` section per top-level property, in the order they appear in the schema's `properties` object: `name`, `resourceGroup`, `metadata`, `infra`, `services`, `resources`, `pipeline`, `hooks`, `requiredVersions`, `state`, `platform`, `workflows`, `cloud`
-1. `## docker` — shared Docker definition (referenced from services)
-1. `## k8s` — shared AKS definition (referenced from services)
+1. Within `## services`, include `### docker` and `### k8s` subsections for the shared Docker and AKS definitions (from the schema's `definitions` section). These are service-level properties, not top-level.
 1. Include footer and `## Next steps`
 
 ## Section template

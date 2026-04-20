@@ -17,13 +17,13 @@ reviewer: ankushbindlish2
 
 # Azure MCP Server tools for Azure File Shares
 
-The Azure MCP Server lets you manage Azure file shares (`Microsoft.FileShares`) by using natural language prompts. You don't need to remember specific command syntax.
+The Azure Model Context Protocol (MCP) Server lets you manage Azure file shares (`Microsoft.FileShares`) by using natural language prompts. You don't need to remember specific command syntax.
 
 :heavy_check_mark: **Applies to:** File shares created with the `Microsoft.FileShares` resource provider (preview)
 
 :heavy_multiplication_x: **Doesn't apply to:** Classic file shares created with the `Microsoft.Storage` resource provider
 
-[Azure Files](/azure/storage/files/storage-files-introduction) is a managed file sharing service in the cloud. Azure file shares provide high-performance, fully managed storage for your applications and workloads. This article applies only to file shares created with the `Microsoft.FileShares` resource provider (preview), which is currently only available for NFS file shares. It doesn't apply to classic file shares created with the `Microsoft.Storage` resource provider.
+[Azure Files](/azure/storage/files/storage-files-introduction) is a managed file sharing service in the cloud. Azure file shares provide high-performance, fully managed storage for your applications and workloads. This article applies only to file shares created with the `Microsoft.FileShares` resource provider (preview), which is currently only available for Network File System (NFS) file shares. It doesn't apply to classic file shares created with the `Microsoft.Storage` resource provider.
 
 [!INCLUDE [tip-about-params](../includes/tools/parameter-consideration.md)]
 
@@ -79,11 +79,11 @@ Get provisioning parameter recommendations for a file share based on the desired
 
 Example prompts include:
 
-- "Get recommendations for a 1000 GiB file share in location 'eastus'."
-- "Can you provide recommendations for a 500 GiB file share in 'westeurope'?"
-- "Get details for a 2000 GiB file share in location 'centralus'."
-- "I want to see recommendations for a 5000 GiB file share in 'eastus2'."
-- "Retrieve recommendations for a 250 GiB file share in the 'westus' region."
+- "Get recommendations for a 1,000-GiB file share in location 'eastus'."
+- "Can you provide recommendations for a 500-GiB file share in 'westeurope'?"
+- "Get details for a 2,000-GiB file share in location 'centralus'."
+- "I want to see recommendations for a 5,000-GiB file share in 'eastus2'."
+- "Retrieve recommendations for a 250-GiB file share in the 'westus' region."
 
 | Parameter | Required or optional | Description |
 |-----------------------|----------------------|-------------|
@@ -144,7 +144,7 @@ Example prompts include:
 | **Provisioned io per sec** | Optional | The provisioned IO operations per second. |
 | **Provisioned throughput in MiB per sec (mebibytes)** | Optional | The provisioned throughput in MiB per second. |
 | **Public network access** | Optional | Public network access setting (`Enabled` or `Disabled`). |
-| **Nfs root squash** | Optional | NFS root squash setting (`NoRootSquash`, `RootSquash`, or `AllSquash`). |
+| **NFS root squash** | Optional | NFS root squash setting (`NoRootSquash`, `RootSquash`, or `AllSquash`). |
 | **Allowed subnets** | Optional | Comma-separated list of subnet IDs allowed to access the file share. |
 | **Tags** | Optional | Resource tags as JSON (for example, `{"key1":"value1","key2":"value2"}`). |
 
@@ -179,7 +179,7 @@ Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: 
 
 <!-- @mcpcli fileshares fileshare update -->
 
-Update an existing Azure file share resource. You can update mutable properties such as provisioned storage, IOPS, throughput, and network access settings.
+Update an existing Azure file share resource. You can update mutable properties such as provisioned storage, input/output operations per second (IOPS), throughput, and network access settings.
 
 Example prompts include:
 
@@ -197,7 +197,7 @@ Example prompts include:
 | **Provisioned io per sec** | Optional | The provisioned IO operations per second. |
 | **Provisioned throughput in MiB per sec (mebibytes)** | Optional | The provisioned throughput in MiB per second. |
 | **Public network access** | Optional | Public network access setting (`Enabled` or `Disabled`). |
-| **Nfs root squash** | Optional | NFS root squash setting (`NoRootSquash`, `RootSquash`, or `AllSquash`). |
+| **NFS root squash** | Optional | NFS root squash setting (`NoRootSquash`, `RootSquash`, or `AllSquash`). |
 | **Allowed subnets** | Optional | Comma-separated list of subnet IDs allowed to access the file share. |
 | **Tags** | Optional | Resource tags as JSON (for example, `{"key1":"value1","key2":"value2"}`). |
 

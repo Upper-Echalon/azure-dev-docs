@@ -3,7 +3,7 @@ title: Azure Developer CLI's azure.yaml schema
 description: Describes the schema for the Azure Developer CLI azure.yaml configuration file, including all top-level properties, services, resources, hooks, and more.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 04/16/2026
+ms.date: 04/20/2026
 ms.topic: reference
 ms.custom: devx-track-azdevcli
 ms.service: azure-dev-cli
@@ -670,3 +670,124 @@ _(object)_ Provides additional configuration for deploying to sovereign clouds s
 cloud:
   name: AzureUSGovernment
 ```
+
+## `docker`
+
+_(object)_ Docker configuration for container-based hosts. This is only applicable for hosts that support containers.
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `path` | N | string | The path to the Dockerfile, relative to your service. Default: `./Dockerfile`. |
+| `context` | N | string | The docker build context. When specified, overrides the default context. Default: `.`. |
+| `platform` | N | string | The platform target. Default: `amd64`. |
+| `registry` | N | string | The container registry to push the image to. If omitted, defaults to the value of `AZURE_CONTAINER_REGISTRY_ENDPOINT` environment variable. Supports environment variable substitution. |
+| `image` | N | string | The name that is applied to the built container image. If omitted, defaults to `{appName}/{serviceName}-{environmentName}`. Supports environment variable substitution. |
+| `tag` | N | string | The tag that is applied to the built container image. If omitted, defaults to `azd-deploy-{unix time (seconds)}`. Supports environment variable substitution. |
+| `buildArgs` | N | array of strings | Build arguments to pass to the docker build command. |
+| `network` | N | string | The networking mode for RUN instructions during docker build. Passed as `--network` to docker build. For example, use `host` to allow the build container to access the host network. |
+| `remoteBuild` | N | boolean | Whether to build the image remotely. If set to `true`, the image is built remotely using the Azure Container Registry remote build feature. If the remote build fails, `azd` automatically falls back to building locally using Docker or Podman if available. |
+
+```yaml
+services:
+  api:
+    project: ./src/api
+    host: containerapp
+    docker:
+      path: ./Dockerfile
+      context: ../
+      registry: ${AZURE_CONTAINER_REGISTRY_ENDPOINT}
+      tag: ${DOCKER_IMAGE_TAG}
+      remoteBuild: true
+```
+
+## `k8s`
+
+_(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when `host` is `aks`.
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `deploymentPath` | N | string | The relative path from the service path to the k8s deployment manifests. Default: `manifests`. |
+| `namespace` | N | string | The k8s namespace of the deployed resources. When specified, a new k8s namespace is created if it doesn't already exist. Default: project name. |
+| `deployment` | N | object | The k8s deployment configuration. See below. |
+| `service` | N | object | The k8s service configuration. See below. |
+| `ingress` | N | object | The k8s ingress configuration. See below. |
+| `helm` | N | object | The helm configuration. See [Helm config](#helm-config). |
+| `kustomize` | N | object | The kustomize configuration. See [Kustomize config](#kustomize-config). |
+
+### Deployment, service, and ingress
+
+**`deployment` object:**
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | N | string | The name of the k8s deployment resource to use during deployment. If not set, searches for a deployment resource in the same namespace that contains the service name. Default: service name. |
+
+**`service` object:**
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | N | string | The name of the k8s service resource to use as the default service endpoint. If not set, searches for a service resource in the same namespace that contains the service name. Default: service name. |
+
+**`ingress` object:**
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | N | string | The name of the k8s ingress resource to use as the default service endpoint. If not set, searches for an ingress resource in the same namespace that contains the service name. Default: service name. |
+| `relativePath` | N | string | The relative path to the service from the root of your ingress controller. When set, it's appended to the root of your ingress resource path. |
+
+### Helm config
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `repositories` | N | array | The helm repositories to add. |
+| `releases` | N | array | The helm releases to install. |
+
+**`repositories` array items:**
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | Y | string | The name of the helm repository. |
+| `url` | Y | string | The URL of the helm repository. |
+
+**`releases` array items:**
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | Y | string | The name of the helm release. |
+| `chart` | Y | string | The name of the helm chart. |
+| `version` | N | string | The version of the helm chart. |
+| `namespace` | N | string | The k8s namespace to install the helm chart. Defaults to the service namespace. |
+| `values` | N | string | Relative path from service to a `values.yaml` to pass to the helm chart. |
+
+### Kustomize config
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `dir` | N | string | The relative path to the kustomize directory. Supports environment variable substitution. |
+| `edits` | N | array of strings | The kustomize edits to apply before deployment. Supports environment variable substitution. |
+| `env` | N | object | Environment key/value pairs used to generate a `.env` file in the kustomize directory. Values support environment variable substitution. |
+
+```yaml
+services:
+  api:
+    project: ./src/api
+    host: aks
+    k8s:
+      deploymentPath: ./manifests
+      namespace: my-app
+      ingress:
+        relativePath: api
+      helm:
+        repositories:
+          - name: stable
+            url: https://charts.helm.sh/stable
+        releases:
+          - name: my-release
+            chart: stable/my-chart
+            version: 1.0.0
+```
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Customize your Azure Developer CLI workflows using command and event hooks](./azd-extensibility.md)

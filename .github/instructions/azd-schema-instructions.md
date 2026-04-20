@@ -8,12 +8,16 @@ This instruction file defines the structure and conventions for the `azd-schema.
 
 ## Source of truth
 
-The JSON schema at `articles/azure-developer-cli/temp-schema.json` (published at <https://aka.ms/azure.yaml.json>) is the single source of truth. All property names, types, descriptions, enum values, and defaults in the documentation must match the schema.
+The JSON schema published at <https://aka.ms/azure.yaml.json> (source: `https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json`) is the single source of truth. All property names, types, descriptions, enum values, and defaults in the documentation must match the schema.
+
+A local copy is kept at `articles/azure-developer-cli/source-schema.json` to serve as a baseline for diffing against newer versions.
 
 ## Update workflow
 
-1. Diff the old schema against the new schema to identify changes (added properties, removed enum values, updated descriptions, new definitions).
+1. Fetch the latest schema from `https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json`.
+1. Diff it against the local `articles/azure-developer-cli/source-schema.json` to identify changes (added properties, removed enum values, updated descriptions, new definitions).
 1. Apply only the corresponding targeted edits to `azd-schema.md`. Don't regenerate the entire file.
+1. Replace `source-schema.json` with the fetched version so it stays current for future diffs.
 1. Preserve all existing structure, heading hierarchy, and section ordering.
 
 ## Page structure (do not reorder)

@@ -203,27 +203,25 @@ _(object)_ Azure Kubernetes Service (AKS) configuration options. Only valid when
 | --- | --- | --- | --- |
 | `deploymentPath` | N | string | The relative path from the service path to the k8s deployment manifests. Default: `manifests`. |
 | `namespace` | N | string | The k8s namespace of the deployed resources. When specified, a new k8s namespace is created if it doesn't already exist. Default: project name. |
-| `deployment` | N | object | The k8s deployment configuration. See below. |
-| `service` | N | object | The k8s service configuration. See below. |
-| `ingress` | N | object | The k8s ingress configuration. See below. |
+| `deployment` | N | object | The k8s deployment configuration. See [Deployment config](#deployment-config). |
+| `service` | N | object | The k8s service configuration. See [Service config](#service-config). |
+| `ingress` | N | object | The k8s ingress configuration. See [Ingress config](#ingress-config). |
 | `helm` | N | object | The helm configuration. See [Helm config](#helm-config). |
 | `kustomize` | N | object | The kustomize configuration. See [Kustomize config](#kustomize-config). |
 
-#### Deployment, service, and ingress
-
-**`deployment` object:**
+#### Deployment config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `name` | N | string | The name of the k8s deployment resource to use during deployment. If not set, searches for a deployment resource in the same namespace that contains the service name. Default: service name. |
 
-**`service` object:**
+#### Service config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `name` | N | string | The name of the k8s service resource to use as the default service endpoint. If not set, searches for a service resource in the same namespace that contains the service name. Default: service name. |
 
-**`ingress` object:**
+#### Ingress config
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 ---
-title: Authenticate Rust Apps to Azure Using the Azure Identity Crate
-description: Authenticate Rust apps with Azure services using the Azure Identity crate for local development and managed identities.
+title: Authenticate Rust Apps to Azure Using the Identity Crate
+description: Authenticate Rust apps with Azure services using the Azure Identity crate for local development and production managed identities.
 ms.date: 09/02/2025
 ms.topic: overview
 ms.service: azure-rust
@@ -8,7 +8,7 @@ ms.custom:
   - devx-track-rust
 ---
 
-# Authenticate Rust Apps to Azure Using the Azure Identity Crate
+# Authenticate Rust Apps to Azure Using the Identity Crate
 
 Rust applications must authenticate to Azure services such as Storage, Key Vault, or Cosmos DB. This article explains how to use the Azure Identity crate to securely authenticate Rust apps in local development and server environments, improving security and simplifying credential management.
 

@@ -78,7 +78,7 @@ The behavior works as follows:
 - If previous deployments exist and two or more slots exist, `azd` uses the slot specified by an environment variable or prompts you to choose one.
 
 > [!IMPORTANT]
-> After the first deployment, `azd` doesn't deploy directly to the main App Service app when slots exist. This behavior is intentional and helps prevent accidental direct-to-production deployments. To update production, deploy to a slot and then swap the slot into `@main`.
+> After the first deployment, `azd` doesn't deploy directly to the main App Service app when slots exist. This behavior is intentional and helps prevent accidental direct-to-production deployments. To update production, deploy to a slot and then swap the slot into production (`@main`).
 
 ## Select a slot with an environment variable
 
@@ -86,7 +86,7 @@ When your service has two or more slots after the first deployment, you can skip
 
 Use the following format:
 
-`AZD_DEPLOY_{SERVICE_NAME}_SLOT_NAME`
+`AZD_DEPLOY_<SERVICE_NAME>_SLOT_NAME`
 
 Build the variable name from the service name in `azure.yaml` by using uppercase and replacing hyphens with underscores.
 
@@ -113,7 +113,7 @@ When you run `azd deploy --no-prompt` or deploy from CI, slot selection behaves 
 | `1` | Ignored. | `azd` deploys to the only slot. |
 | `2+` | Required to avoid prompting. | `azd` deploys to the specified slot, or fails if no slot can be selected. |
 
-If you automate deployments for an App Service that has two or more slots, set `AZD_DEPLOY_{SERVICE_NAME}_SLOT_NAME` in the pipeline environment before running `azd deploy`.
+If you automate deployments for an App Service that has two or more slots, set `AZD_DEPLOY_<SERVICE_NAME>_SLOT_NAME` in the pipeline environment before running `azd deploy`.
 
 ## Swap Azure App Service deployment slots
 

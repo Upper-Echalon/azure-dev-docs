@@ -32,9 +32,13 @@ The Azure MCP Server can execute Azure Quick Review CLI commands to generate com
 - **Security scan**: "scan resources in dev-rg for security problems"
 - **Generate report**: "Create compliance report for subscription abc123 and resource group web-apps"
 
+| Parameter | Required or optional | Description |
+|-----------|-------------|-------------|
+| **Resource group** | Optional | The name of the Azure resource group. This is a logical container for Azure resources. |
+
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
+Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
 
 ## Related content
 

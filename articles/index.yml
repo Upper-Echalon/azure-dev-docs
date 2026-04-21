@@ -126,21 +126,11 @@ conceptualContent:
         - url: ./azure-mcp-server/overview.md
           itemType: overview
           text: What is Azure MCP Server?
-      footerLink:
-        url: /azure/developer/ai-developer-tools/
-        text: See more
-    # Card
-    - title: Azure Skills
-      summary: Use Azure Skills to extend the capabilities of your AI applications.
-      links:
         - url: ./azure-skills/overview.md
           itemType: overview
           text: What are Azure Skills?
-        - url: ./azure-skills/quickstart.md
-          itemType: get-started
-          text: Get started
       footerLink:
-        url: /azure/developer/azure-skills/
+        url: /azure/developer/ai-developer-tools/
         text: See more
     # Card
     - title: GitHub Copilot app modernization

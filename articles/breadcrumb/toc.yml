@@ -37,6 +37,9 @@ items:
     - name: Python
       tocHref: /azure/developer/python
       topicHref: /azure/developer/python/index
+    - name: Rust
+      tocHref: /azure/developer/rust
+      topicHref: /azure/developer/rust/index
     - name: Terraform
       tocHref: /azure/developer/terraform
       topicHref: /azure/developer/terraform/index

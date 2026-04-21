@@ -118,7 +118,7 @@ conceptualContent:
         text: See more
     # Card
     - title: Azure AI developer tools
-      summary: Use Azure AI ddeveloper tools to enhance your AI development workflow.
+      summary: Use Azure AI developer tools to enhance your AI development workflow.
       links:
         - url: ./github-copilot-azure/introduction.md
           itemType: overview

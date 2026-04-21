@@ -298,7 +298,7 @@
         "github-copilot-azure/**/*.yml": "GitHub Copilot for Azure",
         "typespec/**/*.md": "TypeSpec",
         "typespec/**/*.md": "TypeSpec",
-        "rust/**/*.yml": "Rust on Azure",
+        "rust/**/*.md": "Rust on Azure",
         "rust/**/*.yml": "Rust on Azure",
         "azure-mcp-server/**/*.md": "Azure MCP Server",
         "azure-mcp-server/**/*.yml": "Azure MCP Server",

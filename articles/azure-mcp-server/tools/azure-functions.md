@@ -43,7 +43,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 
@@ -62,7 +62,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 
 ## Functions: get project get
@@ -83,7 +83,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Functions: list or get template
 
@@ -108,7 +108,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

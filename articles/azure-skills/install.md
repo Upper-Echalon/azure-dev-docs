@@ -19,7 +19,7 @@ Make sure you have:
 
 - **Node.js Long Term Support (LTS)**: [Download from nodejs.org](https://nodejs.org) or use a version manager like [nvm](https://github.com/nvm-sh/nvm).
 - **Azure account**: [Create a free account](https://azure.microsoft.com/free/) if you don't have one.
-- **An AI assistant**: [GitHub Copilot CLI](../github-copilot-azure/introduction.md), Claude Code, or another compatible platform.
+- **An AI assistant**: [GitHub Copilot CLI](../github-cilot-azure/introduction.md), Claude Code, or another compatible platform.
 - **Azure CLI** (recommended for local development): Simplifies authentication. [Install Azure CLI](/cli/azure/install-azure-cli). Environment variables or managed identity can be used as alternatives in CI/CD pipelines.
 
 > [!NOTE]
@@ -150,13 +150,13 @@ Update:
 
 Install the Azure plugin from the [Cursor Marketplace](https://cursor.com/marketplace/azure) or directly from Cursor settings:
 
-1. Navigate to **Settings** > **Plugins**.
+1. Go to **Settings** > **Plugins**.
 1. Search for *Azure*.
 1. Select the Azure plugin to install it.
 
     :::image type="content" source="media/cursor-plugins.png" alt-text="A screenshot showing the Azure plugin in the Cursor Plugins settings.":::
 
-The plugin configures the Azure MCP Server, Foundry MCP, and the full skills layer automatically.
+The plugin automatically configures the Azure MCP Server, Foundry MCP, and the full skills layer.
 
 ### [IntelliJ IDEA](#tab/intellij)
 
@@ -188,7 +188,7 @@ git --version
 1. Select the **Enable Skills** checkbox.
 1. Select **Apply** and **OK**.
 
-    :::image type="content" source="media/intellij-enable-azure-skills.png" alt-text="A screenshot showing how to enable skills in IntelliJ IDEA GitHub Copilot settings.":::
+    :::image type="content" source="media/enable-azure-skills.png" alt-text="A screenshot showing how to enable skills in IntelliJ IDEA GitHub Copilot settings.":::
 
 #### Step 3: Install Azure Skills
 
@@ -198,11 +198,11 @@ git --version
 1. Restart IntelliJ IDEA to complete the plugin installation.
 1. After restarting, a notification appears offering to install Azure Skills. Select **Install** to add the Azure skills to your environment.
 
-    :::image type="content" source="media/intellij-install-skills-notification.png" alt-text="A screenshot showing the Azure Skills install notification in IntelliJ IDEA.":::
+    :::image type="content" source="media/install-skills-notification.png" alt-text="A screenshot showing the Azure Skills install notification in IntelliJ IDEA.":::
 
 1. Verify the installation by opening the GitHub Copilot chat window and typing `/skill:azure`. This command displays all available Azure skills.
 
-    :::image type="content" source="media/intellij-verify-azure-skills.png" alt-text="A screenshot showing the Azure Skills verification output in IntelliJ IDEA.":::
+    :::image type="content" source="media/verify-azure-skills.png" alt-text="A screenshot showing the Azure Skills verification output in IntelliJ IDEA.":::
 
 **Option 2: Manual install**
 
@@ -241,7 +241,7 @@ After installation, confirm Azure Skills is ready to use.
 
 ## Try Azure Skills
 
-Now that you installed and verified Azure Skills, try these prompts in your AI assistant's chat window:
+After you install and verify Azure Skills, try these prompts in your AI assistant's chat window:
 
 **Prepare a deployment plan for your project:**
 
@@ -257,7 +257,7 @@ Expected response: The assistant analyzes your codebase and generates infrastruc
 I'm getting errors from my Azure App Service. What's wrong and how do I fix it?
 ```
 
-Expected response: The assistant inspects your app service, checks logs, and reviews recent deployments. It identifies issues and provides remediation steps.
+Expected response: The assistant inspects your app service, checks logs, and reviews recent deployments. It identifies problems and provides remediation steps.
 
 **Set up monitoring and observability:**
 

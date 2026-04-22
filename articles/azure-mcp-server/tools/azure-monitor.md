@@ -47,7 +47,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Web Tests: Create or update web test
 
@@ -86,7 +86,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ£à | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Web Tests: Get web test
 
@@ -106,7 +106,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: List workspaces
 
@@ -122,7 +122,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: List tables
 
@@ -141,7 +141,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: Get table types
 
@@ -161,7 +161,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: Query workspace logs
 
@@ -184,7 +184,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Log Analytics: Query resource logs
 
@@ -206,7 +206,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Health: Get entity health
 
@@ -226,7 +226,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Metrics: Query metrics
 
@@ -258,7 +258,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Metrics: List metric definitions
 
@@ -282,7 +282,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Instrumentation: Get learning resource
 
@@ -305,7 +305,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ£à
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ✅
 
 ## Instrumentation: Start orchestration
 
@@ -325,7 +325,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ£à
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
 ## Instrumentation: Continue orchestration
 
@@ -357,7 +357,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ£à
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
 ## Instrumentation: Send brownfield analysis
 
@@ -378,7 +378,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ£à
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
 ## Instrumentation: Send enhancement selection
 
@@ -399,7 +399,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ£à
+Destructive: ❌ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ✅
 
 ## Workbooks: List workbooks
 
@@ -407,7 +407,7 @@ Destructive: Γ¥î | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥�
 
 Search Azure Workbooks using Resource Graph for fast metadata queries. This tool helps you discover, filter, and count workbooks across different scopes.
 
-It returns workbook metadata, including `id`, `name`, `location`, `category`, and timestamps. By default, it doesn't return full workbook content (`serializedData`) ΓÇö use the show tool for that, or set `Output format` to `full`.
+It returns workbook metadata, including `id`, `name`, `location`, `category`, and timestamps. By default, it doesn't return full workbook content (`serializedData`) — use the show tool for that, or set `Output format` to `full`.
 
 By default, the search targets workbooks in your current Azure context (tenant/subscription). You can use `Resource group` to explicitly specify your search scope. The tool returns the server-side total count by default. The maximum results returned is 50, with a maximum limit of 1000; adjust this with `Max results`. Choose `Output format` as `summary` for minimal tokens or `full` for complete `serializedData` output.
 
@@ -431,7 +431,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Workbooks: Show workbook details
 
@@ -452,7 +452,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ¥î | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ£à | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Workbooks: Create workbook
 
@@ -474,7 +474,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ£à | Idempotent: Γ¥î | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ✅ | Idempotent: ❌ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Workbooks: Update workbook
 
@@ -495,7 +495,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ£à | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Workbooks: Delete workbooks
 
@@ -518,7 +518,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-Destructive: Γ£à | Idempotent: Γ£à | Open World: Γ¥î | Read Only: Γ¥î | Secret: Γ¥î | Local Required: Γ¥î
+Destructive: ✅ | Idempotent: ✅ | Open World: ❌ | Read Only: ❌ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

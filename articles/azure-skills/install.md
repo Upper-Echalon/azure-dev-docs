@@ -146,6 +146,75 @@ Update:
 /plugin marketplace update azure-skills
 ```
 
+### [Cursor](#tab/cursor)
+
+Install the Azure plugin from the [Cursor Marketplace](https://cursor.com/marketplace/azure) or directly from Cursor settings:
+
+1. Navigate to **Settings** > **Plugins**.
+1. Search for *Azure*.
+1. Select the Azure plugin to install it.
+
+    :::image type="content" source="media/cursor-plugins.png" alt-text="A screenshot showing the Azure plugin in the Cursor Plugins settings.":::
+
+The plugin configures the Azure MCP Server, Foundry MCP, and the full skills layer automatically.
+
+### [IntelliJ IDEA](#tab/intellij)
+
+Before installing Azure Skills in IntelliJ IDEA, make sure you have:
+
+- **Node.js 18+** installed on your system with `npx` available on your PATH.
+- **Git** installed and accessible from the command line.
+
+You can verify these prerequisites by running:
+
+```bash
+npx --version
+git --version
+```
+
+#### Step 1: Install GitHub Copilot plugin
+
+1. Open IntelliJ IDEA.
+1. Go to **File** > **Settings** (on Windows/Linux) or **IntelliJ IDEA** > **Preferences** (on macOS).
+1. Navigate to **Plugins** in the left sidebar.
+1. Search for *GitHub Copilot* in the Marketplace tab.
+1. Install the [GitHub Copilot plugin](https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer) (requires version 1.5.64-242 or higher).
+1. Restart IntelliJ IDEA when prompted.
+
+#### Step 2: Enable skills for GitHub Copilot
+
+1. Open IntelliJ IDEA settings or preferences again.
+1. Navigate to **Tools** > **GitHub Copilot** > **Chat**.
+1. Select the **Enable Skills** checkbox.
+1. Select **Apply** and **OK**.
+
+    :::image type="content" source="media/intellij-enable-azure-skills.png" alt-text="A screenshot showing how to enable skills in IntelliJ IDEA GitHub Copilot settings.":::
+
+#### Step 3: Install Azure Skills
+
+**Option 1: Azure Toolkit for IntelliJ**
+
+1. Install the [Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij) plugin from the JetBrains Marketplace.
+1. Restart IntelliJ IDEA to complete the plugin installation.
+1. After restarting, a notification appears offering to install Azure Skills. Select **Install** to add the Azure skills to your environment.
+
+    :::image type="content" source="media/intellij-install-skills-notification.png" alt-text="A screenshot showing the Azure Skills install notification in IntelliJ IDEA.":::
+
+1. Verify the installation by opening the GitHub Copilot chat window and typing `/skill:azure`. This command displays all available Azure skills.
+
+    :::image type="content" source="media/intellij-verify-azure-skills.png" alt-text="A screenshot showing the Azure Skills verification output in IntelliJ IDEA.":::
+
+**Option 2: Manual install**
+
+1. Open a terminal or command prompt.
+1. Run the following command to install Azure Skills globally for GitHub Copilot:
+
+    ```bash
+    npx skills add https://github.com/microsoft/azure-skills/tree/main/.github/plugins/azure-skills/skills -a github-copilot -g -y
+    ```
+
+1. Wait for the installation to complete. A confirmation message appears when the Azure skills are successfully added.
+
 ---
 
 For the full list of supported hosts and installation options, see the [Azure Skills repository](https://github.com/microsoft/azure-skills).

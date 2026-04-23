@@ -16,7 +16,7 @@ Azure Developer CLI (`azd`) supports multiple infrastructures as code (IaC) prov
 - [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep)
 - [Terraform](../terraform/overview.md)
 
-By default, `azd` assumes Bicep as the IaC provider. Refer to the [Comparing Terraform and Bicep](../terraform/comparing-terraform-and-bicep.md?tabs=comparing-bicep-terraform-integration-features) article for help deciding which IaC provider is best for your project.
+By default, `azd` assumes Bicep as the IaC provider. Refer to the [Comparing Terraform and Bicep](../terraform/comparing-terraform-and-bicep.md?tabs=comparing-bicep-terraform-integration-features) article for help with deciding which IaC provider is best for your project.
 
 > [!NOTE]
 > Terraform is still in beta. Read more about alpha and beta feature support on the [feature versioning and release strategy](/azure/developer/azure-developer-cli/feature-versioning) page

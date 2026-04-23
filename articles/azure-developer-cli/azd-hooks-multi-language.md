@@ -57,7 +57,7 @@ hooks:
 
 ### Python-specific configuration
 
-You can override the default virtual environment name using the `config` block:
+Use the `config` block to override the default virtual environment name.
 
 ```yaml
 hooks:
@@ -89,7 +89,7 @@ hooks:
 
 ### JavaScript and TypeScript configuration
 
-You can specify a preferred package manager using the `config` block:
+Use the `config` block to specify a preferred package manager.
 
 ```yaml
 hooks:
@@ -124,7 +124,7 @@ hooks:
 
 ### .NET-specific configuration
 
-You can specify the build configuration and target framework using the `config` block:
+Specify the build configuration and target framework by using the `config` block:
 
 ```yaml
 hooks:
@@ -137,7 +137,7 @@ hooks:
 
 ## Override the working directory
 
-Use the `dir` field to set the working directory for a hook. This configuration is useful when the project root differs from the script location:
+Set the working directory for a hook by using the `dir` field. This configuration is useful when the project root differs from the script location:
 
 ```yaml
 hooks:
@@ -148,7 +148,7 @@ hooks:
 
 ## Mix languages and formats
 
-You can use different languages for different hooks in the same `azure.yaml` file. You can also combine multi-language hooks with platform-specific overrides:
+Use different languages for different hooks in the same `azure.yaml` file. You can also combine multi-language hooks with platform-specific overrides:
 
 ```yaml
 hooks:

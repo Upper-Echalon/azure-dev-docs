@@ -193,9 +193,6 @@ The `host` property determines the type of Azure resource used for service imple
 > [!NOTE]
 > When `host` is `containerapp`, you must provide either `image` or `project`, but not both. If `image` is set, the container is deployed from the specified image. If `project` is set, the container image is built from source.
 
-> [!NOTE]
-> When `host` is `ai.endpoint`, both `project` and `config` are required. See [`ai.endpoint` config](#aiendpoint-config) for the required configuration properties.
-
 #### `ai.endpoint` config
 
 _(object, required when `host` is `ai.endpoint`)_ Provides additional configuration for Azure AI online endpoint deployment.
@@ -207,6 +204,9 @@ _(object, required when `host` is `ai.endpoint`)_ Provides additional configurat
 | `environment` | N | object | The Azure AI Studio custom environment configuration. When omitted, a custom environment isn't created. See [AI component config](#ai-component-config). |
 | `model` | N | object | The Azure AI Studio model configuration. When omitted, a model isn't created. See [AI component config](#ai-component-config). |
 | `deployment` | Y | object | The Azure AI Studio online endpoint deployment configuration. A new online endpoint deployment is created and traffic is automatically shifted to the new deployment upon successful completion. See [AI deployment config](#ai-deployment-config). |
+
+> [!NOTE]
+> When `host` is `ai.endpoint`, both `project` and `config` are required. See [`ai.endpoint` config](#aiendpoint-config) for the required configuration properties.
 
 ##### AI component config
 

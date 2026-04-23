@@ -12,7 +12,7 @@ ms.topic: concept-article
 ms.custom: build-2025
 tool_count for monitor: 16
 tool_count for workbooks: 5
-ms.reviewer: jong
+ms.reviewer: diberry, jong
 reviewer: jongio
 mcp-cli.version: 2.0.0-beta.39
 ---

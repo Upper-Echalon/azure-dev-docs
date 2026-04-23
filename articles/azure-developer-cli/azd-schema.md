@@ -18,7 +18,7 @@ This article is a complete reference for the [azure.yaml schema](https://aka.ms/
 
 ## Sample
 
-The following is a generic example of an `azure.yaml` file for an `azd` template:
+The following is a generic example of an `azure.yaml` file for an `azd` template. For a real-world example, see the [`azure.yaml`](https://github.com/Azure-Samples/todo-nodejs-mongo/blob/main/azure.yaml) from the [ToDo NodeJs Mongo template](https://github.com/Azure-Samples/todo-nodejs-mongo):
 
 ```yaml
 name: yourApp
@@ -122,6 +122,28 @@ infra:
           run: ./scripts/post-provision.sh
 ```
 
+### Terraform as IaC provider sample
+
+To use Terraform instead of Bicep, set the `provider` to `terraform`. For more information, see [Use Terraform as an IaC provider](./use-terraform-for-azd.md).
+
+```yaml
+name: yourApp-terraform
+metadata:
+  template: yourApp-terraform@0.0.1-beta
+services:
+  web:
+    project: ./src/web
+    dist: build
+    language: js
+    host: appservice
+  api:
+    project: ./src/api
+    language: js
+    host: appservice
+infra:
+  provider: terraform
+```
+
 ## `services`
 
 _(object)_ Definition of services that comprise the application. Each key is a service name, and the value is a service configuration object.
@@ -166,7 +188,54 @@ The `host` property determines the type of Azure resource used for service imple
 | `azure.ai.agent` | Azure AI Agent | Y | N | Y | N | N | N |
 
 > [!NOTE]
+> `springapp` support requires opt-in to alpha features. For more information, see [Alpha features](./feature-versioning.md#alpha-features).
+
+> [!NOTE]
 > When `host` is `containerapp`, you must provide either `image` or `project`, but not both. If `image` is set, the container is deployed from the specified image. If `project` is set, the container image is built from source.
+
+> [!NOTE]
+> When `host` is `ai.endpoint`, both `project` and `config` are required. See [`ai.endpoint` config](#aiendpoint-config) for the required configuration properties.
+
+#### `ai.endpoint` config
+
+_(object, required when `host` is `ai.endpoint`)_ Provides additional configuration for Azure AI online endpoint deployment.
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `workspace` | N | string | The name of the AI Studio project workspace. When omitted, `azd` uses the value specified in the `AZUREAI_PROJECT_NAME` environment variable. Supports environment variable substitution. |
+| `flow` | N | object | The Azure AI Studio Prompt Flow configuration. When omitted, a prompt flow isn't created. See [AI component config](#ai-component-config). |
+| `environment` | N | object | The Azure AI Studio custom environment configuration. When omitted, a custom environment isn't created. See [AI component config](#ai-component-config). |
+| `model` | N | object | The Azure AI Studio model configuration. When omitted, a model isn't created. See [AI component config](#ai-component-config). |
+| `deployment` | Y | object | The Azure AI Studio online endpoint deployment configuration. A new online endpoint deployment is created and traffic is automatically shifted to the new deployment upon successful completion. See [AI deployment config](#ai-deployment-config). |
+
+##### AI component config
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `name` | N | string | Name of the AI component. When omitted, `azd` generates a name based on the component type and the service name. Supports environment variable substitution. |
+| `path` | Y | string | The path to the AI component configuration file or source code. |
+| `overrides` | N | object | A map of key value pairs used to override the AI component configuration. Supports environment variable substitution. |
+
+##### AI deployment config
+
+Inherits all properties from [AI component config](#ai-component-config), plus:
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `environment` | N | object | A map of key/value pairs to set as environment variables for the deployment. Values support OS and `azd` environment variable substitution. |
+
+```yaml
+services:
+  myendpoint:
+    project: ./src/endpoint
+    host: ai.endpoint
+    config:
+      workspace: my-ai-project
+      deployment:
+        path: ./deployment
+        environment:
+          MODEL_NAME: ${AZURE_OPENAI_MODEL}
+```
 
 #### `docker`
 
@@ -338,7 +407,7 @@ The `type` property determines the kind of Azure resource and controls which add
 | `host.containerapp` | Docker-based container app | See [`host.containerapp` properties](#hostcontainerapp-properties). |
 | `ai.openai.model` | A deployed, ready-to-use AI model | See [`ai.openai.model` properties](#aiopenaimodel-properties). |
 | `ai.project` | A Microsoft Foundry project with models | See [`ai.project` properties](#aiproject-properties). |
-| `ai.search` | Azure AI Search | No extra properties. |
+| `ai.search` | Azure AI Search | See [`ai.search` properties](#aisearch-properties). |
 | `db.postgres` | Azure Database for PostgreSQL | No extra properties. |
 | `db.mysql` | Azure Database for MySQL | No extra properties. |
 | `db.redis` | Azure Cache for Redis | No extra properties. |
@@ -347,16 +416,17 @@ The `type` property determines the kind of Azure resource and controls which add
 | `messaging.eventhubs` | Azure Event Hubs namespace | See [`messaging.eventhubs` properties](#messagingeventhubs-properties). |
 | `messaging.servicebus` | Azure Service Bus namespace | See [`messaging.servicebus` properties](#messagingservicebus-properties). |
 | `storage` | Azure Storage Account | See [`storage` properties](#storage-properties). |
-| `keyvault` | Azure Key Vault | No extra properties. |
+| `keyvault` | Azure Key Vault | See [`keyvault` properties](#keyvault-properties). |
 
 ### `host.appservice` properties
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
-| `port` | Y | integer | Port that the web app listens on. Default: `80`. |
+| `port` | N | integer | Port that the web app listens on. Default: `80`. |
 | `runtime` | Y | object | The language runtime configuration. See below. |
 | `env` | N | array | Environment variables. Each item has `name` (required), `value`, and `secret` properties. Supports environment variable substitution. |
 | `startupCommand` | N | string | Startup command that runs as part of web app startup. |
+| `uses` | N | array of strings | Other resources that this resource uses. |
 
 **`runtime` object:**
 
@@ -381,14 +451,16 @@ resources:
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
-| `port` | Y | integer | Port that the container app listens on. Default: `80`. |
+| `port` | N | integer | Port that the container app listens on. Default: `80`. |
 | `env` | N | array | Environment variables. Each item has `name` (required), `value`, and `secret` properties. Supports environment variable substitution. |
+| `uses` | N | array of strings | Other resources that this resource uses. |
 
 ### `ai.openai.model` properties
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `model` | Conditional | object | The underlying AI model. Required when `existing` is `false`. |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 **`model` object:**
 
@@ -411,6 +483,7 @@ resources:
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `models` | N | array | The AI models to be deployed as part of the AI project. |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 **`models` array items:**
 
@@ -428,6 +501,12 @@ resources:
 | `name` | Y | string | The name of the SKU (for example, `GlobalStandard`). |
 | `usageName` | Y | string | The usage name of the SKU for billing purposes (for example, `OpenAI.GlobalStandard.gpt-4o-mini`). |
 | `capacity` | Y | integer | The capacity of the SKU. |
+
+### `ai.search` properties
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 ### `db.cosmos` properties
 
@@ -447,6 +526,7 @@ resources:
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `hubs` | N | array of strings | Hub names to create in the Event Hubs namespace. |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 ### `messaging.servicebus` properties
 
@@ -454,12 +534,20 @@ resources:
 | --- | --- | --- | --- |
 | `queues` | N | array of strings | Queue names to create in the Service Bus namespace. |
 | `topics` | N | array of strings | Topic names to create in the Service Bus namespace. |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 ### `storage` properties
 
 | Property | Required | Type | Description |
 | --- | --- | --- | --- |
 | `containers` | N | array of strings | Azure Storage Account container names. |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
+
+### `keyvault` properties
+
+| Property | Required | Type | Description |
+| --- | --- | --- | --- |
+| `existing` | N | boolean | When set to `true`, this resource isn't created and instead is used for referencing purposes. Default: `false`. |
 
 ### Resources sample
 
@@ -732,6 +820,8 @@ _(object)_ Provides additional configuration for deploying to sovereign clouds s
 cloud:
   name: AzureUSGovernment
 ```
+
+[!INCLUDE [request-help](includes/request-help.md)]
 
 ## Next steps
 

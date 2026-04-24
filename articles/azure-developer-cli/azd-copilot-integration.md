@@ -14,6 +14,10 @@ ai-usage: ai-generated
 
 The Azure Developer CLI (`azd`) integrates with GitHub Copilot to provide AI-assisted project scaffolding during `azd init` and intelligent error troubleshooting when commands fail.
 
+When you run `azd init`, `azd` presents a **Set up with GitHub Copilot (Preview)** option. If selected, Copilot analyzes your codebase and generates `azure.yaml`, infrastructure templates, and deployment configuration based on your code's language, framework, and dependencies. Copilot-powered init supports both new and existing projects.
+
+When an `azd` command fails, `azd` can use Copilot to analyze the error, suggest a fix, and optionally apply it automatically.
+
 ## Prerequisites
 
 To use these features, you need:
@@ -22,26 +26,32 @@ To use these features, you need:
 - **GitHub Copilot access** — An active GitHub Copilot subscription (Individual, Business, or Enterprise).
 - **GitHub CLI (`gh`)** — `azd` automatically checks and prompts for login if needed.
 
-## Copilot-powered project setup with `azd init`
+## Scaffold a project with Copilot and `azd init`
 
-Running `azd init` now presents a **Set up with GitHub Copilot (Preview)** option. Select it, and Copilot analyzes your codebase to scaffold the project, which includes generating `azure.yaml`, infrastructure templates, and deployment configuration based on your code's language, framework, and dependencies.
-
-Copilot-powered init supports both new and existing projects. For new projects, Copilot generates the configuration and infrastructure from scratch. For existing projects, Copilot analyzes your codebase and generates the configuration needed to deploy it with `azd`.
+The following example demonstrates how to use Copilot-powered init to scaffold an Express API project with a PostgreSQL dependency.
 
 Before making any changes, the flow runs preflight checks. It verifies your git working directory is clean so no uncommitted work is at risk. It also prompts for Model Context Protocol (MCP) server tool consent upfront so you can review what tools Copilot accesses.
 
-To use Copilot-powered init:
+1. Run `azd init` and select **Set up with GitHub Copilot (Preview)**:
+
+    ```bash
+    azd init
+    # Select: "Set up with GitHub Copilot (Preview)"
+    ```
+
+1. Copilot examines your project structure and detects the Express framework and PostgreSQL dependency from your project files.
+1. Copilot determines the appropriate `host` type (`containerapp`) and `language` (`js`) for the service.
+1. Copilot generates an `azure.yaml` with the correct service configuration.
+1. Copilot creates Bicep modules for Azure Container Apps and Azure Database for PostgreSQL based on the detected dependencies.
+1. Review and approve the generated files before they're written to disk.
+
+After scaffolding completes, provision and deploy the project by running `azd up` as usual:
 
 ```bash
-azd init
-# Select: "Set up with GitHub Copilot (Preview)"
+azd up
 ```
 
-The Copilot agent examines your project structure, proposes an `azure.yaml` configuration, and generates the necessary infrastructure files. You review and approve the changes before anything is written to disk.
-
-### Example: scaffolding a Node.js app
-
-For an Express API project with a `package.json`, a `src/` directory, and a PostgreSQL dependency, Copilot-powered init detects the Express framework and PostgreSQL dependency. It generates the `azure.yaml`, a Bicep module for Azure Container Apps, and a Bicep module for Azure Database for PostgreSQL. You review the generated files before they're written to disk.
+For more information about the `azd up` workflow, see [Explore the azd up workflow](azd-up-workflow.md).
 
 ## AI-assisted error troubleshooting
 
@@ -49,12 +59,20 @@ When an `azd` command fails, `azd` can use Copilot to analyze the error and sugg
 
 ### Copilot troubleshooting options
 
-When an `azd` command fails, choose from four troubleshooting options:
+When a command fails, `azd` displays an interactive prompt with four options. Use the arrow keys to select an option and press **Enter**:
 
 - **Explain** — Get a plain-language explanation of what went wrong.
 - **Guidance** — Receive step-by-step instructions to fix the issue.
 - **Diagnose and Guide** — Get troubleshooting steps on what happened, why the error happened, and how to fix it. Let Copilot apply a fix (with your approval), then optionally retry the failed command.
 - **Skip** — Dismiss and handle the error manually.
+
+```text
+? How would you like to proceed?  [Use arrows to move, type to filter]
+> Explain
+  Guidance
+  Diagnose and Guide
+  Skip
+```
 
 Copilot uses your project configuration, the command that failed, and the error details to provide suggestions specific to your situation.
 

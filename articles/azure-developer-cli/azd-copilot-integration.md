@@ -25,7 +25,7 @@ To use these features, you need:
 - **azd 1.23.11 or later** — Run `azd version` to check, or `azd update` to get the latest.
 - **GitHub Copilot access** — An active GitHub Copilot subscription (Individual, Business, or Enterprise).
 - **GitHub CLI (`gh`)** — `azd` automatically checks and prompts for login if needed.
-
+- **GitHub CLI (`gh`)** — [Install the GitHub CLI](https://cli.github.com/). `azd` automatically checks for `gh` authentication and prompts for login if needed.
 ## Scaffold a project with Copilot and `azd init`
 
 The following example demonstrates how to use Copilot-powered init to scaffold an Express API project with a PostgreSQL dependency.

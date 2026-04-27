@@ -19,6 +19,8 @@ landingContent:
             url: overview.md
       - linkListType: how-to-guide
         links:
+          - text: Install with the Azure Skills Plugin
+            url: https://github.com/microsoft/azure-skills
           - text: Install in an IDE
             url: get-started.md#use-a-code-editor
           - text: Install with a package manager
@@ -49,6 +51,8 @@ landingContent:
         links:
           - text: Connect GitHub Copilot coding agent to the Azure MCP Server
             url: how-to/github-copilot-coding-agent.md
+          - text: Connect Azure MCP Server to sovereign clouds
+            url: how-to/connect-sovereign-clouds.md
           - text: Deploy remote MCP Server with Copilot Studio
             url: how-to/deploy-remote-mcp-server-copilot-studio.md
           - text: Deploy remote MCP Server with Microsoft Foundry

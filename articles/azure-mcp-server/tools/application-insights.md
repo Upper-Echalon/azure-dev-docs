@@ -1,7 +1,6 @@
 ---
 title: Application Insights Tools 
 description: "Use Azure MCP Server with Application Insights to list resources and code optimization recommendations using natural language prompts."
-keywords: azure mcp server, azmcp, application insights, log analytics
 author: diberry
 ms.author: diberry
 ms.date: 02/27/2026
@@ -33,7 +32,7 @@ Example prompts include:
 
 [Tool annotation hints](index.md#tool-annotations-for-azure-mcp-server):
 
-[!INCLUDE [applicationinsights recommendation list](../includes/tools/annotations/azure-application-insights-recommendation-list-annotations.md)]
+Destructive: ❌ | Idempotent: ✅ | Open World: ❌ | Read Only: ✅ | Secret: ❌ | Local Required: ❌
 
 ## Related content
 

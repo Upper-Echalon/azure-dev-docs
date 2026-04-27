@@ -1,10 +1,9 @@
 ---
 title: Azure Key Vault Tools 
 description: Learn how to use the Azure MCP Server with Azure Key Vault keys.
-keywords: azure mcp server, azmcp, key vault
 author: diberry
 ms.author: diberry
-ms.date: 10/27/2025
+ms.date: 02/27/2026
 content_well_notification: 
   - AI-contribution
 ai-usage: ai-assisted
@@ -21,7 +20,7 @@ The tools reference articles document the parameters specific to each tool. All 
 
 | Parameter       | Description       |
 |-----------------|-------------------|
-| **Subscription** | [Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions) ID or name for target resources. This parameter identifies the Azure subscription that contains the resources you want to manage. You can use either the subscription GUID or the display name. Required for most operations. |
+| **Subscription** | [Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions) ID or name for target resources. This parameter identifies the Azure subscription that contains the resources you want to manage. You can use either the subscription GUID or the display name. If not specified, the Azure MCP Server resolves the default subscription from your [Azure CLI](/cli/azure/) profile (set via [`az account set`](/cli/azure/account#az-account-set)) or the `AZURE_SUBSCRIPTION_ID` environment variable. Required for most operations unless a default is configured. |
 | **Resource group** | The name of the Azure resource group. This is a logical container for Azure resources that helps organize and manage related resources together. Required for most resource-specific operations. |
 | **Tenant Id** | [Azure tenant](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-ad-define) ID for authentication. This parameter specifies the Microsoft Entra ID tenant to authenticate against. Can be either the GUID identifier or the display name of your Entra ID tenant. Optional - uses default tenant if not specified. |
 | **Authentication method** | [Authentication method](/entra/identity/authentication/concept-authentication-methods) to use for Azure operations. Options include `credential` (Azure CLI/managed identity), `key` (access key), or `connectionString`. Default is `credential`, which uses Azure CLI authentication or managed identity. |

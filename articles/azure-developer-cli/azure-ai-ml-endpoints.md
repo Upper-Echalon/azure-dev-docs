@@ -1,32 +1,32 @@
 ---
-title: Deploy to a Microsoft Foundry/ML studio online endpoint using the Azure Developer CLI
-description: Learn how to deploy to a Microsoft Foundry/ML studio online endpoint using the Azure Developer CLI
+title: Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI
+description: Learn how to deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI.
 author: alexwolfmsft
 ms.author: alexwolf
-ms.date: 07/22/2025
+ms.date: 04/27/2026
 ms.service: azure-dev-cli
 ms.topic: how-to
-ms.custom: devx-track-azdevcli, build-2023
+ms.custom: devx-track-azdevcli
 ---
 
-# Deploy to a Microsoft Foundry/ML studio online endpoint using the Azure Developer CLI
+# Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI
 
-The Azure Developer CLI enables you to quickly and easily deploy to an [Azure ML Studio](https://ml.azure.com) or [Microsoft Foundry](https://ai.azure.com) online endpoint. `azd` supports the following Foundry/ML studio features, which you'll learn to configure in the sections ahead:
+The Azure Developer CLI (`azd`) enables you to deploy to an [Azure Machine Learning Studio](https://ml.azure.com) or [Microsoft Foundry](https://ai.azure.com) online endpoint. `azd` supports the following features, which are described in the sections ahead:
 
 * Custom environments
-  * Environments can be viewed with [Azure ML Studio](https://ml.azure.com/) under the `Environments` section.
+  * Environments can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Environments** section.
 * Custom models
-  * Models can be viewed with [Azure ML Studio](https://ml.azure.com/) under the `models` section.
+  * Models can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Models** section.
 * Prompt flows
-  * Flows can be viewed with [Azure ML Studio](https://ml.azure.com/) under the `flows` section.
-  * Flows can be viewed with [Foundry portal](https://ai.azure.com/) under the `flows` section.
-* Online deployments (within Online-Endpoint)
-  * Deployments can be viewed with [Azure ML Studio](https://ml.azure.com/) under the `deployments` section.
-  * Deployments can be viewed with [Foundry portal](https://ai.azure.com/) under the `deployments` section.
+  * Flows can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Flows** section.
+  * Flows can be viewed in the [Microsoft Foundry portal](https://ai.azure.com/) under the **Flows** section.
+* Online deployments (within online endpoint)
+  * Deployments can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Deployments** section.
+  * Deployments can be viewed in the [Microsoft Foundry portal](https://ai.azure.com/) under the **Deployments** section.
 
 ## Prerequisites
 
-To work with Foundry/ML studio online endpoints, you'll need the following:
+To work with Microsoft Foundry or Azure Machine Learning Studio online endpoints, you need:
 
 * [Azure Subscription](https://signup.azure.com/signup) with OpenAI access enabled
 * [AI Hub Resource](/azure/ai-studio/concepts/ai-resources)
@@ -37,14 +37,14 @@ To work with Foundry/ML studio online endpoints, you'll need the following:
 
 The [Foundry Starter template](https://github.com/Azure-Samples/azd-aistudio-starter) can help create all the required infrastructure to get started with Foundry endpoints.
 
-## Configure the Foundry/ML studio online endpoint
+## Configure the online endpoint
 
-Configure support for AI/ML online endpoints in the `services` section of the `azure.yaml` file:
+Configure support for online endpoints in the `services` section of the `azure.yaml` file:
 
 * Set the `host` value to `ai.endpoint`.
 * The `config` section for `ai.endpoint` supports the following configurations:
-  * **workspace**: The name of the Foundry workspace. Supports `azd` environment variable substitutions and syntax.
-    * If not specified, `azd` will look for environment variable with name `AZUREAI_PROJECT_NAME`.
+  * **workspace**: The name of the Microsoft Foundry workspace. Supports `azd` environment variable substitutions and syntax.
+    * If not specified, `azd` looks for an environment variable with the name `AZUREAI_PROJECT_NAME`.
   * **environment**: Optional custom configuration for ML environments. `azd` creates a new  environment version from the referenced YAML file definition.
   * **flow**: Optional custom configuration for flows. `azd` creates a new prompt flow from the specified file path.
   * **model**: Optional custom configuration for ML models. `azd` creates a new model version from the referenced YAML file definition.
@@ -82,12 +82,12 @@ services:
           PRT_CONFIG_OVERRIDE: deployment.subscription_id=${AZURE_SUBSCRIPTION_ID},deployment.resource_group=${AZURE_RESOURCE_GROUP},deployment.workspace_name=${AZUREAI_PROJECT_NAME},deployment.endpoint_name=${AZUREAI_ENDPOINT_NAME},deployment.deployment_name=${AZUREAI_DEPLOYMENT_NAME}
 ```
 
-The `config.deployment` section is required and creates a new online deployment to the associated online endpoint from the referenced yaml file definition. This functionality handles various concerns for you, including the following:
+The `config.deployment` section is required and creates a new online deployment to the associated online endpoint from the referenced YAML file definition. This functionality handles the following:
 
-* Associates environment and model will be referenced when available.
-* `azd` waits for deployment to enter a terminal provisioning state.
+* Associated environment and model are referenced when available.
+* `azd` waits for the deployment to enter a terminal provisioning state.
 * On successful deployments, all traffic is shifted to the new deployment version.
-* All previous deployments, are deleted to free up compute for future deployments.
+* All previous deployments are deleted to free up compute for future deployments.
 
 ## Explore configuration options
 
@@ -117,14 +117,14 @@ The `environment` configuration section is optional and supports the following v
 
 ### Model
 
-The `model` configuration section is optional and supports following values:
+The `model` configuration section is optional and supports the following values:
 
 * **name**: The name of the custom model. Defaults to `<service-name>-model` if not specified.
-* **path**: The relative path to a custom [model yaml manifest](/azure/machine-learning/reference-yaml-model?view=azureml-api-2&preserve-view=true).
+* **path**: The relative path to a custom [model YAML manifest](/azure/machine-learning/reference-yaml-model?view=azureml-api-2&preserve-view=true).
 * **overrides**: Any custom overrides to apply to the model.
 
     > [!NOTE]
-    > Each call to `azd deploy` creates a new environment version.
+    > Each call to `azd deploy` creates a new model version.
 
 ### Deployment
 
@@ -137,3 +137,10 @@ The `deployment` configuration section is **required** and supports the followin
 
     > [!NOTE]
     > Only supports managed online deployments.
+
+## Related content
+
+- [azure.yaml schema reference](azd-schema.md)
+- [Azure Developer CLI templates overview](azd-templates.md)
+
+[!INCLUDE [request-help](includes/request-help.md)]

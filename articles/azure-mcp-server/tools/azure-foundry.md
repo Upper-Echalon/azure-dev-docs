@@ -11,7 +11,7 @@ content_well_notification:
 ai-usage: ai-assisted
 tool_count: 7
 mcp-cli.version: 2.0.0-beta.31
-ms.reviewer: diberry
+ms.reviewer: zhoujay, xiangyan
 ---
 
 # Azure MCP Server tools for Microsoft Foundry Extensions

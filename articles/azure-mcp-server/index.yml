@@ -20,7 +20,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Install with the Azure Skills Plugin
-            url: https://aka.ms/azure-plugin
+            url: https://github.com/microsoft/azure-skills
           - text: Install in an IDE
             url: get-started.md#use-a-code-editor
           - text: Install with a package manager

@@ -212,7 +212,7 @@ For developers who work with Azure services, gaining proficiency with the Azure 
 Exploring these tests offers insights into seamless Azure service integration, showcases best practices for Azure resource interaction, and aids in ensuring efficient and secure implementations. Explore a broader range of SDK examples for a comprehensive understanding.
 
 > [!TIP]
-> **AI developer tools:** Use [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/introduction) to navigate Azure SDK test patterns and generate test fixtures from SDK interface definitions. [Azure Skills](/azure/developer/azure-skills) can provision test resources matching SDK sample configurations.
+> **AI developer tools:** Use [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/introduction) to navigate Azure SDK test patterns and generate test fixtures from SDK interface definitions. [Azure Skills](/azure/developer/azure-skills/overview) can provision test resources matching SDK sample configurations.
 
 ## Additional resources
 

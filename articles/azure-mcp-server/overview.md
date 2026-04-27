@@ -25,19 +25,12 @@ It implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io
 - **Entra ID authentication**: The server uses Entra ID through the Azure Identity library, following Azure authentication best practices.
 - **Service and tool integration**: The server supports Azure services and tools, including the Azure CLI, Azure Developer CLI (azd), and a broad set of Azure resources.
 
-## Prerequisites
-
-Using Azure MCP tools from GitHub Copilot Chat requires:
-
-- A [GitHub Copilot subscription](https://docs.github.com/en/copilot/quickstart).
-- An Azure account with sufficient permissions on the target subscriptions and resources. Azure [role-based access control (RBAC)](/azure/role-based-access-control/overview) governs access to Azure resources through the MCP tools.
-
 ## Supported code editors and tools
 
 You can connect to the Azure MCP Server from popular code editors and tools, including:
 
 - [**Visual Studio Code**](get-started/tools/visual-studio-code.md)
-- [**Visual Studio**](get-started/tools/visual-studio.md): Azure MCP tools are included with the Azure development workload in Visual Studio 2022 version 17.14.30 or later. No separate GitHub Copilot for Azure extension is required. The tools are disabled by default and can be enabled from GitHub Copilot Chat; once enabled, the setting persists across sessions. Azure MCP tools update through the Visual Studio Installer as part of regular Visual Studio releases, so no separate extension updates are needed. Visual Studio 2026–specific MCP tools aren't available in Visual Studio 2022.
+- [**Visual Studio**](get-started/tools/visual-studio.md)
 - [**Eclipse**](get-started/tools/eclipse.md)
 - [**Cursor**](get-started/tools/cursor.md)
 - [**Windsurf**](get-started/tools/windsurf.md)
@@ -77,14 +70,7 @@ The Azure MCP Server offers a wide range of tools for Azure development. For bes
 
 ## Scenarios for using the Azure MCP Server
 
-The most common scenario is connecting to the Azure MCP Server from an existing client, such as GitHub Copilot agent mode in **Visual Studio Code** or a custom intelligent app. The client can use all available [tools](./tools/index.md) to access and interact with Azure resources using natural language. To learn how to connect to Azure MCP Server from an existing client, see [Get started using the Azure MCP Server](get-started.md).
-
-Common capabilities available from supported clients include:
-
-- List Azure Storage accounts and manage storage resources.
-- Deploy apps with Azure Developer CLI (azd) to Azure App Service.
-- Diagnose issues with AppLens and resource health.
-- Query Azure Log Analytics with KQL.
+The most common scenario is connecting to the Azure MCP Server from an existing client, such as GitHub Copilot agent mode in **Visual Studio Code** or a custom intelligent app. The client can use all available [tools](./tools/index.md) to access and interact with Azure resources using natural language. For example, you can use GitHub Copilot agent mode with the Azure MCP Server to list Azure storage accounts or run KQL queries on Azure databases. To learn how to connect to Azure MCP Server from an existing client, see [Get started using the Azure MCP Server](get-started.md).
 
 In advanced scenarios, you might create your own MCP servers to offer custom tools, resources, and prompts for specific tasks involving Azure resources. If you're building an MCP server that needs to connect with Azure, you can use the Azure MCP Server tools from your MCP server.
 

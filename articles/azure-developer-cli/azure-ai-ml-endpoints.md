@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.custom: devx-track-azdevcli
 ---
 
-# Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI
+# Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint
 
 The Azure Developer CLI (`azd`) enables you to deploy to an [Azure Machine Learning Studio](https://ml.azure.com) or [Microsoft Foundry](https://ai.azure.com) online endpoint. `azd` supports the following features, which are described in the sections ahead:
 
@@ -45,7 +45,7 @@ Configure support for online endpoints in the `services` section of the `azure.y
 * The `config` section for `ai.endpoint` supports the following configurations:
   * **workspace**: The name of the Microsoft Foundry workspace. Supports `azd` environment variable substitutions and syntax.
     * If not specified, `azd` looks for an environment variable with the name `AZUREAI_PROJECT_NAME`.
-  * **environment**: Optional custom configuration for ML environments. `azd` creates a new  environment version from the referenced YAML file definition.
+  * **environment**: Optional custom configuration for ML environments. `azd` creates a new environment version from the referenced YAML file definition.
   * **flow**: Optional custom configuration for flows. `azd` creates a new prompt flow from the specified file path.
   * **model**: Optional custom configuration for ML models. `azd` creates a new model version from the referenced YAML file definition.
   * **deployment**: **Required** configuration for online endpoint deployments. `azd` creates a new online deployment to the associated online endpoint from the referenced YAML file definition.
@@ -137,6 +137,53 @@ The `deployment` configuration section is **required** and supports the followin
 
     > [!NOTE]
     > Only supports managed online deployments.
+
+## AgentSchema and `agent.yaml`
+
+[AgentSchema](https://microsoft.github.io/AgentSchema/) is an open specification for defining AI agents in a code-first YAML format. An `agent.yaml` file describes an agent's configuration, including its model, instructions, tools, and connections. AgentSchema serves as a unified exchange format between Microsoft Copilot Studio, Microsoft Foundry, and other platforms.
+
+AgentSchema supports two primary formats:
+
+- **AgentDefinition** — A complete, concrete specification of an agent that can be executed directly. Use this format for single-purpose agents where all configuration values are known and fixed.
+- **AgentManifest** — A parameterized template for creating agents dynamically. Use this format for reusable agent patterns where values like model names, connections, or instructions are configured at runtime using `{{parameter}}` syntax.
+
+### Example `agent.yaml`
+
+The following example shows an AgentDefinition for a customer support agent:
+
+```yaml
+kind: prompt
+name: customer-support
+displayName: "Customer Support Agent"
+description: "Handles customer inquiries and support requests"
+
+model: gpt-4o
+
+instructions: |
+  You are a helpful customer support agent. Provide clear,
+  professional responses to customer inquiries.
+
+tools:
+  knowledge_base:
+    kind: function
+    description: "Search company knowledge base"
+    parameters:
+      query:
+        kind: string
+        description: "Search query"
+        required: true
+```
+
+### Using `agent.yaml` with `azd`
+
+The `azure.yaml` schema supports the `azure.ai.agent` host type for deploying agents to Microsoft Foundry. When `host` is set to `azure.ai.agent`, `azd` uses the agent definition in your project to deploy and manage the agent. For more information, see the [azure.yaml schema reference](azd-schema.md).
+
+For more information about AgentSchema, see the following resources:
+
+- [AgentSchema specification](https://microsoft.github.io/AgentSchema/)
+- [AgentSchema reference documentation](https://microsoft.github.io/AgentSchema/reference/)
+- [AgentManifest vs AgentDefinition guide](https://microsoft.github.io/AgentSchema/guides/example/)
+- [AgentSchema GitHub repository](https://github.com/microsoft/AgentSchema)
 
 ## Related content
 

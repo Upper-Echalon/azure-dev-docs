@@ -1,6 +1,6 @@
 ---
-title: Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI
-description: Learn how to deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint using the Azure Developer CLI.
+title: Deploy to a Microsoft Foundry or Azure Machine Learning studio online endpoint using the Azure Developer CLI
+description: Learn how to deploy to a Microsoft Foundry or Azure Machine Learning studio online endpoint using the Azure Developer CLI.
 author: alexwolfmsft
 ms.author: alexwolf
 ms.date: 04/27/2026
@@ -9,24 +9,24 @@ ms.topic: how-to
 ms.custom: devx-track-azdevcli
 ---
 
-# Deploy to a Microsoft Foundry or Azure Machine Learning Studio online endpoint
+# Deploy to a Microsoft Foundry or Azure Machine Learning studio online endpoint
 
-The Azure Developer CLI (`azd`) enables you to deploy to an [Azure Machine Learning Studio](https://ml.azure.com) or [Microsoft Foundry](https://ai.azure.com) online endpoint. `azd` supports the following features, which are described in the sections ahead:
+The Azure Developer CLI (`azd`) enables you to deploy to an [Azure Machine Learning studio](https://ml.azure.com) or [Microsoft Foundry](https://ai.azure.com) online endpoint. `azd` supports the following features, which are described in the sections ahead:
 
 * Custom environments
-  * Environments can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Environments** section.
+  * Environments can be viewed in [Azure Machine Learning studio](https://ml.azure.com/) under the **Environments** section.
 * Custom models
-  * Models can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Models** section.
+  * Models can be viewed in [Azure Machine Learning studio](https://ml.azure.com/) under the **Models** section.
 * Prompt flows
-  * Flows can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Flows** section.
+  * Flows can be viewed in [Azure Machine Learning studio](https://ml.azure.com/) under the **Flows** section.
   * Flows can be viewed in the [Microsoft Foundry portal](https://ai.azure.com/) under the **Flows** section.
 * Online deployments (within online endpoint)
-  * Deployments can be viewed in [Azure Machine Learning Studio](https://ml.azure.com/) under the **Deployments** section.
+  * Deployments can be viewed in [Azure Machine Learning studio](https://ml.azure.com/) under the **Deployments** section.
   * Deployments can be viewed in the [Microsoft Foundry portal](https://ai.azure.com/) under the **Deployments** section.
 
 ## Prerequisites
 
-To work with Microsoft Foundry or Azure Machine Learning Studio online endpoints, you need:
+To work with Microsoft Foundry or Azure Machine Learning studio online endpoints, you need:
 
 * [Azure Subscription](https://signup.azure.com/signup) with OpenAI access enabled
 * [AI Hub Resource](/azure/ai-studio/concepts/ai-resources)

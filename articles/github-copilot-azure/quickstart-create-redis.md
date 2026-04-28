@@ -108,7 +108,7 @@ AZURE_RESOURCE_PREFIX=<resource-prefix>
 
 ### Create Azure Cache for Redis
 
-1. Open GitHub Copilot Chat and paste the following prompt:
+Open GitHub Copilot Chat and paste the following prompt:
 
    ```prompt
    You have access to Azure MCP tools.
@@ -267,7 +267,7 @@ After editing the files:
 
 ### Run the app
 
-1. In the terminal, run the app:
+In the terminal, run the app:
 
    ```bash
    python -m venv .venv && source .venv/bin/activate

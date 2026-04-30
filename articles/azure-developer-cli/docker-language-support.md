@@ -9,7 +9,7 @@ ms.custom: devx-track-azdevcli
 ms.service: azure-dev-cli
 ---
 
-# Deploy Go, Rust, and other languages to Azure using Docker and azd
+# Use Docker support to deploy containerized apps in any language
 
 The Azure Developer CLI (`azd`) supports Docker as a language, allowing you to define services that are built and deployed using a Dockerfile. If your app is written in a language that `azd` doesn't have built-in support for — such as Go, Rust, Ruby, PHP, or Kotlin — you can use Docker as the language to build and deploy it to Azure. By specifying Docker as the language, you gain full control over the containerization process, making it ideal for:
 
@@ -34,7 +34,7 @@ services:
       path: ./Dockerfile
 ```
 
-With this configuration, `azd` uses the specified Dockerfile to build and deploy your service. This approach works for any language or runtime that can be containerized, including Go, Rust, Ruby, PHP, Kotlin, Elixir, and others.
+With this configuration, `azd` uses the specified Dockerfile to build and deploy your service. This approach works for any language or runtime that can be containerized.
 
 ## Example scenario
 

@@ -454,16 +454,16 @@
 | @typespec/tspd | npm [0.76.0](https://www.npmjs.com/package/@typespec/tspd/v/0.76.0) |  |  |
 | @typespec/xml | npm [0.84.0](https://www.npmjs.com/package/@typespec/xml/v/0.84.0) |  |  |
 | AI Chat Protocol | npm [1.0.0-beta.20240814.1](https://www.npmjs.com/package/@microsoft/ai-chat-protocol/v/1.0.0-beta.20240814.1) |  |  |
-| App Configuration Provider | npm [3.0.1-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.1-preview) |  |  |
+| App Configuration Provider | npm [3.0.2-preview](https://www.npmjs.com/package/@azure/app-configuration-importer/v/3.0.2-preview) |  |  |
 | App Configuration Provider | npm [2.5.1](https://www.npmjs.com/package/@azure/app-configuration-provider/v/2.5.1) |  |  |
 | App Configuration Provider File Source | npm [3.0.1-preview](https://www.npmjs.com/package/@azure/app-configuration-importer-file-source/v/3.0.1-preview) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/3.0.0-beta.28) |  |  |
-| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.2)<br>npm [3.0.0-beta.28](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/3.0.0-beta.28) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-darwin-arm64/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-darwin-x64/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-linux-arm64/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-linux-x64/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-win32-arm64/v/3.0.0-beta.29) |  |  |
+| Azure MCP | npm [2.0.2](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/2.0.2)<br>npm [3.0.0-beta.29](https://www.npmjs.com/package/@azure/mcp-win32-x64/v/3.0.0-beta.29) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-arm64/v/0.5.13) |  |  |
 | Azure MCP Native | npm [0.5.13](https://www.npmjs.com/package/@azure/mcp-native-darwin-x64/v/0.5.13) |  |  |
